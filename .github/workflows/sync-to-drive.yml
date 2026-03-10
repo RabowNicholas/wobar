@@ -1,0 +1,80 @@
+name: Sync vault to Google Drive
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**.md'
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install google-api-python-client google-auth
+
+      - name: Upload vault files to Google Drive
+        env:
+          GDRIVE_SERVICE_ACCOUNT: ${{ secrets.GDRIVE_SERVICE_ACCOUNT }}
+          GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
+        run: |
+          python3 << 'EOF'
+          import os
+          import json
+          import glob
+          from google.oauth2 import service_account
+          from googleapiclient.discovery import build
+          from googleapiclient.http import MediaFileUpload
+
+          # Auth
+          creds_json = json.loads(os.environ["GDRIVE_SERVICE_ACCOUNT"])
+          creds = service_account.Credentials.from_service_account_info(
+              creds_json,
+              scopes=["https://www.googleapis.com/auth/drive"]
+          )
+          service = build("drive", "v3", credentials=creds)
+          folder_id = os.environ["GDRIVE_FOLDER_ID"]
+
+          # Find all .md files in the vault
+          md_files = glob.glob("**/*.md", recursive=True) + glob.glob("*.md")
+          md_files = list(set(md_files))
+
+          # Get existing files in the Drive folder
+          results = service.files().list(
+              q=f"'{folder_id}' in parents and trashed=false",
+              fields="files(id, name)"
+          ).execute()
+          existing = {f["name"]: f["id"] for f in results.get("files", [])}
+
+          for filepath in md_files:
+              filename = os.path.basename(filepath)
+              media = MediaFileUpload(filepath, mimetype="text/markdown")
+
+              if filename in existing:
+                  # Update existing file
+                  service.files().update(
+                      fileId=existing[filename],
+                      media_body=media
+                  ).execute()
+                  print(f"Updated: {filename}")
+              else:
+                  # Create new file
+                  metadata = {"name": filename, "parents": [folder_id]}
+                  service.files().create(
+                      body=metadata,
+                      media_body=media
+                  ).execute()
+                  print(f"Created: {filename}")
+
+          print("Sync complete.")
+          EOF
