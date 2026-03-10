@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: pip install google-api-python-client google-auth google-auth-oauthlib
 
-      - name: Upload vault files to Google Drive
+      - name: Upload vault files to Google Drive as Google Docs
         env:
           GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
           GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
@@ -51,25 +51,31 @@ jobs:
           # Find all .md files in the vault
           md_files = list(set(glob.glob("**/*.md", recursive=True) + glob.glob("*.md")))
 
-          # Get existing files in the Drive folder
+          # Get existing Google Docs in the Drive folder
           results = service.files().list(
-              q=f"'{folder_id}' in parents and trashed=false",
+              q=f"'{folder_id}' in parents and trashed=false and mimeType='application/vnd.google-apps.document'",
               fields="files(id, name)"
           ).execute()
           existing = {f["name"]: f["id"] for f in results.get("files", [])}
 
           for filepath in md_files:
-              filename = os.path.basename(filepath)
-              media = MediaFileUpload(filepath, mimetype="text/markdown")
+              filename = os.path.basename(filepath).replace(".md", "")
+              media = MediaFileUpload(filepath, mimetype="text/plain")
 
               if filename in existing:
+                  # Update existing Google Doc content
                   service.files().update(
                       fileId=existing[filename],
                       media_body=media
                   ).execute()
                   print(f"Updated: {filename}")
               else:
-                  metadata = {"name": filename, "parents": [folder_id]}
+                  # Create new Google Doc (Drive auto-converts plain text to Google Doc)
+                  metadata = {
+                      "name": filename,
+                      "parents": [folder_id],
+                      "mimeType": "application/vnd.google-apps.document"
+                  }
                   service.files().create(
                       body=metadata,
                       media_body=media
