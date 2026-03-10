@@ -15,12 +15,13 @@ This is the index file for the Wobar project reference system. Read this file fi
 
 | File | Scope | Status |
 |------|-------|--------|
+| [[WOBAR_ACTIVE]] | Open project loops, current context, session history | live |
 | [[WOBAR_BRAND]] | Foundation, mission, archetypes, beliefs, positioning | locked |
 | [[WOBAR_FRAMEWORK]] | 5-Act Portal Framework, act definitions, percentages | locked |
 | [[WOBAR_COPY]] | Voice, lexicon, anti-vocabulary, writing tests | locked |
 | [[WOBAR_SONIC]] | Sonic identity, reference artists, genre positioning | locked |
 | [[WOBAR_CONTENT]] | Content system, release architecture, posting | locked |
-| [[WOBAR_ARCHIVE]] | Archive sourcing by act, portal depth, pipeline | locked |
+| [[WOBAR_ARCHIVE]] | Archive sourcing by act, portal depth, pipeline + closed loops | locked |
 | [[WOBAR_CLAUDE]] | How to work with Nick | locked |
 
 ## Current State
