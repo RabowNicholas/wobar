@@ -1,0 +1,5 @@
+# macOS
+.DS_Store
+
+# Obsidian (editor-specific settings)
+.obsidian/
