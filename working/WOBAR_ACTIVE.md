@@ -11,9 +11,7 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR ACTIVE LOOPS
 
 Living document. Not locked. Updated at the end of every working session.
-When a loop closes, it moves to [[WOBAR_ARCHIVE]] under the Closed Loops section.
-
-**Session log — 2026-03-10:** Vault infrastructure session. Git initialized, pushed to GitHub (RabowNicholas/wobar). Daily auto-commit scheduled at 5am. WOBAR_ACTIVE.md created. Session close-out protocol added to WOBAR_CLAUDE.md. No project loops worked.
+When a loop closes, it moves to [[working/WOBAR_CLOSED]].
 
 ---
 
@@ -81,3 +79,9 @@ Three priority targets: Sonic Bloom, Lightning in a Bottle, Emissions Festival. 
 **Next:** Research submission windows and requirements for each festival.
 
 ---
+
+## Session Log
+
+| Date | Summary |
+|------|---------|
+| 2026-03-10 | Vault infrastructure session. Git initialized, pushed to GitHub (RabowNicholas/wobar). Daily auto-commit at 5am. WOBAR_ACTIVE, WOBAR_CLOSED created. Folder structure reorganized. No project loops worked. |

@@ -39,14 +39,14 @@ dependencies: [[WOBAR_CONTEXT]]
 - Online presence and content creation drive broader discovery. Local performance provides footage and community. Both run in parallel.
 
 ## Source of Truth Hierarchy
-1. [[WOBAR_CONTEXT]] — read first in every conversation
-2. [[WOBAR_ACTIVE]] — read second, every conversation. Current open loops and context.
-3. [[WOBAR_BRAND]] — for any brand positioning, mission, archetype, or belief claim
-4. [[WOBAR_COPY]] — for all written output
-5. [[WOBAR_FRAMEWORK]] — for framework application and arc language
-6. [[WOBAR_SONIC]] — for sonic identity, genre, reference artists
-7. [[WOBAR_CONTENT]] — for content strategy and release architecture
-8. [[WOBAR_ARCHIVE]] — for archive sourcing tasks only
+1. [[WOBAR_CONTEXT]] — read first in every conversation (root)
+2. [[working/WOBAR_ACTIVE]] — read second, every conversation. Current open loops and context.
+3. [[reference/WOBAR_BRAND]] — for any brand positioning, mission, archetype, or belief claim
+4. [[reference/WOBAR_COPY]] — for all written output
+5. [[reference/WOBAR_FRAMEWORK]] — for framework application and arc language
+6. [[reference/WOBAR_SONIC]] — for sonic identity, genre, reference artists
+7. [[reference/WOBAR_CONTENT]] — for content strategy and release architecture
+8. [[reference/WOBAR_ARCHIVE]] — for archive sourcing tasks only
 
 Never rely on memory when a document covers the topic. These files are the source of truth.
 
@@ -57,5 +57,5 @@ At the natural end of every working session, Claude does the following:
 1. **Update WOBAR_ACTIVE.md** — rewrite the relevant loop entries to reflect what happened: decisions made, output produced, what changed, what's next.
 2. **Ask about loop status** — for any loop touched in the session: "Is [loop name] fully closed or still open?"
    - If **still open**: update the entry in WOBAR_ACTIVE.md with current state and next action.
-   - If **fully closed**: move the full entry to the Closed Loops section of [[WOBAR_ARCHIVE]] with a closed date, then remove it from WOBAR_ACTIVE.md.
-3. **Commit** — changes to WOBAR_ACTIVE.md and WOBAR_ARCHIVE.md get committed to git as part of session wrap.
+   - If **fully closed**: move the full entry to [[working/WOBAR_CLOSED]] with a closed date, then remove it from WOBAR_ACTIVE.md.
+3. **Commit and push** — changes to WOBAR_ACTIVE.md and WOBAR_CLOSED.md get committed and pushed to GitHub. Note: if Obsidian is open and holding the git lock, prompt Nick to run `git add -A && git commit -m "..." && git push` from his terminal.

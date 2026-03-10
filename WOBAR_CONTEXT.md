@@ -2,7 +2,7 @@
 title: Wobar Context Index
 version: 1.0
 last_updated: 2026-03-10
-status: locked
+status: live
 scope: Master index for all Wobar reference files. Read this first in every conversation.
 dependencies: none
 ---
@@ -13,16 +13,17 @@ This is the index file for the Wobar project reference system. Read this file fi
 
 ## File Registry
 
-| File | Scope | Status |
-|------|-------|--------|
-| [[WOBAR_ACTIVE]] | Open project loops, current context, session history | live |
-| [[WOBAR_BRAND]] | Foundation, mission, archetypes, beliefs, positioning | locked |
-| [[WOBAR_FRAMEWORK]] | 5-Act Portal Framework, act definitions, percentages | locked |
-| [[WOBAR_COPY]] | Voice, lexicon, anti-vocabulary, writing tests | locked |
-| [[WOBAR_SONIC]] | Sonic identity, reference artists, genre positioning | locked |
-| [[WOBAR_CONTENT]] | Content system, release architecture, posting | locked |
-| [[WOBAR_ARCHIVE]] | Archive sourcing by act, portal depth, pipeline + closed loops | locked |
-| [[WOBAR_CLAUDE]] | How to work with Nick | locked |
+| File | Location | Scope | Status |
+|------|----------|-------|--------|
+| [[working/WOBAR_ACTIVE]] | /working | Open project loops, current context, session history | live |
+| [[working/WOBAR_CLOSED]] | /working | Completed project loops, archived from WOBAR_ACTIVE | live |
+| [[reference/WOBAR_BRAND]] | /reference | Foundation, mission, archetypes, beliefs, positioning | locked |
+| [[reference/WOBAR_FRAMEWORK]] | /reference | 5-Act Portal Framework, act definitions, percentages | locked |
+| [[reference/WOBAR_COPY]] | /reference | Voice, lexicon, anti-vocabulary, writing tests | locked |
+| [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning | locked |
+| [[reference/WOBAR_CONTENT]] | /reference | Content system, release architecture, posting | locked |
+| [[reference/WOBAR_ARCHIVE]] | /reference | Archive sourcing by act, portal depth, pipeline | locked |
+| [[reference/WOBAR_CLAUDE]] | /reference | How to work with Nick | locked |
 
 ## Current State
 Brand 6.0 locked March 2026. All files reflect current version.

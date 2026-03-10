@@ -183,11 +183,4 @@ Belongs in Acts 2–3 (peak at the Act 2→3 transition). Digital/confrontationa
 ## Act 5 / Act 1 Callback Rule
 Act 5 footage should intentionally mirror Act 1 source categories to create narrative callbacks. The viewer began here. They return here. But the footage that was simply familiar at the opening now carries everything that has happened between.
 
----
-
-## Closed Loops
-
-Completed project loops moved here from [[WOBAR_ACTIVE]] at session close-out. Most recent first.
-
-<!-- Closed loops will be appended here by Claude during session wrap. -->
 

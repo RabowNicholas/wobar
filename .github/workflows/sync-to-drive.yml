@@ -21,33 +21,35 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install google-api-python-client google-auth
+        run: pip install google-api-python-client google-auth google-auth-oauthlib
 
       - name: Upload vault files to Google Drive
         env:
-          GDRIVE_SERVICE_ACCOUNT: ${{ secrets.GDRIVE_SERVICE_ACCOUNT }}
+          GDRIVE_CLIENT_ID: ${{ secrets.GDRIVE_CLIENT_ID }}
+          GDRIVE_CLIENT_SECRET: ${{ secrets.GDRIVE_CLIENT_SECRET }}
+          GDRIVE_REFRESH_TOKEN: ${{ secrets.GDRIVE_REFRESH_TOKEN }}
           GDRIVE_FOLDER_ID: ${{ secrets.GDRIVE_FOLDER_ID }}
         run: |
           python3 << 'EOF'
           import os
-          import json
           import glob
-          from google.oauth2 import service_account
+          from google.oauth2.credentials import Credentials
           from googleapiclient.discovery import build
           from googleapiclient.http import MediaFileUpload
 
-          # Auth
-          creds_json = json.loads(os.environ["GDRIVE_SERVICE_ACCOUNT"])
-          creds = service_account.Credentials.from_service_account_info(
-              creds_json,
-              scopes=["https://www.googleapis.com/auth/drive"]
+          # Auth using OAuth2 credentials
+          creds = Credentials(
+              token=None,
+              refresh_token=os.environ["GDRIVE_REFRESH_TOKEN"],
+              client_id=os.environ["GDRIVE_CLIENT_ID"],
+              client_secret=os.environ["GDRIVE_CLIENT_SECRET"],
+              token_uri="https://oauth2.googleapis.com/token"
           )
           service = build("drive", "v3", credentials=creds)
           folder_id = os.environ["GDRIVE_FOLDER_ID"]
 
           # Find all .md files in the vault
-          md_files = glob.glob("**/*.md", recursive=True) + glob.glob("*.md")
-          md_files = list(set(md_files))
+          md_files = list(set(glob.glob("**/*.md", recursive=True) + glob.glob("*.md")))
 
           # Get existing files in the Drive folder
           results = service.files().list(
@@ -61,14 +63,12 @@ jobs:
               media = MediaFileUpload(filepath, mimetype="text/markdown")
 
               if filename in existing:
-                  # Update existing file
                   service.files().update(
                       fileId=existing[filename],
                       media_body=media
                   ).execute()
                   print(f"Updated: {filename}")
               else:
-                  # Create new file
                   metadata = {"name": filename, "parents": [folder_id]}
                   service.files().create(
                       body=metadata,
