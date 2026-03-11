@@ -58,4 +58,4 @@ At the natural end of every working session, Claude does the following:
 2. **Ask about loop status** — for any loop touched in the session: "Is [loop name] fully closed or still open?"
    - If **still open**: update the entry in WOBAR_ACTIVE.md with current state and next action.
    - If **fully closed**: move the full entry to [[working/WOBAR_CLOSED]] with a closed date, then remove it from WOBAR_ACTIVE.md.
-3. **Commit and push** — changes to WOBAR_ACTIVE.md and WOBAR_CLOSED.md get committed and pushed to GitHub. Note: if Obsidian is open and holding the git lock, prompt Nick to run `git add -A && git commit -m "..." && git push` from his terminal.
+3. **Commit and push** — Obsidian Git handles this automatically. No action needed unless the auto-commit hasn't fired yet, in which case prompt Nick to run `git add -A && git commit -m "Session close-out [date]" && git push` from his terminal.

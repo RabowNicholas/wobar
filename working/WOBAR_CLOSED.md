@@ -14,3 +14,14 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 ---
 
 <!-- Closed loops appended here by Claude during session wrap. -->
+
+## Logo Animation
+
+**Closed:** 2026-03-10
+
+**Context:**
+Counter-rotation animation. Pipeline: SVGator → DaVinci Resolve. SVGator handles animation export, DaVinci handles compositing and final output.
+
+**Resolution:** Loop closed by Nick. Pipeline documented for future reference.
+
+---
