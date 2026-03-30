@@ -28,19 +28,6 @@ When a loop closes, it moves to [[working/WOBAR_CLOSED]].
 
 ---
 
-## Logo Animation
-
-**Status:** Pipeline established, execution pending
-
-**Context:**
-Counter-rotation animation. Pipeline is SVGator → DaVinci Resolve. SVGator handles the animation export, DaVinci handles compositing and final output.
-
-**Last action:** Pipeline identified March 2026. No execution logged yet.
-
-**Next:** Begin SVGator animation pass on the logo counter-rotation.
-
----
-
 ## Flow State Monthly Residency
 
 **Status:** Active / ongoing
