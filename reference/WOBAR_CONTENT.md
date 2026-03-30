@@ -90,6 +90,35 @@ Bedroom recordings. Something came through and got captured. No ceremony. Just m
 
 ---
 
+## Format System
+
+Three formats. Construction determines the job — not the bucket.
+
+**FORMAT 1 — THE MIRROR**
+Asset: visualizer clip
+Construction: cold open on the most visually arresting moment. text names the feeling, not the content. 15–30 sec.
+Job: cold stop. stranger sees something they've never seen.
+Bucket: Mirror
+
+**FORMAT 2 — THE ROOM**
+Asset: live set footage
+Construction: one tight moment — crowd reaction, drop landing, a specific second. one specific true claim as caption. no event name, no date.
+Job: proof the live experience is real. use only when the moment is genuinely strong.
+Bucket: Mirror
+
+**FORMAT 3 — THE TRANSMISSION**
+Asset: journal timelapse (visual) + talking to camera (VO)
+Construction: journal writing timelapse as visual layer, one idea from the session spoken over it. raw, no polish. lands and stops.
+Job: makes interior process visible without explaining the music.
+Bucket: Walls Are Thin
+
+**Ratio:** two or more Mirror/Room posts per Transmission to hold 70/30 Magician/Sage split.
+
+## Baseline Monitoring
+Track 48-hour view performance against your own baseline (average of last 10 posts). When a post clears 1.5x baseline, post a companion piece in the same format within 24–48 hours. Three posts maximum per trigger sequence.
+
+---
+
 ## Platforms
 
 | Platform | Handle | Primary Use |
