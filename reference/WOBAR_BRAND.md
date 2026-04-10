@@ -67,5 +67,45 @@ Wobar opens portals through bass music — and they go inward. The sound goes wh
 - Geography: US-based, SLC home, Denver/Colorado corridor focus
 - Goal Reaction: "Holy shit, I just had a profound experience... at a dubstep show?"
 
+## Color Palette
+Source: Art Direction Playbook 2025 (locked)
+
+**Primary:**
+- Black (#000000) — 80% of all backgrounds
+- Deep Purple (#6B2E87 to #7B3FA1) — 60% of color usage
+
+**Secondary (30% of usage):**
+- Muted Magenta (#B34E8F) — pink-purple, warmth
+- Muted Cyan/Blue (#4A7B9D) — depth, cold contrast
+
+**Accent (10% of usage — rare):**
+- Muted Green (#5A8A5A) — organic, alien
+- Muted Orange (#C17A4E) — warmth, grounding
+
+**Usage rules:**
+- Most visuals: Black + one purple variation
+- Occasionally: Black + purple + one accent
+- Rarely: Black + full palette (peak moments only — Act 4)
+- Muted = desaturated by 30–40% from full neon. Not bright festival colors. Psychedelic ceremony, not rave.
+
+## Typography
+Source: Art Direction Playbook 2025 (locked)
+
+- Font style: Geometric, bold, LSDREAM-inspired
+- Recommended: Montserrat (Bold/Black), Futura PT (Bold/Heavy), Bebas Neue (headers), DIN (Bold)
+- Note: Gotham is on the brand list but requires separate license — not on Adobe Fonts
+- ALL CAPS for brand name and headers
+- Generous letter-spacing (tracking +50 to +100)
+- Never use more than 2 fonts in one piece
+
+## Texture & Finish
+Source: Art Direction Playbook 2025 (locked)
+
+- Matte, not glossy or shiny
+- Rough and textured — organic grain, noise, film grain
+- Avoid metallic or reflective surfaces (exception: mirror moments)
+- Depth through layering, not through shine
+- Glow should feel like bioluminescence, not LED
+
 ## North Star
 Headlining transformational festivals. Wakaan release and showcase. Shambhala performance. 75+ original tracks — complete 1–3 hour sets using only Wobar music. Full creative control maintained, all masters owned. "What just happened?" is the standard audience reaction.

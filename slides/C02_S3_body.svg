@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!-- background transparent for Canva compositing -->
+  <circle cx="540" cy="675" r="460" fill="#7B3FA1" opacity="0.03"/>
+  <circle cx="540" cy="675" r="460" fill="none" stroke="#7B3FA1" stroke-width="1.5" opacity="0.45"/>
+  <circle cx="540" cy="675" r="415" fill="none" stroke="#7B3FA1" stroke-width="0.8" opacity="0.18"/>
+  <text x="80" y="115" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="10" opacity="0.85">WOBAR</text>
+  <rect x="80" y="124" width="90" height="1.5" fill="#B34E8F"/>
+  <text x="80" y="330" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="108" fill="#FFFFFF" letter-spacing="2">YOU SET</text>
+  <text x="80" y="450" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="108" fill="#FFFFFF" letter-spacing="2">THE</text>
+  <text x="80" y="574" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="108" fill="#B34E8F" letter-spacing="2">INTENTION.</text>
+  <rect x="80" y="605" width="120" height="1.5" fill="#7B3FA1"/>
+  <text font-family="'Helvetica Neue', Arial, sans-serif" font-size="39" fill="#FFFFFF" opacity="0.72" letter-spacing="0.5">
+    <tspan x="80" y="672">I do it before the first track.</tspan>
+    <tspan x="80" dy="58">When you cross the threshold</tspan>
+    <tspan x="80" dy="58">on purpose, the frequency finds</tspan>
+    <tspan x="80" dy="58">what you've been carrying.</tspan>
+  </text>
+  <line x1="80" y1="1020" x2="1000" y2="1020" stroke="#7B3FA1" stroke-width="1.5"/>
+  <text x="80" y="1080" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="40" fill="#FFFFFF" letter-spacing="3">THIS THURSDAY.</text>
+  <text x="80" y="1138" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="40" fill="#B34E8F" letter-spacing="3">LAKE EFFECT SLC. FREE.</text>
+  <text x="990" y="1302" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="22" fill="#FFFFFF" opacity="0.3" letter-spacing="4">03 / 04</text>
+</svg>

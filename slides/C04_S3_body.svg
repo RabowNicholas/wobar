@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+  <rect x="30" y="30" width="1020" height="1290" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.12"/>
+  <path d="M870 80 L1000 80 L1000 210" fill="none" stroke="#B34E8F" stroke-width="2"/>
+  <text x="80" y="115" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="10" opacity="0.85">WOBAR</text>
+  <rect x="80" y="124" width="90" height="1.5" fill="#B34E8F"/>
+  <text x="80" y="330" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#FFFFFF" letter-spacing="2">DOORS 9.</text>
+  <text x="80" y="460" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#B34E8F" letter-spacing="2">NO COVER.</text>
+  <line x1="80" y1="508" x2="1000" y2="508" stroke="#7B3FA1" stroke-width="1.5"/>
+  <text font-family="'Helvetica Neue', Arial, sans-serif" font-size="42" fill="#FFFFFF" opacity="0.72" letter-spacing="0.5">
+    <tspan x="80" y="590">Lake Effect, SLC.</tspan>
+    <tspan x="80" dy="62">Thursday March 26.</tspan>
+    <tspan x="80" dy="62">I've been building this set.</tspan>
+    <tspan x="80" dy="62">You show up.</tspan>
+    <tspan x="80" dy="62">That's the whole thing.</tspan>
+  </text>
+  <text x="990" y="1302" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="22" fill="#FFFFFF" opacity="0.3" letter-spacing="4">03 / 04</text>
+</svg>

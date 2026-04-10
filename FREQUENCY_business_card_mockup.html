@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FREQUENCY — Wobar Business Card</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    gap: 60px;
+    padding: 60px 20px;
+  }
+
+  .label {
+    color: #555;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Standard business card: 3.5" x 2" — displayed at 3x scale */
+  .card {
+    width: 630px;
+    height: 360px;
+    background: #080808;
+    border-radius: 6px;
+    position: relative;
+    box-shadow:
+      0 0 0 1px #2a2a2a,
+      0 20px 60px rgba(0,0,0,0.8);
+    overflow: hidden;
+  }
+
+  /* Emboss simulation — raised texture effect */
+  .embossed {
+    color: transparent;
+    -webkit-text-stroke: 0px;
+    text-shadow:
+      1px 1px 0px #1a1a1a,
+      -1px -1px 0px #000000;
+    background: linear-gradient(145deg, #1c1c1c 0%, #0a0a0a 50%, #141414 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .embossed-element {
+    position: relative;
+  }
+
+  .embossed-element::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0; left: 0;
+    background: linear-gradient(145deg, #2a2a2a 0%, #111 50%, #1e1e1e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    filter: drop-shadow(0px 1px 0px #000) drop-shadow(0px -1px 0px #222);
+  }
+
+  /* ── SIDE A: FRONT ── */
+  .side-a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    padding: 40px;
+  }
+
+  .logo-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .logo-text {
+    font-size: 52px;
+    font-weight: 900;
+    letter-spacing: 0.18em;
+    line-height: 1;
+    /* Emboss effect */
+    color: #161616;
+    text-shadow:
+      1px 1px 1px #222,
+      -1px -1px 1px #000,
+      0 0 1px #1a1a1a;
+    position: relative;
+  }
+
+  .logo-placeholder-note {
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    color: #333;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .qr-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .qr-box {
+    width: 96px;
+    height: 96px;
+    background: #111;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Emboss: slight raise */
+    box-shadow:
+      1px 1px 0px #1e1e1e,
+      -1px -1px 0px #040404,
+      inset 0 0 8px rgba(0,0,0,0.4);
+  }
+
+  .qr-box canvas, .qr-box img {
+    border-radius: 2px;
+    opacity: 0.75;
+    filter: invert(1) brightness(0.2);
+  }
+
+  .qr-url-note {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    color: #2a2a2a;
+    text-transform: uppercase;
+  }
+
+  /* ── SIDE B: BACK ── */
+  .side-b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    padding: 40px 60px;
+  }
+
+  .act-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    width: 100%;
+  }
+
+  .act-name {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    line-height: 1;
+    padding: 9px 0;
+    text-align: center;
+    width: 100%;
+    /* Emboss effect */
+    color: #161616;
+    text-shadow:
+      1px 1px 1px #222,
+      -1px -1px 1px #000;
+    position: relative;
+  }
+
+  .act-divider {
+    width: 24px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #1e1e1e, transparent);
+    margin: 0 auto;
+  }
+
+  .act-name.last {
+    font-size: 15px;
+    letter-spacing: 0.18em;
+  }
+
+  /* Print spec note */
+  .spec-note {
+    margin-top: 20px;
+    color: #2e2e2e;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 1.8;
+  }
+
+  .divider-line {
+    width: 630px;
+    height: 1px;
+    background: #222;
+  }
+</style>
+</head>
+<body>
+
+  <!-- SIDE A: FRONT -->
+  <div class="card-wrapper">
+    <div class="label">Side A — Front</div>
+    <div class="card side-a">
+
+      <div class="logo-area">
+        <div class="logo-text">WOBAR</div>
+        <div class="logo-placeholder-note">← replace with logo file before print</div>
+      </div>
+
+      <div class="qr-container">
+        <div class="qr-box" id="qrcode"></div>
+        <div class="qr-url-note">← swap url when landing page is live</div>
+      </div>
+
+    </div>
+    <div class="spec-note">
+      3.5" × 2" · All black stock · Blind emboss both sides · Add 0.125" bleed before submitting
+    </div>
+  </div>
+
+  <div class="divider-line"></div>
+
+  <!-- SIDE B: BACK -->
+  <div class="card-wrapper">
+    <div class="label">Side B — Back</div>
+    <div class="card side-b">
+
+      <div class="act-list">
+        <div class="act-name">RIFT</div>
+        <div class="act-divider"></div>
+        <div class="act-name">DESCENSION</div>
+        <div class="act-divider"></div>
+        <div class="act-name">ENCOUNTER</div>
+        <div class="act-divider"></div>
+        <div class="act-name">RELEASE</div>
+        <div class="act-divider"></div>
+        <div class="act-name last">INTEGRATION + EMBODIMENT</div>
+      </div>
+
+    </div>
+    <div class="spec-note">
+      All caps · Blind emboss · Centered stack
+    </div>
+  </div>
+
+<script>
+  // Generate QR code with placeholder URL
+  new QRCode(document.getElementById("qrcode"), {
+    text: "https://wobar.com",
+    width: 88,
+    height: 88,
+    colorDark: "#000000",
+    colorLight: "#111111",
+    correctLevel: QRCode.CorrectLevel.H
+  });
+</script>
+
+</body>
+</html>

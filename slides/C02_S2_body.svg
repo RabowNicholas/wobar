@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!-- background transparent for Canva compositing -->
+
+  <!-- WOBAR wordmark — top right -->
+  <text x="1000" y="115" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="10" opacity="0.85">WOBAR</text>
+  <rect x="910" y="124" width="90" height="1.5" fill="#B34E8F"/>
+
+  <!-- Headline — right aligned -->
+  <text x="1000" y="310" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="105" fill="#FFFFFF" letter-spacing="2">MOST</text>
+  <text x="1000" y="428" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="105" fill="#FFFFFF" letter-spacing="2">PEOPLE</text>
+  <text x="1000" y="532" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="82" fill="#B34E8F" letter-spacing="2">STUMBLE</text>
+  <text x="1000" y="628" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="82" fill="#B34E8F" letter-spacing="2">THROUGH.</text>
+
+  <!-- Threshold rule — right side -->
+  <line x1="400" y1="672" x2="1000" y2="672" stroke="#FFFFFF" stroke-width="1.5" opacity="0.4"/>
+
+  <!-- Body copy — right aligned, short lines to clear left element -->
+  <text text-anchor="end" font-family="'Helvetica Neue', Arial, sans-serif" font-size="38" fill="#FFFFFF" opacity="0.72" letter-spacing="0.5">
+    <tspan x="1000" y="740">They come for the drop.</tspan>
+    <tspan x="1000" dy="54">The crowd. The noise.</tspan>
+    <tspan x="1000" dy="54">They leave the same person</tspan>
+    <tspan x="1000" dy="54">they arrived. The bass</tspan>
+    <tspan x="1000" dy="54">had more to offer.</tspan>
+    <tspan x="1000" dy="54">They didn't know to ask.</tspan>
+  </text>
+
+  <!-- Event callout — right aligned -->
+  <line x1="400" y1="1040" x2="1000" y2="1040" stroke="#FFFFFF" stroke-width="1" opacity="0.25"/>
+  <text x="1000" y="1098" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#B34E8F" letter-spacing="6" opacity="0.9">FREE DUBSTEP / SLC / THU MAR 26</text>
+
+  <!-- Counter -->
+  <text x="1000" y="1302" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="22" fill="#FFFFFF" opacity="0.3" letter-spacing="4">02 / 04</text>
+</svg>

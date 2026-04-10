@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <rect width="1080" height="1350" fill="#000000"/>
+  <rect x="30" y="30" width="1020" height="1290" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.12"/>
+  <text x="80" y="115" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="10" opacity="0.85">WOBAR</text>
+  <rect x="80" y="124" width="90" height="1.5" fill="#B34E8F"/>
+  <text x="80" y="305" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="112" fill="#FFFFFF" letter-spacing="2">TWO</text>
+  <text x="80" y="428" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="112" fill="#FFFFFF" letter-spacing="2">HOURS.</text>
+  <text x="80" y="534" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="84" fill="#B34E8F" letter-spacing="2">ONE ARC.</text>
+  <line x1="80" y1="582" x2="1000" y2="582" stroke="#7B3FA1" stroke-width="1.5"/>
+  <text font-family="'Helvetica Neue', Arial, sans-serif" font-size="39" fill="#FFFFFF" opacity="0.72" letter-spacing="0.5">
+    <tspan x="80" y="652">Orageist opens. One hour.</tspan>
+    <tspan x="80" dy="58">Then I close — two hours,</tspan>
+    <tspan x="80" dy="58">freeform bass, experimental.</tspan>
+    <tspan x="80" dy="58">The arc is mapped.</tspan>
+    <tspan x="80" dy="58">This isn't a playlist.</tspan>
+  </text>
+  <line x1="80" y1="1048" x2="1000" y2="1048" stroke="#7B3FA1" stroke-width="1" opacity="0.5"/>
+  <text x="80" y="1108" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="34" fill="#B34E8F" letter-spacing="5">FREE SHOW / LAKE EFFECT SLC</text>
+  <text x="990" y="1302" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="22" fill="#FFFFFF" opacity="0.3" letter-spacing="4">02 / 04</text>
+</svg>

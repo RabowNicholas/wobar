@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 1350" width="1080" height="1350">
+  <!-- background transparent for Canva compositing -->
+  <rect x="30" y="30" width="1020" height="1290" fill="none" stroke="#FFFFFF" stroke-width="1" opacity="0.12"/>
+  <circle cx="1020" cy="675" r="490" fill="#7B3FA1" opacity="0.04"/>
+  <circle cx="1020" cy="675" r="490" fill="none" stroke="#7B3FA1" stroke-width="2" opacity="0.8"/>
+  <circle cx="1020" cy="675" r="448" fill="none" stroke="#7B3FA1" stroke-width="1" opacity="0.25"/>
+  <text x="80" y="115" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="26" fill="#FFFFFF" letter-spacing="10" opacity="0.85">WOBAR</text>
+  <rect x="80" y="124" width="90" height="1.5" fill="#B34E8F"/>
+  <text x="80" y="470" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#FFFFFF" letter-spacing="2">YOU</text>
+  <text x="80" y="598" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#FFFFFF" letter-spacing="2">KNOW</text>
+  <text x="80" y="726" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#FFFFFF" letter-spacing="2">WHY</text>
+  <text x="80" y="854" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#B34E8F" letter-spacing="2">YOU'RE</text>
+  <text x="80" y="982" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="118" fill="#B34E8F" letter-spacing="2">HERE.</text>
+  <text x="80" y="1068" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="30" fill="#FFFFFF" letter-spacing="6" opacity="0.42">MOST PEOPLE DON'T.</text>
+  <text x="990" y="1302" text-anchor="end" font-family="'Arial Black', Impact, 'Helvetica Neue', sans-serif" font-size="22" fill="#FFFFFF" opacity="0.3" letter-spacing="4">01 / 04</text>
+</svg>

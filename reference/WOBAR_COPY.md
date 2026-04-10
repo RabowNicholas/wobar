@@ -62,16 +62,17 @@ Every piece of Wobar copy must hold: heavy AND transformative. Filthy AND sacred
 
 ## Tone by Context
 
-| Context | Tone | Magician/Sage | Length |
-|---------|------|--------------|--------|
-| IG/TikTok caption | Direct, punchy, eerie | 90% Magician | 1–3 lines |
-| Revelations/Transmissions | Philosophical, provocative | 20% Magician / 80% Sage | 1–3 sentences |
-| Track description | Sensory + sonic | 95% Magician | 2–5 sentences |
-| EP description | Journey narrative | 80/20 | 1–2 short paragraphs |
-| Short bio (50 words) | Declarative, identity first | 80/20 | 3–4 sentences |
-| Long bio (200–300 words) | Story + mission + scene | 80/20 blend | 3 paragraphs |
-| Flyer/show description | Invitational, atmosphere-first | 90% Magician | 2–4 sentences |
-| The Becoming posts | Raw, specific, vulnerable | 50/50 blend | Authentic only |
+| Context                   | Tone                           | Magician/Sage           | Length               |
+| ------------------------- | ------------------------------ | ----------------------- | -------------------- |
+| IG/TikTok caption         | Direct, punchy, eerie          | 90% Magician            | 1–3 lines            |
+| Revelations/Transmissions | Philosophical, provocative     | 20% Magician / 80% Sage | 1–3 sentences        |
+| Track description         | Sensory + sonic                | 95% Magician            | 2–5 sentences        |
+| EP description            | Journey narrative              | 80/20                   | 1–2 short paragraphs |
+| Short bio (50 words)      | Declarative, identity first    | 80/20                   | 3–4 sentences        |
+| Long bio (200–300 words)  | Story + mission + scene        | 80/20 blend             | 3 paragraphs         |
+| Flyer/show description    | Invitational, atmosphere-first | 90% Magician            | 2–4 sentences        |
+| The Becoming posts        | Raw, specific, vulnerable      | 50/50 blend             | Authentic only       |
+|                           |                                |                         |                      |
 
 ---
 
