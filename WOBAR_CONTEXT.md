@@ -29,6 +29,7 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[reference/WOBAR_PATCH_SYSTEM]] | /reference | Serum 2 patch naming, 8-macro standard, versioning | locked |
 | [[reference/WOBAR_OBSCURA]] | /reference | Obscura visual identity and reference system | locked |
 | [[working/TD_BUILD_LOG]] | /working | AI-assisted TD build session log — feedback loop for agent improvement | live |
+| touchdesigner/[module]/CHANGE_LOG.md | /touchdesigner | Per-visual version control — .tox snapshots + change log for undo | live |
 
 ## Current State
 Brand 6.0 locked March 2026. All files reflect current version.

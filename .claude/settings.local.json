@@ -7,7 +7,26 @@
       "Bash(git show:*)",
       "Bash(find:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Skill(update-config)",
+      "Bash(curl -s http://localhost:40404/mcp)",
+      "mcp__twozero__td_list_instances",
+      "mcp__twozero__td_get_focus",
+      "mcp__twozero__td_find_op",
+      "mcp__twozero__td_create_operator",
+      "mcp__twozero__td_get_hints",
+      "mcp__twozero__td_navigate_to",
+      "mcp__twozero__td_execute_python",
+      "mcp__twozero__td_get_errors",
+      "mcp__twozero__td_get_screenshot",
+      "Bash(python3 -c ':*)",
+      "Bash(python3:*)",
+      "mcp__twozero__td_get_par_info",
+      "mcp__twozero__td_get_network",
+      "Bash(git checkout:*)"
     ]
-  }
+  },
+  "enabledMcpjsonServers": [
+    "twozero"
+  ]
 }

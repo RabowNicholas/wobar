@@ -1,8 +1,8 @@
 ---
 title: Wobar Active Loops
 version: 1.0
-last_updated: 2026-04-10
-last_session: 2026-04-10
+last_updated: 2026-04-12
+last_session: 2026-04-12
 status: live
 scope: All open project loops. Read this alongside WOBAR_CONTEXT at the start of any working session. Updated by Claude at the end of each session.
 dependencies: [[WOBAR_CONTEXT]]
@@ -12,6 +12,11 @@ dependencies: [[WOBAR_CONTEXT]]
 
 Living document. Not locked. Updated at the end of every working session.
 When a loop closes, it moves to [[working/WOBAR_CLOSED]].
+
+LOOP: Act 2 Visual — base_act2 underwater spiral
+STATUS: in progress
+LAST: Full parameterization built. 6 ctrl_ CHOPs expose all style constants and audio handles. base_audio (4-band analysis pipeline) and base_act2_map (Act 2 scaling layer) built as standalone Base COMPs. Audio wired to /Users/nicholasrabow/Downloads/20_1_14_26.mp3. ctrl_audio_live Select CHOP is the live swap point — all expressions updated to use it. All three networks laid out left-to-right. Canonical output: null_surface_out.
+NEXT: Observe audio reactivity against the track. Dial in gain values in base_act2_map (math_zoom.par.gain, math_bright.par.gain etc). When satisfied, save base_audio and base_act2_map as .tox files for reuse.
 
 ---
 
@@ -41,6 +46,7 @@ NEXT: Research carousel best practices, define format spec, test.
 
 | Date | Summary |
 |------|---------|
+| 2026-04-12 | Act 2 TD build session continued. Evolved 3-arm spiral from purple to underwater aesthetic. Shifted color to desaturated blue/teal (0.50–0.67 hue, sat 0.40 at shader, 0.75 HSV). Widened wave crest spacing (spacing 0.042→0.072). Added caustic layer (Voronoi edge detection GLSL, 3 animated scales, screen-blended — null_caustic_out). Added radial surface glow (ramp_surface screen-blended — null_surface_out). Brand reviewed: Act 2 DESCENSION alignment strong. Blue color approved as contextual departure. |
 | 2026-04-10 | Content format review session. Reviewed existing buckets and format system. Defined three new test formats in working/FORMAT_TESTING.md: The Cut (found footage hook → visualizer at drop, three hook categories: skate/nature chaos/extreme sports), The Stack (three horizontal strips stacked vertical, "you are here" multi-angle), continued Transmission testing. Carousel format parked as research loop. Satisfying process, flow arts, optical illusions killed with reasoning. Formats stay in testing doc until performance data earns them a spot in WOBAR_CONTENT.md. |
 | 2026-04-10 | Full loop review. All 8 open loops closed: Common Enemy remix, ASAP Rocky remix, Flow State residency, Thursday event concept, Origin Story series, FREQUENCY Lake Effect, platform bio rewrite, Organic Distortion visual system. Clean slate. |
 | 2026-03-30 | Content strategy audit against FSC research. Identified gaps: no baseline monitoring, no format system. Built three wobar-specific formats: The Mirror, The Room, The Transmission. Validated against brand. Baseline monitoring to be added to posting system. |

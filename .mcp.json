@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "twozero": {
+      "type": "http",
+      "url": "http://localhost:40404/mcp"
+    }
+  }
+}

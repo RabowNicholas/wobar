@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Agent Build Rules
 version: 1.0
-last_updated: 2026-04-10
+last_updated: 2026-04-12
 status: locked
 scope: Conventions any AI agent must follow when creating or modifying TouchDesigner networks in the WOBAR project. Read before any TD build action.
 dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/WOBAR_FRAMEWORK]]
@@ -10,6 +10,34 @@ dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/W
 # TOUCHDESIGNER AGENT BUILD RULES
 
 Rules for any AI agent (Claude Code + TWOZERO MCP, or any future TD automation) building or modifying networks in the WOBAR project. These are non-negotiable conventions. If a rule here conflicts with a default behavior, the rule wins.
+
+---
+
+## Version Control — Save Before You Change
+
+**Non-negotiable. No exceptions.**
+
+Before any structural change to a visual module — new node, rewire, blend mode change, pixel format change, or anything that affects the signal chain — save a .tox snapshot first.
+
+**Save procedure:**
+```python
+op('/project1/base_act2').saveToFile(
+    '/Users/nicholasrabow/Desktop/wobar/wobar/touchdesigner/base_act2/base_act2_v001.tox'
+)
+```
+
+**Naming:** `[module]_v[NNN].tox` — sequential, zero-padded to 3 digits. Never skip a version number.
+
+**Log the entry immediately** in `touchdesigner/[module]/CHANGE_LOG.md`:
+- What the visual looks like at save time (STATE)
+- What change is about to be made (WHAT)
+- What to reload to undo (UNDO: reload previous .tox)
+
+**Parameter-only changes** (no structural change) do not require a new .tox — log old/new values in CHANGE_LOG.md only.
+
+**File storage:** `wobar/touchdesigner/[module]/` — one subfolder per visual module, .tox files + CHANGE_LOG.md inside.
+
+If you did not save a .tox before a change and the visual breaks, say so explicitly. Do not attempt to fix forward through multiple changes. Stop and acknowledge the missing checkpoint.
 
 ---
 
@@ -146,6 +174,18 @@ Always follow this sequence when building a new visual module:
 8. Post-processing (bloom, final comp)
 
 **Parametrize before wiring audio.** Do not skip to audio reactivity before the visual module is fully controllable via CHOPs.
+
+---
+
+## Known Parameter Name Gotchas
+
+These are par names that differ from what you'd expect. Check here before guessing.
+
+| Operator | Wrong | Correct |
+|----------|-------|---------|
+| levelTOP | `par.contrast1` | `par.contrast` |
+| levelTOP | `par.brightness` | `par.brightness1` |
+| levelTOP | `par.gamma` | `par.gamma1` |
 
 ---
 
