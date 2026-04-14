@@ -28,12 +28,15 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[reference/WOBAR_TD_AGENT_RULES]] | /reference | TD agent build conventions — naming, architecture, validation | locked |
 | [[reference/WOBAR_PATCH_SYSTEM]] | /reference | Serum 2 patch naming, 8-macro standard, versioning | locked |
 | [[reference/WOBAR_OBSCURA]] | /reference | Obscura visual identity and reference system | locked |
+| [[reference/WOBAR_MOVE_SYSTEM]] | /reference | Move history system spec — schema, lifecycle, undo mechanics | locked |
 | [[working/TD_BUILD_LOG]] | /working | AI-assisted TD build session log — feedback loop for agent improvement | live |
-| touchdesigner/[module]/CHANGE_LOG.md | /touchdesigner | Per-visual version control — .tox snapshots + change log for undo | live |
+| touchdesigner/networks/[network]/CHANGE_LOG.md | /touchdesigner | Per-network change log — why changes were made | live |
+| touchdesigner/networks/[network]/moves/ | /touchdesigner | Per-network move history — msgpack files for granular undo | live |
 
 ## Current State
 Brand 6.0 locked March 2026. All files reflect current version.
 TWOZERO MCP integration added April 2026. TD agent rules established.
+Move history system added April 2026. Three skills: td-build, td-undo, td-save.
 
 ## Notes
 When a file status is in-flux, confirm current state with Nick before using as reference.

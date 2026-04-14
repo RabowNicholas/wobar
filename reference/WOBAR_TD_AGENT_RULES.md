@@ -1,6 +1,6 @@
 ---
 title: TouchDesigner Agent Build Rules
-version: 1.0
+version: 2.0
 last_updated: 2026-04-12
 status: locked
 scope: Conventions any AI agent must follow when creating or modifying TouchDesigner networks in the WOBAR project. Read before any TD build action.
@@ -13,31 +13,50 @@ Rules for any AI agent (Claude Code + TWOZERO MCP, or any future TD automation) 
 
 ---
 
-## Version Control — Save Before You Change
+## Network Folder Structure
 
-**Non-negotiable. No exceptions.**
-
-Before any structural change to a visual module — new node, rewire, blend mode change, pixel format change, or anything that affects the signal chain — save a .tox snapshot first.
-
-**Save procedure:**
-```python
-op('/project1/base_act2').saveToFile(
-    '/Users/nicholasrabow/Desktop/wobar/wobar/touchdesigner/base_act2/base_act2_v001.tox'
-)
+```
+wobar/touchdesigner/networks/
+  [network_name]/
+    [network_name]_v001.tox
+    [network_name]_v002.tox
+    CHANGE_LOG.md
+    moves/
+      move_001.msgpack
+      move_002.msgpack
 ```
 
-**Naming:** `[module]_v[NNN].tox` — sequential, zero-padded to 3 digits. Never skip a version number.
+- One folder per visual/network. Agent picks a descriptive name on creation.
+- `.tox` checkpoints at the network root. Sequential, zero-padded to 3 digits.
+- `CHANGE_LOG.md` at the network root — records why changes were made. Feeds the learning loop.
+- `moves/` subfolder holds the move history stack.
 
-**Log the entry immediately** in `touchdesigner/[module]/CHANGE_LOG.md`:
-- What the visual looks like at save time (STATE)
-- What change is about to be made (WHAT)
-- What to reload to undo (UNDO: reload previous .tox)
+---
 
-**Parameter-only changes** (no structural change) do not require a new .tox — log old/new values in CHANGE_LOG.md only.
+## Move History System
 
-**File storage:** `wobar/touchdesigner/[module]/` — one subfolder per visual module, .tox files + CHANGE_LOG.md inside.
+**Full spec: `reference/WOBAR_MOVE_SYSTEM.md`**
 
-If you did not save a .tox before a change and the visual breaks, say so explicitly. Do not attempt to fix forward through multiple changes. Stop and acknowledge the missing checkpoint.
+Every TD modification goes through the move system. No exceptions.
+
+- **Move** = everything the agent does in response to one user request. One request, one move.
+- Before executing any TWOZERO call, capture the before-state of what's about to change.
+- After all calls succeed, write `move_NNN.msgpack` to the network's `moves/` folder.
+- If any call fails mid-move, auto-rollback: replay before-states in reverse. No move file written.
+- Undo = pop last N moves off the stack, replay before-states, delete move files.
+- Save = `.tox` checkpoint via TWOZERO, flush all moves, restart numbering. Triggers session learnings review.
+
+---
+
+## Skills
+
+Three skills govern the TD workflow:
+
+| Skill | Trigger | What it does |
+|-------|---------|-------------|
+| `td-build` | Any TD modification request | Capture before-state → execute TWOZERO calls → write move file. Validate against act constraints. |
+| `td-undo` | "Undo that" / "undo last N" | Read last N move files → replay before-states in reverse → delete move files. |
+| `td-save` | "Save it" / "I'm happy with this" | Save `.tox` via TWOZERO → flush moves → log to CHANGE_LOG.md → analyze session → propose rule updates. |
 
 ---
 
@@ -191,7 +210,7 @@ These are par names that differ from what you'd expect. Check here before guessi
 
 ## Feedback Loop — Agent Self-Improvement
 
-After every build session, append findings to `working/TD_BUILD_LOG.md`:
+The `td-save` skill handles this automatically. Findings are appended to `working/TD_BUILD_LOG.md`:
 - What was built (module name, act, brief description)
 - What the agent got right on first pass
 - What needed manual correction (parameter values, node choices, naming)
