@@ -1,8 +1,8 @@
 ---
 title: Wobar Active Loops
 version: 1.0
-last_updated: 2026-04-12
-last_session: 2026-04-12
+last_updated: 2026-04-15
+last_session: 2026-04-15
 status: live
 scope: All open project loops. Read this alongside WOBAR_CONTEXT at the start of any working session. Updated by Claude at the end of each session.
 dependencies: [[WOBAR_CONTEXT]]
@@ -51,6 +51,7 @@ NEXT: Research carousel best practices, define format spec, test.
 
 | Date | Summary |
 |------|---------|
+| 2026-04-15 | Posting quality research — four-phase investigation into IG/TikTok compression + TD export limitations. Phase 1 platform specs mapped (4:2:0 forced, 15–25 Mbps IG / 10–12 TikTok, desktop web beats mobile on both). Phase 2 pipeline comparison (A retired, C image-sequence→FFmpeg as default on Free license, B reserved for future license upgrade). Phase 3 locked recipe into WOBAR_TD_REFERENCE.md Section 8 — per-platform tables, cross-platform safe zone (center 980×1230), FFmpeg command with Rec.709 + `-tune grain`, upload protocol, quality mitigations. Phase 4 benchmark protocol designed (5-section torture clip) but deferred — battle-testing through live posting instead. Research loop closed. |
 | 2026-04-14 | Tunnel audio reactivity session. Built base_audio from scratch (4-band audiofilterCHOP pipeline, energy envelope, kick branch). Built ctrl_audio_live pre-compute CHOP layer in tunnel. Wired all visual parameters to energy: zoom, rotation, opacity, contrast, glow, CA, displace. Intensity parameter on ctrl_master is manual energy ceiling. Explored kick mapping (zoom snap, shockwave, contrast flash — all removed, none felt right). Color cycling via ramp phase tried and removed. Energy-driven Intensity is the keeper — breakdown goes near-still, drop comes alive. |
 | 2026-04-12 | Act 2 TD build session continued. Evolved 3-arm spiral from purple to underwater aesthetic. Shifted color to desaturated blue/teal (0.50–0.67 hue, sat 0.40 at shader, 0.75 HSV). Widened wave crest spacing (spacing 0.042→0.072). Added caustic layer (Voronoi edge detection GLSL, 3 animated scales, screen-blended — null_caustic_out). Added radial surface glow (ramp_surface screen-blended — null_surface_out). Brand reviewed: Act 2 DESCENSION alignment strong. Blue color approved as contextual departure. |
 | 2026-04-10 | Content format review session. Reviewed existing buckets and format system. Defined three new test formats in working/FORMAT_TESTING.md: The Cut (found footage hook → visualizer at drop, three hook categories: skate/nature chaos/extreme sports), The Stack (three horizontal strips stacked vertical, "you are here" multi-angle), continued Transmission testing. Carousel format parked as research loop. Satisfying process, flow arts, optical illusions killed with reasoning. Formats stay in testing doc until performance data earns them a spot in WOBAR_CONTENT.md. |

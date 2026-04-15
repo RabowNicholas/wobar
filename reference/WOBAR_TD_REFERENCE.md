@@ -383,17 +383,44 @@ Disable cooking on inactive scenes: `op('base_act3').cooking = False` in Timer C
 
 Master/archival: **ProRes 422 HQ** (.mov). YouTube accepts ProRes uploads directly.
 
-### TikTok / Instagram (1080×1920)
+### Instagram Reels (1080×1920)
 | Parameter | Value |
 |-----------|-------|
 | Resolution | 1080 × 1920 |
-| videocodec | h264nvgpu |
-| moviepixelformat | yuv420 |
+| Container | mp4 |
+| Video codec | H.264 (High profile) |
+| Pixel format | yuv420p |
 | fps | 30 |
-| avgbitrate | 10000–12000 Kb/s |
-| Audio codec | AAC 256–320 kb/s |
+| avgbitrate | **15000–25000 Kb/s** (feed the re-encoder) |
+| keyframeinterval | 15 |
+| Color tagging | bt709 primaries / bt709 transfer / bt709 matrix |
+| Audio codec | AAC 320 kb/s, 48 kHz |
+| Faststart | yes (`-movflags +faststart`) |
 
-TikTok: upload via web browser (10 GB limit), not mobile (287 MB limit). Keep key content in center 60% of frame — platforms overlay UI at top ~250px and bottom ~340px.
+### TikTok (1080×1920)
+| Parameter | Value |
+|-----------|-------|
+| Resolution | 1080 × 1920 |
+| Container | mp4 |
+| Video codec | H.264 (High profile) |
+| Pixel format | yuv420p |
+| fps | 30 |
+| avgbitrate | **10000–12000 Kb/s** (8–13 Mbps acceptable) |
+| keyframeinterval | 15 |
+| Color tagging | bt709 primaries / bt709 transfer / bt709 matrix |
+| Audio codec | AAC 256–320 kb/s, 48 kHz |
+| Faststart | yes |
+
+**Chroma 4:2:0 is platform-enforced on both IG and TikTok — cannot be avoided.** Mitigate with higher upload bitrate, Rec.709 end-to-end, 10-bit source, and grain.
+
+### Safe Zones (cross-platform union)
+Keep critical content inside these margins so it reads clean on both IG Reels and TikTok:
+- **Top:** 250 px (username, audio attribution, status bar)
+- **Bottom:** 440 px (caption, action buttons, audio track, TikTok UI is heavier than IG)
+- **Right:** 100 px (like / comment / share column)
+- **Left:** 0 px
+
+Effective safe area: roughly the center **980 × 1230 px** of the 1080 × 1920 frame.
 
 ### Frame Rate
 - **30fps** recommended for psychedelic bass music (fast audio-reactive movement, social-native)
@@ -401,8 +428,67 @@ TikTok: upload via web browser (10 GB limit), not mobile (287 MB limit). Keep ke
 
 **Match Movie File Out `fps` to project cook rate.** Default project = 60fps, default Movie File Out = 30fps — mismatch loses half the frames.
 
-### Free License Limitation
-H.264/H.265 requires Commercial or Pro license + NVIDIA GPU. Free license: render to MPEG 4, then transcode via HandBrake.
+### Export Pipeline Decision
+
+Three options. Choose by use case:
+
+| Pipeline | Use for | Quality | Cost |
+|----------|---------|---------|------|
+| **A. MPEG 4 → HandBrake** | Iteration / preview only. Never post. | Low (2 encodes) | Free |
+| **B. Commercial license → h264nvgpu direct** | Production default once license justified | High (1 encode) | ~$600 |
+| **C. Image sequence → FFmpeg** | **Current posted exports on Free license** | Highest (0 encodes until assembly) | Free |
+
+**Default on Free license: Pipeline C.** TD renders uncompressed frames to disk, FFmpeg does a single fully-controlled encode. Zero generational loss until the platform re-encode. MPEG 4 path is retired for anything that goes live.
+
+### Pipeline C — Image Sequence Workflow
+
+**TD side (Movie File Out TOP):**
+- Type: Image Sequence
+- Image File Type: PNG (16-bit) — start here. Use EXR only if banding survives.
+- Filename: `frame_######.png` in a dedicated per-render subfolder
+- Match project cook rate to 30 fps before rendering
+- Allocate ~1 GB disk per 30s of 1080×1920 PNG 16-bit
+- Render to NVMe SSD — HDD will bottleneck frame writes
+
+**FFmpeg assembly (IG target, 18 Mbps CRF 18):**
+```
+ffmpeg -framerate 30 -i frame_%06d.png -i audio.wav \
+  -c:v libx264 -preset slow -crf 18 -pix_fmt yuv420p \
+  -colorspace bt709 -color_primaries bt709 -color_trc bt709 \
+  -tune grain -x264-params "aq-mode=3:aq-strength=0.8" \
+  -c:a aac -b:a 320k -ar 48000 \
+  -movflags +faststart \
+  output.mp4
+```
+
+Flag notes:
+- `-crf 18` — quality-targeted, visually lossless vs source. Drop to 16 for max quality, raise to 20 for smaller files.
+- `-preset slow` — slower encode, better compression efficiency
+- `-tune grain` — preserves analog grain pipeline instead of smoothing it to mush
+- `aq-mode=3, aq-strength=0.8` — adaptive quantization protecting dark areas and gradients
+- `-colorspace/primaries/trc bt709` — explicit Rec.709 tagging, platforms don't second-guess
+- `-movflags +faststart` — metadata at front of file for clean streaming upload
+
+For TikTok target, change `-crf 18` to `-crf 20` (matches 10–12 Mbps) or leave at 18 (TikTok will re-encode down either way; feeding higher is harmless).
+
+### Upload Protocol
+
+**Both platforms: upload via desktop web uploader on stable WiFi > 20 Mbps.**
+
+- **Instagram Reels:** instagram.com web uploader OR Meta Business Suite. The historical "mobile on WiFi beats desktop" advice has flipped as of 2026 — desktop web is now equal or better. If mobile is unavoidable, toggle "Upload at Highest Quality" (Settings → Account → Data Usage).
+- **TikTok:** tiktok.com/upload (10 GB limit) OR TikTok Studio desktop app. Never mobile for anything important — app is 287 MB cap and cellular uploads get aggressive throttling.
+
+**Never re-upload a downloaded or screen-recorded clip.** Compound compression is the fastest way to destroy a visualizer. Always upload the original master.
+
+### Quality Mitigations
+
+In priority order:
+
+1. **Upload bitrate is the single biggest lever.** Platforms re-encode aggressively; starved sources band hard. Target 15+ Mbps for IG, 10+ for TikTok.
+2. **Rec.709 SDR end-to-end.** No sRGB conversions, no HDR flags. Tag explicitly at FFmpeg stage.
+3. **10-bit source through the TD pipeline** — render to 16-bit PNG, let FFmpeg dither on the 8-bit conversion. Protects gradients through the 4:2:0 bottleneck.
+4. **Grain as banding protection (hypothesis, pending empirical test in Phase 4).** The analog grain pipeline may give the H.264 encoder something to latch onto instead of smooth gradient planes. `-tune grain` in FFmpeg preserves it through the master encode. Validate against Act 2 underwater gradient before trusting.
+5. **Never compound-compress.** One encode at master stage, one re-encode at the platform. That's it.
 
 ---
 

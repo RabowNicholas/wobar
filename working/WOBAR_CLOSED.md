@@ -13,6 +13,18 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Research — Posting Quality (Compression + TD Export)
+
+**Closed:** 2026-04-15
+
+**Context:**
+Four-phase research into mitigating quality loss on visualizer posts to IG Reels and TikTok. Identified two load-bearing constraints: platform-enforced 4:2:0 chroma subsampling and Free-license TD export ceiling. Phase 1 mapped 2026 platform re-encode behavior for both platforms. Phase 2 compared three export pipelines (Free+HandBrake, Commercial h264nvgpu, image sequence+FFmpeg). Phase 3 locked the recipe into WOBAR_TD_REFERENCE.md Section 8. Phase 4 benchmark protocol designed but not yet executed — battle-testing deferred to live posting.
+
+**Resolution:**
+Section 8 of WOBAR_TD_REFERENCE.md replaced with per-platform tables (IG 15–25 Mbps / TikTok 10–12 Mbps), cross-platform safe zone (center 980×1230), three-pipeline decision matrix (Pipeline A retired, Pipeline C image-sequence→FFmpeg as new default on Free license), ready-to-run FFmpeg command with Rec.709 tagging and `-tune grain`, upload protocol (desktop web on both platforms), and five-item quality mitigations list. Research artifacts saved in working/: RESEARCH_POSTING_QUALITY, RESEARCH_PHASE1_PLATFORM_SPECS, RESEARCH_PHASE2_TD_EXPORT, RESEARCH_PHASE4_BENCHMARK. Grain-as-banding-protection hypothesis flagged for empirical validation during real posting cycles.
+
+---
+
 ## Act 2 Visual — Tunnel (/project1/tunnel)
 
 **Closed:** 2026-04-14
