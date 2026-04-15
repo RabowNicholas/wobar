@@ -41,6 +41,7 @@ Do not build from general TD knowledge. Build from these files. Every parameter 
 |------|-------------|
 | reference/WOBAR_TD_AGENT_RULES.md | ANY TouchDesigner build or modification |
 | reference/WOBAR_TD_REFERENCE.md | Parameter values, node chains, audio pipeline, color system, export |
+| reference/WOBAR_TWOZERO_GUIDE.md | TWOZERO tool usage, operator type strings, confirmed limitations |
 | reference/WOBAR_MOVE_SYSTEM.md | Move history schema, undo mechanics, auto-rollback spec |
 | reference/WOBAR_FRAMEWORK.md | Act identity, arc structure, percentages |
 | reference/WOBAR_BRAND.md | Brand positioning, mission, archetype |

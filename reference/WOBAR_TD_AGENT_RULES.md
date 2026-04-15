@@ -22,8 +22,8 @@ wobar/touchdesigner/networks/
     [network_name]_v002.tox
     CHANGE_LOG.md
     moves/
-      move_001.msgpack
-      move_002.msgpack
+      move_001.json
+      move_002.json
 ```
 
 - One folder per visual/network. Agent picks a descriptive name on creation.
@@ -41,10 +41,10 @@ Every TD modification goes through the move system. No exceptions.
 
 - **Move** = everything the agent does in response to one user request. One request, one move.
 - Before executing any TWOZERO call, capture the before-state of what's about to change.
-- After all calls succeed, write `move_NNN.msgpack` to the network's `moves/` folder.
-- If any call fails mid-move, auto-rollback: replay before-states in reverse. No move file written.
+- After all calls succeed, write `move_NNN.json` to the network's `moves/` folder.
+- If any call fails mid-move, auto-rollback: replay before-states in reverse. No move file written. If rollback fails, write `move_NNN_failed.json`.
 - Undo = pop last N moves off the stack, replay before-states, delete move files.
-- Save = `.tox` checkpoint via TWOZERO, flush all moves, restart numbering. Triggers session learnings review.
+- Save = `.tox` checkpoint via TWOZERO, analyze moves first, then flush, restart numbering.
 
 ---
 
@@ -92,6 +92,8 @@ Every visual module is fully controlled via named **Constant CHOPs**. This is th
 - Each act outputs through a **Null TOP** named `null_out`.
 - Use **Select TOP** to reference across containers — no visible cross-container wiring.
 - Shared resources (audio analysis, color palettes, grain) live in `base_globals`.
+
+**`base_globals` target architecture:** The audio pipeline and color palettes should eventually live in `base_globals` and be referenced by all act COMPs via Select TOPs. Current state: `base_audio` and `base_act2_map` exist as standalone networks. Do not create duplicate audio pipelines per act — when building Act 3+, reference `base_audio` via Select CHOP instead.
 
 ---
 

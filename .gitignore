@@ -3,3 +3,5 @@
 
 # Obsidian (editor-specific settings)
 .obsidian/
+
+*.mp4

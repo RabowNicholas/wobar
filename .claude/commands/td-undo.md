@@ -20,7 +20,7 @@ $ARGUMENTS
 ### Step 1: Identify Network and Moves
 
 1. If no network specified, find the most recently modified network by checking modification times of files in `touchdesigner/networks/*/moves/`.
-2. List all move files in that network's `moves/` folder, sorted by number.
+2. List all `.json` move files in that network's `moves/` folder, sorted by number (highest first).
 3. Confirm the requested number of moves exist. If user asks to undo 3 but only 2 exist, report this and ask whether to undo the 2 that exist.
 
 ### Step 2: Read Move Files

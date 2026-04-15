@@ -1,0 +1,28 @@
+{
+  "label": "tunnel_src GLSL TOP + ctrl_tunnel Constant CHOP",
+  "timestamp": "2026-04-14T00:00:00Z",
+  "network": "act2_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/tunnel_glsl",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_tunnel/tunnel_glsl",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/tunnel_src",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/ctrl_tunnel",
+      "before": null
+    }
+  ],
+  "notes": "GLSL TOP par.array and par.const systems do not accept Python expressions. Shader values hardcoded for now. CHOP export or array0chop binding to investigate — see WOBAR_TWOZERO_GUIDE.md. out vec4 fragColor must be explicitly declared in glsl430. Non-Commercial key caps resolution at 1280x1280 — using 1080x1080."
+}

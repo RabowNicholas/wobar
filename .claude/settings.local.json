@@ -23,7 +23,19 @@
       "Bash(python3:*)",
       "mcp__twozero__td_get_par_info",
       "mcp__twozero__td_get_network",
-      "Bash(git checkout:*)"
+      "Bash(git checkout:*)",
+      "mcp__twozero__td_write_dat",
+      "mcp__twozero__td_get_operator_info",
+      "mcp__twozero__td_set_operator_pars",
+      "mcp__twozero__td_get_screen_screenshot",
+      "mcp__twozero__td_get_docs",
+      "mcp__twozero__td_read_dat",
+      "Read(//Users/nicholasrabow/Desktop/Music/wobar/**)",
+      "Read(//Users/nicholasrabow/Desktop/**)",
+      "Bash(ls -lt /Users/nicholasrabow/Desktop/*.wav)",
+      "mcp__twozero__td_read_chop",
+      "mcp__twozero__td_get_perf",
+      "Skill(td-build)"
     ]
   },
   "enabledMcpjsonServers": [

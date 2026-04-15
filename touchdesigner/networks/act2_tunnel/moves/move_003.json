@@ -1,0 +1,75 @@
+{
+  "label": "feedback loop — comp_fb, fb_lv, fb_tr, fb_top, null_out",
+  "timestamp": "2026-04-14T00:00:00Z",
+  "network": "act2_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/comp_fb",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/null_out",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/fb_lv",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/fb_tr",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_tunnel/fb_top",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/tunnel_src",
+      "to": "/project1/base_act2_tunnel/fb_top",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/fb_top",
+      "to": "/project1/base_act2_tunnel/fb_tr",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/fb_tr",
+      "to": "/project1/base_act2_tunnel/fb_lv",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/fb_lv",
+      "to": "/project1/base_act2_tunnel/comp_fb",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/tunnel_src",
+      "to": "/project1/base_act2_tunnel/comp_fb",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_tunnel/comp_fb",
+      "to": "/project1/base_act2_tunnel/null_out",
+      "input_index": 0,
+      "before": null
+    }
+  ],
+  "notes": "Correct feedbackTOP pattern: tunnel_src wired to fb_top input[0] as seed (frame 0 init). par.top='null_out' provides temporal reference. NO circular wire from null_out to fb_top — that creates a hard cook dependency loop. par.top-only approach resolves correctly. Transient 'not enough sources' errors on fb_tr/fb_lv/comp_fb self-resolve once TD finishes cooking."
+}

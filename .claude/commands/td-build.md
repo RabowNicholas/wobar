@@ -15,21 +15,22 @@ $ARGUMENTS
 
 1. Read `reference/WOBAR_TD_AGENT_RULES.md`
 2. Read the relevant section of `reference/WOBAR_TD_REFERENCE.md` for the visual primitive being built
-3. Read `reference/WOBAR_MOVE_SYSTEM.md` for move schema
+3. Read `reference/WOBAR_MOVE_SYSTEM.md` for move schema and network→comp mapping
 4. If act-specific, read `reference/WOBAR_FRAMEWORK.md`
 
 ## Determine Network Context
 
 - Check if this is a new visual or modifying an existing one.
-- If new: create `touchdesigner/networks/[descriptive_name]/` with a `moves/` subfolder.
-- If existing: identify the network folder under `touchdesigner/networks/`.
-- Count existing move files in `moves/` to determine next move number.
+- Look up the network folder in the Network → TD Comp Mapping table in `WOBAR_MOVE_SYSTEM.md`.
+- If new network: create `touchdesigner/networks/[descriptive_name]/` with a `moves/` subfolder and a `CHANGE_LOG.md` file with header `# CHANGE LOG — [network_name]`. Add the new network to the mapping table in `WOBAR_MOVE_SYSTEM.md`.
+- If existing: confirm the network folder path.
+- Determine next move number: find the highest existing move file number in `moves/` and add 1. Do not count files — use max + 1.
 
 ## Execute the Move
 
 ### Step 1: Inspect Before-State
 
-Before touching anything in TD, use TWOZERO to read the current state of every node, parameter, and connection you plan to modify. Record this as the before-state.
+Before touching anything in TD, use TWOZERO to read the current state of every node, parameter, connection, and DAT text you plan to modify. Record this as the before-state.
 
 For each planned operation, capture:
 - **create_node**: before = `null` (node doesn't exist yet)
@@ -37,6 +38,7 @@ For each planned operation, capture:
 - **connect**: before = current connection at that input (or `null` if empty)
 - **disconnect**: before = the connection that exists
 - **delete_node**: before = full node state (type, parameters, connections)
+- **set_dat_text**: before = full current text content of the DAT (read via TWOZERO)
 
 ### Step 2: Execute via TWOZERO
 
@@ -48,11 +50,12 @@ If any TWOZERO call fails mid-move:
 1. Stop immediately. Do not continue.
 2. Reverse all operations already executed, in reverse order, using the before-states.
 3. Do NOT write a move file.
-4. Report what failed and what was rolled back.
+4. If the rollback itself fails partway, write `move_NNN_failed.json` documenting what was intended, what succeeded, and where rollback broke. Report that manual TD inspection is required.
+5. Report what failed and what was rolled back.
 
 ### Step 4: Write Move File
 
-If all operations succeeded, write the move file as JSON (msgpack conversion happens later if needed):
+If all operations succeeded, write the move file:
 
 ```
 touchdesigner/networks/[network]/moves/move_NNN.json
@@ -66,7 +69,7 @@ Schema:
   "network": "network folder name",
   "operations": [
     {
-      "type": "create_node|set_parameter|connect|disconnect|delete_node",
+      "type": "create_node|set_parameter|connect|disconnect|delete_node|set_dat_text",
       "path": "/full/td/path",
       "parameter": "param_name (if set_parameter)",
       "from": "source path (if connect)",
@@ -78,21 +81,9 @@ Schema:
 }
 ```
 
-Use zero-padded 3-digit numbering: `move_001.json`, `move_002.json`, etc.
+### Step 5: Validate Against Act Constraints
 
-### Step 5: Validate
-
-After the build, check the result against the act constraint table in WOBAR_TD_AGENT_RULES.md:
-
-| Act | Required | Forbidden |
-|-----|----------|-----------|
-| 1 | Circles, warm purple glow, breath rhythm | Sharp geometry, aggressive motion, cool colors |
-| 2 | Inward spiral, depth, tightening with audio | Outward expansion, warm colors dominating |
-| 3 | Tunnel, 85-90% mirror, infinite depth, glitch on peaks | Emotional relief, warm/orange tones, perfect symmetry |
-| 4 | Outward radial expansion, full color palette, rhythm | Inward motion, cool-only palette |
-| 5 | Circle returns, portal closing, breath rhythm | New visual concepts |
-
-If the build violates its act constraint, fix it (as another operation within the same move) before reporting completion.
+Check the act constraint table in `reference/WOBAR_TD_AGENT_RULES.md`. If the build violates its act constraint, fix it (as another operation within the same move) before reporting completion.
 
 ## Report
 

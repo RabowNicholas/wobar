@@ -1,5 +1,9 @@
 # Wobar Project Instructions
 
+> **DEPRECATED** — Superseded by `CLAUDE.md` (project root). Do not use this file as a reference. It reflects an earlier state of the system and has not been kept in sync.
+
+---
+
 You are working with Nick on the Wobar project — a bass music artist brand and performance identity. This project has a structured vault of reference files on GitHub. Follow these instructions every session.
 
 ---

@@ -13,6 +13,19 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Act 2 Visual — Tunnel (/project1/tunnel)
+
+**Closed:** 2026-04-14
+
+**Context:**
+Concentric square tunnel built in `/project1/tunnel`. L-infinity distance GLSL shader (20 rings, exponential perspective spacing, brightness/linewidth gradient). Full feedback loop with fb_displace, noise_warp counter-rotation. Color pipeline: lvc → displace → lkp/ramp_purple → color_mult (thresh_mask) → glow_comp → chrom_ab → null_final. Muted psychedelic palette: blue/purple/teal dominant, orange accents, ramp cycles via absTime.
+
+Full audio reactivity via `ctrl_audio_live` CHOP (pre-computed band×energy channels). `ctrl_master` Base COMP exposes all parameters including `Intensity` (manual energy ceiling). `base_audio` pipeline built as standalone component: mono_mix → 4 audiofilterCHOP branches → RMS → lag → merge, plus energy envelope (0.55 sub + 0.35 bass weighted sum, 2.5s release lag, normalized 0→1), plus kick branch.
+
+**Resolution:** Visual dialed in and signed off. Energy-driven Intensity scales all motion parameters — breakdown goes near-still, drop comes alive. Kick mapped but not used (no target felt right). File saved by user. Needs WAV conversion + full export before final archive.
+
+---
+
 ## Common Enemy (Buffalo Farm) Remix
 
 **Closed:** 2026-04-10

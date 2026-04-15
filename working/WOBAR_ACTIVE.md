@@ -16,7 +16,12 @@ When a loop closes, it moves to [[working/WOBAR_CLOSED]].
 LOOP: Act 2 Visual — base_act2 underwater spiral
 STATUS: in progress
 LAST: Full parameterization built. 6 ctrl_ CHOPs expose all style constants and audio handles. base_audio (4-band analysis pipeline) and base_act2_map (Act 2 scaling layer) built as standalone Base COMPs. Audio wired to /Users/nicholasrabow/Downloads/20_1_14_26.mp3. ctrl_audio_live Select CHOP is the live swap point — all expressions updated to use it. All three networks laid out left-to-right. Canonical output: null_surface_out.
-NEXT: Observe audio reactivity against the track. Dial in gain values in base_act2_map (math_zoom.par.gain, math_bright.par.gain etc). When satisfied, save base_audio and base_act2_map as .tox files for reuse.
+NEXT: BLOCKER — convert 20_1_14_26.mp3 to WAV before next build session. WOBAR_TD_REFERENCE.md mandates WAV for deterministic render sync (Locked to Timeline does not work correctly with MP3). After that: observe audio reactivity, dial in gain values in base_act2_map (math_zoom.par.gain, math_bright.par.gain etc). When satisfied, run /td-save to checkpoint and export .tox files.
+
+LOOP: Act 2 Visual — tunnel export
+STATUS: in progress
+LAST: Visual signed off. Loop closed. Pending full-song export.
+NEXT: Convert mur v1.mp3 to WAV → set audio_in file + playmode=locked → set timeline end frame to match WAV duration → Movie File Out → render with Realtime OFF.
 
 ---
 
@@ -46,6 +51,7 @@ NEXT: Research carousel best practices, define format spec, test.
 
 | Date | Summary |
 |------|---------|
+| 2026-04-14 | Tunnel audio reactivity session. Built base_audio from scratch (4-band audiofilterCHOP pipeline, energy envelope, kick branch). Built ctrl_audio_live pre-compute CHOP layer in tunnel. Wired all visual parameters to energy: zoom, rotation, opacity, contrast, glow, CA, displace. Intensity parameter on ctrl_master is manual energy ceiling. Explored kick mapping (zoom snap, shockwave, contrast flash — all removed, none felt right). Color cycling via ramp phase tried and removed. Energy-driven Intensity is the keeper — breakdown goes near-still, drop comes alive. |
 | 2026-04-12 | Act 2 TD build session continued. Evolved 3-arm spiral from purple to underwater aesthetic. Shifted color to desaturated blue/teal (0.50–0.67 hue, sat 0.40 at shader, 0.75 HSV). Widened wave crest spacing (spacing 0.042→0.072). Added caustic layer (Voronoi edge detection GLSL, 3 animated scales, screen-blended — null_caustic_out). Added radial surface glow (ramp_surface screen-blended — null_surface_out). Brand reviewed: Act 2 DESCENSION alignment strong. Blue color approved as contextual departure. |
 | 2026-04-10 | Content format review session. Reviewed existing buckets and format system. Defined three new test formats in working/FORMAT_TESTING.md: The Cut (found footage hook → visualizer at drop, three hook categories: skate/nature chaos/extreme sports), The Stack (three horizontal strips stacked vertical, "you are here" multi-angle), continued Transmission testing. Carousel format parked as research loop. Satisfying process, flow arts, optical illusions killed with reasoning. Formats stay in testing doc until performance data earns them a spot in WOBAR_CONTENT.md. |
 | 2026-04-10 | Full loop review. All 8 open loops closed: Common Enemy remix, ASAP Rocky remix, Flow State residency, Thursday event concept, Origin Story series, FREQUENCY Lake Effect, platform bio rewrite, Organic Distortion visual system. Clean slate. |

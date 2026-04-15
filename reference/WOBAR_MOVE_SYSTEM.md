@@ -1,7 +1,7 @@
 ---
 title: Move History System Spec
-version: 1.0
-last_updated: 2026-04-12
+version: 1.1
+last_updated: 2026-04-14
 status: locked
 scope: Defines the move history system for tracking and undoing AI agent changes to TouchDesigner networks.
 dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
@@ -30,8 +30,8 @@ wobar/touchdesigner/networks/
     [network_name]_v002.tox
     CHANGE_LOG.md
     moves/
-      move_001.msgpack
-      move_002.msgpack
+      move_001.json
+      move_002.json
 ```
 
 - One folder per visual/network.
@@ -40,14 +40,26 @@ wobar/touchdesigner/networks/
 
 ---
 
-## Move File Schema (MessagePack)
+## Network → TD Comp Mapping
 
-Each `.msgpack` file contains:
+| Network folder | TD comp path |
+|---------------|-------------|
+| act2_underwater | /project1/base_act2 |
+| act2_tunnel | /project1/base_act2_tunnel |
 
-```
+Add a row here whenever a new network is created.
+
+---
+
+## Move File Schema (JSON)
+
+Each `.json` file contains:
+
+```json
 {
   "label": "add caustic layer",
   "timestamp": "2026-04-12T14:32:00Z",
+  "network": "act2_underwater",
   "operations": [
     {
       "type": "create_node",
@@ -66,6 +78,11 @@ Each `.msgpack` file contains:
       "to": "/project1/base_act2/comp_surface",
       "input_index": 1,
       "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2/caustic_glsl/glsl1",
+      "before": "// prior shader text here"
     }
   ]
 }
@@ -80,6 +97,17 @@ Each `.msgpack` file contains:
 | `set_parameter` | Previous parameter value | Set parameter to previous value |
 | `connect` | Previous connection (or `null`) | Restore previous connection (or disconnect) |
 | `disconnect` | The connection that existed | Reconnect |
+| `set_dat_text` | Full prior text content of the DAT | Write prior text back to the DAT |
+
+---
+
+## Move Numbering
+
+Next move number = **highest existing file number + 1**, not count of files.
+
+Example: `moves/` contains `move_001.json` and `move_003.json` → next is `move_004.json`.
+
+Zero-padded to 3 digits: `move_001.json`, `move_002.json`, etc.
 
 ---
 
@@ -91,8 +119,8 @@ Each `.msgpack` file contains:
 2. Agent inspects current state of everything it plans to touch via TWOZERO.
 3. Agent captures before-state for each operation.
 4. Agent executes all TWOZERO calls.
-5. If all calls succeed: write `move_NNN.msgpack` to `moves/`.
-6. If any call fails mid-move: auto-rollback — replay all before-states captured so far in reverse order. No move file written.
+5. If all calls succeed: write `move_NNN.json` to `moves/`.
+6. If any call fails mid-move: auto-rollback — replay all before-states captured so far in reverse order. No move file written. If rollback itself fails partway, write `move_NNN_failed.json` documenting what was attempted, what succeeded, and where rollback broke.
 
 ### On Undo (td-undo)
 
@@ -102,11 +130,12 @@ Each `.msgpack` file contains:
 
 ### On Save (td-save)
 
-1. Save `.tox` via TWOZERO: `op('[base]').saveToFile('[path]')`.
-2. Increment version number: `[network]_v001.tox` → `[network]_v002.tox`.
-3. Delete all files in `moves/`.
-4. Move numbering restarts at `move_001` for next session.
-5. Analyze session: review undone moves and parameter corrections. Update `TD_BUILD_LOG.md`. Check correction tracker — if any correction hits 2+ occurrences, propose promotion to `WOBAR_TD_AGENT_RULES.md`.
+1. Read and analyze all move files in `moves/` — capture learnings before anything is deleted.
+2. Save `.tox` via TWOZERO.
+3. Increment version number.
+4. Delete all files in `moves/`.
+5. Move numbering restarts at `move_001` for next session.
+6. Write learnings to `TD_BUILD_LOG.md`. Check correction tracker — if any correction hits 2+ occurrences, propose promotion to `WOBAR_TD_AGENT_RULES.md`.
 
 ---
 
@@ -118,6 +147,12 @@ If a TWOZERO call fails during a move:
 2. Reverse all operations already executed in this move, in reverse order.
 3. Do not write a move file.
 4. Report the failure and what was rolled back.
+
+If the rollback itself fails partway:
+
+1. Stop.
+2. Write `move_NNN_failed.json` with: what was intended, what succeeded before failure, where rollback broke, current uncertain state.
+3. Report clearly — state is uncertain and manual inspection in TD is required.
 
 ---
 
