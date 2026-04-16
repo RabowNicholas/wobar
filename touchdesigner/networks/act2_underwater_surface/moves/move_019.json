@@ -1,0 +1,14 @@
+{
+  "label": "Portal shimmer — swirling spiral arms + inward-pulsing concentric rings",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Replaced surface-normal specular shimmer with polar-coordinate portal spiral. 3 arms: sin(aW*3 + rW*16 + t*2.8) — '+t' means inward pull. Concentric rings: sin(rW*26 + t*5.0). FBM domain warp (0.40 strength) breaks mechanical symmetry. Fade: smoothstep(0.70, 0.05, r) so portal fills most of frame. Color: deep teal (0.06,0.28,0.48) → aqua-white (0.65,0.90,0.97). Shimmer now reads as portal aperture not water surface.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Full rewrite — polar coordinate spiral portal replaces surface normal specular",
+      "before": "domain-warped wave height function + Phong specular dot(normal, vec3(0,0,1))^42"
+    }
+  ]
+}

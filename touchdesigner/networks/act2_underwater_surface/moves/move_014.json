@@ -1,0 +1,38 @@
+{
+  "label": "GLSL vignette pass — stable depth falloff replacing ramp_depth/comp_depth",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "ramp_depth+comp_depth disappeared on every project reload. Replaced with glsl_vignette: a passthrough GLSL shader that reads comp_shimmer and applies a portrait-corrected radial multiply (smoothstep(0.55,1.15,r) ^ 1.4). Aspect correction: centered.x *= 720/1280 before length(). GLSL compile error fixed: TD auto-declares sTD2DInputs — cannot redeclare it.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_vignette_dat",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_vignette_dat",
+      "note": "Radial vignette shader: reads sTD2DInputs[0], computes aspect-corrected r, applies 1-smoothstep(0.55,1.15,r) pow 1.4 multiply",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_vignette",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_shimmer",
+      "to": "/project1/base_act2_underwater/glsl_vignette",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/glsl_vignette",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": "comp_shimmer"
+    }
+  ]
+}

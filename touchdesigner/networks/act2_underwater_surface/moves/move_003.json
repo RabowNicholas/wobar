@@ -1,0 +1,64 @@
+{
+  "label": "Phase 3 — water surface normal map: glsl_surface_dat + glsl_surface (720x1280, rgba16float) + blur_surface (gaussian 1px) + null_surface",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_surface_dat",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_surface_dat",
+      "before": ""
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_surface",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_surface",
+      "parameter": "pixeldat",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_surface",
+      "parameter": "outputresolution",
+      "before": "useinput"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_surface",
+      "parameter": "format",
+      "before": "rgba8fixed"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/blur_surface",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/glsl_surface",
+      "to": "/project1/base_act2_underwater/blur_surface",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_surface",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/blur_surface",
+      "to": "/project1/base_act2_underwater/null_surface",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

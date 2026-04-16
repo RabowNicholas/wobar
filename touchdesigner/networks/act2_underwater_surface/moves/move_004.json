@@ -1,0 +1,68 @@
+{
+  "label": "Phase 4 — refraction: displace_refract (null_sky+null_surface, horzsource=red, vertsource=green, rgba16float) + null_refract",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_sky",
+      "to": "/project1/base_act2_underwater/displace_refract",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_surface",
+      "to": "/project1/base_act2_underwater/displace_refract",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "horzsource",
+      "before": "red"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "vertsource",
+      "before": "green"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "format",
+      "before": "rgba8fixed"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "displaceweightx",
+      "before": 0.1
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "displaceweighty",
+      "before": 0.1
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_refract",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/displace_refract",
+      "to": "/project1/base_act2_underwater/null_refract",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

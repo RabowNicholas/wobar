@@ -1,0 +1,15 @@
+{
+  "label": "Sharp base + kick-driven blur spike on blur_shimmer",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Inverted blur behavior: was growl-driven sharpness (16→5), now sub_bass-driven blur spike. Base blur = 4px (sharp). On kick peak (sub_bass=0.81): blur = ~15px. Effect: portals are crisp at rest, smear/haze on each kick impact then sharpen back as sub_bass drops. Pairs with brightness flash from uBreathAmt — kick hits with both a flash and a blur smear.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size expression",
+      "before": "int(tdu.remap(op('audio_ref')['growl'] if op('audio_ref') is not None else 0, 0, 1, 16, 5))",
+      "after": "int(4 + op('audio_ref')['sub_bass'] * 14) if op('audio_ref') is not None else 4"
+    }
+  ]
+}

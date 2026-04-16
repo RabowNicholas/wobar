@@ -1,0 +1,32 @@
+{
+  "label": "Phase 1 scaffolding — base COMP + 4 control CHOPs",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ctrl_wave",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ctrl_caustic",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ctrl_color",
+      "before": null
+    }
+  ]
+}

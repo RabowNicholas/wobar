@@ -1,0 +1,54 @@
+{
+  "label": "Kick glow burst — blur_kick + lvc_kick + comp_kick composite layer",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Added a glow burst composite layer driven by sub_bass. Takes the palette-mapped output (ramp_lookup), blurs it heavily (70px gaussian), then adds it back on top via comp_kick (Add mode). lvc_kick.brightness1 = sub_bass * 1.5 — at quiet (0.06): adds ~0.09x of the blurred frame (invisible). At kick peak (0.81): adds ~1.22x of the blurred frame (strong bloom burst). Using palette-mapped source ensures the burst color matches the ice-fire palette already in use. Signal chain: ramp_lookup → comp_kick (input0) + [ramp_lookup → blur_kick → lvc_kick] (input1) → null_underwater_out.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/blur_kick",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/lvc_kick",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_kick",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_lookup",
+      "to": "/project1/base_act2_underwater/blur_kick",
+      "input_index": 0
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/blur_kick",
+      "to": "/project1/base_act2_underwater/lvc_kick",
+      "input_index": 0
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_lookup",
+      "to": "/project1/base_act2_underwater/comp_kick",
+      "input_index": 0
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/lvc_kick",
+      "to": "/project1/base_act2_underwater/comp_kick",
+      "input_index": 1
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_kick",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": "ramp_lookup"
+    }
+  ]
+}

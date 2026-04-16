@@ -1,0 +1,14 @@
+{
+  "label": "Kick-driven movement — warp distortion + arm spin spike on sub_bass",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Added two kick-driven movement responses to glsl_shimmer_dat. (1) Warp amplitude: FBM domain warp multiplier raised from fixed 0.38 to (0.38 + kick*0.28) — at sub_bass peak the portals writhe/distort, boundary becomes organic and pressurized. (2) Rotation speed: rotSpeed += kick*2.0 — arms spin faster on each kick, giving directional swirl motion. Both effects vanish when sub_bass drops back to baseline. Combined with existing brightness flash (uBreathAmt), each kick now produces: flash + writhe + swirl. kickWarp passed as new portal() argument to keep warp separate from chaos-driven parameters.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "portal() now takes kickWarp argument. warp *= (0.38 + kickWarp*0.28). rotSpeed += kick*2.0.",
+      "before": "warp * 0.38 fixed, rotSpeed = mix(0.3,4.5,chaos) only"
+    }
+  ]
+}

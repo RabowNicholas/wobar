@@ -1,0 +1,14 @@
+{
+  "label": "Undo alien multi-source sky — revert to single rotating god rays + breathing Snell window",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "User rejected multi-source alien sky (move_016). Restored glsl_sky_dat to move_015 state: single central source, 5 FBM-warped rotating spokes, breathing Snell window 0.56->0.65 on ~5s cycle.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Restored to move_015 single-source shader",
+      "before": "3-source orbiting alien planet shader (move_016)"
+    }
+  ]
+}

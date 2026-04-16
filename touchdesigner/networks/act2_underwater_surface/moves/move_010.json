@@ -1,0 +1,101 @@
+{
+  "label": "Realism pass — Gerstner waves, sharp caustics, god rays, bloom chain, refract 0.045",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "comp_depth and ramp_depth were missing after project reload — recreated. Bloom chain inserted between null_graded and comp_caustic. ramp_depth_keys auto-created on ramp_depth creation.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_surface_dat",
+      "note": "Added large swell (gwave, 0.55 amp), Gerstner peak shaping (sin^steepness), micro-ripple layer (8.5/11.0 freq), tightened eps 0.008→0.006",
+      "before": "3-sine wave + FBM turbulence only"
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_caustic_dat",
+      "note": "causticLayer smoothstep 0.18→0.06, power 2.5→5.0 — thin spiderweb bright lines, high contrast",
+      "before": "smoothstep(0.0, 0.18, v), pow(..., 2.5)"
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Added god rays: angular noise fbm(vec2(rayAngle*2.5+t*0.04, r*1.2)) * exp(-r*1.8) * 0.6",
+      "before": "no god rays"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/blur_bloom",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_bloom",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_graded",
+      "to": "/project1/base_act2_underwater/blur_bloom",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_graded",
+      "to": "/project1/base_act2_underwater/comp_bloom",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/blur_bloom",
+      "to": "/project1/base_act2_underwater/comp_bloom",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_bloom",
+      "to": "/project1/base_act2_underwater/comp_caustic",
+      "input_index": 0,
+      "before": "null_graded"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_depth",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/comp_depth",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_depth",
+      "to": "/project1/base_act2_underwater/comp_depth",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_depth",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": "comp_caustic"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const1value",
+      "before": 0.025
+    }
+  ]
+}

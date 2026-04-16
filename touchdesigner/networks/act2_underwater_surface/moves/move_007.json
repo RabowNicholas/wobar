@@ -1,0 +1,122 @@
+{
+  "label": "Phase 7 — final composite: ramp_depth (radial, 720x1280, hermite, white-center→black-edges) + comp_caustic (Screen: null_graded+null_caustic) + comp_depth (Multiply: +ramp_depth) + null_underwater_out",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "ramp_depth_keys auto-created. 3-stop radial vignette: pos 0.0→white, 0.55→mid-gray, 1.0→black. Force cook() needed to resolve transient 'Not enough sources' on compositeTOPs — same behavior as displace_refract in move_004.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "outputresolution",
+      "before": "useinput"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "resolutionw",
+      "before": 256
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "resolutionh",
+      "before": 256
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "format",
+      "before": "rgba8fixed"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "type",
+      "before": "horizontal"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "interpnotches",
+      "before": "linear"
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/ramp_depth_keys",
+      "before": "pos\tr\tg\tb\ta\n0\t0\t0\t0\t1\n1\t1\t1\t1\t1\n"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ramp_depth",
+      "parameter": "dat",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_caustic",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/comp_caustic",
+      "parameter": "operand",
+      "before": "over"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_graded",
+      "to": "/project1/base_act2_underwater/comp_caustic",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_caustic",
+      "to": "/project1/base_act2_underwater/comp_caustic",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_depth",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/comp_depth",
+      "parameter": "operand",
+      "before": "over"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/comp_depth",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_depth",
+      "to": "/project1/base_act2_underwater/comp_depth",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_underwater_out",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_depth",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

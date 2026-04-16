@@ -1,0 +1,32 @@
+{
+  "label": "chaos control — still to chaotic spectrum exposed on ctrl_scene",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Added 'chaos' channel (0=still, 1=chaotic) to ctrl_scene as const6. Drives three parameters: (1) glsl_shimmer uChaos uniform — rotSpeed mix(0.3,4.5), ringSpeed mix(0.8,8.0), driftMult mix(0.15,1.0), brightness mix(0.15,0.48). (2) blur_shimmer size — tdu.remap(chaos, 0,1, 90,18): very soft blur when still, sharp arms when chaotic. (3) Shimmer visible in shader only — at chaos=0 portals are near-invisible (brightness 0.15), at chaos=1 they dominate frame with fast interference. Default set to 0.5. Audio hookup: map sub_bass_p or energy_scaled → ctrl_scene['chaos'] when ready.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const6name",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const6value",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Added uChaos uniform — all speeds and brightness now mix() between still/chaotic endpoints",
+      "before": "hardcoded rotation 2.8, ring 5.0, drift 1.0, brightness 0.48"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size",
+      "before": 45
+    }
+  ]
+}

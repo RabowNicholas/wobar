@@ -1,0 +1,25 @@
+{
+  "label": "Remove displace_refract — bypassing proved cleaner, shimmer handles surface",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "displace_refract was warping a smooth radial gradient — produced blob distortion not legible water refraction. Specular shimmer layer does the surface job better. glsl_surface/blur_surface/null_surface chain kept (orphaned but useful for future shimmer input or surface-driven effects).",
+  "operations": [
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_sky",
+      "to": "/project1/base_act2_underwater/hsv_underwater",
+      "input_index": 0,
+      "before": "null_refract"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "before": "displaceTOP: in0=null_sky, in1=null_surface, horzsource=red, vertsource=green, extend=mirror, displaceweight=0.065 (expression)"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/null_refract",
+      "before": "nullTOP: in0=displace_refract"
+    }
+  ]
+}

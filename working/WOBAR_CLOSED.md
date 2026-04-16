@@ -13,6 +13,18 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Act 1/5 Visual — base_act2_underwater Portal Web
+
+**Closed:** 2026-04-16
+
+**Context:**
+Multi-session build on `/project1/base_act2_underwater`. Started as an underwater-looking-up refraction scene (sky + caustics + surface normal map). Evolved through: Snell's window sky (rejected), shimmer-only portal web (kept), sky and caustics removed, portals pushed as primary element. Final visual: 3-portal vortex web with ice-fire palette, dual-rate breath (7s/13s), global spin, kick-driven blur smear + glow burst composite layer. Audio tuned for Act 1/5 gentle sub content via rec_audio waveform analysis.
+
+**Resolution:**
+Visual complete. `movie_out` wired and ready to record. Output: `/Users/nicholasrabow/Desktop/wobar/renders/output.mov`. Tuning levers documented in WOBAR_ACTIVE (lvc_kick brightness1, blur_kick size). 43 moves logged in `touchdesigner/networks/act2_underwater_surface/moves/`.
+
+---
+
 ## Act 2 Visual — act2_fractal Kaleidoscope Tunnel
 
 **Closed:** 2026-04-15

@@ -1,0 +1,14 @@
+{
+  "label": "Portal swirls fill full viewport — fade radius + Lissajous amplitude increased",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Two changes to push portals to frame edges: (1) fade smoothstep 0.65→1.30 so each portal extends to full frame diagonal. (2) Lissajous amplitudes roughly doubled (~0.20→0.38 x, ~0.22→0.52 y) so centers drift across more of the portrait frame. Y amplitude larger than X to match portrait aspect ratio.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "fade smoothstep 0.65→1.30, Lissajous amplitudes ~2x",
+      "before": "fade smoothstep(0.65, 0.04, rW), amplitudes ~0.20x/0.22y"
+    }
+  ]
+}

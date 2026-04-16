@@ -1,0 +1,51 @@
+{
+  "label": "Realism calibration — displace mirror, brightness balance, caustic 4x scale, bloom 14px",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "comp_depth/ramp_depth operators kept disappearing on project reload — removed from chain permanently. null_underwater_out wires directly from comp_caustic. displace extend hold→mirror eliminated hard horizontal seam artifact. Sky brightness calibrated: cloud*0.90 + centerGlow exp(-r*1.9)*0.52. edgeFade smoothstep(0.82,1.42). caustic_scale 1.0→4.0 gives fine spiderweb pattern. ctrl_scene brightness 1.2→1.15.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/displace_refract",
+      "parameter": "extend",
+      "before": "hold"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const0value",
+      "before": 1.2
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_caustic",
+      "parameter": "const1value",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_caustic",
+      "parameter": "const2value",
+      "before": 0.18
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_bloom",
+      "parameter": "size",
+      "before": 28
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "centerGlow exp(-r*1.9)*0.52, edgeFade smoothstep(0.82,1.42), cloud*0.90, rays*0.30",
+      "before": "cloud*0.72, centerGlow exp(-r*2.4)*0.40, edgeFade smoothstep(0.78,1.35)"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": "comp_depth (operator lost on reload)"
+    }
+  ]
+}

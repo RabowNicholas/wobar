@@ -1,0 +1,14 @@
+{
+  "label": "Snell's window sky — animated critical angle boundary, TIR exterior, dark void",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Full sky rewrite. Technique: two-pass FBM domain warp distorts the window boundary organically — wave-like deformation. Window interior (r < snellR): central glow exp(-r*3.0) + drifting light patches (FBM at uvW*4.2). Boundary: luminous rim exp(-(r-snellR)^2 * 180) — physically accurate, light concentrates at critical angle. TIR exterior: near-black void (0.005, 0.012, 0.030) with trace haze only. Bass (power 2.5) drives warp amplitude and snellR — drops chop the window, breakdowns calm it. Breathe = sin(t*1.26) keeps the slow window oscillation from before. Colors: deepVoid → tealMid → skyCore (no warm tones). No light source reading — pure physics of looking up through water.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Snell's window with TIR exterior replacing radial glow",
+      "before": "exp(-r*3.0) radial glow + breathing Snell rim (move_031/029 state)"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "label": "Multi-portal shimmer — 3 swirls with independent Lissajous drift + interference",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "portal() function computes one swirl's contribution relative to its own center. Called 3x with offset Lissajous paths (phases 0, 2π/3, 4π/3) and different rotation phases. Additive blend — where spiral arms from different portals cross, intensity compounds (interference nodes). Blur reduced 80→45px so individual portals read when separated. FBM reduced to 3 octaves per call for performance (3 portals × 3 FBM calls each).",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Full rewrite — portal() function called 3x with independent Lissajous centers. Additive interference.",
+      "before": "single portal with sine Lissajous center"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size",
+      "before": 80
+    }
+  ]
+}

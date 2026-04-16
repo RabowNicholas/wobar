@@ -1,0 +1,14 @@
+{
+  "label": "Inverted glow sky — dark consuming center, luminous shell, inward-streaming veins",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Sky rewrite for Act 2 DESCENSION. Three elements: (1) luminous shell: exp(-pow((rW-0.55)*3.2,2))*1.3 — bright ring at r=0.55 representing light from above. (2) FBM veins: polar vein field in (veinAngle*4 + t*0.015, rW*2.5 - t*0.04) space — negative r*t term makes veins drift inward toward void. (3) Dark void center: exp(-rW*rW*14)*0.07 barely suggested. FBM domain warp (0.32 strength) distorts the ring and veins organically. Known artifact: faint seam on left from atan() branch cut at angle=-π/+π boundary — fixable with smoothed polar normalization if desired.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Inverted glow: dark center, luminous shell, inward FBM veins",
+      "before": "exp(-r*3.0) radial glow + breathing Snell rim (move_029 state)"
+    }
+  ]
+}

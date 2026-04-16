@@ -1,0 +1,14 @@
+{
+  "label": "Vignette fix — screen-edge shape replaces radial circle artifact",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Previous radial vignette (smoothstep(0.55,1.15,r) on aspect-corrected r) created a visible oval/circle boundary mid-frame. Replaced with screen-edge formula: edgeDist = uv*(1-uv), product * 80 → pow(0.28). This follows the actual portrait frame shape — darkens from all four edges rather than cutting a circle in the content.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_vignette_dat",
+      "note": "Vignette formula changed from smoothstep on aspect-corrected radial distance to uv*(1-uv) screen-edge product. No visible circle.",
+      "before": "1 - smoothstep(0.55, 1.15, r) pow(1.4) on aspect-corrected centered radius"
+    }
+  ]
+}

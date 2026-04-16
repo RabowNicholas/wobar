@@ -1,0 +1,14 @@
+{
+  "label": "Dynamic sky — rotating god rays + breathing Snell window (Act 2 DESCENSION)",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "First pass used abs(sin(angle*7)) — created 14-spoke geometric starburst (abs doubles the peaks). Fixed: pow(max(0, sin(angle*5)), 7) gives 5 clean spokes, only positive half-cycles. FBM angle warp (fbm(uv*1.1 + t*0.018)*0.7) bends spokes organically so they read as god rays distorted by moving water surface rather than mechanical rotation. Breathing Snell window: sin(t*1.26)*0.5+0.5 drives snellR 0.56->0.65 on ~5s cycle, core sky brightness breathes ±18%. Both features read Act 2 DESCENSION language: spiraling circles, pull toward center intensifies.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Full rewrite — added rotating FBM-warped god rays (5 spokes, slow CW rotation) + breathing Snell window (5s cycle). Replaces static radial with dynamic animated sky.",
+      "before": "high-contrast radial: exp(-r*3.0) center, cloud fbm*0.18, Snell rim at r=0.62, no animation"
+    }
+  ]
+}

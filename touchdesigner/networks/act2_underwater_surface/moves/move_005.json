@@ -1,0 +1,52 @@
+{
+  "label": "Phase 5 — caustic layer: glsl_caustic_dat + glsl_caustic (720x1280, rgba16float, 7 uniforms) + null_caustic",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_caustic_dat",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_caustic_dat",
+      "before": ""
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_caustic",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_caustic",
+      "parameter": "pixeldat",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_caustic",
+      "parameter": "outputresolution",
+      "before": "useinput"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_caustic",
+      "parameter": "format",
+      "before": "rgba8fixed"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_caustic",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/glsl_caustic",
+      "to": "/project1/base_act2_underwater/null_caustic",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

@@ -13,10 +13,6 @@ dependencies: [[WOBAR_CONTEXT]]
 Living document. Not locked. Updated at the end of every working session.
 When a loop closes, it moves to [[working/WOBAR_CLOSED]].
 
-LOOP: Act 2 Visual — base_act2 underwater spiral
-STATUS: in progress
-LAST: Full parameterization built. 6 ctrl_ CHOPs expose all style constants and audio handles. base_audio (4-band analysis pipeline) and base_act2_map (Act 2 scaling layer) built as standalone Base COMPs. Audio wired to /Users/nicholasrabow/Downloads/20_1_14_26.mp3. ctrl_audio_live Select CHOP is the live swap point — all expressions updated to use it. All three networks laid out left-to-right. Canonical output: null_surface_out.
-NEXT: BLOCKER — convert 20_1_14_26.mp3 to WAV before next build session. WOBAR_TD_REFERENCE.md mandates WAV for deterministic render sync (Locked to Timeline does not work correctly with MP3). After that: observe audio reactivity, dial in gain values in base_act2_map (math_zoom.par.gain, math_bright.par.gain etc). When satisfied, run /td-save to checkpoint and export .tox files.
 
 LOOP: Act 2 Visual — tunnel export
 STATUS: in progress
@@ -52,6 +48,7 @@ NEXT: Research carousel best practices, define format spec, test.
 
 | Date | Summary |
 |------|---------|
+| 2026-04-16 | base_act2_underwater audio tuning + kick response session. Analyzed rec_audio waveform (16400 samples) — sub_bass peaks 0.81, energy 0.87, growl clipping at 1.02. Fixed: growl_max raised 0.16→0.22, power curves dropped (1.8/2.5 → linear) for Act 1/5 gentle content. Added kick-driven blur (blur_shimmer 0→16px), kick glow burst composite (blur_kick+lvc_kick+comp_kick Add layer). Fixed portal drift — anchored triangle formation, was bottom-left. Added movie_out for recording. Moves 037–043.
 | 2026-04-15 | act2_fractal refinement session. Kaleidoscope tunnel: added domain warp (double fbm), global clockwise rotation, color cycling (3 independent oscillators, purple family only), breathing scale, chaos power curve 3.0, sub_pressure power 2.5 for smooth breakdowns. Tried + rejected: mirror cascade, orange palette, full-spectrum psychedelic colors. rec_out wired (h264nvgpu, audio_in at 44100). No checkpoint yet.
 | 2026-04-15 | Posting quality research — four-phase investigation into IG/TikTok compression + TD export limitations. Phase 1 platform specs mapped (4:2:0 forced, 15–25 Mbps IG / 10–12 TikTok, desktop web beats mobile on both). Phase 2 pipeline comparison (A retired, C image-sequence→FFmpeg as default on Free license, B reserved for future license upgrade). Phase 3 locked recipe into WOBAR_TD_REFERENCE.md Section 8 — per-platform tables, cross-platform safe zone (center 980×1230), FFmpeg command with Rec.709 + `-tune grain`, upload protocol, quality mitigations. Phase 4 benchmark protocol designed (5-section torture clip) but deferred — battle-testing through live posting instead. Research loop closed. |
 | 2026-04-14 | Tunnel audio reactivity session. Built base_audio from scratch (4-band audiofilterCHOP pipeline, energy envelope, kick branch). Built ctrl_audio_live pre-compute CHOP layer in tunnel. Wired all visual parameters to energy: zoom, rotation, opacity, contrast, glow, CA, displace. Intensity parameter on ctrl_master is manual energy ceiling. Explored kick mapping (zoom snap, shockwave, contrast flash — all removed, none felt right). Color cycling via ramp phase tried and removed. Energy-driven Intensity is the keeper — breakdown goes near-still, drop comes alive. |

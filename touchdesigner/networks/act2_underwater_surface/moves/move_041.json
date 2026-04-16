@@ -1,0 +1,15 @@
+{
+  "label": "Remove blur_shimmer base — 0px at rest, kick-only blur",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "GLSL portal shader already has inherent softness from FBM warp. blur_shimmer base of 4px was double-blurring. New: base = 0, kick drives full range. At sub_bass=0.06 (quiet): ~1px (negligible). At sub_bass=0.81 (kick): ~13px. Portals are as sharp as the GLSL allows at rest.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size expression",
+      "before": "int(4 + op('audio_ref')['sub_bass'] * 14) if op('audio_ref') is not None else 4",
+      "after": "int(op('audio_ref')['sub_bass'] * 16) if op('audio_ref') is not None else 0"
+    }
+  ]
+}

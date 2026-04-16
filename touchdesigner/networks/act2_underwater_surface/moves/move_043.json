@@ -1,0 +1,33 @@
+{
+  "label": "Add movie_out moviefileoutTOP for recording",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Created movie_out moviefileoutTOP tapped from null_underwater_out. Audio wired from /project1/base_audio/audio_in (raw audio file, not processed signal). Output: /Users/nicholasrabow/Desktop/wobar/renders/output.mov. 60fps, mov container. Hit the Record pulse on movie_out to start/stop.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/movie_out",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_underwater_out",
+      "to": "/project1/base_act2_underwater/movie_out",
+      "input_index": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/movie_out",
+      "parameter": "file",
+      "before": null,
+      "after": "/Users/nicholasrabow/Desktop/wobar/renders/output.mov"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/movie_out",
+      "parameter": "audiochop",
+      "before": null,
+      "after": "/project1/base_audio/audio_in"
+    }
+  ]
+}

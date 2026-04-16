@@ -1,0 +1,59 @@
+{
+  "label": "Remove sky — rewire null_shimmer direct to hsv_underwater, enhance portals to 5",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Sky removed as primary visual element. Rewired: null_shimmer → hsv_underwater input 0 (previously comp_pregrade → hsv_underwater). Shimmer shader rewritten: 5 portals (was 3), dark void core per portal (exp(-rW*rW*10) mask), per-portal arm count variation (3/4/3/5/3), wider drift radius (0.44/0.58 max), larger fade smoothstep (1.6 was 1.3), brightness raised to mix(0.42, 0.92, chaos). blur_shimmer range changed from tdu.remap(chaos,0,1,90,18) to tdu.remap(chaos,0,1,35,5) — portals are now primary element, need visible detail. Network cleanup: deleted comp_pregrade, comp_shimmer, null_sky, glsl_sky, glsl_sky_dat.",
+  "operations": [
+    {
+      "type": "disconnect",
+      "from": "/project1/base_act2_underwater/comp_pregrade",
+      "to": "/project1/base_act2_underwater/hsv_underwater",
+      "input_index": 0,
+      "before": "comp_pregrade"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_shimmer",
+      "to": "/project1/base_act2_underwater/hsv_underwater",
+      "input_index": 0,
+      "before": "comp_pregrade"
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "5 portals, void cores, arm variation, brightness raised",
+      "before": "3-portal chaos-reactive shader (move_027)"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size",
+      "before": "tdu.remap(chaos,0,1,90,18)"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/comp_pregrade",
+      "before": "Screen composite: null_sky + null_shimmer → hsv_underwater"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/comp_shimmer",
+      "before": "bypassed orphan"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/null_sky",
+      "before": "sky output cap"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/glsl_sky",
+      "before": "Snell's window sky shader"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "before": "sky fragment shader DAT"
+    }
+  ]
+}

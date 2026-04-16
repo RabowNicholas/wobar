@@ -1,0 +1,14 @@
+{
+  "label": "Anchor portals to triangle formation — fix bottom-left drift",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "At low chaos (0.08), driftMult=0.136 barely moves portals from their phase-determined Lissajous position — they were phase-locked in the bottom-left. Fix: added explicit base positions forming a portrait triangle (p0 top-center, p1 bottom-right, p2 bottom-left) at (0.0,0.28), (0.22,-0.22), (-0.22,-0.22). Lissajous drift is now a tight offset on top of these bases (amplitude reduced from ±0.44/0.58 to ±0.18/0.22). At chaos=0, portals sit at their triangle bases. At chaos=1, driftMult=1.0 and portals drift wider and faster as before.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Added base0/base1/base2 triangle positions. Lissajous amplitude cut from 0.44/0.58 to 0.18/0.22.",
+      "before": "Freeform Lissajous with amplitudes up to ±0.58 — phase-locked in bottom-left at chaos=0.08"
+    }
+  ]
+}

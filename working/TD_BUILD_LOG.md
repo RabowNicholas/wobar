@@ -40,6 +40,45 @@ Corrections that appear 2+ times get promoted to WOBAR_TD_AGENT_RULES.md.
 
 ---
 
+### 2026-04-16 — base_act2_underwater Audio Tuning + Kick Response (moves 037–043)
+
+**What was built:**
+Audio reactivity tuning and kick response system for `/project1/base_act2_underwater` — Act 1/5 portal web visual.
+
+**Audio analysis findings (rec_audio, 16400 samples from null_audio):**
+- sub_bass: typical 0.05–0.15, peaks 0.81 — clear discrete kicks, mostly quiet
+- energy: typical 0.005–0.02, peaks 0.87 — very dynamic, near-zero between hits
+- growl: typical 0.13–0.20, peaks 1.0187 — CLIPPING (growl_max was 0.16, raised to 0.22)
+- transient: typical 0.03, peaks 0.76
+
+**Changes made:**
+- `ctrl_norm.growl_max` 0.16 → 0.22 (fix clipping)
+- `glsl_shimmer uBreathAmt` expression: pow(sub_bass,1.8)*0.9 → linear sub_bass*0.75 (gentle audio was crushed by power curve)
+- `lvc brightness1`: energy*0.484 → energy*0.45 linear
+- `blur_shimmer size`: growl-driven → sub_bass-driven (0px base, spikes to ~13px on kick)
+- Portal triangle anchor: added base positions (0,0.28), (0.22,-0.22), (-0.22,-0.22) — portals were phase-locking bottom-left at low chaos. Lissajous amplitude cut 0.44/0.58 → 0.18/0.22
+- Kick glow burst: blur_kick (70px gaussian from ramp_lookup) → lvc_kick (brightness1=sub_bass*1.5) → comp_kick (Add) → null_underwater_out
+- movie_out wired (null_underwater_out, audio_in) → /Users/nicholasrabow/Desktop/wobar/renders/output.mov
+
+**What agent got right first pass:**
+- rec_audio analysis approach (read min/max/val from recordCHOP channels)
+- Identifying power curve as the root cause of dead audio response at gentle values
+- Linear modulation mapping design for Act 1/5 character
+- Glow burst architecture (blur source image, scale by audio, Add composite)
+- moviefileoutTOP audiochop → audio_in (not null_audio)
+
+**What needed correction / iteration:**
+- blur_shimmer base of 4px was double-blurring on top of GLSL's inherent softness — dropped to 0
+- Portal bottom-left issue: Lissajous amplitudes up to ±0.58 caused phase-locking at low chaos. Solution: explicit triangle base positions + tight drift offsets
+- Kick warp+spin shader change (move_038) was reverted — user wanted different type of movement (settled on blur smear instead)
+
+**New patterns discovered:**
+- At low chaos (driftMult=0.136), Lissajous drift barely moves but portals still visit their full amplitude range slowly — if phase offset lands them off-screen, they stay there for a long time. Anchor base positions + small drift offsets is more reliable for composition control.
+- For gentle audio (Act 1/5), power curves above 1.2 effectively kill modulation. Record first with rec_audio, check typical values (not just peaks), then design curves to those typical values.
+- Glow burst using the palette-mapped output as blur source keeps colors consistent — no color bleed from pre-grade signals.
+
+---
+
 ### 2026-04-15 — act2_fractal Kaleidoscope Tunnel Refinement (no checkpoint)
 
 **What was built:**

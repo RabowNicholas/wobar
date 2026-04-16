@@ -1,0 +1,36 @@
+{
+  "label": "Audio tuning — linear curves, growl→blur, fix growl_max clipping",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Three expression changes based on rec_audio waveform analysis. Problem: power curves pow(2.5)/pow(1.8) crushed gentle Act 1/5 sub_bass values (0.06 typical → 0.0006 after pow2.5 = dead). Fix: linear sub_bass for uBreathAmt, linear energy for lvc brightness. growl now drives blur_shimmer sharpness (more mid-bass = tighter portals, 16→5). Also fixed ctrl_norm.growl_max from 0.16→0.22: rec_audio showed growl peaking at 1.0187, meaning it was clipping. Modulation ranges after fix: breath_amt 0.15→0.90 across sub_bass range, brightness 0.78→1.23 across energy range, blur 16→5 across growl range.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_audio/ctrl_norm",
+      "parameter": "const2value (growl_max)",
+      "before": 0.16,
+      "after": 0.22
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_shimmer",
+      "parameter": "color6rgbr (uBreathAmt expression)",
+      "before": "0.2 + pow(op('audio_ref')['sub_bass'], 1.8) * 0.9 if op('audio_ref') is not None else 0.4",
+      "after": "0.15 + op('audio_ref')['sub_bass'] * 0.75 if op('audio_ref') is not None else 0.4"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/lvc",
+      "parameter": "brightness1 expression",
+      "before": "0.88 + op('audio_ref')['energy'] * 2.2 * 0.22 if op('audio_ref') is not None else 0.95",
+      "after": "0.78 + op('audio_ref')['energy'] * 0.45 if op('audio_ref') is not None else 0.85"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "parameter": "size expression",
+      "before": "int(tdu.remap(op('ctrl_scene')['chaos'], 0, 1, 18, 2))",
+      "after": "int(tdu.remap(op('audio_ref')['growl'] if op('audio_ref') is not None else 0, 0, 1, 16, 5))"
+    }
+  ]
+}

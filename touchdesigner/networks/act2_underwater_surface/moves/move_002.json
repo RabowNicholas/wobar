@@ -1,0 +1,52 @@
+{
+  "label": "Phase 2 — sky source: glsl_sky_dat + glsl_sky (720x1280, rgba16float) + null_sky",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "before": ""
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_sky",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_sky",
+      "parameter": "pixeldat",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_sky",
+      "parameter": "outputresolution",
+      "before": "useinput"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_sky",
+      "parameter": "format",
+      "before": "rgba8fixed"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_sky",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/glsl_sky",
+      "to": "/project1/base_act2_underwater/null_sky",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

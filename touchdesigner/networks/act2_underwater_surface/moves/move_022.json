@@ -1,0 +1,14 @@
+{
+  "label": "Smooth center drift — sine Lissajous replaces FBM (was jerky)",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "FBM drift was jerky because high-frequency octaves cause sharp direction changes when traversed at speed. Replaced with two sine waves per axis with incommensurate frequencies: x = sin(t*0.17)*0.20 + sin(t*0.11+1.3)*0.14, y = sin(t*0.13+0.7)*0.22 + sin(t*0.08+2.5)*0.13. Sine is C∞ smooth — no jerk. Incommensurate frequencies mean the Lissajous path never exactly repeats. Amplitude gives ~±0.34 max drift in aspect-corrected space.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Center drift: FBM → sine Lissajous",
+      "before": "fbm(vec2(t*0.42, 0.30))*2-1, fbm(vec2(t*0.33, 0.71))*2-1 * 0.38"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "label": "Undo inverted glow sky — revert to radial glow + breathing Snell window",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "User rejected inverted glow sky (move_030). Restored glsl_sky_dat to move_023/029 state: exp(-r*3.0) radial glow + breathing Snell rim (sin(t*1.26)) + slow cloud fbm drift. Both move_028 (mycelium) and move_030 (inverted glow) rejected — sky currently at baseline radial glow pending new direction.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Restored to move_023 radial glow shader",
+      "before": "inverted glow sky (move_030)"
+    }
+  ]
+}

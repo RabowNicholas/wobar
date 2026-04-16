@@ -1,0 +1,73 @@
+{
+  "label": "Phase 6 — color grade chain: hsv_underwater + lvc_underwater (rgba16float) + ramp_palette (1024x1, 7 stops, hermite) + ramp_lookup (luminance) + null_graded",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "rampTOP keys written to auto-created ramp_palette_keys DAT (not par.dat directly). par.dat must point to ramp_palette_keys for ramp to display.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/hsv_underwater",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_refract",
+      "to": "/project1/base_act2_underwater/hsv_underwater",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/lvc_underwater",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/hsv_underwater",
+      "to": "/project1/base_act2_underwater/lvc_underwater",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ramp_palette",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ramp_palette_keys",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/ramp_lookup",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/lvc_underwater",
+      "to": "/project1/base_act2_underwater/ramp_lookup",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_palette",
+      "to": "/project1/base_act2_underwater/ramp_lookup",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_graded",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/ramp_lookup",
+      "to": "/project1/base_act2_underwater/null_graded",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

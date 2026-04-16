@@ -35,7 +35,17 @@
       "Bash(ls -lt /Users/nicholasrabow/Desktop/*.wav)",
       "mcp__twozero__td_read_chop",
       "mcp__twozero__td_get_perf",
-      "Skill(td-build)"
+      "Skill(td-build)",
+      "mcp__twozero__td_get_operators_info",
+      "Skill(td-save)",
+      "WebSearch",
+      "WebFetch(domain:blog.hvidtfeldts.net)",
+      "WebFetch(domain:iquilezles.org)",
+      "WebFetch(domain:www.shadertoy.com)",
+      "WebFetch(domain:thealphablenders.com)",
+      "mcp__twozero__td_clear_textport",
+      "mcp__twozero__td_agents_md",
+      "mcp__twozero__td_search"
     ]
   },
   "enabledMcpjsonServers": [

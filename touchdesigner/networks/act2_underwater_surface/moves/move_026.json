@@ -1,0 +1,41 @@
+{
+  "label": "Shimmer pre-grade composite — portals and sky graded together as one image",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Moved shimmer from post-caustic Screen layer to pre-color-grade composite. Created comp_pregrade (Screen: null_sky + null_shimmer) feeding into hsv_underwater. Now both sky and portal swirls go through hsv_underwater → lvc_underwater → ramp_lookup together — portal dark areas pull to ramp_palette deep blue-black instead of being transparent Screen overlays. comp_shimmer bypassed (orphaned). glsl_vignette now wires from comp_caustic directly.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_pregrade",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_sky",
+      "to": "/project1/base_act2_underwater/comp_pregrade",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_shimmer",
+      "to": "/project1/base_act2_underwater/comp_pregrade",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_pregrade",
+      "to": "/project1/base_act2_underwater/hsv_underwater",
+      "input_index": 0,
+      "before": "null_sky"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/glsl_vignette",
+      "input_index": 0,
+      "before": "comp_shimmer"
+    }
+  ]
+}

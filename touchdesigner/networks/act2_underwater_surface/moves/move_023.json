@@ -1,0 +1,14 @@
+{
+  "label": "Remove god rays from sky — clean radial glow only",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "User removed god ray spokes from sky. Deleted rotating ray block (baseAngle/angleWarp/rays computation) and removed 'rays' from intensity sum. Sky is now: exp(-r*3.0) base + breathing Snell rim + slow cloud fbm. Portal shimmer now carries all the structural motion — sky is ambient background light.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Removed god ray block. intensity = sky + snellRim + cloud only.",
+      "before": "intensity = sky + rays + snellRim + cloud"
+    }
+  ]
+}

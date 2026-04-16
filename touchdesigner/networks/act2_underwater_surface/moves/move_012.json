@@ -1,0 +1,61 @@
+{
+  "label": "Specular shimmer layer + sky source rework to high-contrast radial",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "FPS monitor showed 0 throughout but TD was responsive (screenshots working, cooking working). Shimmer initially tiled badly — fixed with FBM domain warp + smoothstep(0.6, 0.0, r) hard mask. Caustic nearly black at this stage — shimmer + sky doing the heavy lifting.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Full rewrite — domain-warped cloud replaced with high-contrast radial sky: exp(-r*3.0) center, gentle cloud texture (fbm*0.18), Snell's rim at r=0.62. Enables wave refraction to read as actual water bending a sky image.",
+      "before": "domain-warped swirling cloud FBM"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const1value",
+      "before": 0.045
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/glsl_shimmer",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/null_shimmer",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/comp_shimmer",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/comp_shimmer",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/null_shimmer",
+      "to": "/project1/base_act2_underwater/comp_shimmer",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_shimmer",
+      "to": "/project1/base_act2_underwater/null_underwater_out",
+      "input_index": 0,
+      "before": "comp_caustic"
+    }
+  ]
+}

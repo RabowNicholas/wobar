@@ -1,0 +1,14 @@
+{
+  "label": "Snell's window fix — teal rim, dark interior with contrast patches, 3-pass warp",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Revised move_032 shader. Fixes: (1) Rim pulled from white (skyCore) to tealRim (0.28,0.70,0.86) — coefficient 0.55, not 0.45. (2) Interior darkened: tealDark (0.02,0.08,0.16) base, centralGlow exp(-r*5.5)*0.55 (was exp(-r*3.0)*1.4), two-scale FBM patches with pow(1.8) and pow(2.0) curves for contrast. (3) Three-pass domain warp (q→r2→r3) with warpStr=0.09+bass*0.14 (was 0.045+bass*0.10) for more organic irregular boundary. (4) TIR exterior dropped to 0.012 (was 0.04 haze) — true void lets portal shimmer show through Screen blend.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Teal rim, dark patchy interior, 3-pass warp, void exterior",
+      "before": "move_032 — blown-out white rim, flat soft interior, 2-pass warp"
+    }
+  ]
+}

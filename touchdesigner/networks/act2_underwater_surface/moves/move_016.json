@@ -1,0 +1,14 @@
+{
+  "label": "Alien planet sky — 3 orbiting light sources with independent rays + Snell rims",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Single central light source replaced with 3 sources orbiting at different radii and speeds (0.08/0.06/0.04 rad/s), phases offset by 2π/3. Each source has: own FBM-warped rotating god rays (5 spokes, different rotation direction B reverses), own breathing Snell rim at independent phase. Interference zones between sources create complex crossing light patterns. Combined intensity scaled by 0.52 to match single-source brightness. All sources confined to Act 2 palette (no warm tones).",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Full rewrite — lightSource() function handles one source, called 3x with different orbit params. Sources orbit elliptically: A(0.22x0.18), B(0.28x0.20), C(0.18x0.24).",
+      "before": "single rotating FBM-warped god rays (5 spokes) + breathing Snell window, static center"
+    }
+  ]
+}

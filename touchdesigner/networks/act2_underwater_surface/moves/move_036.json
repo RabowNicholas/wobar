@@ -1,0 +1,32 @@
+{
+  "label": "Expose strobe_amt and density_mult — drop vs breakdown controls",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Added two new parameters to ctrl_scene: strobe_amt (const7, default 0.6) and density_mult (const8, default 1.8). Added three new uniforms to glsl_shimmer_dat: uSubBass (color2, from ctrl_audio_live sub_bass_p), uStrobeAmt (color3, from ctrl_scene strobe_amt), uDensityMult (color4, from ctrl_scene density_mult). Shader logic: densityScale = mix(1.0, uDensityMult, chaos) multiplies arm count and ring frequency per portal — at chaos=1 with density_mult=1.8, arms and rings are 1.8x denser, exponentially more intersection nodes. strobeMult = 1.0 + pow(uSubBass, 2.5) * uStrobeAmt * 2.5 — each kick pulse multiplies final brightness. At breakdown (chaos=0): strobe and density both inactive (mix to 1.0). At drop (chaos=1): full density scaling + kick-driven brightness flashes. numcolorbufs increased from 2 to 5.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const7name/value",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/ctrl_scene",
+      "parameter": "const8name/value",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Added uSubBass, uStrobeAmt, uDensityMult uniforms + densityScale/strobeMult logic",
+      "before": "uTime + uChaos only"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act2_underwater/glsl_shimmer",
+      "parameter": "numcolorbufs",
+      "before": 2
+    }
+  ]
+}

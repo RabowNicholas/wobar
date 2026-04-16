@@ -1,0 +1,33 @@
+{
+  "label": "Shimmer drift faster + blur_shimmer softens spiral arms",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Two changes: (1) Center drift speed 0.24/0.19 → 0.42/0.33, amplitude 0.24 → 0.38 — was too slow to see at prior speeds (took ~14s per feature traversal, now ~2.4s). (2) Added blur_shimmer blurTOP (28px Gaussian) between glsl_shimmer and null_shimmer — softens sharp spiral arm edges into diffuse glowing vortex energy. Chain: glsl_shimmer → blur_shimmer → null_shimmer → comp_shimmer.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_shimmer_dat",
+      "note": "Increased center drift: amplitude 0.24→0.38, speed t*0.24→t*0.42, t*0.19→t*0.33",
+      "before": "amplitude 0.24, speed t*0.24/t*0.19"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act2_underwater/blur_shimmer",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/glsl_shimmer",
+      "to": "/project1/base_act2_underwater/blur_shimmer",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/blur_shimmer",
+      "to": "/project1/base_act2_underwater/null_shimmer",
+      "input_index": 0,
+      "before": "glsl_shimmer"
+    }
+  ]
+}

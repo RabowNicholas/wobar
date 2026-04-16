@@ -1,0 +1,14 @@
+{
+  "label": "Mycelium sky — FBM contour lines replace radial glow",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Full sky rewrite. Technique: 2-pass domain warp (q→r) then FBM contour lines at two scales. Large filaments: fract(field*7 + pulse) with w=0.042 smoothstep. Fine network: fract(field2*5 - pulse*0.6) with w=0.055 at 0.45x weight. Pulse = sin(t*0.75)*0.022 — threshold drifts so filaments flicker (synaptic firing quality). Very slow warp drift (t*0.025 max) — mycelium lives in slow time. Near-black background (0.01,0.02,0.06), teal filaments (0.06,0.28,0.44), near-white tips (0.62,0.88,0.96). No light source — Act 2 DESCENSION register: living texture, alien, organic.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act2_underwater/glsl_sky_dat",
+      "note": "Full rewrite — mycelium FBM contour lines replace radial glow + breathing Snell window",
+      "before": "exp(-r*3.0) radial glow + breathing Snell rim + slow cloud fbm"
+    }
+  ]
+}

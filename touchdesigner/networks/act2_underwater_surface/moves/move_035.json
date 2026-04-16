@@ -1,0 +1,47 @@
+{
+  "label": "Remove caustics — rewire comp_bloom direct to glsl_vignette",
+  "timestamp": "2026-04-16T00:00:00Z",
+  "network": "act2_underwater_surface",
+  "notes": "Caustic layer removed entirely. Rewired: comp_bloom → glsl_vignette input 0 (previously comp_caustic → glsl_vignette). Deleted: comp_caustic, null_caustic, glsl_caustic, glsl_caustic_dat, ctrl_caustic. Signal chain is now portals-only: glsl_shimmer → blur_shimmer → null_shimmer → hsv_underwater → lvc_underwater → ramp_lookup → null_graded → blur_bloom → comp_bloom → glsl_vignette → null_underwater_out.",
+  "operations": [
+    {
+      "type": "disconnect",
+      "from": "/project1/base_act2_underwater/comp_caustic",
+      "to": "/project1/base_act2_underwater/glsl_vignette",
+      "input_index": 0,
+      "before": "comp_caustic"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act2_underwater/comp_bloom",
+      "to": "/project1/base_act2_underwater/glsl_vignette",
+      "input_index": 0,
+      "before": "comp_caustic"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/comp_caustic",
+      "before": "Screen composite: comp_bloom + null_caustic → glsl_vignette"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/null_caustic",
+      "before": "caustic output cap"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/glsl_caustic",
+      "before": "3-layer Voronoi caustic shader"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/glsl_caustic_dat",
+      "before": "caustic fragment shader DAT"
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_act2_underwater/ctrl_caustic",
+      "before": "caustic speed/scale/brightness constants"
+    }
+  ]
+}
