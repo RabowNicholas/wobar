@@ -13,6 +13,18 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Act 2 Visual — act2_fractal Kaleidoscope Tunnel
+
+**Closed:** 2026-04-15
+
+**Context:**
+Two-session build on `/project1/base_act2_fractal`. Started as a Mandelbulb raymarcher, pivoted to a 2D polar kaleidoscope tunnel. Explored domain warp, global rotation, color cycling, breathing scale, audio-reactive chaos, psychedelic color experiments.
+
+**Resolution:**
+Network deleted. Experiments and learnings fully preserved in TD_BUILD_LOG.md (2026-04-15 entry). Key takeaways promoted: power curves on audio inputs suppress breakdown noise better than Lag CHOP alone; HSV desat kills warm low-luminance palettes; three independent color oscillators at different rates create non-repeating variation within a constrained palette.
+
+---
+
 ## Research — Posting Quality (Compression + TD Export)
 
 **Closed:** 2026-04-15

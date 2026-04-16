@@ -44,62 +44,114 @@
 
 ## 2. Audio Pipeline {#audio}
 
-### Import
-**Audio File In CHOP** — set `File` to WAV path. `Play Mode` = **Locked to Timeline** (mandatory for deterministic render). Always use WAV, not MP3.
+**Live component:** `/project1/base_audio` — `base_audio_v001.tox`. Do not rebuild from scratch. Load the .tox.
 
-### Frequency Band Extraction
-Four parallel **Audio Filter CHOPs** from same Audio File In:
+**Output:** `null_audio` (nullCHOP) — 8 channels, normalized 0→1, smoothed.
 
-| Band | Type | Center/Cutoff | Q | Channel Name |
-|------|------|---------------|---|--------------|
-| Sub-bass | Band Pass | 50Hz | 0.7 | `sub_bass` |
-| Bass | Band Pass | 150Hz | 0.8 | `bass` |
-| Mid | Band Pass | 1000Hz | 0.5 | `mid` |
-| High | High Pass | 4000Hz | — | `high` |
+---
 
-After each filter: **Analyze CHOP** → Function = **RMS Power**. Then **Merge CHOP** combines all four.
+### Channel Reference
 
-For sub-bass pressure (continuous rumble): add Filter CHOP after Analyze, Low Pass cutoff 5Hz.
+| Channel | Source | Lag Up / Down | Norm Max | Tuned for | Notes |
+|---------|--------|---------------|----------|-----------|-------|
+| `sub_bass` | 50Hz BP → RMS | 0.05s / 0.30s | 0.32 | Low-end weight, breath | Dominant channel in dubstep |
+| `bass` | 150Hz BP → RMS | 0.005s / 0.15s | 0.32 | Bass body, harmonics | Shares band_max with sub/mid/high |
+| `mid` | 1kHz BP → RMS | 0.002s / 0.08s | 0.32 | Texture, synth pads | Genuinely quiet in this genre |
+| `high` | 4kHz HP → RMS | 0.001s / 0.05s | 0.32 | Air, hi-hats | Very low in dubstep — needs visual gain boost |
+| `energy` | Weighted band sum | 0.01s / 5.0s | 0.135 | Macro arc, breakdown→drop | Best channel for overall intensity |
+| `sub_pressure` | 50Hz BP → slow RMS | 0.1s / 1.0s | (direct, no remap) | Sustained heaviness | Raw output, max ~0.19, not remapped |
+| `growl` | 180Hz BP → RMS | 0.003s / 0.12s | 0.16 | Bass wobble, groove | Primary melodic motion in dubstep |
+| `transient` | Edge filter on energy | — | fromrange2=0.30 | Drop onset, hit detection | sqrt-compressed; spikes on fast energy rises |
 
-### Smoothing
-**Lag CHOP** — separate `Lag Up` and `Lag Down`:
-- Sub-bass breath: Up 0.05s, Down 0.3s
-- Kick hits: Up 0.005s, Down 0.15s
-- Hi-hats: Up 0.001s, Down 0.05s
+**Energy weights:** sub×0.55 + bass×0.35 + mid×0.07 + high×0.03
 
-**Math CHOP** — remap range: `From Range` (e.g., 0–0.3 typical RMS) → `To Range` (e.g., 0.5–3.0 for scale). Enable Clamp. Power ~0.5 compresses range.
+**Output smoothing:** `smooth_out` Lag CHOP between final_merge and null_audio. Scope: `sub_bass bass mid high growl` only (energy/sub_pressure/transient bypass). Up=0.04s, Down=0.08s.
 
-### Beat Detection
-**Beat CHOP** — Low/High Freq = 40–150Hz for kicks. Threshold ~0.5. Min Period ~0.3s for 140 BPM. Outputs 0 or 1 triggers.
+---
 
-Use **Speed CHOP** (Differentiate) for transient-only triggering.
-Use **Threshold CHOP** → **Trigger CHOP** (attack 0.01s, sustain 0.1s, release 0.5s) for audio-peak-only effects.
+### Control Nodes
 
-### Mapping Expressions
+| Node | Channels | Current Values |
+|------|----------|----------------|
+| `ctrl_norm` | band_max, energy_max, growl_max | 0.32, 0.135, 0.16 |
+| `ctrl_smooth` | smooth_up, smooth_down | 0.04, 0.08 |
+
+---
+
+### Kick Detection — Genre Note
+
+**Do not implement kick detection for psychedelic bass / dubstep.**
+- HP 2kHz click approach fails — sub bass masks all click transient content
+- Sub_bass onset approach works technically but impulse triggers feel mechanical against the organic mix
+- Use `energy` + `transient` channels for drop/hit detection. Use `sub_bass` for beat-locked motion.
+
+---
+
+### Full Signal Chain
+```
+audio_in (WAV, Play Mode = Sequential)
+  └→ mono_mix (Math CHOP, chanop=add, gain=0.5)
+       ├→ sub_filt (BP 50Hz)  → sub_rms  (avg) → sub_lag  (0.05/0.30)  ─┐
+       │    └→ sub_press_lag (0.1/1.0) ────────────────────────────────→ final_merge[2]
+       ├→ bass_filt (BP 150Hz) → bass_rms (avg) → bass_lag (0.005/0.15) ─┤
+       ├→ mid_filt  (BP 1kHz)  → mid_rms  (avg) → mid_lag  (0.002/0.08) ─┤→ merge_bands
+       ├→ high_filt (HP 4kHz)  → high_rms (avg) → high_lag (0.001/0.05) ─┘   → rename_bands
+       ├→ growl_filt (BP 180Hz) → growl_rms → growl_lag (0.003/0.12)           → math_remap_growl → rename_growl → final_merge[3]
+       └→ [no kick]
+
+rename_bands → math_remap (normalize, sqrt compress) → final_merge[0]
+rename_bands → e_mul (×weights) → e_sum → e_rename → energy_lag
+  energy_lag → e_norm (normalize) → final_merge[1]
+  energy_lag → transient_edge (filterCHOP, edge) → transient_norm → rename_transient → final_merge[4]
+
+final_merge → smooth_out (Lag, scoped) → null_audio (export point)
+null_audio → rec_audio (recordCHOP, record=off by default)
+```
+
+---
+
+### Reading Channels in Visual Expressions
 ```python
-# Scale breathing (sub-bass)
-0.5 + op('null_audio')['sub_bass'] * 2.5
+# Sub bass breath (radius, scale)
+0.15 + op('null_audio')['sub_bass'] * 0.4
 
-# Feedback opacity (bass)
-0.88 + op('null_audio')['bass'] * 0.11
+# Growl → rotation speed (Act 2 spiral)
+absTime.seconds * (5 + op('null_audio')['growl'] * 20)
 
-# Displacement intensity (mid)
-op('null_audio')['mid'] * 0.5
+# Energy → macro intensity (opacity, contrast)
+0.82 + op('null_audio')['energy'] * 0.15
 
-# Flash on kick
-op('null_audio')['kick_trigger']
+# Transient → glitch/hit trigger
+op('null_audio')['transient'] * 2.0
+
+# Sub pressure → sustained bloom
+op('null_audio')['sub_pressure'] * 5.0
 ```
 
-### Full Audio Chain
+---
+
+### Tuning Workflow
+
+To re-tune for a new track:
+1. Set `rec_audio.par.record = 'on'`
+2. Play the full track through `audio_in`
+3. Set `rec_audio.par.record = 'off'`
+4. Run analysis script inside TD:
+```python
+def analyze():
+    rec = op('/project1/base_audio/rec_audio')
+    n = rec.numSamples
+    results = {}
+    for i in range(rec.numChans):
+        ch = rec.chan(i)
+        vals = list(ch.vals)
+        sv = sorted(vals)
+        results[ch.name] = {'max': sv[-1], 'p95': sv[int(n*.95)], 'p50': sv[int(n*.50)], 'mean': sum(vals)/n}
+    for name, v in results.items():
+        print(f'{name:<16} max:{v["max"]:.3f}  p95:{v["p95"]:.3f}  p50:{v["p50"]:.3f}')
+r = analyze()
 ```
-Audio File In (WAV, Locked to Timeline)
-  ├→ Audio Filter (BP 50Hz) → Analyze (RMS) → Lag → "sub_bass"
-  ├→ Audio Filter (BP 150Hz) → Analyze (RMS) → Lag → "bass"
-  ├→ Audio Filter (BP 1kHz) → Analyze (RMS) → Lag → "mid"
-  ├→ Audio Filter (HP 4kHz) → Analyze (RMS) → Lag → "high"
-  └→ Beat CHOP → Threshold → Trigger → "kick"
-→ Merge CHOP → Math CHOP → Null CHOP (export point)
-```
+5. Targets: p95 ≈ 0.85–1.0 per channel. Adjust `ctrl_norm` values accordingly.
 
 ---
 

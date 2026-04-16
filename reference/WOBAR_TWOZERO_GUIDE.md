@@ -1,85 +1,101 @@
 ---
 title: TWOZERO MCP Guide
-version: 0.1
-last_updated: 2026-04-14
+version: 1.1
+last_updated: 2026-04-15
 status: live
-scope: Empirical reference for the TWOZERO MCP server. Capabilities, limitations, operator type strings, and known behaviors discovered through use. Add entries as they are confirmed.
-dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
+scope: Empirical reference for the TWOZERO MCP server. Capabilities, confirmed behaviors, operator type strings, and known limitations discovered through use.
+dependencies: [[reference/WOBAR_TD_AGENT_RULES]], [[reference/WOBAR_TWOZERO_MCP_CATALOG]]
 ---
 
 # TWOZERO MCP GUIDE
 
-Living doc. Not speculative — only add entries that have been confirmed in a real session.
+Living doc. Not speculative — only add entries confirmed in a real session.
 
----
-
-## Tool Index
-
-| Tool | What it does |
-|------|-------------|
-| `td_create_operator` | Create a new operator in a network |
-| `td_set_operator_pars` | Set one or more parameters on an operator |
-| `td_get_operator_info` | Read current state of an operator (type, pars, connections) |
-| `td_get_par_info` | Read parameter details for an operator |
-| `td_get_network` | Read all operators in a network |
-| `td_navigate_to` | Navigate the TD UI to a specific operator |
-| `td_find_op` | Find an operator by name or path |
-| `td_get_screenshot` | Screenshot of the TD window |
-| `td_get_screen_screenshot` | Screenshot of a specific operator's viewer |
-| `td_execute_python` | Run arbitrary Python in TD |
-| `td_read_chop` | Read channel values from a CHOP |
-| `td_read_dat` | Read text content from a DAT |
-| `td_write_dat` | Write text content to a DAT |
-| `td_get_errors` | Get current TD errors and warnings |
-| `td_get_perf` | Get performance metrics |
-| `td_get_focus` | Get currently focused network and selected ops |
-| `td_get_hints` | Get operator creation hints / type strings |
-| `td_get_docs` | Get TD documentation for an operator type |
-| `td_input_execute` | Execute a textport command |
-| `td_dev_log` | Read the developer log |
+**Full tool catalog (parameter shapes, decision tree):** `reference/WOBAR_TWOZERO_MCP_CATALOG.md`
 
 ---
 
 ## Confirmed Operator Type Strings
 
-Entries added only after confirmed successful use.
-
 | Operator | Type string |
 |----------|------------|
-| (none yet) | — |
+| Base COMP | `baseCOMP` |
+| Constant CHOP | `constantCHOP` |
+| Select CHOP | `selectCHOP` |
+| Lag CHOP | `lagCHOP` |
+| Math CHOP | `mathCHOP` |
+| Merge CHOP | `mergeCHOP` |
+| Rename CHOP | `renameCHOP` |
+| Analyze CHOP | `analyzeCHOP` |
+| Audio File In CHOP | `audiofileinCHOP` |
+| Audio Filter CHOP | `audiofilterCHOP` |
+| Audio Device Out CHOP | `audiodeviceoutCHOP` |
+| Record CHOP | `recordCHOP` |
+| Filter CHOP | `filterCHOP` |
+| Null CHOP | `nullCHOP` |
+| GLSL TOP | `glslTOP` |
+| Null TOP | `nullTOP` |
+| Level TOP | `levelTOP` |
+| Blur TOP | `blurTOP` |
+| Composite TOP | `compositeTOP` |
+| HSV Adjust TOP | `hsvadjustTOP` |
+| Movie File Out TOP | `moviefileoutTOP` |
+| Text DAT | `textDAT` |
+| Annotate COMP | `annotateCOMP` |
 
 ---
 
 ## Confirmed Parameter Behaviors
 
-How specific parameter types behave when set via `td_set_operator_pars`.
-
-| Operator type | Parameter | Notes |
-|--------------|-----------|-------|
-| (none yet) | — | — |
+| Operator | Parameter | Notes |
+|----------|-----------|-------|
+| `levelTOP` | `contrast` | Correct name — NOT `contrast1` |
+| `levelTOP` | `brightness1` | Correct name — NOT `brightness` |
+| `levelTOP` | `gamma1` | Correct name — NOT `gamma` |
+| `glslTOP` | `color0name` / `color0rgbr` | Uniform name + value. Float uniforms live on the color page. |
+| `glslTOP` | `pixeldat` | Path to the textDAT containing the GLSL shader |
+| `glslTOP` | `outputresolution` | Set to `0` for custom resolution |
+| `glslTOP` | `format` | `rgba16float` for 16-bit float output |
+| `constantCHOP` | `const0name` / `const0value` | NOT `value0name` / `value0` |
+| `mathCHOP` (range) | `fromrange1` / `fromrange2` / `torange1` / `torange2` | NOT `from1/2`, `to1/2` |
+| `lagCHOP` | `lag1` / `lag2` | NOT `lagup` / `lagdown` |
+| `audiofilterCHOP` | `filter` / `units` / `cutofffrequency` / `resonance` | For frequency filtering — NOT `filterCHOP` |
+| `analyzeCHOP` | `function` | Use `rmspower` for highpass filter output — NOT `average` (HP is bipolar, average ≈ 0) |
+| `moviefileoutTOP` | `audiochop` | Must point to raw audio stream (e.g. `audiofileinCHOP`) at 44100 Hz — NOT analysis CHOPs like `null_audio` which run at rate 30 |
 
 ---
 
 ## Confirmed Limitations
 
-Things TWOZERO cannot do, confirmed through failure.
-
 | Limitation | Workaround |
 |-----------|-----------|
-| (none yet) | — |
+| `td_set_operator_pars` cannot set expressions | Use `td_execute_python` with `par.expr = "..."` and `par.mode = ParMode.EXPRESSION` |
+| `td_create_operator` does not wire connections | Wire via `td_execute_python` with `inputConnectors[n].connect(op)` |
+| `td_read_chop` on large recordings exceeds token limits | Analyze inside TD via `td_execute_python` — use `list(ch.vals)` + `sorted()` |
+| `audiodeviceoutCHOP` with `cookalways=True` freezes TD | Remove `cookalways` flag |
+| `playmode='locked'` on `audiofileinCHOP` only plays to timeline end | Use `sequential` for continuous playback |
 
 ---
 
 ## DAT / GLSL Text Workflow
 
-*To be populated — have not yet confirmed the exact td_write_dat behavior for GLSL TOP shader DATs.*
+- Write GLSL shader code into a `textDAT` (e.g. `glsl_mandelbulb`)
+- Point the `glslTOP`'s `par.pixeldat` at that DAT
+- Edit shader via `td_write_dat` — use `old_text`/`new_text` for targeted patches, `text` for full rewrites
+- TD recompiles automatically on DAT change; FPS dip after write is normal (recompile, not performance issue)
+- `old_text` must be unique in the file — provide more surrounding context if match fails
 
 ---
 
 ## Known Behaviors
 
-Quirks, timing issues, or non-obvious behavior confirmed through use.
-
 | Behavior | Notes |
 |----------|-------|
-| (none yet) | — |
+| FPS shows 0 after shader write | Normal — TD is recompiling the GLSL. Recovers within 1–2 seconds. |
+| GPU cook time shows 0.0 in `td_get_perf` | Operator is GPU-cached, not a real zero. |
+| `par.val` returns stale value | Use `par.eval()` to verify expression results. |
+| `td_create_operator` returns `📋 PAR` block | Read it — contains exact parameter names for the new op type. |
+| `td_input_execute` returns immediately | Poll `td_input_status` until `status="idle"` before continuing. |
+| `annotateCOMP` nodeY = bottom edge | Top edge = `nodeY + nodeHeight`. Account for this when positioning. |
+| HSV desaturation kills warm low-luminance colors | Muted orange/warm palettes with low RGB values go black through `hsvadjustTOP`. Warm palettes need higher base RGB values to survive. |
+| Power curves on audio inputs in GLSL | `pow(x, 2.5–3.0)` suppresses breakdown rumble while passing drop peaks. Better than Lag CHOP alone for smooth breakdown behavior. |

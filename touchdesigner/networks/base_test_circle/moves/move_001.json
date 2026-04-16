@@ -1,0 +1,26 @@
+{
+  "label": "initial build: 7-channel audio reactivity tuning rig with Circle TOP",
+  "timestamp": "2026-04-15T00:00:00Z",
+  "network": "base_test_circle",
+  "operations": [
+    { "type": "create_node", "path": "/project1/base_test_circle", "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/audio_ref", "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/ctrl_enable", "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/ctrl_gain", "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/math_gate", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/audio_ref", "to": "/project1/base_test_circle/math_gate", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/ctrl_enable", "to": "/project1/base_test_circle/math_gate", "input_index": 1, "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/math_scaled", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/math_gate", "to": "/project1/base_test_circle/math_scaled", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/ctrl_gain", "to": "/project1/base_test_circle/math_scaled", "input_index": 1, "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/math_sum", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/math_scaled", "to": "/project1/base_test_circle/math_sum", "input_index": 0, "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/rename_signal", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/math_sum", "to": "/project1/base_test_circle/rename_signal", "input_index": 0, "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/null_signal", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/rename_signal", "to": "/project1/base_test_circle/null_signal", "input_index": 0, "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/circle1", "before": null },
+    { "type": "create_node", "path": "/project1/base_test_circle/null_out", "before": null },
+    { "type": "connect", "from": "/project1/base_test_circle/circle1", "to": "/project1/base_test_circle/null_out", "input_index": 0, "before": null }
+  ]
+}

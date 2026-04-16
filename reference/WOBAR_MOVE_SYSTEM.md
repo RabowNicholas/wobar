@@ -46,6 +46,10 @@ wobar/touchdesigner/networks/
 |---------------|-------------|
 | act2_underwater | /project1/base_act2 |
 | act2_tunnel | /project1/base_act2_tunnel |
+| act2_collapse | /project1/base_act2_collapse |
+| act2_fractal | /project1/base_act2_fractal |
+| base_audio | /project1/base_audio |
+| base_test_circle | /project1/base_test_circle |
 
 Add a row here whenever a new network is created.
 

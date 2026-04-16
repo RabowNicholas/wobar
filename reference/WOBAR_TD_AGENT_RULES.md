@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Agent Build Rules
 version: 2.0
-last_updated: 2026-04-12
+last_updated: 2026-04-15
 status: locked
 scope: Conventions any AI agent must follow when creating or modifying TouchDesigner networks in the WOBAR project. Read before any TD build action.
 dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/WOBAR_FRAMEWORK]]
@@ -10,6 +10,24 @@ dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/W
 # TOUCHDESIGNER AGENT BUILD RULES
 
 Rules for any AI agent (Claude Code + TWOZERO MCP, or any future TD automation) building or modifying networks in the WOBAR project. These are non-negotiable conventions. If a rule here conflicts with a default behavior, the rule wins.
+
+---
+
+## Rule 0: Check the Debug Log First
+
+**Before giving any TD technical advice or executing any build action, read `working/TD_CLAUDE_DEBUG_LOG.md` and check for matching past failures.**
+
+If your planned action, parameter choice, or operator selection matches a logged failure — stop, cite the entry (date + wrong advice), and use the corrected pattern instead. This is the highest-priority rule. It runs before all others.
+
+---
+
+## Rule 0b: Check Reference Networks Before Building
+
+**Before building any new visual network, read `touchdesigner/reference_networks/README.md` and identify the closest structural match.**
+
+If a structurally similar example exists — same feedback pattern, same TOP family, same act-type constraints — propose the new build as a diff against it: "This is the Act 3 tunnel entry but with X changed." Do not rebuild from scratch when a reference exists. This prevents structural drift across acts and surfaces taste decisions that are already resolved.
+
+If no close match exists, build from scratch and add an entry to the README after the session.
 
 ---
 
@@ -207,6 +225,57 @@ These are par names that differ from what you'd expect. Check here before guessi
 | levelTOP | `par.contrast1` | `par.contrast` |
 | levelTOP | `par.brightness` | `par.brightness1` |
 | levelTOP | `par.gamma` | `par.gamma1` |
+
+---
+
+## Python Scripting Rules (td_execute_python)
+
+**Rule: All `op()` calls must be inside the function body — no script-level globals.**
+
+Helper functions defined in `td_execute_python` do not inherit variables defined at the script's outer scope. Any `op()` reference in a helper function must be called inside that function, not passed in from outside or defined at the module level.
+
+**Wrong:**
+```python
+chop = op('/project1/base_audio/rec_audio')  # script-level
+
+def analyze():
+    vals = list(chop.chan(0).vals)  # NameError: chop not defined inside function
+```
+
+**Correct:**
+```python
+def analyze():
+    chop = op('/project1/base_audio/rec_audio')  # inside the function
+    vals = list(chop.chan(0).vals)
+```
+
+**Rule: No list comprehensions that reference outer-scope variables — use explicit for loops.**
+
+List comprehensions in `td_execute_python` cannot reliably reference variables defined in the same script block outside the comprehension. Use explicit for loops instead, or define everything inside a function.
+
+**Wrong:**
+```python
+ba = op('/project1/base_audio/rec_audio')
+vals = [ba.chan(i).vals for i in range(ba.numChans)]  # NameError: ba not defined
+```
+
+**Correct:**
+```python
+def collect():
+    ba = op('/project1/base_audio/rec_audio')
+    vals = []
+    for i in range(ba.numChans):
+        vals.append(list(ba.chan(i).vals))
+    return vals
+```
+
+**Rule: Use `rmspower` for analyzeCHOP on HP filter output — not `average`.**
+
+HP filters produce a bipolar audio signal. `analyzeCHOP function='average'` averages positive and negative samples → returns ~0. Use `function='rmspower'` for any chain coming out of a high-pass filter. Bandpass filters work with `average` because they produce an envelope-like output.
+
+**Rule: Do not use `par.val` to verify expression results — use `par.eval()`.**
+
+`par.val` returns a cached value that may not reflect the current expression output. To verify what an expression actually evaluates to, use `par.eval()`.
 
 ---
 

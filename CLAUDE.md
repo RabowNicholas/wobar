@@ -27,22 +27,33 @@ Do not narrate this. Let context inform your work silently.
 ## TouchDesigner Builds — Required Reading
 
 Before creating or modifying ANY TouchDesigner network:
-1. Read `reference/WOBAR_TD_AGENT_RULES.md` — build conventions, naming, architecture. **Non-negotiable.**
-2. Read the relevant section of `reference/WOBAR_TD_REFERENCE.md` — exact parameter values, node chains, color palettes.
-3. If the build targets a specific act, read `reference/WOBAR_FRAMEWORK.md` for act identity.
+1. Read `reference/WOBAR_TD_INDEX.md` — the TD decision tree. It tells you exactly which docs to load for the current task.
+2. The index handles everything: debug log, agent rules, reference networks, TWOZERO guide, GLSL patterns, expression cookbook, section targeting for large files.
 
-Do not build from general TD knowledge. Build from these files. Every parameter value, every naming convention, every color hex is specified. Use the specified values.
+Do not build from general TD knowledge. Build from these files. Every parameter value, every naming convention, every color hex is specified.
 
 ---
 
 ## Reference File Pull Guide
 
+### TouchDesigner
 | File | When to pull |
 |------|-------------|
-| reference/WOBAR_TD_AGENT_RULES.md | ANY TouchDesigner build or modification |
-| reference/WOBAR_TD_REFERENCE.md | Parameter values, node chains, audio pipeline, color system, export |
-| reference/WOBAR_TWOZERO_GUIDE.md | TWOZERO tool usage, operator type strings, confirmed limitations |
-| reference/WOBAR_MOVE_SYSTEM.md | Move history schema, undo mechanics, auto-rollback spec |
+| reference/WOBAR_TD_INDEX.md | **First** — any TD build, advice, or debugging. Decision tree lives here. |
+| working/TD_CLAUDE_DEBUG_LOG.md | Always before TD action (Rule 0) — confirmed failures + corrected patterns |
+| reference/WOBAR_TD_AGENT_RULES.md | Always — build conventions, naming, act constraints |
+| touchdesigner/reference_networks/README.md | Always before building — find closest structural match first (Rule 0b) |
+| reference/WOBAR_TWOZERO_GUIDE.md | Before any TWOZERO tool call — type strings, limitations, known behaviors |
+| reference/WOBAR_TD_REFERENCE.md | By section — audio §2, visual primitives §3, color §4, export §8, failures §9 |
+| reference/WOBAR_MOVE_SYSTEM.md | td-build / td-save / td-undo — move schema, network→comp mapping |
+| reference/WOBAR_TD_EXPRESSION_COOKBOOK.md | Writing CHOP expressions or Python DAT scripts |
+| reference/WOBAR_GLSL_PATTERNS.md | Writing or modifying GLSL shaders |
+| reference/WOBAR_TWOZERO_MCP_CATALOG.md | Specific TWOZERO tool parameters — load the relevant group only |
+| working/TD_BUILD_LOG.md | td-save — update session learnings; debugging — check correction tracker |
+
+### Non-TD
+| File | When to pull |
+|------|-------------|
 | reference/WOBAR_FRAMEWORK.md | Act identity, arc structure, percentages |
 | reference/WOBAR_BRAND.md | Brand positioning, mission, archetype |
 | reference/WOBAR_COPY.md | Any written output |
@@ -67,12 +78,14 @@ Do not build from general TD knowledge. Build from these files. Every parameter 
 
 When Nick asks to build or modify a TD network:
 
-1. **Read the rules** — WOBAR_TD_AGENT_RULES.md + relevant WOBAR_TD_REFERENCE.md section.
-2. **Confirm scope** — which act, which visual primitive, what's the output target.
-3. **Inspect first** — use TWOZERO to read the current project state before creating anything. Understand what exists.
-4. **Build** — create the network following the conventions exactly. Use the naming patterns, the control architecture, the color pipeline.
-5. **Validate** — check the build against the act constraint table in WOBAR_TD_AGENT_RULES.md before presenting.
-6. **Log** — after the session, append what happened to `working/TD_BUILD_LOG.md`.
+1. **Read WOBAR_TD_INDEX.md** — get the exact reading list for this task type.
+2. **Check debug log** — TD_CLAUDE_DEBUG_LOG.md before any action (Rule 0).
+3. **Check reference networks** — find closest structural match, diff against it (Rule 0b).
+4. **Confirm scope** — which act, which visual primitive, what's the output target.
+5. **Inspect first** — use TWOZERO to read the current project state before creating anything.
+6. **Build** — follow naming conventions, control architecture, color pipeline exactly.
+7. **Validate** — check act constraint table in WOBAR_TD_AGENT_RULES.md before presenting.
+8. **Log** — append to `working/TD_BUILD_LOG.md` at session end.
 
 ---
 
