@@ -26,6 +26,15 @@ Read this before any TD build or advice. It tells you exactly what else to read 
 | `reference/WOBAR_GLSL_PATTERNS.md` | Medium | Act-specific GLSL shaders (10 total), utility functions, act color reference table. |
 | `reference/WOBAR_TWOZERO_MCP_CATALOG.md` | **Large** | Full parameter tables for all 35 TWOZERO tools. Load by group, not full file. |
 | `working/TD_BUILD_LOG.md` | Medium | Session-by-session build log. Correction tracker (2+ occurrences → promoted to AGENT_RULES). |
+| `reference/td_library/TD_LIBRARY_INDEX.md` | **Library** | General TD knowledge base (brand-agnostic). 27 files covering all operator families, patterns, workflows. Read the index; it routes to the right file. |
+
+---
+
+## Related — General TD Library
+
+The `td_library/` subfolder is a brand-agnostic TouchDesigner knowledge base. Use it when the question is about TD itself (operators, patterns, workflows) rather than WOBAR-specific conventions. When both apply, brand files (above) override — WOBAR_TD_AGENT_RULES and WOBAR_TD_REFERENCE are the source of truth for brand constraints.
+
+Entry point: `td_library/TD_LIBRARY_INDEX.md` — routes by task (building audio reactivity, optimizing a slow project, exporting a music video, going live, projection mapping, installations).
 
 ---
 
