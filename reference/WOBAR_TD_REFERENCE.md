@@ -6,7 +6,7 @@
 ## Table of Contents
 1. [Operator Family Quick Reference](#operators)
 2. [Audio Pipeline](#audio)
-3. [Visual Primitives by Act](#primitives)
+3. [Visual Primitives — Vocabulary](#primitives)
 4. [Color System + Palette Values](#color)
 5. [Analog Grain Pipeline](#grain)
 6. [Archive Footage Integration](#archive)
@@ -155,11 +155,13 @@ r = analyze()
 
 ---
 
-## 3. Visual Primitives by Act {#primitives}
+## 3. Visual Primitives — Vocabulary {#primitives}
 
-### CIRCLE / VIGNETTE — Act 1 + Act 5
+These are reusable visual primitives, not act-locked requirements. Each one has a primary affinity (the act it was originally built for / where it tends to land), but cross-act use is fine when it serves the moment. The act's emotional register from `WOBAR_FRAMEWORK.md` does the steering — these are the parts you reach for.
 
-**Portal-open / portal-close. Breath rhythm 60–80 BPM equivalent.**
+### CIRCLE / VIGNETTE
+
+**Affinity:** Act 1 / Act 5 (threshold, return). **Reads as:** breath, holding, mirror frame, the eye, recognition.
 
 Build (Multiply mask method):
 1. **Circle TOP** — `radius` 0.45 (Fraction), `softness` 0.25–0.4, fill white, bg black
@@ -169,17 +171,17 @@ Build (circular crop method):
 1. **Circle TOP** — `bgalpha` = 0 (transparent bg), `softness` 0.02–0.3
 2. **Composite TOP** (Inside) — Input 1 = content, Input 2 = Circle. Crops to circle's alpha.
 
-Audio-reactive breath:
+Audio-reactive breath (when wanted):
 - **LFO CHOP** (Sine, 1.0–1.33Hz for 60–80 BPM) → Math CHOP (0–1 → 0.35–0.55) → Export to `circle1/radiusx` + `circle1/radiusy`
 - Sub-bass Analyze → Lag (0.3s) → Export to `radius` and `softness`
 
-Act 5 note: same build as Act 1. The visual callback is intentional — same footage category, different emotional weight.
+When a circle returns later in the journey, the visual callback is intentional — same shape, different emotional weight from the surrounding music.
 
 ---
 
-### INWARD SPIRAL — Act 2
+### INWARD SPIRAL
 
-**Pulling inward. Something descending. Audio tightens the spiral.**
+**Affinity:** Act 2 (descension, pull). **Reads as:** something deepening, audio tightening the form, recursive recognition.
 
 Core feedback loop:
 ```
@@ -190,7 +192,7 @@ Feedback TOP: targetop = null_out (downstream)
 ```
 
 Parameters:
-- **Transform TOP**: `rotate` = 0.5–3.0° (constant per frame), `sx`/`sy` = **0.98–0.995** (must be <1.0 for inward pull), `bgcolor` = black
+- **Transform TOP**: `rotate` = 0.5–3.0° (constant per frame), `sx`/`sy` = **0.98–0.995** for inward pull (use >1.0 for outward variant), `bgcolor` = black
 - **Level TOP**: `opacity` (Post tab) = 0.89–0.98. Controls trail length. Lower = shorter trails. **Critical — too high = white-out.**
 - **Composite TOP**: Operation = Over or Add
 
@@ -200,13 +202,13 @@ Audio reactivity:
 
 Depth illusion: **Displace TOP** with radial **Ramp TOP** (center white, edge black) as displacement map. `displaceweight` controls pull intensity.
 
-**Use 16-bit float pixel format** in feedback chain. Prevents banding in dark purples.
+**Use 16-bit float pixel format** in feedback chain. Prevents banding in dark colors.
 
 ---
 
-### TUNNEL + MIRROR DISTORTION — Act 3
+### TUNNEL + IMPERFECT MIRROR
 
-**Infinite depth. Confrontation. 85–90% symmetry with meaningful asymmetry. No warm colors.**
+**Affinity:** Act 3 (encounter, confrontation). **Reads as:** infinite depth, the angle you can't normally reach, recognition under pressure. The mirror is **never perfect** — 85–90% symmetry with meaningful asymmetry is what makes it confrontational rather than decorative.
 
 Tunnel build: same as spiral but `scale` ~0.98, `rotate` 0–0.5°. Add new content at **edges** (use inverted Circle TOP as mask — `bgalpha` = 1, `fillalpha` = 0).
 
@@ -221,13 +223,13 @@ Glitch/stutter:
 
 Impossible geometry: Feedback → Transform (scale 0.95, rotate 3°) → Tile TOP (2×2 mirror) → Composite → back to Feedback. Creates fractal recursion.
 
-Act 3 rule: **no emotional relief, no warm colors, no vocals**. This act does not comfort.
+The encounter doesn't comfort. Whatever warmth shows up should disturb, not relieve.
 
 ---
 
-### RADIAL EXPLOSION — Act 4
+### RADIAL EXPLOSION
 
-**Cathartic release. Outward expansion. Full color palette activates. Heavy but held.**
+**Affinity:** Act 4 (release, discharge). **Reads as:** outward force, cathartic, heavy-but-held — rhythm exists, this is not chaos.
 
 Core feedback loop (reverse of spiral):
 ```
@@ -239,7 +241,7 @@ Feedback TOP → Transform TOP (sx, sy = 1.02–1.05) → Level TOP (opacity 0.9
 Parameters:
 - Transform `sx`/`sy` = **1.02–1.05** (>1.0 = outward expansion)
 - Level opacity 0.90–0.97 (fast-fading trails for explosive feel)
-- HSV Adjust TOP in feedback chain with slight `hueoffset` per frame = rainbow expanding rings
+- HSV Adjust TOP in feedback chain with slight `hueoffset` per frame for color cycling — keep within the desaturated psychedelic range, no rainbow
 
 Audio peak triggering:
 ```
@@ -248,50 +250,131 @@ Analyze CHOP → Threshold (0.7–0.8) → Trigger (attack 0.01s, sustain 0.1s, 
 → Lag → Export to Transform sx/sy and Level brightness
 ```
 
-Act 4 is cathartic release — heavy but held. Rhythm exists. This is not chaos.
-
 ---
 
 ## 4. Color System + Palette Values {#color}
 
-### The Core Pipeline
+The palette is the **WOBAR desaturated psychedelic range**. Black and deep purple are the foundation; everything else — mauves, magentas, slates, oxidized organics, ambers, mirror metallics — is first-class alongside them, not rare. Muted 30–40% from full neon. Never pure neon, glowstick, candy, or safety colors.
+
+### Foundation (always present)
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Black | `#000000` | 0.000, 0.000, 0.000 | True base |
+| Off-black (purple bias) | `#0E0813` | 0.055, 0.031, 0.075 | Where most "blacks" should sit — already psychedelic |
+| Charcoal mauve | `#1F1828` | 0.122, 0.094, 0.157 | Lifted-shadow grade for deep regions |
+
+### Purple spine
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Deep purple dark | `#190028` | 0.098, 0.000, 0.157 | Ramp anchor |
+| Deep purple mid | `#2D0546` | 0.176, 0.020, 0.275 | Ramp anchor |
+| Deep purple highlight | `#5A0F78` | 0.353, 0.059, 0.471 | Ramp anchor |
+| Wobar purple | `#6B2E87` | 0.420, 0.180, 0.529 | Primary brand purple |
+
+### Mauves & dusty violets
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Plum | `#4D2540` | 0.302, 0.145, 0.251 | Deep desaturated wine |
+| Smoke mauve | `#8A6E94` | 0.541, 0.431, 0.580 | Faded lilac, organic |
+| Ash violet | `#6B5C7A` | 0.420, 0.361, 0.478 | Cooler, leans toward stone |
+| Dusty lavender | `#A085AE` | 0.627, 0.522, 0.682 | Highlight — never pure white |
+
+### Magentas & dusty roses
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Wine magenta | `#5A0F41` | 0.353, 0.059, 0.255 | Deep, blood-leaning |
+| Muted magenta | `#B34E8F` | 0.702, 0.306, 0.561 | Mid-saturation pink-purple |
+| Dusty rose | `#A6586D` | 0.651, 0.345, 0.427 | Warm-cool blend, organic |
+
+### Cools — slate / petrol / dusk
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Petrol | `#2C4554` | 0.173, 0.271, 0.329 | Deep oily blue-gray |
+| Oxidized teal | `#1E505A` | 0.118, 0.314, 0.353 | Subaquatic green-blue |
+| Slate blue | `#4A6479` | 0.290, 0.392, 0.475 | Oceanic, neutral |
+| Dusk blue | `#3B4C73` | 0.231, 0.298, 0.451 | Violet-tinted twilight |
+| Wobar cyan | `#4A7B9D` | 0.290, 0.482, 0.616 | Bright cool |
+
+### Oxidized organics — sage / moss / patina
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Aged moss | `#4D6149` | 0.302, 0.380, 0.286 | Forest floor, dim |
+| Lichen sage | `#7A8A6F` | 0.478, 0.541, 0.435 | Pale, alkaline |
+| Patina copper-green | `#5C7470` | 0.361, 0.455, 0.439 | Oxidized metal — gloss-compatible |
+
+### Warm desaturated — amber / rust / tobacco
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Burnt amber | `#A6633D` | 0.651, 0.388, 0.239 | Rust-leaning warm |
+| Dried tobacco | `#8A5A3D` | 0.541, 0.353, 0.239 | Brown-warm, anchoring |
+| Brass ochre | `#B89958` | 0.722, 0.600, 0.345 | Yellow that reads metallic |
+| Muted orange | `#C17A4E` | 0.757, 0.478, 0.306 | Broad warm |
+| Dusty coral | `#B47368` | 0.706, 0.451, 0.408 | Pinkish warm — bridges to magenta |
+
+### Mirror metallics (now first-class — gloss/metallic permitted)
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Tarnished silver | `#6E6E73` | 0.431, 0.431, 0.451 | Dim chrome, not jewelry-bright |
+| Oxidized copper | `#6F4E3A` | 0.435, 0.306, 0.227 | Patinaed, organic |
+| Bronze patina | `#5A5240` | 0.353, 0.322, 0.251 | Dimmer than copper |
+| Pewter | `#8E8E94` | 0.557, 0.557, 0.580 | Pale metallic, reads as light |
+
+### Pale / bone (highlights — no pure white ever)
+
+| Swatch | Hex | RGB (0–1) | Note |
+|--------|-----|-----------|------|
+| Bone | `#C7BBA6` | 0.780, 0.733, 0.651 | Warm pale, tactile |
+| Ash | `#948C9E` | 0.580, 0.549, 0.620 | Cool pale with violet bias |
+
+### What's out (negative space)
+
+- Pure neon: `#FF00FF`, `#00FFFF`, `#00FF00`, `#FFFF00` — never
+- Glowstick / candy palettes (CMY-pop, electric pink, school-bus yellow)
+- Safety orange, lime green, sky-blue cyan, holographic foil rainbow
+- LED glow with the *hue* in the bright neon range. Glow may brighten the light, but the underlying hue stays in the palette.
+
+### Color-Grading Pipeline
+
+The old pipeline forced every visual to grayscale via `HSV Adjust (satmult=0.15)` then re-tinted through a purple ramp. **That mandate is dropped.** Two options now:
+
+**A) Render in palette directly** (preferred when you control the source colors — PBR materials, GLSL shaders using palette `vec3`s, instance colors). Skip the Lookup. Just grade with:
 ```
-[Source] → HSV Adjust TOP → Level TOP → Lookup TOP ← Ramp TOP (1024×1, 16-bit)
+[Source in palette] → Level TOP (16-bit float, blacklevel 0.05–0.08, gamma1 0.75–0.9, contrast 1.2–1.35, inhigh 0.85, outhigh 0.8 = no pure whites)
 ```
 
-### HSV Adjust TOP
-- `saturationmult` = 0.15 (nearly grayscale base)
-- `valuemult` = 0.8–0.85
-- `hueoffset` — minimal effect on near-grayscale content; use Lookup instead for tinting
+**B) Lookup-route a saturated/agnostic source through a Ramp** (use when the source is video / archive / any input not already in the palette, and you want to commit the scene to one color route). Build the Ramp from the swatch above:
+```
+[Source] → optional HSV Adjust (saturationmult 0.15 only here, when force-to-grayscale serves) → Level → Lookup TOP ← Ramp TOP (1024×1, Hermite, 16-bit float)
+```
 
-### Level TOP (use 16-bit float pixel format)
-- `blacklevel` = 0.08 (kills noise)
-- `gamma1` = 0.75 (darkens midtones)
-- `contrast` = 1.3–1.35
-- `inhigh` = 0.85, `outhigh` = 0.8 (no pure whites)
+The Ramp is no longer purple-by-default. Common Ramp routes:
+- **Purple monochrome** (`#000000` → `#190028` → `#2D0546` → `#5A0F78` → `#6B2E87`) — Act 1 / Act 5 / brand-anchor scenes
+- **Oxidized-rust route** (`#0E0813` → `#2D0546` → `#6F4E3A` → `#A6633D` → `#B89958`) — warmth without going neon
+- **Slate-mauve route** (`#000000` → `#1F1828` → `#3B4C73` → `#6B5C7A` → `#A085AE`) — twilight, cool-leaning psychedelic
+- **Patina route** (`#0E0813` → `#1E505A` → `#4D6149` → `#5C7470` → `#7A8A6F`) — alien organic, deep-sea
+- Build new routes per scene as needed — anchored in the swatch.
 
-### Ramp TOP (palette map — 1024×1, Hermite interpolation, 16-bit float)
-Base purple palette keyframes:
+### Per-Act Color Affinities (suggestions, not rules)
 
-| Position | RGB (0–1) | Hex | Role |
-|----------|-----------|-----|------|
-| 0.00 | 0.0, 0.0, 0.0 | #000000 | Black base |
-| 0.15 | 0.098, 0.0, 0.157 | #190028 | Deep purple dark |
-| 0.50 | 0.176, 0.02, 0.275 | #2D0546 | Deep purple mid |
-| 0.85 | 0.353, 0.059, 0.471 | #5A0F78 | Purple highlight |
-| 1.00 | 0.4, 0.1, 0.5 | #661A80 | Top |
+Acts no longer have required/forbidden palettes. These are **starting points** — the act's emotional register pulls toward certain regions of the palette, but cross-borrowing is fine when it serves the moment.
 
-### Act-Specific Accent Colors
+| Act | Emotional register | Pulls toward |
+|-----|---------------------|---------------|
+| 1 — RIFT | Warm welcome, threshold opening | Foundation + purple spine + dusty rose / brass ochre / dusty lavender |
+| 2 — DESCENSION | Inward pull, deepening | Deep purples + petrol / oxidized teal / dusk blue / charcoal mauve |
+| 3 — ENCOUNTER | Confrontation, recognition | Off-black + petrol / wine magenta / patina / pewter / tarnished silver. Warmth not banned — but no warm relief; if warm is used, it should disturb (oxidized copper, dried tobacco), not comfort. |
+| 4 — RELEASE | Cathartic discharge | Whole palette can activate; warm desaturated range (burnt amber, dusty coral, brass) and bright cools (Wobar cyan, slate blue) get pushed to peak. |
+| 5 — INTEGRATION | Grounded return | Foundation + purple spine + bone/ash highlights — visual callback to Act 1 region |
 
-| Act | Accent | RGB (0–1) | Hex | How to add |
-|-----|--------|-----------|-----|-----------|
-| Act 1 | Warm purple glow | 0.392, 0.118, 0.353 | #641E5A | Blur TOP (15–25) → Level (brightness 0.1) → Composite Add |
-| Act 2 | Muted cyan | 0.118, 0.314, 0.353 | #1E505A | Constant TOP → Composite Screen, alpha 0.08–0.15, drive with sub-bass |
-| Act 3 | Muted magenta | 0.353, 0.059, 0.255 | #5A0F41 | HSV Adjust hueoffset 320°. Kill warm: second HSV Adjust targeting orange, satmult 0.0 |
-| Act 4 | Warm orange | 0.706, 0.314, 0.078 | #B45014 | Constant TOP, alpha driven by kick analysis. All accents active simultaneously. |
-| Act 5 | Return to purple | — | — | Timer/LFO fades warm/cyan opacity → 0. Returns to Act 1 palette. |
-
-### Act Transitions
+### Transitions
 **Switch TOP** (preferred): `blend` ON, floating-point index crossfades between inputs. Only cooks inputs being blended.
 **Cross TOP**: set `cross` 0→1. Cooks both inputs always — use only for 2-scene crossfades.
 
@@ -341,15 +424,18 @@ Composite modes: **Add** (standard), **Screen** (prevents highlight clipping), *
 1. **Circle TOP** — `bgalpha` = 0, `radius` 0.35–0.45, `softness` 0.02–0.05 (sharp edge) or 0.15–0.3 (vignette)
 2. **Composite TOP** (Inside) — Input 1 = footage, Input 2 = Circle
 
-### Full Portal Processing Chain
+### Full Mirror-Frame Processing Chain
 ```
 Movie File In → speed 0.25 (or Specify Index for variable)
-→ HSV Adjust (satmult 0.15)
-→ Level TOP (purple palette tint)
+→ HSV Adjust (satmult 0.15) — force the source toward grayscale before recoloring
+→ Lookup TOP ← Ramp TOP (drawn from WOBAR palette §4 — pick a Ramp route that fits the act)
+→ Level TOP (mild grade)
 → Composite Add (grain)
 → Composite Inside (Circle matte)
 → Null TOP
 ```
+
+The `satmult=0.15 → Lookup → Ramp` route is the canonical recipe for **archive footage** specifically (where you want to override saturated source colors with the WOBAR palette). It is **not** required for native-rendered visuals — see §4 "Render in palette directly" for the alternative.
 
 ### Time Stretching
 - **Simple**: Movie File In `speed` = 0.25, `interp` = ON

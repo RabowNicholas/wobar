@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Agent Build Rules
-version: 2.0
-last_updated: 2026-04-15
+version: 3.0
+last_updated: 2026-04-30
 status: locked
 scope: Conventions any AI agent must follow when creating or modifying TouchDesigner networks in the WOBAR project. Read before any TD build action.
 dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/WOBAR_FRAMEWORK]]
@@ -72,7 +72,7 @@ Three skills govern the TD workflow:
 
 | Skill | Trigger | What it does |
 |-------|---------|-------------|
-| `td-build` | Any TD modification request | Capture before-state → execute TWOZERO calls → write move file. Validate against act constraints. |
+| `td-build` | Any TD modification request | Capture before-state → execute TWOZERO calls → write move file. |
 | `td-undo` | "Undo that" / "undo last N" | Read last N move files → replay before-states in reverse → delete move files. |
 | `td-save` | "Save it" / "I'm happy with this" | Save `.tox` via TWOZERO → flush moves → log to CHANGE_LOG.md → analyze session → propose rule updates. |
 
@@ -162,30 +162,51 @@ All audio merged to single Null CHOP as export point.
 
 ---
 
-## Color System
+## Visual Identity Lens
 
-Base palette is purple. Every visual passes through:
-```
-[Source] -> HSV Adjust TOP (satmult 0.15) -> Level TOP -> Lookup TOP <- Ramp TOP (1024x1)
-```
-
-Act-specific accents are additive layers, not replacements of the base palette. See WOBAR_TD_REFERENCE.md Section 4 for exact RGB values per act.
-
-**Act 3 rule**: no warm colors. Zero. Not "mostly cool with a hint of warmth." Zero warm.
+Visuals lean **mirrors and encounter** over portals and journey. Build for stillness-with-depth, recursive recognition, the gap between observer and image — not forward motion or arrival narratives. Brand docs (`WOBAR_BRAND.md`, `WOBAR_FRAMEWORK.md`, `WOBAR_COPY.md`) keep their existing language; this lens governs visual decisions only.
 
 ---
 
-## Act Constraints (Build Validation)
+## Color System
 
-Before delivering any build, validate against these. If a build violates its act constraint, fix it before presenting.
+The palette is the **WOBAR desaturated psychedelic range** — see `WOBAR_TD_REFERENCE.md §4` for the full swatch with hex values. Black and deep purple remain the foundation; mauves, magentas, slates, oxidized organics, ambers, and mirror metallics are all **first-class** alongside them, not rare accents.
 
-| Act | Required | Forbidden |
-|-----|----------|-----------|
-| 1 | Circles, warm purple glow, breath rhythm 60-80 BPM | Sharp geometry, aggressive motion, cool colors |
-| 2 | Inward spiral, depth, tightening with audio | Outward expansion, warm colors dominating, flat motion |
-| 3 | Tunnel, 85-90% mirror (not 100%), infinite depth, glitch on peaks | Emotional relief, warm/orange tones, perfect symmetry |
-| 4 | Outward radial expansion, full color palette, rhythm | Inward motion, cool-only palette, unrhythmic chaos |
-| 5 | Circle returns, portal closing, breath rhythm returns | New visual concepts — this is callback to Act 1 |
+**Core discipline:** desaturated psychedelic. Muted 30–40% from full neon. Never pure neon, glowstick, candy, or safety colors. When LED-style glow is in play, the *light* brightens but the underlying hue stays in the palette — no "muted base + neon glow on top."
+
+**Color-grading pipeline (now optional, no longer mandatory force-to-grayscale):**
+
+```
+[Source] → Level TOP (mild grade) → optional Lookup TOP ← Ramp TOP (1024×1, drawn from WOBAR palette)
+```
+
+- Use a **Lookup TOP + Ramp** when you want a scene to commit to a color route (purple monochrome, oxidized-rust, slate-and-mauve, etc.). Build the Ramp from the swatch in `WOBAR_TD_REFERENCE.md §4`.
+- **Skip the Lookup** when you're already rendering inside the palette (PBR materials with palette colors, GLSL shaders using the palette vec3s, native instance colors). Just grade with Level for contrast/black point.
+- The old `HSV Adjust (saturationmult 0.15)` pre-step is **no longer required** — that pipeline forced everything to purple-monochrome, which is the wrong default now. Use it only when you specifically want to recolor a saturated source through a single-hue ramp.
+
+---
+
+## Materials and Surface
+
+Texture vocabulary is **wider than before**. Matte, rough, organic grain still works. So do metallic, glossy, and reflective surfaces — gloss is no longer banned.
+
+- **Permitted:** matte, rough, gritty, organic grain, oil-on-water, oxidized metal, tarnished mirror, polished metal, anodized titanium, glass, wet ceramic, lacquer
+- **Lean away from traditional rave:** glowstick brightness, plastic-bright surfaces, candy-pop sheen, holographic-foil rainbow shifts
+- **Bioluminescence-style glow still preferred for dim scenes** (deep-sea creature, not LED rave-stick), but LED glow is not banned — it has to stay desaturated
+- Reference fields: Tipper visuals, Of The Trees album art, oxidized copper, bioluminescent deep-sea, 70s psychedelic art aged 50 years, oil-on-water darkened, Alex Grey's darker bodies of work
+
+---
+
+## Act Identity
+
+Acts have **emotional registers** (from `WOBAR_FRAMEWORK.md`) and a **shared visual vocabulary** (`WOBAR_TD_REFERENCE.md §3`). They no longer have hard required/forbidden constraints. The act's identity emerges from the music + the brief; visuals serve the act's emotional register without a checklist.
+
+What this means for builds:
+- Don't validate visuals against required-vocabulary tables (there is no longer a table).
+- An Act 1 build doesn't have to be a circle. An Act 3 build doesn't have to be a tunnel. An Act 4 build doesn't have to explode outward.
+- The `WOBAR_TD_REFERENCE.md §3` primitives are starting points and reusable vocabulary, not act-locked requirements.
+- Cross-act color borrowing is fine when it serves the moment.
+- The act's *emotional register* is still load-bearing — Act 3 should still feel confrontational, Act 4 should still feel cathartic. That comes from the music, the motion, and the build's overall shape, not from a banned-color list.
 
 ---
 

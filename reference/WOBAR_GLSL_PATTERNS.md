@@ -1,9 +1,9 @@
 ---
 title: WOBAR GLSL Patterns
-version: 1.0
-last_updated: 2026-04-15
+version: 2.0
+last_updated: 2026-04-30
 status: live
-scope: Act-specific GLSL TOP fragment shader patterns for WOBAR. 2 shaders per act, audio-reactive, paste-ready for TD GLSL TOP. Each shader saved as .frag in touchdesigner/glsl/.
+scope: Act-affiliated GLSL TOP fragment shader patterns for WOBAR. 2 shaders per act, audio-reactive, paste-ready for TD GLSL TOP. Each shader saved as .frag in touchdesigner/glsl/. Per-act sensibilities are starting points, not rules.
 dependencies: [[reference/WOBAR_TD_AGENT_RULES]], [[reference/WOBAR_FRAMEWORK]]
 ---
 
@@ -31,7 +31,7 @@ color3name  → "uTransient"  color3rgbr → op('audio_ref')['transient'] if op(
 
 ## Act 1 / INVOCATION — Warmth, breath, circle, 60-80 BPM
 
-**Constraints:** circles, warm purple glow, breath rhythm. No sharp geometry, no aggressive motion, no cool colors.
+**Sensibility:** breath, threshold, holding. Circles read naturally here but are not required. Warmth pulls toward the desaturated rose / brass / lavender region of the palette; cool tones can also work as long as the *register* feels welcoming, not confrontational.
 
 ### act1_breath_circle.frag
 File: `touchdesigner/glsl/act1_breath_circle.frag`
@@ -72,7 +72,7 @@ Key technique: `fract(r * freq - scroll)` gives repeating concentric bands. `pow
 
 ## Act 2 / DESCENSION — Inward pull, depth, spiral, tightening
 
-**Constraints:** inward motion only, depth, tightening with audio. No outward expansion, no warm colors dominating, no flat motion.
+**Sensibility:** inward pull, deepening, audio tightening the form. Motion direction is the strongest signal — descension reads as "going in." Color tends toward the petrol / oxidized teal / dusk-blue / charcoal-mauve region but is not locked there.
 
 ### act2_vortex_pull.frag
 File: `touchdesigner/glsl/act2_vortex_pull.frag`
@@ -117,7 +117,7 @@ Key technique: `float theta = r / b` — Archimedean spiral distance field. `b =
 
 ## Act 3 / CONFRONTATION — Fracture, imperfect mirror, cold palette, digital
 
-**Constraints:** 85-90% mirror (never 100%), cold palette only, glitch on peaks. NO warm/orange tones. Perfect symmetry is forbidden.
+**Sensibility:** confrontation, recognition under pressure, the imperfect mirror. The mirror should be **off** — 85–90% symmetric, never 100% — that's what makes it confrontational rather than decorative. Glitches land on audio peaks, not constantly. Whatever warmth appears should disturb (oxidized copper, dried tobacco), not relieve.
 
 ### act3_mirror_fracture.frag
 File: `touchdesigner/glsl/act3_mirror_fracture.frag`
@@ -137,7 +137,7 @@ Imperfect 6-fold kaleidoscope (88% mirror factor). Double FBM structure. Cold in
 
 Key technique: `kaleido()` function blends between full-mirror and original angle by `mirrorAmt` — values below 1.0 leave visible seams, which reads as fracture/damage. Glitch: `uv.x += glitchShift * glitchAmt` where `glitchShift` is per-row hash tied to frame time.
 
-**Warning:** `uMirrorAmt` must stay between 0.80–0.92. At 1.0 = perfect symmetry = forbidden by Act 3 constraint.
+**Recommended range:** `uMirrorAmt` between 0.80–0.92. At 1.0 the mirror reads as perfect symmetry — decorative, not confrontational. Imperfect mirror is what gives the encounter its tension.
 
 ---
 
@@ -163,7 +163,7 @@ Key technique: Two-axis sine distortion + per-row hash block shift on transient.
 
 ## Act 4 / RELEASE — Outward, full palette, warm accents required, rhythm
 
-**Constraints:** outward radial expansion, full color palette (warm orange accent REQUIRED), rhythm-driven. No inward motion, no cool-only palette.
+**Sensibility:** cathartic discharge, outward force, rhythm-driven, heavy but held — not chaos. The whole desaturated psychedelic palette can activate here; warm desaturated range (burnt amber, dusty coral, brass) and bright cools (Wobar cyan, slate blue) get pushed to peak.
 
 ### act4_radial_burst.frag
 File: `touchdesigner/glsl/act4_radial_burst.frag`
@@ -210,7 +210,7 @@ Key technique: `cos(rotA * uArmCount)` for N-arm corona pattern. Counterclockwis
 
 ## Act 5 / RETURN — Closing, callback to Act 1, pure purple, breath returns
 
-**Constraints:** circle returns, portal closing, breath rhythm returns. No new visual concepts — only Act 1/2 language.
+**Sensibility:** grounded return, integration, callback to the Act 1 region. Circles often return as a visual rhyme but are not required. Pulls toward foundation + purple spine + bone/ash highlights.
 
 ### act5_portal_close.frag
 File: `touchdesigner/glsl/act5_portal_close.frag`
@@ -311,12 +311,71 @@ vec2 kaleido(vec2 uv, float folds, float mirrorAmt) {
 
 ---
 
-## Act Color Reference
+## Palette Reference (vec3 — desaturated psychedelic range)
 
-| Act | Base dark | Mid | Bright | Accent | Forbidden |
-|-----|-----------|-----|--------|--------|-----------|
-| 1 | `vec3(0.04, 0.00, 0.08)` | `vec3(0.35, 0.04, 0.47)` | `vec3(0.75, 0.20, 1.00)` | None | Cool, green |
-| 2 | `vec3(0.02, 0.00, 0.05)` | `vec3(0.18, 0.35, 0.42)` | `vec3(0.40, 0.65, 0.80)` | Muted teal | Warm |
-| 3 | `vec3(0.00, 0.00, 0.04)` | `vec3(0.05, 0.08, 0.22)` | `vec3(0.30, 0.40, 0.70)` | Ice blue | **ALL WARM** |
-| 4 | `vec3(0.01, 0.00, 0.04)` | `vec3(0.45, 0.08, 0.70)` | `vec3(0.80, 0.50, 1.00)` | `vec3(0.706, 0.314, 0.078)` | Cool-only |
-| 5 | `vec3(0.02, 0.00, 0.05)` | `vec3(0.28, 0.03, 0.45)` | `vec3(0.75, 0.20, 1.00)` | None | New visuals |
+The full palette swatch with hex values lives in `WOBAR_TD_REFERENCE.md §4`. Below are the most-used `vec3`s — drop these into shaders directly. **Never** use pure neon, glowstick, or candy-bright values. Muted 30–40% from full saturation is the discipline.
+
+```glsl
+// Foundation
+const vec3 BLACK             = vec3(0.000, 0.000, 0.000);
+const vec3 OFFBLACK_PURPLE   = vec3(0.055, 0.031, 0.075);  // #0E0813
+const vec3 CHARCOAL_MAUVE    = vec3(0.122, 0.094, 0.157);  // #1F1828
+
+// Purple spine
+const vec3 DEEP_PURPLE_DARK  = vec3(0.098, 0.000, 0.157);  // #190028
+const vec3 DEEP_PURPLE_MID   = vec3(0.176, 0.020, 0.275);  // #2D0546
+const vec3 DEEP_PURPLE_HI    = vec3(0.353, 0.059, 0.471);  // #5A0F78
+const vec3 WOBAR_PURPLE      = vec3(0.420, 0.180, 0.529);  // #6B2E87
+
+// Mauves & dusty violets
+const vec3 PLUM              = vec3(0.302, 0.145, 0.251);  // #4D2540
+const vec3 SMOKE_MAUVE       = vec3(0.541, 0.431, 0.580);  // #8A6E94
+const vec3 ASH_VIOLET        = vec3(0.420, 0.361, 0.478);  // #6B5C7A
+const vec3 DUSTY_LAVENDER    = vec3(0.627, 0.522, 0.682);  // #A085AE
+
+// Magentas & dusty roses
+const vec3 WINE_MAGENTA      = vec3(0.353, 0.059, 0.255);  // #5A0F41
+const vec3 MUTED_MAGENTA     = vec3(0.702, 0.306, 0.561);  // #B34E8F
+const vec3 DUSTY_ROSE        = vec3(0.651, 0.345, 0.427);  // #A6586D
+
+// Cools — slate / petrol / dusk
+const vec3 PETROL            = vec3(0.173, 0.271, 0.329);  // #2C4554
+const vec3 OXIDIZED_TEAL     = vec3(0.118, 0.314, 0.353);  // #1E505A
+const vec3 SLATE_BLUE        = vec3(0.290, 0.392, 0.475);  // #4A6479
+const vec3 DUSK_BLUE         = vec3(0.231, 0.298, 0.451);  // #3B4C73
+const vec3 WOBAR_CYAN        = vec3(0.290, 0.482, 0.616);  // #4A7B9D
+
+// Oxidized organics — sage / moss / patina
+const vec3 AGED_MOSS         = vec3(0.302, 0.380, 0.286);  // #4D6149
+const vec3 LICHEN_SAGE       = vec3(0.478, 0.541, 0.435);  // #7A8A6F
+const vec3 PATINA_GREEN      = vec3(0.361, 0.455, 0.439);  // #5C7470
+
+// Warm desaturated — amber / rust / tobacco
+const vec3 BURNT_AMBER       = vec3(0.651, 0.388, 0.239);  // #A6633D
+const vec3 DRIED_TOBACCO     = vec3(0.541, 0.353, 0.239);  // #8A5A3D
+const vec3 BRASS_OCHRE       = vec3(0.722, 0.600, 0.345);  // #B89958
+const vec3 MUTED_ORANGE      = vec3(0.757, 0.478, 0.306);  // #C17A4E
+const vec3 DUSTY_CORAL       = vec3(0.706, 0.451, 0.408);  // #B47368
+
+// Mirror metallics (gloss / metallic permitted)
+const vec3 TARNISHED_SILVER  = vec3(0.431, 0.431, 0.451);  // #6E6E73
+const vec3 OXIDIZED_COPPER   = vec3(0.435, 0.306, 0.227);  // #6F4E3A
+const vec3 BRONZE_PATINA     = vec3(0.353, 0.322, 0.251);  // #5A5240
+const vec3 PEWTER            = vec3(0.557, 0.557, 0.580);  // #8E8E94
+
+// Pale highlights (no pure white)
+const vec3 BONE              = vec3(0.780, 0.733, 0.651);  // #C7BBA6
+const vec3 ASH               = vec3(0.580, 0.549, 0.620);  // #948C9E
+```
+
+### Per-Act Color Affinities (suggestions, not rules)
+
+Acts no longer have required/forbidden palettes. These are starting points — pull toward these regions when the act's emotional register calls for it; cross-borrow freely when it serves the moment.
+
+| Act | Pulls toward |
+|-----|--------------|
+| 1 — RIFT | Foundation + purple spine + dusty rose / brass ochre / dusty lavender |
+| 2 — DESCENSION | Deep purples + petrol / oxidized teal / dusk blue / charcoal mauve |
+| 3 — ENCOUNTER | Off-black + petrol / wine magenta / patina / pewter / tarnished silver. Warmth not banned — but if used, it should disturb (oxidized copper, dried tobacco), not comfort. |
+| 4 — RELEASE | Whole palette can activate; warm desaturated (burnt amber, dusty coral, brass) and bright cools (Wobar cyan, slate blue) get pushed to peak. |
+| 5 — INTEGRATION | Foundation + purple spine + bone/ash highlights — visual callback to Act 1 region |

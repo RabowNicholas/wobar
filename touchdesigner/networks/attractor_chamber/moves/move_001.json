@@ -1,0 +1,222 @@
+{
+  "label": "Initial build — POPX Strange Attractor (Aizawa) chamber with audio reactivity",
+  "timestamp": "2026-04-30T00:00:00Z",
+  "network": "attractor_chamber",
+  "td_project_file": "NewProject.1.toe (will be saved as attractor_chamber_v001.toe)",
+  "summary": "From-scratch new network: /project1/base_attractor_chamber. POPX SA-Aizawa cloud → instanced boxes with bloom + grain post chain → audio reactivity via /project1/base_audio/null_audio (sub→Ua, mid→Timescale, energy→comp.scale).",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber",
+      "node_type": "baseCOMP",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/pointgen_seed",
+      "node_type": "pointgeneratorPOP",
+      "params": { "numpoints": 5000, "shape": "sphere (default)" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/noise_rotate",
+      "node_type": "noisePOP",
+      "params": { "amp0": 0.5, "t4d.expr": "absTime.seconds*0.1" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/sa_chaos",
+      "node_type": "geometryCOMP (POPX SA, copied from /POPX_1_3_0/custom_operators/sa)",
+      "params": {
+        "Strangeattractor": "aizawa",
+        "Solvermode": "simple",
+        "Timescale": "1.5 + max(0, op('sel_audio')['mid']) * 4.0",
+        "Ua": "0.95 + max(0, op('sel_audio')['sub']) * 0.5"
+      },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/noise_jitter",
+      "node_type": "noisePOP",
+      "params": { "amp0": 0.01 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/math_velocity",
+      "node_type": "mathmixPOP",
+      "params": { "comb0oper": "length", "comb0scopea": "PartVel", "comb0result": "LenVel" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/null_pop_out",
+      "node_type": "nullPOP",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/geo_attractor",
+      "node_type": "geometryCOMP",
+      "params": {
+        "instancing": true,
+        "instanceop": "/project1/base_attractor_chamber/null_pop_out",
+        "instancecountmode": "oplength",
+        "instancetx": "P(0)", "instancety": "P(1)", "instancetz": "P(2)",
+        "material": "/project1/base_attractor_chamber/geo_attractor/mat_attractor",
+        "scale.expr": "0.5 * (1.0 + max(0, op('sel_audio')['energy']) * 0.4)"
+      },
+      "notes": "Auto-torus child destroyed immediately (per WOBAR_TD_AGENT_RULES geometryCOMP gotcha).",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/geo_attractor/box_template",
+      "node_type": "boxPOP",
+      "params": { "sizex": 0.04, "sizey": 0.04, "sizez": 0.04, "render": true, "display": false },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/geo_attractor/mat_attractor",
+      "node_type": "constantMAT",
+      "params": { "color": "(0.353, 0.059, 0.255) — wine magenta #5A0F41", "applypointcolor": false },
+      "before": null
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/base_attractor_chamber/geo_attractor/torus1",
+      "node_type": "torusPOP (auto-created by geometryCOMP)",
+      "before": "default torus geometry"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/cam_attractor",
+      "node_type": "cameraCOMP",
+      "params": {
+        "lookat": "/project1/base_attractor_chamber/geo_attractor",
+        "tx.expr": "math.sin(absTime.seconds*0.08) * 1.0",
+        "tz.expr": "math.cos(absTime.seconds*0.08) * 3.0",
+        "ty": 0.3,
+        "fov": 70,
+        "bgcolora": 0
+      },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/render_attractor",
+      "node_type": "renderTOP",
+      "params": {
+        "geometry": "/project1/base_attractor_chamber/geo_attractor",
+        "camera": "/project1/base_attractor_chamber/cam_attractor",
+        "resolutionw": 720, "resolutionh": 1280,
+        "format": "rgba16float",
+        "bgcolor": "(0.02, 0.012, 0.030, 1.0)"
+      },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/level_grade",
+      "node_type": "levelTOP",
+      "params": { "blacklevel": 0.04, "gamma1": 0.9, "contrast": 1.15 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/blur_bloom",
+      "node_type": "blurTOP",
+      "params": { "size": 28 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/level_bloom",
+      "node_type": "levelTOP",
+      "params": { "brightness1": 0.55, "opacity": 0.9 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/comp_bloom",
+      "node_type": "compositeTOP",
+      "params": { "operand": "screen" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/noise_grain",
+      "node_type": "noiseTOP",
+      "params": { "type": "randomgpu", "mono": true, "resolution": "512x512", "seed.expr": "me.time.frame" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/blur_grain",
+      "node_type": "blurTOP",
+      "params": { "size": 1.8 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/level_grain",
+      "node_type": "levelTOP",
+      "params": { "brightness1": -0.5 },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/comp_grain",
+      "node_type": "compositeTOP",
+      "params": { "operand": "add" },
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/null_out",
+      "node_type": "nullTOP",
+      "notes": "Final exposed output of the network.",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_attractor_chamber/sel_audio",
+      "node_type": "selectCHOP",
+      "params": {
+        "chops": "/project1/base_audio/null_audio",
+        "channames": "sub bass mid energy"
+      },
+      "before": null
+    }
+  ],
+  "wires": [
+    "pointgen_seed → noise_rotate → sa_chaos → noise_jitter → math_velocity → null_pop_out",
+    "render_attractor → level_grade → (blur_bloom → level_bloom) + level_grade → comp_bloom (screen)",
+    "noise_grain → blur_grain → level_grain",
+    "comp_bloom + level_grain → comp_grain (add) → null_out"
+  ],
+  "audio_bindings": [
+    "sa_chaos.Ua = 0.95 + max(0, sel_audio.sub) * 0.5",
+    "sa_chaos.Timescale = 1.5 + max(0, sel_audio.mid) * 4.0",
+    "geo_attractor.scale = 0.5 * (1.0 + max(0, sel_audio.energy) * 0.4)"
+  ],
+  "known_issues_v001": [
+    "Solvermode='advect' caused all 5000 points to converge to a single attractor point after long runtime (1672s). Fell back to 'simple' mode where SA evaluates velocity field at input positions per frame (not full integration). This means the visible cloud is the Aizawa velocity-field-displacement of noise_rotate output, not the full integrated trajectory. v002: investigate proper Pointsupdatepop feedback pattern.",
+    "LenVel-driven instance scale (instancesx/sy/sz='LenVel') required normalizing LenVel to a sane attribute range; deferred to v002. Currently using comp.scale only for size.",
+    "Color route via Lookup TOP from desaturated palette ramp deferred — v001 uses single wine magenta on constant MAT.",
+    "Camera bgcolor handling: render bg controlled via render_attractor.par.bgcolor, not camera.par.bgcolor (was source of confusion mid-build)."
+  ],
+  "lessons_for_debug_log": [
+    "Camera rotation expression `absTime.seconds * speed` accumulates without bound — even % 360 gives 0-360 sweep that orbits camera AROUND its own pivot, not around scene. To orbit scene, set par.lookat = target and animate tx/tz.",
+    "noiseTOP CPU types (`'sparse'`, `'random'`, etc.) are GPU-blocking; only use GPU types: perlin2d/3d/4d, simplex2d/3d/4d, randomgpu.",
+    "noiseTOP has no par.t — animate via par.seed.expr instead.",
+    "POPX SA Solvermode='advect' will collapse all 5000 points to one trajectory after long runtime; use 'simple' mode for cloud-of-particles look unless using Pointsupdatepop feedback pattern.",
+    "geometryCOMP par.instancing+par.instanceop with a POP source DOES work; numinstances auto-derives from POP via instancecountmode='oplength'.",
+    "geometryCOMP renders its CHILD geometry (boxPOP inside as a child), not external SOPs wired in. inputConnectors of geometryCOMP are 0 in TD 2025.",
+    "Setting par expressions: must explicitly do `par.mode = ParMode.EXPRESSION` first OR the expression string is treated as constant and fails to evaluate."
+  ]
+}

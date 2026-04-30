@@ -49,6 +49,11 @@ Target: TD 2025.32460 Non-Commercial on Apple Silicon. Output capped at 1280×12
 | TD_OPERATORS_DAT.md | DATs — tables/text/scripts/network | Python; OSC routing; text data; config |
 | TD_OPERATORS_COMP.md | COMPs — components; 3D objects; containers | Scene graph; UI; Engine; Replicator; Base/Container |
 
+### Third-Party Libraries
+| File | Library | When to pull |
+|------|---------|-------------|
+| TD_POPX_GUIDE.md | POPX 1.3.0 — high-level POP toolkit (~30 modules, all 55 official examples surveyed). Covers: Instancer, Aim, MoveAlongCurve/Mesh, Distribution, Convert, Unpack, Pivot, Reorient, Texture/Shape/Paint/Noise/Infection/Attribute Falloff, Spring, Transform/Color/Noise Modifier, Magnetize, Measure, Subdivider, Sweep, Planar Patch, Voxelize, Explode (Voronoi/perprim), Mesh Fill, Strange Attractor, DLA, DLG, Physarum 2D/3D, Shortest Path, Flow (Eulerian fluid), POPX Particle (Lagrangian SPH), SSFR, Soft Body suite (cloth/struts/pressure/string), Constraints, Constraint Property, SBPP, Path Tracer, POPX Material/Light. Includes integration patterns for typography, living Voronoi, voxel-art, hair on rigged characters, audio-reactive crystallization. | Whenever POPX modules are involved. Capability table at top maps "without POPX → with POPX" recipes — find the row, then jump to the named module's section. |
+
 ### Pattern Library — Recipes
 | File | Scope | When to pull |
 |------|-------|-------------|
@@ -100,6 +105,9 @@ Target: TD 2025.32460 Non-Commercial on Apple Silicon. Output capped at 1280×12
 
 **"I want to instance 10,000 things cheaply."**
 → TD_OPERATORS_POP.md §Point Generator / §Attribute POPs → TD_PATTERNS_INSTANCING.md → TD_EFFICIENT_NETWORKS.md §GPU Instancing
+
+**"I want instances to aim at / follow / scatter on a surface."**
+→ TD_POPX_GUIDE.md — start with the capability table (rows ~25–90), find the row matching your need, then jump to the named module's section.
 
 ---
 

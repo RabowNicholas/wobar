@@ -17,7 +17,7 @@ Read this before any TD build or advice. It tells you exactly what else to read 
 | File | Size | Purpose — one line |
 |------|------|---------------------|
 | `working/TD_CLAUDE_DEBUG_LOG.md` | Small | Confirmed wrong advice + corrected patterns. **Read before any action.** |
-| `reference/WOBAR_TD_AGENT_RULES.md` | Medium | Build conventions: naming, architecture, act constraints, Python rules. Non-negotiable. |
+| `reference/WOBAR_TD_AGENT_RULES.md` | Medium | Build conventions: naming, architecture, color/material rules, visual identity lens, act identity (no hard constraints), Python rules. Non-negotiable. |
 | `touchdesigner/reference_networks/README.md` | Medium | Structural examples — node chains + taste decisions for Act 1 circle, Act 3 tunnel. Diff against these before building from scratch. |
 | `reference/WOBAR_TWOZERO_GUIDE.md` | Small | Confirmed operator type strings, parameter names, MCP limitations, known behaviors. |
 | `reference/WOBAR_TD_REFERENCE.md` | **Large** | Full specs: audio pipeline, visual primitives by act, color system, export settings, failure patterns. Load by section, not full file. |
@@ -42,7 +42,7 @@ Entry point: `td_library/TD_LIBRARY_INDEX.md` — routes by task (building audio
 
 ### For any TD build or advice
 1. `TD_CLAUDE_DEBUG_LOG.md` — check for matching past failures first (Rule 0)
-2. `WOBAR_TD_AGENT_RULES.md` — naming, architecture, act constraints
+2. `WOBAR_TD_AGENT_RULES.md` — naming, architecture, color/material rules, visual identity lens, act identity
 3. `reference_networks/README.md` — find closest structural match (Rule 0b)
 4. `WOBAR_TWOZERO_GUIDE.md` — confirmed type strings + limitations before calling TWOZERO
 
@@ -52,9 +52,10 @@ Then branch:
 
 ### Building a new visual module (new base COMP)
 - `WOBAR_TD_REFERENCE.md` → Section 3 (Visual Primitives by Act) for node chains
-- `WOBAR_FRAMEWORK.md` → act identity, forbidden/required elements
+- `WOBAR_FRAMEWORK.md` → act identity (emotional register + visual descriptors)
 - `WOBAR_MOVE_SYSTEM.md` → network→comp mapping table, move schema
 - If GLSL shader involved → `WOBAR_GLSL_PATTERNS.md`
+- If POPX modules involved (any of: instancing, aim/look-at, mesh scatter, falloff fields, fluid sim, fractal growth, soft body / cloth / hair, strange attractors, voxel-art, typography rig, Voronoi shatter, etc.) → `td_library/TD_POPX_GUIDE.md`. **Read the capability table at top first** (rows ~25–90) — find the row matching your need, then jump to the named module's section. Guide is large (2651 lines) — load by section, not whole-file. Note POPX is a 3rd-party dep — bake to native POPs before final tox commits.
 
 ---
 

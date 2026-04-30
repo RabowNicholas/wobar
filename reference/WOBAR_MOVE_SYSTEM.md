@@ -51,6 +51,8 @@ wobar/touchdesigner/networks/
 | base_audio | /project1/base_audio |
 | base_test_circle | /project1/base_test_circle |
 | act2_underwater_surface | /project1/base_act2_underwater |
+| act3_kaleido_tunnel | /project1/base_act3_kaleido |
+| glass_orb | /project1/base_glass_orb |
 
 Add a row here whenever a new network is created.
 

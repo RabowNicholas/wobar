@@ -81,13 +81,13 @@ Schema:
 }
 ```
 
-### Step 5: Validate Against Act Constraints
+### Step 5: Sense-Check Against Act Identity (Optional)
 
-Check the act constraint table in `reference/WOBAR_TD_AGENT_RULES.md`. If the build violates its act constraint, fix it (as another operation within the same move) before reporting completion.
+There are no longer hard required/forbidden act constraints. If the build is for a specific act, sense-check that the result fits the act's emotional register (per `reference/WOBAR_FRAMEWORK.md`) and pulls toward — though doesn't have to live inside — the act's color affinity (per `reference/WOBAR_TD_REFERENCE.md §4`). Note any tension you notice in the report; don't auto-correct unless the user asked.
 
 ## Report
 
 After completion, state:
 - What was built (brief)
 - Move file location and number
-- Any constraint violations caught and fixed
+- Any tension noticed against the act's emotional register / color affinity (if relevant)
