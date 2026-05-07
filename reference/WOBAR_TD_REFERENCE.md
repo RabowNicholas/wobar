@@ -227,6 +227,30 @@ The encounter doesn't comfort. Whatever warmth shows up should disturb, not reli
 
 ---
 
+### CHROMATIC ABERRATION (CA / RGB SPLIT)
+
+**Affinity:** Not act-locked. **Reads as:** nostalgic / VHS / aged-film / analog signal distortion — only when tuned muted. Rave-bright RGB rainbow is off-brand; subtle channel-bleed is on-brand.
+
+TD has **no native chromatic-aberration TOP**. Manual chain (~7 ops):
+```
+Source → 3× Level TOP (R: highg=highb=0, G: highr=highb=0, B: highr=highg=0)
+       → 2× Transform TOP (R: tx negative offset, B: tx positive offset; G stays center)
+       → Composite TOP add (R + G)
+       → Composite TOP add (RG + B)
+       → Null TOP
+```
+
+Parameters that keep CA in the nostalgic register (vs rainbow-rave):
+- Offset: 1–3 px or 0.005–0.015 fraction. Larger reads as digital glitch / rainbow.
+- Optional partial-channel reduction (highg/highb < 1) so the bleed is dim
+- Optional grain or desaturation pass downstream to age the result
+
+Audio binding: typically transient or kick-driven impulse (offset modulated by hit).
+
+Canonical example: TR cell of `touchdesigner/networks/eyes_cut_deeper/` — static-amplitude CA + animated TV static via `randomgpu` recentered for ADD blend.
+
+---
+
 ### RADIAL EXPLOSION
 
 **Affinity:** Act 4 (release, discharge). **Reads as:** outward force, cathartic, heavy-but-held — rhythm exists, this is not chaos.

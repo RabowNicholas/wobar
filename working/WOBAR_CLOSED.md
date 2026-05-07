@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-05-05
+last_updated: 2026-05-06
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,102 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Brand docs catch-up — chromatic aberration and nostalgic register
+
+**Closed:** 2026-05-06 — done.
+
+**Context:**
+`WOBAR_TD_AGENT_RULES.md` Materials section listed "holographic-foil rainbow shifts" as off-brand without distinguishing rave-bright RGB rainbow from subtle nostalgic / VHS / analog CA. The latter is very on-brand for "70s psychedelic art aged 50 years" and was already in heavy use in the Eyes Cut Deeper grid (TR cell static CA) and magnet_chamber v002 (manual CA via 3 levelTOPs + 2 transformTOPs).
+
+**Resolution:**
+- `WOBAR_TD_AGENT_RULES.md` Materials section: added CA to the Permitted list with explicit framing as "nostalgic / VHS / analog signal distortion — not as rainbow effect." Added a sub-section "Chromatic aberration — nostalgic register, not act-locked" explaining the on-brand vs off-brand difference (muted + small offset = analog/nostalgic; saturated + large offset = rainbow/rave), the 7-op recipe, and tuning guidelines for staying in the nostalgic register. Cross-referenced eyes_cut_deeper TR cell as the canonical example.
+- `WOBAR_TD_REFERENCE.md §3` (Visual Primitives Vocabulary): added new CHROMATIC ABERRATION primitive with the full chain (Source → 3 levelTOPs → 2 transformTOPs → 2 add composites), parameter ranges that keep it muted (1–3 px / 0.005–0.015 fraction), audio binding suggestion (transient/kick), and canonical example pointer.
+
+CA is now formally part of the WOBAR vocabulary as a non-act-specific primitive.
+
+---
+
+## Brand docs catch-up — palette section in WOBAR_BRAND.md
+
+**Closed:** 2026-05-06 — done.
+
+**Context:**
+The 2026-04-30 visual identity refresh expanded the palette to the full desaturated psychedelic range (mauves, magentas, slates, oxidized organics, warm desaturateds, mirror metallics, bone/ash highlights — all first-class) and updated `WOBAR_TD_AGENT_RULES.md`, `WOBAR_TD_REFERENCE.md`, `WOBAR_GLSL_PATTERNS.md`. Nick deferred updating `WOBAR_BRAND.md` at the time, leaving the LOCKED old framework in place: "Black 80% backgrounds, Deep Purple 60%, secondary 30%, accent 10% rare, full palette only at Act 4 peaks." That conflicted with the refreshed identity and created ambiguity when benchmarking visuals against the brand doc.
+
+**Resolution:**
+Rewrote the `WOBAR_BRAND.md` Color Palette section to align with the desaturated-psychedelic system in `WOBAR_TD_REFERENCE.md §4`:
+- Foundation called out (Black, Off-black with purple bias #0E0813, Charcoal mauve)
+- Purple spine identified (deep purple range + Wobar purple #6B2E87)
+- "Everything else — first-class, no tier hierarchy" with full vocabulary listed (mauves, magentas, cools, oxidized organics, warm desaturateds, mirror metallics, pale/bone highlights)
+- Usage principles: "muted = 30–40% desat from neon, never pure neon/glowstick/candy/safety colors, psychedelic ceremony not rave"
+- "No required-or-forbidden constraints per act" — affinities suggest direction, don't gate
+- Render-in-palette via Lookup TOP + Ramp documented as canonical TD pipeline (cross-reference to `WOBAR_TD_REFERENCE.md §4`)
+- Percentage-tier framework (80/60/30/10) explicitly marked as deprecated as of 2026-04-30 refresh
+
+Brand doc + TD docs are now consistent with each other.
+
+---
+
+## iris_2 — single-eye visualizer for Eyes Cut Deeper (cusp 4→5)
+
+**Closed:** 2026-05-06 — shipped. Full-song video rendered.
+
+**Context:**
+Third visual approach for the Subtronics "Eyes Cut Deeper" remix (cusp 4→5 — "heavy and beautiful, hard-won softness, heart-space opening"). The first attempt (iris portal, twisted-torus geometry, 2026-05-04) closed unfinished — chromakey blink masking failed. The second (4-cell grid, 2026-05-05) shipped as a separate-and-distinct take. This third pass started from a Midjourney-generated photoreal iris source (1024×1024 square) and built a complete WOBAR-palette psychedelic eye in TouchDesigner — single rotating eye composition, audio-reactive, HDR cinematic post-processing. Network at `touchdesigner/networks/iris_2/iris.toe`.
+
+**Composition arc (4 iterations):**
+Vertical mirror with hardcut → asymmetric mirror → independent counter-rotating halves with 15° tilted cut → **single rotating eye with circular vignette + black pupil overlay anchor (kept).** Mirror experiments rejected as "too many fragmentation signals competing — broken, not intentionally fractured." Single-eye composition reads cleanly as one coherent gaze; the drawn black pupil overlay AT canvas center provides the gravity anchor that makes it read as an eye regardless of what the palette cycle does.
+
+**Final architecture (left-to-right):**
+```
+[1024×1024 iris source]
+  → xform_iris_center (Sourcex/Sourcey re-centers natural pupil to canvas center)
+  → disp_breath ← noise_breath (audio-driven simplex3d displacement, fibers wave at drops)
+  → xform_top_rot (rotation around center, scale 1.42x for full-canvas coverage at any angle, clockwise via integrator negation)
+  → lookup_color ← xform_palette_phase ← chop_color_phase (speedCHOP integrator)
+  → xform_aspect (1024² → 720×1280 portrait via outputaspect='resolution' + sx=1.78 to preserve circular pupil)
+  → hsv_mute (saturationmult=0.78 — WOBAR muted register)
+  → comp_feedback (over blend, swaporder=True for translucent ghost trails) ← feedback_decay (RGB+alpha decay)
+  → comp_vignette ← vignette_ramp (circular, fitaspect='fitvert' for true circle on portrait)
+  → comp_pupil_overlay ← disp_pupil_edge ← circle_pupil + noise_pupil_edge
+  → level_post (crushed blacks inlow=0.06, roll highlights inhigh=0.95, contrast=1.18, gamma=0.92 cinematic S-curve)
+  → bloom_post (HDR — output='inputplusbloom', threshold=0.4, intensity=1.1, maxbloomradius=0.22)
+  → null_mirror_out → record_out (h264 yuv420 mp4, audio = audio_master/audio_in @ 44100Hz)
+```
+
+**Audio reactivity (after recording-driven analysis):**
+Recorded full song through `audio_master`, computed per-channel statistics from rec_audio's 16500 samples × 8 channels (min/p10/p25/p50/p75/p90/p95/p99/max/mean). Built per-channel CHOP normalization layer (floors subtract + scales multiply + clamp 0-1) so every channel uses 0-1 fully based on observed p99 — critical because raw bands have wildly different ranges (sub_bass overshoots 1.5, mid/high are squished to 0-0.3). Final mappings:
+- **Rotation** ← `bass^Rotcurve` (sustained body) + `transient^Rotcurve` (per-kick snap)
+- **Color cycle** ← `energy^Colorcurve` (~20× dynamic range — slow on breaks at 1 cycle/14s, fast on drops at 1 cycle/0.5s, with energy's 5-second slow-release lag matching cusp 4→5's emotional decay)
+- **Breath amp** ← `bass^Breathcurve` (iris fibers wave harder during drops)
+- **Pupil edge displacement** ← `energy^3` (organic perturbed amoeba-edge during drops, clean circle during breaks via cubic gating)
+
+**Pupil keyframed not audio-reactive** per Nick's call: table-driven keyframe system (`anim_pupil_keys` tableDAT with time/radius/curve columns + `pupil_kfm` textDAT module with linear/smooth/ease-in/ease-out interpolation). Sine-wave pupil breath stays through all transitions. **Pin-point pupil at drops** chosen over dilation — counter-intuitive vs typical EDM but reveals MORE iris during peak chaos; pre-drop dilation amplifies the snap.
+
+**Resolution:**
+Full-song MP4 rendered. Brand check landed at 8/10 cusp 4→5 — strong on heavy (black pupil, crushed darks, deep palette) + beautiful (HDR bloom, luminous fibers); minor drift on color cycle weighting (passes through all WOBAR colors equally, could re-weight to dwell in heavy register), peak rotation borderline Act 4 manic.
+
+**Durable learnings (16 new TD gotchas to correction tracker, 5 promoted):**
+- `mathCHOP.chopop` (inter-CHOP) vs `chanop` (intra-CHOP) silent failure (PROMOTED)
+- Cross-COMP CHOP wiring fails silently / use selectCHOP bridge (PROMOTED)
+- `null_audio` 60Hz timeslice analysis blocks `moviefileoutTOP` audio export (PROMOTED — must use raw `audio_master/audio_in` at 44100Hz)
+- `td_execute_python` exec-environment scoping fails for list comps + gen exprs + nested function defs equally (PROMOTED)
+- TD non-realtime export mode auto-engages during recording, audio playback clicks are normal (PROMOTED)
+- TableDAT cell backticks don't auto-evaluate — use parameterexecuteDAT to update cells when params change
+- `circleTOP.par.bgalpha` (not `bgcolora`) for surround transparency
+- `audiofileinCHOP.par.indexunit` defaults to `'seconds'` — `par.index.eval()` returns seconds directly
+- `rampTOP.par.fitaspect='fitvert'` for true-circular vignette on portrait canvas
+
+**6 new reusable patterns documented in TD_BUILD_LOG (Visual Primitives Vocabulary candidates):**
+- HDR cinematic eye chain (crushed-blacks levelTOP → bloomTOP `inputplusbloom`)
+- Phase-animated palette cycle (palette_ramp → xform_palette_phase tx=integrator%1.0 → lookupTOP)
+- Per-channel CHOP normalization layer (floors + scales constants + chopop sub/mul + limitCHOP)
+- Table-driven keyframe choreography (tableDAT + textDAT module with curve interpolation, no animationCOMP needed)
+- Single-eye-with-pupil-overlay composition (drawn pupil at canvas center as gravity anchor, locks eye reading regardless of palette phase)
+- Curve-gated displacement (`disp.weight = base + gain × signal^N` for "off in breaks, on in drops")
 
 ---
 

@@ -190,10 +190,19 @@ The palette is the **WOBAR desaturated psychedelic range** — see `WOBAR_TD_REF
 
 Texture vocabulary is **wider than before**. Matte, rough, organic grain still works. So do metallic, glossy, and reflective surfaces — gloss is no longer banned.
 
-- **Permitted:** matte, rough, gritty, organic grain, oil-on-water, oxidized metal, tarnished mirror, polished metal, anodized titanium, glass, wet ceramic, lacquer
-- **Lean away from traditional rave:** glowstick brightness, plastic-bright surfaces, candy-pop sheen, holographic-foil rainbow shifts
+- **Permitted:** matte, rough, gritty, organic grain, oil-on-water, oxidized metal, tarnished mirror, polished metal, anodized titanium, glass, wet ceramic, lacquer, **chromatic aberration (CA / RGB channel split) as nostalgic / VHS / analog signal distortion** — not as rainbow effect
+- **Lean away from traditional rave:** glowstick brightness, plastic-bright surfaces, candy-pop sheen, holographic-foil rainbow shifts (different from CA — see below)
 - **Bioluminescence-style glow still preferred for dim scenes** (deep-sea creature, not LED rave-stick), but LED glow is not banned — it has to stay desaturated
 - Reference fields: Tipper visuals, Of The Trees album art, oxidized copper, bioluminescent deep-sea, 70s psychedelic art aged 50 years, oil-on-water darkened, Alex Grey's darker bodies of work
+
+### Chromatic aberration — nostalgic register, not act-locked
+
+CA reads two ways. **Off-brand:** rave-bright RGB rainbow (festival lights, holographic foil glamour). **On-brand:** subtle VHS-tape signal-bleed, aged-film magnetic distortion, 70s psychedelic art faded 50 years, analog signal degradation. Tone is the difference: muted + small offset = analog/nostalgic; saturated + large offset = rainbow/rave.
+
+- **Use CA freely as a nostalgic / analog primitive.** Not act-specific. Lives in the shared visual vocabulary (`WOBAR_TD_REFERENCE.md §3`).
+- **Recipe (TD has no native CA op):** 3 levelTOPs to isolate channels (red: `highg=highb=0`; green: `highr=highb=0`; blue: `highr=highg=0`) → 2 transformTOPs to offset R and B in opposite directions (G stays center) → 2 add-blend compositeTOPs to recompose. ~7 ops total.
+- **Tune to stay nostalgic:** small offsets (1-3px or 0.005-0.015 fraction), partial-channel reduction so the bleed is dim not vivid, optional grain/desaturation pass after to age the result.
+- **Canonical example:** TR cell of the eyes_cut_deeper grid (`touchdesigner/networks/eyes_cut_deeper/`). Static-amplitude CA + animated TV static, driven by transient.
 
 ---
 

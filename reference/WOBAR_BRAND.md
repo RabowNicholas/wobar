@@ -68,25 +68,35 @@ Wobar opens portals through bass music — and they go inward. The sound goes wh
 - Goal Reaction: "Holy shit, I just had a profound experience... at a dubstep show?"
 
 ## Color Palette
-Source: Art Direction Playbook 2025 (locked)
+Source: 2026-04-30 visual identity refresh. Full palette table with swatches, hex, RGB lives in `reference/WOBAR_TD_REFERENCE.md §4`.
 
-**Primary:**
-- Black (#000000) — 80% of all backgrounds
-- Deep Purple (#6B2E87 to #7B3FA1) — 60% of color usage
+The palette is the **WOBAR desaturated psychedelic range**. Black and deep purple are the foundation; everything else — mauves, magentas, slates, oxidized organics (sage/moss/patina), warm desaturateds (amber/rust/tobacco/brass/coral), mirror metallics (tarnished silver/oxidized copper/bronze patina/pewter), and bone/ash highlights — is **first-class** alongside them, not rare or accent-tier.
 
-**Secondary (30% of usage):**
-- Muted Magenta (#B34E8F) — pink-purple, warmth
-- Muted Cyan/Blue (#4A7B9D) — depth, cold contrast
+**Foundation (always present):**
+- Black (#000000) — true base
+- Off-black with purple bias (#0E0813) — where most "blacks" should sit; already psychedelic
+- Charcoal mauve (#1F1828) — lifted-shadow grade for deep regions
 
-**Accent (10% of usage — rare):**
-- Muted Green (#5A8A5A) — organic, alien
-- Muted Orange (#C17A4E) — warmth, grounding
+**Purple spine (anchors most pieces):**
+- Deep purple range (#190028 / #2D0546 / #5A0F78) — ramp anchors
+- Wobar purple (#6B2E87) — primary brand purple
 
-**Usage rules:**
-- Most visuals: Black + one purple variation
-- Occasionally: Black + purple + one accent
-- Rarely: Black + full palette (peak moments only — Act 4)
-- Muted = desaturated by 30–40% from full neon. Not bright festival colors. Psychedelic ceremony, not rave.
+**Everything else — first-class, no tier hierarchy:**
+- Mauves & dusty violets (plum, smoke mauve, ash violet, dusty lavender)
+- Magentas & dusty roses (wine magenta, muted magenta, dusty rose)
+- Cools (petrol, oxidized teal, slate blue, dusk blue, wobar cyan)
+- Oxidized organics (aged moss, lichen sage, patina copper-green)
+- Warm desaturateds (burnt amber, dried tobacco, brass ochre, muted orange, dusty coral)
+- Mirror metallics (tarnished silver, oxidized copper, bronze patina, pewter) — gloss/metallic now permitted
+- Pale/bone highlights (bone, ash) — never pure white
+
+**Usage principles:**
+- **Muted = 30–40% desaturated from full neon.** Never pure neon, glowstick, candy, or safety colors. Psychedelic ceremony, not rave.
+- **No required-or-forbidden constraints per act.** Each act has a palette *affinity* (Act 1 leans warm/sage, Act 2 leans cool/teal, Act 3 leans wine/oxidized, Act 4 leans full-palette/peak-warm, Act 5 leans bone/copper/dusk) — affinities suggest direction, they don't gate.
+- **Black + deep purple is still the lowest-risk default.** Other ranges enter when the song calls for it.
+- **Render-in-palette via Lookup TOP + Ramp** is the canonical TD render path. Drives any luminance-mapped iris, particle, or tunnel into the WOBAR range deterministically. See `WOBAR_TD_REFERENCE.md §4 → Color-Grading Pipeline`.
+
+The percentage-tier framework (80% backgrounds, 60% primary, 30% secondary, 10% accent) is **deprecated** as of the 2026-04-30 refresh.
 
 ## Typography
 Source: Art Direction Playbook 2025 (locked)
