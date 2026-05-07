@@ -53,6 +53,10 @@ wobar/touchdesigner/networks/
 | act2_underwater_surface | /project1/base_act2_underwater |
 | act3_kaleido_tunnel | /project1/base_act3_kaleido |
 | glass_orb | /project1/base_glass_orb |
+| attractor_chamber | /project1 (no wrapping baseCOMP) |
+| mycelium_chamber | /project1 (no wrapping baseCOMP) |
+| magnet_chamber | /project1 (no wrapping baseCOMP) |
+| iris | /project1 (no wrapping baseCOMP) |
 
 Add a row here whenever a new network is created.
 

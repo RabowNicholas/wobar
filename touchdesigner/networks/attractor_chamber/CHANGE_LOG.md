@@ -26,10 +26,34 @@ TD location: `/project1/base_attractor_chamber`
 
 ---
 
-## v002 — Plan (next session, after Nick imports working example)
+## v002 — Built (2026-05-01)
 
-Start from `touchdesigner/third_party/POPX/POPX_Examples_1_3_0/examples/strange attractors.tox` as the structural baseline. Diff modifications:
-- Re-color via WOBAR desaturated psychedelic palette (Lookup TOP from new ramp)
-- Add audio reactivity (`/project1/base_audio/null_audio` → SA `Ua` / `Timescale`, geo scale)
-- Wrap into `/project1/base_attractor_chamber` for WOBAR convention
-- Add post chain: bloom + grain
+**Status:** shipped. First polished POPX-on-WOBAR proof. Lives at `/project1` (not `/project1/base_attractor_chamber` as v001 plan stated — Nick rebuilt directly into project1, no wrapping baseCOMP).
+
+**Architecture (left to right at /project1):**
+
+POPX chain → `pointgen1` (3000 sphere points) → `sa1` (POPX SA Aizawa, advect mode, audio-bound Timescale) → `math_velocity` (LenVel from PartVel) → `random_scale` (per-point ScaleRand 0.6..1.4) → `null_pop_out` (terminal cap; feeds back to sa1.Pointsupdatepop and forward to geo instances).
+
+Scene → `geo_attractor` (instances null_pop_out, child sphere_template + pbrMAT "black pearl") → 4 lights (warm/cool/earth/pale palette-cyclers, two orbiting) → `cam` (slow orbit, lookat tracks live centroid via `centroid_tracker` executeDAT + EMA-lerp on `lookat_target`) → `environment1` (HDR moon-noon at low dimmer for deep shadows).
+
+Render → `render` → bloom branch → mirror_flip + mirror_comp (bilateral symmetry) → comp_bg ADD on `bg_black` → grain chain → `null_out` → `rec_out` (HAP, audio routed from audio_in).
+
+**Audio reactivity (single binding only, per Nick):**
+`sa1.Timescale = ctrl.Audiofloor + ctrl.Audioceil * (max(0.0, energy)^ctrl.Audioexp)`. Speed of point motion responds to overall audio energy. Every other potential binding (sub→flash, mid→Ua, energy→bloom, etc.) deferred for explicit user request. The `max(0, …)` clamp is required because audio analysis returns tiny negative noise (~e-22) at silence which breaks non-integer exponents.
+
+**Control panel — `/project1/ctrl_master`:**
+22 custom parameters across 6 pages (Audio, Material, Lighting, Camera, Composition, Form). Every visual op param reads from `ctrl_master` via expressions. Two register tunings landed during session:
+- **Hard chaotic mushroom trip**: toxic palette (blood wine / sulfur / bilious green / bruise purple), audio exp 1.3, breath ±18%/6s, orbit 35s, fov 28
+- **Dark hypnotic crimson** (final state): red-only palette (dark crimson → bright red → wine / mulberry / rust / mahogany / bone / taupe — pink killed at user request), audio exp 1.7, breath ±10%/18s, orbit 80s, fov 32
+
+**Cleaned up at session close (27 ops deleted):** noise_swirl, random_coloru, lookup_color, math_scale, ramp_palette + keys, dof_depth, lumablur_glow, atmospheric_bg + keys, bg_with_nebula, nebula_*, glints_* (5), bg_final, geo_aura + children, render_aura, blur_aura, level_aura, mirror_flip_aura, mirror_aura_comp, comp_orbs_over_mist, comp_vignette, vignette + keys.
+
+**New gotchas surfaced (logged in `working/TD_BUILD_LOG.md`):**
+1. Audio energy returns tiny negative values at silence — `**` raises complex error. Always `max(0.0, energy)` before pow.
+2. `geometryCOMP.par.instancesx/y/z` accept BARE attribute names only — no expressions like `LenVel*0.6`. Bake math into a new attribute via mathmixPOP.
+3. POPX SA strips custom upstream attributes through advection — write per-particle attrs DOWNSTREAM of SA.
+4. `nullPOP.points('Color')` returns list of TUPLES per point, not flat float buffer.
+5. `renderTOP.par.geometry` is glob pattern not path — `geo_attractor` matches that COMP only.
+6. Aizawa instantaneous centroid is NOT temporally stationary — fixed lookat drifts. Solution: executeDAT.onFrameStart with EMA-lerp on lookat_target.
+
+**Move file:** `moves/move_002.json` (full operational record).

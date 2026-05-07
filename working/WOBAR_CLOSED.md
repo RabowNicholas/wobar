@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-04-30
+last_updated: 2026-05-05
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,79 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Eyes Cut Deeper — 4-cell grid music video + album cover
+
+**Closed:** 2026-05-05 — shipped. Full-song video rendered, album snapshot saved.
+
+**Context:**
+4-cell macro-eye grid composite for the Subtronics "Eyes Cut Deeper" remix (Act 4/5 cusp register). Built after the iris-portal approach for the same song was abandoned (couldn't solve blink masking). The grid sidesteps that problem entirely — each of 4 macro-eye source videos gets a distinct effect treatment + WOBAR palette grade, composited into a 2×2 layout. Network: `touchdesigner/networks/eyes_cut_deeper/eyes_cut_deeper.8.toe`.
+
+**Per-cell architecture:**
+- **TL — Kaleidoscope mandala** (4-fold radial: bilateral × rotations 0/90/180/270, max-blended). Driven by broadband `energy`. Fold-in scales with energy via `outhigh` on each mirror layer (RGB-fade for max-blend chains, not alpha). Wobble displacement INVERSE to energy — moves at breaks, locks into perfect mirror at drops.
+- **TR — Chromatic aberration + animated TV static**. Static CA (R-shift left, B-shift right, fixed amplitude). TV static via `randomgpu` noise (recentered ±range via offset for ADD blend). Driven by `transient` — punches on drops only.
+- **BL — Zoom-tunnel feedback** (recursive eye-into-eye). Bronze/amber palette via `bl_keys` lookup. Driven by `sub_pressure`.
+- **BR — Calm/oily ripple** displacement. Sage/moss/patina palette via `br_keys` lookup. Driven by `growl`.
+
+**Audio pipeline:** Mid-session swap from custom rebuilt base_audio to canonical `base_audio_v001.tox` (8 channels with band_max normalization). Per-band gains exposed on `ctrl_master.Audio` for cell-specific tuning.
+
+**Final polish:** simplex2d film grain (24 fps scintillation) + radial vignette unifying disparate cell palettes.
+
+**Resolution:**
+Music video full-song render shipped to `touchdesigner/renders/eyes_cut_deeper_grid.mov`. Album snapshot TIFF saved to `touchdesigner/album_snapshots/album_snapshot_20260504_231620.tif`. Album cover at NC-license-capped 720×720 will need external upscale (Topaz Gigapixel / Photoshop Preserve Details) for industry-standard 3000×3000 final.
+
+**Metaphor framing (Three Versions + Meeting Point):**
+- TL mandala = The Future Version (already knows the structure)
+- TR CA/static = The Wounded Version (signal through interference)
+- BL zoom-tunnel = The Present Version / The Portal itself (going inward)
+- BR sage ripple = The Shadow / Dissolution (bass-as-mirror, somatic dissolution)
+
+**Durable learnings (logged to TD_BUILD_LOG correction tracker):**
+6 new TD gotchas — randomgpu output centered at 0.5 (not 0); mathCHOP chanop vs chopop semantics; levelTOP outhigh vs opacity for max-blend fades; feedbackTOP cook-loop warning is real (wire upstream content to input[0]); transformTOP needs two-stage pre-crop for aspect-fill into square output; selectCHOP par.channames takes name patterns not index syntax. The per-band reactivity pattern (TL=energy, TR=transient, BL=sub_pressure, BR=growl) became the canonical "polyrhythmic grid" approach — different cells breathing on different beats rather than single broadband Energy driving everything.
+
+---
+
+## Iris portal — Subtronics "Eyes Cut Deeper" remix (Act 4/5 cusp)
+
+**Closed:** 2026-05-05 — closed unfinished. Approach didn't land.
+
+**Context:**
+Built from a "TD Drop #05 Eyes" YouTube tutorial base. Twisted-torus geometry where the inner cylinder doubles as the tunnel-through-pupil — clever single-geo "iris becomes tunnel" mechanic. 13 moves on the stack. Network at `touchdesigner/networks/iris/`.
+
+Composition arc landed: monochrome-purple stylized iris with limbal/stroma/ruff/amber-fleck/slate/bone-ash palette, dominant scale, cool-violet light tint, dilated black pupil mask (`Puprad` exposed), halo pulse breath, feedback boundary mask containing trails inside iris circle, `ctrl_master` baseCOMP with `Puprad` / `Irisx` / `Irisy` / `Irisscale` exposed.
+
+Built a parallel iris-over-video branch attempting to replace the natural iris in a macro-eye blinking video with the WOBAR iris (`xform_iris_replace` + `mask_iris_video` + `comp_video_replace` → `null_video_replace_out`).
+
+**Failed experiments (reverted in-place):** warm halo color tint (added defined ring artifact competing with iris), catchlight in pupil (premultrgbbyalpha gotcha hid it; once visible, position kept overlapping inner-cylinder glint), wet PBR (light dimmer at 5.5 blew any glossy surface to plastic-mirror — would need full lighting rebalance), limbal ring overlay (merged with natural alpha falloff, barely visible).
+
+**Critical blocker — chromakey blink masking failed.** Tried to use the natural iris's blue/teal hue as a key to drive iris-vs-lid detection. HSV analysis showed the iris's hue overlaps with sclera AND lid skin in this footage (sclera at hue 0.53 sat 0.48 val 0.36; iris at hue 0.52 sat 0.42-0.74; lid skin at hue 0.40). Color alone can't separate iris from "lid covering iris." Tried wider hue range, value-based fallback, and `invert` toggle — none cleanly handled the blink case. Reverted.
+
+**Resolution:**
+Closed unfinished. The original goal — natural-eye video with WOBAR iris properly masking-out during blinks — was not achieved. Recommended-but-not-attempted next paths were manual keyframing of a blink-alpha param across the 121 frames OR external rotoscope import. Nick chose neither — pivoted to a different visual approach for the same song (the 4-cell macro-eye grid composition at `touchdesigner/networks/eyes_cut_deeper/`).
+
+**What this loop produced (still useful):**
+- Standalone iris network is visually strong as a stylized purple iris with dramatic dilated pupil and breathing halo. Could be reused in a different context.
+- 7 substantial TD gotchas surfaced (compositeTOP swaporder convention, circleTOP centerunit-as-offset, circleTOP radiusunit anisotropy, circleTOP premultrgbbyalpha invisibility, math.sin in expressions, backface culling on twisted geo, wet-PBR-needs-light-rebalance) — all logged to `TD_BUILD_LOG.md` correction tracker. The session's biggest deliverable was the gotcha catalog.
+- Established that for video iris replacement, color-based keying is fragile for human eyes. Future iris-replacement attempts should reach for rotoscope tools (external) or per-frame manual keyframing rather than chromatic detection.
+
+**Why it didn't work how Nick wanted:**
+The "alien iris in a real eye" register required clean blink masking that color keying couldn't deliver on this footage. Without it, the WOBAR iris always appeared painted over the closed eyelid — which broke the realism the concept depended on. The 4-cell grid approach (Eyes Cut Deeper loop) sidestepped this entirely by using the original eye videos as-is and treating each cell with a distinct effect, achieving the multiplicity-of-mirror reading without needing iris replacement.
+
+---
+
+## First POPX-on-WOBAR Build
+
+**Closed:** 2026-05-01
+
+**Built under the new (post-2026-04-30) visual identity** — full desaturated psychedelic palette, mirrors-over-portals lens, metallic surfaces permitted, no per-act constraint table.
+
+**Context:**
+First polished POPX-on-WOBAR proof. POPX SA-Aizawa point cloud → black pearl PBR sphere instances → mirror-symmetric composite → atmospheric post → recorder. Network at `/project1` (not wrapped in a baseCOMP — Nick rebuilt directly into project1 after v001 abandoned). 22-parameter `ctrl_master` baseCOMP exposes high-leverage knobs across 6 pages (Audio, Material, Lighting, Camera, Composition, Form). Audio reactivity intentionally limited to a single binding: `sa1.Timescale = floor + ceil*max(0,energy)^exp` — every other potential binding (sub-flash, mid-morph, energy-bloom) deferred per Nick's directive.
+
+**Resolution:**
+Two register tunings landed during session — hard chaotic mushroom trip (toxic palette / fast breath / sharp curves) and dark hypnotic crimson (red-only palette / slow breath / contemplative camera). Final state: dark hypnotic crimson with pink killed. The control panel makes track-by-track retuning fast — change `ctrl_master` knobs, the look follows. **Validated the POPX guide produces real value** — strange-attractors-from-the-guide pattern landed clean once correct gotchas were navigated (Pointsupdatepop feedback loop, custom attribute stripping through advect, geometryCOMP instance-scale-bare-attribute-only, etc.). Move file `touchdesigner/networks/attractor_chamber/moves/move_002.json` is the full operational record. `CHANGE_LOG.md` summarizes the architecture. Six new TD gotchas logged to `TD_BUILD_LOG.md` correction tracker. Network ready for live use across multiple tracks via the dashboard.
 
 ---
 

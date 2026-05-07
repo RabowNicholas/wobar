@@ -102,7 +102,96 @@ Taste decisions:
 - `xform_tunnel` scale 0.978 (not 0.98+) — slightly tighter inward pull than Act 2 spiral. The tunnel closes faster, which reads as the space getting less navigable. Combined with the partial mirror, the viewer feels the geometry is working against them.
 
 Known non-working variations:
-- `Flip TOP` after `comp_mirror` (flipping the composited output) → the seam lands at center and is perfectly straight — worse than full symmetry. The flip must happen before the composite to bury the seam inside the overlap.
+- `instancepop` / `instanceop` on Geometry COMP → single dot at origin. These modes do NOT do position-based instancing. Only Script CHOP bridge works.
+- `op('../torus_sop')` in Script CHOP callbacks → None. Script CHOP `op()` resolves at parent COMP scope — use `op('torus_sop')` (no `../`).
+- Wiring feedbackTOP input[0] directly to null_out → cook dependency loop on comp_main. Wire a black constantTOP as seed; par.top captures null_out asynchronously.
+- MAT expressions `op('../../sel_audio')` inside geo COMP → None. Use absolute path `/project1/base_act2_particles/sel_audio`.
+
+---
+
+### Act 2 Descension Vortex (POP torus instancing)
+Screenshot: *(no export yet)*
+Act: Act 2 / DESCENSION
+What it does: 720-sphere torus viewed overhead, rotating inward with feedback spiral trail accumulation. Rotation speed and noise amplitude driven by bass/sub_bass. Act 2 teal palette via lookup ramp.
+
+Node chain:
+```
+torus_sop (Torus SOP) — radx 1.2, rady 0.08
+  ↓
+noise_sop (Noise SOP) — amp expression-driven by sub_bass
+
+pos_chop (Script CHOP) — reads torus_sop.points, outputs tx/ty/tz × 720 samples
+  ↓
+geo_particles (Geometry COMP)
+  ├─ sphere_template (Sphere SOP, radx 0.03, render=True)
+  ├─ mat_particles (Constant MAT, Act 2 teal, applypointcolor=True, abs path audio exprs)
+  └─ instancing: instancetop=pos_chop, instancetx/ty/tz = 'tx'/'ty'/'tz'
+
+cam_main (Camera COMP) — tx 0, ty 3.5, tz 0.8, rx -78°, fov 55
+light_key (Light COMP) — distant, white
+
+render_main (Render TOP, 720×1280)
+  ↓
+hsv_desat (HSV Adjust TOP) — saturationmult 0.85
+  ↓
+level_main (Level TOP) — brightness1 expression: 1.2 + energy * 0.5
+  ↓
+comp_main (Composite TOP, Over) ← [input 1] level_trail
+  ↓
+lookup_act2 (Lookup TOP) ← ramp_act2 (Ramp TOP, 256×1, horizontal)
+  ↓
+null_out (Null TOP)
+  ↑ par.top targets here
+black_seed (Constant TOP, 720×1280, black) → feedback_main (Feedback TOP)
+  ↓
+xform_spiral (Transform TOP) — sx/sy 0.993, rz expr: absTime.seconds*22*(1+bass*2)
+  ↓
+level_trail (Level TOP) — opacity 0.82
+  ↓ (→ comp_main input[1])
+```
+
+Taste decisions:
+- Script CHOP bridge (not POP instancing) — `instancepop` and `instanceop` on Geometry COMP are broken for position-based instancing in TD 2025. Script CHOP reading SOP points is the only working path.
+- Camera rx -78° (near-overhead) — transforms the horizontal torus ring into a near-circle filling the portrait frame. Gives the "looking down into the vortex" portal depth.
+- level_trail opacity 0.82 (not 0.93 like Act 3) — tighter decay creates a shorter spiral coil, which reads as "falling inward" rather than a deep tunnel. Act 2 is about descent, not infinite depth.
+- feedbackTOP seed = black constantTOP (not null_out wire) — direct wire creates cook dependency loop. Black seed gives a clean first frame before feedback accumulates.
+- Absolute paths in MAT expressions — relative `op()` inside child COMP context returns None.
+
+Known non-working variations:
+- `instancepop` / `instanceop` on Geometry COMP → single dot at origin. These modes do NOT do position-based instancing. Only Script CHOP bridge works.
+- `op('../torus_sop')` in Script CHOP callbacks → None. Script CHOP `op()` resolves at parent COMP scope — use `op('torus_sop')` (no `../`).
+- Wiring feedbackTOP input[0] directly to null_out → cook dependency loop on comp_main. Wire a black constantTOP as seed; par.top captures null_out asynchronously.
+- MAT expressions `op('../../sel_audio')` inside geo COMP → None. Use absolute path `/project1/base_act2_particles/sel_audio`.
+
+---
+
+### Act 3 Tunnel + Partial Mirror
+Screenshot: `act3_tunnel_mirror.png`
+Act: Act 3 / CONFRONTATION
+What it does: Inward-scrolling feedback tunnel with 85–90% horizontal mirror symmetry and noise-driven displacement, cold palette only, transient-triggered glitch.
+
+Node chain:
+```
+[content source] (e.g. glslTOP or Noise TOP)
+  ↓
+hsv_desat (HSV Adjust TOP) — satmult 0.15, valuemult 0.80
+  ↓
+feedback1 (Feedback TOP) — targetop = null_out
+  ↓
+xform_tunnel (Transform TOP) — sx/sy 0.978, rotate 0.3°, bgcolor black
+  ↓
+lvc (Level TOP) — opacity (Post) 0.93, pixel format rgba16float
+  ↓
+flip1 (Flip TOP) — flipx on
+  ↓
+lvc_flip (Level TOP) — opacity 0.875 (the 87.5% mirror weight)
+  ↓
+comp_mirror (Composite TOP, Over) ← lvc output (Input 1) + lvc_flip (Input 2)
+  ↓
+disp_glitch (Displace TOP) ← noise_glitch (Noise TOP, displaceweight driven by transient)
+  ↓
+null_out (Null TOP)   ← feedback1 targetop points here
+``` (flipping the composited output) → the seam lands at center and is perfectly straight — worse than full symmetry. The flip must happen before the composite to bury the seam inside the overlap.
 - `Displace TOP` always on (displaceweight constant 0.05) → glitch becomes ambient texture and stops reading as a peak trigger. Displaceweight must come from `transient` so it fires sharply on note attacks and is nearly zero at breakdown.
 - Any warm color in content source → Act 3 rule violation. If content source includes warm tones (e.g. from a Noise TOP with default HSV), add a second HSV Adjust TOP after desat targeting orange (hue 20–40°, satmult 0.0) before the feedback entry point. The feedback loop will amplify any warm tones that make it past desat.
 - `sx`/`sy` = 1.0 exactly → no inward motion, feedback accumulates in place and immediately whites out.

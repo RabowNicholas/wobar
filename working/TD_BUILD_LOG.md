@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Build Log
 version: 1.0
-last_updated: 2026-04-30
+last_updated: 2026-05-01
 status: live
 scope: Session-by-session log of AI-assisted TD builds. Used to identify recurring corrections and promote them to rules in WOBAR_TD_AGENT_RULES.md.
 dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
@@ -60,10 +60,336 @@ Corrections that appear 2+ times get promoted to WOBAR_TD_AGENT_RULES.md.
 | `pow(negative_float, 2.5)` in expressions returns COMPLEX → TypeError. Audio channels can have tiny negative noise (~1e-22). Always wrap in `max(0.0, ...)` before `pow()` | 1 | No |
 | Velocity-based "anti-collapse" thermostats fail when bodies cluster while still spinning fast inside the cluster — use SPREAD-based (cluster bounding radius) instead | 1 | No |
 | Fibonacci-sphere seed positions place bodies at ±Y poles where `cross(pos, Y_axis) = 0` → those bodies start with zero tangential velocity and drag the system into collapse. Use a body-varying reference axis | 1 | No |
+| Audio analysis CHOP `energy` channel returns tiny negative values (~e-22) at silence — `energy ** non_integer_exp` raises 'float() argument must be a string or a real number' (returns complex). ALWAYS wrap as `max(0.0, energy) ** exp` in audio-driven expressions | **2** | **✅ PROMOTED** |
+| `geometryCOMP.par.instancesx/y/z` accept BARE attribute names ONLY (`'ScaleRand'`) — NOT expressions (`'LenVel*0.6'`). For composite math, write the result to a new attribute via `mathmixPOP` (comb0oper='mult', comb0scopea/b, comb0result='OutAttr') and read OutAttr as the bare instance scale | 1 | No |
+| POPX SA `Pointsupdatepop` feedback loop: custom attributes written upstream of SA (e.g. `randomPOP outputattrscope='ColorU'` before sa1) are STRIPPED at SA's output. Only solver-managed attrs (P, PartVel, N, Color, LenVel) pass through. Write per-particle attrs DOWNSTREAM of SA, before geometryCOMP.instanceop chain | 1 | No |
+| `nullPOP.points('Color')` returns a list of TUPLES per point (4-comp Color = list of 4-tuples). `nullPOP.points('LenVel')` returns list of FLOATS. Don't index as `arr[i*4+k]` for color — that yields a tuple. Iterate as `pt = arr[i]; pt[component]` | 1 | No |
+| `renderTOP.par.geometry` is a glob PATTERN, not a SOP/COMP path. `'geo_attractor'` matches that COMP only. `'geo*'` matches all geo-prefixed. `'* ^geo_aura'` includes all except geo_aura. Setting full path (`/project1/geo_attractor`) silently fails to default-include-everything | 1 | No |
+| Aizawa (and other chaotic) attractor's instantaneous mass-center is NOT temporally stationary — particle distribution cycles around the manifold over 30-60s. Hardcoded `cam.lookat = static_null` drifts off-center over time. Solution: `executeDAT.onFrameStart` reads `null_pop_out.points('P')`, computes mean × geo.scale, EMA-lerps lookat target tx/ty/tz at alpha=0.04 (~0.4s lag time-constant — feels cinematic, not jitter) | 1 | No |
+| `compositeTOP operand='over'` with input0 + input1: input1 is the TOP layer (composited OVER input0). For form-on-bg with form's render bgcolor=(0,0,0,0), simpler mental model: use `operand='add'` instead — non-form pixels (RGB=0) add nothing to bg, form pixels (RGB>0) light up bg | 1 | No |
+| TD `non-realtime mode` (export mode) renders every frame without skipping — good for video export but causes audio playback clicks because `audiodevout` can't keep pace with cooked-frame rate. Switch back to realtime for live audio reactivity tuning | 1 | No |
+| **TD `geometryCOMP` instancing rejects POPX-derived POPs that carry rich attribute sets** (PartVel, PartId, PartForce, PrevP, Density, etc.). Error: "Manual number of instances not supported when using a POP with point co[lor]" — even after stripping Color via `attributePOP.par.deletepoint='Color'`. Workaround: instance from native particlePOP (clean attrs) OR from POPX modules with simple POP outputs (SA works because P/PartVel/N/LenVel only) | **3** | **✅ PROMOTED** |
+| **`oplength` instance count mode reads `1` from POPX module nullPOP outputs** even when `numPoints()` returns thousands. TD geo COMP can't introspect POPX-derived POPs for instance count. Workaround: `instancecountmode='manual'` + `numinstances.expr = "op('/path/to/null').numPoints()"`. Native particlePOPs hit this same bug — manual mode required for both | **2** | **✅ PROMOTED** |
+| **`scriptTOP` with `CookLevel.ALWAYS` doing per-frame numpy operations on stream inputs crashes TD repeatedly** (locked up MCP server twice in one session). Even `CookLevel.ON_CHANGE` is dangerous if the input changes every frame (like a particle stream). Avoid scriptTOP for high-frequency numpy ops on streaming POP/CHOP data | **2** | **✅ PROMOTED** |
+| POPX `Particle` (Fluids-PBF) with `Enablebboxcollision=True` + `Usecustombounds=True` does NOT actually contain particles at default `Substeps=1`. Particles tunnel through bbox at gravity scale, falling to y=-167 within seconds. May need higher Substeps + Iterations OR alternate constraint mechanism (collisontop SDF) | 1 | No |
+| POPX `physarum.Constraintvolume` is a **TOP**, not a SOP/POP. Bright pixels = allowed growth, dark = blocked. Wiring a sphereSOP causes GLSL compile errors in physarum's internal `3d/distance` shader. For 3D simulation true sphere-shell constraint requires a 3D texture (3D SDF); for 2D simulation a circle TOP works directly | 1 | No |
+| POPX `DLA` requires a **seed POP wired to input[0]** for aggregation to start. Without seed, walkers wander but never aggregate (output[0] still emits 5000+ random walkers). With seed, output[0] = aggregated tree, output[1] = lines (parent-child), output[2] = random walkers | 1 | No |
+| `circleSOP` parameter is `divs`, NOT `divisions`. Tripped at every assumed name | 1 | No |
+| `sweepSOP` output through `geometryCOMP` → `renderTOP` produces nothing visible despite render flags set on the inSOP — even when sweep has 12-24k points and constantMAT is assigned. Mechanism unclear; likely related to the same POP-attribute incompatibility that blocks instancing | 1 | No |
+| **POPX attribute screening — the de-risk method for any new POPX module.** Place a copy from `/POPX_1_3_0/custom_operators/<name>`, wire minimum inputs, Init→Start→Play, then `print([a.name for a in op('<mod>/POPX_out1').pointAttributes])`. **Safe (clean attrs):** SA, magnetize. **Unsafe (rich attrs):** DLA (`iNumChildren, Parent, Seed, Rand`), Particle (`PartId, PartForce, PrevP, Density, ...`17 attrs), DLG (line topology, `Parent, Seed`). Unsafe modules will trip `geometryCOMP` instancing wall ("Manual number of instances not supported with point co[lor]") — pivot to TOP-output modules (Flow, physarum, Voxelize) or decoupled architecture (POPX provides force field, native particlePOP holds clean attrs) | **2** | **✅ PROMOTED** |
+| **wireframeSOP output cannot be instanced via geometryCOMP directly** — only 1 instance renders even when numinstances reads correctly (e.g. 80). The wireframe topology (line-derived extruded thin tubes) breaks instancing. **Fix:** insert a `convertSOP` with `totype='poly'` AFTER the wireframeSOP, render the convertSOP output instead. The polygonization normalizes topology so geo COMP can multiply instances. Pattern: `boxSOP (render=False) → wireframeSOP (radius=X) → convertSOP totype='poly' (render=True) → instanced` | 1 | No |
+| **TD has no native chromatic-aberration TOP.** `lensdistortTOP` is geometric distortion only (k1/k2/k3 coefficients, no RGB split). Manual CA chain: 3 `levelTOP`s to isolate channels (red: `highg=highb=0`, green: `highr=highb=0`, blue: `highr=highg=0`), 2 `transformTOP`s to offset R and B opposite directions (G stays center), 2 `compositeTOP add` blends to recompose. ~7 ops total | 1 | No |
+| **feedbackTOP requires BOTH `par.top` set AND target wired to `input[0]`** per TD's SHOT note. The "cook dependency loop detected" warning that appears is visible in the network but does NOT actually block cooking — feedback works at 60fps. Black-seed-only on input[0] without target wire produces "Not enough sources" error. Both required | 1 | No |
+| **hsvadjustTOP hue rotation has no effect on pure white (or pure black).** `hueoffset` only shifts saturated colors. Pure white (R=G=B=1, saturation=0) stays white regardless of hueoffset value. To use hue rotation on a "white" wireframe visual: tint the constant material slightly first (e.g. electric cyan 0.2/0.7/1.0), then hue rotation cycles through spectrum | 1 | No |
+| **Sawtooth scale pulses have visible snap-back.** Expression `baseline + (t*rate) % range` gives continuous outward growth but the boundary snap (max → min) is jarringly visible to viewers. Use smooth sin instead: `baseline + amp * sin(t * 2π / period)` for hypnotic breathing. Trade-off: alternates "coming toward / going away" instead of continuous outward, but no discontinuity | 1 | No |
+| **Inside-POV camera setup for immersive POV:** `Camradius=0.1, Camfov=80, Camelev=0` puts camera at center of particle cloud (≤0.5 unit cluster) with wide-angle perspective; particles surround camera, geometry passes through frame as scale-pulse animation breathes. Default ctrl_master `Camradius.min` clamp at 0.5 blocks this — must lower to 0 to allow inside-POV configs | 1 | No |
+| **compositeTOP `over` input order is empirically opaque.** Entry 69 says input1 = top layer with swaporder=False, but this session observed input 0 effectively on top with swaporder=False (black mask circle on input 1 was BENEATH the iris on input 0 — bright crescents leaking through for hours of debugging until swaporder=True flipped it). Verdict: verify empirically each use; if mask isn't covering, toggle swaporder | 1 | No |
+| **circleTOP `centerx/y` with `centerunit=fraction` is an OFFSET from the justify-anchor, NOT an absolute position.** With default `justifyh/v=center`, `centerx=0, centery=0` puts the circle at frame center. Setting `0.5, 0.5` shifts the circle by half-resolution in each axis (lands in upper-right corner). Same applies to `pixels` mode — center coords are offsets from the justify anchor. Default is 0,0 — leave alone unless deliberately offsetting | 1 | No |
+| **circleTOP `radiusunit=fraction` is ANISOTROPIC on non-square frames.** `radiusx` is fraction of width, `radiusy` is fraction of height. On 720×1280, the same numeric value yields a tall oval (e.g. 0.3 → 216px×384px). Use `fractionaspect` (default) or `pixels` for a true circle. `fraction` is for when you want axis-independent scaling | 1 | No |
+| **circleTOP `premultrgbbyalpha=True` (default) can make small or partially transparent circles invisible in `over` composites.** Tested: 200px white circle dead-center + premult=True + composite over iris = visible. 22px-50px white circles or alpha < 1 + premult=True = invisible despite standalone render showing the circle correctly. Setting `premultrgbbyalpha=False` makes them composite as expected. Worth defaulting to False for circles used as composite layers | 1 | No |
+| **TD param expressions use the `math` module — bare `sin()`/`cos()`/`pi` are NOT in the expression namespace.** Common pattern for time-driven oscillation: `<base> + <amp> * math.sin(absTime.seconds * 2 * math.pi * <freq_hz>)`. Bare `sin()` raises `NameError: name 'sin' is not defined` | 1 | No |
+| **`noiseTOP.par.type='randomgpu'` outputs centered at 0.5 (mid-gray), not 0.** Causes the noise to be the IDENTITY for `overlay` blend (overlay against mid-gray = no change). To use randomgpu as TV-static-style ADD overlay: set `par.amp = 2*range`, `par.offset = -range` to recenter to ±range, then composite with `add` blend. Or switch to `simplex2d` (centered at 0 by default) for overlay-blend use cases. | 1 | No |
+| **`mathCHOP.par.chanop` (combine channels within an input) vs `par.chopop` (combine multiple inputs).** Confusingly named. `chopop=average` averages multiple inputs together but keeps original channel count. `chanop=average` averages channels within a single input, collapsing N→1. For stereo→mono on a single input, use `chanop=average` and `chopop=off`. | 1 | No |
+| **`levelTOP.par.opacity` only modulates ALPHA — does NOT modulate RGB.** When fading out under `max` blend (which only looks at RGB), opacity has no visible effect. To fade RGB in/out for max-blend chains, use `par.outhigh` (output range max) — set to a value 0-1 to scale RGB output by that amount. Pattern for energy-scaled fade: `outhigh.expr = 'op("ctrl").par.SomeAmp * op("ctrl").par.Energy'`. | 1 | No |
+| **`feedbackTOP` cook-dependency-loop warning is NOT cosmetic — it CAN block cooking.** Symptoms: feedback chain ops report 128×128 resolution despite explicit custom resolution; warnings persist. Fix: wire `input[0]` to FRESH CONTENT upstream of the loop (e.g. the lookup feeding the comp), use `par.top = comp` for the loop reference. Then pulse `feedbackTOP.par.resetpulse` once to apply the configured resolution. The earlier rule (entry 82) saying "wire target to input[0]" creates the circular reference that triggers this — the corrected pattern is upstream-content as input[0], target as par.top. | 1 | No |
+| **For `transformTOP` to fit a portrait source (720×1280) into a square output (720×720) WITHOUT squishing, use a TWO-STAGE pre-crop:** stage 1 — transformTOP with output 720×720, `sx=1, sy=source_aspect (1.778 for 9:16)` to render full source height extending beyond canvas (auto-cropped at top/bottom by `extend=zero`). Stage 2 — second transformTOP scales/positions the now-square content into final layout. Single-stage with custom sx/sy in the position transform doesn't preserve aspect because content extending beyond cell bounds bleeds into adjacent cells. | 1 | No |
+| **`selectCHOP` with `par.channames` selects channels by NAME PATTERN (not index).** For first channel of unknown stereo audio, use `par.channames='chan1'` (the conventional channel name from audiofileinCHOP). Patterns like `'*[0]'` (index syntax) don't work. | 1 | No |
+| **mathCHOP `chopop` (inter-CHOP per-channel math) vs `chanop` (intra-CHOP collapse) — easy to confuse, breaks SILENTLY.** When you wire two same-shape CHOPs into a mathCHOP and want per-channel multiply (e.g. `iris × scale_per_band`), set `chopop='mul'`. Setting `chanop='mul'` instead does intra-CHOP combine and produces wrong/empty output with no visible error — the chain just outputs scale constants directly. Already in tracker as entry 92, but bumping count. | **2** | **✅ PROMOTED** |
+| **Cross-COMP CHOP wiring fails silently — the `outputConnectors[0].connect()` call from inside a COMP to outside it APPEARS to succeed but the connection list reads empty afterward.** Workaround: use `selectCHOP` with absolute path (`par.chop='/project1/comp/inner_chop'`). Already entry 55; bumping count. | **2** | **✅ PROMOTED** |
+| **`null_audio` (analysis-chain output, 60Hz timeslice rate) is NOT 44100Hz, blocks moviefileoutTOP audio export with "Audio CHOP sample rate must be 44100" error.** Workaround: wire `record_out.par.audiochop` to `audio_master/audio_in` (raw 44100Hz stereo) instead of any analysis-chain CHOP. Already entry 32; bumping count. | **3** | **✅ PROMOTED** |
+| **TD `td_execute_python` exec environment scoping is fragile — list comprehensions, generator expressions, AND nested function definitions all fail to capture outer-scope names with `NameError: name 'X' is not defined`.** Already entry 45 for list comprehensions; same failure mode for nested defs (`def fn(): use_outer_var`). Workaround: explicit for-loops, capture references locally inside the function body. | **2** | **✅ PROMOTED** |
+| **`bloomTOP` is the canonical HDR-feel post — `output='inputplusbloom'` adds the bloom result back onto the source.** Settings for "luminous painterly" register: `bloomthreshold=0.4-0.55` (lower = more pixels glow), `bloomintensity=0.7-1.1`, `maxbloomradius=0.15-0.25`, `bloomscurve=0.7-0.85` (punchier shape), `pregamma=1.0-1.1` (boost mids before bloom). Combine with crushed-blacks levelTOP (`inlow=0.05`, `inhigh=0.92`, `gamma1=0.92`, `contrast=1.18`) for the "burning embers" cusp 4→5 look. | 1 | No |
+| **Phase-animated palette lookup pattern for cyclic color shifts:** `palette_keys` (tableDAT, horizontal stops) → `palette_ramp` (rampTOP type='horizontal', 256×1) → `xform_palette_phase` (transformTOP, `tx.expr=phase % 1.0`, `extend='repeat'`) → `lookup_color` (lookupTOP). Phase comes from `chop_color_speed` (constantCHOP, value = audio-driven cycle rate) → `chop_color_phase` (speedCHOP, integrates over time). The phase shift "scrolls" the palette so iris luminance maps to a moving point in the cycle. | 1 | No |
+| **`speedCHOP` integrates a dynamic input value over time** — essential for audio-reactive rotation/phase that ACCUMULATES smoothly. Without it, multiplying `absTime.seconds × current_speed` re-multiplies past time by the new speed (jumping). Pattern: `constantCHOP` (with `const0value.expr` = audio-driven speed) → `speedCHOP` → output is cumulative angle/phase. Bind `xform.par.rotate.expr = "op('integrator')['speed']"` for smooth accumulating rotation; negate the binding (`-...`) to flip direction without changing the integrator. | 1 | No |
+| **`feedbackTOP` ghost-trails via OVER blend (vs max blend "light writing"):** for proper translucent past-frame overlap, use `compositeTOP operand='over' swaporder=True` AND scale BOTH `outhigh` (RGB) AND `opacity` (alpha) on the feedback decay levelTOP via the same expression. With `over` blend the past frame fades as a translucent layer over current. With max blend (entry 93's pattern) it accumulates as light-writing trails. Different effect, different feel — pick by intent. | 1 | No |
+| **TableDAT cell backtick syntax does NOT auto-evaluate** — writing `\`op('ctrl').par.X\`` into a cell stores the string literally, breaks downstream consumers (e.g. rampTOP keys read invalid position). For dynamic cell values driven by params, create a `parameterexecuteDAT` (`par.op` = ctrl COMP, `par.pars` = space-separated param names, `par.valuechange=True`) with an `onValueChange` callback that writes literal float values into the cells when params change. | 1 | No |
+| **`circleTOP` background transparency param is `bgalpha`, NOT `bgcolora`** (despite the per-channel `bgcolorr/g/b` naming pattern that suggests it). Setting `bgcolora` raises `tdAttributeError`. Use `bgalpha=0` for transparent surround on overlay-style circles. | 1 | No |
+| **Per-channel CHOP normalization architecture — when audio analysis bands have wildly different dynamic ranges (sub_bass overshoots 1.0, mid/high are squished to 0-0.3), normalize before mapping to visuals.** Chain: `chop_audio_in` (selectCHOP from analysis output) → `chop_norm_sub` (mathCHOP `chopop='sub'`, second input = `chop_norm_floors` constantCHOP with per-channel DC offsets) → `chop_norm_mul` (mathCHOP `chopop='mul'`, second input = `chop_norm_scales` constantCHOP with per-channel scale factors = 1/p99 from recordCHOP statistical analysis) → `limitCHOP` (clamp 0-1) → `chop_norm_out`. Now every channel uses the full 0-1 range. | 1 | No |
+| **Designer-friendly TD keyframe system without animationCOMP — table-driven approach:** `tableDAT keys` with rows `time(s) | value | curve` (curve string: `linear`/`smooth`/`ease-in`/`ease-out`). `textDAT module` with `get(t)` function that reads the table, sorts by time, finds bracketing keyframes, applies the named curve to interpolation alpha. Param expression: `mod('module_name').get(song_time) + breath_modulation`. Curve fns: `linear` = a, `smooth` = a*a*(3-2*a) (smoothstep), `ease-in` = a*a, `ease-out` = 1-(1-a)*(1-a). | 1 | No |
+| **Containers don't have a `.find()` method** — `containerCOMP.find(name=pattern)` raises `tdAttributeError`. Use explicit iteration: `for c in container.children: if predicate(c): ...`. | 1 | No |
+| **`audiofileinCHOP.par.indexunit` defaults to `'seconds'`** — `par.index.eval()` directly returns current playback time in seconds. Don't divide by `par.rate.eval()` — that gives nonsensical values. Use `op('audio_in').par.index.eval()` directly as song-time reference for time-driven keyframe interpolation. | 1 | No |
+| **TD's `non-realtime mode` engages automatically when recording starts** — TD renders every frame without skipping for clean output. Audio playback during this mode produces clicks/glitches because audio devices can't keep pace with cooked-frame rate. Already entry 70; bumping count. The mode auto-flips back when recording ends. | **2** | **✅ PROMOTED** |
+| **rampTOP `fitaspect='fitvert'` makes radial/circular ramps truly circular on portrait canvases** — by default (`fitaspect='fithorz'`), the ramp's radius=1 maps to half-width on a portrait canvas, making the "circle" elliptical-shaped vs the canvas. Use `fitvert` to anchor the radius reference to the longer dimension for true circular vignettes. | 1 | No |
 
 ---
 
 ## Build Sessions
+
+---
+
+### 2026-05-06 — iris_2 single-eye visualizer for Eyes Cut Deeper, audio-reactive composition done, keyframe choreo + render pending
+
+**What was built:**
+Full single-eye visualizer at `/project1` of `touchdesigner/networks/iris_2/iris.toe` for Subtronics "Eyes Cut Deeper" remix (cusp 4→5 register). Started from a Midjourney-generated photoreal iris source (1024×1024 square) and built a complete audio-reactive psychedelic eye that outputs at 720×1280 portrait. Composition migrated through 4 distinct iterations during the session: vertical mirror with hardcut (rejected), asymmetric shift mirror (rejected — "too many fragmentation signals competing"), independent counter-rotating halves with tilted cut (rejected), single rotating eye with circular vignette + black pupil overlay anchor (kept as final).
+
+**Final architecture (left-to-right network spine):**
+```
+[1024×1024 iris source]
+  → xform_iris_center (Sourcex/Sourcey/Sourcezoom — re-centers natural pupil to canvas center for clean rotation pivot)
+  → disp_breath (audio-reactive noise displacement) ← noise_breath (simplex3d, slow time evolution)
+  → xform_top_rot (rotation around center, scale 1.42x for full-canvas coverage at any angle)
+  → lookup_color (palette mapping) ← xform_palette_phase ← chop_color_phase (speedCHOP integrator)
+  → xform_aspect (1024² → 720×1280 portrait via outputaspect='resolution' + sx=1.78 for circular pupil preservation)
+  → hsv_mute (saturationmult=0.78 — WOBAR muted register)
+  → comp_feedback (operand='over', swaporder=True for translucent ghost trails) ← feedback_decay (RGB+alpha decay) ← feedback_iris (par.top references null)
+  → comp_vignette (multiply) ← vignette_level ← vignette_ramp (circular, fitaspect='fitvert' for true circle on portrait) ← vignette_keys (Vigsize/Vigfalloff updated via parameterexecuteDAT)
+  → comp_pupil_overlay (over, swaporder=True) ← disp_pupil_edge ← circle_pupil + noise_pupil_edge
+  → level_post (crush blacks inlow=0.06, roll highlights inhigh=0.95, contrast=1.18, gamma=0.92 cinematic S-curve)
+  → bloom_post (HDR — output='inputplusbloom', threshold=0.4, intensity=1.1, maxbloomradius=0.22)
+  → null_mirror_out
+  → record_out (moviefileoutTOP, h264 yuv420 mp4, audio source = audio_master/audio_in @ 44100Hz)
+```
+
+**Audio reactivity remap (after analyzing the recorded 275s × 8-channel signal):**
+After recording the song through `audio_master` and computing min/p10/p25/p50/p75/p90/p95/p99/max/mean per channel, classified each channel by dynamics quality. Strong: bass (0-0.81 well-distributed), transient (0-0.79 clean attack), growl (0-1.50 always active). Weak: mid/high (squished, noisy when normalized), sub_pressure (mostly silent). Then built per-channel normalization chain (`chop_norm_floors` + `chop_norm_scales` + `chop_norm_sub` + `chop_norm_mul` + `chop_norm_limit` + `chop_norm_out`) so every channel uses 0-1 fully based on observed p99.
+
+Final mappings:
+- **Rotation** ← `Rotspeed + Rotgain × bass^Rotcurve + Rotburst × transient^Rotcurve` (sustained body spin + per-kick snap; clockwise via `xform_top_rot.par.rotate.expr = "-op('chop_rot_integrator')['speed']"`)
+- **Color cycle** ← `Colorbase + Colorgain × energy^Colorcurve` (pivoted to energy after growl-driven failed — growl never goes quiet enough for the "slow on break, fast on drop" dynamic; energy's 5-second slow-release lag matches cusp 4→5's emotional decay)
+- **Pupil radius** ← `keyframed_radius(song_time) + Pupbreath × sin(t × Breathspeed × 2π)` (audio-reactive removed, pupil is now KEYFRAMED via `anim_pupil_keys` tableDAT + `pupil_kfm` module DAT with linear/smooth/ease-in/ease-out curves)
+- **Pupil edge displacement** ← `Pupedgegain × energy^Pupedgecurve` (organic edge wobble during drops only; clean circle in breaks via `Pupedgecurve=3.0` cubic gating)
+- **Breath amplitude** ← `Breathamp + Breathgain × bass^Breathcurve` (iris fibers wave harder during drops)
+
+**Key creative decisions:**
+- **Pin-point pupil at drops, not dilation.** Reveals MORE iris during peak chaos; pre-drop dilation amplifies the snap. Counter-intuitive vs typical EDM "dilate on drop" but lets the drop's psychedelic chaos read fully.
+- **Single eye, not mirror split.** Mirror experiments stacked too many fragmentation signals (cut + asymmetric shift + counter-rotation = "broken" not "intentionally fractured"). Single rotating eye + black pupil overlay = unambiguous gaze + gravity center.
+- **Drawn black pupil overlay AT canvas center** is the gravity anchor that makes the eye read as eye regardless of palette phase. Without it, lookup-mapped colors at certain phases turn pupil bright cream and the "eye" reading collapses.
+- **Source rectangle edges are visible during rotation** intentionally — adds architectural motion sense ("a card being spun," not just texture shifting). Vignette pulled back (`Vigsize=0.65`, `Vigfalloff=0.95`) to expose this.
+- **Sine-wave pupil breath stays through audio-reactive transitions.** Even when pupil is keyframed, the `Pupbreath × sin(t)` term adds always-alive heartbeat.
+
+**Brand check (cusp 4→5 "heavy and beautiful, hard-won softness"):** 8/10. Strong — black pupil = HEAVY, HDR bloom = BEAUTIFUL, pin-point at drops = "open to receive impact," 5-second energy release = residual motion winding down. Drifting — color cycle weights all WOBAR colors equally (could re-weight palette stops to dwell longer in heavy register: deep purple, copper, oxidized teal, wine magenta), peak rotation borderline Act 4 manic, pupil keyframes still placeholder timestamps.
+
+**What got built first-pass right (no correction needed):**
+- `xform_iris_center` Sourcex/Sourcey calibration — matched offsets via on-screen pupil drift visualization, locked first try
+- HDR bloom — `output='inputplusbloom'` with reasonable defaults nailed the luminous quality immediately
+- WOBAR palette ramp — sourced directly from `WOBAR_TD_REFERENCE.md §4`, no iteration needed
+- Per-channel CHOP normalization architecture — built once, every channel responded correctly first try (after fixing the `chopop` vs `chanop` bug)
+- Pupil keyframe table-driven approach — `tableDAT` + `textDAT` module with curve interpolation worked first try
+
+**What needed correction (NEW gotchas to log — listed in correction tracker above):**
+1. `mathCHOP.chopop` vs `chanop` — silent failure when normalizing audio (entry 92 bumped to 2 → promoted)
+2. Cross-COMP CHOP wiring fails silently — used selectCHOP bridge as workaround (entry 55 bumped to 2 → promoted)
+3. `null_audio` (60Hz analysis) blocked moviefileoutTOP "audio sample rate must be 44100" — switched to `audio_master/audio_in` raw 44100 (entry 32 bumped to 3 → already promoted, count++)
+4. Nested function defs in `td_execute_python` fail same as list comps — outer-scope names raise `NameError` (entry 45 bumped to 2 → promoted, broader scope now: list comps + gen exprs + nested defs)
+5. `bloomTOP` HDR parameters — first time documented as a canonical pattern
+6. Phase-animated palette lookup — first time documented as a canonical pattern
+7. `speedCHOP` integrator for dynamic rotation/phase — first time documented
+8. `feedbackTOP` OVER-blend ghosting (vs max-blend trails) — first time documented as alternative to entry 93
+9. TableDAT cell backticks DON'T auto-evaluate — needed parameterexecuteDAT to update cells dynamically (NEW)
+10. `circleTOP.par.bgalpha` (not `bgcolora`) for surround transparency — NEW
+11. Per-channel CHOP normalization architecture — first time documented as a reusable pattern
+12. Table-driven keyframe system without animationCOMP — first time documented as a reusable pattern
+13. `containerCOMP.find()` doesn't exist — minor
+14. `audiofileinCHOP.par.indexunit='seconds'` default — `par.index.eval()` returns seconds directly, don't divide by rate
+15. TD non-realtime export mode + audio playback clicks — entry 70 bumped to 2 → promoted
+16. `rampTOP.par.fitaspect='fitvert'` for true-circular vignette on portrait — NEW
+
+**New patterns discovered (worth documenting in `WOBAR_TD_REFERENCE.md` Visual Primitives Vocabulary):**
+- **HDR cinematic eye chain:** crushed-blacks levelTOP → bloomTOP `inputplusbloom`. The signature "burning embers" / luminous-iris-in-black-void look for cusp 4→5.
+- **Phase-animated palette cycle:** palette_ramp → xform_palette_phase (tx = integrator % 1.0, extend='repeat') → lookupTOP. Audio-reactive cyclic color shifts through any fixed palette table.
+- **Per-channel CHOP normalization layer:** the chain that turns raw analysis CHOPs into 0-1-clamped, p99-scaled, well-distributed visual drivers. Reusable for any audio-reactive build.
+- **Table-driven keyframe choreography:** `tableDAT(time, value, curve)` + `textDAT(get_value)` + module call from param expressions. Designer-friendly for music sync without animationCOMP overhead.
+- **Single-eye-with-pupil-overlay composition:** the "drawn pupil at canvas center as gravity anchor" pattern for any eye/iris-based visual. Locks the eye reading regardless of color cycling, rotation, or palette transitions.
+- **Pupil edge displacement gated by curve:** `displaceTOP` with energy^N curve makes organic perturbation only during drops, clean shape during breaks. Reusable for any "alive at peaks, calm at quiet" effect.
+
+**State at session close:**
+- Network ready to record. `record_out` configured (h264 yuv420 mp4, audio = audio_master/audio_in @ 44100Hz).
+- Pupil keyframes are PLACEHOLDER — Nick needs to provide actual song drop timestamps and edit the `anim_pupil_keys` table.
+- Color cycle pivot from growl→energy means breaks-vs-drops dynamic range is now ~20× (1 cycle/14s break, 1 cycle/0.5s peak).
+- `ctrl_master` final state (8 pages, 30 params): Source / Rotation / Color / Pupil / Breath / Vignette / Feedback / (audio bound directly).
+- 38 ops total in `/project1`, organized left-to-right in functional bands.
+- Brand alignment: 8/10 for cusp 4→5. To get to 10/10: re-weight palette, cap rotation peak lower, real song-time keyframes.
+
+---
+
+**What was built:**
+4-cell macro-eye grid composite for the Subtronics "Eyes Cut Deeper" remix (Act 4/5 cusp register). Network: `touchdesigner/networks/eyes_cut_deeper/eyes_cut_deeper.8.toe`. Two parallel outputs from one effects pipeline: `null_grid_out` (720×1280 portrait music video) and `null_album_out` (720×720 album cover).
+
+**Per-cell architecture:**
+- TL — 4-fold radial mandala kaleidoscope (bilateral × rotations 0/90/180/270 max-blended). Driven by broadband `energy`. Mandala folds explode at drops (level `outhigh` scaled by Trkaleidoamp × Energy on each mirror layer — RGB fade for max-blend, not just alpha). Wobble displacement INVERSE to energy (perfect mirror at drops, moves at breaks).
+- TR — Static-amplitude chromatic aberration (R-shift left, B-shift right, fixed offset) + animated TV static (`randomgpu` type, recentered ±range via offset, ADD blend). Driven by `transient` — punches on drops only.
+- BL — Zoom-tunnel feedback (recursive eye-into-eye). Bronze/amber palette via dedicated `bl_keys` lookup table. Driven by `sub_pressure`.
+- BR — Calm/oily ripple displacement. Sage/moss/patina palette via `br_keys` lookup. Driven by `growl`.
+
+**Audio pipeline:** Switched mid-session from a custom rebuilt 5-channel base_audio to canonical `base_audio_v001.tox`. Now have 8 channels (sub_bass, bass, mid, high, energy, sub_pressure, growl, transient) with proper band_max normalization. Per-band gains exposed on `ctrl_master.Audio` for cell-specific tuning.
+
+**Final polish:** simplex2d film grain (24 fps scintillation, amp 0.05, mono) overlaid via `overlay` blend + radial vignette (multiply blend, soft 0.45 fractionaspect). Applied to both outputs.
+
+**Composition adjustments:**
+- Black inter-cell gaps (sx=0.485, sy=0.4925 — sy slightly larger to balance vertical gap on 9:16 frame against horizontal gap)
+- Album branch needed two-stage transforms (square aspect-fill pre-crop, then position) to avoid squishing portrait source into square cells
+
+**What worked first pass:**
+- Per-band reactivity transformed the grid feel from "single dial pulsing 4 cells in unison" to "4 facets breathing on different beats" — biggest perceptual win of the session
+- Canonical base_audio swap was painless once expressions remapped (`lag_sub` → `sub_bass`, etc.)
+- Final grain + vignette polish unifies the disparate cell palettes into one cinematic plane
+- 4-fold radial (rotations) reads more ceremonial than 4-fold rectangular (h+v flips) — eye-as-sigil
+- Mandala explosion at drops via `outhigh` (RGB scale) instead of `opacity` (alpha-only)
+- Album branch built parallel without disturbing music video pipeline
+
+**What needed correction:**
+- TV static initially tried with `simplex2d` (smooth blobs, not pixel grain). Switched to `randomgpu` for true per-pixel independence. Then `randomgpu`'s 0.5-centered output killed `overlay` blend — fixed by recentering with `par.offset = -amp/2`.
+- `mathCHOP.chanop=average` failed to collapse stereo→mono until set with `chopop=off`. Switched to `selectCHOP.par.channames='chan1'` for cleaner mono extraction.
+- Mandala fold-out used `levelTOP.par.opacity` first — invisible at low energy because max-blend ignores alpha. Switched to `par.outhigh` (RGB scale) to actually fade out.
+- Feedback chain stuck at 128×128 due to cook-loop warning that I previously documented as "cosmetic." Was actually blocking cook. Fixed by wiring `feedbackTOP.input[0]` to upstream fresh content (not the loop closure), keeping `par.top` for the loop reference, and pulsing `resetpulse` to apply the proper resolution.
+- Album branch initial build squished portrait source into square cells. Fixed via two-stage transform: pre-crop to square via `sx=1, sy=1.778, output=720×720, extend=zero`, then position with second transform.
+- Sub_pressure on this song is anemic — eyes_cut_deeper is growl-driven (wobble bass), not sustained-sub. Required Blgain=50 to brute-force a response. May need to swap BL's source channel to `bass` for cleaner reactivity.
+
+**Brand alignment:**
+- Cells use distinct palettes: TL deep purple (canonical WOBAR), BL warm bronze/amber (oxidized organic), BR sage/moss (oxidized organic). Each cell is monochrome within its palette family.
+- TR's CA + static — Nick called this out as "not act-specific, nostalgic register" rather than the rave-bright rainbow register the brand docs lean away from. Opened brand-doc loop to update WOBAR_TD_AGENT_RULES.md Materials section to permit CA as nostalgic/analog primitive.
+- Overall composition reads as "4 portals of the eye / 4 facets of the mirror" — direct enactment of WOBAR's "bass as mirror" + multiplicity-of-self thematic.
+
+**Open work for next session:**
+1. Render full song to `rec_out` (h264 + mp3, 720×1280). Set Realtime OFF before recording.
+2. Album cover at 720×720 needs external upscale (Topaz Gigapixel / Photoshop Preserve Details) for industry-standard 3000×3000 final.
+3. Decide on BL audio source — stick with `sub_pressure` and tune gain, or swap to `bass` for stronger response on growl-heavy material.
+4. Brand-doc loops opened in WOBAR_ACTIVE.md (palette tier framework + CA register update).
+
+**Reflection:**
+Big working session. Substantial creative iteration with on-the-fly tuning. Audio pipeline now matches WOBAR canonical (no more bespoke 5-channel rebuild). Per-band reactivity is the biggest architectural win — gives the grid a layered polyrhythmic feel that single-Energy mapping couldn't achieve. The album branch is a good demonstration that the same effects pipeline can serve multiple deliverables (music video + cover) without duplication.
+
+---
+
+### 2026-05-04 — iris network — 13 moves, NOT shipped
+
+**What was built:**
+Iris network for the Subtronics "Eyes Cut Deeper" remix (Act 4/5 cusp, 95 BPM halftime). Started from the YouTube "TD Drop #05 Eyes" tutorial base (twisted-torus geometry creates radial-fiber stroma + the inner cylinder of the torus doubles as the tunnel when camera dives through the pupil — clever single-geo "iris becomes tunnel" mechanic). 13 moves on the stack at session close, manual `.toe` save by Nick at move 011. Network folder: `touchdesigner/networks/iris/`.
+
+**Composition arc (what landed):**
+- Recolor to monochrome purple via `ramp2_keys` rewrite (limbal → eggplant → mauve ruff → amber fleck → slate → bone-ash). Killed magenta cast. `noise2.mono=True`, `hsvadj1.saturationmult` 1.34→1.05.
+- Dominant scale (`transform2.scale` 1.3→2.2).
+- Light recenter (tx 0.77→0, tz 9.97→4.5, ry -4.44→0, dimmer 3.5→5.5) + cool-violet tint (cr 1→0.85, cg 1→0.78, cb 1).
+- Pupil baseline (`torus1.rady` 0.65→0.5 — opens hole, hints at inner-cylinder tunnel even at rest, kept by Nick as on-theme feature).
+- Halo pulse (10s cycle via expression on `ramp3.period`).
+- Black pupil mask (`circle_pupil` 175px) inserted as compositeTOP over `hsvadj1`.
+- Feedback boundary mask (`circle_iris_bound` × `comp_iris_bound` between comp4 and downstream) — kills the trail-overflow tail by clipping feedback to the iris circle for both forward path AND `feedback1.par.top` source.
+- `ctrl_master` baseCOMP created with `Puprad`, `Irisx`, `Irisy`, `Irisscale` exposed. First WOBAR network with custom-param dashboard built incrementally as needs arose.
+
+**Iris-over-video branch (NOT finished):**
+Parallel composite for replacing the natural iris in a 464×832 macro-eye blinking video with the WOBAR iris. `xform_iris_replace` + `mask_iris_video` + `comp_iris_masked` + `comp_video_replace` + `null_video_replace_out`. Position+scale tunable live via `ctrl_master.Replace` page.
+
+**What worked first pass:**
+- Twisted-torus + texture+UV chain for the iris stroma — tutorial's geometry is genuinely clever
+- Color recalibration via single DAT rewrite (`ramp2_keys`) — biggest leverage move of the session
+- Light tinting cool-violet to keep highlights in palette without losing modeling
+- Feedback boundary mask via multiplicative circle — clean fix for trail overflow
+- ctrl_master incremental param exposure pattern — built only what was needed at each step
+- The iris-over-video composite v1 (without blink masking) — alien-eye look landed strongly even without lid masking
+
+**What failed (reverted in-place, no move files written):**
+- **Warm halo color tint** — added a defined ring shape that competed with iris instead of complementing it. Lesson: post-render composite layers fight a busy geometric texture rather than enhance it.
+- **Catchlight in pupil** — premultrgbbyalpha gotcha hid it for a long time at small sizes; even after fix, position kept overlapping inner-cylinder glint.
+- **Wet PBR (low roughness)** — light dimmer at 5.5 (boosted earlier for larger geo) blew out any glossy surface to plastic-mirror look, not "wet eye." Real wet PBR needs light dimmer dropped to ~3 first. Multi-step rebalance, not a quick win.
+- **Limbal ring overlay** — barely visible because it merged with the natural alpha falloff at the iris edge.
+- **Backface culling on PBR (`cullface=backfaces`)** to remove inner-cylinder glints — didn't work because the twisted geometry has surfaces still front-facing despite curving around. Reverted to `userender`.
+- **Chromakey-based blink masking** — natural iris HSV (hue ~0.52, sat 0.42-0.74, val 0.19-0.39) overlaps with sclera (val 0.23-0.36, hue varies including 0.53) AND lid skin (hue 0.40, sat 0.52, val 0.09) in this footage. Color alone can't separate iris from "lid covering iris area." Tried widening hue, adjusting sat/val thresholds, toggling `invert`, switching to value-based threshold — none cleanly handled the blink case. Reverted. Recommended next path: manual keyframing of `Blinkalpha` ctrl_master param across 121 video frames, OR external rotoscope import.
+
+**What needed correction (gotchas — see tracker):**
+- compositeTOP `over` input order is empirically opaque — toggling swaporder needed when mask wasn't covering as expected (multiple hours of debugging until this was identified)
+- circleTOP center coords are OFFSETS from justify-anchor, not absolute positions
+- circleTOP `radiusunit=fraction` is anisotropic on non-square frames
+- circleTOP `premultrgbbyalpha=True` hides small/dim shapes in composites
+- TD expression namespace requires `math.sin()` not bare `sin()`
+
+**Open work for next session:**
+1. Decide on iris-over-video direction (manual keyframe blinks vs. abandon vs. external rotoscope)
+2. Build `base_audio` and wire single Energy → Drive binding to (camera tz, twist3 strength, Puprad, light dimmer) for the song-reactive layer
+3. Drop choreography (pupil dilation explosion) wiring after audio
+4. Recorder for export
+
+**Reflection (Nick's framing — soft mark):**
+Lots of color/composition iteration that landed strongly as a standalone iris. The video composite branch is the unfinished piece. Multiple "biological territory" experiments (catchlight, limbal ring, wet PBR, warm halo) all reverted — the iris's geometric character is busy enough that overlay-style additions tend to fight rather than complement. The naturally stylized monochrome-purple iris with dilated black pupil and contained feedback trails is the strong artifact from this session.
+
+---
+
+### 2026-05-01 (evening) — magnet_chamber v001 — second POPX-on-WOBAR primitive shipped
+
+**What was built:**
+After the morning's attractor_chamber close-out and afternoon's failed POPX exploration (DLA, physarum-on-sphere, Particle SSFR, DLG — all hit the geo COMP plumbing wall), evening session pivoted to applying the **attribute-screening method** to find a NEW clean POPX module. `magnetize` passed the screen (output: `P, Scale, N, Orient, Transform, Up, FullTransform, PointScale, Pivot` — all transform-related, no `PartId/PartForce/Density/Parent` baggage). Built it out following the attractor_chamber template: POPX magnetize core → manual numinstances → sphere instancing → HDR env + palette-cycling lights → bloom → 4-fold mirror compositing → recorder. Single audio binding: `mag.Strength = floor + ceil*max(0, energy)^exp`. Move file: `touchdesigner/networks/magnet_chamber/moves/move_001.json`. CHANGE_LOG.md created. WOBAR_MOVE_SYSTEM.md updated.
+
+**What worked first pass:**
+- Magnetize attribute screening (the methodological win — confirmed it before committing time to render pipeline)
+- Native pointgeneratorPOP for both particle source and magnets POP — clean attrs throughout
+- Manual `numinstances.expr = numPoints()` pattern (same as attractor_chamber)
+- HDR env (qwantani moon noon) lit the pearl spheres immediately
+- 4-fold mirror compositing (h + v flips with max blend) — single comp pattern, instantly transformed bilateral form into mandala
+- transformPOP between magnets pointgenerator and magnetize input — gave the magnets orbital animation, providing intrinsic motion when audio is silent
+
+**What needed correction:**
+- Initial PBR pearl mat with `dimmer=4` lights still rendered too dark — env HDR was needed for proper specular reflection (pattern matches attractor_chamber)
+- Camera too close (orbit R=2.0) put camera INSIDE particle cloud — pulled to R=3.5
+- No issues with the geo COMP / instancing path itself once attrs were validated
+
+**The two-POPX-primitive milestone:**
+With magnet_chamber shipping, WOBAR now has **two confirmed clean POPX primitives**: `SA` (chaotic continuous flow) and `magnetize` (orbital around invisible poles). Different visual registers, both shippable via the same instancing pattern. Future POPX-driven networks can pick one of these or screen new modules via the documented method.
+
+**No new gotchas surfaced in this build** (all the gotchas were from the afternoon's failed exploration, already in the tracker). This was a clean execution of the validated SA-pattern.
+
+---
+
+### 2026-05-01 — POPX exploration day — DLA, physarum-on-sphere, Particle SSFR, DLG — none shipped, all hit TD plumbing walls
+
+**What was attempted (in order):**
+1. **Mycelium on a sphere via physarum** — 2D physarum constraint=circle TOP, trail TOP wrapped onto sphere via UV mapping. Got the network rendering with cream tint + bloom + slow camera orbit. Pivoted away when user said it didn't capture the "radial bristles from a center" look of real mycelium photos.
+2. **2D physarum direct (no sphere)** — trail TOP straight to output, animated constraint expansion from center. Worked but visually was lattice/foam (closed polygonal cells), not the radial-tree pattern the user wanted.
+3. **DLA radial tree** — switched algorithms. DLA is correct shape (tree-like aggregation from seed). Got it growing (5000 aggregated points around a center seed). **Wall:** `geometryCOMP` with manual instance count rejects POPX DLA outputs ("Manual number of instances not supported when using a POP with point co[lor]") even after stripping Color. Tried `oplength` mode — reads 1. Tried `popToSOP` conversion + SOP-instancing path — same wall. Switched to `scriptTOP` numpy rasterizer — **crashed TD twice** at 1024×1024 at `CookLevel.ALWAYS`.
+4. **Liquid mirror via POPX Particle (Fluids-PBF) + SSFR** — built native particlePOP emitter (worked at 60fps with manual numinstances), wired POPX Particle for SPH physics. **Walls:** (a) bbox collision didn't contain particles even with `Usecustombounds=True` — particles tunneled to y=-167; (b) Particle's POP output has 17 attributes (PartVel, PartId, PartForce, PrevP, Density, etc.) — same `geometryCOMP` rejection.
+5. **DLG hypnotic line growth** — switched to maze/labyrinth/brain-coral pattern. DLG outputs lines (not points) which should render via SOP path. **Walls:** popToSOP'd line → renderTOP shows it as a filled white disc (closed polyline = closed polygon). Sweep tubes through line → render shows nothing despite 12k swept points. Same TD-plumbing fog.
+
+**What WORKED today:**
+- POPX `physarum` 2D simulation with constraint TOP + trail TOP rendering — proved the **TOP-output POPX modules bypass the geo COMP wall entirely**. Renders cleanly because output is already a TOP.
+- Native `particlePOP` emitter at 60fps with 5000 particles and manual `numinstances.expr = numPoints()` — works for native POPs (no Color attr).
+- POPX `DLA` simulation itself — grows the right algorithmic shape; only its rendering is blocked.
+- POPX `DLG` simulation itself — grows the labyrinth pattern; rendering blocked at the line-vs-fill distinction.
+
+**Pattern discovered:**
+TD's POP→geo→render path has a hard wall that complex POPX module outputs can't cross. The shipped `attractor_chamber` worked because POPX SA outputs **only simple attrs** (P, PartVel, N, Color, LenVel) and we stripped Color before instancing. POPX modules with rich attribute sets (DLA's iNumChildren/Parent/Seed/Rand, Particle's 17 attrs, physarum's POP output) trip the same `geometryCOMP` rejection regardless of workaround attempts.
+
+**Three paths forward when this comes up again:**
+1. **Stay in SA-pattern** — only use POPX modules with clean POP outputs. SA has been validated.
+2. **Use TOP-output POPX modules directly** — `physarum` (trail TOP), `Flow` (substance/velocity TOPs), `Voxelize` (volume/SDF TOPs). Skip the geo COMP entirely.
+3. **GLSL TOP shaders** — write the visual primarily as a `glslTOP`. No POP plumbing involved at all. WOBAR-on-brand candidates: reaction-diffusion (Gray-Scott), domain-warped fractals, audio-reactive caustics, kaleidoscopic mirror cascades.
+
+**No move file written** — no network shipped. **Lessons captured in correction tracker (3 promoted: geometryCOMP-rejects-rich-POPs, oplength-reads-1, scriptTOP-ALWAYS-crashes).**
+
+---
+
+### 2026-05-01 — attractor_chamber v002 — POPX-on-WOBAR proof shipped
+
+**What was built:**
+First polished POPX-on-WOBAR network. Lives at `/project1`. POPX SA Aizawa cloud (3000 points, advect mode, audio-bound Timescale) → math_velocity → random_scale (deterministic per-particle ScaleRand 0.6-1.4) → null_pop_out → instanced black-pearl PBR spheres → mirror-symmetric composite → atmospheric post → recorder. 4 lights orbit/cycle through palette channels with non-syncing primes. Centroid tracker keeps lookat target on live mass-center via EMA-lerp. `ctrl_master` baseCOMP exposes 22 custom params across 6 pages (Audio / Material / Lighting / Camera / Composition / Form) — every visual op reads from this dashboard. Audio reactivity intentionally limited to ONE binding per Nick: `sa1.Timescale = floor + ceil*max(0,energy)^exp`. Move file: `touchdesigner/networks/attractor_chamber/moves/move_002.json`. CHANGE_LOG.md updated. Loop closed → WOBAR_CLOSED.md.
+
+**What worked first pass:**
+- POPX SA Aizawa setup — Initialize → Start → Play sequence followed cleanly per the v1.1 guide
+- pbrMAT black-pearl tuning — basecolor near-black, metallic 0.92, roughness 0.10 hit the "solid pearl glistening" register quickly
+- Mirror-flip + max-blend composite for bilateral symmetry — single comp TOP, transformative
+- ctrl_master custom param creation via `appendCustomPage` / `appendFloat` / `appendToggle` Python — clean and reliable
+
+**What needed correction:**
+- Audio energy `max(0.0, ...)` clamp before pow — see correction tracker; broke `sa1.Timescale` until fixed
+- Initial attempts at `instancesx = 'LenVel*0.6'` silently failed — geometryCOMP only accepts bare attribute names
+- ColorU custom attribute didn't survive SA's update — moved attribute write downstream of SA
+- Several aborted experiments (stretched-ellipsoid orient-along-velocity, curl-noise on P in feedback loop, depth-DOF, luma-blur, aura layer, nebula bg, glints) — each tested and rejected
+- 27 orphan ops left over from experiments — cleaned up at session close
+
+**New patterns surfaced (all logged in correction tracker above):**
+- Audio negative-noise `pow()` clamp
+- geometryCOMP bare-attribute instance scale
+- POPX SA strips upstream custom attrs
+- `nullPOP.points('attr')` returns typed-per-point lists
+- renderTOP geometry glob pattern
+- Live centroid tracking via executeDAT + EMA
+- compositeTOP operand=over input order vs operand=add for transparent forms
+- Non-realtime mode audio click warning
+
+**Open for future iteration:**
+- Audio reactivity: only `Timescale` bound. Future tracks could add sub→light flash, mid→Ua morph, energy→bloom. Per-track basis.
+- Mirror modes: only bilateral. Quadrant (4-fold radial) would push sigil register harder.
+- `base_audio` energy normalization sits at ~0.48 idle — worth surveying internals to confirm calibration.
+- Numpoints hardcoded 3000 — expose as ctrl_master.Numpoints if track-specific density tuning needed.
+
+---
 
 ---
 
