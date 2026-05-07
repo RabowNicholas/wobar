@@ -27,18 +27,13 @@ LAST: Walls Are Thin decoupled from release packet during 5/6 release-schedule s
 NEXT: Define what Walls Are Thin is when it's not tied to releases. Three options on the table: (a) standalone series with its own cadence, (b) folded entirely into the BTS-trigger pattern (which would retire the bucket), (c) quiet retirement. Decision waits for: Transmission test data accumulating + first few BTS triggers actually firing on Mirror clips that clear baseline. Until then, packet ships Mirror-only.
 
 
-LOOP: Act 2 Visual — tunnel export
-STATUS: in progress
-LAST: Visual signed off. Loop closed. Pending full-song export.
-NEXT: Convert mur v1.mp3 to WAV → set audio_in file + playmode=locked → set timeline end frame to match WAV duration → Movie File Out → render with Realtime OFF.
-
-
 ---
 
 ## Session Log
 
 | Date | Summary |
 |------|---------|
+| 2026-05-06 (late) | **Act 2 Visual — tunnel export loop closed.** Visual was signed off on 2026-04-14; loop has been waiting on a per-release render that's better treated as per-release work, not per-build close-out. Same workflow applies to all shipped networks now (`iris_2`, `eyes_cut_deeper`, `act2_tunnel`) — render is selected from the shipped catalog when a release schedules them, not held open as a network-side blocker. Loop moved to `WOBAR_CLOSED.md`. |
 | 2026-05-06 (late) | **Brand docs catch-up — both loops closed.** (1) Rewrote `WOBAR_BRAND.md` Color Palette section to align with the 2026-04-30 desat-psychedelic refresh: replaced the locked 80/60/30/10 percentage-tier framework with the all-first-class vocabulary (foundation = black/off-black-purple/charcoal-mauve, purple spine, everything else first-class — mauves/magentas/cools/oxidized-organics/warm-desat/mirror-metallics/pale-bone), added "no required-or-forbidden per act" + Lookup-TOP-route note, deprecated the percentage-tier framework explicitly. Brand doc + TD docs now consistent. (2) Added CA as PERMITTED to `WOBAR_TD_AGENT_RULES.md` Materials section with explicit "nostalgic / VHS / analog signal distortion — not as rainbow effect" framing; added "Chromatic aberration — nostalgic register, not act-locked" subsection explaining on-brand vs off-brand tone (muted+small=analog, saturated+large=rave), the 7-op recipe, tuning ranges, and the eyes_cut_deeper TR cell as canonical example. Also added new CHROMATIC ABERRATION primitive to `WOBAR_TD_REFERENCE.md §3` Visual Primitives Vocabulary with full chain and params. CA is now a formal non-act-locked primitive in the vocabulary. Both brand-doc loops moved to `WOBAR_CLOSED.md`. |
 | 2026-05-06 | **iris_2 visualizer for Eyes Cut Deeper — shipped.** Full-song render committed. Loop closed → `WOBAR_CLOSED.md` with full architecture/learnings preserved. |
 | 2026-05-06 | WOBAR_CONTENT.md v2.0 rewrite. Cut Walls Are Thin bucket, format system (Mirror/Room/Transmission), posting system, baseline monitoring, 10-asset gate. New shape: release content only. Original Track package = full track + 1 visualizer per in-song drop + reactive BTS (gut call — could be Nick likes it, could be over-baseline performance, his decision). Series content lives in working docs until promoted. Walls Are Thin no longer in brand docs. Drift to reconcile: Release Schedule loop locks BTS trigger at 1.5× baseline; brand doc loosens to gut call. |

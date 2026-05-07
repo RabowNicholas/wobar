@@ -13,6 +13,25 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Act 2 Visual — tunnel export
+
+**Closed:** 2026-05-06 — closed.
+
+**Context:**
+Act 2 DESCENSION tunnel network (`touchdesigner/networks/act2_tunnel/`). Visual signed off on 2026-04-14 after long audio-reactivity tuning session — Intensity parameter on ctrl_master is the manual energy ceiling; breakdown goes near-still, drop comes alive. base_audio built from scratch (4-band audiofilterCHOP pipeline, energy envelope, kick branch). Kick mapping (zoom snap, shockwave, contrast flash) explored and removed — energy-driven Intensity was the keeper.
+
+**Render workflow (for when this network is selected for a release):**
+1. Convert `mur v1.mp3` → WAV (or use the WAV directly if available)
+2. Set `audio_in.par.file` to the WAV; `playmode='locked'`
+3. Set timeline end frame to match WAV duration (track length × 60fps)
+4. `record_out` (moviefileoutTOP) — h264 yuv420 mp4, audiochop = audio_in (44100Hz)
+5. Render with Realtime OFF (TD non-realtime export mode)
+
+**Resolution:**
+Loop closed. Render is per-release, not per-build — the network is shipping-ready and will be exported on the song timeline when needed for the release schedule. Same workflow now applies to all signed-off visualizers (`iris_2`, `eyes_cut_deeper`, `act2_tunnel`, etc.) — the render is a per-release operation, not a per-build close-out.
+
+---
+
 ## Brand docs catch-up — chromatic aberration and nostalgic register
 
 **Closed:** 2026-05-06 — done.
