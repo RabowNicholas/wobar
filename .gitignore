@@ -4,4 +4,4 @@
 # Obsidian (editor-specific settings)
 .obsidian/
 
-*.mp4
+*.mp4.~lock.*.xlsx#
