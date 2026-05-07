@@ -1,0 +1,49 @@
+{
+  "label": "movie file out — export setup with audio wired from base_audio/audio_in",
+  "timestamp": "2026-04-24T00:00:00Z",
+  "network": "glass_orb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/null_out",
+      "to": "/project1/base_glass_orb/moviefileout_export",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "parameter": "file",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "parameter": "audiochop",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "parameter": "fps",
+      "before": 30.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "parameter": "moviecontainer",
+      "before": "automatic"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/moviefileout_export",
+      "parameter": "outputcolorspace",
+      "before": "srgb"
+    }
+  ]
+}

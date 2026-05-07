@@ -1,0 +1,31 @@
+{
+  "label": "single-light symmetry pass: center light1 horizontally, pull closer, zero ry, boost dimmer",
+  "timestamp": "2026-05-04T21:21:30Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "tx",
+      "before": 0.7748908996582031
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "tz",
+      "before": 9.969941139221191
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "ry",
+      "before": -4.444172382354736
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "dimmer",
+      "before": 3.5
+    }
+  ]
+}

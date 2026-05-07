@@ -1,0 +1,96 @@
+{
+  "label": "perspective tunnel warp GLSL — non-linear radial zoom + chromatic aberration in feedback path",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/glsl_perspective_pixel",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/glsl_perspective",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const0name",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const0value (zoom=0.975)",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const1name",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const1value (perspective=0.30)",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const2name",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_tunnel",
+      "parameter": "const2value (ca=0.006)",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act3_kaleido/glsl_perspective_pixel",
+      "before": "// default TD pixel shader"
+    },
+    {
+      "type": "disconnect",
+      "from": "/project1/base_act3_kaleido/xform_tunnel",
+      "to": "/project1/base_act3_kaleido/lvc",
+      "input_index": 0,
+      "before": "xform_tunnel → lvc[0]"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/xform_tunnel",
+      "to": "/project1/base_act3_kaleido/glsl_perspective",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/glsl_perspective",
+      "to": "/project1/base_act3_kaleido/lvc",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/xform_tunnel",
+      "parameter": "sx",
+      "before": 0.975
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/xform_tunnel",
+      "parameter": "sy",
+      "before": 0.975
+    }
+  ]
+}

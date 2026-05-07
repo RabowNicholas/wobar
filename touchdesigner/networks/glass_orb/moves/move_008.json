@@ -1,0 +1,20 @@
+{
+  "label": "minimum-distance repulsion to prevent collapse",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Bodies were collapsing toward origin over time — gravitational attraction + damping drained orbital energy and pulled motes into a tight cluster. Added Lennard-Jones-style close-range repulsion: when true (unsoftened) inter-body distance r < min_dist, applies F_rep = repulsion_k * ((min_dist/r)^4 - 1) along the separation vector, pushing bodies apart. Power 4 makes repulsion overwhelm gravity's softened 1/r^2 attraction at close range; equilibrium separation sits near min_dist. Two new ctrl_motes channels: min_dist (0.18), repulsion_k (0.40). Also includes cleanup of a partial bloom-restructure attempt: created blur_inner/level_inner/blur_outer/level_outer ops, then aborted after discovering compositeTOP only has 2 input slots (not 3 as I assumed); destroyed those 4 ops, restored comp_bloom input[1] to level_bloom, and reverted sphere radius from 0.012 → 0.025. Bloom restructure remains TODO — needs chained 2-input composites instead.",
+  "operations": [
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/blur_inner", "before": null, "post_state": "destroyed in same move (failed bloom attempt)"},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/level_inner", "before": null, "post_state": "destroyed in same move"},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/blur_outer", "before": null, "post_state": "destroyed in same move"},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/level_outer", "before": null, "post_state": "destroyed in same move"},
+    {"type": "delete_node", "path": "/project1/base_glass_orb/base_motes/blur_inner", "before": "blurTOP, size=10"},
+    {"type": "delete_node", "path": "/project1/base_glass_orb/base_motes/level_inner", "before": "levelTOP, brightness1=5.0"},
+    {"type": "delete_node", "path": "/project1/base_glass_orb/base_motes/blur_outer", "before": "blurTOP, size=180"},
+    {"type": "delete_node", "path": "/project1/base_glass_orb/base_motes/level_outer", "before": "levelTOP, brightness1=0.8"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/geo_motes/sphere_template", "parameter": "radx/rady/radz", "before": 0.025, "after": "0.012 then back to 0.025"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const10name+const10value", "before": null, "after": "min_dist=0.18"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const11name+const11value", "before": null, "after": "repulsion_k=0.40"},
+    {"type": "set_dat_text", "path": "/project1/base_glass_orb/base_motes/pos_motes_callbacks", "before_summary": "physics with weak 1/r linear repulsion that gravity overwhelmed at close range — bodies collapsed", "after_summary": "Lennard-Jones-style (min_dist/r)^4 - 1 repulsion using true (unsoftened) r — overwhelms gravity below min_dist, equilibrium at r=min_dist"}
+  ]
+}

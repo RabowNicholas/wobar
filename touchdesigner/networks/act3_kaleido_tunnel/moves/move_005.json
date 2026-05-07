@@ -1,0 +1,43 @@
+{
+  "label": "corner bleed fix — composite null_kaleido over const_black, null_final output cap",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/const_black",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/comp_bg",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/null_final",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/null_kaleido",
+      "to": "/project1/base_act3_kaleido/comp_bg",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/const_black",
+      "to": "/project1/base_act3_kaleido/comp_bg",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/comp_bg",
+      "to": "/project1/base_act3_kaleido/null_final",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "label": "Act 3 color grade — hsv_desat → lvc_color → lookup_act3/ramp_act3 → hsv_warm_kill → null_grade",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/hsv_desat",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/ramp_act3",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/lookup_act3",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/null_grade",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/null_final",
+      "to": "/project1/base_act3_kaleido/hsv_desat",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/hsv_desat",
+      "to": "/project1/base_act3_kaleido/lvc_color",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/lvc_color",
+      "to": "/project1/base_act3_kaleido/lookup_act3",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/ramp_act3",
+      "to": "/project1/base_act3_kaleido/lookup_act3",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/lookup_act3",
+      "to": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "to": "/project1/base_act3_kaleido/null_grade",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_desat",
+      "parameter": "saturationmult",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_desat",
+      "parameter": "valuemult",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "blacklevel",
+      "before": 0.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "gamma1",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "contrast",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "inhigh",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "outhigh",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ramp_act3",
+      "parameter": "resolutionw",
+      "before": 256
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ramp_act3",
+      "parameter": "resolutionh",
+      "before": 256
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ramp_act3",
+      "parameter": "type",
+      "before": "horizontal"
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act3_kaleido/ramp_act3_keys",
+      "before": "pos\tr\tg\tb\ta\n0\t1\t1\t1\t1\n1\t1\t1\t1\t1"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "parameter": "startcolorr",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "parameter": "startcolorg",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "parameter": "startcolorb",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "parameter": "huerange",
+      "before": 0.5
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_warm_kill",
+      "parameter": "saturationmult",
+      "before": 1.0
+    }
+  ]
+}

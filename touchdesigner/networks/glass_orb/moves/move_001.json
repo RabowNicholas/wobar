@@ -1,0 +1,70 @@
+{
+  "label": "base_glass_orb — GLSL sphere refraction composite over video",
+  "timestamp": "2026-04-24T00:00:00Z",
+  "network": "glass_orb",
+  "operations": [
+    { "type": "create_node", "path": "/project1/base_glass_orb", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/moviefilein_bg", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/null_bg", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/ctrl_orb", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/glsl_orb_pixel", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/glsl_orb", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/null_out", "before": null },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/moviefilein_bg",
+      "to": "/project1/base_glass_orb/null_bg",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/null_bg",
+      "to": "/project1/base_glass_orb/glsl_orb",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/glsl_orb",
+      "to": "/project1/base_glass_orb/null_out",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "pixeldat = glsl_orb_pixel",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "resolution 720x1280",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec0 (orb_params): center_x, center_y, radius=0.32, ior=1.52",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec1 (light_params): light_x=-0.3, light_y=0.8, light_z=0.7, spec_power=256",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec2 (ca_param): ca=0.008",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_glass_orb/glsl_orb_pixel",
+      "before": "// empty"
+    }
+  ]
+}

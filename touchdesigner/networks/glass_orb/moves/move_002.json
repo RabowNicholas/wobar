@@ -1,0 +1,72 @@
+{
+  "label": "hovering animation — noise position drift + lag weight + scale breathe + light drift",
+  "timestamp": "2026-04-24T00:00:00Z",
+  "network": "glass_orb",
+  "operations": [
+    { "type": "create_node", "path": "/project1/base_glass_orb/noise_hover", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/lag_hover", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/noise_breathe", "before": null },
+    { "type": "create_node", "path": "/project1/base_glass_orb/noise_light", "before": null },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/noise_hover",
+      "to": "/project1/base_glass_orb/lag_hover",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/noise_hover",
+      "parameter": "type=sparse, period=1.0, amp=0.008, channelname='tx ty', tz.expr='absTime.seconds*0.014', timeslice=True",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/lag_hover",
+      "parameter": "lag1=0.8, lag2=0.8, lagunit=seconds, timeslice=True",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/noise_breathe",
+      "parameter": "type=sparse, period=1.0, amp=0.003, channelname='r', tz.expr='absTime.seconds*0.008', seed=77, timeslice=True",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/noise_light",
+      "parameter": "type=sparse, period=1.0, amp=0.04, channelname='lx ly', tz.expr='absTime.seconds*0.022', seed=99, timeslice=True",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec0valuex.expr",
+      "before": "op('ctrl_orb')['center_x']"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec0valuey.expr",
+      "before": "op('ctrl_orb')['center_y']"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec0valuez.expr",
+      "before": "op('ctrl_orb')['radius']"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec1valuex.expr",
+      "before": "op('ctrl_orb')['light_x']"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/glsl_orb",
+      "parameter": "vec1valuey.expr",
+      "before": "op('ctrl_orb')['light_y']"
+    }
+  ]
+}

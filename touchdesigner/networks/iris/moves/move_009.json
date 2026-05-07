@@ -1,0 +1,30 @@
+{
+  "label": "iris boundary mask: circle_iris_bound + comp_iris_bound after comp4 — contains feedback trails inside iris circle",
+  "timestamp": "2026-05-04T22:10:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/circle_iris_bound",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_iris_bound",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/comp_iris_bound",
+      "to": "/project1/level5",
+      "input_index": 0,
+      "before": "/project1/comp4"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/feedback1",
+      "parameter": "top",
+      "before": "/project1/comp4"
+    }
+  ]
+}

@@ -4,4 +4,39 @@
 # Obsidian (editor-specific settings)
 .obsidian/
 
-*.mp4.~lock.*.xlsx#
+# Office lock files
+.~lock.*.xlsx#
+.~lock.*.docx#
+
+# Large media — keep source TD project files, exclude renders & raw media
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.aif
+*.tiff
+*.tif
+*.exr
+*.hdr
+
+# Large content directories (gigabytes of source/render media)
+assets/
+touchdesigner/hdri/
+touchdesigner/third_party/
+touchdesigner/renders/
+touchdesigner/album_snapshots/
+
+# Per-network large outputs and TD auto-backups
+touchdesigner/**/exports/
+touchdesigner/**/Backup/
+touchdesigner/networks/*/Backup/
+touchdesigner/networks/*/exports/
+
+# Allow images that are SOURCE for TD networks (small, integral to the build)
+!touchdesigner/networks/*/*.png
+!touchdesigner/networks/iris_2/*.png
+
+# Local Claude settings
+.claude/settings.local.json

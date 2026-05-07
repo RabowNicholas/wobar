@@ -1,0 +1,81 @@
+{
+  "label": "v001 — magnet_chamber: POPX magnetize as second clean primitive after SA. Two orbiting attractor poles in spin mode, pearl orb particles, 4-fold mirror compositing, palette-cycling lights, audio-bound Strength.",
+  "timestamp": "2026-05-01T00:00:00Z",
+  "network": "magnet_chamber",
+  "td_project_file": "user-saved (path Nick controls)",
+  "summary": "Second WOBAR-on-brand POPX primitive validated. Built directly at /project1 (no wrapping baseCOMP, same convention as attractor_chamber v002). The methodological win: POPX module attribute-screening method confirmed — place a module, check output.pointAttributes, only commit if attrs are 'clean' (P, transform-related only) without solver-internal names (PartId, PartForce, Density, Parent, iNumChildren). magnetize passed; SA passed; DLA/Particle/DLG failed.",
+  "operations": [
+    {
+      "type": "architecture_summary",
+      "popx_chain": "particles (native pointgeneratorPOP, 2200 pts in sphere volume) → magnets (native pointgenerator, 2 pts on X axis at ±0.5) → magnets_orbit (transformPOP, ry=absTime*12, rz=absTime*7+30 — magnets orbit themselves) → mag (POPX magnetize, Mode='spin', Strength audio-bound, Radius=0.5, Searchradius=0.6) → mag_null (terminal POP)",
+      "render_chain": "mag_null → geo_render (geometryCOMP, instancecountmode=manual, numinstances.expr=numPoints(), instancetx/y/z=P(0/1/2)) [child sphere_template radx=0.025, child pbrMAT 'pearl' basecolor near-black metallic 0.9 roughness 0.12 specular 1.5] → render (geometry='geo_render', camera=cam, lights='light light_warm environment') → bloom branch (blur 24 preshrink 2 → level 0.6 brightness → screen-blend) → mirror_flip(h) + mirror_comp(max blend) → mirror_flip_v + mirror_comp_v (4-fold radial symmetry) → null_out → rec_out",
+      "key_decision": "magnetize Mode='spin' chosen for orbital-dance register. transformPOP between magnets and mag rotates magnet positions over time so particles follow shifting forces. 4-fold mirror compositing (h + v flips) creates ritual mandala/sigil reading."
+    },
+    {
+      "type": "control_panel",
+      "path": "/project1/ctrl_master",
+      "node_type": "baseCOMP",
+      "custom_pages": {
+        "Audio":   ["Audiofloor (0..2, default 0.3)", "Audioceil (0..5, default 2.5)", "Audioexp (0.5..4, default 1.5)"],
+        "Magnets": ["Mode (menu: attract/repulse/spin/directional)", "Radius (0.05..2, default 0.5)", "Searchradius (0.1..3, default 0.6)", "Numparticles (500..20000, default 4000)"],
+        "Material":["Basecolorr/g/b (each 0..0.3)", "Metallic (0..1, default 0.9)", "Roughness (0..1, default 0.12)", "Spheresize (0.005..0.1, default 0.025)"],
+        "Lighting":["Lightintensity (0..3, default 1.0)", "Envintensity (0..3, default 1.0)"],
+        "Camera":  ["Camradius (0.5..8, default 3.5)", "Camperiod (5..300, default 60)", "Camfov (10..90, default 38)", "Camelev (-3..3, default 0)"],
+        "Composition": ["Bloomamount (0..3, default 1)", "Mirrorenable (toggle, default ON — controls both h and v flips together)"]
+      },
+      "wiring": "Every visual op param reads from ctrl_master via ParMode.EXPRESSION. Light dimmer baselines (4.0 each for light/light_warm) preserved as multipliers. Audio expression includes safe fallback when /project1/base_audio is missing: returns Audiofloor + Audioceil*0.3 (a moderate constant) instead of erroring."
+    },
+    {
+      "type": "audio_binding",
+      "param": "/project1/mag.Strength",
+      "expression": "ctrl.Audiofloor + ctrl.Audioceil * (max(0.0, op('/project1/base_audio/null_audio')['energy']) ** ctrl.Audioexp) if base_audio_exists else fallback_constant",
+      "rationale": "Same single-binding pattern as attractor_chamber. Energy → spin force magnitude. Quiet sections: subtle drift around magnetic equilibrium. Build/drop: aggressive churn around the orbiting poles. max(0, ...) clamp required (audio noise can be e-22 negative)."
+    },
+    {
+      "type": "palette_module",
+      "path": "/project1/palette_lights",
+      "node_type": "textDAT",
+      "channels": {
+        "warm": "wine, dusty rose, plum, faded coral",
+        "cool": "slate teal, indigo, sea glass, cerulean"
+      },
+      "binding": "light_warm cycles 'warm' over 70s; light cycles 'cool' over 90s. Non-syncing periods so form catches different hue combinations across time. Smaller palette than attractor_chamber's 4-channel — magnet_chamber's tighter dyad fits its more disciplined visual register."
+    },
+    {
+      "type": "magnet_orbit_animation",
+      "path": "/project1/magnets_orbit",
+      "node_type": "transformPOP",
+      "expressions": "ry = absTime.seconds * 12 (~30s/revolution); rz = absTime.seconds * 7 + 30 (different period for non-circular dance)",
+      "rationale": "Without audio, the form would be static (constant Strength → particles settle into equilibrium positions). Animated magnet orbits provide intrinsic motion — the equilibrium shifts continuously, particles follow the dance. With audio, this combines with strength modulation for dynamic visual."
+    },
+    {
+      "type": "mirror_compositing",
+      "ops": ["mirror_flip (flipx, ctrl-toggleable)", "mirror_comp (max blend with original)", "mirror_flip_v (flipy, ctrl-toggleable)", "mirror_comp_v (max blend, 4-fold final)"],
+      "result": "True mandala/sigil reading via horizontal + vertical bilateral symmetry. Quadrant structure visible as 2 axes through frame center. WOBAR mirror language made literal."
+    },
+    {
+      "type": "recorder",
+      "path": "/project1/rec_out",
+      "node_type": "moviefileoutTOP",
+      "video": "HAP codec, 720x720, full chain via null_out",
+      "audio_default": "audiochop empty (no base_audio loaded yet); wire when audio is added",
+      "file": "/Users/nicholasrabow/Desktop/td_exports/magnet_chamber_v001.mov",
+      "trigger": "rec_out.par.record toggle"
+    }
+  ],
+  "lessons_for_debug_log": [
+    "magnetize_clean_attrs: POPX magnetize outputs only [P, Scale, N, Orient, Transform, Up, FullTransform, PointScale, Pivot] — all transform-related, no solver-internal baggage. Confirmed safe for geometryCOMP instancing path (the 2nd POPX module after SA validated this way). Same screening method should be applied before any future POPX-driven build.",
+    "magnetize_inputs: input[0] = particle stream, input[1] = magnets POP. Both par.Initialpop (initial particle state) and par.Magnetspop (magnet positions) are also referenced as parameter targets. Without input[0]+input[1] wired, output is empty and cook errors.",
+    "magnetize_modes: 'attract' pulls particles to poles; 'repulse' pushes outward; 'spin' creates orbital motion around poles; 'directional' applies a directional flow. Chose 'spin' for v001 because most visually distinctive vs SA's chaotic flow.",
+    "magnet_position_animation: transformPOP between magnets pointgenerator and magnetize input rotates the magnet positions over time. Time-driven ry/rz expressions give dancing-pole motion → particles follow shifting equilibrium. Provides intrinsic motion when audio is silent.",
+    "geometryCOMP_instancing_with_magnetize: same pattern as attractor_chamber works — manual instancecountmode + numinstances.expr='numPoints()' on the source nullPOP. oplength STILL reads 1 (TD geo COMP introspection bug for POPX-derived POPs persists), but manual mode lifts the count correctly.",
+    "popx_attribute_screening_method: place any new POPX module, copy from /POPX_1_3_0/custom_operators/<name>, wire minimum required inputs, init-start-pulse, then `print([a.name for a in op('/project1/<mod>/POPX_out1').pointAttributes])`. If list contains PartId/PartForce/Density/Parent/iNumChildren — that module's POP output WILL break geometryCOMP instancing. Pivot to TOP-output modules (Flow, physarum, Voxelize) or use the decoupled architecture (POPX module provides force field, native particlePOP holds particles)."
+  ],
+  "open_questions_for_future_iteration": [
+    "Audio reactivity scope is intentionally minimal (one binding). Could expand to: sub → magnet count pulse, mid → Mode crossfade (smooth blend between attract/repulse/spin), energy → bloom amount. Per-track basis.",
+    "Magnet count is hardcoded at 2 via pointgenerator.numpoints. Exposing as ctrl_master.Magnetcount could give compositional variety (2-pole dyad vs 4-pole quaternary).",
+    "transformPOP magnet orbit periods (12, 7, +30 phase) chosen by feel. Could expose periods as ctrl_master knobs for tuning the dance speed.",
+    "4-fold mirror is striking but might feel locked-in. A toggle for bilateral-only vs quadrant could give per-track flex.",
+    "No grain pass added for magnet_chamber. Adding post-grain (like attractor_chamber's randomgpu noise) could texture the pearl cluster more cinematically."
+  ]
+}

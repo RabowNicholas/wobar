@@ -1,0 +1,10 @@
+{
+  "label": "remove repulsion shell, zero damping for true conservative dynamics",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Reverted move_008's hard repulsion shell — the bouncing-on-contact behavior wasn't what was wanted. The actual collapse cause was velocity damping draining orbital energy over time. Set damping=0 (was 0.02) so the gravity sim is now energetically conservative — total energy preserved indefinitely → motion preserved indefinitely → no collapse. Bodies can now pass through each other on close approaches (softening eps2 still caps gravity force at finite max so passes are smooth, not explosive). The min_dist and repulsion_k channels remain in ctrl_motes but are unused by the physics now (the args are still passed through for code stability — easy to revert if Nick wants the shell back later for a different look). Central restoring + escape pull-back still active to keep the cloud bounded inside the orb.",
+  "operations": [
+    {"type": "set_dat_text", "path": "/project1/base_glass_orb/base_motes/pos_motes_callbacks", "before_summary": "Lennard-Jones (min_dist/r)^4 - 1 close-range repulsion; bodies bounced apart when r<min_dist", "after_summary": "Repulsion block removed; bodies can pass through each other freely; softened gravity caps acceleration at max"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const6value (damping)", "before": 0.02, "after": 0.0}
+  ]
+}

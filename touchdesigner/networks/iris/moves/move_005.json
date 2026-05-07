@@ -1,0 +1,13 @@
+{
+  "label": "open pupil baseline (torus1.rady 0.65 → 0.5) — inner cylinder now visible through pupil",
+  "timestamp": "2026-05-04T21:27:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/torus1",
+      "parameter": "rady",
+      "before": 0.65
+    }
+  ]
+}

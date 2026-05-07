@@ -1,0 +1,11 @@
+{
+  "label": "tilt orbits to camera + N-body gravitational physics",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Two-part move addressing: (1) the prior 3 perpendicular orbits had 2 of 3 in planes the camera was edge-on to — they read as 1D oscillations. Rewrote orbit equations to tilt those planes 60° so all 3 project as visible ellipses. (2) Replaced kinematic orbits with stateful N-body gravitational simulation: pairwise softened gravity (F = G·m·dr / (|dr|² + ε²)^1.5), central restoring force, velocity damping, smooth pull-back beyond escape_r, Velocity Verlet integration sub-stepped 4x per frame. State (positions + velocities) persists in pos_motes.storage['state'] between cooks. Initial conditions seed from the tilted-orbit positions/velocities so the first physics frame is identical to the prior clockwork — then the bodies start interacting. Added ctrl_motes constantCHOP (10 channels: G, mass0/1/2, softening, restoring_k, damping, substeps, escape_r, pullback_k) wired into pos_motes input[1] for live tuning.",
+  "operations": [
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "before": null, "post_state": "constantCHOP, 10 channels: G=0.05, mass0=1, mass1=1, mass2=1, softening=0.05, restoring_k=0.30, damping=0.02, substeps=4, escape_r=2.0, pullback_k=1.5"},
+    {"type": "connect", "from": "/project1/base_glass_orb/base_motes/ctrl_motes", "to": "/project1/base_glass_orb/base_motes/pos_motes", "input_index": 1, "before": null},
+    {"type": "set_dat_text", "path": "/project1/base_glass_orb/base_motes/pos_motes_callbacks", "before_summary": "stateless 3 perpendicular-plane circular orbits (XY, YZ, XZ) at 0.30/0.40/0.50 Hz, R=0.25, no inter-body interaction. Two of three projected as 1D oscillations from the camera POV.", "after_summary": "stateful N-body gravity sim with softening + central spring + damping + smooth pull-back; Velocity Verlet, 4x substeps; state on me.storage; seeds from tilted-orbit positions/velocities."}
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "label": "remove central restoring spring — kills sync collapse",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Diagnosis of the apparent 'collapse': with damping=0 motion is energetically conserved, but central restoring_k=0.45 was 9× stronger than gravity G=0.05, so each body acted as a 3D harmonic oscillator with the same period (T = 2π/√(0.45) ≈ 9.4s). Equal periods → bodies sync in phase → all three pass through origin together periodically, which reads as collapse. Fix: removed the central spring (restoring_k = 0). Only mutual gravity + escape_r pull-back wall remain. No preferred center → no synchronized origin-return. True 3-body dynamics. Centroid now drifts inside the outer wall instead of being pinned at origin. If clustering still emerges from gravitational binary formation, layer system-spread maintenance on top later.",
+  "operations": [
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const5value (restoring_k)", "before": 0.45, "after": 0.0}
+  ]
+}

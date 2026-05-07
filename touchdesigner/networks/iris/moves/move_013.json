@@ -1,0 +1,31 @@
+{
+  "label": "expose Irisscale param on ctrl_master — drives xform scale + mask radius proportionally (radius = scale × 243)",
+  "timestamp": "2026-05-04T22:58:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/xform_iris_replace",
+      "parameter": "sx",
+      "before": {"mode": "CONSTANT", "value": 0.42}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/xform_iris_replace",
+      "parameter": "sy",
+      "before": {"mode": "CONSTANT", "value": 0.42}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/mask_iris_video",
+      "parameter": "radiusx",
+      "before": {"mode": "CONSTANT", "value": 102.0}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/mask_iris_video",
+      "parameter": "radiusy",
+      "before": {"mode": "CONSTANT", "value": 102.0}
+    }
+  ]
+}

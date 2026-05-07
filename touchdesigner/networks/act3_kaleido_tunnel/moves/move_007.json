@@ -1,0 +1,78 @@
+{
+  "label": "visual punch — grade lift, N 6→8, angle drift, faster noise",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_desat",
+      "parameter": "saturationmult",
+      "before": 0.15
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/hsv_desat",
+      "parameter": "valuemult",
+      "before": 0.8
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "blacklevel",
+      "before": 0.08
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "gamma1",
+      "before": 0.75
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "contrast",
+      "before": 1.35
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "inhigh",
+      "before": 0.85
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/lvc_color",
+      "parameter": "outhigh",
+      "before": 0.8
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act3_kaleido/ramp_act3_keys",
+      "before": "pos\tr\tg\tb\ta\n0.0\t0.0\t0.0\t0.0\t1.0\n0.15\t0.098\t0.0\t0.157\t1.0\n0.5\t0.176\t0.02\t0.275\t1.0\n0.85\t0.353\t0.059\t0.471\t1.0\n1.0\t0.4\t0.102\t0.502\t1.0"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/ctrl_kaleido",
+      "parameter": "const0value (N)",
+      "before": 6
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "parameter": "vec0valuey (expr: op('ctrl_kaleido')['angle_offset'])",
+      "before": "op('ctrl_kaleido')['angle_offset']"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "period",
+      "before": 0.5
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "tz (expr: absTime.seconds * 0.05)",
+      "before": "absTime.seconds * 0.05"
+    }
+  ]
+}

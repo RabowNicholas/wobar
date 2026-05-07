@@ -1,0 +1,11 @@
+{
+  "label": "tighten orbit volume — motes move within central inner region instead of orb rim",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Bodies were riding the orb rim because seed radius (0.25 world units) + loose escape_r (2.0) let them swing far from origin. Reduced seed R to 0.12 in _seed_state and brought escape_r in to 0.5; bumped restoring_k from 0.30 to 0.45 for a slightly stiffer central pull so they stay in the inner volume during their N-body interactions. Result: motes cluster + interact in the central ~40% of the orb's projected disk and have visible 3D depth motion rather than orbiting along the rim.",
+  "operations": [
+    {"type": "set_dat_text", "path": "/project1/base_glass_orb/base_motes/pos_motes_callbacks", "before_summary": "_seed_state R = 0.25", "after_summary": "_seed_state R = 0.12"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const8value (escape_r)", "before": 2.0, "after": 0.5},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/ctrl_motes", "parameter": "const5value (restoring_k)", "before": 0.30, "after": 0.45}
+  ]
+}

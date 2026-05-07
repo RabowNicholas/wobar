@@ -1,0 +1,10 @@
+{
+  "label": "remove visual audio reactivity",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Stripped both visual audio bindings in the orb. lvc_bg.saturationmult was 1.0 + audio_energy*0.7, now hard-set to 1.0 (no audio-driven saturation pump). glsl_orb.vec2valuew (the glow_energy uniform / ca_param.w in shader, drives the warm inner glow) was = audio_energy, now hard-set to 0.0 (kills the warm purple inner glow entirely — sphereRGB += glowColor * glowFall * 0 = 0). Export audio routing on moviefileout_export.audiochop unchanged so rendered output still carries sound. Future audio reactivity will be wired into the motes physics (G, mass, etc) instead of into the orb shader.",
+  "operations": [
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/lvc_bg", "parameter": "saturationmult", "before": {"mode": "EXPRESSION", "expr": "1.0 + op('/project1/base_audio/final_merge')['energy'] * 0.7"}, "after": {"mode": "CONSTANT", "val": 1.0}},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/glsl_orb", "parameter": "vec2valuew", "before": {"mode": "EXPRESSION", "expr": "op('/project1/base_audio/final_merge')['energy']"}, "after": {"mode": "CONSTANT", "val": 0.0}}
+  ]
+}

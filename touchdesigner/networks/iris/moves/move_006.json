@@ -1,0 +1,13 @@
+{
+  "label": "halo pulse: ramp3.period as expression — slow 0.1 Hz breath (1.5 ± 0.15)",
+  "timestamp": "2026-05-04T21:31:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/ramp3",
+      "parameter": "period",
+      "before": {"mode": "CONSTANT", "value": 1.5}
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "label": "v002 — Inside-the-tesseract psychedelic variant of magnet_chamber. White wireframe cubes inside POV, chromatic aberration, scale-pulsed warp through geometry, camera tumble, 4-fold mirror.",
+  "timestamp": "2026-05-01T00:00:00Z",
+  "network": "magnet_chamber",
+  "td_project_file": "user-saved (path Nick controls)",
+  "summary": "Same magnetize core as v001 but pivoted aesthetic to Cooper-in-4D / wireframe psychedelic. Major learnings: wireframeSOP needs convertSOP polygonization to instance properly via geometryCOMP; manual chromatic aberration via 3 levelTOP channel-isolators + 2 transformTOPs offset; camera POV inside the form (Camradius=0.1, Camfov=80) creates immersive tesseract perspective.",
+  "operations": [
+    {
+      "type": "architecture_summary",
+      "popx_chain": "Same as v001: particles (native pointgenerator, 25 pts) → magnets (2 pts on X axis) → magnets_orbit (transformPOP, slowed: ry=t*3, rz=t*2+30) → mag (POPX magnetize, Mode='spin', Strength audio-bound) → mag_null",
+      "new_attribute_chain": "mag_null → random_rotate (randomPOP, Rotate 3-comp 0-360°) → random_scale (randomPOP, ScaleRand 0.6-1.4) → inst_final (nullPOP terminal). geo_render reads from inst_final.",
+      "geometry": "geo_render: instancing on, instanceop=inst_final, manual count=numPoints(). Inside the COMP: cube_source (boxSOP, render=False) → cube_wire (wireframeSOP, radius=ctrl.Wireradius) → wire_norm (convertSOP totype='poly', render=True). The convertSOP polygonization is REQUIRED for the wireframe geometry to instance via geometryCOMP — without it, only 1 instance renders.",
+      "rotation_and_scale": "Per-cube via random_rotate/random_scale chain. instancerx/y/z='Rotate(0/1/2)', instancesx/y/z='ScaleRand'. Each cube tumbled at independent angle, sized 0.6-1.4× — breaks rigid grid into organic crystalline lattice.",
+      "camera_pov": "tx/tz orbit at Camradius=0.1 (inside the cluster), Camfov=80 (wide immersive perspective), Camelev=0. Camera tumble: cam.rz=absTime*Tumblespeed, cam.rx=8*sin(absTime*2π/23) when Tumbleenable=True. POV swirls slowly inside the tesseract.",
+      "scale_pulse_warp": "geo_render.scale = Pulsebase + Pulseamp * sin(absTime * 2π/Pulseperiod). Smooth sin breathing (chose this over sawtooth — sawtooth's snap-back was visible/jarring). 12s default period, range 0.6-2.4. Cubes appear to fly past camera in continuous waves."
+    },
+    {
+      "type": "post_chain",
+      "render": "render TOP at 720x1280, bgcolor pure black",
+      "bloom": "blur_bloom (size=20, preshrink=2) → level_bloom (brightness=0.5*ctrl.Bloomamount) → comp_bloom (screen blend with render)",
+      "mirror_4fold": "mirror_flip(h, ctrl.Mirrorenable toggleable) → mirror_comp (max blend) → mirror_flip_v(v) → mirror_comp_v (max blend). Quadrant mandala symmetry.",
+      "feedback_trail": "trail_comp (add blend, mirror_comp_v + decayed feedback) → trail_fb (feedbackTOP, par.top=trail_comp + input wired to trail_comp). trail_decay (levelTOP, brightness=-0.15) fades residuals each frame. NOTE: feedbackTOP requires BOTH par.top set AND target wired to input — cook dependency loop appears as warning but doesn't block rendering.",
+      "chromatic_aberration": "trail_comp → 3 levelTOPs (ca_red highg=highb=0, ca_green highr=highb=0, ca_blue highr=highg=0 — channel isolation) → 2 transformTOPs (ca_r_shift tx=-Caoffset, ca_b_shift tx=+Caoffset; G stays center) → 2 compositeTOPs ADD blend → final. Manual chain since TD has no native chromatic-aberration TOP. Default Caoffset=0.008.",
+      "hue_rotation": "hsvadjustTOP with hueoffset = (absTime*Huerate)%1.0 when Hueenable=True. Default OFF for v002 (white wireframes have 0 saturation; hue rotation only useful if material has tinted base color)."
+    },
+    {
+      "type": "ctrl_master_additions",
+      "page": "Effects (new page, 9 params)",
+      "new_params": {
+        "Caoffset": "0..0.04, default 0.008 — chromatic aberration channel offset",
+        "Tumbleenable": "toggle, default ON — camera tumble (rz roll + rx oscillation)",
+        "Tumblespeed": "0..30, default 6 — degrees/second of cam.rz advance",
+        "Pulseamp": "0..2, default 0.9 — scale pulse amplitude (range from baseline)",
+        "Pulseperiod": "1..60, default 12 — scale pulse period in seconds",
+        "Pulsebase": "0.3..4, default 1.5 — scale pulse baseline (cube size center value)",
+        "Hueenable": "toggle, default OFF — hue rotation post-process",
+        "Huerate": "0..0.1, default 0.017 — hue rotation rate (1.0=full cycle)",
+        "Wireradius": "0.0005..0.02, default 0.0015 — wireframe edge thickness"
+      },
+      "Camradius_clamp_change": "ctrl.Camradius.min lowered from 0.5 to 0 to allow inside-POV (camera at radius 0.1)"
+    }
+  ],
+  "lessons_for_debug_log": [
+    "wireframe_instancing_requires_polygonize: wireframeSOP output cannot be instanced directly via geometryCOMP — only 1 instance renders even when numinstances=80. Solution: insert a convertSOP with totype='poly' AFTER the wireframeSOP, then render the convertSOP output. The polygonization normalizes the topology so geo COMP's instancing can multiply it.",
+    "manual_chromatic_aberration: TD has NO native chromatic-aberration TOP (lensdistortTOP is geometric distortion only, no RGB split). Manual chain works: 3 levelTOPs to isolate channels (set highg=highb=0 → red-only; etc), 2 transformTOPs to offset R and B opposite directions (G stays center), composite ADD all three.",
+    "feedbackTOP_wiring: feedbackTOP requires BOTH par.top set to feedback target AND target's output wired to feedback's input[0] — per the SHOT note in TD's docs. The cook-dependency-loop warning that appears IS visible but doesn't actually block cooking. Confirmed working at 60fps with feedback active.",
+    "hue_rotation_needs_saturation: hsvadjustTOP.hueoffset shifts hue only on saturated colors. Pure white (R=G=B=1, sat=0) is unaffected. To use hue rotation on a wireframe visual, tint the constant material first (e.g., to electric cyan), then hue rotation cycles it through spectrum.",
+    "sawtooth_snap_visible_in_warp: scale = baseline + (t*rate) % range gives continuous outward grow but the snap-back at cycle boundary is jarringly visible. Use smooth sin instead (baseline + amp*sin(t*2π/period)) for hypnotic breathing — trades 'continuous outward' for smoothness.",
+    "inside_pov_camera_setup: Camradius=0.1 + Camfov=80 + Camelev=0 puts camera at center of particle cloud with wide-angle perspective. Particles surround the camera. Required lowering ctrl.Camradius.min clamp to 0 (was 0.5)."
+  ],
+  "open_questions_for_future_iteration": [
+    "Audio reactivity not yet wired beyond Strength fallback. Need to bring base_audio into project. Once audio is live: bind Caoffset to kick (CA bursts on hits), Tumblespeed to mid envelope, Hueenable+Huerate to energy bands, Pulseamp to bass.",
+    "Hue rotation works only when material is tinted. Could add a Tintenable toggle that switches material from pure white to a saturated palette color when user wants the cycling psychedelic register.",
+    "Camera tumble could be more dramatic — currently rz advance only. Could add ry oscillation or full quaternion-based slerp between random poses.",
+    "Render TOP at 720x1280 portrait — could test 1080x1920 for higher-quality output.",
+    "Recorder still wired to magnet_chamber_v001.mov path. May want to swap to v002.mov for the variant capture.",
+    "Particle count at 25 — could test as low as 10 for ultra-sparse / minimal version, or up to 50-100 for denser lattice. Current 25 hits the right density for inside-POV without choking the wireframe convertSOP path."
+  ]
+}

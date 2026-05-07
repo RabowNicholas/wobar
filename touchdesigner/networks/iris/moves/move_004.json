@@ -1,0 +1,19 @@
+{
+  "label": "tint light1 cool-violet to keep highlights in palette (cr 1→0.85, cg 1→0.78)",
+  "timestamp": "2026-05-04T21:24:30Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "cr",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/light1",
+      "parameter": "cg",
+      "before": 1.0
+    }
+  ]
+}

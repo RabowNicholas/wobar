@@ -1,0 +1,19 @@
+{
+  "label": "fix pupil mask: comp_pupil.swaporder False→True (input 0 was on top by default), softness 8→10",
+  "timestamp": "2026-05-04T22:35:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/comp_pupil",
+      "parameter": "swaporder",
+      "before": false
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/circle_pupil",
+      "parameter": "softness",
+      "before": 8.0
+    }
+  ]
+}

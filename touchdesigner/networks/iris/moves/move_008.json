@@ -1,0 +1,24 @@
+{
+  "label": "limbal ring overlay (dark border circle at iris outer edge): circle_limbal + comp_limbal between comp_pupil and null_out",
+  "timestamp": "2026-05-04T22:08:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/circle_limbal",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_limbal",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/comp_limbal",
+      "to": "/project1/null_out",
+      "input_index": 0,
+      "before": "/project1/comp_pupil"
+    }
+  ]
+}

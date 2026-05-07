@@ -1,0 +1,13 @@
+{
+  "label": "scale iris geo to dominant frame size (transform2.scale 1.3 → 2.2)",
+  "timestamp": "2026-05-04T21:18:30Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/transform2",
+      "parameter": "scale",
+      "before": 1.3
+    }
+  ]
+}

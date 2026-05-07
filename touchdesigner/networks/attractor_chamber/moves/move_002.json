@@ -1,0 +1,115 @@
+{
+  "label": "v002 — Polished POPX-on-WOBAR proof: Aizawa attractor chamber with full ctrl_master dashboard, audio reactivity, mirror compositing, palette cycling lights, recording pipeline",
+  "timestamp": "2026-05-01T00:00:00Z",
+  "network": "attractor_chamber",
+  "td_project_file": "user-saved (path Nick controls)",
+  "summary": "From-scratch rebuild of the attractor_chamber after v001 was abandoned. Lives at /project1 (not /project1/base_attractor_chamber as v001 plan stated — Nick rebuilt directly into project1). Final architecture: SA Aizawa point cloud → instanced black-pearl PBR spheres → mirror-symmetric composite → atmospheric post → optional recorder. 22-parameter ctrl_master baseCOMP exposes high-leverage knobs across 6 pages (Audio, Material, Lighting, Camera, Composition, Form). Audio reactivity: only sa1.Timescale is bound (energy → speed), per Nick's directive — every other audio binding deferred for explicit user request. Two register tunings landed during session: (a) hard chaotic mushroom trip (toxic palette, ±18% breath, 35s orbit, exp 1.3 audio curve), (b) dark hypnotic crimson (red-family palette, ±10% breath, 80s orbit, exp 1.7 audio curve). Final palette delivered red-only (dark crimson → bright red → blood → vermillion / wine / mulberry / rust / mahogany / bone / taupe — pink killed at user request).",
+  "operations": [
+    {
+      "type": "architecture_summary",
+      "description": "POPX point chain — feedback path drives SA advection",
+      "chain": "pointgen1 (3000 sphere points) → sa1 (POPX SA, Aizawa, Solvermode='advect', Pointsupdatepop=null_pop_out, Timescale driven by audio energy) → math_velocity (mathmixPOP: comb0oper='length', PartVel → LenVel) → random_scale (randomPOP: type='uniform', valuea0=0.6, valueb0=1.4, outputattrscope='ScaleRand', deterministic per point index) → null_pop_out (terminal cap, also feeds back to sa1.Pointsupdatepop and forward to geo_attractor.instanceop)",
+      "key_decision": "ScaleRand is decoupled from velocity — earlier velocity-multiplied scale (LenVel * ScaleRand) caused spheres to balloon when audio pushed Timescale up. Pure ScaleRand keeps sizes stable through audio dynamics, only motion responds to audio."
+    },
+    {
+      "type": "architecture_summary",
+      "description": "Geometry + lighting + scene",
+      "chain": "geo_attractor (geometryCOMP) instances null_pop_out's points; child sphere_template (radx=0.06) + child mat (pbrMAT, 'black pearl': basecolor (0.012, 0.014, 0.022), metallic 0.92, roughness 0.10, specular 1.7); 4 lights (light1 warm orbit period 47s, light2 cool 67s opposite phase, light_rim earth/fixed, light_back pale orbit opposite camera 60s) all on palette-cycling cr/cg/cb expressions; environment1 (HDR qwantani_moon_noon at dimmer 0.6 for deep shadows); cam (orbit 80s, R=1.7, fov=32, ty=0.3, lookat=lookat_target)",
+      "lookat_tracking": "centroid_tracker (executeDAT, frameStart=True) reads null_pop_out.points('P'), computes mean × geo.scale, EMA-lerps lookat_target.tx/ty/tz with alpha=0.04. Required because Aizawa's instantaneous mass-center is not temporally stationary — chaotic distribution wanders."
+    },
+    {
+      "type": "architecture_summary",
+      "description": "Render + post chain",
+      "chain": "render (renderTOP, geometry='geo_attractor', camera=cam, 720x1280 rgba16float, bgcolora=0) → bloom branch (blur_bloom size 32 → level_bloom brightness1=0.7 driven by ctrl.Bloomamount → comp_bloom screen-blend with render) → mirror_flip (flipx toggled by ctrl.Mirrorenable: 1 enables mirror, 0 makes max(A,A)=A passthrough) → mirror_comp (max blend of bloom + mirrored bloom = bilateral symmetric form) → comp_bg (ADD blend, input0=bg_black constantTOP, input1=mirror_comp; ADD works because render bgcolor is (0,0,0,0) so non-form pixels add nothing) → grain branch (grain_noise randomgpu mono → grain_blur size 1.4 → grain_level brightness1=-0.3 contrast 1.4 opacity driven by ctrl.Grainamount × 0.18 → comp_grain ADD) → null_out → rec_out (movieFileOut, codec=hap, audiochop=base_audio/audio_in, file path Nick-set)"
+    },
+    {
+      "type": "control_panel",
+      "path": "/project1/ctrl_master",
+      "node_type": "baseCOMP",
+      "custom_pages": {
+        "Audio": ["Audiofloor (0..0.5, default 0.10)", "Audioceil (0..3, default 1.10)", "Audioexp (0.5..4, default 1.7)"],
+        "Material": ["Basecolorr (0..0.3, default 0.012)", "Basecolorg (default 0.014)", "Basecolorb (default 0.022)", "Metallic (default 0.92)", "Roughness (default 0.10)", "Specular (default 1.7)"],
+        "Lighting": ["Lightintensity (default 0.85)", "Envintensity (default 0.65)", "Paletteperiodscale (default 2.6)"],
+        "Camera": ["Camradius (default 1.7)", "Camperiod (default 80)", "Camfov (default 32)", "Camelev (default 0.3)"],
+        "Composition": ["Bloomamount (default 1.4)", "Grainamount (default 0.7)", "Mirrorenable (toggle, default on)"],
+        "Form": ["Clusterscale (default 0.75)", "Breathamount (default 0.10)", "Breathperiod (default 18)"]
+      },
+      "wiring": "Every visual op param reads from ctrl_master via ParMode.EXPRESSION. Light dimmer baselines (5.0, 5.0, 1.1, 5.5) preserved as multipliers — Lightintensity scales them globally. Audio curve: 'Audiofloor + Audioceil * (max(0.0, energy)^Audioexp)' — max() clamp required because audio analysis returns tiny negative noise (~e-22) at silence which breaks non-integer exponents."
+    },
+    {
+      "type": "audio_binding",
+      "param": "/project1/sa1.Timescale",
+      "expression": "ctrl.Audiofloor + ctrl.Audioceil * (max(0.0, op('/project1/base_audio/null_audio')['energy']) ** ctrl.Audioexp)",
+      "rationale": "User explicitly limited audio reactivity to ONE binding: speed of point motion. Other potential bindings (light dimmer flash on sub, bloom on energy, scale punch on kick, SA Ua morph on mid) deferred. Curve exponent ^1.7 means quiet sections hold near-still and builds ramp clearly."
+    },
+    {
+      "type": "palette_module",
+      "path": "/project1/palette_lights",
+      "node_type": "textDAT",
+      "module_function": "cycle(channel, period, t, comp) → palette[i0..i1] lerp",
+      "current_palettes_red_register": {
+        "warm": "dark crimson, bright red, blood, vermillion",
+        "cool": "deep burgundy, wine, mulberry, cool blood",
+        "earth": "rust, mahogany, dried blood, ember red",
+        "pale": "bone, pale tan, cream, taupe (rose/coral KILLED — user said no pink)"
+      },
+      "binding": "Each light's cr/cg/cb has expression: PL.cycle('warm|cool|earth|pale', base_period * ctrl.Paletteperiodscale, absTime.seconds, 0|1|2). Base periods: warm 35s, cool 41s, earth 28s, pale 47s — non-syncing primes scaled by ctrl.Paletteperiodscale (default 2.6 for hypnotic register → effective 91s/107s/73s/122s)."
+    },
+    {
+      "type": "recorder",
+      "path": "/project1/rec_out",
+      "node_type": "moviefileoutTOP",
+      "video": "HAP codec, 720x1280, full chain via null_out",
+      "audio": "audiochop = /project1/base_audio/audio_in (raw stereo, same signal feeding audio_out playback)",
+      "file": "Nick-set path (was /Users/nicholasrabow/Desktop/td_exports/mur_sa_mirror.mov at session close)",
+      "trigger": "rec_out.par.record toggle"
+    },
+    {
+      "type": "network_organization",
+      "layout": "Top-down rows at /project1: Y=-800 (ctrl_master), Y=-600 (base_audio), Y=-400 (POPX chain L→R + helpers), Y=-200 (geo_attractor + cam + 4 lights + env + HDR), Y=0 (render → bloom → mirror → comp_bg), Y=300 (grain → comp_grain → null_out → rec_out + palette_lights)",
+      "orphans_deleted": ["noise_swirl", "random_coloru", "lookup_color", "math_scale", "ramp_palette", "ramp_palette_keys", "dof_depth", "lumablur_glow", "atmospheric_bg", "bg_with_nebula", "nebula_noise", "nebula_tint", "nebula_tinted", "glints_noise", "glints_clip", "glints_blur", "glints_tint", "glints_tinted", "bg_final", "geo_aura (+children)", "render_aura", "blur_aura", "level_aura", "mirror_flip_aura", "mirror_aura_comp", "comp_orbs_over_mist", "comp_vignette", "vignette"],
+      "deleted_count": 27
+    },
+    {
+      "type": "register_tunings_explored_during_session",
+      "register_a_hard_chaotic_mushroom_trip": {
+        "audio": "floor 0.05, ceil 1.45, exp 1.3 — sharp beat punch",
+        "material": "green-black tint (0.012, 0.022, 0.012), metallic 0.95, roughness 0.06, specular 2.0 — sharp anxious specular",
+        "lighting": "intensity 1.0, env 0.6 (deep shadow), palette scale 1.0 (fast color thrash 28-47s)",
+        "camera": "R=1.5, period 35s, fov 28 — close, fast",
+        "form": "scale 0.7, breath ±0.18 / 6s — panicked",
+        "palette": "toxic: blood wine, sulfur, bilious green, bruise purple"
+      },
+      "register_b_dark_hypnotic_crimson_FINAL": {
+        "audio": "floor 0.10, ceil 1.10, exp 1.7 — slower buildup, never frozen",
+        "material": "deep jewel-tone (0.012, 0.014, 0.022), metallic 0.92, roughness 0.10, specular 1.7 — softer hypnotic glow",
+        "lighting": "intensity 0.85, env 0.65, palette scale 2.6 (slow drift ~90-120s)",
+        "camera": "R=1.7, period 80s, fov 32, ty=0.3 — contemplative",
+        "form": "scale 0.75, breath ±0.10 / 18s — slow heartbeat",
+        "palette": "red-only: dark crimson → bright red → wine / mulberry / rust / mahogany / bone / taupe"
+      }
+    }
+  ],
+  "lessons_for_debug_log": [
+    "energy_audio_negative_noise_breaks_pow: audio analysis null_audio['energy'] returns tiny negative values (~e-22) at silence — `energy ** non_integer_exp` raises 'float() argument must be a string or a real number' (returns complex). ALWAYS wrap as `max(0.0, energy) ** exp`. Confirmed by /project1/sa1.Timescale error after expression set.",
+    "instance_scale_attribute_only: geometryCOMP.par.instancesx/y/z accept BARE attribute names ('ScaleRand'), NOT expressions ('LenVel*0.6'). For composite math, write the result to a new attribute via mathmixPOP (comb0oper='mult', scopea/b, comb0result='OutAttr') and read OutAttr as the bare instance scale. Earlier attempts at 'LenVel*0.6' silently failed to a fallback (string treated as missing attribute name).",
+    "popx_sa_strips_custom_attrs_through_advection: Custom attributes written upstream of POPX SA (e.g. 'ColorU' from randomPOP before sa1) are dropped at the SA output — only solver-managed attrs (P, PartVel, N, Color, LenVel) pass through. Write per-particle attrs DOWNSTREAM of SA, before geometryCOMP.instanceop chain.",
+    "lookuptexturePOP_attrnumcomps_alpha_quirk: lookuptexturePOP defaults to 4-component RGBA Color attribute even when only RGB is desired. Setting attrnumcomps='3' forces RGB-only — required to avoid alpha-from-R quirks that cause transparent/cyan-tinted instances when applypointcolor=True.",
+    "n_points_returns_typed_per_point: nullPOP.points('Color') returns list of TUPLES per point (not a flat float buffer). nullPOP.points('LenVel') returns list of FLOATS. Don't index as `arr[i*4+k]` — that gives a tuple back. Iterate as `pt = arr[i]; pt[component]`.",
+    "geometrycomp_instance_aim_via_rottoxyz: geometryCOMP supports orient-along-attribute via instancerottox/y/z = 'PartVel(0/1/2)' + instancerottoforward='posz'. Stretches an instance template's local Z axis along the velocity direction — combined with non-uniform sphere_template radx/rady < radz, gives comet-streak look. (Tried then reverted in this session — user wanted spheres not streaks).",
+    "noisetop_curl3d_in_feedback_loop_collapses_attractor: noisePOP curl3d on P injected upstream of SA's null_pop_out feedback compounds frame-over-frame, distorts attractor manifold over seconds. Apply noise OUT of the feedback loop (between null_pop_out and geo.instanceop) to keep SA structure intact. Tried both placements; abandoned overall.",
+    "rendertop_geometry_pattern_match: renderTOP.par.geometry is a glob pattern, NOT a SOP/COMP path. 'geo_attractor' renders only that COMP. 'geo*' renders all. '* ^geo_aura' includes all except geo_aura. Earlier attempt setting it as full path silently failed.",
+    "lumablurtop_versatile: input0=color, input1=mask (depth from depthTOP for true DOF, or color itself for luma-driven self-blur, or any custom mask). widthchan='luminance' on input1 drives blur amount per pixel. Tried both true DOF and luma-bloom — luma-bloom muddied form, killed.",
+    "compositetop_over_input_order: compositeTOP operand='over' treats input1 as TOP layer over input0. With form (alpha=0 on bg pixels) input0 + bg input1 gives FORM ON BLANK BG. With render bgcolor (0,0,0,0), ADD blend works as a simpler mental model (form RGB + bg RGB; non-form pixels = 0+bg = bg).",
+    "live_centroid_tracking_via_executedat: Aizawa attractor instantaneous mass-center is NOT temporally stationary. Hardcoded lookat target drifts off-center over 30-60s as particle distribution cycles around the manifold. Solution: executeDAT.onFrameStart computes mean of null_pop_out.points('P'), applies geo.scale, EMA-lerps target tx/ty/tz at alpha=0.04. ~0.4s lag time-constant — feels cinematic, not jitter.",
+    "td_custom_pars_via_appendcustompage: master = parent.create(baseCOMP); page = master.appendCustomPage('Name'); p = page.appendFloat('Pname', label='Display')[0]; p.default, p.val, p.normMin, p.normMax, p.clampMin, p.clampMax, p.min, p.max — full setup pattern. appendToggle for booleans. Read from expressions as op('ctrl_master').par.Pname.eval().",
+    "non_realtime_mode_audio_clicks_during_playback: TD's non-realtime/export mode renders every frame without skipping. Good for video export but causes audio clicks in playback because audio_out can't keep up with cooked-frame rate. Switch back to realtime for live audio reactivity tuning."
+  ],
+  "open_questions_for_future_iteration": [
+    "Audio reactivity could expand to: sub → light dimmer flash on kick, mid → SA Ua/Ub morph for melody-driven shape change, energy → bloom intensity for build/drop dynamics, high → grain intensity for transient texture. All deferred per Nick's 'only speed binding' directive — revisit on a track-by-track basis.",
+    "Mirror compositing currently bilateral (vertical-flip max blend). Quadrant mirror (4-fold radial symmetry) could push the sigil/mandala register harder for some tracks. Single switchTOP with 3 modes (off / bilateral / quadrant) would expose this.",
+    "Audio analysis pipeline in /project1/base_audio is untouched — sub/bass/mid/high/energy channels available. Only energy is consumed. Worth surveying base_audio internals to confirm energy normalization (currently sits ~0.48 at idle which is suspect).",
+    "Form scale is decoupled from velocity (good). But form spread/density depends on numpoints which is hardcoded at pointgen1.par.numpoints=3000. Expose as ctrl_master.Numpoints if track-specific density tuning becomes desirable.",
+    "Recording: Hap is editing-friendly but huge file size. For final delivery may want h264/h265 swap. Audio currently mono routed from audio_in — confirm stereo preserved for delivery."
+  ]
+}

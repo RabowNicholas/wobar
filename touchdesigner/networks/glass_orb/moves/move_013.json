@@ -1,0 +1,20 @@
+{
+  "label": "star-like motes — multi-stage bloom + warm-white tint",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Replaced the single-pass bloom with a 3-stage Gaussian stack chained through 2-input compositeTOPs (lesson from move_008's failed 3-input attempt: compositeTOP only has 2 input slots; chain them). Stack: render → blur_inner(size=4) → level_inner(brightness=16) | render → blur_motes(size=35, preshrink=2) → level_bloom(brightness=2.5) | render → blur_outer(size=60, preshrink=4) → level_outer(brightness=1.0). Composites: comp_bloom = render+inner; comp_b = comp_bloom+mid; comp_c = comp_b+outer; null_motes_out → comp_c. Sphere shrunk to 0.008 (essentially a point — bloom carries the form). Material tinted warm-white (1.0, 0.95, 0.78). Tried anisotropic blur (filterscalex=8, size=90) for cross-flare star spikes — didn't produce sharp diffraction-spike rays (just stretched gaussians, invisible & expensive at 12 fps), reverted. True IT-cistern diffraction spikes would need a custom GLSL star-filter shader.",
+  "operations": [
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/blur_inner", "before": null},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/level_inner", "before": null},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/blur_outer", "before": null},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/level_outer", "before": null},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/comp_b", "before": null},
+    {"type": "create_node", "path": "/project1/base_glass_orb/base_motes/comp_c", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/geo_motes/sphere_template", "parameter": "radx/rady/radz", "before": 0.025, "after": 0.008},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/blur_motes", "parameter": "size/preshrink/filterscalex/y", "before": "size=70, preshrink=0, fs=1/1", "after": "size=35, preshrink=2, fs=1/1"},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/level_bloom", "parameter": "brightness1", "before": 3.5, "after": 2.5},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/base_motes/geo_motes/mat_motes", "parameter": "colorr/g/b", "before": "(1.0, 1.0, 1.0)", "after": "(1.0, 0.95, 0.78)"},
+    {"type": "connect", "from": "/project1/base_glass_orb/base_motes/level_inner", "to": "/project1/base_glass_orb/base_motes/comp_bloom", "input_index": 1, "before": "level_bloom"},
+    {"type": "connect", "from": "/project1/base_glass_orb/base_motes/comp_c", "to": "/project1/base_glass_orb/base_motes/null_motes_out", "input_index": 0, "before": "comp_bloom"}
+  ]
+}

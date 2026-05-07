@@ -1,0 +1,11 @@
+{
+  "label": "remove specular highlights from glass shader",
+  "timestamp": "2026-04-26T00:00:00Z",
+  "network": "glass_orb",
+  "notes": "Removed both Blinn-Phong specular contributions (primary `spec` driven by ctrl_orb.spec_mult/spec_power, and hardcoded secondary internal reflection `spec2`) so the bright surface shine is gone and the motes become the only emissive accents inside the orb. ctrl_orb spec_mult / spec_power channels remain in the CHOP but are now unused (not rewired). Edge darkening preserved. Note: also accidentally zeroed ctrl_orb.value7 (light_z) when first attempting via ctrl_orb param; restored to 0.7 in the same move.",
+  "operations": [
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/ctrl_orb", "parameter": "value7", "before": 0.7},
+    {"type": "set_parameter", "path": "/project1/base_glass_orb/ctrl_orb", "parameter": "value7", "before": 0.0},
+    {"type": "set_dat_text", "path": "/project1/base_glass_orb/glsl_orb_pixel", "before_chunk_old": "    // Blinn-Phong specular\n    vec3  H    = normalize(V + lightDir);\n    float spec = pow(max(dot(N, H), 0.0), specPow);\n\n    // Edge darkening\n    float edgeDark = pow(1.0 - normDist * 0.30, 2.0);\n\n    // Secondary internal reflection\n    vec3  lightDir2 = normalize(lightDir * vec3(-0.5, 0.3, 1.0));\n    float spec2     = pow(max(dot(N, normalize(V + lightDir2)), 0.0), specPow * 0.35) * 0.22;\n\n    vec3 sphereRGB = refractRGB * edgeDark;\n    sphereRGB += vec3(spec) * specMult;\n    sphereRGB += vec3(spec2) * 1.1;", "after_chunk_new": "    // Edge darkening\n    float edgeDark = pow(1.0 - normDist * 0.30, 2.0);\n\n    vec3 sphereRGB = refractRGB * edgeDark;\n    // (specular highlights removed — let the motes carry the bright accents)"}
+  ]
+}

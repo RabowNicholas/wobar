@@ -1,0 +1,83 @@
+{
+  "label": "add edge content masking — circle_mask, comp_edge, null_content; animate noise tz",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/circle_mask",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/comp_edge",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/null_content",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "tz (expression)",
+      "before": "0"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "period",
+      "before": 1.0
+    },
+    {
+      "type": "disconnect",
+      "from": "/project1/base_act3_kaleido/noise_content",
+      "to": "/project1/base_act3_kaleido/feedback_tunnel",
+      "input_index": 0,
+      "before": "noise_content → feedback_tunnel[0]"
+    },
+    {
+      "type": "disconnect",
+      "from": "/project1/base_act3_kaleido/noise_content",
+      "to": "/project1/base_act3_kaleido/comp_main",
+      "input_index": 0,
+      "before": "noise_content → comp_main[0]"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/noise_content",
+      "to": "/project1/base_act3_kaleido/comp_edge",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/circle_mask",
+      "to": "/project1/base_act3_kaleido/comp_edge",
+      "input_index": 1,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/comp_edge",
+      "to": "/project1/base_act3_kaleido/null_content",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/null_content",
+      "to": "/project1/base_act3_kaleido/feedback_tunnel",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/null_content",
+      "to": "/project1/base_act3_kaleido/comp_main",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

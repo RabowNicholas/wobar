@@ -1,0 +1,70 @@
+{
+  "label": "add GLSL kaleidoscope — ctrl_kaleido CHOP, glsl_kaleido TOP, null_kaleido output",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/ctrl_kaleido",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido_pixel",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/base_act3_kaleido/null_kaleido",
+      "before": null
+    },
+    {
+      "type": "set_dat_text",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido_pixel",
+      "before": "// Example Pixel Shader\n// uniform float exampleUniform;\nout vec4 fragColor;\nvoid main()\n{\n\tvec4 color = vec4(1.0);\n\tfragColor = TDOutputSwizzle(color);\n}"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "parameter": "vec0name",
+      "before": ""
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "parameter": "vec0valuex (expr: op('ctrl_kaleido')['N'])",
+      "before": "0.0"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "parameter": "vec0valuey (expr: op('ctrl_kaleido')['angle_offset'])",
+      "before": "0.0"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/glsl_kaleido",
+      "parameter": "vec0valuez (expr: op('ctrl_kaleido')['fold_blend'])",
+      "before": "0.0"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/null_out",
+      "to": "/project1/base_act3_kaleido/glsl_kaleido",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_act3_kaleido/glsl_kaleido",
+      "to": "/project1/base_act3_kaleido/null_kaleido",
+      "input_index": 0,
+      "before": null
+    }
+  ]
+}

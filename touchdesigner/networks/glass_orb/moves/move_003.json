@@ -1,0 +1,53 @@
+{
+  "label": "energy-driven saturation — lvc_bg (HSV Adjust) inserted between null_bg and both glsl_orb inputs",
+  "timestamp": "2026-04-24T00:00:00Z",
+  "network": "glass_orb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/base_glass_orb/lvc_bg",
+      "before": null
+    },
+    {
+      "type": "disconnect",
+      "from": "/project1/base_glass_orb/null_bg",
+      "to": "/project1/base_glass_orb/blur_bg",
+      "input_index": 0,
+      "before": "null_bg → blur_bg[0]"
+    },
+    {
+      "type": "disconnect",
+      "from": "/project1/base_glass_orb/null_bg",
+      "to": "/project1/base_glass_orb/glsl_orb",
+      "input_index": 0,
+      "before": "null_bg → glsl_orb[0]"
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/null_bg",
+      "to": "/project1/base_glass_orb/lvc_bg",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/lvc_bg",
+      "to": "/project1/base_glass_orb/blur_bg",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/base_glass_orb/lvc_bg",
+      "to": "/project1/base_glass_orb/glsl_orb",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_glass_orb/lvc_bg",
+      "parameter": "saturationmult.expr",
+      "before": ""
+    }
+  ]
+}

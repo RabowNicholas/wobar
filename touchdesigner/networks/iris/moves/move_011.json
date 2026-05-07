@@ -1,0 +1,24 @@
+{
+  "label": "expose pupil radius as ctrl_master.par.Puprad — first param of the master control dashboard",
+  "timestamp": "2026-05-04T22:42:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/ctrl_master",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/circle_pupil",
+      "parameter": "radiusx",
+      "before": {"mode": "CONSTANT", "value": 175.0}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/circle_pupil",
+      "parameter": "radiusy",
+      "before": {"mode": "CONSTANT", "value": 175.0}
+    }
+  ]
+}

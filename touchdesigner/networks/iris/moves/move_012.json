@@ -1,0 +1,56 @@
+{
+  "label": "iris-over-video composite (v1) + expose Irisx/Irisy position params on ctrl_master",
+  "timestamp": "2026-05-04T22:55:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/xform_iris_replace",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/mask_iris_video",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_iris_masked",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_video_replace",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/null_video_replace_out",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/xform_iris_replace",
+      "parameter": "tx",
+      "before": {"mode": "CONSTANT", "value": 18.0}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/xform_iris_replace",
+      "parameter": "ty",
+      "before": {"mode": "CONSTANT", "value": -60.0}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/mask_iris_video",
+      "parameter": "centerx",
+      "before": {"mode": "CONSTANT", "value": 18.0}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/mask_iris_video",
+      "parameter": "centery",
+      "before": {"mode": "CONSTANT", "value": -60.0}
+    }
+  ]
+}

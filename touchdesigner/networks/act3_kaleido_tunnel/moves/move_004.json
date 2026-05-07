@@ -1,0 +1,37 @@
+{
+  "label": "reorganize network layout + update resolution to 1080x1920 portrait",
+  "timestamp": "2026-04-22T00:00:00Z",
+  "network": "act3_kaleido_tunnel",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "resolutionw",
+      "before": 1280
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/noise_content",
+      "parameter": "resolutionh",
+      "before": 720
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/circle_mask",
+      "parameter": "resolutionw",
+      "before": 1280
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/circle_mask",
+      "parameter": "resolutionh",
+      "before": 720
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_act3_kaleido/circle_mask",
+      "parameter": "radiusunit",
+      "before": "fraction"
+    }
+  ]
+}

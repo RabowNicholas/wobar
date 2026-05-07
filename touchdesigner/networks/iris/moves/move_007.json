@@ -1,0 +1,24 @@
+{
+  "label": "add black pupil circle (80% of iris diameter): circle_pupil + comp_pupil between hsvadj1 and null_out",
+  "timestamp": "2026-05-04T21:50:00Z",
+  "network": "iris",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/circle_pupil",
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_pupil",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/comp_pupil",
+      "to": "/project1/null_out",
+      "input_index": 0,
+      "before": "/project1/hsvadj1"
+    }
+  ]
+}
