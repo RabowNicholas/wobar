@@ -1,0 +1,89 @@
+{
+  "label": "Bilateral mirror layout — square render → flipTOP → side-by-side composite into portrait canvas",
+  "timestamp": "2026-05-07T16:50:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "The 'two intelligences meeting / Three Versions meeting at the mirror' framing in TD-side composition. Render the SA cloud once at 720×720, then flip horizontally and place left+right halves of a 720×1280 portrait canvas. Invisible centerline seam; clouds are perfectly bilaterally symmetric.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/xform_left",
+      "OPType": "transformTOP",
+      "before": null,
+      "config": {
+        "outputresolution": "custom",
+        "resolutionw": 720,
+        "resolutionh": 1280,
+        "outputaspect": "resolution",
+        "tunit": "fraction",
+        "sx": 0.5,
+        "sy": 0.5,
+        "tx": -0.25,
+        "ty": 0,
+        "extend": "zero"
+      },
+      "input": "/project1/render_attractor",
+      "notes": "Renders 720×720 source at half-size (360×360) shifted to left half of 720×1280 portrait canvas. tx=-0.25 fraction (=180px shift left). Vertical center."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/flip_horizontal",
+      "OPType": "flipTOP",
+      "before": null,
+      "config": {
+        "flipx": true,
+        "flipy": false
+      },
+      "input": "/project1/render_attractor",
+      "notes": "Mirrored copy of render. Same source — symmetry guaranteed."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/xform_right",
+      "OPType": "transformTOP",
+      "before": null,
+      "config": {
+        "outputresolution": "custom",
+        "resolutionw": 720,
+        "resolutionh": 1280,
+        "outputaspect": "resolution",
+        "tunit": "fraction",
+        "sx": 0.5,
+        "sy": 0.5,
+        "tx": 0.25,
+        "ty": 0,
+        "extend": "zero"
+      },
+      "input": "/project1/flip_horizontal",
+      "notes": "Same scale as xform_left, shifted to right half (tx=+0.25). Receives flipped source."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/comp_mirror",
+      "OPType": "compositeTOP",
+      "before": null,
+      "config": {
+        "operand": "add"
+      },
+      "inputs": ["/project1/xform_left", "/project1/xform_right"],
+      "notes": "Add blend — non-overlapping halves so add behaves identically to over. Invisible seam at canvas center because both sides produce black at the centerline (extend='zero' fills outside source with transparent/black)."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/null_mirror_out",
+      "OPType": "nullTOP",
+      "before": null,
+      "input": "/project1/comp_mirror",
+      "notes": "Final output buffer. 720×1280 portrait. Will become the input to the HDR post chain (move_004)."
+    }
+  ],
+  "verified": [
+    "two clouds visible at left/right halves of portrait canvas, perfect mirror symmetry",
+    "no visible seam at centerline (both sides black-zero at centerline)",
+    "0 hard errors"
+  ],
+  "open_decisions": [
+    "Each eye is 360×360 in 720×1280 — leaves 280px black bars top+bottom (cinematic letterbox). Can re-scale in move_005 if eyes feel too small after HDR post lifts the visual weight.",
+    "Could alternatively render at 360×720 (taller-than-wide native cloud aspect) for larger eyes — would require camera/scene adjustment. Current path keeps cloud square + accepts letterbox."
+  ],
+  "next_move": "move_004 — HDR cinematic post chain: hsv_mute (saturationmult=0.78) → level_post (crushed blacks inlow=0.06, roll highlights inhigh=0.95, contrast=1.18, gamma=0.92 cinematic S-curve) → bloom_post (output='inputplusbloom', threshold=0.4, intensity=1.1, maxbloomradius=0.22). Lifted from iris_2 final params."
+}

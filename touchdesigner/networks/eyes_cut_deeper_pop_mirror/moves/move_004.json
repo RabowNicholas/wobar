@@ -1,0 +1,80 @@
+{
+  "label": "HDR cinematic post chain — hsv_mute + level_post + bloom_post (lifted from iris_2 final params)",
+  "timestamp": "2026-05-07T17:00:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "Replaces attractor_chamber's grain-add atmospheric with the proven HDR cinematic eye chain from iris_2. Crushed blacks → S-curve gamma → bloom 'inputplusbloom' = signature 'burning embers' luminous look. Pulls the cloud into the cusp 4→5 'heavy and beautiful' register: heavy via crushed darks, beautiful via bloom halo on cycling-color particles.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/hsv_mute",
+      "OPType": "hsvadjustTOP",
+      "before": null,
+      "config": {
+        "saturationmult": 0.78
+      },
+      "input": "/project1/comp_mirror",
+      "notes": "WOBAR muted register — 0.78 from iris_2 final tuning. Brings cycling-light colors down from saturated to dusty-30%-from-neon range."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/level_post",
+      "OPType": "levelTOP",
+      "before": null,
+      "config": {
+        "inlow": 0.06,
+        "inhigh": 0.95,
+        "outlow": 0.0,
+        "outhigh": 1.0,
+        "contrast": 1.18,
+        "gamma1": 0.92
+      },
+      "input": "/project1/hsv_mute",
+      "notes": "Crushed blacks (inlow=0.06 — anything below pure black), rolled highlights (inhigh=0.95 — compresses brightest), more contrast, S-curve gamma (0.92 cinematic). Lifted from iris_2."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/bloom_post",
+      "OPType": "bloomTOP",
+      "before": null,
+      "config": {
+        "bloomthreshold": 0.4,
+        "bloomintensity": 1.1,
+        "maxbloomradius": 0.22,
+        "minbloomradius": 0.005,
+        "bloomscurve": 0.75,
+        "bloomfill": 0.6,
+        "pregamma": 1.1,
+        "output": "inputplusbloom"
+      },
+      "input": "/project1/level_post",
+      "notes": "HDR signature. inputplusbloom = original + bloom result. Lifted from iris_2 final params. Particles glow with halos in the dusty WOBAR palette — luminous-iris-in-black-void register."
+    },
+    {
+      "type": "rewire",
+      "path": "/project1/null_mirror_out",
+      "from": "/project1/comp_mirror",
+      "to": "/project1/bloom_post",
+      "input_index": 0,
+      "notes": "null_mirror_out now reads from end of HDR post chain instead of comp_mirror directly."
+    },
+    {
+      "type": "set_parameter_batch",
+      "paths": ["/project1/xform_left", "/project1/xform_right"],
+      "parameters": {
+        "bgcolorr": 0,
+        "bgcolorg": 0,
+        "bgcolorb": 0,
+        "bgcolora": 1.0
+      },
+      "before": "transparent (bgcolora=0)",
+      "notes": "Without opaque-black bg, areas outside the source render area show as transparent. Setting bgcolora=1 makes the letterbox top/bottom bars solid black instead of TD-checkerboard transparent."
+    }
+  ],
+  "verified": [
+    "Render output reads as cinematic — solid black bg, dusty-mauve cloud, bloom halo on particles",
+    "Crushed blacks lock the eye reading (no faded grays in the dark)",
+    "At Energy=0.85 the Aizawa torus is sculpting; bilateral mirror creates butterfly/two-halves-of-iris reading",
+    "0 hard errors"
+  ],
+  "next_move": "move_005 — record_out moviefileoutTOP (h264 yuv420 mp4, audio_master/audio_in @ 44100Hz). Drop in base_audio_v001.tox, bind ctrl_master.par.Energy.expr to audio_master/smooth_out['energy']. Final ctrl_master polish."
+}

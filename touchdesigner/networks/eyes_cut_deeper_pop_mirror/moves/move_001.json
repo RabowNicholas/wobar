@@ -1,0 +1,126 @@
+{
+  "label": "SA pipeline + sphere instancing + audio binding (canonical attractor_chamber lift)",
+  "timestamp": "2026-05-07T16:07:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "Third visualizer for Eyes Cut Deeper remix (cusp 4→5). Lifts SA + sphere instance pattern from attractor_chamber/move_001.json (which built inside a baseCOMP) but builds directly at /project1 per attractor_chamber v002 simplification. POPX SA module copied from POPX_Examples_1_3_0/examples/strange-attractors.tox.",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/ctrl_master",
+      "OPType": "baseCOMP",
+      "before": null,
+      "notes": "Custom Audio page with Energy/Audiofloor/Audioceil/Audioexp params. Energy=0 default (manual slider, audio binding deferred until base_audio is dropped in)."
+    },
+    {
+      "type": "load_tox_extract_components",
+      "source_tox": "/Users/nicholasrabow/Desktop/wobar/wobar/touchdesigner/third_party/POPX/POPX_Examples_1_3_0/examples/strange attractors.tox",
+      "extracted": ["pointgen1 (pointgeneratorPOP)", "sa1 (geometryCOMP — POPX SA module)"],
+      "notes": "Loaded example container, copied pointgen1 and sa1 to /project1, deleted the example container. Cleared orphan parent.Example/parent.POPX expressions on sa1.Startpulse and sa1/feedback1.startpulse."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/sa1",
+      "parameter": "Strangeattractor",
+      "value": "aizawa",
+      "before": "thomas",
+      "notes": "Aizawa attractor — torus with internal structure, reads as iris-like radial pattern from front-on camera angle"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/sa1",
+      "parameter": "Solvermode",
+      "value": "advect",
+      "before": "advect"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/sa1",
+      "parameter": "Timescale.expr",
+      "value": "op('ctrl_master').par.Audiofloor + op('ctrl_master').par.Audioceil * pow(max(0.0, op('ctrl_master').par.Energy), op('ctrl_master').par.Audioexp)",
+      "before": null,
+      "notes": "Single audio binding per attractor_chamber pattern. max(0.0, energy) clamp required — audio analysis returns ~e-22 negative noise at silence, breaking non-integer pow()."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/pointgen1",
+      "parameter": "numpoints",
+      "value": 3000,
+      "before": 100000,
+      "notes": "Default tox numpoints was 100k — too many. attractor_chamber proven at 3000."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/null_pop_out",
+      "OPType": "nullPOP",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/sa1",
+      "to": "/project1/null_pop_out",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/geo_attractor",
+      "OPType": "geometryCOMP",
+      "before": null
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/geo_attractor/torus1",
+      "before": "default torus child auto-created by geometryCOMP",
+      "notes": "Per gotcha tracker: geometryCOMP auto-creates torus1 (render=True) — kills new builds with white blob unless destroyed"
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/geo_attractor/sphere_template",
+      "OPType": "sphereSOP",
+      "before": null,
+      "notes": "radx/rady/radz=0.02 (tiny — instanced 3000x). render=True, display=True."
+    },
+    {
+      "type": "set_parameter_batch",
+      "path": "/project1/geo_attractor",
+      "parameters": {
+        "instancing": true,
+        "instancecountmode": "manual",
+        "numinstances": 3000,
+        "instanceop": "/project1/null_pop_out",
+        "instancetx": "P(0)",
+        "instancety": "P(1)",
+        "instancetz": "P(2)"
+      },
+      "before": null,
+      "notes": "Per gotcha tracker: oplength reads 1 from POPX null even when numPoints=3000 — must use manual mode + explicit count. Master par.instancing must be True (separate from instance0 sub-counter). Attribute syntax is 'P(N)' parens for component access."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/cam_attractor",
+      "OPType": "cameraCOMP",
+      "before": null,
+      "notes": "tx/ty=0, tz=5 (back from origin). bg black. lookat will be added in move_002 (centroid tracker)."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/light_test",
+      "OPType": "lightCOMP",
+      "before": null,
+      "notes": "TEMPORARY single light at (2,2,2) for move_001 verification. To be replaced by 4 palette-cycling lights in move_002."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/render_attractor",
+      "OPType": "renderTOP",
+      "before": null,
+      "notes": "720x720 square. par.geometry='geo_attractor' (glob pattern, NOT full path — full path silently fails per gotcha tracker)."
+    }
+  ],
+  "verified": [
+    "renderTOP shows 3000 instanced spheres in 3D distribution",
+    "ctrl_master.par.Energy 0→1 drives sa1.Timescale 0.1→2.1 via the audio expression",
+    "0 hard errors; 2 warnings cosmetic (POPX-internal sync warnings)"
+  ],
+  "next_move": "move_002 — replace light_test with 4 palette-cycling lights + add centroid tracker for camera lookat (Aizawa's mass-center wanders, fixed lookat causes drift)"
+}

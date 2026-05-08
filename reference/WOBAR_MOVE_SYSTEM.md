@@ -57,6 +57,9 @@ wobar/touchdesigner/networks/
 | mycelium_chamber | /project1 (no wrapping baseCOMP) |
 | magnet_chamber | /project1 (no wrapping baseCOMP) |
 | iris | /project1 (no wrapping baseCOMP) |
+| iris_2 | /project1 (no wrapping baseCOMP) |
+| eyes_cut_deeper | /project1 (no wrapping baseCOMP) |
+| eyes_cut_deeper_pop_mirror | /project1 (no wrapping baseCOMP) |
 
 Add a row here whenever a new network is created.
 

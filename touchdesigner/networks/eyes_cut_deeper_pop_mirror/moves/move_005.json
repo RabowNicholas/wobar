@@ -1,0 +1,52 @@
+{
+  "label": "Audio wiring + record_out moviefileoutTOP — close-out",
+  "timestamp": "2026-05-07T17:15:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "Drop in canonical base_audio_v001.tox, bind ctrl_master.par.Energy to the smooth_out energy channel, wire moviefileoutTOP at the end of the chain for h264+audio export.",
+  "operations": [
+    {
+      "type": "load_tox",
+      "tox_path": "/Users/nicholasrabow/Desktop/wobar/wobar/touchdesigner/base_audio_0_1.tox",
+      "result": "/project1/audio_master",
+      "before": null,
+      "notes": "Canonical 8-channel WOBAR audio analysis tox: sub_bass, bass, mid, high, energy, sub_pressure, growl, transient. audio_in is raw 44100Hz stereo, smooth_out is lagged 60Hz timeslice analysis."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/ctrl_master",
+      "parameter": "Energy.expr",
+      "value": "op('/project1/audio_master/smooth_out')['energy']",
+      "before": "manual slider value (0)",
+      "notes": "Bind ctrl_master.Energy directly to audio analysis. Drives sa1.Timescale via the existing audio expression on the SA module."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/record_out",
+      "OPType": "moviefileoutTOP",
+      "before": null,
+      "config": {
+        "type": "movie",
+        "moviecontainer": "mp4",
+        "videocodec": "h264",
+        "videopixelformat": "yuv420",
+        "qualitymode": "high",
+        "fps": 60,
+        "outputresolution": "custom",
+        "resolutionw": 720,
+        "resolutionh": 1280,
+        "input0top": "/project1/null_mirror_out",
+        "audiochop": "/project1/audio_master/audio_in",
+        "file": "touchdesigner/networks/eyes_cut_deeper_pop_mirror/exports/eyes_cut_deeper_pop_mirror_v001.mp4"
+      },
+      "notes": "Per gotcha tracker: moviefileoutTOP audiochop MUST be raw audio_in (44100Hz), NOT smooth_out (60Hz timeslice analysis chain). Idle viewport shows 128×128 placeholder; actual recording writes at outputresolution (720×1280) when par.record=True is pulsed."
+    }
+  ],
+  "verified": [
+    "audio_master 8 channels live; ctrl_master.Energy reads ~0.6 with audio playing",
+    "record_out wired to null_mirror_out via input0top",
+    "audiochop = audio_master/audio_in (44100Hz raw stereo)",
+    "0 hard errors"
+  ],
+  "build_complete": true,
+  "to_render": "Set audio_master/audio_in.par.file to the mp3/wav for the song. Set audio_in.par.cuepulse to seek to start. Toggle record_out.par.record to True. Let song play through. Toggle record_out.par.record to False when complete. Output mp4 lands at the configured file path."
+}

@@ -1,0 +1,95 @@
+{
+  "label": "4 palette-cycling lights (cusp 4→5 weighting) + centroid tracker for camera lookat",
+  "timestamp": "2026-05-07T16:30:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "Replace temporary light_test with the proven 4-light palette-cycling rig (per attractor_chamber). Light colors weighted toward heavy cusp 4→5 register: wine magenta, petrol/oxidized teal, bronze patina/oxidized copper, deep purple range. Each light cycles between two palette colors over a prime-period (47/67/53/60 sec) so cycles never sync.\n\nAdd centroid_tracker executeDAT with EMA-lerp on lookat_target (alpha=0.04, ~0.4s cinematic time constant) — Aizawa's mass-center wanders, fixed lookat causes camera drift. Pattern proven in attractor_chamber.",
+  "operations": [
+    {
+      "type": "delete_node",
+      "path": "/project1/light_test",
+      "before": "single basic lightCOMP at (2,2,2), placeholder from move_001",
+      "notes": "Replaced by 4 palette-cycling lights below"
+    },
+    {
+      "type": "create_node_batch",
+      "lights": [
+        {
+          "path": "/project1/light_wine",
+          "OPType": "lightCOMP",
+          "pos": [3, 1, 2],
+          "color_a_hex": "#5A0F41 (wine magenta)",
+          "color_b_hex": "#B34E8F (muted magenta)",
+          "period_s": 47,
+          "dimmer": 1.5
+        },
+        {
+          "path": "/project1/light_petrol",
+          "OPType": "lightCOMP",
+          "pos": [-3, 1, 2],
+          "color_a_hex": "#2C4554 (petrol)",
+          "color_b_hex": "#1E505A (oxidized teal)",
+          "period_s": 67,
+          "dimmer": 1.5
+        },
+        {
+          "path": "/project1/light_bronze",
+          "OPType": "lightCOMP",
+          "pos": [3, -1, -2],
+          "color_a_hex": "#5A5240 (bronze patina)",
+          "color_b_hex": "#6F4E3A (oxidized copper)",
+          "period_s": 53,
+          "dimmer": 1.5
+        },
+        {
+          "path": "/project1/light_purple",
+          "OPType": "lightCOMP",
+          "pos": [-3, -1, -2],
+          "color_a_hex": "#190028 (deep purple dark)",
+          "color_b_hex": "#5A0F78 (deep purple highlight)",
+          "period_s": 60,
+          "dimmer": 1.5
+        }
+      ],
+      "notes": "Color cycle expression on each cr/cg/cb par: 'a + (b-a) * (0.5 + 0.5 * sin(absTime.seconds * 2π / period))'. Color params are cr/cg/cb (NOT lightcolorr/g/b — fixed during build). Light positions form a tetrahedral arrangement so the cloud is lit from 4 angles.",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/render_attractor",
+      "parameter": "lights",
+      "value": "light_*",
+      "before": "/project1/light_test",
+      "notes": "Glob pattern matches all 4 light_* COMPs. Per gotcha: par.lights is a glob pattern, full paths silently work for single light only."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/lookat_target",
+      "OPType": "geometryCOMP",
+      "before": null,
+      "notes": "geometryCOMP used as empty transform anchor (baseCOMP has no tx/ty/tz; containerCOMP is panel-only). render=False, display=False, default torus child destroyed. Updated each frame by centroid_tracker."
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/centroid_tracker",
+      "OPType": "executeDAT",
+      "before": null,
+      "callback": "onFrameStart",
+      "callback_text": "Reads null_pop_out.points('P'), computes mean (mx, my, mz), EMA-lerps lookat_target.tx/ty/tz with alpha=0.04 (~0.4s time constant at 60fps).",
+      "notes": "par.active=True, par.framestart=True. Per attractor_chamber: alpha=0.04 feels cinematic, not jittery — Aizawa's instantaneous centroid wanders, EMA smooths it without losing tracking."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/cam_attractor",
+      "parameter": "lookat",
+      "value": "/project1/lookat_target",
+      "before": "(empty)",
+      "notes": "Camera now follows the cloud's wandering mass-center. As Aizawa evolves, lookat keeps cloud framed."
+    }
+  ],
+  "verified": [
+    "render shows 3000 spheres lit by 4 cycling lights — wine/petrol/bronze/purple palette weights",
+    "lookat_target updates from (0,0,0) toward live centroid as SA evolves (verified at -0.003, -0.008, -0.020 after a few frames)",
+    "0 hard errors; 2 warnings cosmetic (POPX-internal sync warnings)"
+  ],
+  "next_move": "move_003 — bilateral mirror layout: render at 720x720 → flipTOP horizontal → side-by-side composite into 720x1280 portrait canvas with invisible centerline seam"
+}
