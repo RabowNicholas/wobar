@@ -176,6 +176,53 @@ Text POP ("WOBAR", sample path) ──► 500 points along letter outlines
 
 ---
 
+## Pattern N — Geometry Self-Replication via Transform-and-Merge Branches (low-N "manual instancing")
+
+For small numbers of differently-transformed copies (3–8), explicit transform-merge branches are often cleaner than full instancing — each branch can have its own static position AND animated rotation independently.
+
+POPX `sweep_example.toe` canonical: ONE sweep output forked into 3 transform-pair branches, each pair = static position + animated rotation, then merged.
+
+```
+sweep_or_geo_output
+  ├──▶ transform1 (tx=2/3, ty=2/3, ry=120°, rz=-30°)   ── static position
+  │      └──▶ transform4 (ry.expr = 'absTime.seconds*15')   ── animated rotation
+  │             ↓
+  │           mergePOP.in0
+  │
+  ├──▶ transform2 (ty=1/30 — tiny offset)
+  │      └──▶ transform3 (ry.expr = 'absTime.seconds*15')
+  │             ↓
+  │           mergePOP.in1
+  │
+  └──▶ transform5 (tx=2/3, ty=-2/3, ry=-90°, rz=10°)
+         └──▶ transform6 (ry.expr = 'absTime.seconds*15')
+                ↓
+              mergePOP.in2
+              ↓
+         downstream rendering
+```
+
+**Why two transforms per branch instead of one:**
+- The FIRST transform sets the STATIC position + orientation offset (where this copy lives in the composition)
+- The SECOND transform applies the ANIMATED rotation (`absTime.seconds * speed` expression)
+- This separation lets you tune layout once and never touch it again while the animation runs cleanly
+
+**When to use this vs. true instancing:**
+- ≤ ~8 copies, each needing distinctly different transforms (especially animated independently)
+- You want each copy to be addressable individually for later branching
+- The geometry isn't expensive enough that you need GPU instancing
+
+**When NOT to use this:**
+- N > ~10: switch to geometryCOMP instancing via POP attributes (see Pattern 1)
+- All copies should have identical animation: use a single transform + the geo COMP's instancing tab
+
+**Pattern variations:**
+- 3-fold (120° between branches) for triangular symmetry
+- 4-fold (90° between branches) for cross symmetry
+- Plus translation offsets for non-radial compositions
+
+---
+
 ## Pattern 10 — Per-Instance Material Variation
 
 Material reads per-instance attributes:

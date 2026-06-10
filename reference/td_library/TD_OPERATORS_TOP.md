@@ -41,6 +41,9 @@ Solid color fill.
 Linear / radial / circular gradients.
 - Params: Keys (color stops), Type (linear/radial/circular/spiral), Phase, Angle.
 - Use: backgrounds, ramps for Lookup TOP, soft masks.
+- **`type='circular'` (often overlooked)**: radial gradient from center outward — perfect for circular masks, radial vignettes, falloff zones, POPX Texture Falloff inputs. Square resolution required (1024×1024 typical). POPX `dla.toe` uses a 1024×1024 circular ramp wired into `texture_falloff1.in1` as a per-point spatial falloff weight.
+- Keys are defined in a tableDAT (`pos r g b a` rows) and assigned via `par.dat`, NOT via par.color — the par-color editor only works for very simple ramps.
+- **`combineinput='res'` when ramp has an input wired**: generates the ramp at the INPUT'S RESOLUTION. Useful for producing spatial mask/gradient maps that match a render output's dimensions — wire the render into the ramp's input, set `combineinput='res'`, downstream depth-aware effects (lumablurTOP) get a control map sized to match. POPX `curve advection.toe` uses this for a radial soft-focus mask.
 
 ### Noise TOP
 GPU noise texture — Perlin, Simplex, Sparse, Alligator, Random, Hermite.
@@ -197,6 +200,9 @@ Applies a math function (sin, pow, abs, etc.) per pixel.
 
 ### Limit TOP
 Clamp values to a range.
+- **`norm=True, normmin=N, normmax=M` (normalization mode)**: verified via TD help — "Normalize values in the output image so that they are all scaled and shifted to fall between the Normalized Minimum and Maximum." Input gets compressed/expanded to land in `[normmin, normmax]`. Useful for taming unpredictable upstream brightness (solver outputs, accumulating feedback, fluid color).
+  - `normmin=0, normmax=1.2` (POPX `physarum_dumps.toe`): light overbright ceiling, floor at 0.
+  - `normmin=0.2, normmax=6.1` (POPX `sweep_example.toe`): lift dark floor + significant overbright headroom — guarantees bright output AND prevents pure-black areas. Useful when downstream additive blending needs intentional minimum brightness.
 
 ### Remap TOP
 UV remapping using an input remap texture.
@@ -401,6 +407,54 @@ Attached to Render TOP for AA during rendering.
 
 ### MSAA on Render TOP
 Render TOP → Common tab → Antialias = 2×, 4×, 8×.
+
+---
+
+## Render Post / Depth (work on render output)
+
+### Depth TOP
+Extracts the depth buffer from a Render TOP (or arbitrary geometry pass) as a 2D texture.
+- Params: `op` (the render TOP to sample), `pixelformat='r16float'` (single-channel high-precision depth), `depthspace` (`linear` / `camera` / `reranged`), `rangeto1`, `rangeto2` (custom near/far when `depthspace='reranged'`), `gamma` (response curve).
+- **`depthspace='reranged'`** is the workhorse mode: maps camera depth to a custom range (e.g. `rangeto1=0, rangeto2=125`) so downstream depth-aware effects (DOF, fog, lumablur) have meaningful values across the scene's actual depth extent. Apply a non-linear `gamma` (e.g. 5.0) to bias the response toward foreground.
+- Output is what fog / depth-of-field / `lumablurTOP` consume.
+
+### SSAO TOP
+Screen-Space Ambient Occlusion — darkens contact points between geometry for shadow/depth cues without true ray tracing.
+- Params: `ssaopassres` (`full` / `half` — full = best quality, expensive), `ssaoradius` (sample radius; 1.0 typical), `contrast`, `edgethresh`.
+- Cheap relative to true GI; essential for visual separation in dense particle clouds or instanced geometry where adjacent elements would otherwise blur into a mass.
+- Canonical config (POPX `dla.toe`): `ssaopassres='full'`, `ssaoradius=1.0`, `contrast=1.2`, `edgethresh=0.1`.
+
+### Luma Blur TOP
+Per-pixel variable blur — kernel size varies based on the luminance of a control input.
+- Inputs: in0 = image to blur, in1 = control map.
+- Params: `blackwidth` / `whitewidth` (kernel at black/white control), `blackvalue` / `whitevalue` (input intensity considered black/white for scaling — defaults 0/1).
+- **Three canonical uses:**
+  - **Depth-of-field-style:** `whitewidth=15, blackwidth=0` with a `depthTOP` feeding in1 → foreground (near = black in reranged depth) stays sharp, background softens. POPX `dla.toe` pattern.
+  - **Radial / spatial soft-focus:** `blackwidth=5, whitewidth=1` (INVERTED — dark = MORE blur) with a `rampTOP type='circular'` feeding in1 → vignette-style soft-focus where center is sharp and edges blur. POPX `curve advection.toe`.
+  - **Inverted radial (POPX `sweep_example.toe`):** `blackvalue=1.0, whitevalue=0.0, whitewidth=40` with a circular ramp → flips the intensity mapping so that input white = blur 0, input black = blur 40. Same visual logic as the inverted case above but via the value remap rather than width swap.
+- Control input can be ANY TOP — depth, ramp, alpha mask, animated noise — wherever you want spatially-varying blur strength.
+
+### Normal Map TOP
+Generates a tangent-space normal map (XYZ encoded as RGB) from a luminance-based heightmap input.
+- Inputs: in0 = source TOP (a height/luminance field — typically a noiseTOP for procedural surface detail, or a baked heightmap).
+- Key params: `zscale` (controls how "deep" the height extrudes into the normal vectors — higher = stronger relief).
+- Use: feed downstream to `pbrMAT.par.normalmap` for procedural surface bumps without modifying geometry. POPX `sweep_example.toe` pattern:
+```
+noiseTOP (type='simplex3d', amp=0.24, 1024×1024, rgba32float)
+   ↓
+normalmapTOP (zscale=0.32)
+   ↓
+nullTOP → pbrMAT.par.normalmap
+```
+Use `rgba32float` for high precision before normal encoding (noise → normalmap chain benefits from float precision). The canonical file uses `period=0` on the noiseTOP — interpretation unverified; observed to produce a visible normalmap with surface detail. Animate via the noiseTOP's `tx/ty/tz` translate params if temporal evolution is desired.
+
+### Cross TOP
+Crossfade composite between two inputs.
+- Inputs: in0 ("Input1"), in1 ("Input2").
+- Params: `cross` (0.0–1.0, **default 0.5** = even 50/50 mix) explicit blend ratio. **Verified via help: `cross=0` outputs Input1 (in0), `cross=1` outputs Input2 (in1).**
+- Use: blending current and previous frames for trail accumulation (paired with feedbackTOP). Lighter-weight than compositeTOP for simple A/B blends.
+- **Tuning trail length** in a feedback-cross pattern: `cross=0.5` is even-balanced (long trails). Push HIGHER (e.g. 0.65) for shorter trails (more weight to current frame); LOWER (e.g. 0.35) for longer accumulating trails. POPX `physarum_dumps.toe` uses `cross=0.35`.
+- **Niche pattern — blending raw output with normalized version** (POPX `sweep_example.toe`): wire same upstream into both inputs but pass one through a `limitTOP norm=True, normmin=N, normmax=M` to compress its dynamic range to a known floor+ceiling, then cross-blend (~0.45) the raw output with the normalized version. Result: grade flexibility (raw) + guaranteed brightness headroom (normalized) simultaneously.
 
 ---
 

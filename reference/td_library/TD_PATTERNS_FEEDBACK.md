@@ -219,12 +219,100 @@ Null "null_frame" ──► HSV Adjust (small Hue Shift) ──► Level ──�
 
 ---
 
+## Feedback CHOP — state in the CHOP graph
+
+`feedbackCHOP` is the CHOP-domain analog of feedbackTOP but with a **completely different API** (verified by inspecting the op's par list):
+
+- **No target par at all.** No `par.top`, `par.chop`, `par.target` — feedbackCHOP samples ITS OWN INPUT, not an external target. Whatever you wire into input[0] is what gets delayed.
+- **`par.output` mode** (default `'previous'`) controls what comes out:
+  - `'previous'` — input's previous frame (1-frame delay) ← the most common use
+  - `'shift'` — multi-frame delay buffer
+  - `'sample'` — sample input at a specific frame
+- **`par.delta`** — frame offset for sample/shift modes
+- **`par.reset` / `par.resetpulse`** — clear the buffer
+- Pattern: `current_value_chop → feedback → [now you have previous_value_chop on output]`
+- Combine current and previous in downstream ops (mathCHOP, expressionCHOP, logicCHOP) for edge detection, hysteresis, derivatives, change detection.
+
+### CHOP-feedback auto-reset rig (POPX `curve advection.toe` canonical)
+
+When a simulation needs to AUTO-RESET based on its own state — not just a manual button — combine state derivation (POP→CHOP), threshold detection, hysteresis (feedbackCHOP), and OR-gated triggers:
+
+```
+analyzePOP (numpointsvertsprims=True)        ← count current sim state
+    │
+    ▼
+poptoCHOP (attribscope='NumPoints')           ← extract count as CHOP sample
+    │
+    ▼
+expressionCHOP (expr0: 'me.inputVal > op("constant1")["maxPoints"]')
+    │                                         ← threshold check → 0 or 1
+    ▼
+feedbackCHOP                                  ← previous frame's threshold result
+    │                                           (hysteresis / state remembering)
+    ▼
+logicCHOP.in2     (chopop='or')               ← combine ALL trigger sources
+buttonCOMP (display=False) ──▶ logicCHOP.in0
+keyboardinCHOP ─────────────▶ logicCHOP.in1
+    │
+    ▼
+triggerCHOP (attack/decay/sustain/release = 0)
+    │                                         ← clean edge pulse
+    ▼
+renameCHOP                                    ← rename to 'reset' for clarity
+    │
+    ▼
+reset (nullCHOP)                              ← THE convergence point
+```
+
+The `reset` nullCHOP is then **referenced via expression** by every op that needs to reset:
+```python
+flow1.par.Reset.expr = "op('reset')['reset']"
+speed1.par.resetpulse.expr = "op('reset')['reset']"
+# ... any other op that should reset on the same trigger
+```
+
+**Why the hysteresis?** Without `feedbackCHOP` in the chain, the threshold-trigger would fire continuously while the condition is true (every frame the count exceeds maxPoints), causing repeated resets. With feedbackCHOP, downstream logic can detect EDGES — "fire reset only on the frame where count CROSSES the threshold" — by comparing current vs previous.
+
+**Why a hidden button?** `buttonCOMP.par.display=False` makes it invisible in the UI but still triggerable programmatically (via Python `button.click()` or panel hover detection). Combined with `keyboardinCHOP` and the auto-trigger via OR-gate logic, you get: manual trigger + hotkey + automatic state-based all converging to the same reset pulse, with no visible UI clutter.
+
+---
+
 ## Common Feedback Failures (cross-ref)
 
 - **Going white**: opacity too high. See `TD_FOOTGUNS.md` §A1.
 - **Going black**: composite mode wrong or opacity too low. See §A2.
 - **Pixelated**: resolution mismatch. See §A3.
 - **Sluggish 1-frame lag**: by design. See §A4.
+
+---
+
+## Cook-Loop-Safe Feedback Wiring (canonical pattern)
+
+**This section is `feedbackTOP`-specific. For `feedbackCHOP`, see the "Feedback CHOP" section above — it has a completely different API (no target par, just sample its own input).**
+
+When the feedback target itself appears downstream of the feedback in the cook graph (the common case: feedback feeds a composite whose previous frame the feedback wants to sample), a naive wiring creates a circular cook dependency. TD detects this and errors with "Not enough sources specified" or a red cook-loop warning.
+
+**Wrong (creates the loop):**
+```
+feedback.par.top = composite_target
+feedback.input[0] ◄── composite_target  ← same op = circular dep
+```
+
+**Right (canonical, breaks the loop):**
+```
+feedback.par.top = composite_target   ← samples its PREVIOUS frame (not current)
+feedback.input[0] ◄── source_op        ← a DIFFERENT op (typically the upstream
+                                          source feeding the composite) that has
+                                          no dependency on feedback. Provides
+                                          format/resolution/init only — its value
+                                          is overwritten by par.top's previous-frame sample.
+```
+
+**Why:** feedbackTOP's `par.top` is specifically designed to break the cook dependency by sampling the previous frame (not the current). The input[0] wire is required by TD for format/init resolution but doesn't have to be the same op as par.top — and **must not be**, or the safety is defeated.
+
+**Canonical example:** POPX `dla.toe` post chain has `render → ssao → cross ← feedback`. Feedback wires: `par.top = cross` (samples cross's prev frame for the trail), `input[0] = ssao` (the source that ALSO feeds cross — no feedback dependency, safe). The trail accumulates frame-over-frame without a cook loop.
+
+**Reference:** WOBAR base_current smoke layer (VILOS) uses the same pattern. Documented also in `TD_FOOTGUNS.md` failure modes.
 
 ---
 

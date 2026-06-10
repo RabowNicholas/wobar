@@ -1,10 +1,10 @@
 ---
 title: POPX Library Guide (TD 2025)
-version: 1.1
-last_updated: 2026-04-30
-status: reconciled with official docs (popsextension.com, v1.3.0). Major correction in v1.1: universal `Initialize → Start → Play` pattern documented; Flow's `Advect` toggle distinguished from `Solvermode`; v1.3.0 breaking changes added (Path Tracer/DLA/Constraints/Material/Particle/Soft Body); 9 missing modules added (Spread/Object/Curve Falloff, Apply/Extract Attributes, Geometry/Merge/Delete tools, Preview Falloff). All 55 examples surveyed (v1.0); guide is feature-complete for 1.3.0.
-scope: Reference for the third-party POPX library (v1.3.0). Per-module documentation, install state, conventions, gotchas, integration patterns, WOBAR application notes. Capability table maps "without POPX" → "with POPX" for the major recipes.
-td_version_target: 2025.32460 (Non-Commercial)
+version: 1.2
+last_updated: 2026-05-26
+status: updated to POPX v1.4.0 (popx.tools/changelog). v1.2 of this guide layers v1.4.0 deltas on top of the v1.3.0-complete v1.1 baseline: new **Filter** modifier documented; **Sweep / Move Along Curve / Orient Curve** per-curve modulation reworked (Twist/Scale/Color per-curve params REMOVED — per-curve mapping now auto from custom ramp/TOP, one row per curve); ramp UI globally migrated to POPX's Custom Ramp Editor (parameter renames across Sweep / Move Along Curve / Move Along Mesh / Orient Curve / Color Modifier / Randomize / Spring / Measure / Preview Falloff / all Falloffs); **Material `Emssion*` typo fixed → `Emission*`**; Path Tracer gains DLSS denoiser; Move Along Mesh gains Distribution menu; collision accuracy improved on Soft Body / Relax / DLG. Earlier v1.1 work (Init→Start→Play pattern, Flow Advect/Solvermode distinction, v1.3.0 breaking changes for Path Tracer/DLA/Constraints/Material/Particle/Soft Body, 9 missing modules added) still applies.
+scope: Reference for the third-party POPX library (v1.4.0). Per-module documentation, install state, conventions, gotchas, integration patterns, WOBAR application notes. Capability table maps "without POPX" → "with POPX" for the major recipes.
+td_version_target: 2025.32820 (Non-Commercial) — POPX v1.4.0 ships against this build
 dependencies: [[td_library/TD_OPERATORS_POP]], [[td_library/TD_PATTERNS_INSTANCING]]
 ---
 
@@ -12,7 +12,71 @@ dependencies: [[td_library/TD_OPERATORS_POP]], [[td_library/TD_PATTERNS_INSTANCI
 
 POPX is a third-party POP toolkit (v1.3.0, save build 2025.32460) that wraps higher-level POP operations on top of TD 2025's native POP family. Where native POPs give primitives (sphere, line, copy, attribute, normal, etc.), POPX provides composed modules — Instancer, Convert, Aim, MoveAlongCurve, MoveAlongMesh, OrientMesh, Randomize, Spring, Texture Falloff, Transform Modifier, etc. — with parameter UIs, in-viewport guides, and a shared `popxFalloff` attribute convention for layered control.
 
-**Source:** `touchdesigner/POPX_Examples_1_3_0/` in this repo (examples + assets). Installer container is `/POPX_1_3_0` at the project root.
+**Source:** `touchdesigner/third_party/POPX/POPX_Examples_1_4_0/` in this repo (examples + assets). Installer .tox is `touchdesigner/third_party/POPX/POPX_1_4_0.tox`; in the running TD project the installer container is typically `/POPX_1_4_0` at the project root. v1.3.0 (`POPX_1_3_0.tox`) is kept alongside for reference but is superseded.
+
+---
+
+## v1.4.0 Changelog Highlights
+
+Layered on top of the v1.3.0 baseline documented elsewhere in this file. Source: https://popx.tools/changelog#release-v1-4-0 (TD 2025.32820 target).
+
+### New (1 module)
+
+- **Filter modifier** — temporal smoothing of per-instance position, rotation, scale, and custom float attributes. Six algorithms:
+  - **Gaussian** / **Left Half Gaussian** — symmetric or causal Gaussian kernel
+  - **Box** / **Left Half Box** — symmetric or causal moving average
+  - **De-Spike** — outlier rejection (good for audio CHOPs with the occasional analyzer spike)
+  - **One Euro** — *adaptive* filter that smooths when the signal is still and passes motion when the signal is fast. This is the one to reach for when audio-driven attrs need glue at quiet moments but instant response on transients — replaces the typical "two LagCHOPs + crossfade" pattern.
+  - All filters support **falloff-based attenuation** — a float attribute (e.g. `popxFalloff`) modulates per-instance filter intensity, so foreground bodies can be tight while background bodies stay smoothed.
+- Relationship to **Spring Modifier**: Spring = physical spring-and-damper (overshoot, oscillation, mass). Filter = signal-domain smoothing (no overshoot, predictable lag). For audio-energy-driven attrs where you want clean follow without bounce, Filter is the cleaner tool; Spring still wins when you want the visible elastic feel.
+
+### Breaking — per-curve modulation reworked
+
+Three operators lose their explicit per-curve toggle. **Per-curve mapping is now AUTOMATIC from the custom ramp or TOP — each row of the texture corresponds to one curve.**
+
+| Operator | Removed parameter(s) |
+|----------|---------------------|
+| **Sweep** | `Twistpercurve`, `Scalepercurve`, `Colorpercurve` |
+| **Move Along Curve** | `Twistpercurve` |
+| **Orient Curve** | `Twistpercurve` |
+
+**Migration:** delete any reference to these toggles in existing .toe networks. The 2D TOP feed (V-axis = curve index, U-axis = position along curve) keeps working — POPX now reads it row-per-curve unconditionally when an N-curve input is detected. The `sweep 2.tox` example in 1.4.0 still demonstrates the same 3D-sweep-print-of-2D-TOP pattern, just without the toggles.
+
+**Example file extension:** v1.4.0 examples ship as `.tox` (component) files, not `.toe` (project) files — the older `POPX_Examples_1_3_0` folder used `.toe`. Per-module sections below reference example files by their 1.3.0 names (`aim.toe`, `convert.toe`, etc.); the v1.4.0 equivalents are the same filename with `.tox` extension under `POPX_Examples_1_4_0/examples/`.
+
+### Renamed — ramp UI consolidated to Custom Ramp Editor
+
+POPX now ships a unified Custom Ramp Editor (replaces the TD built-in ramp TOP UI for these modules). Parameter renames you'll see when inspecting nodes in TWOZERO:
+
+| Operator | Old → New |
+|----------|-----------|
+| **All Falloffs** | `Enable Remap Ramp → Enable Ramp Remap`; `Open Remap Ramp → Open Ramp Editor`; `Reset Remap Ramp → Reset Ramp`; `Remap TOP → Custom Ramp TOP`; `Open Custom Ramp → Open Custom Ramp Editor` |
+| **Sweep** | `Twist TOP → Custom Twist TOP`; `Scale TOP → Custom Scale TOP`; `Color TOP → Custom Color TOP`; `Open Twist/Scale/Color Ramp → Open Twist/Scale/Color Ramp Editor` |
+| **Move Along Mesh** | `Scale TOP → Custom Scale TOP`; `Open Scale Ramp → Open Scale Ramp Editor` |
+| **Move Along Curve** | `Offset/Orient/Twist Curve/Twist/Scale/Acceleration TOP → Custom … TOP`; all `Open … Ramp → Open … Ramp Editor` |
+| **Orient Curve** | `Twist TOP → Custom Twist TOP`; `Open Twist Ramp → Open Twist Ramp Editor` |
+| **Color Modifier** | `Open Ramp → Open Color Ramp Editor`; `Reset Ramp → Reset Color Ramp`; `Ramp TOP → Custom Color TOP` |
+| **Randomize** | `General` page → `Randomize` page; `Open Color Ramp → Open Color Ramp Editor`; `Color TOP → Custom Color TOP` |
+| **Spring Modifier** | `Open Custum Ramp → Open Custom Ramp Editor` |
+| **Measure** | `Open Custom Ramp → Open Custom Ramp Editor` |
+| **Preview Falloff** | `Open Custom Ramp → Open Custom Ramp Editor` |
+
+In practice this means: if any existing WOBAR network builds reference these params by name in expressions, Python, or TWOZERO calls, the references need updating. Most of our networks drive these via direct wiring (TOP into the par's input) rather than name-based lookup, so the blast radius is small — but worth a grep when touching an old build.
+
+### Improved
+
+- **Light** — added `Diffuse Contribution` and `Specular Contribution` parameters for fine-grained control over light shading (rebalance environment/key/fill without changing intensity).
+- **Path Tracer** — added `Enable Microfacet Refraction` toggle (microfacet-based refraction on rough transmissive materials → physically-correct rough glass). Added **NVIDIA DLSS denoiser support** with quality presets (`Ultra Performance`, `Performance`, `Balanced`, `Quality`, `DLAA`) — Windows/NVIDIA only, M1 stays on OptiX or SVGF. Added OptiX-specific `Normal/Depth/Albedo Reject` thresholds and `Re-Init` pulse for fine-grained denoiser control.
+- **Move Along Mesh** — added `Distribution` menu (`Default` / `Unique` / `Closest`) and `Num Hash Buckets` parameter for point relax neighbor lookups. `Unique` enforces one-instance-per-mesh-cell (no two instances claim the same surface neighborhood); `Closest` snaps to nearest neighbor.
+- **Soft Body / Relax / DLG** — collision detection accuracy improved (just better, no API change).
+
+### Fixed
+
+- **Material** — `Emssion Color` / `Emssion Map` typo fixed → `Emission Color` / `Emission Map`. Any prior WOBAR notes that wrote `Emssioncolor` should be read as `Emissioncolor` going forward; the rest of this guide is updated to the correct spelling.
+
+### Platform note
+
+POPX v1.4.0 targets TD 2025.32820. WOBAR runs against TD 2025.32460 — **build mismatch accepted** (no TD upgrade planned at this time). M1 caveats unchanged: DLSS is NVIDIA-only, Path Tracer on M1 stays on OptiX or SVGF.
 
 ---
 
@@ -76,7 +140,7 @@ POPX solves classes of problem that previously required Script-CHOP-bridge math 
 | Strange-attractor coefficient morph driven by audio | Compile-time GLSL constants — no audio binding | SA module's `Ua…Uf` are scalar par slots; bind to CHOPs. Coefficient changes warp the attractor's shape live (e.g. ρ in Lorenz changes lobe separation → audible "breath"). |
 | Crystalline / coral / dragonfruit / spike geometry from any base mesh | Houdini PolyExtrude→Subdivide chains; GLSL displacement shader | `Subdivider` module — `Subdivisions=N` (face density), `Extrudestrength` (spike length), `Inset` (taper), `Iterations=2+` for fractal stacking. Pair with falloff for region-localized growth. |
 | Audio-reactive crystallization (bass crystallizes one region, kick another) | Multi-pass GLSL with custom mask logic | `Texture Falloff(audio FFT TOP)` upstream of `Subdivider(Dofalloff=True)` — spikes erupt only where falloff>0; coefficient bound to audio = bass-reactive growth |
-| 2D image / video / spectrogram rendered as 3D stacked sweeps (each pixel-row becomes one curve) | Hand-author N sweep modules, route N TOP slices, custom GLSL displacement | `Sweep` with `Scalepercurve=True, Colorpercurve=True, Twistpercurve=True` — feed N stacked curves as backbone + a 2D TOP; each curve reads its row of the TOP. Same TOP can drive scale + twist + color simultaneously. |
+| 2D image / video / spectrogram rendered as 3D stacked sweeps (each pixel-row becomes one curve) | Hand-author N sweep modules, route N TOP slices, custom GLSL displacement | `Sweep` — feed N stacked curves as backbone + a 2D TOP (or Custom Ramp). **v1.4.0:** per-curve mapping is now **automatic** — each row of the texture corresponds to one curve; the prior `Twistpercurve` / `Scalepercurve` / `Colorpercurve` toggles are removed. Same TOP can drive scale + twist + color simultaneously. |
 | Custom cross-section profile for sweep (heart, star, hand-drawn outline) | Hand-build cross-section in GLSL or import from SOP; tube/square primitives only | `Sweep(Surfaceshape='input')` + provide cross-section curve as input[1]. Any POP curve works (circlePOP, patternPOP, custom line). |
 | Per-letter typographic animation (wordmark bounces / squashes / tips per letter on beat) | Hand-keyframe each letter in After Effects; per-letter SOPs in TD; GLSL distortion shader | `textSOP → soptoPOP → cleanup → Convert(Partitionmethod='connectivity') → Pivot(Mode='bbox', Alignmentside='ym') → Shape Falloff → Spring → Transform Modifier → Unpack`. Convert auto-detects letters as connected components; Pivot anchors each letter to its baseline; Spring gives elastic per-letter lag |
 | Living / breathing Voronoi tessellation (cells continuously rearrange) | Static voronoi from frozen seed cloud, or hand-author via GLSL with custom seed update | `pointgen → Relax(Solvermode='advect', Pointsupdatepop=feedback) → noisePOP(small amp) → null → Explode(Partitionmethod='voronoi', in1=relaxed-seeds)`. Self-feedback through null gives smooth seed diffusion; cells animate rather than freezing. |
@@ -102,6 +166,8 @@ POPX solves classes of problem that previously required Script-CHOP-bridge math 
 | 11 chaos attractor presets (was: 6 documented in v1.0) | Hand-author equation per attractor | `SA` with full preset library: Lorenz, Aizawa, Thomas, Halvorsen, Dadras, Chen, Rossler, Sprott, Four-Wing, Nose-Hoover, Custom (DAT-defined) |
 | Stateful POPX simulation that actually animates (vs frozen state) | Pulse Initialize and assume it runs | **Universal pattern: Initialize → Start → Play (4 steps, not 1).** See "POPX Universal Patterns" section. |
 | Flow particles that actually move with the velocity field | Set Solvermode='advect' alone | **`Advect` toggle is independent of `Solvermode`** — both must be configured. See "POPX Universal Patterns". |
+| Adaptive smoothing on audio-driven attributes — clean during quiet, instant on transients | Two LagCHOPs crossfaded by energy, or hand-tuned LagCHOP with timeslicing | **`Filter` modifier (v1.4.0) — `Algorithm='one euro'`** on `Position` / `Rotation` / `Scale` / arbitrary float attr. Adaptive kernel, no overshoot, falloff-attenuated per-instance. |
+| Outlier rejection on jittery transient-detection channels | Schmitt-trigger CHOP + manual threshold tuning | **`Filter` with `Algorithm='despike'`** (v1.4.0) — kills stray spikes without smoothing the signal between them. |
 
 The native POP family + Script CHOP bridge still works and is dependency-free; POPX trades a vendor dependency for assembly speed and built-in visualization. **Default to native POPs unless a POPX module materially shortens the build.**
 
@@ -109,7 +175,8 @@ The native POP family + Script CHOP bridge still works and is dependency-free; P
 
 ## Install State
 
-- POPX 1.3.0 installer at `/POPX_1_3_0` (containerCOMP). Already installed in Nick's TD environment.
+- **POPX 1.4.0** installer at `touchdesigner/third_party/POPX/POPX_1_4_0.tox` — installed in Nick's live TD project as a containerCOMP at `/POPX_1_4_0` (confirmed 2026-05-26). Nick is running TD 2025.32460 while POPX v1.4.0 targets 2025.32820 — build-mismatch warning is accepted for now; no TD upgrade planned at this time.
+- POPX 1.3.0 (`POPX_1_3_0.tox`) is kept alongside for reference and rollback. Earlier builds in `working/`, `touchdesigner/networks/`, and `touchdesigner/networks/*/moves/` were authored against 1.3.0 and reference `POPX_Examples_1_3_0/` paths — those historical artifacts are correct as-recorded and should not be retroactively rewritten.
 - `Index = 5`, `Expose = True` — POPX modules appear in the operator menu.
 - `Createstubs` / `Replacestubs` pulse params on the installer regenerate stub references if the install path changes.
 
@@ -230,7 +297,7 @@ Modifiers operate on either form transparently. Use `popxto` whenever a native P
 
 ### Aim — orient instances toward a target point
 
-**Example:** `touchdesigner/POPX_Examples_1_3_0/examples/aim.toe`
+**Example:** `touchdesigner/third_party/POPX/POPX_Examples_1_4_0/examples/aim.tox`
 
 **Concept:** Aim/look-at modifier. For every instance in the input POP stream, compute an orthonormal frame from (target_dir, up_vector, axis convention) and apply it as instance rotation. Acts as a downstream rotation modifier — does not move instances, only rotates them.
 
@@ -442,8 +509,15 @@ Modifiers operate on either form transparently. Use `popxto` whenever a native P
 - POPX Material **`Subsurface` parameter is REMOVED**; renamed parameters follow updated PBR conventions
 - POPX Material adds a **Maps page** with texture inputs (normal, metallic/roughness, emission), **Clearcoat**, and **Emission** parameters
 - POPX Material has **Substance integration** (auto-texture assignment from Substance TOPs)
-- Realtime/offline modes; NVIDIA DLSS denoiser support added
+- Realtime/offline modes
 - Disney BRDF compliance for Material
+
+**v1.4.0 ADDITIONS (Path Tracer + POPX Light + POPX Material):**
+- Path Tracer: **`Enable Microfacet Refraction`** toggle — microfacet-based refraction for physically-correct rough glass / frosted refractive materials
+- Path Tracer: **NVIDIA DLSS denoiser** with quality presets (`Ultra Performance`, `Performance`, `Balanced`, `Quality`, `DLAA`). **Windows / NVIDIA RTX only — on Apple Silicon stay on SVGF or OptiX.**
+- Path Tracer: OptiX denoiser gains per-channel **`Normalreject` / `Depthreject` / `Albedoreject`** thresholds + **`Re-Init`** pulse for tuning the OptiX denoiser without restarting the renderer
+- POPX Light: **`Diffuse Contribution`** and **`Specular Contribution`** parameters — independent shading control per light (rebalance key/fill/env without changing intensity)
+- POPX Material: **`Emssion Color` / `Emssion Map` typo FIXED → `Emission Color` / `Emission Map`** (parameter spellings throughout this guide updated)
 
 **Concept:** POPX provides a **complete physically-based path-traced rendering pipeline** parallel to TD's standard rasterized rendering. Three cooperating modules:
 - **POPX Material** — assigns Disney BRDF (PBR) attributes per-instance via point/primitive/vertex attributes
@@ -487,7 +561,7 @@ Quality jumps significantly from the rasterized look — true reflections, true 
 | `Clearcoatlevel`, `Clearcoatroughness`, `Clearcoattintr/g/b` | Clearcoat (car paint) |
 | `Ior`, `Thickness`, `Transmission`, `Dispersion` | Glass/refraction |
 | `Absorptioncolorr/g/b` | Beer-Lambert absorption (colored glass) |
-| `Emissionlevel`, `Emssioncolorr/g/b` | Self-emission |
+| `Emissionlevel`, `Emissioncolorr/g/b` | Self-emission (the prior `Emssion*` spelling was a typo in POPX; **fixed in v1.4.0** → `Emission*`) |
 | `Maps.*` | Texture maps for every PBR channel (Substance, Basecolor, Metallic, Roughness, Specular, Anisotropic, Sheen, Clearcoat, Transmission, Emission, Normal) |
 
 **The killer feature:** any per-instance attribute (e.g. `popxFalloff`) can drive material parameters. Per-instance PBR variation without authoring N materials. Example: row of spheres where `Roughness` is driven by `popxFalloff` (0→1 across the row) → first sphere mirror-smooth, last sphere rough.
@@ -522,7 +596,7 @@ Standard PBR studio setup: one `Type='area'` light (key + shadows) + one `Type='
 | **Colored glass with absorption** | `Transmission=1.0, Thickness=0.35, Absorptioncolor=<tint>` | Tinted glass — color depth depends on thickness traversed |
 | **Clearcoat over rough base** (car paint, lacquer) | `Roughness=1.0, Specularlevel=0.657, Clearcoatlevel=1.0, Clearcoattint=<colored coat>` | Layered: rough base + glossy colored coating on top |
 | **Texture-mapped chrome** | `Metallic=1.0, Roughness=0.012, Basecolormap=<image>, Normalmap=<normal>` | Mirror with image albedo + surface detail |
-| **Emissive with color** | `Roughness=1.0, Emissionlevel=10.0, Emssioncolor=<tint>` | Self-illuminated; emits light into the scene |
+| **Emissive with color** | `Roughness=1.0, Emissionlevel=10.0, Emissioncolor=<tint>` | Self-illuminated; emits light into the scene (param spelling `Emissioncolor` since v1.4.0; was `Emssioncolor` in 1.3.0 and earlier) |
 | **Substance integration** (single-source-of-truth) | `Maps.Substance=<substanceTOP>` | All channels (basecolor/metallic/roughness/normal/etc.) from one Substance file |
 
 **Cost:** Path tracing is GPU-heavy. Realtime mode at 5 rays × 5 bounces × 720×1280 with SVGF denoiser is ~30fps on Apple Silicon NC. Increase samples for export quality, accept lower fps. **Not for live performance** — for renders only.
@@ -833,6 +907,29 @@ The `Constraintvolume` TOP can be ANY animated source: audio FFT visualization, 
 **Cost:** scales with particle count × sim resolution. 250k particles at 1080² 2D runs at 60fps on Apple Silicon NC. Bumping to 3D space significantly increases cost.
 
 **Replaces:** custom GLSL Physarum shaders, GPU compute Physarum implementations.
+
+**Variant: ultra-dense 2D for batch render-out (POPX_Physarum_Dumps.toe canonical):**
+
+A different recipe from the 250k 2D recipe above — denser, slower-evolving, designed for sequence-dump rendering rather than live performance. The file ships with a `moviefileoutTOP` (`file='phy10.mov'`) pre-wired downstream of the project's out1, suggesting batch export was the creator's intent for this configuration.
+
+| Param | Value | Diff from 250k recipe |
+|-------|-------|------------------------|
+| `Simspace` | `'2d'` | same |
+| `Maxaxisres` / `Simresx/y/z` | **1280** | up from 1080 |
+| `Numberofparticles` | **1,000,000** | 4× the 250k recipe — densest possible network |
+| `Pointsize` | 0.1 | |
+| `Sensordistancebase / power / scale` | 0.0101 / 1.17 / 0.5 | very small base for fine-grained sensing |
+| `Sensoranglebase / power` | 21° / 0.23 | similar to 250k recipe |
+| `Rotationanglebase / power / scale` | 15° / 1.09 / **81°** | huge scale — wide turn-range modulation |
+| `Movedistancebase / scale` | **0.0 / 20.0** | base=0 means all motion comes from scale modulation |
+| `Decay` | 0.732 | slow decay → very persistent trails |
+| `Filterscale1/2/3` | 3, 3, 6 | anisotropic diffusion (z stretched 2×) |
+
+When to use this recipe vs the 250k one: the dense recipe produces finer detail at slower evolution — better for long sequence dumps where you want the network to evolve slowly over thousands of frames. The 250k recipe is faster-evolving and live-performance-friendly.
+
+**Source seed:** uses `pointgeneratorPOP shape='rectangle', numpoints=1M, seed=7.89` instead of grid-based seeding. Rectangle distribution gives uniform random fill of a rectangular region (matches the 1280×1280 2D sim domain) — simpler than gridPOP+randomize.
+
+**Render-side note:** the file routes the Physarum trail TOP through a flat-quad PBR pipeline (orthographic camera, single bright angled light, basecolormap = trail TOP) rather than compositing the TOP directly. See `TD_PATTERNS_3D_SCENES.md` for the "2D source through 3D pipeline for shading flavor" pattern this uses.
 
 ---
 
@@ -1302,7 +1399,7 @@ Optionally: set Walkersupdatepop for feedback / extension
 | DLA | `Displaybounds`, `Displayrandomwalkers`, `Displaydlapoints`, `Displaydlalines` | Visualization toggles for inspecting growth in real time |
 
 **Five output rendering patterns:**
-- Sphere instanced at each aggregated point (this example): `dla → copy(sphere, dla_pts) → render`
+- Sphere instanced at each aggregated point (via geo COMP instancing — see "Modifier-chain instancing pattern" below for the actual technique used in this example): `dla → POPX modifier chain (clean attrs) → nullPOP → geo COMP instanceop`
 - Line ribbons using the connectivity attribute: read line topology, render as glow strands
 - Point cloud splatter: directly render as POPs through a phong/PBR
 - Volumetric: convert aggregated points to a voxel field for raymarching
@@ -1321,9 +1418,60 @@ Optionally: set Walkersupdatepop for feedback / extension
 - Output is naturally monochromatic-readable — works in 80% black + purple palette without recoloring.
 - Growth is slow and meditative by default — fits Act 1/Act 2 "felt, not aggressive."
 
-**Cost:** scales with aggregated set size × walker count. 100k points runs 60fps in the example because growth is gradual (~thousands of new points/second). Watch for slowdown as aggregation reaches Maxpoints.
+**Cost:** scales with aggregated set size × walker count. 250k points (the creator's configured Maxpoints) runs 60fps in the canonical example because growth is gradual (~thousands of new points/second). Watch for slowdown as aggregation approaches Maxpoints.
 
 **Replaces in our toolkit:** custom GLSL DLA shaders, manual L-system fractal builds, hand-modeled coral SOPs.
+
+**Creator's canonical config (from `dla.toe` example, validated against POPX v1.4.0):**
+
+| Param | Value | Note |
+|-------|-------|------|
+| `Simboundsx/y/z` | 5.0 each | Symmetric cube (not flattened — disregard the "small Z for 2D" framing if you want full volumetric growth) |
+| `Maxpoints` | **250,000** | 2.5× the doc default — sustained run, denser final structure |
+| `Maxsearchdist` | 0.5 | |
+| `Maxneighbors` | **5** | NOT 1. Cellular / organic branching, not classic dendritic. Creator's go-to look |
+| `Noiseamp` | 0.5 | |
+| `Displaydlalines` | False | Render points-only via instancing, hide built-in line viz |
+
+**Multi-nucleus competitive seeding (not in the original spec but used in the example):**
+```
+pointPOP (pt0pos = -2.5, 0, 0) ──┐
+                                 mergePOP ──> dla1.in0
+pointPOP (pt0pos = +2.5, 0, 0) ──┘
+```
+Two opposing nuclei produce two growth fronts that braid into each other in the middle. Useful for competitive / sibling-structure compositions. Generalizes to N nuclei via N mergePOP inputs.
+
+**Modifier-chain instancing pattern — IMPORTANT, supersedes earlier "rich-attr POPs can't instance" claim:**
+
+A 2026-05-01 exploration logged: *"POPX modules with rich POP attributes (PartVel/PartId/PartForce/Color etc.) cannot be instanced via geometryCOMP."* That's only true for RAW solver output. Routing through POPX modifiers cleans the attribute schema (via their internal `applyatt` / `convert1` / `attributes_delete` ops). The example's chain:
+```
+dla1 ──> texture_falloff1 ──> noise_modifier1 ──> instance(nullPOP) ──> geo1.par.instanceop = instance
+```
+A `spherePOP` (freq=1, scale=0.0135) wired into `geo1.in0` becomes the per-point template. PBR material on the geo. Renders cleanly with no instancing complaints. **The modifier chain is the workaround for rich-attr instancing.**
+
+**Texture Falloff modifier with custom rampTOP (a key pattern):**
+
+`texture_falloff1` (geometryCOMP) has two inputs: in0 = POP, in1 = TOP (the falloff ramp).
+```
+rampTOP (type='circular', 1024×1024, custom keys: black @ 0, white @ 0.529) ──> texture_falloff1.in1
+dla1 ──> texture_falloff1.in0
+```
+Set on the modifier: `Fallofframp='custom'`, `Pixelcentered{1,2,3}=True`, `Cyclic{1,2,3}=True`, `Previewfalloff=True`. The ramp's grayscale becomes a per-point falloff weight — points outside the circular gradient get attenuated. Useful for masking solver output to a spatial region.
+
+**POPX modifier internal conventions (applies to every POPX module — useful for navigating any of them):**
+
+Every POPX module is a geometryCOMP at project level with this scaffolding inside:
+- `parentshortcut='POPX'` set on the module's root → downstream refs use `parent.POPX.par.X`
+- `POPXExt` child = Python extension class, accessed via `op('./POPXExt/POPX').module.POPX(me)`
+- `POPX_in1`, `POPX_out1[/out2/out3]` — canonical I/O nodes (e.g. DLA has 3 outs: points / lines / walkers)
+- `License`, `FamManifest`, `docsHelper` — metadata children (don't touch)
+- `bypass` — toggle to skip the modifier's effect without disconnecting wires
+- `convert1`, `applyatt`, `attributes_delete` — internal attribute-normalization ops (these are what enable the rich-attr → instancing chain to work)
+- Multi-input modifiers add `TOP_in1` for TOP inputs (Texture Falloff has one)
+
+**Render pipeline used in the example (high-quality particle-cloud rendering — not POPX-specific, see `TD_PATTERNS_3D_SCENES.md`):**
+
+`render1 (1920×1080, AA 16x)` → `ssao1` → `cross1` with `feedback1` (trails) → `lumablur1` (depth-aware blur via `depth1`) → `level1` → `out1`. Two cone lights + environmentLight. PBR with `rimlight0` for edge highlight. See the 3D Scenes doc for the full recipe.
 
 ---
 
@@ -1480,6 +1628,75 @@ Optionally: set Walkersupdatepop for feedback / extension
 
 **Replaces in our toolkit:** custom GLSL fluid solvers, Stam's stable fluids implementations, ad-hoc smoke/fire shaders. Flow is a complete drop-in fluid that exposes the right knobs.
 
+**Curve Advection architecture (POPX_Flow_Curve_Advection_Example.toe canonical recipe):**
+
+The "curve advection" effect — a curve deformed by fluid velocity while maintaining its topology — uses Flow's `Particlesupdatepop` parameter as a self-feedback loop. **Flow has separate inputs for "what to inject" vs "what to advect"** — don't confuse them:
+
+```
+INJECTION SOURCE (flow1.in0):
+  pointPOP (single point) ──▶ transformPOP (animated tx/ty — e.g. circular motion via 2-LFO rig)
+                                  │
+                                  ▼
+                              flow1.in0   ← injection source (substance/density gets injected
+                                            here each frame to push the fluid around)
+
+CURVE BEING ADVECTED (flow1.in2):
+  gridPOP (surftype='linestrips', cols/rows=200, randomx/y/z=4.049)
+    │  (chaotic line-strip field — the curve to deform)
+    ▼
+  flow1.in2   ← particles-in for advection
+
+FLOW + SELF-FEEDBACK LOOP:
+  flow1 (Inject=True, Advect=True, Lookupcolor=True, Particlesupdatepop = target_update)
+    │  (the POP output — advected particle positions)
+    ▼
+  lineresamplePOP (resamplemethod='dist', resamplemindist=0.01, maxdist=0.0125, maxverts=1.5M)
+    │  (regularizes point density along the curve after fluid stretches it)
+    ▼
+  target_update (nullPOP cache)
+    ├──▶ render chain (geo with pbrMAT, wireframe='topology' for line rendering)
+    │
+    └──▶ flow1.par.Particlesupdatepop   ← FEEDBACK: next frame's particles
+                                           get reset to this frame's resampled curve
+```
+
+Without the `Particlesupdatepop` feedback, particles would stretch/clump unpredictably in the velocity field. With it: stable curve topology + organic fluid-driven deformation. The `lineresample1` between Flow output and the feedback is essential — it re-spaces the points after the fluid stretches them so the curve doesn't develop dense knots and empty stretches.
+
+**Creator's tuned Flow config (canonical for curve advection):**
+
+| Param | Value | Note |
+|-------|-------|------|
+| `Simboundsx/y/z` | 1.0, 1.0, **0.3** | Quasi-2D — Z compressed for surface flow |
+| `Resolutionx/y/z` | 64, 64, **20** | Matches the boundary aspect ratio |
+| `Vorticity` | 0.657 | Medium-strong swirl |
+| `Dissipation` | 2.0 | Fast velocity decay — curves don't accelerate runaway |
+| `Inject` | True | Inject substance from `flow1.in0` |
+| `Advect` | True | Required (see CRITICAL note above) |
+| `Spawn` | False | No new particles spawned |
+| `Enableparticlelife` | False | Particles never die |
+| `Lookupcolor` | True | Color sampled from texture/ramp |
+| `Injectcolor` | warm orange (1.0, 0.77, 0.50) | Visible color of the fluid trail |
+| `Colordissipationr/g/b` | 1.0, 0.74, 0.43 | Per-channel color decay → drift |
+| `Particlesupdatepop` | `target_update` (nullPOP) | The feedback loop pin — points HERE |
+
+**Tolow1-4 / Tohigh1-4 range params:** Flow has remap ranges (Tolow1=0.2 etc, Tohigh4=1.0) that are used for the color lookup. Creator sets Tolow1-3=0.2, Tohigh1-3=6.9 — overbright range, allowing color values to push past 1.0 for HDR-style fluid color.
+
+**Reset rig wired into Flow (NOT just a manual button):**
+
+A multi-trigger auto-reset rig is wired to `flow1.par.Reset`:
+```
+flow1.par.Reset.expr = "op('reset')['reset']"
+speed1.par.resetpulse.expr = "op('reset')['reset']"   ← speedCHOP also resets
+```
+The `reset` nullCHOP is the convergence point of `button + keyboard + auto-state-trigger → logicCHOP (or) → triggerCHOP → reset`. See `TD_PATTERNS_FEEDBACK.md` for the full CHOP state-feedback rig.
+
+**Render pipeline pattern (this file's choice for curve rendering):**
+
+- `geo1` renders the resampled curve directly as **wireframe** via `pbrMAT.wireframe='topology'` (no separate Line MAT needed) — `basecolor=(1.8, 1.8, 1.8)` overbright for HDR-readable lines
+- `geo2` renders a `spherePOP` (scale=0.02) at the injection point via `copyPOP` — material is `pbrMAT` with `emit=(1.0, 0.77, 0.50)` matching the Flow injection color for visual source/fluid continuity
+- Two-COMP render: render1 takes BOTH geo1 and geo2 (lights single light with `shadowtype='soft2d'`, `filtersamples=32`, `searchsteps=32`, `shadowresolution=2024`, `dimmer=5.0`)
+- Post: `render1 → ramp1 (circular, combineinput='res' — matches render res) → lumablur1 (in1=ramp1, blackwidth=5, whitewidth=1)` — radial blur gradient (vignette-style soft-focus) → out1
+
 ---
 
 ### Instancer — distribute instances along a curve / mesh / grid / radial / honeycomb
@@ -1609,7 +1826,9 @@ Mode-specific subpages exist (e.g. `[Curve]`, `[Mesh]`, `[Honeycomb]`) with mode
 
 ### MoveAlongCurve — animate instances along a curve, optionally with per-instance offset
 
-**Example:** `coil torus.toe`
+**Example:** `coil torus.tox`
+
+**v1.4.0 changes (applies to this module):** all `*top` parameters (`Offsettop`, `Orienttop`, `Twistcurvetop`, `Twisttop`, `Scaletop`, `Acctop`) renamed to `Custom *TOP` in the UI label — internal expression names are unchanged. The `Twistpercurve` toggle is **removed** — per-curve twist mapping is now automatic from the TOP rows when N curves are supplied. All `Open … Ramp` buttons renamed to `Open … Ramp Editor` (POPX's unified Custom Ramp Editor).
 
 **Concept:** Animation modifier that flows instances along a curve POP over time. **Three modes per official docs:**
 - **`'simple'`** — parametric position lookup. Each instance gets a 0–1 phase, MoveAlongCurve places it at that fraction of the curve length. Stateless.
@@ -2005,7 +2224,7 @@ pointGenerator(N points) → noisePOP(random rotate) → SA(Strangeattractor='th
 |-----------|---------|
 | `Reorientcurve`, `Closedcurve`, `Invertn` | Curve preprocessing |
 | `Customfirsttangent`, `Firsttangentx/y/z` | Initial direction override (avoids flipping) |
-| `Twistamount`, `Twisttop` (1D LUT), `Twistpercurve`, `Twistbyattribute`, `Twistattr` | Twist along curve |
+| `Twistamount`, `Twisttop` (1D LUT, **renamed `Custom Twist TOP` in v1.4.0**), `Twistbyattribute`, `Twistattr` | Twist along curve. **v1.4.0 BREAKING:** the `Twistpercurve` toggle is removed — per-curve mapping is now automatic when the input has N curves and a 2D TOP is supplied (each row = one curve). |
 
 **`[Surface]` — cross-section + along-curve modulation**
 
@@ -2017,28 +2236,29 @@ pointGenerator(N points) → noisePOP(random rotate) → SA(Strangeattractor='th
 | `Roundcorners`, `Cornerradius`, `Cornersides` | Corner softening |
 | `Scalecrosssections` | Master scale |
 | `Skinops`, `Closedsurface`, `Outputquads`, `Generatevertexnormals` | Topology |
-| **`Applyscale`** + `Scaletop` + `Scalepercurve` + `Scalebyattr` + `Scaleattr` | **Scale-along-curve** — `Scaletop=<ramp 1→0>` produces thickening trunk → thin branches WITHOUT any per-branch logic |
-| **`Applycolor`** + `Colortop` + `Colorpercurve` | **Color-along-curve** via TOP LUT (red→blue gradient in this example) |
+| **`Applyscale`** + `Scaletop` (renamed `Custom Scale TOP` in v1.4.0) + `Scalebyattr` + `Scaleattr` | **Scale-along-curve** — `Scaletop=<ramp 1→0>` produces thickening trunk → thin branches WITHOUT any per-branch logic. **v1.4.0:** `Scalepercurve` removed — N-curve input now auto-maps each row of the Scale TOP to one curve. |
+| **`Applycolor`** + `Colortop` (renamed `Custom Color TOP` in v1.4.0) | **Color-along-curve** via TOP LUT (red→blue gradient in this example). **v1.4.0:** `Colorpercurve` removed — auto-per-curve from the TOP rows when N curves are present. |
 
 **`[Attributes]`** — which attributes propagate from input
 
 **WOBAR application:** the renderer for any line-based generative pattern. Pair with Shortest Path for vascular trees, with MoveAlongCurve for tube ribbons, with DLG for filled labyrinth tubes. The `Applyscale` + `Scaletop` combo is the canonical "trunk-to-branch tapering" pattern.
 
-**Per-curve modulation by 2D TOP (sweep stack as video player / spectrogram waterfall) — `sweep 2.toe`:**
+**Per-curve modulation by 2D TOP (sweep stack as video player / spectrogram waterfall) — `sweep 2.tox` (v1.4.0):**
 
-When the input contains **N curves** and you set `Scalepercurve=True`, `Colorpercurve=True`, and/or `Twistpercurve=True`, each curve **reads its own row of the modulation TOP**:
+When the input contains **N curves** and a 2D TOP is wired to `Scaletop` / `Colortop` / `Twisttop` (or their Custom Ramp equivalents), each curve **reads its own row of the modulation TOP automatically** — as of v1.4.0 there are no per-curve toggles to enable, the row-per-curve mapping is unconditional. (In v1.3.0 and earlier this required `Scalepercurve=True` / `Colorpercurve=True` / `Twistpercurve=True`; those parameters are removed.)
+
 - TOP V-axis = curve index (each row = one curve in the stack)
 - TOP U-axis = position along that curve (0 → 1 from start to end)
 - TOP RGB = scale × color (or twist amount, depending on which TOP par)
 
-Pipeline:
+Pipeline (v1.4.0):
 ```
 linePOP(divs=200) + linePOP(divs=20) → copyPOP(line1 onto line2's 21 points → 21 horizontal lines stacked vertically)
   → transformPOP(aspect correct, ty per-row offset)
   → Sweep(in0=stacked lines, in1=cross-section circlePOP, Surfaceshape='input',
-          Scaletop=videoTOP, Scalepercurve=True,
-          Colortop=videoTOP, Colorpercurve=True,
-          Twisttop=videoTOP, Twistpercurve=True, Twistamount=1440,
+          Scaletop=videoTOP,                 # auto-per-curve from TOP rows
+          Colortop=videoTOP,                 # auto-per-curve from TOP rows
+          Twisttop=videoTOP, Twistamount=1440,  # auto-per-curve from TOP rows
           Width=0.05, Scalecrosssections=0.01, Inc=op('info_curve_pts')['num_points'])
 ```
 
@@ -2219,6 +2439,35 @@ linePOP(divs=50, pt0x=-0.5, pt1x=0.5) → Shape Falloff(animated source) → Spr
 ```
 
 Same Spring pattern on a **1D source** with vertical lift (`ty=0.5`) instead of rotation. The 50-division line becomes a ribbon arch as the wave passes; under-damped spring gives bounce. Sweep with `Twistamount=360` rotates the cross-section once along the length, producing a folded-ribbon look (reads as banner/streamer rather than tube). WOBAR variants: percussion-driven banner pulse across the screen, audio-band ribbon stack (one ribbon per band, vertically offset, color-graded per band), mantle-ribbon underneath the wordmark that bounces on every kick.
+
+---
+
+### Filter — temporal smoothing of per-instance attributes (v1.4.0)
+
+**Example:** (no dedicated example shipped in `POPX_Examples_1_4_0/` at release; module is documented in popx.tools/docs.)
+
+**Concept:** Per-instance temporal filter applied to attributes. Where **Spring Modifier** is *physical* (spring + damper, with mass, overshoot, and visible bounce), **Filter** is *signal-domain* — a sliding-window or adaptive kernel applied to position / rotation / scale / arbitrary float attributes. Use Filter when you want clean follow without elastic feel; reach for Spring when you want the bouncy character.
+
+**Six filter algorithms:**
+
+| Algorithm | Behavior | When to use |
+|-----------|----------|-------------|
+| **Gaussian** | Symmetric Gaussian-weighted average over a window | General smoothing, no phase preference |
+| **Left Half Gaussian** | Causal Gaussian (past samples only, weighted toward present) | When latency matters but Gaussian roll-off shape is wanted |
+| **Box** | Symmetric moving average | Cheapest, hard cutoff feel |
+| **Left Half Box** | Causal moving average | Simple causal smoothing, no overshoot |
+| **De-Spike** | Outlier rejection | Audio CHOPs with occasional analyzer spikes (transient detectors that misfire) — strip outliers without smoothing the rest |
+| **One Euro** | **Adaptive** — smooths when signal is slow, passes through when fast | Audio-driven attrs where you want glue during breakdowns and instant snap on transients. Replaces "two LagCHOPs + crossfade by energy" pattern. |
+
+**Falloff-based attenuation:** a float attribute (e.g. `popxFalloff`) modulates per-instance filter intensity. So foreground bodies can stay tight (full signal) while background bodies stay smoothed — or invert. Layer with Texture Falloff to make the smoothing follow audio or a TOP mask.
+
+**WOBAR application:**
+- **Audio-energy on `popxFalloff` with One Euro filter** — energy spikes pass straight through (so kicks feel instant), but the floor noise between hits gets smoothed (so nothing twitches during breakdowns). Cleanest audio glue for Act 4 release / Act 5 settle where instant transient response matters but you want stillness between hits.
+- **De-Spike on transient-detection channels** — onset/transient CHOPs often produce stray 1.0 spikes between real hits. De-Spike at the modifier layer kills the false positives without the visible lag of a LagCHOP.
+- **Gaussian on position with falloff = depth-from-camera** — bodies near the camera stay sharp (low filter weight via falloff), bodies in the background smooth out (high filter weight) → cheap "depth blur" feel on position, no actual lens blur.
+- **Spring vs Filter call:** if a build has overshoot or bounce, that's Spring. If a build needs clean follow with no elasticity, Filter. Both can coexist (Filter early in the chain to clean the signal, Spring later for the visible elastic character).
+
+**Pipeline position:** anywhere downstream of an attribute writer. Generally place **before** Spring if both are used — clean the signal first, then add elastic feel.
 
 ---
 
@@ -3026,7 +3275,7 @@ panelCHOP (insideu/insidev) → mathCHOP (remap to world) → nullCHOP (cursor) 
 - **Flow `Reset` cascade** — Flow's Reset par cascades into many internal feedback ResetPulse/Startpulse references. When the parent example container's Reset is broken (`parent.Loader` not found), Flow's `lfo*.resetpulse`, `cache*.activepulse`, `feedback*.resetpulse`, and `Particle_Advection/feedback*.startpulse` all error in cascade. Fix the root container's Reset par; cascade clears.
 - **Flow ships with `glsl2_pixel` broken references** — Flow's internal GLSL TOP/POPs reference `glsl2_pixel` / `glsl1_pixel2` text DATs that aren't always present in the example tox. These are POPX library packaging bugs; don't fix them, they don't affect runtime fluid behavior.
 - **OptiX denoiser is NVIDIA-only** — `Path Tracer.Denoiser='optix'` requires NVIDIA RTX hardware + OptiX runtime (loaded via DLL). **Does not work on Apple Silicon Mac** — render output silently goes blank. Always use `Denoiser='svgf'` on Mac. Confirmed on `path tracer glass (optix denoiser).toe`, 2026-04-29.
-- **`fileinPOP.par.file` parent.Loader expression** — POPX example files load assets via expressions like `parent.Loader.par.Popxreleasefolderpath + '/assets/foo.obj'`. When opened standalone, this errors and the mesh fails to load → render is empty. Fix: clear the expression and set the absolute file path to `<repo>/touchdesigner/POPX_Examples_1_3_0/assets/<asset>.obj`. (Confirmed on `explode curl.toe`, 2026-04-29.)
+- **`fileinPOP.par.file` parent.Loader expression** — POPX example files load assets via expressions like `parent.Loader.par.Popxreleasefolderpath + '/assets/foo.obj'`. When opened standalone, this errors and the mesh fails to load → render is empty. Fix: clear the expression and set the absolute file path to `<repo>/touchdesigner/third_party/POPX/POPX_Examples_1_4_0/assets/<asset>.obj`. (Confirmed on `explode curl.toe`, 2026-04-29 against 1.3.0 — 1.4.0 ships the same expression pattern.)
 - **Explode at high cluster counts is expensive** — `napoleon.obj` (~1M points) Voronoi-partitioned into 2000 clusters runs at ~5 fps on Apple Silicon NC. Mitigations: (1) decimate the mesh before Explode, (2) reduce `Numberofclusters`, (3) pre-bake — run Explode once and freeze with `Play=False` (if exposed) or cache the result via a polyreduce/cache POP downstream.
 
 ---

@@ -109,6 +109,7 @@ Outputs project clock values.
 ### LFO CHOP
 Oscillating waveforms.
 - Params: Type (sin, saw, tri, pulse), Frequency, Amplitude, Phase, Offset.
+- **Sin+cos 2-LFO rig** (canonical for 2D circular motion): `lfo1` at freq F + `lfo2` at freq F with `phase=0.25` (quarter-cycle offset, producing cosine) → mergeCHOP → two-channel output. Wire chan1 to `transform.ty`, chan2 to `transform.tx` for circular position drive. POPX `curve advection.toe` uses this with both LFO frequencies modulated by a downstream speedCHOP (so the circle speed itself evolves over time) and the merged output's amplitude scaled by a separately modulated gain.
 
 ### Pattern CHOP
 Generates parametric patterns (ramps, steps, sine, pulse, random, noise).

@@ -51,6 +51,7 @@ Creates a sphere point cloud.
 Creates a regular grid of points or quads.
 - Key params: Size X/Y, Divisions X/Y, Center.
 - Use: flat plane of instances (a field of cubes), texture sampling grid.
+- **`surftype='linestrips'`**: outputs as connected line segments instead of point cloud / polygon mesh. Combined with `randomx/y/z` jitter creates a chaotic line-field seed — useful for POPX Flow curve-advection inputs or any line-based POPX workflow. Canonical: POPX `curve advection.toe` uses `cols=200, rows=200, randomx/y/z=4.049`.
 
 ### Circle POP
 Creates a ring or disc of points.
@@ -74,8 +75,9 @@ Ring/donut point cloud.
 
 ### Point Generator POP
 Generates N points with attributes determined by expressions or CHOP input.
-- Key params: Point Count, Attribute expressions.
+- Key params: Point Count, Attribute expressions, `shape` (when set), `numpoints`, `seed`.
 - **This is the flexible workhorse.** When you need arbitrary N points with custom starting attributes, this is the generator.
+- **`shape='rectangle'` (and 'circle', 'sphere', etc.)**: distributes the N points RANDOMLY inside the given shape — cleaner than gridPOP + randomize for "I want N points filling shape S." POPX `physarum_dumps.toe` uses `shape='rectangle', numpoints=1000000, seed=7.89` to seed 1M particles inside a rectangle matching the 2D physarum sim domain.
 
 ### Pattern POP
 Generates points following procedural patterns (waves, sines, noise).
@@ -127,6 +129,7 @@ Creates a surface from multiple curves of points (like loft).
 Records position history of points and outputs trailing geometry.
 - Key params: Trail Length (samples), Step, Attributes to trail.
 - Use: motion trails for particles, streak geometry.
+- **`length`** (in seconds, typically small): short values like 0.05 = tight wisps, longer = visible streaks. POPX `sweep_example.toe` uses `length=0.05` for subtle particle wisps on noise-displaced points.
 
 ### Subdivide POP
 Subdivides point geometry — increases point density.
@@ -161,11 +164,25 @@ Extracts boundary points/curves from a point cloud or mesh.
 Adds noise to point attributes (position, normal, scale, color, etc.).
 - Key params: Noise Type (Sparse, Perlin, Simplex), Amplitude, Frequency, Seed, Attribute to Affect.
 - Use: organic displacement, jitter, randomization.
+- **`combineentity='curl3d'` for divergence-free curl noise**: produces pseudo-vorticity 3D flow that looks like smoke/wind/water currents because divergence is mathematically zero (no points where particles unnaturally converge or diverge). Industry-standard for natural-looking organic particle motion. Pair with `t4d` parameter (4th-dimension time-offset, typically `t4d.expr = absTime.seconds * speed`) for temporal evolution of the field. POPX `sweep_example.toe` canonical: `noisePOP period=1.48, harmon=0, amp0=0.183, t4d=anim_time, combineentity='curl3d'`.
 
 ### Transform POP
 Translates/rotates/scales the whole point stream.
 - Key params: T XYZ, R XYZ, S XYZ, Pivot, Order.
 - Use: positioning a whole stream in world space before merging with others.
+
+### Line Resample POP
+Regularizes point density along a curve — keeps points evenly spaced even when upstream solvers stretch or contract the line.
+- Key params: `resamplemethod` (`'dist'` = by distance, `'count'` = by N points), `resamplemindist` + `resamplemaxdist` (clamps the spacing range when method='dist'), `resampledivs` (target count when method='count'), `maxverts` (safety cap, e.g. 1.5M).
+- Essential whenever feeding a curve INTO a deforming solver (POPX Flow, magnetize, soft body) and needing a clean curve OUT — prevents knots and empty stretches.
+- Canonical: POPX `curve advection.toe` uses it between Flow output and the `Particlesupdatepop` feedback to keep the advected curve well-spaced.
+
+### Math Mix POP
+Per-attribute / per-component blending and copy between POP inputs.
+- Combine pages let you compose operations like "copy attribute X from input A into attribute Y of output", with scope syntax for per-component masks.
+- Key params per combine row: `comb{N}oper` (e.g. `'copya'`, `'add'`, `'mult'`), `comb{N}scopea` / `comb{N}scopeb` (which attribute/components to read), `comb{N}result` (destination attribute).
+- Scope syntax is partially documented: `'1'` selects input slot 1; `'Color.rgb'` selects the rgb components of the Color attribute; `'0 0 1'` appears to be a per-component mask (verify before relying on specific syntax — POPX `curve advection.toe` uses `comb0scopea='0 0 1', comb0result='N'` which likely copies the z-component into the Normal attribute, but the scope string convention is not fully documented in TD's help).
+- Use: deriving Normals from position, mixing colors per-attribute, transferring data between attribute slots without scripting.
 
 ### Twist POP / Bend POP / Taper POP
 Deformers analogous to SOP deformers but on POP streams.

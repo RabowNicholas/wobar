@@ -60,6 +60,9 @@ wobar/touchdesigner/networks/
 | iris_2 | /project1 (no wrapping baseCOMP) |
 | eyes_cut_deeper | /project1 (no wrapping baseCOMP) |
 | eyes_cut_deeper_pop_mirror | /project1 (no wrapping baseCOMP) |
+| mercury_womb | /project1 (no wrapping baseCOMP) |
+| down_bad_3stack | /project1 (no wrapping baseCOMP) |
+| magnetize | /example (POPX magnetize example as base; Act 4 discharge skin) |
 
 Add a row here whenever a new network is created.
 
