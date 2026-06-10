@@ -4,6 +4,18 @@ You are working with Nick on WOBAR, an audio-reactive AV system for live DJ/EDM 
 
 ---
 
+## Cross-Brand Rule — READ FIRST
+
+Nick maintains two brand projects: **Wobar** (this repo) and **Vilos** (`/Users/nicholasrabow/Desktop/vilos/vilos/`). They have DIFFERENT brand identities, palettes, emotional registers, sonic identities, and rules.
+
+**Before starting ANY new visualizer build, you MUST ASK: "Is this for Vilos or Wobar?"**
+
+This applies even when working from a brand-specific directory — Nick can discuss either brand in either session. Once confirmed, use ONLY that brand's rules. Do not mix.
+
+If the user gives unambiguous brand context up-front (e.g., "let's build a wobar visualizer for X"), skip the question and proceed.
+
+---
+
 ## MCP Servers
 
 ### TWOZERO (TouchDesigner)
