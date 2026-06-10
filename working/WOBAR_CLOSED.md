@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-05-06
+last_updated: 2026-06-10
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,18 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Walls Are Thin Review — QUIET RETIREMENT
+
+**Closed:** 2026-06-10 — Nick's call: option (c), quiet retirement.
+
+**What it was:** The "process visible" content bucket (talking to camera, voice memo, journal, quote carousel formats). Decoupled from the release packet 5/6 when the v2 packet went Mirror-only — the bucket was a 4-asset-per-release tax that wasn't earning its place; Phase 1 capture was inconsistent and the locked formats didn't ring true. Removed from WOBAR_CONTENT.md in the v2.0 rewrite, leaving it homeless: not in brand docs, not in release production.
+
+**Decision basis:** Decision waited on Transmission test data + BTS triggers firing on Mirror clips. As of 6/10: Mirror posts going out, no trigger has cleared 1.5× baseline, no Transmission signal worth keeping the loop open for. Rather than wait indefinitely, retired.
+
+**What survives it:** The BTS-trigger pattern (Mirror clip clears 1.5× baseline → 1 BTS clip from TD network with song playing, 24–48h after, cap 3/release) stays as the Mirror companion in the release packet — it handles "process visible" without forcing performance. It is a release-packet mechanism, not a Walls bucket. If a Walls-like impulse returns, it starts as a new format test in working docs, not a revival of this bucket.
 
 ---
 
