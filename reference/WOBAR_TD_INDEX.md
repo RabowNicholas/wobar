@@ -1,7 +1,7 @@
 ---
 title: WOBAR TD Index
-version: 1.0
-last_updated: 2026-04-15
+version: 1.1
+last_updated: 2026-06-10
 status: live
 scope: Single entry point for all TouchDesigner work. Decision tree for which docs to load, in what order, for each task type. Read this instead of guessing which TD files to pull.
 ---
@@ -25,7 +25,8 @@ Read this before any TD build or advice. It tells you exactly what else to read 
 | `reference/WOBAR_TD_EXPRESSION_COOKBOOK.md` | Medium | Paste-ready expressions: CHOP access, audio-reactive mappings, time, footguns. |
 | `reference/WOBAR_GLSL_PATTERNS.md` | Medium | Act-specific GLSL shaders (10 total), utility functions, act color reference table. |
 | `reference/WOBAR_TWOZERO_MCP_CATALOG.md` | **Large** | Full parameter tables for all 35 TWOZERO tools. Load by group, not full file. |
-| `working/TD_BUILD_LOG.md` | Medium | Session-by-session build log. Correction tracker (2+ occurrences → promoted to AGENT_RULES). |
+| `working/TD_BUILD_LOG.md` | **Large** | Session-by-session build log (recent sessions only) + Correction Tracker (2+ occurrences → promoted to AGENT_RULES; the promoted rule text lives in AGENT_RULES "Promoted Gotchas"). |
+| `working/TD_BUILD_LOG_ARCHIVE.md` | **Large** | Sessions older than ~1 month, split out 2026-06-10. Counts already reflected in the live tracker. Read only when researching a specific network's history. |
 | `reference/td_library/TD_LIBRARY_INDEX.md` | **Library** | General TD knowledge base (brand-agnostic). 27 files covering all operator families, patterns, workflows. Read the index; it routes to the right file. |
 
 ---
@@ -55,7 +56,7 @@ Then branch:
 - `WOBAR_FRAMEWORK.md` → act identity (emotional register + visual descriptors)
 - `WOBAR_MOVE_SYSTEM.md` → network→comp mapping table, move schema
 - If GLSL shader involved → `WOBAR_GLSL_PATTERNS.md`
-- If POPX modules involved (any of: instancing, aim/look-at, mesh scatter, falloff fields, fluid sim, fractal growth, soft body / cloth / hair, strange attractors, voxel-art, typography rig, Voronoi shatter, etc.) → `td_library/TD_POPX_GUIDE.md`. **Read the capability table at top first** (rows ~25–90) — find the row matching your need, then jump to the named module's section. Guide is large (2651 lines) — load by section, not whole-file. Note POPX is a 3rd-party dep — bake to native POPs before final tox commits.
+- If POPX modules involved (any of: instancing, aim/look-at, mesh scatter, falloff fields, fluid sim, fractal growth, soft body / cloth / hair, strange attractors, voxel-art, typography rig, Voronoi shatter, temporal smoothing on per-instance attrs, etc.) → `td_library/TD_POPX_GUIDE.md`. **Read the capability table at top first** — find the row matching your need, then jump to the named module's section. Guide is large (~3100 lines) and tracks **POPX v1.4.0** — load by section, not whole-file; the `## v1.4.0 Changelog Highlights` block near the top documents what changed vs the 1.3.0 baseline (new **Filter** modifier, breaking removal of per-curve toggles on Sweep / Move Along Curve / Orient Curve, ramp UI renames, Material `Emssion*` typo fixed, Path Tracer DLSS). Note POPX is a 3rd-party dep — bake to native POPs before final tox commits.
 
 ---
 
@@ -143,13 +144,16 @@ Load only the group you need. Searching the file for the tool name is faster tha
 
 | File | Status | Updated |
 |------|--------|---------|
-| TD_CLAUDE_DEBUG_LOG.md | live — append as failures confirmed | 2026-04-15 |
-| WOBAR_TD_AGENT_RULES.md | live — append when correction promoted | 2026-04-15 |
+| TD_CLAUDE_DEBUG_LOG.md | live — append as failures confirmed | 2026-06-10 |
+| WOBAR_TD_AGENT_RULES.md | live — append when correction promoted | 2026-06-10 |
 | WOBAR_TWOZERO_GUIDE.md | live — append as behaviors confirmed | 2026-04-15 |
-| WOBAR_TD_REFERENCE.md | locked — update only on major architecture change | 2026-04-15 |
+| WOBAR_TD_REFERENCE.md | locked — update only on major architecture change | 2026-04-30 |
 | WOBAR_MOVE_SYSTEM.md | locked | 2026-04-14 |
 | WOBAR_TD_EXPRESSION_COOKBOOK.md | live — append new patterns | 2026-04-15 |
 | WOBAR_GLSL_PATTERNS.md | live — append new shaders | 2026-04-15 |
 | WOBAR_TWOZERO_MCP_CATALOG.md | live — append as tool behaviors confirmed | 2026-04-15 |
-| TD_BUILD_LOG.md | live — append each session | 2026-04-15 |
+| TD_BUILD_LOG.md | live — append each session; archive sessions older than ~1 month to TD_BUILD_LOG_ARCHIVE.md | 2026-06-10 |
+| TD_BUILD_LOG_ARCHIVE.md | archive — receive-only | 2026-06-10 |
 | reference_networks/README.md | live — add entry after each saved network | 2026-04-15 |
+
+**Keep the "Updated" column honest:** whenever a session touches one of these files, bump its row here. A stale date in this table misleads agents judging freshness.

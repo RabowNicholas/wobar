@@ -1,8 +1,8 @@
 ---
 title: TouchDesigner Agent Build Rules
-version: 3.0
-last_updated: 2026-04-30
-status: locked
+version: 3.1
+last_updated: 2026-06-10
+status: live
 scope: Conventions any AI agent must follow when creating or modifying TouchDesigner networks in the WOBAR project. Read before any TD build action.
 dependencies: [[WOBAR_CONTEXT]], [[reference/WOBAR_TD_REFERENCE]], [[reference/WOBAR_FRAMEWORK]]
 ---
@@ -88,17 +88,21 @@ Three skills govern the TD workflow:
 
 ---
 
-## Control Architecture — The 13-Parameter Contract
+## Control Architecture — ctrl_master Custom-Parameter Panel
 
-Every visual module is fully controlled via named **Constant CHOPs**. This is the established pattern:
+**(Rewritten 2026-06-10 to match established practice — supersedes the old "13-Parameter Contract" of named Constant CHOPs.)** Every visual module is controlled from a single **`ctrl_master` baseCOMP carrying custom parameters**, organized into pages. This is the pattern every shipped network since May 2026 uses (down_bad_3stack, iris_2, magnetize/glass-orb).
 
-- Group related parameters into named Constant CHOPs: `ctrl_force`, `ctrl_noise`, `ctrl_speed`, `ctrl_geometry`, `ctrl_visual`, `ctrl_light`, `ctrl_scene`.
-- Access parameters via expression syntax: `op('ctrl_name')['channel_name']`
-- Time-evolving noise: `absTime.seconds * op('ctrl_noise')['noise_speed']`
-- Per-instance channel access via Shuffle CHOPs: `op('shuffle3')['chan' + str(me.digits)]`
-- All control values normalized 0-1 where possible. Mapping to actual ranges happens in the expression.
+- One `ctrl_master` baseCOMP per network. Custom float params via `appendFloat`, grouped into custom pages by subsystem (e.g. Top/Mid/Bot/Video/Post, or Camera/Form/Color/Audio).
+- **Par naming (TD-enforced):** first letter uppercase, rest lowercase + digits only. `Echoreact` works; `EchoopacityReact` raises tdError.
+- Target ops bind via expressions: `op('ctrl_master').par.Paramname` (or `op('../ctrl_master').par.X` inside a treatment COMP for portability).
+- **Audio binding template:** `Base + React * pow(clamp(audio_n, 0, 2), Curve)` with paired ctrl_master dials per binding. `React=0` default leaves baseline behavior untouched — Nick dials reactivity in without rewiring. `Curve`: 1 = linear, 1.5 = gentle punch, 2.5 = very punchy. **Curve above ~1.2 crushes gentle-register material (Act 1/5)** — see Audio Pipeline Standard.
+- **Page reorganization / rebuild pattern (atomic):** snapshot all customPars (name → val + default) → collect names list → destroy each by getattr lookup (NOT by iterating customPars — the iterator invalidates after the first destroy) → destroy customPages → recreate pages + pars in order → restore vals. Expression references survive because par names stay identical. **Re-assert all defaults explicitly after recreating** — recreated params can init to wrong values.
+- Watch for **silently disconnected params**: a value set directly on a target op during exploration won't show in a reference search — check the target par's actual mode, not just the ctrl value.
+- All control values normalized 0–1 where possible; mapping to actual ranges happens in the expression.
 
-**Never hardcode parameter values in operator fields when they should be controllable.** If a value might change during performance or between scenes, it goes in a `ctrl_` Constant CHOP.
+**Never hardcode parameter values in operator fields when they should be controllable.** If a value might change during performance or between scenes, it gets a `ctrl_master` custom par.
+
+Legacy note: older networks (pre-May 2026) use named Constant CHOPs (`ctrl_force`, `ctrl_noise`, …) accessed as `op('ctrl_name')['channel_name']`. Don't convert them unprompted, but build new networks on the ctrl_master pattern.
 
 ---
 
@@ -134,10 +138,16 @@ Feedback TOP -> Transform TOP -> Level TOP -> Composite TOP -> Null TOP
 Feedback TOP: targetop = null_out (downstream Null)
 ```
 
+**Canonical wiring (reconciled 2026-06-10 — supersedes earlier conflicting advice):**
+- `feedbackTOP.par.top` = the downstream loop target (the composite/null). Wire `input[0]` to **fresh content upstream of the loop** (e.g. the new-content source) — NOT to the loop target. Target-on-input[0] creates the circular reference that triggers the cook-dependency-loop warning, and that warning is **not cosmetic** — it can block cooking.
+- `feedbackTOP` **defaults to 128×128** and caches old resolution. Set the loop ops' resolution explicitly, then pulse `par.resetpulse` once to apply it.
+- First-frame "Not enough sources" error clears on cook.
+
 Critical parameters:
 - Level TOP `opacity` (Post tab): 0.89-0.97. Above 0.99 = white-out. Below 0.85 = trails die instantly.
 - Transform `sx`/`sy`: <1.0 for inward pull (Act 2), >1.0 for outward expansion (Act 4). Never exactly 1.0.
 - Always include an HSV Adjust TOP in the chain if color drift is desired.
+- Trail feel: `compositeTOP max` = light-writing accumulation; `over` (swaporder=True) with the SAME expression scaling both `outhigh` (RGB) and `opacity` (alpha) on the decay levelTOP = translucent ghost trails. Pick by intent.
 
 ---
 
@@ -159,6 +169,14 @@ Lag values:
 Beat detection: Beat CHOP (40-150Hz for kicks, threshold 0.5, min period 0.3s for 140 BPM).
 
 All audio merged to single Null CHOP as export point.
+
+### Normalization and reactivity rules (promoted 2026-06-10)
+
+- **Record first, then map.** Before binding audio to visuals, record the full song through the analysis output (recordCHOP tap), compute per-band percentiles, and normalize: `preoff = -p10`, `gain = 1/(p_hi - p10)` where `p_hi = p90` for steady bands, `p95` for sparse spike bands (transient). **Normalize to p95/p90, never max** — max is outlier-driven. Publish normalized channels with an `_n` suffix from a `base_audio_react` baseCOMP (selectCHOP per band → mathCHOP preoff/gain → renameCHOP `_n` → mergeCHOP → null_out).
+- **Binding template:** `Base + React * pow(clamp(audio_n, 0, 2), Curve)` — see Control Architecture. Clamp at 2 lets peaks above p90 land ~2× without unbounded blowups.
+- **Power curves above ~1.2 crush gentle-register modulation.** `pow(x, 2.5-3.0)` is right for punchy drops (flattens breakdown rumble, passes peaks through) but kills audio response on gentle material (Act 1/5) where typical values sit low. Choose the curve from the recorded percentiles, not by feel. (Recurred 04-16 + 05-23 → promoted.)
+- **Always wrap audio channels before fractional `pow()`:** analysis channels return tiny negative values (~1e-22) at silence, and `pow(negative, 2.5)` returns complex → TypeError. Use `max(0.0, audio) ** exp`. (Recurred 2× → promoted.)
+- **Audio-reactive rotation/phase must be INTEGRATED, not multiplied.** `absTime.seconds * current_speed` re-multiplies past time on every speed change → jumps. Pattern: constantCHOP (`value0.expr` = audio-driven speed) → `speedCHOP` → cumulative angle/phase.
 
 ---
 
@@ -221,12 +239,14 @@ What this means for builds:
 
 ## Export and Render
 
-- **Realtime OFF** during render. Non-negotiable.
+**(Corrected 2026-06-10 — the old platform table specified h264nvgpu, which contradicts the non-commercial license rule below. Platform-ready h264 is produced OUTSIDE TD, e.g. HandBrake/FFmpeg, from the mjpa master.)**
+
+- **This machine runs NON-COMMERCIAL TouchDesigner — no H.264/H.265 export from TD.** `moviefileoutTOP`: `videocodec='mjpa'` (.mov) or PNG image-sequence. Audio codec `pcm16` (mp3/aac can be license-gated).
+- `audiochop` → the raw 44100 Hz `audiofileinCHOP` (e.g. `audio_in`) with `playmode='locked'` — NEVER an analysis CHOP (`null_audio` runs at cook rate, errors "Audio CHOP sample rate must be 44100"). If two audiofileinCHOPs share the file, route the LOCKED-to-timeline one — the sequential one plays real-time from sample 0 and desyncs the export.
 - Audio File In: `Play Mode` = Locked to Timeline.
-- Match Movie File Out `fps` to project cook rate.
-- YouTube: 1920x1080, h264nvgpu, yuv420, 8000 Kb/s avg.
-- TikTok/IG: 1080x1920, h264nvgpu, yuv420, 10000-12000 Kb/s.
-- Master/archival: ProRes 422 HQ.
+- Match Movie File Out `fps` to project cook rate (`fps = me.time.rate`).
+- **Non-realtime mode engages automatically when recording starts** (TD cooks every frame) and flips back when it ends. Audio playback clicks/glitches during recording are expected — don't debug them; return to realtime for reactivity tuning.
+- Delivery: transcode the mjpa master to platform h264 in HandBrake/FFmpeg. YouTube 1920×1080; TikTok/IG 1080×1920.
 
 ---
 
@@ -279,9 +299,9 @@ def analyze():
     vals = list(chop.chan(0).vals)
 ```
 
-**Rule: No list comprehensions that reference outer-scope variables — use explicit for loops.**
+**Rule: No list comprehensions, generator expressions, lambdas, OR nested function definitions that reference outer-scope variables — use explicit for loops. (Extended 2026-06-10; recurred across 3+ sessions.)**
 
-List comprehensions in `td_execute_python` cannot reliably reference variables defined in the same script block outside the comprehension. Use explicit for loops instead, or define everything inside a function.
+The `td_execute_python` exec environment cannot capture outer-scope names inside any nested scope: comprehensions, genexprs, lambdas, and `def`-inside-the-script all fail with `NameError`. Use explicit for loops with `.append()`, and bind every reference locally inside the function body.
 
 **Wrong:**
 ```python
@@ -309,6 +329,43 @@ HP filters produce a bipolar audio signal. `analyzeCHOP function='average'` aver
 
 ---
 
+## Promoted Gotchas — by Operator Family (landed 2026-06-10)
+
+These all hit 2+ occurrences in the TD_BUILD_LOG Correction Tracker. They were marked "promoted" in the tracker but the rule text never landed here until the 2026-06-10 audit. Check this section before touching any of these operators.
+
+### compositeTOP
+- **`operand='over'` with `swaporder=False` (default) puts INPUT 0 ON TOP** — opposite of intuition and of what the docs imply. Cost hours of debugging twice. **Always set `swaporder=True`** when wiring "input 0 = bottom, input 1 = top."
+
+### Multi-input TOPs (layoutTOP, etc.)
+- **Input connectors auto-compact on `.disconnect()`** — disconnect input 0 and input 1 silently shifts into its slot. When changing ANY input on a multi-input TOP: disconnect ALL inputs first, then re-wire all of them in order. Never partial-disconnect.
+
+### mathCHOP
+- **`chopop` (inter-CHOP per-channel math) vs `chanop` (intra-CHOP channel collapse) — wrong one breaks SILENTLY.** Two same-shape CHOPs, per-channel multiply → `chopop='mul'`. `chanop='mul'` combines channels within one input and outputs wrong data with no error.
+
+### CHOP wiring across COMPs
+- **Cross-COMP CHOP wiring fails silently** — `outputConnectors[0].connect()` from inside a COMP to outside appears to succeed but the connection reads empty. Use `selectCHOP` with an absolute path (`par.chop='/project1/comp/inner_chop'`).
+
+### Time references
+- **Camera/transform expressions on `absTime.seconds * speed` drift to huge values across a session** — use `me.time.seconds` (resets with the component, follows scrub/pause). `absTime` is wall-clock; reserve it for things that should never rewind (noise seeds, grain).
+
+### scriptTOP
+- **`CookLevel.ALWAYS` doing per-frame numpy on streaming inputs crashes TD** (locked the MCP server twice in one session). `ON_CHANGE` is equally dangerous if the input changes every frame. Don't use scriptTOP for high-frequency numpy on streaming POP/CHOP data.
+
+### geometryCOMP + instancing
+- **A fresh `geometryCOMP` auto-creates a rendering `torus1` child** — destroy it (or `render=False`) immediately after creation, or it dominates the frame as a giant white blob. Verify: `for c in geo.children: print(c.name, c.render)`.
+- **`instancetop` is for TOP-based color instancing; `instanceop` is the CHOP/POP source.** Don't swap them.
+- **POPX-derived POPs with rich attribute sets (PartId, PartForce, PrevP, Density…) are REJECTED by geometryCOMP instancing** ("Manual number of instances not supported when using a POP with point co[lor]") — even after stripping Color. Instance from native particlePOP or from POPX modules with clean outputs (SA, magnetize: P/PartVel/N/LenVel only).
+- **`oplength` instance-count mode reads 1 from POPX nullPOP outputs** (and native particlePOPs) even when `numPoints()` is thousands. Use `instancecountmode='manual'` + `numinstances.expr = "op('/path/null').numPoints()"`.
+- **POPX attribute screening — de-risk any new POPX module BEFORE building around it:** place a copy, wire minimum inputs, Init→Start→Play, then `print([a.name for a in op('<mod>/POPX_out1').pointAttributes])`. Clean attrs → safe to instance. Rich attrs → pivot to TOP-output modules or a decoupled architecture (POPX provides the force field, native particlePOP holds clean attrs).
+
+### feedbackTOP
+- See **Feedback Chain Rules** above for the canonical wiring (fresh content on `input[0]`, target as `par.top`, explicit resolution + `resetpulse`). The loop warning is not cosmetic.
+
+### Export / recording
+- See **Export and Render** above: non-commercial license (no h264/h265 from TD), `audiochop` → raw 44100 Hz locked `audio_in` (never `null_audio`), non-realtime auto-engages during recording.
+
+---
+
 ## Feedback Loop — Agent Self-Improvement
 
 The `td-save` skill handles this automatically. Findings are appended to `working/TD_BUILD_LOG.md`:
@@ -318,3 +375,25 @@ The `td-save` skill handles this automatically. Findings are appended to `workin
 - Any new patterns discovered
 
 This log is the training data for improving these rules. If a correction appears 2+ times in the log, it becomes a rule in this file.
+
+---
+
+## Promoted Rules (2026-06-09)
+
+**Rule: Use `math.sin()` / `math.cos()` / `math.pi` in parameter expressions — never bare `sin`/`cos`.**
+Bare `sin` is a `NameError` (TD expr namespace exposes `math` and `tdu`, not bare math fns). Logged twice (2026-05-04, 2026-06-09) → promoted. Bonus insight: a par-expression error re-cooks every frame and can stall expensive **upstream** cooks (a 4K HDRI re-decode tanked fps to ~6) — when fps drops unexpectedly, check `op('/x').errors(recurse=True)` first.
+
+**Rule: This machine runs NON-COMMERCIAL TouchDesigner — no H.264/H.265 export.**
+For `moviefileoutTOP`: `videocodec='mjpa'` (.mov) or a PNG image-sequence; audio `pcm16` (mp3/aac can be license-gated); `audiochop` → the raw 44100 Hz `audiofilein` with playmode `locked` (never an analysis CHOP); `fps = me.time.rate`.
+
+---
+
+## Working Principles (glass-orb session, 2026-06-09)
+
+Principles, not hard conventions — they encode how the best sessions have gone.
+
+- **Don't fight the tool.** When a technique repeatedly resists (shard-orientation rings, depth-of-field on transparent glass), stop and find another route or drop it. Recognizing the dead-end early is the skill.
+- **Strip to a legible base, then add variation one intentional decision at a time.** Get to a state where everything is visible, then introduce each change as a deliberate choice (ideally a question to Nick) — not a pile of simultaneous tweaks.
+- **When the last addition makes it worse, you've hit the stopping point.** That's the signal the piece is done — clean up and ship, don't keep gilding.
+- **Act-2 "breathe WITH the sound" = audio-reactive motion is load-bearing.** A self-clocked hypnotic loop is not DESCENSION until the form responds to the track — usually the element that separates "pretty" from "on-brand."
+- **Depth = spectrum** is a strong WOBAR audio-visual mapping: lows far/large, highs near/small, so layered depth becomes a "frequency tunnel" the listener stands inside. (Reusable beyond the glass-orb.)
