@@ -1,0 +1,12 @@
+{
+  "label": "remove psy treatment from middle cell — delete base_psy_2 entirely, wire sel_mid clean to layout[1]. Top keeps base_psy. Middle cell freed up for a different treatment.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/sel_mid", "to": "/project1/base_psy_2", "input_index": 0, "before": "/project1/sel_mid"},
+    {"type": "disconnect", "from": "/project1/base_psy_2", "to": "/project1/layout_stack", "input_index": 1, "before": "/project1/base_psy_2"},
+    {"type": "delete_node", "path": "/project1/base_psy_2", "before": {"OPType": "baseCOMP", "internal_children": ["fb", "in1", "comp", "out1", "seed", "level", "xform"], "note": "was a copy of base_psy"}},
+    {"type": "connect", "from": "/project1/sel_mid", "to": "/project1/layout_stack", "input_index": 1, "before": null},
+    {"type": "connect", "from": "/project1/sel_bot", "to": "/project1/layout_stack", "input_index": 2, "before": null, "note": "sel_bot dropped from input 2 due to layoutTOP input-compaction-on-disconnect — restored"}
+  ]
+}

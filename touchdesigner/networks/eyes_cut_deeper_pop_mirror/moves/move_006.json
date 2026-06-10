@@ -1,0 +1,73 @@
+{
+  "label": "Fix: restore feedback1.startpulse expression (SA was not integrating) + sphere-scale Pulse page + audio-defaults bump",
+  "timestamp": "2026-05-07T17:55:00",
+  "network": "eyes_cut_deeper_pop_mirror",
+  "context": "Cloud was static despite Play=True / Timescale=1.0. Sampling positions over 30 frames showed zero delta. Root cause: cleared sa1/feedback1.par.startpulse.expr in move_001 (was 'parent.POPX.par.Startpulse', looked orphan but resolved via sa1.par.parentshortcut='POPX'). Without that expression the Startpulse never forwards from sa1 to feedback1 — integration never kicks off.",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/sa1/feedback1",
+      "parameter": "startpulse.expr",
+      "value": "parent.POPX.par.Startpulse",
+      "before": "(empty — cleared in move_001 thinking it was orphan)",
+      "notes": "POPX SA module's parentshortcut='POPX' makes 'parent.POPX' resolve to sa1 itself. Expression forwards sa1.Startpulse pulses to the internal feedback1 (the actual integrator). Without it, integration never begins."
+    },
+    {
+      "type": "pulse",
+      "path": "/project1/sa1",
+      "parameter": "Initializepulse",
+      "notes": "Sets initial particle positions"
+    },
+    {
+      "type": "pulse",
+      "path": "/project1/sa1",
+      "parameter": "Startpulse",
+      "notes": "Now forwards to feedback1 — integration starts"
+    },
+    {
+      "type": "create_page",
+      "path": "/project1/ctrl_master",
+      "page": "Pulse",
+      "params": [
+        {"name": "Pulsebase", "default": 0.025, "range": [0.005, 0.1]},
+        {"name": "Pulsegain", "default": 0.05, "range": [0, 0.2]},
+        {"name": "Pulsecurve", "default": 1.5, "range": [1, 4]}
+      ],
+      "notes": "Energy-driven sphere scale. Drops grow particles."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_attractor/sphere_template",
+      "parameter": "radx/rady/radz expr",
+      "value": "op('/project1/ctrl_master').par.Pulsebase + op('/project1/ctrl_master').par.Pulsegain * pow(max(0.0, op('/project1/ctrl_master').par.Energy), op('/project1/ctrl_master').par.Pulsecurve)",
+      "before": "0.02 (static)",
+      "notes": "ABSOLUTE path — sphere_template is inside geo_attractor, so 'ctrl_master' would resolve to a sibling of sphere (None). Use '/project1/ctrl_master'."
+    },
+    {
+      "type": "set_parameter_batch",
+      "path": "/project1/ctrl_master",
+      "parameters": {
+        "Audiofloor": 1.0,
+        "Audioceil": 1.5
+      },
+      "before": {"Audiofloor": 0.1, "Audioceil": 2.0},
+      "notes": "Bumped baseline so SA is always visibly evolving even at Energy=0 (Timescale 1.0 instead of 0.1). Peak Timescale now 2.5."
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/ctrl_master",
+      "parameter": "Energy.expr",
+      "value": "(cleared)",
+      "before": "op('/project1/audio_master/smooth_out')['energy']",
+      "notes": "Audio binding unwired — Energy is a manual slider now for testing/tuning. Re-bind when ready to test live audio reactivity."
+    }
+  ],
+  "verified": [
+    "SA particles advect continuously — pt[0] moved (0.68, -0.77, 1.06) → (1.14, 0.15, 1.01) over 30 frames",
+    "Cloud sculpts into Aizawa pattern (denser center, dispersed outer)",
+    "Bilateral mirror reads as two iris-like blobs facing each other",
+    "Energy slider drives both Timescale AND sphere radius",
+    "0 hard errors"
+  ],
+  "new_gotcha": "POPX modules use parent.<shortcut> references internally (e.g. 'parent.POPX.par.Startpulse'). Shortcut comes from sa1.par.parentshortcut='POPX'. These expressions look orphan-style after copying the module to a new project but ARE correct — clearing them breaks the internal pulse forwarding chain. Promote to TD_BUILD_LOG correction tracker."
+}

@@ -1,0 +1,37 @@
+{
+  "label": "env map upgrade — layer noise_env (simplex2d, mono, low amp, slow-drift) onto ramp_env via comp_env (additive). Mercury surface curvature now visible via reflection variation. Disabled env_light auto-prefilter for FPS.",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {"type": "create_node", "path": "/project1/noise_env", "before": null},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "type", "before": "simplex3d"},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "period", "before": 0.5},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "amp", "before": 0.5},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "mono", "before": true},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "resolutionh", "before": 256},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "format", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "tx", "before": {"mode": "CONSTANT", "val": 0, "expr": null}},
+    {"type": "set_parameter", "path": "/project1/noise_env", "parameter": "ty", "before": {"mode": "CONSTANT", "val": 0, "expr": null}},
+
+    {"type": "create_node", "path": "/project1/comp_env", "before": null},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "operand", "before": "multiply"},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "resolutionh", "before": 256},
+    {"type": "set_parameter", "path": "/project1/comp_env", "parameter": "format", "before": "useinput"},
+
+    {"type": "connect", "from": "/project1/ramp_env", "to": "/project1/comp_env", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/noise_env", "to": "/project1/comp_env", "input_index": 1, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "envlightmap", "before": "/project1/ramp_env"},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "nodeX", "before": 200},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "envlightmapprefilter", "before": "automatic"},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "dimmer", "before": 2.5}
+  ]
+}

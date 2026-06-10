@@ -1,0 +1,61 @@
+{
+  "label": "down_bad_3stack v001 build — rename imported moviefilein to movie_in, 3 selectTOPs referencing it, layoutTOP stacking 1col×3rows at 720×1280 (scaleres + fitoutside, no borders), null_out cap",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/movie_in",
+      "parameter": "name",
+      "before": "YTDown_YouTube_Dreamville_Down_Bad_ft_J_I_D_Bas_J_Cole__Media_lIM1hejXzhw_001_1080p"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/movie_in",
+      "parameter": "nodeX",
+      "before": -775
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/movie_in",
+      "parameter": "nodeY",
+      "before": 225
+    },
+
+    {"type": "create_node", "path": "/project1/sel_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/sel_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_top", "parameter": "top", "before": null},
+
+    {"type": "create_node", "path": "/project1/sel_mid", "before": null},
+    {"type": "set_parameter", "path": "/project1/sel_mid", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_mid", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_mid", "parameter": "top", "before": null},
+
+    {"type": "create_node", "path": "/project1/sel_bot", "before": null},
+    {"type": "set_parameter", "path": "/project1/sel_bot", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_bot", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/sel_bot", "parameter": "top", "before": null},
+
+    {"type": "create_node", "path": "/project1/layout_stack", "before": null},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "align", "before": "none"},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "maxcols", "before": 0},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "maxrows", "before": 0},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "fit", "before": "fitbest"},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "scaleres", "before": false},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "resolutionh", "before": 256},
+
+    {"type": "connect", "from": "/project1/sel_top", "to": "/project1/layout_stack", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/sel_mid", "to": "/project1/layout_stack", "input_index": 1, "before": null},
+    {"type": "connect", "from": "/project1/sel_bot", "to": "/project1/layout_stack", "input_index": 2, "before": null},
+
+    {"type": "create_node", "path": "/project1/null_out", "before": null},
+    {"type": "set_parameter", "path": "/project1/null_out", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/null_out", "parameter": "nodeY", "before": 0},
+    {"type": "connect", "from": "/project1/layout_stack", "to": "/project1/null_out", "input_index": 0, "before": null}
+  ]
+}

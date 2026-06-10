@@ -1,0 +1,19 @@
+{
+  "label": "fix file paths after Save As — movie_in and audiofile pointed to relative paths that no longer resolve from the new project.folder. Re-pointed both to absolute paths.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/movie_in",
+      "parameter": "file",
+      "before": "wobar/wobar/touchdesigner/networks/down_bad/music_video_treatment/YTDown_YouTube_Dreamville-Down-Bad-ft-J-I-D-Bas-J-Cole-_Media_lIM1hejXzhw_001_1080p.mp4"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/down_bad_remix_v2_2",
+      "parameter": "file",
+      "before": "Music/wobar/down_bad_remix_v2 2.mp3"
+    }
+  ]
+}

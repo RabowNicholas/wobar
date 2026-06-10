@@ -1,0 +1,39 @@
+{
+  "label": "render scope online — cam_inside, light_key, render_main, null_render. Inside-tube POV, point light, 720x1280 portrait, AA8.",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {"type": "create_node", "path": "/project1/cam_inside", "before": null},
+    {"type": "set_parameter", "path": "/project1/cam_inside", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/cam_inside", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/cam_inside", "parameter": "tz", "before": 5.0},
+    {"type": "set_parameter", "path": "/project1/cam_inside", "parameter": "fov", "before": 45.0},
+    {"type": "set_parameter", "path": "/project1/cam_inside", "parameter": "far", "before": 1000.0},
+
+    {"type": "create_node", "path": "/project1/light_key", "before": null},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "tz", "before": 10.0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "dimmer", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "cr", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "cg", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "cb", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "attenuated", "before": false},
+    {"type": "set_parameter", "path": "/project1/light_key", "parameter": "attenuationend", "before": 100.0},
+
+    {"type": "create_node", "path": "/project1/render_main", "before": null},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "camera", "before": null},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "geometry", "before": "/project1/geo_walls"},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "lights", "before": "/project1/light_key"},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "antialias", "before": "aa4"},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "resolutionw", "before": 1280},
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "resolutionh", "before": 720},
+
+    {"type": "create_node", "path": "/project1/null_render", "before": null},
+    {"type": "set_parameter", "path": "/project1/null_render", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/null_render", "parameter": "nodeY", "before": 0},
+    {"type": "connect", "from": "/project1/render_main", "to": "/project1/null_render", "input_index": 0, "before": null}
+  ]
+}

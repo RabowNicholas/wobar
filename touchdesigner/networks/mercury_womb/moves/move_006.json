@@ -1,0 +1,90 @@
+{
+  "label": "add mat_mercury (PBR) — black mercury foundation with iridescent mauve rim, attached to geo_walls",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/geo_walls/mat_mercury",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "nodeX",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "nodeY",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "basecolorr",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "basecolorg",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "basecolorb",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "roughness",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0enable",
+      "before": false
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0colorr",
+      "before": 0.7
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0colorg",
+      "before": 0.7
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0colorb",
+      "before": 0.7
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0width",
+      "before": 0.5
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "rimlight0strength",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls",
+      "parameter": "material",
+      "before": null
+    }
+  ]
+}

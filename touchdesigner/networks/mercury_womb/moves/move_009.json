@@ -1,0 +1,29 @@
+{
+  "label": "add HDRI env light (environmentlightCOMP + ramp_env gradient source) — mercury now reflects mauve env, brightened basecolor + softer roughness for visible reflection",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {"type": "create_node", "path": "/project1/ramp_env", "before": null},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "type", "before": "horizontal"},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "resolutionh", "before": 256},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/ramp_env", "parameter": "format", "before": "useinput"},
+    {"type": "set_dat_text", "path": "/project1/ramp_env_keys", "before": "pos\tr\tg\tb\ta\r\n0\t0\t0\t0\t1\r\n1\t1\t1\t1\t1\r\n"},
+
+    {"type": "create_node", "path": "/project1/env_light", "before": null},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "envlightmap", "before": null},
+    {"type": "set_parameter", "path": "/project1/env_light", "parameter": "dimmer", "before": 1.0},
+
+    {"type": "set_parameter", "path": "/project1/render_main", "parameter": "lights", "before": "/project1/light_key"},
+
+    {"type": "set_parameter", "path": "/project1/geo_walls/mat_mercury", "parameter": "basecolorr", "before": 0.08},
+    {"type": "set_parameter", "path": "/project1/geo_walls/mat_mercury", "parameter": "basecolorg", "before": 0.05},
+    {"type": "set_parameter", "path": "/project1/geo_walls/mat_mercury", "parameter": "basecolorb", "before": 0.12},
+    {"type": "set_parameter", "path": "/project1/geo_walls/mat_mercury", "parameter": "roughness", "before": 0.10}
+  ]
+}

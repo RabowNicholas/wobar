@@ -1,0 +1,21 @@
+{
+  "label": "swap top + middle cells — TOP now has base_color (palette recolor), MIDDLE has base_psy (feedback echo), BOTTOM unchanged (base_edge). New visual rhythm: legible → kinetic → graphic.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/sel_top", "to": "/project1/base_psy", "input_index": 0, "before": "/project1/sel_top"},
+    {"type": "disconnect", "from": "/project1/sel_mid", "to": "/project1/base_color", "input_index": 0, "before": "/project1/sel_mid"},
+
+    {"type": "connect", "from": "/project1/sel_top", "to": "/project1/base_color", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/sel_mid", "to": "/project1/base_psy", "input_index": 0, "before": null},
+
+    {"type": "disconnect", "from": "/project1/base_psy", "to": "/project1/layout_stack", "input_index": 0, "before": "/project1/base_psy"},
+    {"type": "disconnect", "from": "/project1/base_color", "to": "/project1/layout_stack", "input_index": 1, "before": "/project1/base_color"},
+
+    {"type": "connect", "from": "/project1/base_color", "to": "/project1/layout_stack", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy", "to": "/project1/layout_stack", "input_index": 1, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_color", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/base_psy", "parameter": "nodeY", "before": 100}
+  ]
+}

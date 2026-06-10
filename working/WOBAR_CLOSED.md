@@ -13,6 +13,43 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 ---
 
+## Glass Orb (magnetize) — Act 2 / DESCENSION visualizer, SHIPPED
+
+**Closed:** 2026-06-09 — finished, brand-checked Act 2, recorded (`mjpa` .mov master → HandBrake), checkpointed `magnetize_v006.tox`.
+
+**What it is:** Three nested translucent-glass shells of magnetized facets, camera at center. Each shell tumbles on a Lissajous integral of its own audio band (bass→outer / mid→middle / high→inner), with a drop-gated feedback "melt" and a cool-band hue-cycling environment — the nested depth reads as a frequency tunnel. Network `magnetize` (`/example`). Full node chain + taste decisions in `reference_networks/README` (Glass Orb entry); v001–v006 in the network CHANGE_LOG.
+
+**Arc:** murmuration rabbit-hole → strip to legible base → reflective mirror-orb → translucent frosted glass → 3 nested shells → audio-reactive tumble → drop-melt → cool-color rework. A beat-driven downbeat layer was added then killed (made it worse — stop signal); DOF was attempted then abandoned (transparent glass writes no clean depth).
+
+**Key learnings (logged to TD brain):** audio-reactive ROTATION must be integrated (`speedCHOP`), not multiplied; animated env IBL needs prefilter `off` + downsample (142 ms→~0); `math.sin()` not bare `sin` (recurred 2026-05-04 → **promoted rule**); non-commercial TD has no h264 (`mjpa` .mov + `pcm16`). Brand: audio-reactivity is the Act-2 "breathe with sound" element; **depth = spectrum** mapping; cool-hue + desaturation as an on-brand *starting point* (not a hard rule).
+
+---
+
+## mercury_womb v001 — Act 4 Phase 1 visualizer for Down Bad remix (PAUSED, not shipped)
+
+**Closed:** 2026-05-23 — paused / abandoned mid-build. Nick pivoted to a different direction for the Down Bad remix visual (the music-video stacked-cell composite `down_bad_3stack`). The mercury_womb concept is preserved for potential resumption later.
+
+**Context:**
+Planned as an "inside a mercury womb" world-building visualizer — single sustained slow forward camera through a long Z-aligned mercury cylindrical chamber, walls breathing with the 808s. Inside-POV camera architecture borrowed from `magnet_chamber v002`; PBR reflective MAT + HDRI environment from `attractor_chamber v002`; HDR bloom + cinematic level grade from `iris_2`.
+
+**Build progress:**
+Reached 12 moves before pause. Built: `tube_sop` (poly tube, orient=z, height 30, rad 1.5, 240×120 tessellation), `noise_walls` (Noise SOP, sparse type, low-amp organic displacement), `geo_walls` (Geometry COMP wrapping the SOP chain with `mat_mercury` PBR — black mauve-tinted metallic, low roughness, iridescent mauve rim light), `cam_inside` (positioned inside the tube at tz=12, fov 60), `light_key` (point), `light_fill` (distant directional fill from far end), `render_main` (720×1280 portrait, AA8), `env_light` (environmentlightCOMP) + `ramp_env` (vertical mauve gradient as HDR equirect env texture) + `comp_env` (additive layer of `noise_env` for visible surface variation), liquid BREATH (LFO on tube rad) + FLOW (animated noise_walls Z-translate). Mercury character was reading deep mauve gradient with visible surface curvature.
+
+**Why paused (last session 2026-05-21 → close 2026-05-23):**
+Session ended in a hung TD — after pushing `mat_mercury.metallic=0.9` + cranking `rimlight0strength=2.5` + widening rim, TD's PBR shader recompile + env_light IBL regen + render TOP load choked the main thread. TD became unreachable for MCP calls. Nick reset (restarted TD) and chose to switch direction entirely to a music-video composite approach for the Down Bad remix.
+
+**Preserved artifacts (for potential resumption):**
+- `~/.claude/plans/i-made-a-remix-wondrous-pearl.md` — full plan file with creative direction, architecture, audio reactivity mapping, brand check, open decisions
+- `touchdesigner/networks/mercury_womb/` — workspace folder with CHANGE_LOG.md and 12 move JSONs in moves/
+- Network state was never .tox/.toe checkpointed — would need to be rebuilt from moves if resumed, OR rebuilt from scratch using the plan as a guide. The plan is the higher-value artifact.
+
+**Notable learnings transferred:**
+- 12 TD gotchas added to `TD_CLAUDE_DEBUG_LOG.md` during this build (envlightCOMP doesn't exist in TD 2025 — use `environmentlightCOMP`; renderTOP isOP pars use sibling-bare-name not `./name`; SOP render flags can reset mysteriously across moves inside a geo COMP; env_light auto-prefilter recomputes IBL each frame for animated noise = killer FPS load; etc.)
+- The `chamber` naming + inside-POV camera pattern is now well-validated (3 chambers shipped: attractor_chamber, magnet_chamber, mycelium_chamber — mercury_womb would have been the 4th)
+- Mercury rendering specifically: full-metallic + low-roughness surface needs env map WITH VISIBLE FEATURES for surface curvature to read in reflection (uniform gradient env = uniform mauve regardless of bumps)
+
+---
+
 ## Act 2 Visual — tunnel export
 
 **Closed:** 2026-05-06 — closed.

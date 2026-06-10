@@ -1,0 +1,45 @@
+{
+  "label": "refactor — wrap feedback echo treatment as reusable base_psy baseCOMP with in1/out1 connectors, ctrl_master bindings switched to portable ../ctrl_master relative paths. Apply this anywhere by wiring an input video → base_psy → consumer.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/null_top", "to": "/project1/layout_stack", "input_index": 0, "before": "/project1/null_top"},
+
+    {"type": "delete_node", "path": "/project1/null_top", "before": {"OPType": "nullTOP", "input0": "/project1/comp_top", "format": "rgba16float"}},
+    {"type": "delete_node", "path": "/project1/comp_top", "before": {"OPType": "compositeTOP", "operand": "over", "input0": "/project1/level_top", "input1": "/project1/sel_top", "format": "rgba16float"}},
+    {"type": "delete_node", "path": "/project1/level_top", "before": {"OPType": "levelTOP", "opacity_expr": "op('/project1/ctrl_master').par.Echoopacity", "format": "rgba16float"}},
+    {"type": "delete_node", "path": "/project1/xform_top", "before": {"OPType": "transformTOP", "sx_expr": "op('/project1/ctrl_master').par.Echoexpand", "rotate_expr": "op('/project1/ctrl_master').par.Echorotate", "tx_expr": "op('/project1/ctrl_master').par.Echodriftx", "ty_expr": "op('/project1/ctrl_master').par.Echodrifty", "format": "rgba16float"}},
+    {"type": "delete_node", "path": "/project1/fb_top", "before": {"OPType": "feedbackTOP", "par.top": "/project1/null_top", "input0": "/project1/seed_top", "format": "rgba16float"}},
+    {"type": "delete_node", "path": "/project1/seed_top", "before": {"OPType": "constantTOP", "resolution": "1280x720", "format": "rgba16float", "color": "0,0,0,1"}},
+
+    {"type": "create_node", "path": "/project1/base_psy", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/base_psy", "parameter": "nodeY", "before": 0},
+
+    {"type": "create_node", "path": "/project1/base_psy/in1", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/seed", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/fb", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/xform", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/level", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/comp", "before": null},
+    {"type": "create_node", "path": "/project1/base_psy/out1", "before": null},
+
+    {"type": "connect", "from": "/project1/base_psy/seed", "to": "/project1/base_psy/fb", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy/fb", "to": "/project1/base_psy/xform", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy/xform", "to": "/project1/base_psy/level", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy/level", "to": "/project1/base_psy/comp", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy/in1", "to": "/project1/base_psy/comp", "input_index": 1, "before": null},
+    {"type": "connect", "from": "/project1/base_psy/comp", "to": "/project1/base_psy/out1", "input_index": 0, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_psy/fb", "parameter": "top", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/xform", "parameter": "sx (expr → ../ctrl_master.par.Echoexpand)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/xform", "parameter": "sy (expr → ../ctrl_master.par.Echoexpand)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/xform", "parameter": "rotate (expr → ../ctrl_master.par.Echorotate)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/xform", "parameter": "tx (expr → ../ctrl_master.par.Echodriftx)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/xform", "parameter": "ty (expr → ../ctrl_master.par.Echodrifty)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_psy/level", "parameter": "opacity (expr → ../ctrl_master.par.Echoopacity)", "before": null},
+
+    {"type": "connect", "from": "/project1/sel_top", "to": "/project1/base_psy", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy", "to": "/project1/layout_stack", "input_index": 0, "before": null}
+  ]
+}

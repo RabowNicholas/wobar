@@ -1,0 +1,16 @@
+{
+  "label": "add light_fill (distant, pale-bone cool, dim=0.3) — directional fill across mercury curvature; point-light variant at far-end produced an iris/portal halo, not on-brand for womb base state — saved as future drop-time variant",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {"type": "create_node", "path": "/project1/light_fill", "before": null},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "lighttype", "before": "point"},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "ry", "before": 0.0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "cr", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "cg", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "cb", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/light_fill", "parameter": "dimmer", "before": 1.0}
+  ]
+}

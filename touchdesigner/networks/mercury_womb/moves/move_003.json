@@ -1,0 +1,31 @@
+{
+  "label": "layout fix — position tube_sop and noise_walls per new always-organized rule",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "nodeX",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "nodeY",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "nodeX",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "nodeY",
+      "before": 0
+    }
+  ]
+}

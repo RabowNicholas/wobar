@@ -1,0 +1,33 @@
+{
+  "label": "base_edge baseCOMP — edge detection treatment for BOTTOM cell. White edges on solid black (alphaoutputmenu='one' so transparent areas render as opaque black). Edge page added to ctrl_master with Strength, Black level, EdgecolorRGB.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "create_node", "path": "/project1/base_edge", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_edge", "parameter": "nodeXY", "before": {"nodeX": 0, "nodeY": 0}},
+
+    {"type": "create_node", "path": "/project1/base_edge/in1", "before": null},
+    {"type": "create_node", "path": "/project1/base_edge/edge_detect", "before": null},
+    {"type": "create_node", "path": "/project1/base_edge/out1", "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "select", "before": "luminance"},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "combineinput", "before": "edgeonly"},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "alphaoutputmenu", "before": "edge"},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "strength (expr → ../ctrl_master.par.Edgestrength)", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "blacklevel (expr → ../ctrl_master.par.Edgeblack)", "before": 0.0},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "edgecolorr (expr → ../ctrl_master.par.Edgecolorr)", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "edgecolorg (expr → ../ctrl_master.par.Edgecolorg)", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/base_edge/edge_detect", "parameter": "edgecolorb (expr → ../ctrl_master.par.Edgecolorb)", "before": 1.0},
+
+    {"type": "connect", "from": "/project1/base_edge/in1", "to": "/project1/base_edge/edge_detect", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_edge/edge_detect", "to": "/project1/base_edge/out1", "input_index": 0, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Edgestrength (custom float, page=Edge, range 0.1-8.0, default 2.0)", "before": null},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Edgeblack (custom float, page=Edge, range 0.0-0.5, default 0.05)", "before": null},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Edgecolor RGB (custom rgb, page=Edge, default 1.0/1.0/1.0)", "before": null},
+
+    {"type": "disconnect", "from": "/project1/sel_bot", "to": "/project1/layout_stack", "input_index": 2, "before": "/project1/sel_bot"},
+    {"type": "connect", "from": "/project1/sel_bot", "to": "/project1/base_edge", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_edge", "to": "/project1/layout_stack", "input_index": 2, "before": null}
+  ]
+}

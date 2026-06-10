@@ -1,0 +1,26 @@
+{
+  "label": "expose color psychedelic controls in ctrl_master — Color page with Colorphase / Colorcycle (auto-cycle Hz) / Colormix. Bound ramp_palette.par.phase = Colorphase + absTime.seconds*Colorcycle. Added level_mix + comp_mix inside base_color for clean→treated crossfade.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Colorphase (custom float, page=Color, range 0.0-1.0, default 0.0)", "before": null},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Colorcycle (custom float, page=Color, range 0.0-1.0 Hz, default 0.10)", "before": null},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Colormix (custom float, page=Color, range 0.0-1.0, default 1.0)", "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "phase (expr → ../ctrl_master.par.Colorphase + absTime.seconds * Colorcycle)", "before": {"mode": "CONSTANT", "val": 0.0}},
+
+    {"type": "create_node", "path": "/project1/base_color/level_mix", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_color/level_mix", "parameter": "opacity (expr → ../ctrl_master.par.Colormix)", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_color/level_mix", "parameter": "format", "before": "useinput"},
+
+    {"type": "create_node", "path": "/project1/base_color/comp_mix", "before": null},
+    {"type": "set_parameter", "path": "/project1/base_color/comp_mix", "parameter": "operand", "before": "multiply"},
+    {"type": "set_parameter", "path": "/project1/base_color/comp_mix", "parameter": "format", "before": "useinput"},
+
+    {"type": "connect", "from": "/project1/base_color/lookup", "to": "/project1/base_color/level_mix", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_color/in1", "to": "/project1/base_color/comp_mix", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_color/level_mix", "to": "/project1/base_color/comp_mix", "input_index": 1, "before": null},
+    {"type": "disconnect", "from": "/project1/base_color/lookup", "to": "/project1/base_color/out1", "input_index": 0, "before": "/project1/base_color/lookup"},
+    {"type": "connect", "from": "/project1/base_color/comp_mix", "to": "/project1/base_color/out1", "input_index": 0, "before": null}
+  ]
+}

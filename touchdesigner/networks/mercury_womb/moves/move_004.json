@@ -1,0 +1,152 @@
+{
+  "label": "refactor — create geo_walls render scope, move SOP chain inside, delete external orphans",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/geo_walls",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls",
+      "parameter": "nodeX",
+      "before": 0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls",
+      "parameter": "nodeY",
+      "before": 0
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/geo_walls/torus1",
+      "before": {
+        "OPType": "torusSOP",
+        "note": "auto-created default child of new geometryCOMP, per debug log 2026-04-26 — destroyed immediately to prevent accidental rendering"
+      }
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/geo_walls/tube_sop",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "type",
+      "before": "mesh"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "orient",
+      "before": "y"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "rad1",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "rad2",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "height",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "rows",
+      "before": 10
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "cols",
+      "before": 40
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "render",
+      "before": true
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "display",
+      "before": true
+    },
+    {
+      "type": "create_node",
+      "path": "/project1/geo_walls/noise_walls",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "period",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "amp",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "harmon",
+      "before": 1
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "rough",
+      "before": 0.5
+    },
+    {
+      "type": "connect",
+      "from": "/project1/geo_walls/tube_sop",
+      "to": "/project1/geo_walls/noise_walls",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/tube_sop",
+      "before": {
+        "OPType": "tubeSOP",
+        "params": {"type": "poly", "orient": "z", "rad1": 1.5, "rad2": 1.5, "height": 30.0, "rows": 240, "cols": 120, "cap": false},
+        "nodeX": 0,
+        "nodeY": 0,
+        "render": true,
+        "display": true
+      }
+    },
+    {
+      "type": "delete_node",
+      "path": "/project1/noise_walls",
+      "before": {
+        "OPType": "noiseSOP",
+        "params": {"type": "sparse", "period": 4.0, "amp": 0.15, "harmon": 2, "rough": 0.4},
+        "nodeX": 200,
+        "nodeY": 0,
+        "render": true,
+        "display": true,
+        "input0": "/project1/tube_sop"
+      }
+    }
+  ]
+}

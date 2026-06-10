@@ -1,0 +1,57 @@
+{
+  "label": "FEEDBACK ECHO psychedelic treatment on TOP cell — seed_top → fb_top → xform_top (sx/sy 1.02 outward) → level_top (opacity 0.93) → comp_top (over, sel_top input 1) → null_top → layout_stack[0]. Mid and bottom cells unchanged.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/sel_top", "to": "/project1/layout_stack", "input_index": 0, "before": "/project1/sel_top"},
+
+    {"type": "create_node", "path": "/project1/seed_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "resolutionh", "before": 256},
+    {"type": "set_parameter", "path": "/project1/seed_top", "parameter": "format", "before": "useinput"},
+
+    {"type": "create_node", "path": "/project1/fb_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/fb_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/fb_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/fb_top", "parameter": "format", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/fb_top", "parameter": "top", "before": null},
+    {"type": "connect", "from": "/project1/seed_top", "to": "/project1/fb_top", "input_index": 0, "before": null},
+
+    {"type": "create_node", "path": "/project1/xform_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/xform_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/xform_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/xform_top", "parameter": "format", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/xform_top", "parameter": "sx", "before": 1.0},
+    {"type": "set_parameter", "path": "/project1/xform_top", "parameter": "sy", "before": 1.0},
+    {"type": "connect", "from": "/project1/fb_top", "to": "/project1/xform_top", "input_index": 0, "before": null},
+
+    {"type": "create_node", "path": "/project1/level_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/level_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/level_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/level_top", "parameter": "format", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/level_top", "parameter": "opacity", "before": 1.0},
+    {"type": "connect", "from": "/project1/xform_top", "to": "/project1/level_top", "input_index": 0, "before": null},
+
+    {"type": "create_node", "path": "/project1/comp_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/comp_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/comp_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/comp_top", "parameter": "format", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/comp_top", "parameter": "operand", "before": "multiply"},
+    {"type": "connect", "from": "/project1/level_top", "to": "/project1/comp_top", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/sel_top", "to": "/project1/comp_top", "input_index": 1, "before": null},
+
+    {"type": "create_node", "path": "/project1/null_top", "before": null},
+    {"type": "set_parameter", "path": "/project1/null_top", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/null_top", "parameter": "nodeY", "before": 0},
+    {"type": "set_parameter", "path": "/project1/null_top", "parameter": "format", "before": "useinput"},
+    {"type": "connect", "from": "/project1/comp_top", "to": "/project1/null_top", "input_index": 0, "before": null},
+
+    {"type": "connect", "from": "/project1/null_top", "to": "/project1/layout_stack", "input_index": 0, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/layout_stack", "parameter": "nodeX", "before": 400},
+    {"type": "set_parameter", "path": "/project1/null_out", "parameter": "nodeX", "before": 600}
+  ]
+}

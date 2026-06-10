@@ -1,0 +1,43 @@
+{
+  "label": "add noise_walls (Noise SOP) for organic wall deformation — chained to tube_sop, subtle low-amp large-period mercury surface",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/noise_walls",
+      "before": null
+    },
+    {
+      "type": "connect",
+      "from": "/project1/tube_sop",
+      "to": "/project1/noise_walls",
+      "input_index": 0,
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "period",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "amp",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "harmon",
+      "before": 1
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/noise_walls",
+      "parameter": "rough",
+      "before": 0.5
+    }
+  ]
+}

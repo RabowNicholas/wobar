@@ -1,0 +1,19 @@
+{
+  "label": "fix render scope visibility — noise_walls.render was False (reset somewhere after move_004), restore to True; also set mat_mercury.backfacelit=frontlit for inside-tube lighting",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "backfacelit",
+      "before": "uselight"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "render",
+      "before": false
+    }
+  ]
+}

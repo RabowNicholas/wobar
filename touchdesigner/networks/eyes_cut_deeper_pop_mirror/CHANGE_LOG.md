@@ -192,3 +192,40 @@ Created `record_out` (moviefileoutTOP) at the end of the chain:
 - HARD-WON SOFTNESS: 5-second energy release in audio analysis chain → slow wind-down decay after drops ✓
 
 Counter-programs cleanly to the existing iris_2 (intimate close-up, photoreal) and eyes_cut_deeper grid (4-cell macro fragmentation) — third visual identity for the same song's release window.
+
+---
+
+## Move 006 — Fix: SA integration not running (parent.POPX expression)
+
+2026-05-07.
+
+**Problem:** Cloud particles weren't moving despite `sa1.par.Play=True` and `Timescale=1.0`. Sampling positions over 30 frames showed zero delta. SA was loaded and configured but not actually advecting.
+
+**Root cause:** During move_001 cleanup, I cleared `sa1/feedback1.par.startpulse.expr` because it referenced `parent.POPX.par.Startpulse` and the example container was being deleted. Looked like an orphan reference — but it was actually CORRECT. `sa1.par.parentshortcut = 'POPX'` makes `parent.POPX` resolve to sa1 itself from inside the COMP. The expression was forwarding `sa1.Startpulse` to `feedback1.startpulse` (the actual integrator), which is what kicks off continuous integration after Initialize.
+
+**Fix:**
+```python
+sa1/feedback1.par.startpulse.expr = "parent.POPX.par.Startpulse"
+sa1.par.Initializepulse.pulse()
+sa1.par.Startpulse.pulse()
+```
+
+Also added a Pulse page on `ctrl_master`:
+- `Pulsebase` (0.025) — silence sphere radius
+- `Pulsegain` (0.05) — peak addition (max radius 0.075)
+- `Pulsecurve` (1.5) — exponent
+
+`sphere_template.par.radx/y/z.expr = Pulsebase + Pulsegain × pow(max(0, Energy), Pulsecurve)`. Particles grow with energy.
+
+Bumped audio defaults so cloud is always visibly evolving (not just at peaks):
+- `Audiofloor` 0.1 → 1.0 (active drift at silence)
+- `Audioceil` 2.0 → 1.5 (peak Timescale 2.5)
+
+**New gotcha for TD_BUILD_LOG correction tracker:**
+> POPX modules use `parent.<shortcut>` references internally (e.g. `parent.POPX.par.Startpulse` from `feedback1` inside `sa1`). The shortcut comes from the parent COMP's `par.parentshortcut` setting (POPX modules ship with `parentshortcut='POPX'`). Expressions like `parent.POPX.par.X` look orphan-style but are CORRECT — they resolve via parentshortcut. **Do NOT clear them when copying POPX modules to a new project — that breaks the internal pulse/start chain.** If they error on first eval, fix by copying the module to a target where parent shortcut RESOLVES (often: leave the module where it is, or destroy + recreate the chain that references the original parent).
+
+**State:**
+- SA is integrating continuously
+- Energy slider drives Timescale (1.0 → 2.5) AND sphere radius (0.025 → 0.075)
+- Audio still unwired — manual Energy slider for testing
+- Network ready for audio re-bind when Nick is ready

@@ -1,0 +1,19 @@
+{
+  "label": "split base_psy chain — base_psy now single-pass on TOP cell (sel_top), base_psy_2 single-pass on MID cell (sel_mid). sel_bot clean. Both still share ctrl_master.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/sel_mid", "to": "/project1/base_psy", "input_index": 0, "before": "/project1/sel_mid"},
+    {"type": "disconnect", "from": "/project1/base_psy", "to": "/project1/base_psy_2", "input_index": 0, "before": "/project1/base_psy"},
+    {"type": "disconnect", "from": "/project1/sel_top", "to": "/project1/layout_stack", "input_index": 0, "before": "/project1/sel_top"},
+    {"type": "disconnect", "from": "/project1/base_psy_2", "to": "/project1/layout_stack", "input_index": 1, "before": "/project1/base_psy_2"},
+
+    {"type": "connect", "from": "/project1/sel_top", "to": "/project1/base_psy", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/sel_mid", "to": "/project1/base_psy_2", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy", "to": "/project1/layout_stack", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy_2", "to": "/project1/layout_stack", "input_index": 1, "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_psy", "parameter": "nodeXY", "before": {"nodeX": 400, "nodeY": 0}},
+    {"type": "set_parameter", "path": "/project1/base_psy_2", "parameter": "nodeXY", "before": {"nodeX": 700, "nodeY": 0}}
+  ]
+}

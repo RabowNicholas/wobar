@@ -1,0 +1,31 @@
+{
+  "label": "base_color baseCOMP — palette LOOKUP psychedelic treatment for middle cell. 6-stop WOBAR ramp (dark purple → mauve → bronze patina → magenta → tarnished bone → pale bone), lookupTOP method=secondinput.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/sel_mid", "to": "/project1/layout_stack", "input_index": 1, "before": "/project1/sel_mid"},
+
+    {"type": "create_node", "path": "/project1/base_color", "before": null, "note": "reusable color treatment baseCOMP"},
+    {"type": "set_parameter", "path": "/project1/base_color", "parameter": "nodeXY", "before": {"nodeX": 0, "nodeY": 0}},
+
+    {"type": "create_node", "path": "/project1/base_color/in1", "before": null},
+    {"type": "create_node", "path": "/project1/base_color/ramp_palette", "before": null},
+    {"type": "create_node", "path": "/project1/base_color/lookup", "before": null},
+    {"type": "create_node", "path": "/project1/base_color/out1", "before": null},
+
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "type", "before": "horizontal"},
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "resolutionw", "before": 256},
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "resolutionh", "before": 256},
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "outputresolution", "before": "useinput"},
+    {"type": "set_parameter", "path": "/project1/base_color/ramp_palette", "parameter": "format", "before": "useinput"},
+
+    {"type": "set_dat_text", "path": "/project1/base_color/ramp_palette_keys", "before": "pos\\tr\\tg\\tb\\ta\\r\\n0\\t0\\t0\\t0\\t1\\r\\n1\\t1\\t1\\t1\\t1\\r\\n"},
+
+    {"type": "connect", "from": "/project1/base_color/in1", "to": "/project1/base_color/lookup", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_color/ramp_palette", "to": "/project1/base_color/lookup", "input_index": 1, "before": null},
+    {"type": "connect", "from": "/project1/base_color/lookup", "to": "/project1/base_color/out1", "input_index": 0, "before": null},
+
+    {"type": "connect", "from": "/project1/sel_mid", "to": "/project1/base_color", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_color", "to": "/project1/layout_stack", "input_index": 1, "before": null}
+  ]
+}

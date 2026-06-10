@@ -1,0 +1,54 @@
+{
+  "label": "create tube_sop — womb wall primitive (Z-aligned, long, high tessellation)",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "create_node",
+      "path": "/project1/tube_sop",
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "type",
+      "before": "mesh"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "orient",
+      "before": "y"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "rad1",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "rad2",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "height",
+      "before": 1.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "rows",
+      "before": 10
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/tube_sop",
+      "parameter": "cols",
+      "before": 40
+    }
+  ]
+}

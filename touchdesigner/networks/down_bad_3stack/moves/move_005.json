@@ -1,0 +1,13 @@
+{
+  "label": "chain base_psy_2 onto top cell after base_psy — compounded feedback (trails of trails). Both instances share ctrl_master.",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "disconnect", "from": "/project1/base_psy", "to": "/project1/layout_stack", "input_index": 0, "before": "/project1/base_psy"},
+    {"type": "create_node", "path": "/project1/base_psy_2", "before": null, "note": "copy of base_psy with full internal structure (in1, seed, fb, xform, level, comp, out1) and ctrl_master expression bindings"},
+    {"type": "set_parameter", "path": "/project1/base_psy_2", "parameter": "nodeX", "before": 0},
+    {"type": "set_parameter", "path": "/project1/base_psy_2", "parameter": "nodeY", "before": 0},
+    {"type": "connect", "from": "/project1/base_psy", "to": "/project1/base_psy_2", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/project1/base_psy_2", "to": "/project1/layout_stack", "input_index": 0, "before": null}
+  ]
+}

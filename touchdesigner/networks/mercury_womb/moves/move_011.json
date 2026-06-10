@@ -1,0 +1,43 @@
+{
+  "label": "BREATH + FLOW liquid spine — tube radius LFO (8s sine ±0.15), noise_walls Z-translate flow (0.3/s), bumped amp 0.15→0.5 and period 4→1.5 for visible surface, roughness 0.20→0.08 for wet mercury",
+  "timestamp": "2026-05-21T00:00:00Z",
+  "network": "mercury_womb",
+  "operations": [
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "rad1",
+      "before": {"mode": "CONSTANT", "val": 1.5, "expr": null}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/tube_sop",
+      "parameter": "rad2",
+      "before": {"mode": "CONSTANT", "val": 1.5, "expr": null}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "tz",
+      "before": {"mode": "EXPRESSION", "expr": "absTime.seconds", "note": "TWOZERO MCP appears to have auto-set this on creation — value was 8571 at first observation"}
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "amp",
+      "before": 0.15
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/noise_walls",
+      "parameter": "period",
+      "before": 4.0
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/geo_walls/mat_mercury",
+      "parameter": "roughness",
+      "before": 0.20
+    }
+  ]
+}

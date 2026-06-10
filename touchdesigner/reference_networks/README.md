@@ -195,3 +195,45 @@ null_out (Null TOP)   ← feedback1 targetop points here
 - `Displace TOP` always on (displaceweight constant 0.05) → glitch becomes ambient texture and stops reading as a peak trigger. Displaceweight must come from `transient` so it fires sharply on note attacks and is nearly zero at breakdown.
 - Any warm color in content source → Act 3 rule violation. If content source includes warm tones (e.g. from a Noise TOP with default HSV), add a second HSV Adjust TOP after desat targeting orange (hue 20–40°, satmult 0.0) before the feedback entry point. The feedback loop will amplify any warm tones that make it past desat.
 - `sx`/`sy` = 1.0 exactly → no inward motion, feedback accumulates in place and immediately whites out.
+
+---
+
+### Glass Orb (nested POPX shells, audio-reactive)
+Screenshot: *(no export yet)*
+Act: Act 2 / DESCENSION
+What it does: Three nested translucent-glass shells of magnetized facets, each tumbling on a Lissajous integral of its own audio band (bass→outer, mid→middle, high→inner), with a drop-gated feedback "melt" and a cool-band hue-cycling environment. Camera sits at center — the nested depth reads as a frequency tunnel. Network: `magnetize` (`/example`).
+
+Node chain:
+```
+box1 (boxPOP, shard) + pointgen1>attribute1>noise1 (wander poles)
+  ↓
+instancer1 (POPX spherical) — Scale=Orbsize, Freq=Facetcount
+  ↓
+magnetize1 (POPX) — Affectrot, Aimweight=Glintturn (pole-aim glints)
+  ↓
+transform/color_modifier1 → geo2 (inner ×1) / geo2_mid (Midscale) / geo2_large (Outerscale)
+   each geo rx/ry/rz = spin_angles[band] * Lissajous_ratio % 360
+
+base_audio.smooth_out (bass/mid/high) → spin_speeds (constantCHOP: base*(1+band*react))
+  ↓
+spin_angles (speedCHOP — INTEGRATES speed → continuous angle)
+
+hdri_env → env_down (resTOP 512) → hsv_cycle (cool-band hue) → env_obsidian (IBL light)
+mat_obsidian (pbrMAT — translucent: alpha<1, blending, alphafront/alphaside fresnel)
+  ↓
+render1 (transparent, sortedblending) + cameraViewport + lights
+  ↓
+comp_bg → bloom → grade(+cool tint) → feedback MELT (drop-gated) → vignette → grain → switch_post → out1
+```
+
+Taste decisions:
+- 3 shells are SCALED COPIES of one POP (geo COMP scale), not 3 sims — cheap. They read as distinct LAYERS via independent MOTION (parallax), not density: each tumbles at a different audio-driven rate. Density alone can't separate them — from inside, a sparse shell shows only ~12 facets in the FOV.
+- Rotation is INTEGRATED through a speedCHOP, never `band` multiplied into `absTime*speed` — the latter jumps when the band changes. Integration gives smooth audio-driven accel/decel.
+- The melt is drop-GATED (`clamp(0,(energy-gate)*sens)`) — verses stay clean, only drops dissolve. Keep it a dissolve (surrender / Act 2), not an explosion (release / Act 4).
+- Cool-band hue cycle + Saturation ~0.45 keeps the psychedelia on-brand (Act-2 blue/teal); full-spectrum rainbow is off-brand. The glass is NEUTRAL — color comes from the env, not the material. *(Starting point, not a hard rule.)*
+
+Known non-working variations:
+- Pole-aim orientation does NOTHING on a flat grid (all normals +Z) — needs a curved surface (the sphere) for the magnetize aim to engage.
+- DOF on the translucent shards is not viable — alpha-blended/instanced geo writes no clean depth (depthTOP, drawdepthonly, opaque-material override all failed).
+- Animating the env map re-bakes IBL every frame at ~142 ms unless `envlightmapprefilter='off'` + env map downsampled to ~512.
+- `sin`/`cos` in hue/spin expressions → `NameError` — use `math.sin` or an `abs`-based triangle/smoothstep.

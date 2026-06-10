@@ -1,0 +1,18 @@
+{
+  "label": "dial in visible psychedelic treatments — Top Echo pushed (Echoopacity 0.95, Echorotate 0.3), Color set to luminance lookup, Colorcycle=0 / Colorphase=0 / Colormix=1 locked. Fixed comp_mix.swaporder=True (debug log 2026-05-04 gotcha: `over` puts input 0 on top by default — needed swap to get treated above clean).",
+  "timestamp": "2026-05-23T00:00:00Z",
+  "network": "down_bad_3stack",
+  "operations": [
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Echoexpand", "before": 1.02},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Echoopacity", "before": 0.93},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Echorotate", "before": 0.0},
+
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Colorcycle", "before": 0.9},
+    {"type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "Colormix", "before": 0.9},
+
+    {"type": "set_parameter", "path": "/project1/base_color/lookup", "parameter": "channel", "before": "independent"},
+    {"type": "set_parameter", "path": "/project1/base_color/lookup", "parameter": "darkuvunit", "before": "fraction"},
+
+    {"type": "set_parameter", "path": "/project1/base_color/comp_mix", "parameter": "swaporder", "before": false}
+  ]
+}
