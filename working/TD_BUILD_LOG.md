@@ -13,6 +13,14 @@ One entry per build session. Newest at top. This is the feedback loop — patter
 
 ---
 
+## 2026-06-10 — TD system audit (maintenance, no TD build)
+
+Full review of the TD knowledge system. **Found the promotion pipeline broken:** 14 tracker entries marked promoted had never landed in WOBAR_TD_AGENT_RULES.md — all landed now under "Promoted Gotchas — by Operator Family." Promoted 2 count-2 stragglers (instancetop/instanceop, geometryCOMP torus1) + added the undercounted audio power-curve >1.2 rule. Fixed AGENT_RULES contradictions: Export section (h264nvgpu → non-commercial mjpa workflow), Control Architecture (rewritten around ctrl_master custom pars), feedbackTOP (3 conflicting entries reconciled to one canonical wiring — see Feedback Chain Rules). Promoted the audio normalization/binding patterns. Split this log: sessions 2026-05-06 and earlier → `TD_BUILD_LOG_ARCHIVE.md`. Tracker conventions added (dated bumps, SUPERSEDED markers, verify-promoted-landed). Commit `9815ce5`.
+
+**Process learning:** "marked promoted" and "rule landed" drifted apart because td-save proposes promotions but nothing verifies the rule text was written. The tracker convention note now requires verifying the rule exists in AGENT_RULES before marking the cell.
+
+---
+
 ## 2026-06-09 (session close) — glass-orb: audio-reactive tumble, drop-melt, cool-color, cleanup, recorder
 
 Finished the glass-orb (magnetize) as an on-brand **Act-2 / DESCENSION** piece; recorded a master (mjpa .mov → HandBrake). Builds on the v003–v005 entry below (translucent glass, hue-cycle env + IBL-prefilter perf fix, ctrl rebuild — not repeated here).
