@@ -1,7 +1,7 @@
 ---
 title: Wobar Sonic Identity
-version: 1.0
-last_updated: 2026-03-10
+version: 1.1
+last_updated: 2026-06-10
 status: locked
 scope: Sonic identity, reference artists, anti-references, genre positioning.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -14,13 +14,16 @@ Psychedelic because the sound always points inward. Experimental because the thr
 
 The only question that determines whether something is Wobar: **does it point inward.**
 
+Deep dubstep is the dialect, not the test. Most Wobar music lives at 140 — sub-forward, hypnotic, sound-design-dense. The membership question never changes. Structurally proven live: Acts 1–4 can live entirely inside deep dubstep; Act 5 settles below it — pure integration, melting-type moments.
+
 Heavy bass that serves the journey. Sometimes confrontational and disorienting. Sometimes emotional and cathartic. Always psychedelic: organic sound design, spatial movement, textures that evolve and breathe. Groove and danceability matter. The dance floor stays moving while the work happens.
 
 ---
 
 ## Genre Positioning
-- Primary: Psychedelic Bass
-- Core elements: Dubstep (128–142 BPM), drum & bass, halftime, midtempo, experimental bass
+- Primary: Deep Psychedelic Dubstep — the home register. 140, sub-forward, hypnotic, sound-design-dense.
+- Introduction layer: "deep dubstep" is the descriptor promoters and first-contact listeners get — it tells them what the majority of the music will sound and feel like. It introduces the sound; it does not define the identity.
+- Range when the act requires it: drum & bass (Act 4 ceiling), midtempo/downtempo (Act 5 floor), experimental bass throughout
 - Never use "EDM" as a genre descriptor for Wobar
 
 ---

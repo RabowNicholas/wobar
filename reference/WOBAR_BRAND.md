@@ -1,7 +1,7 @@
 ---
 title: Wobar Brand Foundation
-version: 1.0
-last_updated: 2026-03-10
+version: 1.1
+last_updated: 2026-06-10
 status: locked
 scope: Mission, manifesto, belief system, archetypes, the three versions, positioning.
 dependencies: none
@@ -10,19 +10,19 @@ dependencies: none
 # WOBAR BRAND FOUNDATION
 
 ## Mission
-The portal goes inward. Everything you need is already there.
+The portal goes inward. At the center is a mirror. Everything you need is already there.
 
 ## Manifesto
-The portal goes inward. Everything you need is already there. Set your intention before you enter — or your subconscious will keep you safe from what you came here to find. Hold the paradox: nothing matters and everything matters at the same time. That's where freedom lives. Walk your own path. Wobar isn't a guide. There are no gurus here. Just a mirror, a frequency, and whatever you've been carrying.
+The portal goes inward. At the center is a mirror. Everything you need is already there. Set your intention before you enter — or your subconscious will keep you safe from what you came here to find. Hold the paradox: nothing matters and everything matters at the same time. That's where freedom lives. Walk your own path. Wobar isn't a guide. There are no gurus here. Just a mirror, a frequency, and whatever you've been carrying.
 
-The music doesn't take you somewhere else. It shows you yourself — from the one angle your own perception can never reach. You can't see yourself as others see you. You can't step outside your own blind spot. But the right frequency at the right time can create a moment where the walls thin enough that you catch a glimpse of what's actually there. That's the portal. That's always been the portal. It goes in. Not up. Not out. In.
+The music doesn't take you somewhere else. It shows you yourself — from the one angle your own perception can never reach. You can't see yourself as others see you. You can't step outside your own blind spot. But the right frequency at the right time can thin the walls enough that you catch a glimpse of what's actually there. That's the mirror. The portal is just the way to it — and it goes in. Not up. Not out. In.
 
 ## Belief System
 
 1. **IT'S ALL WITHIN YOU** — The portal removes obstruction between you and what was always there.
 2. **INTENTION IS EVERYTHING** — The portal amplifies whatever you bring through it, including what you're running from.
 3. **NO ESCAPE** — This music doesn't offer a way out. It offers a way through. The shadow is the portal. You go through it, not around it.
-4. **BASS AS MIRROR** — The right frequency creates the one angle you can't normally access — a reflection from outside your own perception.
+4. **BASS AS MIRROR** — The right frequency creates the one angle you can't normally access — a reflection from outside your own perception. This is what waits at the center of the portal.
 5. **TRANSFORMATION AS WELL AS ENTERTAINMENT** — Every set is an opportunity to see something you've been missing. The music does its part. You do yours.
 6. **THE PARADOX** — Nothing matters and everything matters simultaneously. This is the condition under which freedom becomes possible.
 7. **YOUR PATH ALONE** — No gurus. No conformity. What you encounter in the mirror is yours. What you do with it is yours.
@@ -57,10 +57,10 @@ The music doesn't take you somewhere else. It shows you yourself — from the on
 
 ## Positioning
 
-Wobar opens portals through bass music — and they go inward. The sound goes wherever the journey requires. The genre isn't the point. The perspective is. Every track, every set, every flip is filtered through the same lens — the mirror that shows you the angle you couldn't reach alone. What people follow isn't the music. It's the way of seeing.
+Wobar opens portals through bass music — and they go inward. The sound goes wherever the journey requires. Most of it sounds like deep dubstep — 140, sub-forward, hypnotic. All of it points inward. The genre isn't the point. The perspective is. Every track, every set, every flip is filtered through the same lens — the mirror that shows you the angle you couldn't reach alone. What people follow isn't the music. It's the way of seeing.
 
-- Genre: Psychedelic Bass (genre-fluid bass music structured for transformation)
-- Core Elements: Dubstep (128–142 BPM), drum & bass, halftime, midtempo, experimental bass
+- Genre: Deep Psychedelic Dubstep — 140-centered bass music structured for transformation
+- Core Elements: Home — deep/psychedelic dubstep at 140, full-time and halftime. Range when the act requires it — drum & bass (Act 4 ceiling), midtempo/downtempo (Act 5 floor), experimental bass throughout
 - Comp Artists: Of The Trees, Shlump, INZO, LSDREAM, Tipper
 - Differentiation: Explicit therapeutic framework manifested as complete journey architecture
 - Audience: 21–34 year old bass heads who use music/festivals/plant medicine to access altered states

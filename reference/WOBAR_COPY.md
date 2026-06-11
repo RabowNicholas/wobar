@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 1.0
-last_updated: 2026-03-10
+version: 1.1
+last_updated: 2026-06-10
 status: locked
 scope: Voice attributes, lexicon, anti-vocabulary, three writing tests, platform-specific instructions.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -78,8 +78,8 @@ Every piece of Wobar copy must hold: heavy AND transformative. Filthy AND sacred
 
 ## Core Vocabulary — Use Freely
 
-**Portal & Journey**
-portal, portal technology, sonic portal, journey, arc, descent/descension, encounter, release, integration
+**Portal, Journey & Mirror**
+portal, portal technology, sonic portal, journey, arc, descent/descension, encounter, release, integration, mirror, reflection, the glimpse, walls thinning, the center
 
 **Sonic & Physical**
 heavy, frequencies, resonance, bass, sub, the drop, sound design, grooves, texture
