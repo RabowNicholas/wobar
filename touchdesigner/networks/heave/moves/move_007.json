@@ -1,0 +1,18 @@
+{
+  "label": "obsidian material + night lighting scheme + brand-gap fixes (heat discharge light, camera motion floor) + release standard doc",
+  "timestamp": "2026-06-10T00:00:00Z",
+  "network": "heave",
+  "operations": [
+    {"type": "set_parameter", "path": "/example/mat_heave", "parameter": "obsidian preset: basecolor .022/.020/.028, metallic 0, roughness .13, speclevel 1, maps off, bumpscale .25", "before": "charcoal texture-map experiment (tex_color/tex_rough/comp_crackcolor maps, kept unwired)"},
+    {"type": "set_parameter", "path": "/example/hdri_env", "parameter": "file", "before": "rogland_clear_night_4k.exr -> rogland_moonlit_night_4k.exr"},
+    {"type": "set_parameter", "path": "/example/geo1", "parameter": "ry", "before": "EXPRESSION op('speed1')['chan1']*45-70 — HIDDEN EXAMPLE TURNTABLE, the all-session pose ghost. Now 0 constant."},
+    {"type": "set_parameter", "path": "/example/light1 + light_rim + light_under", "parameter": "night scheme positions/colors", "before": "dusk-era rig"},
+    {"type": "create_node", "path": "/example/light_heat", "before": null},
+    {"type": "create_node", "path": "/example/tex_rough + tex_color + tex_height + tex_normal + crack_mask + comp_crackcolor", "before": null},
+    {"type": "set_parameter", "path": "/example/render1", "parameter": "lights", "before": "without light_heat"},
+    {"type": "create_node", "path": "/example/ctrl_master customPages Ember(4, dormant) + Camera(4) + Color Heat dials(4)", "before": null},
+    {"type": "set_parameter", "path": "/example/cam_main", "parameter": "tz,tx", "before": "3.4, 0 constants -> bar-locked push/sway expressions"},
+    {"type": "connect", "from": "/example/bg_fit", "to": "/example/comp_bg", "input_index": 0, "before": "bg_base temp gray"}
+  ],
+  "notes": "Material arc: charcoal+ember experiment (darknessemit = BOOLEAN toggle gotcha — strength must ride darknessemitcolor RGB; at night emit-where-dark = everywhere = flat poster) -> PIVOT to obsidian per Nick (one move, landed). Brand check vs Act 4 register: motion architecture passes; gaps = still-water (assembled phase static) + cool-monochrome (no warmth at discharge). Fixes: light_heat burnt-amber point, dimmer = (Heatbase + Heatcycle*cycle_env) * bass binding template -> warmth ignites at explosion, cools at rest; cam_main push/sway expressions on Slambpm bar clock. Release standard doc seeded: working/WOBAR_RELEASE_STANDARD.md. Post chain still bypassed - re-grade pending."
+}

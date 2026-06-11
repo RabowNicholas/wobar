@@ -1,0 +1,24 @@
+{
+  "label": "step 4 — 8-bar cycle slam: shape_falloff sphere + cycle clock + attack/hold/rebuild envelope, BPM-agnostic via ctrl_master",
+  "timestamp": "2026-06-10T00:00:00Z",
+  "network": "heave",
+  "notes": "Slam architecture iterations: (1) beat-pulse radius (too flutter) -> (2) audio-gated energy envelope (sel_energy/math_gate/lag_slam/null_slam chain, now DORMANT but kept) -> (3) FINAL: 8-bar cycle clock (ctrl_cycle constantCHOP, phase+env channels), all timing from ctrl_master Slambpm/Slambars. Envelope: ease-out attack (Slamattack fraction, 0.08~=1.1s), hold to Slamhold=0.6, linear rebuild over Slamrebuild=0.3, assembled rest till wrap. Radx floor 0.05 (radius 0 degenerates falloff). noise_modifier1: Mode=simple (stateless -> recoil), amps -0.3/0.22/-0.26, T4d drift. transform_modifier1 Tz=0.55 local-axis inflation, Scale 1.0. explode1 clusters 2000->400. infection_falloff1 BYPASSED (kept, not deleted). GOTCHA logged: paused-timeline screenshots of POP sim chains show STALE state - verify live or single-frame-advance. Nick live-judged: rebuild perfect, attack was too quick -> ramp added.",
+  "operations": [
+    {"type": "create_node", "path": "/POPX_1_4_0", "before": null},
+    {"type": "create_node", "path": "/example/shape_falloff1", "before": null},
+    {"type": "set_parameter", "path": "/example/infection_falloff1", "parameter": "Bypass", "before": false},
+    {"type": "connect", "from": "/example/explode1", "to": "/example/shape_falloff1", "input_index": 0, "before": null},
+    {"type": "connect", "from": "/example/shape_falloff1", "to": "/example/noise_modifier1", "input_index": 0, "before": "/example/infection_falloff1"},
+    {"type": "set_parameter", "path": "/example/shape_falloff1", "parameter": "Shape,Displayshape,Transitionrange,Ty,Radx,Rady,Radz", "before": "lineprojection defaults"},
+    {"type": "set_parameter", "path": "/example/noise_modifier1", "parameter": "Mode,Userestattr,Amp1,Amp2,Amp3,Period,T4d", "before": "advect,False,-0.4,0.2,-0.2,2.0,0.0"},
+    {"type": "set_parameter", "path": "/example/transform_modifier1", "parameter": "Scale,Tz", "before": "0.2,0.0"},
+    {"type": "set_parameter", "path": "/example/explode1", "parameter": "Numberofclusters", "before": 2000},
+    {"type": "create_node", "path": "/example/ctrl_master customPage Slam (15 pars)", "before": null},
+    {"type": "create_node", "path": "/example/sel_energy", "before": null},
+    {"type": "create_node", "path": "/example/math_gate", "before": null},
+    {"type": "create_node", "path": "/example/lag_slam", "before": null},
+    {"type": "create_node", "path": "/example/null_slam", "before": null},
+    {"type": "create_node", "path": "/example/ctrl_cycle", "before": null},
+    {"type": "set_parameter", "path": "/time", "parameter": "rangeend", "before": 600}
+  ]
+}

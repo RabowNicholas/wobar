@@ -1,0 +1,16 @@
+{
+  "label": "HDRI environment — qwantani_dusk_2 IBL + visible graded bg, panel res fixes, grain aspect fix",
+  "timestamp": "2026-06-10T00:00:00Z",
+  "network": "heave",
+  "operations": [
+    {"type": "create_node", "path": "/example/hdri_env + env_down + bg_hdri_grade + bg_fit", "before": null},
+    {"type": "set_parameter", "path": "/example/env_amb", "parameter": "envlightmap,dimmer,cr/cg/cb", "before": "none, 0.5(then 1.0), smoke-mauve tint"},
+    {"type": "connect", "from": "/example/bg_fit", "to": "/example/comp_bg", "input_index": 0, "before": "/example/bg_base (flat constant — kept, unwired)"},
+    {"type": "set_parameter", "path": "/example/mat_heave", "parameter": "basecolor", "before": "0.122/0.094/0.157"},
+    {"type": "set_parameter", "path": "/example/level_grade", "parameter": "outhigh", "before": 1.0},
+    {"type": "set_parameter", "path": "/example", "parameter": "w,h", "before": "1080,1080 — POPX example panel leftover, was the square-view culprit"},
+    {"type": "set_parameter", "path": "/example/grain_noise", "parameter": "resolutionw,resolutionh,aspectcorrect,period,harmon", "before": "512,512,off,1.0,1 — square stretch smeared grain"},
+    {"type": "set_parameter", "path": "/example/cameraViewport/renderView", "parameter": "w,h", "before": "720,1280"}
+  ],
+  "notes": "HDRI: qwantani_dusk_2_puresky_4k.exr (loads at 1280x640 — NC license caps 4K). IBL chain hdri_env -> env_down(512x256) -> env_amb envlightmap, prefilter OFF per promoted footgun. Visible bg: env_down -> bg_hdri_grade(brightness .22) -> bg_fit(fitoutside cover) -> comp_bg input0. bg_base flat constant kept unwired. White-cap discipline: env dimmer 0.6, outhigh 0.88. Nick feedback driving this move: explosion+movement great, colors too dark, wants HDRI physical-space realism."
+}
