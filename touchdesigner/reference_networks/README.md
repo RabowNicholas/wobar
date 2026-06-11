@@ -198,7 +198,40 @@ null_out (Null TOP)   ← feedback1 targetop points here
 
 ---
 
-### Glass Orb (nested POPX shells, audio-reactive)
+### Act 4 Pressure-Discharge System (act4_explosion — KILLED, architecture reference only)
+Screenshot: *(none — piece never shipped; Nick killed it 2026-06-10 for a fresh start)*
+Act: Act 4 / RELEASE
+What it does: Procedural obsidian mass that pressure-builds glowing cracks, explodes into an exploded-view of itself on song cues, and reassembles as a DIFFERENT rock. The piece failed aesthetically (figurative→chunk-grid cheese chain); the five subsystems below are sound and reusable.
+
+Node chain (subsystems, not full):
+```
+mass_sphere (spherePOP geodesic) → mass_noise (form, Massseed=variant) → mass_center → transform1
+  → voxelize (Outputvolume=True) — static interior points, attrs incl Inside/HitNormal, NO Color
+  → shape_falloff (radius = envelope) → noise_modifier (whisper) → crack_dilate (per-piece shrink = seams)
+  → dilate_global (Localspace=False, scale ~1.85 around centroid pivot = EXPLODED VIEW)
+  → geo_chunks (instancing: manual count numPoints(), instanceactive='Inside', rotto=HitNormal, solid box template)
+
+drivers: ctrl_cycle (bar clock: phase/env/pressure) | sel_energy→gate→lag (audio drop-gate)
+       | anim_song_keys + song_kfm (BAR-BASED CHOREOGRAPHY TABLE: bar/env/pressure/curve) — Usetable/Songmix switch
+env → lag_env (asymmetric attack lag) → null_env → falloff radius + heat light + seed-swap trigger
+chopexec_seedswap (hysteresis 0.92/0.3) → Massseed bump + centroid recenter + dilation pivot re-aim
+light_core (shadow-casting amber INSIDE the rock) ← pressure = cracks glow through hairline seams
+tumble: constantCHOP speed → speedCHOP → geo.ry % 360
+```
+
+Taste decisions (the lessons that killed it — read before any Act 4 attempt):
+- Figurative object + literal destruction = stock-FX cheese (napoleon→vaporwave, goat→metal-cover). Nick's catalog is all abstract; encounter lives in form+motion.
+- "Heavy but held" explosion = exploded-view (formation survives), NOT particle chaos. Curl-noise scatter reads weightless confetti.
+- Hollow-shell fracture reads as skin the moment it opens — solidity must be architectural (instanced solid chunks).
+- Voxel-grid chunks read as LEGO rows at rest even with HitNormal rotation — the assembled state needs non-grid packing (unsolved at kill time).
+- Bar-clock cycles read as a loop; continuity = integrated tumble + song-table drive + never-same-rock reformation. That stack is right.
+
+Known non-working variations:
+- infection_falloff as discharge driver → neighborPOP 2.6s/cook GPU on dense mesh (simulation family; use static Shape Falloff)
+- Animating geometry upstream of the fracture → per-frame re-partition (fps 15)
+- mesh_fill as instancing source → outputs Color (instancing rejected) + sim won't run from python pulses
+- darknessemit for ember cracks at night → boolean toggle + emits everywhere dark = flat poster; shadow-casting interior light is the working crack-glow
+
 Screenshot: *(no export yet)*
 Act: Act 2 / DESCENSION
 What it does: Three nested translucent-glass shells of magnetized facets, each tumbling on a Lissajous integral of its own audio band (bass→outer, mid→middle, high→inner), with a drop-gated feedback "melt" and a cool-band hue-cycling environment. Camera sits at center — the nested depth reads as a frequency tunnel. Network: `magnetize` (`/example`).

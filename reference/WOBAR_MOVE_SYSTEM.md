@@ -63,6 +63,8 @@ wobar/touchdesigner/networks/
 | mercury_womb | /project1 (no wrapping baseCOMP) |
 | down_bad_3stack | /project1 (no wrapping baseCOMP) |
 | magnetize | /example (POPX magnetize example as base; Act 4 discharge skin) |
+| heave | /example (POPX explode curl example as base; Act 4 P1 stress test — KILLED 2026-06-10) |
+| membrane | /project1 (Act 3 ENCOUNTER — presser against bone membrane) |
 
 Add a row here whenever a new network is created.
 

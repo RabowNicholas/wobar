@@ -1,0 +1,19 @@
+{
+  "label": "step 6+8 — record-pass normalization, base_audio_react (_n channels), palette light bindings, cinematic post chain (CA/grade/bloom/grain)",
+  "timestamp": "2026-06-10T00:00:00Z",
+  "network": "heave",
+  "notes": "Record pass: full song through rec_audio (8 bands x 11650 samples). Percentiles computed in-TD. base_audio_react publishes 8 _n channels (p10->0, p90->1, p95 for transient): sub_bass(.111/1.072) bass(.153/.555) mid(.069/.191) high(.017/.029) energy(.069/.760) sub_pressure(.002/.146) growl(.266/.992) transient(.028/.313 p95). Palette activation = light dimmers via binding template Base+React*(clamp**Curve): light1(dusty-coral key)<-bass_n, light_mid(muted-magenta, NEW)<-mid_n, light_rim(slate)<-high_n. Post chain: comp_bg(16f) -> CA(3 keep levels + 2 px-unit transforms beat-driven + 2 adds) -> level_grade -> hsv_grade -> bloom_post(inputplusbloom) -> comp_grain(screen, simplex2d 512 period.02 -> res 720x1280) -> null_out. ctrl_master pages added: Color(9), Post(8). CORRECTIONS this move: levelTOP channel pars are highg/highb NOT greenhigh (recipe said so); resolutionTOP needs outputresolution=custom before resolutionw/h; noiseTOP default period = giant blobs for grain (use ~0.02); compositeTOP inherited 512 res from grain input (square output) until grain_res fixed.",
+  "operations": [
+    {"type": "create_node", "path": "/example/ca_keep_r + ca_keep_g + ca_keep_b + ca_xform_r + ca_xform_b + ca_add_rg + ca_add_rgb", "before": null},
+    {"type": "create_node", "path": "/example/level_grade + hsv_grade + bloom_post", "before": null},
+    {"type": "create_node", "path": "/example/grain_noise + grain_res + grain_level + comp_grain", "before": null},
+    {"type": "connect", "from": "/example/comp_grain", "to": "/example/null_out", "input_index": 0, "before": "/example/comp_bg"},
+    {"type": "create_node", "path": "/example/light_mid", "before": null},
+    {"type": "set_parameter", "path": "/example/render1", "parameter": "lights", "before": "light1 light_rim light_under env_amb"},
+    {"type": "create_node", "path": "/example/base_audio_react (8-band norm layer, 33 ops)", "before": null},
+    {"type": "set_parameter", "path": "/example/light1", "parameter": "dimmer", "before": "6.0 (constant)"},
+    {"type": "set_parameter", "path": "/example/light_rim", "parameter": "dimmer", "before": "4.0 (constant)"},
+    {"type": "create_node", "path": "/example/ctrl_master customPages Color + Post", "before": null},
+    {"type": "set_parameter", "path": "/example/comp_bg", "parameter": "format", "before": "useinput"}
+  ]
+}

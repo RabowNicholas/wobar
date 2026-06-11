@@ -1,0 +1,28 @@
+{
+  "label": "step 3 — legible base: portrait render, obsidian PBR, 3-light+env rig, fixed cam, bg, null_out, ctrl_master shell; infection sim paused (perf)",
+  "timestamp": "2026-06-10T00:00:00Z",
+  "network": "heave",
+  "notes": "FPS crash 60->5 diagnosed via perf: infection_falloff1 neighborPOP = 2656ms GPU/cook on full-density napoleon mesh. Triage: infection_falloff1.Play=False -> 60fps recovered. Step 4 will replace continuous infection sim with kick-driven falloff (cheap). Camera iterations: bust face-forward at ry=-30 (obj faces -x at ry=0 roughly; found empirically 45=Lprofile, 90=back, -90=L-3/4-back).",
+  "operations": [
+    {"type": "set_parameter", "path": "/example/render1", "parameter": "resolutionw,resolutionh", "before": "1080,1080"},
+    {"type": "set_parameter", "path": "/example/infection_falloff1", "parameter": "Previewfalloff", "before": true},
+    {"type": "set_parameter", "path": "/example/infection_falloff1", "parameter": "Play", "before": true},
+    {"type": "set_parameter", "path": "/example/explode1", "parameter": "Visualizepieces", "before": true},
+    {"type": "set_parameter", "path": "/example/cameraViewport", "parameter": "Autorotate", "before": true},
+    {"type": "create_node", "path": "/example/mat_heave", "before": null},
+    {"type": "set_parameter", "path": "/example/geo1", "parameter": "Instances0material", "before": "None"},
+    {"type": "set_parameter", "path": "/example/light1", "parameter": "tx,ty,tz,dimmer,cr,cg,cb", "before": "defaults, dimmer=1.0"},
+    {"type": "create_node", "path": "/example/light_rim", "before": null},
+    {"type": "create_node", "path": "/example/light_under", "before": null},
+    {"type": "create_node", "path": "/example/env_amb", "before": null},
+    {"type": "set_parameter", "path": "/example/render1", "parameter": "lights", "before": "light1"},
+    {"type": "set_parameter", "path": "/example/render1", "parameter": "camera", "before": "cameraViewport"},
+    {"type": "create_node", "path": "/example/cam_main", "before": null},
+    {"type": "create_node", "path": "/example/bg_base", "before": null},
+    {"type": "create_node", "path": "/example/comp_bg", "before": null},
+    {"type": "create_node", "path": "/example/null_out", "before": null},
+    {"type": "connect", "from": "/example/null_out", "to": "/example/out1", "input_index": 0, "before": "render1 (direct)"},
+    {"type": "create_node", "path": "/example/ctrl_master", "before": null},
+    {"type": "set_parameter", "path": "/example/transform1", "parameter": "scale,tx,ty,ry", "before": "1.0, 0, 0, 45"}
+  ]
+}

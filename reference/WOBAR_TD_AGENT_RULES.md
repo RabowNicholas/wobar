@@ -358,6 +358,9 @@ These all hit 2+ occurrences in the TD_BUILD_LOG Correction Tracker. They were m
 - **`oplength` instance-count mode reads 1 from POPX nullPOP outputs** (and native particlePOPs) even when `numPoints()` is thousands. Use `instancecountmode='manual'` + `numinstances.expr = "op('/path/null').numPoints()"`.
 - **POPX attribute screening — de-risk any new POPX module BEFORE building around it:** place a copy, wire minimum inputs, Init→Start→Play, then `print([a.name for a in op('<mod>/POPX_out1').pointAttributes])`. Clean attrs → safe to instance. Rich attrs → pivot to TOP-output modules or a decoupled architecture (POPX provides the force field, native particlePOP holds clean attrs).
 
+### isOP parameter paths (renderTOP, geometryCOMP.material, env maps, …)
+- **Sibling references take the BARE name; `./name` = child; `../name` FAILS SILENTLY (resolves None).** Hit twice: renderTOP camera/lights (2026-05-21, "No Camera COMP found") and geometryCOMP material on instances (2026-06-10 — symptom: everything renders default WHITE). When in doubt use a full `op()` path. Promoted 2026-06-10.
+
 ### feedbackTOP
 - See **Feedback Chain Rules** above for the canonical wiring (fresh content on `input[0]`, target as `par.top`, explicit resolution + `resetpulse`). The loop warning is not cosmetic.
 

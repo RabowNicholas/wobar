@@ -13,6 +13,32 @@ One entry per build session. Newest at top. This is the feedback loop — patter
 
 ---
 
+## 2026-06-10 (later) — act4_explosion stress test — full system built, KILLED by Nick for fresh start; heavy learnings harvest
+
+**The stress test:** prove the brain can produce striking+professional Act 4 visuals fast. Verdict: the SYSTEM-BUILDING was fast and strong (full pipeline in one session, survived 3 creative pivots cheaply); the AESTHETIC never landed — Nick killed it ("cheesy", chunk-grid read at rest, exploded-state form problems). Network `.toe` at `networks/act4_explosion/` (Nick's save), move files in `networks/heave/` (folder predates his naming).
+
+**What was built (all survives as patterns even though the piece died):**
+- **Source arc:** napoleon obj (POPX explode curl example) → GOAT obj → **procedural mass** (spherePOP geodesic + noisePOP, `Massseed` = infinite rock variants, no model sourcing) → **instanced solid chunks** (voxelize interior points → solid box template instancing, `instanceactive='Inside'`).
+- **Discharge engine:** Shape Falloff (static, replaced the GPU-killer infection sim) radius-driven; three interchangeable envelope drivers — 8-bar clock (`ctrl_cycle` phase/env/pressure constantCHOP), audio drop-gate (`sel_energy→math_gate→lag_slam`, record-first normalized), **bar-based choreography table** (`anim_song_keys` + `song_kfm` interp module — iris keyframe pattern generalized to bars/BPM-agnostic; columns bar/env/pressure/curve with hold|linear|easein|easeout|smooth). `Usetable`/`Songmix` dials switch drivers.
+- **Exploded-view explosion:** global radial dilation (transform_modifier, Localspace=False, scale around centroid pivot) = pieces separate but HOLD FORMATION — kills the confetti-chaos read. Noise demoted to whisper. Attack shaped by asymmetric lagCHOP (rise only — table release stays exact).
+- **Pressure fuse:** `pressure` channel through assembled window → per-piece shrink (crack_dilate) opens hairline seams → shadow-casting amber point light INSIDE leaks through. `Coreburn` keeps the furnace lit inside the opened rock at drop.
+- **Reformation:** chopexec on env with hysteresis (fire >0.92, re-arm <0.3) bumps `Massseed` at peak shatter + recenters mass + re-aims dilation pivot (centroid via sampled `points('P')`) — every discharge rebuilds a DIFFERENT rock.
+- **Integrated tumble:** constantCHOP speed → speedCHOP → `geo.ry % 360` (glass-orb pattern).
+- ctrl_master: 7 pages / ~50 pars, atomic rebuild performed mid-session (rule's snapshot→destroy→recreate worked clean; one orphaned par intentionally dropped).
+
+**First-pass-right:** audio spine + record-first normalization (rules worked verbatim), binding template everywhere, obsidian PBR (1 move), HDRI/IBL with prefilter-off (promoted rule prevented the 142ms trap), choreography table design, hysteresis trigger (second attempt), exploded-view dilation concept.
+
+**Corrections against the agent (12 logged in DEBUG_LOG, headline 5):** `pointAttribs` vs documented `pointAttributes`; metallic 0.9 light-suppression (EXISTING rule violated — Rule-0-class miss, bump it); hidden example turntable cost ~6 blind pose iterations (new rule candidate: inventory example drive-chains first); paused-timeline screenshot verification produced 2 false alarms; `../` isOP sibling path → silent white instances.
+
+**WOBAR craft (Nick-reviewed, the real lessons):**
+- **Figurative object + literal destruction = stock-FX cheese.** Napoleon → vaporwave; goat → metal-cover. Nick's shipped catalog is ALL abstract — the mirror/encounter lens lives in form+motion, never in a recognizable object doing a literal thing. Abstraction is the brand-safe lane.
+- **Loop-feel diagnosis:** a bar-clock state machine reads mechanical; continuity comes from integrated motion + song-structure drive + per-cycle variation (never-same-rock). The fix stack (tumble + table + reformation) is right even though this piece died.
+- **"Heavy but held" explosion = exploded-view (formation kept), not particle chaos.** Form must survive the discharge.
+- Restraint principle (release standard born this session): `working/WOBAR_RELEASE_STANDARD.md` now exists — 3 gates, accretes per session.
+- Hollow-shell fracture reads as skin the moment it opens — solidity must be architectural (instanced solid chunks) not cosmetic.
+
+---
+
 ## 2026-06-10 — TD system audit (maintenance, no TD build)
 
 Full review of the TD knowledge system. **Found the promotion pipeline broken:** 14 tracker entries marked promoted had never landed in WOBAR_TD_AGENT_RULES.md — all landed now under "Promoted Gotchas — by Operator Family." Promoted 2 count-2 stragglers (instancetop/instanceop, geometryCOMP torus1) + added the undercounted audio power-curve >1.2 rule. Fixed AGENT_RULES contradictions: Export section (h264nvgpu → non-commercial mjpa workflow), Control Architecture (rewritten around ctrl_master custom pars), feedbackTOP (3 conflicting entries reconciled to one canonical wiring — see Feedback Chain Rules). Promoted the audio normalization/binding patterns. Split this log: sessions 2026-05-06 and earlier → `TD_BUILD_LOG_ARCHIVE.md`. Tracker conventions added (dated bumps, SUPERSEDED markers, verify-promoted-landed). Commit `9815ce5`.
@@ -178,6 +204,18 @@ Corrections that appear 2+ times get promoted to WOBAR_TD_AGENT_RULES.md.
 
 | Correction | Count | Promoted? |
 |-----------|-------|-----------|
+| isOP pars referencing SIBLINGS need bare name — `./name`=child, `../name` FAILS SILENTLY (renderTOP camera 05-21; geometryCOMP material → white instances 06-10) | 2 (05-21, 06-10) | ✅ PROMOTED (AGENT_RULES Promoted Gotchas) |
+| POP python: `pointAttributes` (not pointAttribs), `numPoints()` is a method, point data via `points('AttrName')` | 1 (06-10) | No |
+| Infection/Spread Falloff are SIMULATIONS (neighborPOP per-frame cost explodes on dense meshes, 2.6s/cook GPU); Shape/Object/Curve/Noise/Texture falloffs are static ~0ms | 1 (06-10) | No |
+| Geometry upstream of voronoi fracture must be STATIC — animating it re-partitions per frame; time-dependent exprs force cooks even multiplied to 0 (remove expr, don't zero it) | 1 (06-10) | No |
+| pbrMAT `darknessemit` is a boolean toggle; emission strength rides `darknessemitcolor` RGB. Emit-where-dark needs a lit scene to differentiate | 1 (06-10) | No |
+| Inventory example .tox drive chains BEFORE building on them — dump expression-mode pars on top-level ops (hidden turntable `geo1.ry` cost 6 blind iterations) | 1 (06-10) | No |
+| Paused-timeline screenshots of sim-driven networks show STALE state — verify live or numerically; freeze the driver par, not the clock | 1 (06-10) | No |
+| resolutionTOP needs `outputresolution='custom'` before resolutionw/h; compositeTOP inherits res from FIRST input (square grain leaked downstream) | 1 (06-10) | No |
+| Threshold triggers on noisy CHOPs need hysteresis (fire >hi / re-arm <lo via DAT storage armed flag) — naive prev/val edge fires on every wiggle | 1 (06-10) | No |
+| POPX module PULSE pars are silent from python `.pulse()` (extension-handled); value pars work — prefer value-par equivalents to drive sims | 1 (06-10) | No |
+| POPX explode = surface fracture (open shells; Mac clip_triangles compile-fails = no capping). Solid chunks = instanced-solid architecture: voxelize Outputvolume points (clean attrs, no Color) + `instanceactive='Inside'` + HitNormal as free rotto variation. mesh_fill outputs Color = instancing killer | 1 (06-10) | No |
+| shape_falloff radius exactly 0 degenerates (falloff=1 everywhere) — floor at 0.05 | 1 (06-10) | No |
 | moviefileoutTOP `par.audiochop` must point at LOCKED-to-timeline audiofileinCHOP, not sequential — sequential plays real-time from sample 0 regardless of timeline → export audio desyncs from video | 1 | No |
 | moviefileinTOP `playmode` menu values are `locked` / `specify` / `sequential` / `timecodeop` — NOT `specifyindex` | 1 | No |
 | moviefileinTOP `numFrames` attribute renamed to `numImages` in TD 2025+ — old name raises tdError | 1 | No |
