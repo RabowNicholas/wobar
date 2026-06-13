@@ -1,0 +1,29 @@
+{
+  "label": "song-long intensity build: ctrl_build scalar (quadratic ease-in over Songlength) multiplied into the React terms of sa1.Timescale + ctrl_orbit_speed; 2 Audio dials",
+  "timestamp": "2026-06-12T19:45:00-0600",
+  "network": "sa_1",
+  "operations": [
+    { "type": "set_parameter", "path": "/project1/ctrl_master", "parameter": "customPage:Audio appendFloat Buildamount(0.4, 0-1), Songlength(180, 30-360 sec)", "before": null },
+    {
+      "type": "create_node",
+      "path": "/project1/ctrl_build",
+      "node_type": "constantCHOP",
+      "nodeX": -1400, "nodeY": -250,
+      "parameters": { "const0name": "build", "const0value": "expr: 1.0 + Buildamount * clamp(me.time.seconds/Songlength,0,1)**2" },
+      "before": null
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/sa1",
+      "parameter": "Timescale expr (build scalar injected on Audioceil term)",
+      "before": "op('/project1/ctrl_master').par.Audiofloor.eval() + op('/project1/ctrl_master').par.Audioceil.eval() * (max(0.0, op('/project1/base_audio/null_audio')['energy']) ** op('/project1/ctrl_master').par.Audioexp.eval())"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/ctrl_orbit_speed",
+      "parameter": "const0value expr (build scalar injected on Orbitreact term)",
+      "before": "op('/project1/ctrl_master').par.Orbitbase.eval() + op('/project1/ctrl_master').par.Orbitreact.eval() * (min(2.0, max(0.0, op('/project1/base_audio/null_audio')['energy'])) ** op('/project1/ctrl_master').par.Orbitcurve.eval())"
+    }
+  ],
+  "notes": "Build = 1.0 + Buildamount * (clamp(me.time.seconds/Songlength,0,1))**2 - quadratic ease-in, starts at exactly current tuning (1.0), reaches 1+Buildamount by song end. Multiplied ONLY into the React/ceil terms of the two audio-driven MOTION bindings (swarm churn via sa1.Timescale, light orbit via ctrl_orbit_speed) - Audiofloor/Orbitbase untouched so breakdowns stay quiet all song, only peaks grow. Ember (Emberreact, brightness not motion) deliberately NOT scaled. Songlength=180 is a PLACEHOLDER - set to actual track length during Barstart alignment. me.time.seconds (timeline-locked, export-true). Act 3 caution: Buildamount 0.4 = gentle (ceil 1.0->1.4); keep tight to avoid tipping held-tension into Act 4 discharge."
+}
