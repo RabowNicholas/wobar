@@ -1,0 +1,23 @@
+{
+  "label": "Part A — membrane shader look test (static height blobs -> glsl latex/subsurface)",
+  "timestamp": "2026-06-15T00:00:00Z",
+  "network": "crease_veil",
+  "operations": [
+    {"type": "create_node", "path": "/project1/crease_veil", "note": "baseCOMP wrapper; before=null. Undo = destroy this subtree.", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blob_0", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blob_1", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blob_2", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blob_3", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/comp_height", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blur_height", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/hue_field", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/latex_grain", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/glsl_membrane", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/membrane", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blur_sss", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/level_sss", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/comp_sss", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/null_out", "before": null},
+    {"type": "set_dat_text", "path": "/project1/crease_veil/glsl_membrane", "note": "membrane fragment shader: normal-from-height + latex grain micro-normal, fresnel rim on dimple slopes, subsurface bloom cool-rim->hot-core. before=empty.", "before": ""}
+  ]
+}

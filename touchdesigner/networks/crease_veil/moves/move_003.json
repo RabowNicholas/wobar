@@ -1,0 +1,16 @@
+{
+  "label": "Latex read locked: translucent dim glove model (see-through where stretched)",
+  "timestamp": "2026-06-16T00:00:00Z",
+  "network": "crease_veil",
+  "operations": [
+    {"type": "create_node", "path": "/project1/crease_veil/ambient_back", "note": "dim drifting forms behind the whole veil (see-through depth)", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/blur_ambient", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/level_ambient", "note": "see-through dial (opacity 0.18)", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/comp_presence", "note": "presence behind = mass-presence + ambient", "before": null},
+    {"type": "set_parameter", "path": "/project1/crease_veil/latex_grain", "parameter": "amp/period/harmon", "note": "fine soft pores (0.25/0.045/2) — kill concrete tooth", "before": "0.6/0.09/3"},
+    {"type": "set_dat_text", "path": "/project1/crease_veil/glsl_membrane", "note": "GLOVE MODEL: opacity drops where stretched -> see through to colored forms behind; dim dark slack latex; tension-whitening on strained flanks; wet glints. Pushed: opacity 0.80->0.0, color-through 0.5+pres*2.6, whiten 0.75.", "before": "<FELT additive-transmission shader>"},
+    {"type": "set_parameter", "path": "/project1/crease_veil/noise_breath", "parameter": "amp", "note": "deeper press stretch", "before": "1.0"},
+    {"type": "set_parameter", "path": "/project1/crease_veil/blob_0..3", "parameter": "radius expr", "note": "bigger masses for deeper stretch (~0.15-0.19 base)", "before": "0.13-0.17"},
+    {"type": "save_tox", "path": "/project1/crease_veil", "note": "checkpoint crease_veil_v001.tox", "before": null}
+  ]
+}

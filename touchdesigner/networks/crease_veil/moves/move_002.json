@@ -1,0 +1,20 @@
+{
+  "label": "Part A FELT-pole rework: front-lit deforming skin (drop SEEN luminous-entity approach)",
+  "timestamp": "2026-06-16T00:00:00Z",
+  "network": "crease_veil",
+  "operations": [
+    {"type": "create_node", "path": "/project1/crease_veil/noise_drift", "note": "mass drift (noiseCHOP, timeslice)", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/null_drift", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/noise_breath", "note": "mass breathing pulse", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/null_breath", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/noise_warp", "note": "animated noise for irregular organic mass shape", "before": null},
+    {"type": "create_node", "path": "/project1/crease_veil/displace_masses", "note": "displaceTOP warps comp_height by noise_warp -> irregular masses", "before": null},
+    {"type": "set_parameter", "path": "/project1/crease_veil/blur_height", "parameter": "size", "note": "repurposed: dome height (broad smooth bulge), size 42", "before": "14"},
+    {"type": "set_parameter", "path": "/project1/crease_veil/blur_swell", "parameter": "size", "note": "repurposed: presence (entity-behind), size 90", "before": "80"},
+    {"type": "connect", "to": "/project1/crease_veil/membrane", "input_index": 0, "note": "input0=blur_height(dome)", "before": "fields"},
+    {"type": "connect", "to": "/project1/crease_veil/membrane", "input_index": 1, "note": "input1=blur_swell(presence) replaces hue_field", "before": "hue_field"},
+    {"type": "set_parameter", "path": "/project1/crease_veil/latex_grain", "parameter": "amp", "note": "softer pores for latex (not concrete)", "before": "1.0"},
+    {"type": "set_dat_text", "path": "/project1/crease_veil/glsl_membrane", "note": "full rewrite to FELT shader: front raking light + sliding specular, mauve-grey lit skin, slope-driven tension wrinkles, violet->hot subsurface bruise at stretch peak, faint presence smears. NOT emissive glow.", "before": "<part A SEEN shader>"},
+    {"type": "set_parameter", "path": "/project1/crease_veil/blob_0", "parameter": "centerx/centery/radiusx/radiusy", "note": "blobs 0-3: expression-driven drift+breath, enlarged radii (~0.13-0.17 base)", "before": "static"}
+  ]
+}

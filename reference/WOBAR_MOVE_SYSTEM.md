@@ -66,6 +66,7 @@ wobar/touchdesigner/networks/
 | heave | /example (POPX explode curl example as base; Act 4 P1 stress test — KILLED 2026-06-10) |
 | membrane | /project1 (Act 3 ENCOUNTER — presser against bone membrane) |
 | sa_1 | /project1 (Act 3 ENCOUNTER — crease_sa Rorschach attractor, no wrapping baseCOMP) |
+| crease_veil | /project1/crease_veil (Act 3 ENCOUNTER — latex-veil; entities press/shine through translucent skin) |
 
 Add a row here whenever a new network is created.
 
