@@ -19,7 +19,10 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[skills/README]] | /skills | Source of truth for WOBAR Claude skills — `~/.claude/skills/` on each machine is a synced copy | live |
 | [[working/WOBAR_ACTIVE]] | /working | Open project loops, current context, session history | live |
 | [[working/WOBAR_CLOSED]] | /working | Completed project loops, archived from WOBAR_ACTIVE | live |
+| [[working/WOBAR_PLACEMENT_PLAN]] | /working | Get-heard strategy — curators/promoters/labels, Denver scene convergence, label roadmap (Local Void start-here), promo-service verdicts, DIY ads playbook | live |
+| [[working/MIRROR_THRESHOLD_SPEC]] | /working | Mirror Threshold build spec — the SMS door into the Ether; Twilio + Next.js/Neon/Vercel integration, state machine, compliance | live |
 | [[reference/WOBAR_BRAND]] | /reference | Foundation, mission, archetypes, beliefs, positioning | locked |
+| [[reference/WOBAR_WORLD]] | /reference | World mechanics — ground truth, geography, 3-version cycle, two-axis entity/the source, sacred, lexicon (Mirror/seeing/Wanderer/the Ether/glimpses), the Ether content model + void poems | live (v0.4 draft) |
 | [[reference/WOBAR_FRAMEWORK]] | /reference | 5-Act Portal Framework, act definitions, percentages | locked |
 | [[reference/WOBAR_COPY]] | /reference | Voice, lexicon, anti-vocabulary, writing tests | locked |
 | [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning | locked |

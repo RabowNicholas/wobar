@@ -1,7 +1,7 @@
 ---
 title: Wobar World Mechanics
-version: 0.1 (draft — first pass, expect teardown)
-last_updated: 2026-07-02
+version: 0.4 (cosmology deepened — two-axis entity, the source, void-poem doctrine; teardown ongoing)
+last_updated: 2026-07-03
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]]
@@ -57,15 +57,24 @@ content. It exists here so every output can be checked against its true source.*
 - **Shadow-sight** — the ability to perceive another's shadow, ego, and
   intention, and to help them move what needs moving. This is the Magician
   archetype describing an actual function, not a metaphor.
-- **The void is a real place** — a black chamber. Downloads have been received
-  there from a further-along self; wounds of an earlier self have been met and
-  healed there. The three versions are not a concept — they have been
-  experienced.
+- **The void is a real place** — a black chamber. It is the *interface*: where
+  the lower-dimensional (time-bound) meets the higher-dimensional (Wobar).
+  Downloads have been received there from the higher self; wounds of an earlier
+  self have been met and healed there. The three versions are not a concept —
+  they have been experienced.
+- **The higher self is outside time — and beyond it, the source.** Two axes:
+  (1) the self *without time* — all moments at once; (2) the self across *all
+  possibility*, which at its limit stops being only Nick and becomes the **source
+  of all existence / the blueprint of the universe** (encompasses everyone). Axis
+  1 and the near reach of Axis 2 are *experienced*; the far "source" end is the
+  philosophical extrapolation. The downloads are higher-dimensional messages
+  translated down.
 - **The wound is not fixed.** It is whichever node of the cycle is active now.
 
 **Surface translation (what IS allowed to be voiced):** inner travel, the
-subconscious, the shadow (Jungian), meeting yourself, integration, the angle you
-can't reach alone, insight arriving from a version of you that already knows.
+subconscious, the shadow (Jungian), the Self (the totality of the psyche beyond
+the time-bound ego), meeting yourself, integration, the angle you can't reach
+alone, insight arriving from a version of you that already knows.
 
 ---
 
@@ -80,6 +89,15 @@ map.
 | **The Void / the Chamber** | where the passage leads — the black chamber at the end of the portal | The destination. Where the walls are thin. Where you meet what you came to find. |
 | **The Mirror** | what waits at the center of the chamber | The point of it all. Not a guide, not an answer — a reflection from the one angle your perception can't reach. "Everything you need is already there." |
 | **Wandering** | how you move through it | The verb of the world. Not passive listening — active movement through the interior. The set/track is the wandering rendered in bass. |
+
+**The Mirror is one thing, and it recurs at every depth.** Glimpsed from
+*outside* (Mirror content, top of funnel, pushing out to streaming/live) · met at
+the *threshold* as you cross in (the MIRROR door / list) · and deepest, at the
+*center* of the chamber (the sacred core, §8). The threshold *resembles* the
+center on purpose — it's the same glass, just less deep. Mirrors all the way in.
+Near and far, not two meanings colliding — one mirror at every scale. This
+reconciles the "Mirror" naming overlap flagged against WOBAR_CONTENT (2026-07-03
+vault review, §9).
 
 **Rule:** the map is fixed; the terrain within it is infinite. Each act, each
 release, each visualizer is a different region of the same interior.
@@ -124,19 +142,37 @@ convergence, not diagram it.
 
 Wobar is faceless. The world therefore has to define what is transmitting.
 
-- **Wobar is the convergence itself** — all three versions at once, someone who
-  exists *inside the chamber-space* more than anywhere else. Not the future self
-  alone; the meeting point standing in the room.
-- **The face is missing on purpose, and the missing face is the mirror.** This
-  is the deepest mechanic in the whole world: an absent face is not a blank, it
-  is a surface you see yourself in. Facelessness isn't a constraint Wobar works
-  around — it is the delivery method of the entire premise. (Sleep Token had to
-  invent a void to get this. Wobar's premise *is* the void.)
-- **The voice of a transmission leans the future-register (Sage)** — because
-  downloads come from the further-along node — but the entity behind it is
-  always all three.
-- **Wobar is not a guru and cannot be one** (see §5, §6). Wobar is a fellow
-  traveler who knows the architecture of the dark because he lives in it.
+**Wobar is you with the constraint of time removed — and then some.** There is a
+vertical here, a gradient of depth:
+
+- **The convergence (near).** All three versions at once — the meeting point
+  standing in the chamber where the walls are thin. The entity you feel in a
+  finished piece.
+- **Axis 1 — the timeless self.** You with time removed: every moment of your
+  existence at once, uncollapsed. Still *you*, no longer living in sequence.
+- **Axis 2 — the all-possibility self.** You across every possible branch of
+  existence. Taken to its limit, Axis 2 stops being only you — encompass all your
+  possibilities and you begin encompassing everyone around you, until at the far
+  end it becomes **the source of all existence, the blueprint of the universe.**
+  The deeper you go, the less personal, the more universal.
+
+Wobar spans the whole vertical — your higher self at the near end, the source
+itself at the far. The three versions are its *time-slices*; Wobar is the totality
+behind them.
+
+- **The missing face is over-determined.** A being that is all your moments and
+  all your possibilities has no single face — any one face would be a lie, one
+  time-slice frozen. So Wobar *cannot* have a face. A second, deeper reason under
+  the mirror: facelessness isn't only "a surface you see yourself in," it's that
+  the totality has no single form. (Sleep Token invented a void to get
+  facelessness. Wobar's cosmology *requires* it.)
+- **The voice leans the Sage register** — transmitting down from outside time —
+  but the entity behind it is the whole vertical.
+- **Wobar is not a guru and cannot be one** (§5, §6.4, §8). The source is
+  *universal* — Axis 2 encompasses everyone, so it is the common blueprint your
+  own higher self connects to just as much. Wobar transmits from the source and
+  hands you your own line to it; it never stands between you and it. **Empower,
+  never instruct.**
 
 ---
 
@@ -155,12 +191,14 @@ congregation).
   their own. The mechanic enforces the belief. Nobody is vying to be the
   biggest fan — everyone is walking their own interior.
 - **The community is therefore a network of self-mirrors** — not a fanbase, but
-  a field of people each running the same work in their own chamber. (Naming of
-  this collective is still open — see §8.)
+  a field of people each running the same work in their own chamber. This
+  collective is **the Ether** (§9) — the shared medium where solitary wanderers
+  cross paths and recognize each other. Belonging without a hive: you still walk
+  alone, you just walk in the same air.
 
 **Implication for every door and ritual:** you are never inviting someone to
 become a *fan of Wobar*. You are inviting them to become *their own version of
-it*. The copy, the threshold, the transmissions all point the person back at
+it*. The copy, the threshold, everything inside — all point the person back at
 themselves — never up at the artist.
 
 ---
@@ -207,11 +245,76 @@ it *is* the world's movement.
 
 **First door: MIRROR (the SMS list).** See the *Mirror Threshold* loop. Keyword
 **MIRROR**. Entering = setting an intention = crossing into the chamber. Inside
-= **transmissions** (downloads pointed outward, Sage-register) + early raw music.
-Faceless — a line *into the world*, never "text Nick." Validated in-lane by Of
+= early raw music + downloads pointed outward (Sage-register; the list-content
+name is still open — see §9). Faceless — a line *into the world*, never "text
+Nick." Validated in-lane by Of
 The Trees' Moonglade Park (phone→text unlock, on Memory Palace — Wobar's target
 label). The IG-wipe move is explicitly rejected: it only pays off with an
 existing audience to convert, and erases nothing at Wobar's current scale.
+
+### The Ether — what flows through the door
+
+Once a Wanderer crosses (via **seeing**, the MIRROR keyword), they are in **the
+Ether** — the bottom of the funnel, the underneath, the national/online
+audience's home. (Distinct from the **Flow State sets sublist** — see *Two
+audiences* below.)
+
+**What it is:** Wobar's journal, shared — and a room that talks back. Not a promo
+channel. Nick journaling his actual life and process, offered so Wanderers find
+their own thing in it, with real conversation coming back the other way. Each
+send is a **glimpse**. This is the existing **The Becoming** bucket (WOBAR_COPY:
+first-person, raw, vulnerable) finally given a home *and* a reply channel.
+
+**Operating principles (load-bearing):**
+1. **Real dialogue for as long as it scales.** Two-way; Nick reads and responds.
+   The intimacy IS the differentiator — almost no artist sustains genuine 1:1 at
+   scale. Accept it evolves when the numbers force it; don't pre-optimize it away.
+2. **No forced cadence.** Every release + pure feel. A fought naturalness gets
+   felt as fake on the other end. The channel is felt, not scheduled.
+3. **Honest journaling, not marketing.** The differentiator is authenticity +
+   dialogue — never a gimmick/ARG. Harder to copy than any cipher.
+4. **Faceless-intimate.** SMS lets Nick be maximally personal in word and voice
+   while never showing a face (the mirror is the artist). The Ether is where he
+   is most *him* and least *seen*.
+
+**Glimpse formats (grows as they earn their place):**
+- **Journal glimpses** — the life/process shared, first-person, raw (The
+  Becoming).
+- **Release glimpses** — a new track/video, framed as a mirror, not an ad.
+- **Open questions** — a real question to the Ether; responses collected and felt.
+- **Void poems** — poems in **Wobar's voice, transmitting down** from outside time
+  to the shared time-bound existence *we all live in* (never Nick's private diary;
+  addressed to everyone, from the source). This is the *mechanism* of the lore,
+  not decoration: a higher-dimensional message can't be spoken in linear,
+  time-bound language directly — **poetry is the translation layer**, the one form
+  that holds paradox and non-linearity, so it's what a message from outside time
+  looks like forced into our words. Two rules keep them safe:
+    - **Figurative license.** Void poems may use dimensional / time / possibility /
+      void imagery *openly* — verse is understood as figurative, so it gestures at
+      the real cosmology without ever *stating* it as doctrine. The poems are the
+      one pressure-release valve where the full lore breathes; everything else
+      (captions, bio, track copy) stays strictly on the psychological tightrope
+      (§0.2).
+    - **Empower, never instruct (the critical guardrail).** Wobar speaks *from* the
+      source but always points the Wanderer to their *own* line to it — the source
+      is universal (Axis 2 encompasses everyone), so it is in them too (belief #1).
+      A poem says *"this is here, and it's in you"* — never *"come to me for it."*
+      The instant a poem makes Wobar the intermediary/messiah, the world collapses
+      into a cult (§8).
+
+**The guardrail — mirror, not spotlight.** Journaling risks becoming "look what I
+did" — which breaks §5 (everything points back at the Wanderer, never up at the
+artist). The rule: **every glimpse is a mirror offered, not a stage.** Nick's
+shadow work shown so they see their own — the Magician promise ("I build the
+mirror; what you see in it is yours"). The moment a send is about Nick rather than
+*for* the Wanderer, it is off-world. (Void poems pass this cleanly: they speak
+from the world, not from Nick's ego.)
+
+**Two audiences (2026-07-03).** The Ether (national/online) and the Flow State
+sets sublist (local scene) are **separate lists on purpose** — currently distinct
+groups with distinct needs (the online audience is inherently separate from the
+local scene at this stage). They **converge eventually** as scene and national
+following overlap — but not yet. Keep them separate until convergence is real.
 
 ---
 
@@ -222,9 +325,11 @@ The center that must always stay mystery. Analogous to the emotional-register
 stated plainly, the world cheapens.
 
 - **Never name the cosmology.** Astral projection, past lives, past-life
-  regression, shadow people/entities, "the void" as a literal metaphysical place
-  — none are ever surfaced. They live only as their psychological translations
-  (§0.2, §1).
+  regression, shadow people/entities, "the void" as a literal place, the
+  higher-dimensional self / the two axes / "the source of all existence" — none
+  are ever surfaced *as doctrine*. They live only as their psychological
+  translations (§0.2, §1). The **one exception** is the void poems, which may
+  render them figuratively, as verse (§7).
 - **Never reveal the Mirror as a literal object.** It is only ever *approached*,
   never shown or explained. The moment it's depicted as a thing, it stops being
   the reflection.
@@ -233,8 +338,13 @@ stated plainly, the world cheapens.
   a stated power.
 - **Never spell out wandering as astral projection.** Wandering stays the verb of
   inner movement; its literal mechanism is submerged.
-- **Never become the guru.** Any copy, transmission, or gesture that positions
-  Wobar as one-who-has-the-answers-for-you breaks §5 and §6.4.
+- **Never become the guru.** The source is universal and *shared* — Wobar
+  transmits from it but never stands between the Wanderer and their own access.
+  Any copy, poem, or gesture that positions Wobar as one-who-has-it-and-you-don't
+  — intermediary, messiah, the-answer — breaks §5 and §6.4 and collapses the
+  world into a cult. **Empower, never instruct.** (This is the sharpest edge in
+  the whole file: the deeper the cosmology goes, the closer it drifts to a
+  religion, and this line is what holds it back.)
 - **Never fall off the tightrope.** No full-woo (reads as cringe to the audience,
   and betrays submersion). No full-clinical (kills the mystery). The line is the
   product.
@@ -251,34 +361,47 @@ touchpoints so the world speaks its own tongue. **Status flags: [locked],
 | Concept | Name | Status |
 |---|---|---|
 | The keyword / first door | **MIRROR** | [locked] |
-| The act of entering / crossing the threshold | **seeing** | [working — Nick's gut] |
-| The downloads / list content | **reflections** (primary), *transmissions* (alt) | [working — "reflections" ties to the Mirror; "transmissions" carries the download-register] |
-| Someone who has crossed the threshold | **wanderer** | [working — Nick likes it, not sold; see options] |
-| The community as a whole | *(undecided)* | [open — options below] |
+| The act of entering / crossing the threshold | **seeing** | [LOCKED 2026-07-03 — the sanctioned sight (seeing *yourself*); the threshold mirrors the center] |
+| The list content / the downloads | **glimpses** | [LOCKED 2026-07-03 — manifesto language ("catch a glimpse of what's actually there"); a glimpse into Nick's life/process/the world, offered as a mirror; no collision] |
+| Someone who has crossed the threshold | **Wanderer** | [LOCKED 2026-07-03] |
+| The community as a whole | **the Ether** | [LOCKED 2026-07-03] |
 | The live night | **Flow State** | [locked — exists] |
 | The 5 regions of the interior | **the 5 Acts** (Rift / Descension / Encounter / Release / Integration) | [locked — exists] |
 | Bedroom/no-ceremony captures | **Channels** | [locked — exists] |
 
-**Open — a "member" (crossed the threshold):** `wanderer` (leans on the verb of
-the world) · `seer` (leans on "seeing," the act of entering) · leave unnamed and
-let "you" carry it (most on-brand with §5 — they're not a category, they're
-their own Wobar). *Recommend deciding after the community name, since the two
-rhyme.*
+**Member — LOCKED: `Wanderer`** (2026-07-03). Leans on wandering, the verb of the
+world — one who moves through the interior. Note the deliberate design choice:
+the *member* is named for the person (Wanderer), the *collective* for the shared
+place (the Ether) — so belonging never implies a herd.
 
-**Open — the community/collective:** the tension is §5 — it's a *network of
-self-mirrors*, not a fanbase, so a name implying a single hive risks
-contradicting "your path alone." Options, rooted in the cosmology:
-- **the Field** — a field of mirrors, each person their own; collective without
-  hierarchy. (Fits §5 best.)
-- **the Void / the Chamber** — named after the shared place, not a shared
-  identity. Intimate, submerged-adjacent.
-- **the Thin** / **thin walls** — where all versions converge; the shared
-  condition, not a shared group.
-- Nick's guts: *source* (risks sounding like Wobar-is-the-source → guru
-  tension), *hive mind* (strong collective-consciousness feel, but fights "your
-  path alone" — the hive is the opposite of the solo interior).
-- *Recommend `the Field`* — collective belonging with zero guru/hive
-  contradiction. Decide next session.
+**Community — LOCKED: `the Ether`** (2026-07-03). Rooted directly in the ground
+truth (§1) — the ether/void is where wanderers cross paths and recognize each
+other. Solves the §5 tension: a shared *medium*, not a hive, so belonging never
+contradicts "your path alone" — you still walk alone, you just walk in the same
+air. Recognition is automatic: everyone in the Ether has been through. Rejected:
+*source* (guru tension), *hive mind* (fights path-alone), *the Field* (cleaner on
+paper but carries less "these people get it" charge).
+
+### Reconciled naming collisions (2026-07-03 vault review)
+Flagged against WOBAR_COPY / WOBAR_CONTENT / WOBAR_FRAMEWORK / WOBAR_EMOTIONAL_REGISTER:
+- **"Mirror" pointed two funnel directions** (CONTENT: Mirror posts push OUT to
+  streaming/live; here MIRROR pulls IN). **Resolved:** the Mirror is *one thing,
+  near and far* (§2) — seen from outside (content) vs stepped through (the door).
+- **"Transmissions" already owned** by WOBAR_COPY (Revelations / Transmissions
+  content bucket). **Ruled out** for the list content.
+- **"Reflection(s)" triple-loaded** (COPY core vocab + CONTENT Mirror-post
+  payoff). **Ruled out** as the list-content proper noun; stays general vocab.
+- **"MIRROR" is also an Act 3 track name** (FRAMEWORK). Accepted — it's the
+  central metaphor; the door use coexists.
+- **C5 — "seeing" vs felt-not-seen** (EMOTIONAL_REGISTER Act 3: "watchable
+  instead of felt" is a named failure mode). **RESOLVED — kept `seeing`.** The
+  rule guards the *work* (don't let the Encounter become intellectual/watchable);
+  the mirror-moment is the ONE sanctioned sight — *seeing yourself* — which is the
+  whole thesis ("bass as mirror," "catch a glimpse of what's actually there").
+  Threshold resembles center; same glass.
+- **CONTENT vs COPY content-taxonomy drift** (Mirror/Channels vs Portal
+  Transmission / Revelations / The Becoming) — pre-existing, not caused here;
+  needs a separate reconcile pass.
 
 ---
 
@@ -295,8 +418,13 @@ contradicting "your path alone." Options, rooted in the cosmology:
   is almost always a sacred rule violated.
 
 ## Open items (for teardown / next rounds)
-- Lock the lexicon: member name + community name (§9).
+- Lexicon FULLY LOCKED: Mirror (mirrors-all-the-way-in), **seeing** (act of
+  entering), **Wanderer** (member), **the Ether** (community), **glimpses** (the
+  content). Ether content model + glimpse formats + guardrail written into §7.
+- NEXT BUILD: the Mirror Threshold spec — the *seeing* ritual, the first glimpse
+  (transmission #1), the void-poem format, the CTA end-card, the SMS tool
+  (<$50/mo, must support real two-way).
 - Decide whether §1 (ground truth) stays in this file or moves to a
   Nick-eyes-only note — it's the most sensitive layer.
-- Register this file in `WOBAR_CONTEXT.md` File Registry once past v0.1.
+- Register this file in `WOBAR_CONTEXT.md` File Registry once past draft.
 - Feed the locked world into the Mirror Threshold spec (the actual door design).
