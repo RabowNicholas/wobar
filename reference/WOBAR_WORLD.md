@@ -1,6 +1,6 @@
 ---
 title: Wobar World Mechanics
-version: 0.4 (cosmology deepened — two-axis entity, the source, void-poem doctrine; teardown ongoing)
+version: 0.6 (web home = a terminal you wander, guided by the daemon; teardown ongoing)
 last_updated: 2026-07-03
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
@@ -192,9 +192,11 @@ congregation).
   biggest fan — everyone is walking their own interior.
 - **The community is therefore a network of self-mirrors** — not a fanbase, but
   a field of people each running the same work in their own chamber. This
-  collective is **the Ether** (§9) — the shared medium where solitary wanderers
-  cross paths and recognize each other. Belonging without a hive: you still walk
-  alone, you just walk in the same air.
+  collective is **the Ether** (§9) — the world's *interior*, the shared medium
+  where solitary wanderers cross paths and recognize each other. You reach it two
+  ways: the intimate door (the **Mirror** / SMS) and its visible body (the **web
+  home**). Belonging without a hive: you still walk alone, you just walk in the
+  same air.
 
 **Implication for every door and ritual:** you are never inviting someone to
 become a *fan of Wobar*. You are inviting them to become *their own version of
@@ -245,9 +247,8 @@ it *is* the world's movement.
 
 **First door: MIRROR (the SMS list).** See the *Mirror Threshold* loop. Keyword
 **MIRROR**. Entering = setting an intention = crossing into the chamber. Inside
-= early raw music + downloads pointed outward (Sage-register; the list-content
-name is still open — see §9). Faceless — a line *into the world*, never "text
-Nick." Validated in-lane by Of
+= **glimpses** (early raw music + downloads pointed outward, Sage-register).
+Faceless — a line *into the world*, never "text Nick." Validated in-lane by Of
 The Trees' Moonglade Park (phone→text unlock, on Memory Palace — Wobar's target
 label). The IG-wipe move is explicitly rejected: it only pays off with an
 existing audience to convert, and erases nothing at Wobar's current scale.
@@ -255,9 +256,11 @@ existing audience to convert, and erases nothing at Wobar's current scale.
 ### The Ether — what flows through the door
 
 Once a Wanderer crosses (via **seeing**, the MIRROR keyword), they are in **the
-Ether** — the bottom of the funnel, the underneath, the national/online
-audience's home. (Distinct from the **Flow State sets sublist** — see *Two
-audiences* below.)
+Ether** — the world's interior, the underneath (national/online). The Ether is a
+*space*, not a channel: you reach it through the **Mirror** (SMS — the intimate
+door) and through the **web home** (the Ether made visible — a place to walk into,
+where the Passages and the poems live). Owned land, both. (Distinct from the
+**Flow State sets sublist** — local scene — see *Two audiences* below.)
 
 **What it is:** Wobar's journal, shared — and a room that talks back. Not a promo
 channel. Nick journaling his actual life and process, offered so Wanderers find
@@ -302,6 +305,12 @@ first-person, raw, vulnerable) finally given a home *and* a reply channel.
       The instant a poem makes Wobar the intermediary/messiah, the world collapses
       into a cult (§8).
 
+**The Passage — the written body (one per Portal EP).** Beyond the feed: each
+Portal EP ships with its **Passage** — the void poems for that journey, bound and
+durable (lives on the web home, eventually printed), sealed with the **mark**. A
+*passage* of text and a *passage* through the portal. Where glimpses are ephemeral
+(the scroll), the Passage is the lore made permanent — the world's written body.
+
 **The guardrail — mirror, not spotlight.** Journaling risks becoming "look what I
 did" — which breaks §5 (everything points back at the Wanderer, never up at the
 artist). The rule: **every glimpse is a mirror offered, not a stage.** Nick's
@@ -315,6 +324,34 @@ sets sublist (local scene) are **separate lists on purpose** — currently disti
 groups with distinct needs (the online audience is inherently separate from the
 local scene at this stage). They **converge eventually** as scene and national
 following overlap — but not yet. Keep them separate until convergence is real.
+
+---
+
+## 7.5 SURFACES OF THE WORLD — the body
+
+The world becomes real when it has a body at every depth and in every sense.
+The organs, and where each sits:
+
+| Organ | In-world role | Status |
+|---|---|---|
+| **The music** | the wandering rendered in bass (releases, Portal EPs, flips, Channels) | machine exists |
+| **Socials clips** | the *glimpse* from outside the portal | have |
+| **YouTube longform** | the *deep-wander* — the immersive inside | reframe / underused |
+| **The Mirror (SMS)** | the intimate *door* — the crossing | building |
+| **The Ether** | the interior; the **web home** is its visible body (a terminal you wander, guided by *the daemon*), the SMS its intimate line | web home = spec'd (WEB_HOME_SPEC) |
+| **Flow State** | the Portal entered together (local scene) | have |
+| **The mark** | two broken circles — the faceless face | LOCKED |
+| **The Passage** | the written body, one per EP (bound void poems, sealed with the mark) | new |
+| **Merch / totems** | world-*objects* you wear and carry | seeded (Obscura) |
+| **A gathering** | the physical manifestation of the world (own event) | horizon |
+| **Obscura** | the void made physical — *a different era* of the same world | parked |
+
+**Owned vs rented.** Socials/streaming are rented land; the Ether (web home + SMS),
+the Passages, and the live room are owned. Build the owned surfaces — they compound.
+
+**Eras (to formalize later).** Obscura is a *different era* of the one world — the
+Ghost/Tyler mechanic (one world, distinct faces/eras). "Eras" is a real structural
+mechanic worth its own section; parked for now.
 
 ---
 
@@ -364,7 +401,11 @@ touchpoints so the world speaks its own tongue. **Status flags: [locked],
 | The act of entering / crossing the threshold | **seeing** | [LOCKED 2026-07-03 — the sanctioned sight (seeing *yourself*); the threshold mirrors the center] |
 | The list content / the downloads | **glimpses** | [LOCKED 2026-07-03 — manifesto language ("catch a glimpse of what's actually there"); a glimpse into Nick's life/process/the world, offered as a mirror; no collision] |
 | Someone who has crossed the threshold | **Wanderer** | [LOCKED 2026-07-03] |
-| The community as a whole | **the Ether** | [LOCKED 2026-07-03] |
+| The interior / the underneath (the medium + the people in it) | **the Ether** | [LOCKED; reframed 2026-07-04 — a *space*, not the SMS list; reached via the Mirror + the web home] |
+| The web home | the Ether made visible — a **terminal you wander** | [2026-07-04 — the site *is* the Ether; full rebuild as an early-RPG terminal; see WEB_HOME_SPEC] |
+| The guide / wayfinder in the terminal | **the daemon** | [LOCKED 2026-07-04 — Unix daemon + Socratic daimonion (guides by *deflection*, never answers); wayfinder, not guru] |
+| The mark / sigil (the faceless face) | **two broken circles** | [LOCKED 2026-07-04 — observer + image / aperture / offset versions / the cycle that won't close] |
+| The written body (one per Portal EP) | **the Passage** | [LOCKED 2026-07-04 — a passage of text + a passage through the portal; bound void poems, sealed with the mark] |
 | The live night | **Flow State** | [locked — exists] |
 | The 5 regions of the interior | **the 5 Acts** (Rift / Descension / Encounter / Release / Integration) | [locked — exists] |
 | Bedroom/no-ceremony captures | **Channels** | [locked — exists] |
@@ -418,13 +459,15 @@ Flagged against WOBAR_COPY / WOBAR_CONTENT / WOBAR_FRAMEWORK / WOBAR_EMOTIONAL_R
   is almost always a sacred rule violated.
 
 ## Open items (for teardown / next rounds)
-- Lexicon FULLY LOCKED: Mirror (mirrors-all-the-way-in), **seeing** (act of
-  entering), **Wanderer** (member), **the Ether** (community), **glimpses** (the
-  content). Ether content model + glimpse formats + guardrail written into §7.
-- NEXT BUILD: the Mirror Threshold spec — the *seeing* ritual, the first glimpse
-  (transmission #1), the void-poem format, the CTA end-card, the SMS tool
-  (<$50/mo, must support real two-way).
+- Lexicon LOCKED: Mirror, **seeing**, **Wanderer**, **the Ether** (= the
+  interior), **glimpses**, **the Passage** (written body per EP), **the mark**
+  (two broken circles); the web home = the Ether made visible.
 - Decide whether §1 (ground truth) stays in this file or moves to a
-  Nick-eyes-only note — it's the most sensitive layer.
-- Register this file in `WOBAR_CONTEXT.md` File Registry once past draft.
-- Feed the locked world into the Mirror Threshold spec (the actual door design).
+  Nick-eyes-only note — most sensitive layer now the cosmology is deeper.
+- **Eras** — formalize as a mechanic (Obscura = a different era of the one world;
+  Ghost/Tyler pattern). Parked but real.
+- BUILD: Mirror Threshold (spec done → `working/MIRROR_THRESHOLD_SPEC.md`) + the
+  **web home** (the Ether's visible body — hosts the Mirror entry, the Passages,
+  the poems, the mark).
+- Copy: ritual/EP copy through WOBAR_COPY; first void poem; first Passage.
+- Registered in `WOBAR_CONTEXT.md` (2026-07-03).
