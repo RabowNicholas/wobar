@@ -1,0 +1,35 @@
+{
+  "label": "wire audio — base_audio_react (percentile-normalized _n channels) + uTransient/uEnergy in shader",
+  "timestamp": "2026-07-14T00:00:00Z",
+  "network": "tunnel_oxidized",
+  "note": "Normalization constants derived from rec_audio (16458 frames @ 60fps, kekkai-2--6-17.mp3). base_audio itself was NOT modified — base_audio_react is a new downstream stage reading /project1/base_audio/null_audio via selectCHOP absolute paths.",
+  "operations": [
+    { "type": "create_node", "path": "/project1/base_audio_react", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/sel_sub_bass", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/math_sub_bass", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/ren_sub_bass", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/sel_energy", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/math_energy", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/ren_energy", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/sel_transient", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/math_transient", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/ren_transient", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/merge_n", "before": null },
+    { "type": "create_node", "path": "/project1/base_audio_react/null_out", "before": null },
+
+    { "type": "create_node", "path": "/project1/base_audio/tmp_audio_info", "before": null, "undone_in_move": "created and destroyed within this session for audio-length analysis; not present in final state" },
+
+    {
+      "type": "set_dat_text",
+      "path": "/project1/text_tunnel",
+      "before": "move_001 shader — pow(uSubBass, 2.5); uEnergy declared but UNUSED; no uTransient; glint smoothstep(0.87, 0.99) fixed; wall *= 0.66 + 0.5*(0.5+0.5*sin(uTime*0.6)); specular gain fixed 0.6"
+    },
+
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec7name", "before": "" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec7valuex", "before": 0.0 },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec1valuex (uSubBass expr)", "before": "op('audio_ref')['sub_bass'] if (op('audio_ref') and op('audio_ref').numChans > 0) else 0" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec2valuex (uEnergy expr)", "before": "op('audio_ref')['energy'] if (op('audio_ref') and op('audio_ref').numChans > 0) else 0" },
+
+    { "type": "connect", "from": "/project1/base_audio_react/merge_n", "to": "/project1/base_audio_react/null_out", "input_index": 0, "before": null }
+  ]
+}

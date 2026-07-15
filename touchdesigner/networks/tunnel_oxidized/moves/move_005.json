@@ -1,0 +1,24 @@
+{
+  "label": "v3 ALIVE — passing beat-synced lamps + volumetric haze/shafts + sub-bass wall breathing; uTime -> song time",
+  "timestamp": "2026-07-14T00:00:00Z",
+  "network": "tunnel_oxidized",
+  "note": "Nick: 'this is better. how can we bring life to the shader now.' Chose all three of passing lamps / volumetric haze / walls breathe. Node chain UNCHANGED — shader + ctrl_scene pars only.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/text_tunnel",
+      "before": "v2 shader — raymarched, ring welds, single static off-axis lamp, no volumetrics, no wall swell; uniforms uTime..uDrift only (9 total)"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/glsl_tunnel",
+      "parameter": "vec0valuex (uTime expr)",
+      "before": "absTime.seconds",
+      "note": "-> me.time.seconds. Beat-sync is IMPOSSIBLE on absTime: wall-clock has no relation to the playhead. Timeline is now 16458 frames = exactly the track, so me.time.seconds IS song position and runs monotonic across a full render. v1's absTime choice was correct AT THE TIME (timeline was then 600 frames, looping every 10s)."
+    },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec9name/vec9valuex (uLampSecs)", "before": "" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec10name/vec10valuex (uPhase)", "before": "" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec11name/vec11valuex (uHaze)", "before": "" },
+    { "type": "set_parameter", "path": "/project1/ctrl_scene", "parameter": "custom pars Bpm / Lampbeats / Beatphase / Haze (new)", "before": null }
+  ]
+}

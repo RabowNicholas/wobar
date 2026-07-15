@@ -1,0 +1,45 @@
+{
+  "label": "build tunnel_oxidized — glslTOP polar material tunnel + post chain (no audio wired)",
+  "timestamp": "2026-07-14T00:00:00Z",
+  "network": "tunnel_oxidized",
+  "note": "Project /project1 was empty (0 ops) at move start — every before-state is null. Undo = delete all created nodes.",
+  "operations": [
+    { "type": "create_node", "path": "/project1/text_tunnel", "before": null },
+    { "type": "create_node", "path": "/project1/ctrl_scene", "before": null },
+    { "type": "create_node", "path": "/project1/glsl_tunnel", "before": null },
+    { "type": "create_node", "path": "/project1/hsv_desat", "before": null },
+    { "type": "create_node", "path": "/project1/noise_grain", "before": null },
+    { "type": "create_node", "path": "/project1/res_grain", "before": null },
+    { "type": "create_node", "path": "/project1/comp_grain", "before": null },
+    { "type": "create_node", "path": "/project1/circle_vignette", "before": null },
+    { "type": "create_node", "path": "/project1/comp_vignette", "before": null },
+    { "type": "create_node", "path": "/project1/null_out", "before": null },
+
+    { "type": "set_dat_text", "path": "/project1/text_tunnel", "before": "" },
+
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "pixeldat", "before": "" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "outputresolution", "before": "useinput" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "resolutionw", "before": 256 },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "resolutionh", "before": 256 },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "format", "before": "rgba8fixed" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec", "before": 1 },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec0..vec6 name+valuex (7 uniforms, expressions)", "before": null },
+
+    { "type": "set_parameter", "path": "/project1/ctrl_scene", "parameter": "custom page 'Scene' + Scrollspeed/Mirroramt/Foldcount/Brightness", "before": null },
+
+    { "type": "set_parameter", "path": "/project1/hsv_desat", "parameter": "saturationmult", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/noise_grain", "parameter": "type/mono/aspectcorrect/amp/offset/seed/res 360x640", "before": null },
+    { "type": "set_parameter", "path": "/project1/res_grain", "parameter": "outputresolution/resolutionw/resolutionh 720x1280", "before": null },
+    { "type": "set_parameter", "path": "/project1/comp_grain", "parameter": "operand", "before": "over" },
+    { "type": "set_parameter", "path": "/project1/circle_vignette", "parameter": "radius/softness/fill/bg + res 720x1280", "before": null },
+    { "type": "set_parameter", "path": "/project1/comp_vignette", "parameter": "operand", "before": "over" },
+
+    { "type": "connect", "from": "/project1/glsl_tunnel", "to": "/project1/hsv_desat", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/noise_grain", "to": "/project1/res_grain", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/hsv_desat", "to": "/project1/comp_grain", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/res_grain", "to": "/project1/comp_grain", "input_index": 1, "before": null },
+    { "type": "connect", "from": "/project1/comp_grain", "to": "/project1/comp_vignette", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/circle_vignette", "to": "/project1/comp_vignette", "input_index": 1, "before": null },
+    { "type": "connect", "from": "/project1/comp_vignette", "to": "/project1/null_out", "input_index": 0, "before": null }
+  ]
+}

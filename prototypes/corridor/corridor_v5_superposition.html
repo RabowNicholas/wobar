@@ -1,0 +1,528 @@
+<title>WOBAR — corridor v0</title>
+
+<style>
+  :root{
+    --void:#060409;
+    --offblack:#0E0813;
+    --charcoal:#1F1828;
+    --slate:#3B4C73;
+    --ash:#6B5C7A;
+    --lavender:#A085AE;
+    --purple:#6B2E87;
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+  }
+
+  html,body{height:100%;}
+  body{
+    margin:0;
+    background:var(--void);
+    color:var(--ash);
+    font-family:var(--mono);
+    overflow:hidden;
+  }
+
+  #stage{ position:fixed; inset:0; display:block; }
+  #gl{ position:absolute; inset:0; width:100%; height:100%; display:block; }
+
+  .hud{
+    position:fixed;
+    top:0; left:0; right:0;
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:1rem;
+    padding:0.85rem 1.1rem;
+    pointer-events:none;
+    font-size:0.6rem;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:#4a4055;
+  }
+  .hud b{ color:var(--ash); font-weight:400; }
+
+  #phase{ color:var(--lavender); font-weight:400; }
+  #phase[data-p="stable"]{ color:#5c5468; }
+  #phase[data-p="floor"] { color:var(--slate); }
+  #phase[data-p="unheld"]{ color:var(--lavender); }
+  #phase[data-p="snap"]  { color:var(--ash); }
+
+  .rail{
+    position:fixed;
+    left:0; right:0; bottom:0;
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:1.5rem;
+    padding:0.9rem 1.1rem 1rem;
+    background:linear-gradient(to top, rgba(6,4,9,0.94), rgba(6,4,9,0.0));
+  }
+
+  .ctl{
+    display:flex;
+    flex-direction:column;
+    gap:0.4rem;
+    min-width:8.5rem;
+    flex:0 1 auto;
+  }
+  .ctl > .lab{
+    display:flex;
+    justify-content:space-between;
+    gap:0.75rem;
+    font-size:0.56rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:#4a4055;
+  }
+  .ctl .val{ color:var(--ash); font-variant-numeric:tabular-nums; }
+  .ctl[data-off="1"]{ opacity:0.32; }
+
+  input[type=range]{
+    -webkit-appearance:none;
+    appearance:none;
+    width:100%;
+    height:2px;
+    background:var(--charcoal);
+    outline:none;
+    margin:0.35rem 0;
+  }
+  input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    appearance:none;
+    width:9px; height:9px;
+    border-radius:50%;
+    background:var(--ash);
+    cursor:pointer;
+    transition:background 0.12s;
+  }
+  input[type=range]::-moz-range-thumb{
+    width:9px; height:9px; border:0;
+    border-radius:50%;
+    background:var(--ash);
+    cursor:pointer;
+  }
+  input[type=range]:hover::-webkit-slider-thumb{ background:var(--lavender); }
+  input[type=range]:focus-visible::-webkit-slider-thumb{
+    background:var(--lavender);
+    box-shadow:0 0 0 3px rgba(107,46,135,0.55);
+  }
+  input[type=range]:focus-visible{ outline:none; }
+
+  .toggle{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+    cursor:pointer;
+    font-size:0.56rem;
+    letter-spacing:0.16em;
+    text-transform:uppercase;
+    color:#4a4055;
+    user-select:none;
+    background:none;
+    border:1px solid var(--charcoal);
+    padding:0.5rem 0.7rem;
+    font-family:var(--mono);
+    transition:border-color 0.15s, color 0.15s;
+  }
+  .toggle:hover{ border-color:var(--ash); color:var(--ash); }
+  .toggle:focus-visible{ outline:none; border-color:var(--lavender); color:var(--lavender); }
+  .toggle .dot{
+    width:5px; height:5px;
+    border-radius:50%;
+    background:var(--charcoal);
+    transition:background 0.15s;
+  }
+  .toggle[aria-pressed="true"]{ color:var(--lavender); border-color:#3a3145; }
+  .toggle[aria-pressed="true"] .dot{ background:var(--lavender); }
+
+  #fps{
+    position:fixed;
+    right:1.1rem;
+    bottom:6.2rem;
+    font-size:0.55rem;
+    letter-spacing:0.14em;
+    color:#3d3547;
+    font-variant-numeric:tabular-nums;
+    pointer-events:none;
+  }
+
+  #err{
+    position:fixed;
+    inset:0;
+    display:none;
+    place-items:center;
+    padding:2rem;
+    background:var(--void);
+    color:var(--ash);
+    font-size:0.75rem;
+    line-height:1.7;
+    white-space:pre-wrap;
+    overflow:auto;
+  }
+
+  @media (max-width: 700px){
+    .rail{ gap:1rem 1.25rem; padding-bottom:1.25rem; }
+    .ctl{ min-width:6.5rem; }
+    .hud{ font-size:0.5rem; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    input[type=range]::-webkit-slider-thumb{ transition:none; }
+    .toggle{ transition:none; }
+  }
+</style>
+
+<div id="stage"><canvas id="gl"></canvas></div>
+
+<div class="hud">
+  <span>WOBAR &nbsp;/&nbsp; <b>corridor v5</b> &nbsp;/&nbsp; 4 &times; same corridor, superposed</span>
+  <span id="phase" data-p="stable">stable</span>
+</div>
+
+<div id="fps">&mdash;</div>
+
+<div class="rail">
+  <button class="toggle" id="loop" aria-pressed="true"><span class="dot"></span>run the loop</button>
+
+  <div class="ctl" id="ctl-collapse" data-off="1">
+    <div class="lab"><span>collapse</span><span class="val" id="v-collapse">0.00</span></div>
+    <input type="range" id="s-collapse" min="0" max="1" step="0.001" value="0" aria-label="Collapse">
+  </div>
+
+  <div class="ctl">
+    <div class="lab"><span>offset</span><span class="val" id="v-offset">0.60</span></div>
+    <input type="range" id="s-offset" min="0" max="2.5" step="0.01" value="0.6" aria-label="Offset">
+  </div>
+
+  <div class="ctl">
+    <div class="lab"><span>scroll</span><span class="val" id="v-speed">0.85</span></div>
+    <input type="range" id="s-speed" min="0" max="3" step="0.01" value="0.85" aria-label="Scroll speed">
+  </div>
+
+  <div class="ctl">
+    <div class="lab"><span>mirror</span><span class="val" id="v-mirror">0.88</span></div>
+    <input type="range" id="s-mirror" min="0" max="1" step="0.01" value="0.88" aria-label="Mirror amount">
+  </div>
+
+  <div class="ctl">
+    <div class="lab"><span>grain</span><span class="val" id="v-grain">0.055</span></div>
+    <input type="range" id="s-grain" min="0" max="0.2" step="0.001" value="0.055" aria-label="Grain">
+  </div>
+
+  <div class="ctl">
+    <div class="lab"><span>fog</span><span class="val" id="v-fog">0.075</span></div>
+    <input type="range" id="s-fog" min="0.02" max="0.2" step="0.001" value="0.075" aria-label="Fog density">
+  </div>
+</div>
+
+<div id="err"></div>
+
+<script>
+(function(){
+  var canvas = document.getElementById('gl');
+  var errBox = document.getElementById('err');
+
+  function fail(msg){
+    errBox.style.display = 'grid';
+    errBox.textContent = msg;
+  }
+
+  var gl = canvas.getContext('webgl', {antialias:false, alpha:false, powerPreference:'high-performance'})
+        || canvas.getContext('experimental-webgl');
+  if(!gl){ fail('WebGL unavailable in this browser.'); return; }
+
+  var VERT = [
+    'attribute vec2 aPos;',
+    'void main(){ gl_Position = vec4(aPos, 0.0, 1.0); }'
+  ].join('\n');
+
+  var FRAG = [
+    'precision highp float;',
+    'uniform vec2  uRes;',
+    'uniform float uTime;',
+    'uniform float uCollapse;',
+    'uniform float uMirror;',
+    'uniform float uGrain;',
+    'uniform float uFog;',
+    'uniform float uScroll;',
+    'uniform float uOffset;',
+
+    'mat2 rot(float a){ float c=cos(a), s=sin(a); return mat2(c,-s,s,c); }',
+
+    'float hash(vec3 p){',
+    '  p = fract(p*0.3183099 + vec3(0.1,0.2,0.3));',
+    '  p *= 17.0;',
+    '  return fract(p.x*p.y*p.z*(p.x+p.y+p.z));',
+    '}',
+
+    'float noise(vec3 x){',
+    '  vec3 i = floor(x); vec3 f = fract(x);',
+    '  f = f*f*(3.0-2.0*f);',
+    '  return mix(mix(mix(hash(i+vec3(0.0,0.0,0.0)),hash(i+vec3(1.0,0.0,0.0)),f.x),',
+    '                 mix(hash(i+vec3(0.0,1.0,0.0)),hash(i+vec3(1.0,1.0,0.0)),f.x),f.y),',
+    '             mix(mix(hash(i+vec3(0.0,0.0,1.0)),hash(i+vec3(1.0,0.0,1.0)),f.x),',
+    '                 mix(hash(i+vec3(0.0,1.0,1.0)),hash(i+vec3(1.0,1.0,1.0)),f.x),f.y),f.z);',
+    '}',
+
+    // 3 octaves (was 5) — four marches now, so the fbm budget is a quarter of what it was
+    'float fbm(vec3 p){',
+    '  float a = 0.5; float s = 0.0;',
+    '  for(int i=0;i<3;i++){ s += a*noise(p); p *= 2.02; a *= 0.5; }',
+    '  return s;',
+    '}',
+
+    'float box2(vec2 p, vec2 b, float r){',
+    '  vec2 d = abs(p) - b;',
+    '  return length(max(d,0.0)) + min(max(d.x,d.y),0.0) - r;',
+    '}',
+
+    // ---- the four. SAME corridor. 4-fold rotational symmetry + a lateral offset.
+    // Symmetry is deliberate: arbitrary angles produced soup. Symmetric offsets
+    // interfere, and interference is legible — it reads as architecture, not noise.
+    // The offset is what makes the geometry, so it is a knob.
+    'vec3 domainOf(vec3 p, float i){',
+    '  vec3 q = p;',
+    '  q.xy = rot(i * 1.5707963) * q.xy;',
+    '  q.xy -= vec2(uOffset, 0.0);',
+    '  return q;',
+    '}',
+
+    'float mapC(vec3 p, float i){',
+    '  vec3 q = domainOf(p, i);',
+    // imperfect mirror (K3) — the arrangement is clean symmetry, the reflection is not
+    '  q.x = mix(q.x, abs(q.x) - 1.15, uMirror*0.92);',
+    '  float r = 1.78 + 0.14*sin(q.z*1.7);',
+    '  float d = -box2(q.xy, vec2(r, r*0.70), 0.22);',
+    '  float det = fbm(q*vec3(1.35,1.35,0.5) + vec3(0.0,0.0,uTime*0.05));',
+    '  d -= det * 0.19;',
+    '  return d;',
+    '}',
+
+    'vec3 nrmC(vec3 p, float i){',
+    '  vec2 e = vec2(0.0028, 0.0);',
+    '  return normalize(vec3(',
+    '    mapC(p+e.xyy,i)-mapC(p-e.xyy,i),',
+    '    mapC(p+e.yxy,i)-mapC(p-e.yxy,i),',
+    '    mapC(p+e.yyx,i)-mapC(p-e.yyx,i)));',
+    '}',
+
+    // WOBAR slate-mauve route (K2). tops out at dusty lavender -> no pure white by construction.
+    'vec3 pal(float x){',
+    '  x = clamp(x,0.0,1.0);',
+    '  vec3 c0 = vec3(0.000,0.000,0.000);',
+    '  vec3 c1 = vec3(0.055,0.031,0.075);',
+    '  vec3 c2 = vec3(0.122,0.094,0.157);',
+    '  vec3 c3 = vec3(0.231,0.298,0.451);',
+    '  vec3 c4 = vec3(0.420,0.361,0.478);',
+    '  vec3 c5 = vec3(0.627,0.522,0.682);',
+    '  float s = x*5.0;',
+    '  if(s<1.0) return mix(c0,c1,s);',
+    '  if(s<2.0) return mix(c1,c2,s-1.0);',
+    '  if(s<3.0) return mix(c2,c3,s-2.0);',
+    '  if(s<4.0) return mix(c3,c4,s-3.0);',
+    '  return mix(c4,c5,s-4.0);',
+    '}',
+
+    // one INDEPENDENT march per corridor. no booleans anywhere.
+    // every SDF combine operator (min/max/smin) RESOLVES to a single surface —
+    // that is its whole job, and it is exactly what must not happen here.
+    // so the corridors never meet in the field. they only meet in the composite.
+    'vec3 marchOne(vec3 ro, vec3 rd, float i){',
+    '  float t = 0.0;',
+    '  float steps = 0.0;',
+    '  for(int k=0;k<96;k++){',
+    '    float d = mapC(ro + rd*t, i);',
+    '    if(d < 0.0022 || t > 40.0) break;',
+    '    t += max(d*0.45, 0.010);',
+    '    steps += 1.0;',
+    '  }',
+    '  vec3 p = ro + rd*t;',
+    '  vec3 n = nrmC(p, i);',
+    '  float ao = 1.0 - steps/96.0;',
+    '  float sh = clamp(dot(n, normalize(vec3(0.35,0.55,-0.72)))*0.5 + 0.5, 0.0, 1.0);',
+    '  float v  = sh*0.72 + ao*0.52;',
+    '  v *= exp(-t*uFog);',
+    '  return pal(v);',
+    '}',
+
+    'void main(){',
+    '  vec2 uv = (gl_FragCoord.xy - 0.5*uRes) / uRes.y;',
+    '  vec3 ro = vec3(0.0, 0.0, uScroll);',
+    '  ro.x += sin(uTime*0.11)*0.10;',
+    '  ro.y += cos(uTime*0.087)*0.07;',
+    '  vec3 rd = normalize(vec3(uv, 1.25));',
+
+    // THE COLLAPSE = the weights equalizing.
+    // Corridor 0 is the reading perception committed to: always weight 1.
+    // The other three are always THERE — they only gain weight as the commitment
+    // slips. Nothing is created. Confidence stops being able to prefer one.
+    '  vec3 acc = vec3(0.0);',
+    '  float wsum = 0.0;',
+    '  for(int i=0;i<4;i++){',
+    '    float w = (i == 0) ? 1.0 : uCollapse;',
+    '    if(w > 0.004){',
+    '      acc  += marchOne(ro, rd, float(i)) * w;',
+    '      wsum += w;',
+    '    }',
+    '  }',
+    // normalized: brightness stays put, so "collapsed" never means "brighter".
+    // at c=1 all four sit at 1/4 and none of them is the corridor.
+    '  vec3 col = acc / max(wsum, 0.0001);',
+
+    '  float g = hash(vec3(gl_FragCoord.xy, floor(uTime*24.0)));',
+    '  col += (g-0.5)*uGrain;',
+    '  col = clamp(col, 0.0, 1.0);',
+    '  col = min(col, vec3(0.627,0.522,0.682));',
+    '  gl_FragColor = vec4(col, 1.0);',
+    '}'
+  ].join('\n');
+
+  function sh(type, src){
+    var s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if(!gl.getShaderParameter(s, gl.COMPILE_STATUS)){
+      fail('Shader compile failed:\n\n' + gl.getShaderInfoLog(s));
+      return null;
+    }
+    return s;
+  }
+
+  var vs = sh(gl.VERTEX_SHADER, VERT);
+  var fs = sh(gl.FRAGMENT_SHADER, FRAG);
+  if(!vs || !fs) return;
+
+  var prog = gl.createProgram();
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  if(!gl.getProgramParameter(prog, gl.LINK_STATUS)){
+    fail('Program link failed:\n\n' + gl.getProgramInfoLog(prog));
+    return;
+  }
+  gl.useProgram(prog);
+
+  var buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 3,-1, -1,3]), gl.STATIC_DRAW);
+  var aPos = gl.getAttribLocation(prog, 'aPos');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 0, 0);
+
+  var U = {};
+  ['uRes','uTime','uCollapse','uMirror','uGrain','uFog','uScroll','uOffset'].forEach(function(k){
+    U[k] = gl.getUniformLocation(prog, k);
+  });
+
+  var el = function(id){ return document.getElementById(id); };
+  var sCollapse = el('s-collapse'), sSpeed = el('s-speed'), sMirror = el('s-mirror'),
+      sGrain = el('s-grain'), sFog = el('s-fog'), sOffset = el('s-offset');
+  var vCollapse = el('v-collapse'), vSpeed = el('v-speed'), vMirror = el('v-mirror'),
+      vGrain = el('v-grain'), vFog = el('v-fog'), vOffset = el('v-offset');
+  var loopBtn = el('loop'), ctlCollapse = el('ctl-collapse'), phaseEl = el('phase'), fpsEl = el('fps');
+
+  var runLoop = true;
+  loopBtn.addEventListener('click', function(){
+    runLoop = !runLoop;
+    loopBtn.setAttribute('aria-pressed', runLoop ? 'true' : 'false');
+    ctlCollapse.setAttribute('data-off', runLoop ? '1' : '0');
+    sCollapse.disabled = runLoop;
+  });
+  sCollapse.disabled = true;
+
+  function bind(s, v, dp){
+    s.addEventListener('input', function(){ v.textContent = parseFloat(s.value).toFixed(dp); });
+  }
+  bind(sSpeed, vSpeed, 2); bind(sMirror, vMirror, 2);
+  bind(sGrain, vGrain, 3); bind(sFog, vFog, 3); bind(sOffset, vOffset, 2);
+
+  function resize(){
+    var dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+    var w = Math.floor(canvas.clientWidth * dpr);
+    var h = Math.floor(canvas.clientHeight * dpr);
+    if(canvas.width !== w || canvas.height !== h){
+      canvas.width = w; canvas.height = h;
+      gl.viewport(0, 0, w, h);
+    }
+  }
+  window.addEventListener('resize', resize);
+
+  function smooth(x){ x = Math.min(Math.max(x,0),1); return x*x*(3-2*x); }
+
+  var CYCLE = 15.0;
+  var passes = 0, lastCyc = 0;
+
+  function collapseAt(tt){
+    var cyc = (tt % CYCLE) / CYCLE;
+    if(cyc < lastCyc) passes++;
+    lastCyc = cyc;
+    var floorBase = Math.min(0.20, passes * 0.035);
+    var c;
+    if(cyc < 0.55)       c = 0.0;
+    else if(cyc < 0.588) c = smooth((cyc-0.55)/0.038);
+    else if(cyc < 0.72)  c = 1.0;
+    else                 c = 1.0 - smooth((cyc-0.72)/0.28);
+    return { v: Math.max(c, floorBase), cyc: cyc };
+  }
+
+  function phaseName(cyc){
+    if(cyc < 0.55)  return ['stable','stable'];
+    if(cyc < 0.588) return ['floor','the floor falls out'];
+    if(cyc < 0.72)  return ['unheld','cannot be held'];
+    return ['snap','snaps back'];
+  }
+
+  var t0 = performance.now();
+  var scroll = 0, prev = t0;
+  var fAcc = 0, fCnt = 0;
+
+  function frame(now){
+    resize();
+    var tt = (now - t0) / 1000;
+    var dt = Math.min((now - prev) / 1000, 0.05);
+    prev = now;
+
+    fAcc += dt; fCnt++;
+    if(fAcc > 0.5){
+      fpsEl.textContent = Math.round(fCnt/fAcc) + ' fps';
+      fAcc = 0; fCnt = 0;
+    }
+
+    scroll += dt * parseFloat(sSpeed.value);
+
+    var c;
+    if(runLoop){
+      var r = collapseAt(tt);
+      c = r.v;
+      var pn = phaseName(r.cyc);
+      if(phaseEl.getAttribute('data-p') !== pn[0]){
+        phaseEl.setAttribute('data-p', pn[0]);
+        phaseEl.textContent = pn[1];
+      }
+      sCollapse.value = c;
+      vCollapse.textContent = c.toFixed(2);
+    } else {
+      c = parseFloat(sCollapse.value);
+      vCollapse.textContent = c.toFixed(2);
+      var pn2 = c < 0.12 ? ['stable','stable']
+              : c < 0.75 ? ['floor','straining']
+              : ['unheld','cannot be held'];
+      if(phaseEl.getAttribute('data-p') !== pn2[0]){
+        phaseEl.setAttribute('data-p', pn2[0]);
+        phaseEl.textContent = pn2[1];
+      }
+    }
+
+    gl.uniform2f(U.uRes, canvas.width, canvas.height);
+    gl.uniform1f(U.uTime, tt);
+    gl.uniform1f(U.uCollapse, c);
+    gl.uniform1f(U.uScroll, scroll);
+    gl.uniform1f(U.uOffset, parseFloat(sOffset.value));
+    gl.uniform1f(U.uMirror, parseFloat(sMirror.value));
+    gl.uniform1f(U.uGrain, parseFloat(sGrain.value));
+    gl.uniform1f(U.uFog, parseFloat(sFog.value));
+
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
+})();
+</script>

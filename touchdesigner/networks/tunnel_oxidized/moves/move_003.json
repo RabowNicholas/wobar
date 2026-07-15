@@ -1,0 +1,16 @@
+{
+  "label": "add lateral drift — vanishing point wanders (constant, time-driven, never audio)",
+  "timestamp": "2026-07-14T00:00:00Z",
+  "network": "tunnel_oxidized",
+  "note": "Nick chose lateral drift over roll / faster-scroll / fold-evolution. Drift applied in NDC BEFORE the aspect squeeze so the wander is isotropic on screen.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/text_tunnel",
+      "before": "move_002 shader — no uDrift uniform; main() opened with `vec2 uv = vUV.st * 2.0 - 1.0;` immediately followed by `uv.x *= 720.0 / 1280.0;` with no drift block between"
+    },
+    { "type": "set_parameter", "path": "/project1/ctrl_scene", "parameter": "custom par Driftamt (new, default 0.15, range 0-0.5)", "before": null },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec8name", "before": "" },
+    { "type": "set_parameter", "path": "/project1/glsl_tunnel", "parameter": "vec8valuex", "before": 0.0 }
+  ]
+}

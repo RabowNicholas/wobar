@@ -52,7 +52,11 @@ Living doc. Not speculative — only add entries confirmed in a real session.
 | `levelTOP` | `contrast` | Correct name — NOT `contrast1` |
 | `levelTOP` | `brightness1` | Correct name — NOT `brightness` |
 | `levelTOP` | `gamma1` | Correct name — NOT `gamma` |
-| `glslTOP` | `color0name` / `color0rgbr` | Uniform name + value. Float uniforms live on the color page. |
+| `glslTOP` | `vec0name` / `vec0valuex` | **Scalar float uniforms live on the VECTORS page** — `vec0name` = uniform name, `vec0valuex` = value (`.expr` + `ParMode.EXPRESSION` to bind). Confirmed 2026-07-14 (tunnel_oxidized). |
+| `glslTOP` | `vec` | **NOT a uniform count — reads `0` and setting it is a no-op.** The `vecN*` sequence blocks are addressable via `getattr(g.par, 'vec7name')` without growing anything first. Just set `vecNname`/`vecNvaluex` directly. |
+| `glslTOP` | *(uniform warnings)* | "Uniform 'X' is not assigned" can persist as a **stale warning** after you assign it — force-cook the shader DAT and the glslTOP to clear. Verify with `.warnings()`, not the badge. |
+| `glslTOP` | `color0name` / `color0rgbr` | Color page is for **vec4 color** uniforms only. **Corrected 2026-07-14** — the old entry here claimed "float uniforms live on the color page", which is wrong and sends scalar-float bindings to the wrong page. |
+| `glslTOP` | *(uniform declarations)* | TD does **not** auto-declare uniforms. Every uniform must be declared in the shader (`uniform float uTime;`) or it's a compile error, regardless of the page binding. |
 | `glslTOP` | `pixeldat` | Path to the textDAT containing the GLSL shader |
 | `glslTOP` | `outputresolution` | Set to `0` for custom resolution |
 | `glslTOP` | `format` | `rgba16float` for 16-bit float output |
@@ -72,7 +76,7 @@ Living doc. Not speculative — only add entries confirmed in a real session.
 | `td_set_operator_pars` cannot set expressions | Use `td_execute_python` with `par.expr = "..."` and `par.mode = ParMode.EXPRESSION` |
 | `td_create_operator` does not wire connections | Wire via `td_execute_python` with `inputConnectors[n].connect(op)` |
 | `td_read_chop` on large recordings exceeds token limits | Analyze inside TD via `td_execute_python` — use `list(ch.vals)` + `sorted()` |
-| `audiodeviceoutCHOP` with `cookalways=True` freezes TD | Remove `cookalways` flag |
+| `audiodeviceoutCHOP` with `cookalways=True` freezes TD | Remove `cookalways` flag. **Re-confirmed 2026-07-14 (tunnel_oxidized), cost a whole session of bogus fps readings:** measured 68.6 ms/cook and 1223 ms/s CPU = **7352% of budget**, holding the project at **fps 0**; `cookalways=False` → fps 60 instantly. **It does NOT show up in `td_get_operator_info` `nonDefaultPars`** (Common-page par) — check it explicitly with `op.par.cookalways.eval()`. Symptom to recognise: fps 0 with a near-idle GPU and one CHOP dominating `td_get_perf` cpu/s. |
 | `playmode='locked'` on `audiofileinCHOP` only plays to timeline end | Use `sequential` for continuous playback |
 
 ---

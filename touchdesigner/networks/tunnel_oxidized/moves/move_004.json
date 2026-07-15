@@ -1,0 +1,28 @@
+{
+  "label": "v2 RAYMARCH rebuild — real geometry/normals/light; kill the mandala; fix audio_out cookalways fps 0->60",
+  "timestamp": "2026-07-14T00:00:00Z",
+  "network": "tunnel_oxidized",
+  "note": "Nick rejected v1 as 'cheap audio visualizer'. Chose 'raymarch it properly' over 2D-surface / kill-mandala-only / re-approach. Node chain UNCHANGED — this is a shader rewrite plus one par fix in base_audio.",
+  "operations": [
+    {
+      "type": "set_dat_text",
+      "path": "/project1/text_tunnel",
+      "before": "v1 shader — 2D polar 1/r map + kaleido() hex fold; colour ramped off scalar fbm; no normals, no light, no specular; min(col,BONE) hard clip; screen-space drift"
+    },
+    {
+      "type": "set_parameter",
+      "path": "/project1/base_audio/audio_out",
+      "parameter": "cookalways",
+      "before": true,
+      "note": "THE fps 0 CAUSE. audiodeviceoutCHOP with cookalways=True is a documented freeze in WOBAR_TWOZERO_GUIDE limitations. Was burning 68.6ms/cook, 1223ms/s CPU, 7352% of budget. Set False -> fps 0 -> 60 instantly. Did not appear in nonDefaultPars because it is a Common-page par."
+    },
+    { "type": "set_parameter", "path": "/project1/ctrl_scene", "parameter": "Driftamt default/normMax", "before": "default 0.15, normMax 0.5" },
+    {
+      "type": "set_parameter",
+      "path": "/project1/glsl_tunnel",
+      "parameter": "vec1/vec2/vec7 valuex (temporarily pinned to constants for a look test, then restored to EXPRESSION)",
+      "before": "EXPRESSION mode, guarded base_audio_react refs",
+      "note": "restored — verified all 9 uniforms back on ParMode.EXPRESSION"
+    }
+  ]
+}
