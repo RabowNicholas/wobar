@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Build Log
 version: 1.1
-last_updated: 2026-06-12 (session entry + 5 tracker rows added post-save)
+last_updated: 2026-07-17 (corridor Phase 0/1 build entry added)
 status: live
 scope: Session-by-session log of AI-assisted TD builds (recent sessions; older sessions in TD_BUILD_LOG_ARCHIVE.md). Used to identify recurring corrections and promote them to rules in WOBAR_TD_AGENT_RULES.md.
 dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
@@ -10,6 +10,28 @@ dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
 # TD BUILD LOG
 
 One entry per build session. Newest at top. This is the feedback loop — patterns that repeat here become rules.
+
+---
+
+## 2026-07-17 — corridor Phase 0 platform-verify + Phase 1 skeleton — all Metal-risk features GREEN; corridor bones up but soft
+
+**Context:** first build of the new **Corridor Build** loop (POP-native lit-3D corridor, forked off the glslTOP-raymarching spine). Two sub-builds in an empty `NewProject` (build **2025.32820**, saved as `NewProject_v1.toe`): a throwaway platform-probe rig, then the corridor skeleton. Goal of Phase 0 = confirm which Metal render features actually work before investing.
+
+**What was built:**
+- **Probe rig `/project1/probe_shadow`** (lit test scene): `geometryCOMP` torus caster (kept default `torus1`) + `geo_floor` (default torus destroyed → `gridSOP` 16×16, `rx=-90` flat, render+display=True) + `phongMAT` (diffuse `diffr/diffg/diffb`=0.72) + **cone `lightCOMP`** (`tx4 ty8 tz5`, `lookat='geo_caster'`, `coneangle35`, `shadowtype='soft2d'`, `shadowcasters='geo_caster'`, `lightsize1 0.04`, `shadowresolution1 1024`, `fov50`) + `cameraCOMP` (`tx6 ty5 tz11`, `lookat` caster) + `renderTOP` (`geometry='geo_*'`, `antialias='aa8'`, 1280×1280). Later added `mat_pbr` (`pbrMAT` — dielectric then metallic 0.9/rough 0.2), `depthTOP depth1` (`par.op='render1'`, `depthspace='cameraspace'`/`'reranged'`), `environmentlightCOMP env1` (`envlightmap` = a `rampTOP`, `envlightmaptype2d='equirect'`, `envlightmapprefilter='off'`).
+- **Corridor skeleton `/project1/corridor_v1`**: `geo_corridor` (`geometryCOMP`, default torus destroyed) holding **`tubePOP`** (`orient='z'`, `radx/rady 2.5`, `height 50`, `cols 48`, `rows 40`, `normal='pointNormals'`, `closedu=True`, `endcaps=False`, render+display=True; 1920 pts) + `mat_wall` (`pbrMAT` basecolor 0.52 / metallic 0.1 / roughness 0.6) + attenuated point `lightCOMP` (`tz18`, `attenuationend 42`, dimmer 2) dying into the dark far end (= non-arrival) + `cameraCOMP` (`tz22`, fov55, down -Z) + `renderTOP` (`cullface='neither'`, aa8, 720×1280).
+
+**Verified on M1 Metal (the Phase-0 deliverable — screenshot + numeric sampling):** soft2d soft shadows RENDER (the #1 unknown); phongMAT + pbrMAT (dielectric AND metallic, no black-silhouette); **Depth TOP returns valid varying depth from opaque geo** (sampled torus 0.973 / floor 0.968 / bg 1.0 — the linchpin for fog + DOF; perspective depth non-linear, tighten far ~28); Environment Light/IBL (metal reflects env map); Bloom TOP native; 1280 + aa8. **Promoted to `TD_APPLE_SILICON.md` §11.** DOF + volumetric fog have no native node anywhere → build on the Depth TOP.
+
+**First-pass-right:** full pre-build reading discipline (index → debug log → twozero guide → the 1126-line bootstrap) before the first op. **Rule 0 paid off** — the debug log's depth-pass-on-transparent-geo and IBL-prefilter-cost entries were read proactively and shaped the probes (kept geo opaque for depth; `envlightmapprefilter='off'` — the promoted 142ms rule held again). Light `lookat` + tight FOV for the shadow map (correct first try, per renderTOP card). geometryCOMP default-torus destroy handled. Child SOP/POP render+display flags set explicitly. `safe_save()` used (no blind `project.save`). Didn't trust downsampled JPEG for depth — sampled numerically.
+
+**Corrections against the agent (tracker candidates — none formally logged to TD_CLAUDE_DEBUG_LOG yet; do in a promotion pass):**
+- **exec-server closure trap RECURRED (2×)** — the existing debug-log entry (2026-06-09, twozero) covers list-comps/lambdas referencing outer-block vars; this session it bit **nested `def` functions** too (`safe_save`, a `depth-sample` helper both `NameError`'d on outer `os`/`dp`). Same root, broader scope. **Extend the rule to "any nested function/closure in `td_execute_python`"; fix = inline or pass as args.** Highest-value — it's a Rule-0-class recurrence.
+- **phongMAT diffuse par is `diffr/diffg/diffb`, NOT `diffuser`** (guessed wrong, 1 op-worth of retry). New gotcha.
+- **Environment Light opType is `environmentlightCOMP`** (all-lowercase 'light') — guessed `environmentLightCOMP` + `envlightCOMP` first. New gotcha.
+- **This twozero server's `td_get_hints` registry does NOT include `'3d'` or `'pop_basics'`** (the bootstrap manual references them, but live topics are: animation/noise/connections/parameters/scripting/glsl/construction/ui_analysis/panel_layout/screenshots/input_simulation/undo/flags/privacy/networking). For 3D/POP par knowledge use **`td_get_docs('pops')` + `td_get_par_info(opType)`** instead — don't burn calls on the missing hint topics.
+
+**WOBAR craft (Nick-reviewed):** the load-bearing diagnosis — **the professional miss is FLATNESS**; five prior pieces lived in the 2D-shader/TOP-composite lane, TD's lowest ceiling, and **"professional" = light + depth + atmosphere on real procedural 3D.** Hence the medium fork to POP-native lit-3D. **Non-arrival becomes a render setting** — attenuated light + (coming) fog eat the far end so a reveal is un-renderable. **Verdict on the skeleton: bones read (a corridor receding to black) but SOFT** — the payoff is ribs (legibility / forward-motion / per-ring phase), fog (kills the transparent far-hole), and light shaping, not the bare tube.
 
 ---
 

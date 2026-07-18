@@ -167,3 +167,35 @@ If Nick ever moves off Non-Commercial:
 - **Educational** if enrolled — identical to Pro for output.
 
 No upgrade removes the Mac-specific platform constraints (Metal translation, sensor support, geometry shader gap). Those are platform, not license.
+
+---
+
+## 11. Verified M1 Render-Feature Matrix (live-tested 2026-07-17, build **2025.32820**)
+
+Empirically confirmed by building a lit 3D scene in TD on M1 Metal and inspecting output
+(screenshot + numeric depth sampling). Source: WOBAR corridor Phase 0. **Note the build:
+2025.32820**, newer than this file's §-frontmatter 2025.32460 — Nick's TD updated. These
+rows are the "does it actually render on Metal" answers the doc-research could not give.
+
+| Feature | M1 Metal status | Notes / gotchas |
+|---------|-----------------|-----------------|
+| **Soft shadows** (`lightCOMP.shadowtype='soft2d'`) | ✅ **WORKS** | Real soft penumbra, not black, not hard-only. Requires light `lookat` the caster + tightened light FOV (shadow map renders from light POV). `hard2d` is the fallback. |
+| Direct lighting (cone/point/distant) | ✅ WORKS | `lightCOMP` `cr/cg/cb` (not colorr/g/b), `dimmer`, `lighttype`. |
+| **phongMAT** | ✅ WORKS | Diffuse pars `diffr/diffg/diffb` (NOT `diffuser`). Native `shadowstrength` + `shadowcolorr/g/b`. |
+| **pbrMAT** | ✅ WORKS | Both dielectric (metallic 0) lit by direct light AND metallic (0.9) reflecting env. **No black silhouette** — the 2021 bug was Intel/pre-Vulkan. Pars: `basecolorr/g/b`, `metallic`, `roughness`, `emitr/g/b`. |
+| **Depth TOP** | ✅ WORKS | Opaque geo → valid varying depth (sampled: geo <1.0, empty bg =1.0). ⚠️ Perspective depth is non-linear — near=0.1/far=200 crushes all to ~0.99. **Tighten far plane (≈28)** for usable precision. `depthTOP.par.op`=renderTOP, `depthspace='cameraspace'`/`'reranged'`. Transparent/instanced geo still gives flat depth (see §7 / debug log) — keep DOF/fog geo opaque. |
+| **Environment Light / IBL** | ✅ WORKS | Metallic surface reflects env map. Type = `environmentlightCOMP`. Keep `envlightmapprefilter='off'` (`automatic` ≈ 142 ms/frame on M1). Add to `renderTOP.par.lights` beside the key light. |
+| **Bloom TOP** | ✅ NATIVE | Don't hand-build. `output='inputplusbloom'`, `bloomthreshold`, `bloomintensity`, `min/maxbloomradius`. |
+| 1280×1280 render + `aa8` antialias | ✅ WORKS | Clean edges. NC cap is 1280/axis (§2). |
+| MSAA `aa16`/`aa32` | ⚠️ Apple GPUs cap at 8× | `renderTOP.par.antialias` exposes aa16/aa32 that Metal can't do — cap at `aa8`. (aa8-vs-4x exact drop not yet confirmed.) |
+| Geometry-shader nodes | ❌ dead/black | Established (§1, §7). No line-expansion / GS particle MATs. |
+| POPs on macOS | ⚠️ works but unstable | A POPs crash can hang the Mac graphics driver → reboot. Atomic Float, double-precision attrs, HW ray-tracing unsupported for POPs on macOS. Save often. |
+| Hardware ray tracing | ❌ unsupported on macOS | — |
+
+**Not native on any platform (build, don't expect a node):**
+- **Depth of field** — no native Render TOP DOF param. Build from Depth TOP (✅ above) + Blur/Luma Blur, or GLSL bokeh. Depth TOP is the linchpin: DOF *and* depth-fog both ride it.
+- **Volumetric fog / god rays** — no native volume node. Depth-driven fog rides the Depth TOP; true shafts = raymarched GLSL.
+
+**Net:** every feature a lit, atmospheric procedural corridor structurally needs — real
+light, soft shadow, PBR, IBL reflection, valid depth (→ fog + DOF), bloom — is confirmed
+working on M1 Metal at 2025.32820.
