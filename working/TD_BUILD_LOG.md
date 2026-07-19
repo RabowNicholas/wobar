@@ -1,7 +1,7 @@
 ---
 title: TouchDesigner Build Log
 version: 1.1
-last_updated: 2026-07-17 (corridor Phase 0/1 build entry added)
+last_updated: 2026-07-18 (vector-void wireframe visualizer + HDR post entry added)
 status: live
 scope: Session-by-session log of AI-assisted TD builds (recent sessions; older sessions in TD_BUILD_LOG_ARCHIVE.md). Used to identify recurring corrections and promote them to rules in WOBAR_TD_AGENT_RULES.md.
 dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
@@ -10,6 +10,38 @@ dependencies: [[reference/WOBAR_TD_AGENT_RULES]]
 # TD BUILD LOG
 
 One entry per build session. Newest at top. This is the feedback loop — patterns that repeat here become rules.
+
+---
+
+## 2026-07-18 — VECTOR-VOID low-poly wireframe visualizer (Act 2, kekkai) — full pipeline + HDR post; aesthetic direction VALIDATED
+
+**Context:** new aesthetic direction — **"vector-void"**: low-poly wireframe on true black, the early-80s **vector/Battlezone/Elite** register (explicitly NOT synthwave/outrun — that's the nostalgia-cheese vector). Conceptual pressure-test + sound-coherence check against Nick's deep-dubstep (kekkai, Act 2) came FIRST, validated it as home-viable, then built the first test visualizer. Built in `NewProject` (build **2025.32820**), Nick saved as `touchdesigner/networks/low_poly_sphere/kekkai_low_poly.toe`.
+
+**What was built — `/project1/vv_test` (ctrl_master = the wrapper root itself, `parentshortcut='Ctrl'`, Controls/Audio/Post pages; every op reads `parent.Ctrl.par.X`):**
+- **Form:** `sphereSOP` (type `poly`, low-res) → `noiseSOP` displace (sub-driven) → `wireframeMAT` (`wireframemode='tesselated'`). *No native icosphere — real one deferred to Blender.*
+- **Tumble:** 3-axis INTEGRATED rotation — `constantCHOP` (3 ch, per-axis speeds 5/8/3) → `speedCHOP` → geo rx/ry/rz. Different rates = real tumble not top-spin. Energy scales all as a multiplier (ratios preserved).
+- **Audio** (base_audio tox → `null_audio` 8 signals): `sub_bass`→noise displace amp (÷1.1 clamp); `energy`→rotation multiplier + feedback swirl (`xform_trail.rz`) + trail length (exp-curve gate on `level_trail.opacity`, `Trailcurve` shapes low→0). Master-driven pattern: manual gain + LIVE driven par on the master, op reads the live par.
+- **Color:** white wireframe × single muted color via `hsvadjustTOP` `hueoffset`; **tempo-locked hue drift** `(me.time.seconds*(Bpm/60)/Huebeats*360)%360` — full muted-psych spectrum, one cycle / 4 bars @140, timeline-synced, **timer-only (audio dropped from color per Nick)**.
+- **Feedback trail:** black-seed loop, `fb.par.top='comp1'`, energy-driven length.
+- **HDR post chain (all rgba16float):** `bloom` (subtle) → `glslTOP` [**ACES tonemap + radial chromatic aberration + vignette**, uniforms via color-page vec4] → `grade` (Level, `outhigh 0.8` = **no pure white** per §4) → **grain** (`randomgpu` 16mm, seed=`absTime.frame`) → `post_out`.
+
+**First-pass-right:** full pre-build reading (index → debug log → 1126-line bootstrap) before first op. Master-driven arch from the start. Integrated rotation (speedCHOP) — avoided the absTime×variable-speed angle-jump (magnetize rule held). Feedback canonical wiring. No-pure-white grade (§4). HDR float pipeline. Non-commercial 1280 respected (720×1280 portrait).
+
+**Corrections / new gotchas (tracker candidates — log to TD_CLAUDE_DEBUG_LOG in next promotion pass):**
+- **`compositeTOP` stray `par.tops` drops a wired input — RECURRED 2×.** comp1 kept losing `input[1]` (trail bg) whenever I rewired `input[0]`; a non-empty `par.tops` ("None") competes with wired inputs. **Fix: clear `par.tops=''` after any compositeTOP rewire.** Rule-0-class recurrence.
+- **ParMode flip: assigning `par.val` AFTER `par.expr` reverts mode to CONSTANT** (expr preserved but inactive → live value silently frozen). Hit 2×. **Set `.expr`/`.mode` LAST; never assign `.val` after.**
+- **glslTOP color/const uniform not bound at first cook → uniform defaults 0, NO error/warn.** `uParams` exposure read 0 → `aces(col*0)` = **pure black output, silent**. Fix: ensure `seq.color.numBlocks≥1` and (re)set `color0name/rgb*` — const-page count par is unreliable (stuck at 0). Verify a uniform by outputting it as color.
+- **`noiseTOP type 'sparse' is CPU — 89ms/cook, fps 60→15.** §5's "sparse" grain spec is a real-time trap. **Use `randomgpu`** (GPU, and *better* film grain — uncorrelated per-pixel) with `seed=absTime.frame` for temporal. → update §5.
+- **`audio_in` relative path breaks on Save-As** — `project.folder` moved to the repo, relative `Music/wobar/...` failed silently (0 chans → cascaded errors on every audio expr). Use **absolute path for external audio**, or keep audio in the project tree.
+- **`hsvadjustTOP` `hueoffset` is 0–360, not 0–1** (full-wheel needs ×360).
+- **`sphereSOP` has NO icosphere/geodesic type** (prim/poly/mesh/nurbs/bezier only) — low-poly icosphere needs Blender import.
+- **exec-server nested-func scope trap recurred again** (`ensure()` helper) — known; pass outer vars as args.
+
+**WOBAR craft (Nick-reviewed — the real lessons):**
+- **Vector-void VALIDATED against the deep-dubstep sound** — coherent at the *structural* level, not just mood: sparse-sub-+-space ≈ wireframe-+-void (same figure-ground); the 3-versions convergence maps to render layers (wireframe=Future/blueprint, sub=Present/body, phosphor-decay+grain=Wounded/hauntology). **Emotional read: sinking / submerged / hypnotized / haunted — Act 2 DESCENSION core, brushing Act 3 at the drops.**
+- **RESTRAINT IS THE BRAND — proven twice this session.** Bloom bright→cyan REJECTED (muted held); strong CA reads as "glitch filter" (soulless) vs subtle CA = "haunted analog lens" (felt). The soul is in the restraint. Same family as figurative-cheese.
+- Muted single-color + tempo hue-drift chosen over positional spectrum (Nick rejected spectrum). "Full muted psychedelics" = drift the WHOLE wheel, muted, on the tempo grid.
+- **Open sharpen notes:** bias hue drift to the COOL half (full spectrum dilutes the Act-2 ID — teal/petrol/dusk is unmistakable, amber/green weakens it); real icosphere via Blender; CA default lower (~0.35). Transient signal still UNMAPPED (candidate: transient→vertex bristle/snap).
 
 ---
 
