@@ -100,26 +100,48 @@ face** (WORLD §7.4 — faceless-intimate).
 - *Example:* "kekkai came out of not wanting to talk to anyone for a while. if you've
   had that kind of month, it's for that."
 
-### DEEP — the source (void poems, the Passage)
-The deepest lore in the world. Rare — roughly one Passage per Portal EP. Wobar's voice,
-transmitting down from outside time (WORLD §7). The one register with **figurative
-license** — the cosmology may breathe.
-- **Voice (derived from Nick's real poems):**
+### DEEP — the source (WORLD §7). Two modes.
+The deepest voice — Wobar transmitting down from outside time. The one register with
+**figurative license** (the cosmology may breathe). It has **two distinct modes**;
+confusing them is a known trap (2026-07-21 — wander fragments were first written in
+Passage voice and came out as narrative nature poems, wrong).
+
+**Mode A — the PASSAGE** *(Nick-authored; not generated for him)*
+The bound, per-EP written body. Narrative void poems, first-person, personal, sealed
+with the **mark**. Derived from Nick's real poems:
   1. **Inhabit a natural form and speak AS it** — a dying tree, two trees in a desert.
-     Not describing the cosmology; *becoming* a piece of it. (Wobar is all-forms, Axis
-     2 — the voice wears a concrete mask.) This is the anti-woo mechanism.
-  2. **Plain, never clever.** Flat declaratives. Weight from the *situation*, not the
-     phrasing. ("soon i will fall and be no more.")
-  3. **Elemental imagery carries the cosmology.** darkness, wind, rot, earth, roots.
-     The huge ideas arrive through things you can touch. No jargon, ever.
+     Not describing the cosmology; *becoming* a piece of it. Anti-woo mechanism.
+  2. **Plain, never clever.** Weight from the *situation*, not the phrasing.
+  3. **Elemental imagery carries the cosmology** — darkness, wind, rot, earth, roots.
   4. **Cyclical / returning.** Bookend and repeat, the way the music loops.
-  5. **The lexicon is native, not bolted on** ("wandered the ether," "past life").
-  6. **Heavy toward giving, love, gratitude** — the Core Tension lived, not stated.
-  7. **Never instructs.** The reader just finds themselves in the form. Empower-never-
-     instruct happens automatically because the voice isn't talking *to* you.
-  8. **Lowercase, humble, breath-punctuated.**
-- **The Passage** = the void poems for one Portal EP, bound and durable, sealed with the
-  **mark** (WORLD §7). The world's written body.
+  5. **Lexicon native, not bolted on** ("wandered the ether," "past life").
+  6. **Heavy toward giving, love, gratitude** — the Core Tension lived.
+  7. **Never instructs; lowercase, humble, breath-punctuated.**
+Anchor: *"i sway in the wind more than i ever have before… soon i will fall and be no
+more."* This mode is **Nick's personal verse — do not generate it for him.**
+
+**Mode B — WANDER fragments** *(the terminal's `wander` path; generatable brand copy)*
+Short belief-mirrors a Wanderer stumbles on in the void — **downloads**, not poems.
+Their job: **describe the void and the belief system so a reader identifies with the
+brand.** Calling cards. A mirror, not a scene.
+  1. **Philosophical / abstract — NOT a natural-form narrative.** Mode B does *not*
+     inhabit a tree. It states a truth about the interior.
+  2. **Second-person or impersonal** ("you," "the void," "the drop") — mirror-facing.
+     (Passage is first-person "i"; wander is "you.")
+  3. **A paradox that resolves into recognition.** The reader reads it and thinks
+     *that's me.* (Anchor: *"the darkness is the only place where you can see yourself
+     fully"* — poem 1, "blind." This is the wander model, NOT the tree poems.)
+  4. **Rooted in a specific BRAND belief**, rendered figuratively — never explained as
+     doctrine (§8), never instructed (no "you should," no "come to me"), never reached
+     (Law 0 — cut any line performing profundity / fortune-cookie).
+  5. **Plain, lowercase, short** — one breath to a few lines. A set of them, read
+     together, teaches the whole belief system.
+  6. Served **raw** — no title, no daemon framing. The world speaking, not the daemon.
+The starter wander pool (30 fragments, mapped to the 8 beliefs + the cosmology) lives
+with the terminal build; grow it there. Examples: *"the way out is further in. it was
+always further in."* (no escape) · *"you are not one person. you are every version you
+could have been, standing in the same dark."* (Axis 2) · *"nothing found you by
+accident. not the track. not the dark. not this."* (synchronicity).
 
 ---
 

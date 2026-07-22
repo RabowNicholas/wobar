@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-06-10
+last_updated: 2026-07-21
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,38 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## WOBAR Visual Identity — corridor spine RETIRED → vector-void ADOPTED (whole-brand)
+
+**Closed:** 2026-07-21 — Nick's call: the visual-identity *decision* is done; the wireframe-void world is locked as THE identity (`WOBAR_VISUAL_RESET.md` v1.0). Future builds are tracked as their own build loops, not under an identity loop. This entry absorbs three former ACTIVE loops — the corridor-spine "Visual Design System Reset," the "Corridor Build" POP-3D execution track, and the "Vector-Void" adoption loop.
+
+**What it was:** A months-long arc to replace a visual system that read "competent but generic." The diagnosis (v0.2, 2026-07-14): the gap was never craft or palette — the vault held a world in words with zero pixels it committed to. The first replacement was **the corridor spine**: the visualizer as a *rendering of a concept* — the corridor is the *artifact* of 3D perception failing to render a higher dimension (Nick: *"my limited understanding of higher dimensions trying to resolve it"*), from which **non-arrival is structural**, **the drop is maximum failure not arrival**, **stable→collapse→snap-back**, and the **superposition mechanic** (N copies of one corridor, no SDF booleans, weights equalizing — proven in `prototypes/corridor/corridor_v5_superposition.html`) all followed. Execution then forked from raymarched-glslTOP to **POP-native lit 3D** (the "Corridor Build" loop): Phase 0 verified the full M1-Metal feature matrix (soft2d shadows, phongMAT/pbrMAT, Depth TOP, IBL, Bloom — promoted to `TD_APPLE_SILICON.md §11`), Phase 1 built a `tubePOP` corridor skeleton in `NewProject_v1.toe` that read but landed **SOFT**.
+
+**Why the corridor was retired (2026-07-21, Nick):** you can't render the void — the void is empty (WORLD §2); non-resolving impossible geometry is unbuildable and unwatchable; concept-first was heavy and kept producing v0s. **Rulings:** drop the corridor mechanism entirely (non-arrival, drop-as-failure, collapse loop, superposition, never-resolve law, tesseract ban — all retired); resolving/arrival now permitted.
+
+**What replaced it — vector-void, the wireframe-void world:** not a rendering of a concept but *a world with its own physics* — **low-poly wireframe forms in true black, muted-psychedelic, naturally empty, one contrasting focal element** = the mirror-object, at any depth up to and including the center. The medium literally *is* the belief: wireframe (edges/no surface) = facelessness + Axis-1 "uncollapsed"; low-poly = blueprint = the source (Axis 2); black = the Chamber; muted-not-vivid = NO ESCAPE; simplicity = the tightrope. Whole-brand, all five acts (act = element behavior + palette temp + layer mix). First build shipped: `kekkai_low_poly.toe` (Act 2).
+
+**Load-bearing side-decision — WORLD §8 amended:** struck "never reveal the Mirror as a literal object"; the center **may be SHOWN, never EXPLAINED** — wide (any surface), register-gated (abstract/figurative only, never plain doctrine, never instruction). This is what let the focal element *be* the center.
+
+**What survives it:** `WOBAR_VISUAL_RESET.md` v1.0 (governing) + `WOBAR_GRAMMAR.md` (the shared root it derives from). **G2 (the mark)** CLOSED — line-based, sits at the center. **C1 (OBSCURA)** CLOSED — its reflection-geometry is vector-void's cousin. The retired corridor doctrine lives in git (`git show 1b7afaa:working/WOBAR_VISUAL_RESET.md`); the corridor sketches, `tunnel_oxidized`, and `corridor_v1` stay on disk as rig-building history. The verified M1-Metal matrix (`TD_APPLE_SILICON.md §11`) is valid TD technique regardless of the art direction that spawned it.
+
+---
+
+## Copy + Cross-Modal Grammar Reset — doctrine SHIPPED
+
+**Closed:** 2026-07-21 — Nick's call: the doctrine is done. The cross-modal grammar + COPY v2.0 are written and the voice stack is locked. Remaining work is *transmission* (first Passage, first glimpses, bio swap, growing the daemon/wander banks) and proceeds untracked or under existing build/release loops — no dedicated loop opened.
+
+**What it was:** The copy review that became a whole-world unification. Diagnosis: COPY (v1.1) and SONIC (v1.1) both predated the cosmology (dated 2026-06-10, parented to BRAND/FRAMEWORK not WORLD) — same stale-parent problem the visual system had. The deeper issue Nick named: *"all the pieces should work together — that's the big disjoint,"* i.e. visual/copy/sound each derived from WORLD independently, never from each other.
+
+**What was built:** **`WOBAR_GRAMMAR.md` v1.0** — the shared root: **Law 0 (ground it, let depth emerge, NEVER reach** — every cheese-vector is a form of reaching: clever/vivid/woo/maximalist/mystique/meaning-wink; clarified *never reach ≠ never peak*, earned Act-4 catharsis allowed) + the **six-law × three-surface table** (Law 6 three-versions engine runs audio+visual only, forcing it on copy was rejected) + the **mirror principle** (dual-valid, "mirrors all the way in," the tightrope is the *engine* of dual-validity not a restriction) + the **utility-floor exemption** + the **§8 register-gate**. **`WOBAR_COPY.md` → v2.0:** two axes — **register** (the 4-voice stack) × **act** (emotional weather, per EMOTIONAL_REGISTER). The stack, all calibrated with real signal: **LIGHT** (seen-world; temps A scene-casual + B sensory chosen, C eerie & D meaning-wink rejected as "reaching"; plain-not-clever, depth emerges), **DAEMON** (a *process*; lowercase/terse/terminal-native + Socratic deflection + dry deadpan; deflect-grounded-in-process-metaphor-deadpan; the anti-guru guardrail as a character; authored deflection bank, AI routes never free-writes — lowercase + wit level approved by Nick), **JOURNAL/glimpses** (Nick honest, mirror-not-spotlight), **SOURCE** — split into **two modes**: *Passage* (narrative void poems, inhabit-a-natural-form, first-person, calibrated off Nick's 3 real tree poems — **Nick-authored, never generated for him**) and *Wander* (philosophical belief-mirrors / calling cards, second-person, model = poem 1 "blind" — generatable brand copy). Plus register-scoped anti-vocab (source register has figurative license — Nick's poem uses "past life"), the 4th **Mirror Test**, EPK-vs-world-facing bio split. **SONIC re-parented** v1.2. **VISUAL_RESET** given the grammar pointer.
+
+**Deliverables produced:** a starter **daemon deflection bank** (in COPY) and a **30-fragment wander pool** (belief-mirrors covering the whole belief system, handed to the terminal build). A separate Claude Code session builds the daemon — pointed at `WEB_HOME_SPEC §daemon`, `COPY §daemon + §wander`, `GRAMMAR Law 0`, `WORLD §8/§6.4/§9`.
+
+**Key learnings / kills:** the **"reach vs emerge"** keystone (Law 0) emerged from Nick's A/B-vs-C/D caption choices and unifies every modality. The **three-version engine does NOT run in copy** (tested, rejected). The **Passage/Wander confusion is a named trap** — wander fragments were first written in Passage voice and came out as narrative nature poems (wrong); the fix is documented in COPY's DEEP register. **Six holes Nick surfaced were all fixed into the docs** before writing: act-axis, utility-floor, bio-split, anti-vocab register-scoping, Law-0-vs-catharsis, daemon-lines-are-authored-copy.
+
+**What survives it:** `WOBAR_GRAMMAR.md`, `WOBAR_COPY.md` v2.0, `WOBAR_SONIC.md` v1.2 (all live/governing). Memories: `project_wobar_grammar_voicestack`, `reference_wobar_center_may_be_shown`. The transmission ship-debt (first Passage, glimpses, bio swap) is real and unclosed — flagged in the brand take, now owned by whoever picks up the release/terminal work.
 
 ---
 
