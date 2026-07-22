@@ -27,8 +27,9 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[reference/WOBAR_BRAND]] | /reference | Foundation, mission, archetypes, beliefs, positioning | locked |
 | [[reference/WOBAR_WORLD]] | /reference | World mechanics — ground truth, geography, 3-version cycle, two-axis entity/the source, sacred, lexicon (Mirror/seeing/Wanderer/the Ether/glimpses/the Passage/the mark/the daemon), the Ether content model + void poems, Surfaces of the World §7.5 | live (v0.6 draft) |
 | [[reference/WOBAR_FRAMEWORK]] | /reference | 5-Act Portal Framework, act definitions, percentages | locked |
-| [[reference/WOBAR_COPY]] | /reference | Voice, lexicon, anti-vocabulary, writing tests | locked |
-| [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning | locked |
+| [[reference/WOBAR_GRAMMAR]] | /reference | **The cross-modal grammar — the shared root beneath visual, copy, sound.** Law 0 (ground it, let depth emerge, never reach) + the six-law × three-surface table + the mirror principle + the utility-floor + the §8 register-gate. VISUAL_RESET/COPY/SONIC all derive from it. Read to keep the three surfaces one world | live (v1.0 — governing) |
+| [[reference/WOBAR_COPY]] | /reference | **v2.0** — the mirror spine, the 4-register voice stack (light/daemon/journal/source), the act axis, the utility floor, reconciled lexicon, register-scoped anti-vocab, the 4 tests, the daemon deflection bank, EPK+world-facing bios. Derives from GRAMMAR | live (v2.0 — governing) |
+| [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning; re-parented to GRAMMAR (v1.2) | locked |
 | [[reference/WOBAR_CONTENT]] | /reference | Content system, release architecture, posting | locked |
 | [[reference/WOBAR_ARCHIVE]] | /reference | Archive sourcing by act, portal depth, pipeline | locked |
 | [[reference/WOBAR_CLAUDE]] | /reference | How to work with Nick | locked |

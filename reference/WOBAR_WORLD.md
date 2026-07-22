@@ -1,7 +1,7 @@
 ---
 title: Wobar World Mechanics
-version: 0.6 (web home = a terminal you wander, guided by the daemon; teardown ongoing)
-last_updated: 2026-07-03
+version: 0.6 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained)
+last_updated: 2026-07-21
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]]
@@ -367,9 +367,19 @@ stated plainly, the world cheapens.
   are ever surfaced *as doctrine*. They live only as their psychological
   translations (§0.2, §1). The **one exception** is the void poems, which may
   render them figuratively, as verse (§7).
-- **Never reveal the Mirror as a literal object.** It is only ever *approached*,
-  never shown or explained. The moment it's depicted as a thing, it stops being
-  the reflection.
+- **The center may be revealed — but only ever *shown*, never *explained*.**
+  *(Amended 2026-07-21. The prior rule — "never reveal the Mirror as a literal
+  object; the moment it's depicted it stops being the reflection" — is struck. It
+  conflated depicting with explaining.)* The Mirror, the center, the cosmology may
+  be **revealed on any surface in any abstract/figurative register** — image
+  (wireframe), verse (the void poems), sound (a piece that *arrives*), glyph (the
+  mark). An abstract form is not an answer; you still project onto it, so it stays
+  the reflection. Mystery is held by keeping the center **art, never sermon** — not
+  by hiding it. What stays forbidden is the **plain doctrinal register**: prose
+  that states the cosmology as literal fact or instruction. This generalizes the
+  void-poem exception in bullet 1: *reveal freely in the art-register, never in the
+  doctrine-register.* (The guru line below is unaffected — the center may be shown,
+  never handed to you as the answer you lacked.)
 - **Never name shadow-sight.** The capacity to see another's shadow/ego is never
   claimed or described. It shows up only as the *quality* of the work, never as
   a stated power.

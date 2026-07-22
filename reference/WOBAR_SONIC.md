@@ -1,13 +1,21 @@
 ---
 title: Wobar Sonic Identity
-version: 1.1
-last_updated: 2026-06-10
+version: 1.2 (re-parented to the grammar — the sound is one surface of one world)
+last_updated: 2026-07-21
 status: locked
 scope: Sonic identity, reference artists, anti-references, genre positioning.
-dependencies: [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
+dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 ---
 
 # WOBAR SONIC IDENTITY
+
+> **Derives from `[[WOBAR_GRAMMAR]]`.** The sound is one surface of one world (with
+> image and word). The grammar's laws render here as: **Law 0** (ground it, let depth
+> emerge, never reach → sub+space not maximalist; "reveals what you've been holding,"
+> never dictates the feeling; earned peaks, never faked spectacle) · **void + one
+> element** (space + one heavy sub) · **the element is a mirror** ("does it point
+> inward") · **the three-version engine in sound** (below). The audio was always
+> closest to the world — this file just names it against the shared root.
 
 ## The Wobar Sound
 Psychedelic because the sound always points inward. Experimental because the three versions decide what's needed — not genre convention. Bass is the constant vehicle because it reaches the body before the mind catches up.
