@@ -35,6 +35,7 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[reference/WOBAR_CLAUDE]] | /reference | How to work with Nick | locked |
 | [[reference/WOBAR_PATCH_SYSTEM]] | /reference | Serum 2 patch naming, 8-macro standard, versioning | locked |
 | [[reference/WOBAR_OBSCURA]] | /reference | Obscura visual identity and reference system | locked |
+| [[reference/WOBAR_YOUTUBE]] | /reference | YouTube description system — fold rules, chapter/tracklist requirements, links/CTA order, hashtags, the Wobar template; utility floor + light register. Derives from COPY | live (v1.0 — governing) |
 
 ### TouchDesigner — Entry Point
 | File | Location | Scope | Status |
