@@ -68,6 +68,7 @@ wobar/touchdesigner/networks/
 | sa_1 | /project1 (Act 3 ENCOUNTER — crease_sa Rorschach attractor, no wrapping baseCOMP) |
 | crease_veil | /project1/crease_veil (Act 3 ENCOUNTER — latex-veil; entities press/shine through translucent skin) |
 | tunnel_oxidized | /project1 (no wrapping baseCOMP) — visual-reset first build; glslTOP polar material tunnel, Act 2 DESCENSION affinity |
+| vector_rings | /project1 (no wrapping baseCOMP) — vector-void prototype; 40 lineMAT circles instanced on a circle, render spine + black void |
 
 Add a row here whenever a new network is created.
 

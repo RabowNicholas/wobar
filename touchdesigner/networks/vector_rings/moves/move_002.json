@@ -1,0 +1,22 @@
+{
+  "label": "black background — void_black constantTOP + comp_void compositeTOP between null_render and null_out; repaired lineMAT color expressions that never flipped to EXPRESSION mode",
+  "timestamp": "2026-07-24T23:41:25Z",
+  "network": "vector_rings",
+  "operations": [
+    { "type": "create_node", "path": "/project1/void_black", "before": null },
+    { "type": "create_node", "path": "/project1/comp_void", "before": null },
+
+    { "type": "disconnect", "from": "/project1/null_render", "to": "/project1/null_out", "input_index": 0, "before": "/project1/null_render" },
+    { "type": "connect", "from": "/project1/void_black", "to": "/project1/comp_void", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/null_render", "to": "/project1/comp_void", "input_index": 1, "before": null },
+    { "type": "connect", "from": "/project1/comp_void", "to": "/project1/null_out", "input_index": 0, "before": "/project1/null_render" },
+
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorr", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorg", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorb", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorr", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorg", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorb", "before": 1.0 }
+  ],
+  "notes": "The six line1 color pars were left in ParMode.CONSTANT with val 1.0 after move_001 — assigning .expr on an RGBA-tuplet member does NOT auto-flip mode the way it does on scalar pars. Repaired here by setting .mode = ParMode.EXPRESSION explicitly. Undo should restore mode=CONSTANT val=1.0."
+}

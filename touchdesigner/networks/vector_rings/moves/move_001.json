@@ -1,0 +1,27 @@
+{
+  "label": "render spine — cam_main + render_main (720x1280, rgba16float, 8x MSAA) + null_render + null_out + ctrl_master (Camera/Form pages), bound to cam and lineMAT",
+  "timestamp": "2026-07-24T23:41:25Z",
+  "network": "vector_rings",
+  "operations": [
+    { "type": "create_node", "path": "/project1/ctrl_master", "before": null },
+    { "type": "create_node", "path": "/project1/cam_main", "before": null },
+    { "type": "create_node", "path": "/project1/render_main", "before": null },
+    { "type": "create_node", "path": "/project1/null_render", "before": null },
+    { "type": "create_node", "path": "/project1/null_out", "before": null },
+
+    { "type": "connect", "from": "/project1/render_main", "to": "/project1/null_render", "input_index": 0, "before": null },
+    { "type": "connect", "from": "/project1/null_render", "to": "/project1/null_out", "input_index": 0, "before": null },
+
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "widthnear", "before": 4.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "widthfar", "before": 2.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorr", "before": 0.8 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorg", "before": 0.8 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearcolorb", "before": 0.8 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linenearalpha", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "specifylinefarcolor", "before": true },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorr", "before": 0.3 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorg", "before": 0.3 },
+    { "type": "set_parameter", "path": "/project1/line1", "parameter": "linefarcolorb", "before": 0.3 }
+  ],
+  "notes": "All line1 parameters above were changed from CONSTANT to EXPRESSION mode referencing op('ctrl_master'). Undo must restore mode=CONSTANT with the listed before values. A base_post COMP (19 children) was created and destroyed within this same move at Nick's instruction — net zero, intentionally not recorded so undo does not resurrect it."
+}
