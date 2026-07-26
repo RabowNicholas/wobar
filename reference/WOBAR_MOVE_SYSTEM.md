@@ -69,6 +69,7 @@ wobar/touchdesigner/networks/
 | crease_veil | /project1/crease_veil (Act 3 ENCOUNTER — latex-veil; entities press/shine through translucent skin) |
 | tunnel_oxidized | /project1 (no wrapping baseCOMP) — visual-reset first build; glslTOP polar material tunnel, Act 2 DESCENSION affinity |
 | vector_rings | /project1 (no wrapping baseCOMP) — vector-void prototype; 40 lineMAT circles instanced on a circle, render spine + black void |
+| low_poly_sphere | /project1/vv_test (in `kekkai_low_poly.toe`) — vector-void wireframe icosphere; feedback trail + CA/glow/grain post, `Ctrl` parentshortcut on the wrapper |
 
 Add a row here whenever a new network is created.
 

@@ -1,0 +1,51 @@
+{
+  "label": "revive feedback trail + organize vv_test (rename, layout, dead-DAT cleanup, relative audio refs)",
+  "timestamp": "2026-07-26T00:09:30Z",
+  "network": "low_poly_sphere",
+  "operations": [
+    { "type": "set_parameter", "path": "/project1/vv_test/out", "parameter": "name", "before": "out" },
+    { "type": "set_parameter", "path": "/project1/vv_test/post_out", "parameter": "name", "before": "post_out" },
+    { "type": "set_parameter", "path": "/project1/vv_test/comp1", "parameter": "name", "before": "comp1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/feedback1", "parameter": "name", "before": "feedback1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/render1", "parameter": "name", "before": "render1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/cam1", "parameter": "name", "before": "cam1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/light1", "parameter": "name", "before": "light1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/grade", "parameter": "name", "before": "grade" },
+
+    { "type": "set_parameter", "path": "/project1/vv_test/feedback_trail", "parameter": "top", "before": "comp1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/render_wire", "parameter": "camera", "before": "cam1" },
+    { "type": "set_parameter", "path": "/project1/vv_test/render_wire", "parameter": "geometry", "before": "geo_ico" },
+    { "type": "set_parameter", "path": "/project1/vv_test/render_wire", "parameter": "lights", "before": "light1" },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "opviewer", "before": "./out1" },
+
+    { "type": "set_parameter", "path": "/project1/vv_test/level_trail", "parameter": "opacity", "before": "0.0 (ParMode.CONSTANT)" },
+    { "type": "set_parameter", "path": "/project1/vv_test/level_trail", "parameter": "outhigh", "before": "1.0 (ParMode.CONSTANT)" },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Trailfloor", "before": 0.0 },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Traillength", "before": 1.1 },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Trailcurve", "before": 1.0 },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Trailgate", "before": 0.0 },
+
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Subdisp", "before": "tdu.clamp(op('/project1/base_audio/null_audio')['sub_bass']/1.1, 0, 1) * me.par.Subgain" },
+    { "type": "set_parameter", "path": "/project1/vv_test", "parameter": "Energy", "before": "op('/project1/base_audio/null_audio')['energy']" },
+
+    { "type": "set_parameter", "path": "/project1/vv_test/glsl_ca", "parameter": "computedat", "before": "glsl_ca_compute" },
+    { "type": "set_parameter", "path": "/project1/vv_test/glsl_tone", "parameter": "computedat", "before": "glsl_tone_compute" },
+
+    { "type": "delete_node", "path": "/project1/vv_test/glsl_ca_pixel", "before": { "type": "textDAT", "nodeX": 0, "nodeY": -120, "text": "\n// Example Pixel Shader\n\n// uniform float exampleUniform;\n\nout vec4 fragColor;\nvoid main()\n{\n\t// vec4 color = texture(sTD2DInputs[0], vUV.st);\n\tvec4 color = vec4(1.0);\n\tfragColor = TDOutputSwizzle(color);\n}\n", "connections": "none (standalone)" } },
+    { "type": "delete_node", "path": "/project1/vv_test/glsl_tone_pixel", "before": { "type": "textDAT", "nodeX": 0, "nodeY": -120, "text": "identical TD boilerplate pixel-shader template (see glsl_ca_pixel)", "connections": "none (standalone)" } },
+    { "type": "delete_node", "path": "/project1/vv_test/glsl_ca_compute", "before": { "type": "textDAT", "nodeX": 320, "nodeY": -120, "text": "// Example Compute Shader\n\n// uniform float exampleUniform;\n\nlayout (local_size_x = 8, local_size_y = 8) in;\nvoid main()\n{\n\tvec4 color;\n\t//color = texelFetch(sTD2DInputs[0], ivec2(gl_GlobalInvocationID.xy), 0);\n\tcolor = vec4(1.0);\n\tTDImageStoreOutput(0, gl_GlobalInvocationID, color);\n}\n", "connections": "none (standalone)" } },
+    { "type": "delete_node", "path": "/project1/vv_test/glsl_tone_compute", "before": { "type": "textDAT", "nodeX": 320, "nodeY": -120, "text": "identical TD boilerplate compute-shader template (see glsl_ca_compute)", "connections": "none (standalone)" } },
+
+    { "type": "set_parameter", "path": "/project1/vv_test/*", "parameter": "nodeX/nodeY (layout pass, 33 ops)", "before": {
+      "out": [950, 0], "cam1": [0, 160], "comp1": [525, 0], "grade": [1250, 0], "light1": [0, 320],
+      "geo_ico": [0, 0], "glsl_ca": [1500, 0], "render1": [250, 0], "bg_black": [700, -200],
+      "col_flat": [250, -260], "mat_wire": [0, -160], "post_out": [1720, 0], "blur_glow": [1600, -140],
+      "col_shift": [330, -260], "comp_glow": [1720, -40], "feedback1": [500, 200], "glsl_tone": [1150, 0],
+      "levelglow": [1660, -140], "res_grain": [1690, -260], "bloom_post": [1100, 0], "blur_grain": [1430, -260],
+      "color_mult": [400, 0], "comp_final": [780, 0], "comp_grain": [1560, 0], "render_out": [1900, 0],
+      "spin_angle": [160, 400], "spin_speed": [0, 400], "level_grain": [1560, -260], "level_trail": [900, 200],
+      "noise_grain": [1300, -260], "xform_trail": [700, 200], "glsl_ca_frag": [1500, -180],
+      "glsl_ca_info": [160, -120], "glsl_tone_frag": [1150, -180], "glsl_tone_info": [160, -120]
+    } }
+  ]
+}
