@@ -56,8 +56,28 @@ Permanently non-monetisable, permanently off DSPs. **Budget as pure marketing.**
 
 Unproven — no published response rates exist anywhere. Near-free. **Has no exclusivity cost:** the same track can sit with 15 DJs and 7 labels simultaneously without burning the reserve. The Flow State booking relationships are the asset almost nobody at this tier has.
 
-> **The structure that matters: B, C and D all feed A. A is the only exit.**
+### E — Reddit & community. ONE AT A TIME.
+`real exchange → relationship → listen → follow`
+
+Added 2026-07-27. Conversation-native, no algorithm dependency, and the stated currency — **feedback and production help** — is a value exchange Nick can actually supply. Low volume, high conversion, slow. Plan: [[working/WOBAR_REDDIT_PLAN]].
+
+> **The structure that matters: B, C, D and E all feed A. A is the only exit.**
 > Everything else is routing. When in doubt about where effort goes, ask which funnel it feeds and whether that funnel exits.
+
+### The owned layer — beneath the funnels, not beside them
+
+Funnels A–E all run on **rented land**. The owned layer is where a relationship survives a platform change.
+
+**Currently empty.** Two pieces, and they do different jobs:
+
+| | Job | Cost | Status |
+|---|---|---|---|
+| **Spotify follow** | **Scale.** Guaranteed Release Radar *eligibility* every release — a compounding floor. **Not** guaranteed delivery: one slot in a 30-track weekly playlist shared with every artist they follow | free | **unused — the CTA doesn't ask for it** |
+| **SMS — the Mirror** | **Depth.** 1:1, uncontested, and the only channel with a reply path. Carries unreleased music and functions as a taste-bar instrument | ~$50/mo + 10DLC | **un-parked 2026-07-27**, blocked on carrier approval |
+
+Not substitutes. At 26 monthly listeners the Spotify floor is guaranteed and effectively empty — it compounds *later*. Depth is the layer that does anything this year.
+
+**Acquisition model for the Mirror:** the door lives quietly in existing copy; searchers find it, everyone else is invited personally. **~40 right people, not volume.** Passive placement is texture; personal invitation is the mechanism — see [[working/MIRROR_THRESHOLD_SPEC]] §0 (door copy locked there, not here).
 
 ---
 

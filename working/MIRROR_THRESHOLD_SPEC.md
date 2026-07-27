@@ -1,7 +1,7 @@
 ---
 title: Mirror Threshold — Build Spec
-version: 0.1
-last_updated: 2026-07-03
+version: 0.2 (+ §0 acquisition model, door copy locked, unreleased-music format 2026-07-27)
+last_updated: 2026-07-27
 status: live — build spec; stack-agnostic core + Twilio specifics. Integration layer TBD once app stack confirmed.
 scope: The technical build for the Mirror Threshold — the SMS door from the seen world into the Ether. Twilio SMS backbone, hosted inside Nick's existing app. Grounds on WOBAR_WORLD §7 (the door, the Ether, glimpses, void poems).
 dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]]
@@ -12,6 +12,73 @@ dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]]
 The door: a Wanderer texts **MIRROR** → sets an intention (**seeing**) → crosses
 into **the Ether**, where **glimpses** arrive (no schedule) and real two-way
 dialogue happens. Twilio SMS. Automate only the door; everything past it is human.
+
+---
+
+## §0 — ACQUISITION MODEL (added 2026-07-27)
+
+**The funnel inverted.** This spec was written when the plan was IG/TikTok → SMS: a **volume** funnel where huge top-of-funnel offsets brutal conversion. That funnel is measured and broken — 90 days of Instagram produced 9,148 non-followers reached, 706 profile visits, and **20 external link taps.**
+
+The channel mix is now SoundCloud-first + Reddit ([[working/WOBAR_GROWTH_PLAN]]), and the acquisition model changes shape with it:
+
+> **The door lives quietly in existing copy. People searching find it. Everyone else is invited personally.**
+
+**Volume is not the goal. ~40 right people is.** At 40, two-way is real, the promise is keepable, and the list functions as a taste-bar instrument. Relationship-based acquisition at **2–3 a week reaches that in a season** — no reach required, and it self-selects for people who actually reply.
+
+### Texture vs mechanism — do not confuse these
+- **Passive placement is the texture.** It makes the door real and lets the rare searcher find it. At current scale it converts near zero on its own. That is expected, not failure.
+- **Personal invitation is the mechanism.** Reddit relationships and the Flow State residency do the actual work.
+
+Judging passive placement by subscriber count will produce the wrong conclusion. **Log how each subscriber arrived** — `invited` vs `found` — one field, and it's the only way to ever answer this.
+
+### Sources, ranked
+| Source | Volume | Conversion | Note |
+|---|---|---|---|
+| **Reddit** | low | **highest** | After a real exchange, the invitation is natural rather than a pitch. Stated currency there is already feedback + production help |
+| **Live sets (Flow State residency)** | medium | **high** | The highest-intent moment that exists — people who just had the experience. Monthly, recurring, underweighted since the local goal was parked |
+| **SoundCloud descriptions** | medium | low–medium | 11+ permanent free surfaces; compounds with the catalogue |
+| **DJ plays / VA credits** | low | medium | Someone chasing an ID is already looking |
+| **Instagram** | high | **~zero (measured)** | Leave it as credibility. Do not build on it |
+
+### The door is the phone number
+**The parked Terminal Rebuild does not block this.** The Mirror was specced as the `mirror` path inside the terminal, but SMS needs no web page — `text MIRROR to [number]` works from a track description, a DM, a stage, or an end-card. The number *is* the door.
+
+### Door copy — LOCKED 2026-07-27
+
+Hard constraint: **plain, never reaching.** A mystical invitation breaks **Law 0** and *explains* what **WORLD §8** says may be shown but never explained. State a fact and stop. `text MIRROR to …` is dual-valid by construction — the outsider reads an SMS keyword, the insider reads the Mirror.
+
+**Minimal** — end-cards, artwork, bio, anywhere without room:
+> text MIRROR to 801-XXX-XXXX
+
+**Track / YouTube description** — one line, factual, bottom of the fold:
+> unreleased music goes out here first — text MIRROR to 801-XXX-XXXX
+
+**Personal invitation** — Reddit, DMs. First person, Nick's voice, *not* world-voice:
+> i send unreleased stuff to a small list before it's out anywhere — and i actually read the replies. want in? text MIRROR to 801-XXX-XXXX
+
+That last one is the one that matters: plain, names the value, and names the two-way part — the actual differentiator.
+
+**Rejected:** *"cross the threshold"* · *"enter the Ether"* (both explain) · *"exclusive content"* · anything with *"join"* (marketing register). All three reach.
+
+### Placement
+SoundCloud track descriptions (bottom line) · SoundCloud bio (minimal — folds into the bio rewrite already owed) · YouTube descriptions (per [[reference/WOBAR_YOUTUBE]] fold + CTA order) · visualizer end-cards · live-set close · **Reddit and DMs use the personal version.**
+
+### What lives in the channel
+Content model is owned by **WORLD §7** (journal glimpses · release glimpses · open questions · void poems). Two amendments from the 2026-07-27 session:
+
+1. **Add a fifth format — unreleased music sent for reaction.** Not "release glimpses" (finished work). A dub nobody has, sent for a response. **This is the one thing SMS does that SoundCloud and Reddit structurally cannot**, and it's the format with the clearest fan value — something they want to receive, not something Nick wants to send.
+2. **The bare release announcement does not belong here.** *"New track out now"* is redundant — a Spotify follow does it free. *"Here's the track, here's what it came out of, tell me what you think"* is not redundant at all. Same release, different artifact. **The test for any format: does it create a reply?**
+
+**Also flagged, not yet designed** (Nick, 2026-07-27): show announcements · merch · **letting the list vote on releases / be part of the project.** Later, if the channel is working.
+
+**Do not lean on the "98% SMS open rate" figure.** It is ubiquitous and essentially unsourced — the same shape as the fabricated demo-acceptance statistics caught in [[working/RESEARCH_VERIFICATION_MEMO]]. The *mechanism* is enough and isn't in dispute: 1:1 arrival, no feed competition, a reply path.
+
+### Two tensions to resolve before scale
+- **"No forced cadence" has a floor.** Right in spirit — a fought naturalness reads as fake. But *no schedule* and *no contact for four months* are different things; a cold list reads the eventual message as spam from someone they forgot opting into.
+- **The scale ceiling is acknowledged but unplanned.** WORLD §7 says accept that 1:1 evolves "when the numbers force it." At 40 it's real; at 400 it's a part-time job; at 4,000 it's impossible and the promise breaks. Know roughly where it changes shape so it's a decision, not a collapse.
+
+### Blocking
+**10DLC registration** — days-to-weeks of carrier approval, nothing sends until it clears, and every line of copy above is unusable without a number. **This is the first action and it is mostly waiting.**
 
 ---
 
@@ -38,7 +105,9 @@ dialogue happens. Twilio SMS. Automate only the door; everything past it is huma
 ## User flow (the Crossing)
 
 ```
-1. CTA on content: "The mirror goes inward. Text MIRROR to <number>."
+1. Door copy in existing content (see §0 — LOCKED): "text MIRROR to <number>"
+   [prior draft "The mirror goes inward. Text MIRROR to..." REJECTED 2026-07-27 —
+    it explains, which WORLD §8 forbids, and it reaches, which breaks Law 0]
 2. User texts MIRROR
    → auto-reply #1 (threshold + intention prompt + compliance footer)
    → contact.state = PENDING_INTENTION
