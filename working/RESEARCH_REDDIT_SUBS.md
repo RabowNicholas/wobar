@@ -1,150 +1,209 @@
 ---
-title: Reddit Subreddit Landscape — Bass / 140
-version: 1.0
+title: Reddit Subreddit Landscape — Bass / 140 / Fan + Festival
+version: 2.0
 created: 2026-07-27
 last_updated: 2026-07-27
-status: raw research output — for manual review by Nick
-scope: Comprehensive discovery of bass/140-relevant subreddits. Sizes and descriptions only. NO RULES PULLED — Nick reviews self-promo policy manually per sub.
-method_note: Two independent sweeps (vocabulary + empirical artist-location). All data from live Reddit API calls in-browser, 2026-07-27. Nothing from memory or search summaries.
+status: raw research output — for manual review and curation by Nick
+scope: Discovery + activity measurement of bass/140 genre subs AND artist/festival fan subs. Sizes, activity, engagement. NO RULES PULLED — Nick reviews self-promo policy manually per sub.
+supersedes: v1.0 (genre-only discovery, no activity data)
+method_note: Three sweeps, all from live Reddit API calls in-browser, 2026-07-27. Nothing from memory or search summaries.
 dependencies: [[working/WOBAR_REDDIT_PLAN]], [[working/WOBAR_GROWTH_PLAN]]
 ---
 
-# REDDIT SUBS — BASS / 140
+# REDDIT SUBS — BASS / 140 / FAN + FESTIVAL
 
 ## Method
 
-**Sweep 1 — vocabulary.** 24 queries against Reddit's subreddit search: dubstep · deep dubstep · 140 bpm · riddim · tearout · bass music · wonky · halftime bass · uk bass · grime · future garage · dark bass · experimental bass · brostep · bass production · dubstep production · dubstep feedback · bass music festival · sound design serum · edm production feedback · trap bass · glitch hop · bass heads · subwoofer bass music. → **987 raw subreddits.**
+**Sweep 1 — genre vocabulary.** 24 bass/140 queries → 987 raw subreddits.
 
-**Sweep 2 — empirical (where the lane actually gets posted).** Full-text post search on 24 lane artists and labels, tallying which subreddits the results live in: Tape B · Phrva · flozone · STVSH · blurrd vzn · Gunpoint · OkayJake · Acyan · dêtre · cozy kev · ISEEU · DAGGZ · Distinct Motive · Hamdi · Of The Trees · Shlump · Wakaan · Deadbeats · Wormhole · Duploc · Deep Dark & Dangerous · Jadū Dala · Subtronics · Boogie T. → **614 subreddits touched, 112 hit by ≥2 different artists.**
+**Sweep 2 — empirical artist location.** Post search on 24 lane artists/labels, tallying which subs their posts appear in → 614 subs touched, 112 hit by ≥2 artists.
 
-Two artists returned zero results: **ISEEU** and **Shlump** (as queried). **dêtre** returned only 8 posts.
+**Sweep 3 — artist + festival targeted (new in v2.0).** 24 queries on bass artists and festivals: Excision · Lost Lands · Wakaan · Shambhala · Electric Forest · Bass Canyon · Subtronics · Zeds Dead · Rezz · Of The Trees · CloZee · Ganja White Night · Liquid Stranger · Svdden Death · Peekaboo · Space Jesus · Ivy Lab · GRiZ · Tipper · bass music festival · dubstep festival · bass camping festival · headbangers · Rampage → **691 subs, 126 relevant at ≥500 members.**
 
-**Filter.** Strict bass/140 name-or-description match, or ≥2 artist hits, minus obvious noise. → **179 live subreddits below.**
+**Activity measurement.** 100 most recent posts pulled per sub: posts in last 7 days, median comments on the 25 newest, days since last post. **150 of 168 measured** before the API rate limit locked out; 18 unmeasured, listed at the end.
 
 ## Column key
-`HITS` = number of the 24 lane artists/labels whose posts appeared in that sub. **This is the most useful column** — it measures where your audience demonstrably already is, rather than where a genre keyword suggests they should be.
-`P` = public · `r` = restricted (approval needed to post).
+`P/wk` — posts in the last 7 days. **`>100` means the 100-post API window was entirely inside 7 days — a floor, not a count.**
+`Med` — median comments on the 25 most recent posts. **See the confound warning below before using this column.**
+`Last` — days since the most recent post.
 
 ---
 
-## Tier 1 — highest artist-hit density
+## ⚠ CONFOUND — read before using the Med column
 
-| Sub | Members | Type | Hits |
-|---|---|---|---|
-| **r/dubstep** | 242,030 | P | **19** |
-| **r/SpaceBass** | 36,414 | P | **16** |
-| **r/EDM** | 3,042,339 | P | 13 |
-| **r/trap** | 162,691 | P | 12 |
-| **r/LostLandsMusicFest** | 50,960 | P | 11 |
-| **r/aves** | 571,577 | P | 10 |
-| **r/electronicmusic** | 2,654,313 | P | 9 |
-| **r/realdubstep** | 49,262 | P | 6 |
-| **r/LightningInABottle** | 20,419 | P | 6 |
-| **r/treemusic** | 52,084 | P | 5 |
-| **r/riddim** | 29,617 | P | 5 |
-| **r/DenverEDM** | 10,708 | P | 5 |
-| **r/EverySongOnReddit** | 861 | r | 5 |
-| **r/hiphopheads** | 5,452,786 | P | 4 |
-| **r/ElectricForest** | 112,131 | P | 4 |
-| **r/Tipper** | 26,793 | P | 4 |
-| **r/Shambhala** | 25,717 | P | 4 |
-| **r/ZedsDeadFam** | 10,559 | P | 4 |
-| **r/Wakaan** | 8,186 | P | 4 |
-| **r/SevenStarsFest** | 6,729 | P | 4 |
-| **r/audiofeel** | 498 | r | 4 |
-| r/DnB | 303,489 | P | 3 |
-| r/festivals | 219,540 | P | 3 |
-| r/bonnaroo | 128,869 | P | 3 |
-| r/edmproduction | 810,333 | P | 3 |
-| r/prettylights | 25,458 | P | 3 |
-| r/BassCanyon | 10,173 | P | 3 |
-| r/BassmentCollective | 145 | P | 3 |
+Median comments is measured on the **newest** 25 posts, so post age varies with sub volume. In a sub posting >100/week those 25 posts are a few hours old and haven't accumulated comments yet. In a sub posting 25/week they span the full week.
 
-**r/SpaceBass is the find.** Its own description: *"Genre Defying Bass. Share weird bass music, production techniques…"* — 36,414 members, second-highest artist-hit count of any sub on Reddit, and the stated remit is dark/weird/genre-defying bass. That is the centre of mass of your set described back to you. It did not appear anywhere in the previous research pass.
+**This biases the Med column downward for high-volume subs.** The festival-vs-genre gap below is real but partly manufactured by the method. Do not treat it as a clean measurement.
+
+To fix it: re-sample sorted by top-of-month instead of newest. I have not done this.
+
+Flagging it because the same class of error — a size-biased metric used to rank — already caused a bad recommendation earlier in this session.
 
 ---
 
-## Tier 2 — genre subs, no artist hits (vocabulary sweep)
+## The signal anyway
 
-| Sub | Members | Type |
+Even discounted for the confound, the gap is large:
+
+| | Posts/wk | Median comments |
 |---|---|---|
-| r/grime | 139,748 | P |
-| r/futuregarage | 18,209 | P |
-| r/chillstep | 14,342 | P |
-| r/futurebass | 14,396 | **r** |
-| r/futurefunkairlines | 10,974 | P |
-| r/NeuroFunk | 6,988 | P |
-| r/shallowhouse | 5,408 | P |
-| r/Glitchhop | 5,336 | P |
-| r/GrimeInstrumentals | 4,584 | P |
-| r/bassmusic | 4,491 | P (2 hits) |
-| r/Brostep | 4,130 | **r** |
-| r/bassheavy | 3,898 | P (2 hits) |
-| r/grimeproduction | 3,617 | P |
-| r/drumstep | 3,555 | P |
-| **r/DubstepProduction** | 3,340 | P |
-| r/bassmusicproduction | 3,207 | **r** |
-| r/HalftimeDnB | 2,718 | P |
-| r/rlgrime | 2,240 | P |
-| r/liquiddnbproduction | 2,043 | P |
-| r/darkdnb | 1,998 | P |
-| r/RiddimRyder | 1,747 | P |
-| r/Spacegrime | 1,476 | **r** |
-| r/HypeTracks | 1,465 | **r** (2 hits) |
-| r/ukbass | 1,427 | P |
-| r/FutureGarageClassics | 1,332 | P |
-| **r/DubstepFeedback** | **1,309** | P |
-| r/RiddimDubstep | 1,047 | **r** |
-| r/deepdubstep | 1,009 | P |
-| r/MelodicDubstep | 944 | P |
-| r/RealDubstepProducers | 902 | P |
+| r/EDM | >100 | **0** |
+| r/riddim | 80 | **0** |
+| r/trap | 49 | **0** |
+| r/musicfestivals | 22 | **0** |
+| r/dubstep | >100 | 7 |
+| r/LostLandsMusicFest | 33 | **14** |
+| r/ElectricForest | 25 | **15** |
+| r/hulaween | 9 | **14** |
+| r/BassCoast | 7 | **14** |
+| r/RiotFest | 9 | **16** |
 
-**r/DubstepFeedback exists — 1,309 members, public.** This resolves the UNVERIFIED item in `WOBAR_REDDIT_PLAN` §1. r/DubstepProduction's Rule 1 redirects there; the earlier lookup failed on capitalisation.
+**Genre and music-posting subs run at 0–2 median comments. Festival and artist-fan subs run at 6–16.** Music subs are drop boxes — people post links and leave. Festival subs are conversations.
+
+That supports the instinct behind this pass. Post a track in r/riddim and the median outcome is zero replies. Say something in r/ElectricForest and people talk back.
 
 ---
 
-## Tier 3 — scene, festival and artist-fan subs
+## Tier A — fan and festival subs, live (the fan lane)
 
-| Sub | Members | Type | Hits |
-|---|---|---|---|
-| r/DJs | 311,769 | P | 2 |
-| r/Coachella | 257,043 | P | 3 |
-| r/electricdaisycarnival | 173,338 | P | 2 |
-| r/avesNYC | 102,469 | P | 2 |
-| r/avesLA | 38,007 | P | 2 |
-| r/bassnectar | 38,005 | **r** | 2 |
-| r/SoundSystem | 36,536 | P | 2 |
-| r/chicagoEDM | 29,521 | P | 2 |
-| r/chicagomusicscene | 26,035 | P | 2 |
-| r/hulaween | 22,264 | P | 2 |
-| r/TorontoRaves | 19,992 | P | 2 |
-| r/Firehouse | 15,439 | P | 2 |
-| r/ElementsMusicFestival | 13,612 | P | 2 |
-| r/Subtronics | 12,742 | P | 1 |
-| r/Wubaholics | 30 | P | 1 |
+| Sub | Members | P/wk | Med | Last |
+|---|---|---|---|---|
+| **r/Shambhala** | 25,717 | >100 | 2 | 0d |
+| **r/festivals** | 219,541 | >100 | 2 | 0d |
+| **r/aves** | 571,578 | >100 | 3 | 0d |
+| **r/avesNYC** | 102,470 | >100 | 7 | 0d |
+| **r/kandi** | 59,363 | >100 | 3 | 0d |
+| r/veld | 5,707 | 83 | 4 | 0d |
+| r/ElementsMusicFestival | 13,612 | 78 | 5 | 0d |
+| r/BoomtownFestival | 19,347 | 68 | 6 | 0d |
+| **r/avesLA** | 38,008 | 61 | 4 | 0d |
+| r/nnmfestival | 1,825 | 50 | 5 | 1d |
+| **r/ZedsDeadFam** | 10,559 | 46 | 2 | 0d |
+| r/Coachella | 257,043 | 46 | 5 | 0d |
+| r/OutsideLands | 30,931 | 45 | 6 | 0d |
+| **r/BassCanyon** | 10,174 | 39 | 6 | 1d |
+| **r/DenverEDM** | 10,709 | 38 | 2 | 0d |
+| **r/LostLandsMusicFest** | 50,960 | 33 | **14** | 0d |
+| r/chicagoEDM | 29,522 | 33 | 2 | 0d |
+| r/readingfestival | 14,601 | 29 | 1 | 0d |
+| r/FOVfestival | 1,259 | 28 | 6 | 0d |
+| r/HardFestival | 9,347 | 26 | 6 | 0d |
+| **r/ElectricForest** | 112,131 | 25 | **15** | 0d |
+| r/musicfestivals | 30,067 | 22 | 0 | 0d |
+| **r/prettylights** | 25,458 | 22 | **10** | 0d |
+| r/TorontoRaves | 19,992 | 19 | 6 | 0d |
+| **r/Tipper** | 26,793 | 19 | **8** | 0d |
+| r/atlantaedm | 18,861 | 18 | 1 | 0d |
+| r/creamfields | 5,281 | 16 | 4 | 0d |
+| r/electricdaisycarnival | 173,339 | 15 | **10** | 0d |
+| r/aclfestival | 38,844 | 14 | **10** | 0d |
+| r/NCMF | 3,517 | 13 | 0 | 1d |
+| r/BassVI | 11,867 | 13 | 6 | 0d |
+| r/RiotFest | 24,483 | 9 | **16** | 1d |
+| r/hulaween | 22,265 | 9 | **14** | 3d |
+| r/ARCMusicFestival | 9,167 | 8 | 9 | 0d |
+| **r/griz** | 23,015 | 8 | 6 | 1d |
+| **r/BassCoast** | 2,298 | 7 | **14** | 2d |
+| **r/SevenStarsFest** | 6,729 | 7 | 7 | 1d |
+| **r/Subtronics** | 12,742 | 6 | 3 | 1d |
+| **r/ofthetrees** | 2,060 | 6 | 3 | 2d |
+| **r/LightningInABottle** | 20,419 | 5 | 8 | 2d |
+| r/rollingloudfestival | 23,063 | 4 | 7 | 2d |
+| r/Dancefestopia | 4,230 | 4 | 4 | 1d |
+| r/ssbdfest | 1,155 | 4 | 3 | 0d |
+| r/glastonbury_festival | 82,276 | 3 | **12** | 4d |
+| r/MovementDEMF | 9,146 | 3 | 4 | 1d |
+| **r/Excision** | 12,691 | 3 | 2 | 2d |
+| **r/Wakaan** | 8,186 | 3 | 7 | 1d |
+| r/UMF | 36,433 | 2 | 6 | 0d |
+| r/BigEarsMusicFestival | 1,282 | 2 | 6 | 1d |
+| r/roskildefestival | 10,810 | 2 | **29** | 4d |
+| **r/SvddenDeath** | 3,626 | 2 | **10** | 4d |
+| r/ImagineMusicFestival | 6,445 | 1 | 2 | 6d |
+| r/ForbiddenKingdomFest | 5,332 | 1 | 5 | 0d |
+| **r/Rezz** | 8,135 | 1 | 7 | 6d |
+| **r/CloZee** | 3,412 | 1 | 7 | 6d |
+| **r/ganjawhitenight** | 3,098 | 1 | 4 | 6d |
+| r/BassCollector | 1,538 | 1 | 1 | 4d |
+| r/escapademf | 1,311 | 1 | 6 | 6d |
+| r/Rampagefestival | 1,206 | 1 | 4 | 3d |
+| r/PembertonFestival | 1,492 | 1 | 3 | 3d |
+| r/Magfest | 9,580 | 1 | 0 | 2d |
+| r/zedsdead | 896 | 1 | 0 | 0d |
 
 ---
 
-## Tier 4 — micro subs, lane-correct (<1,000 members)
+## Tier B — genre / production subs, live (the promo + craft lane)
 
-r/bassheads 719 **r** · r/midtempo 694 · r/minimaldnb 687 · r/TearoutDubstep 648 **r** · r/DubstepandSimilar 410 **r** · r/futureriddim 356 · r/deepbass 339 **r** · r/GrimeAcapellas 330 · r/ColorBass 314 **r** · r/AvantGrime 304 · r/riddimproduction 299 **r** · r/lovestep 290 · r/WorldBass 262 · r/dubstep_circlejerk 257 · r/truedubstep 251 · r/Opiuo 249 · r/speakersandsubs 234 · r/SinoGrime 221 · r/dubchestral 211 · r/Junglist247 211 · r/HardDubstep 183 · r/BayAreaBass 166 (1 hit) · r/AnythingBass 161 · r/subbass 149 **r** · r/DubstepMemes 144 · r/WeHateTheWonkyQuartet 135 **r** · r/realriddim 117 **r** · r/bassmusicnetwork 116 **r** · r/real_dubstep 110 **r** · r/JungleBells 107 · r/dmvdubstep 97 · r/grimestonerecords 94 · r/melodicwubstep 93 **r** · r/DubRebellion 90 · r/forthemusicheads 90 **r** · r/DubstepSongs 89 · r/deepdnb 87 **r** · r/glitch_hop 85 **r** · r/FL_Studio_Dubstep 84 **r** · r/weirdbass 81 **r** · r/DubstepVinylCollector 76 · r/UKBassMusic 75 · r/wompworthy 75 · r/robostep 68 **r** · r/darkbass 61 · r/ragehouse 61 · r/Wonky 52 · r/dubstepallthethings 51 **r** · r/8BitDubstep 50 **r** · r/DnBGooDVibeS 50 · r/ThatGrime 48 **r** · r/grimecode 46 **r** · r/femaledubstep 43 · r/ScreamStep 40 **r** · r/bassmusicianmag 39 **r** · r/RealGrime 38 **r** · r/FreeFormBass 38 **r** · r/melbourne_dubstep 37 · r/GoodBadWonky 35 **r** · r/Dubsteptechno 34 **r** · r/electronicbassmusic 34 · r/dubstepcirclejerk 28 · r/futureclub 27 · r/LessThan3 20 **r** · r/bassheadsunited 18 · r/GrimeMusic 17 **r** · r/Grimenx 17 · r/grimeage2 16 · r/Tearout 6 **r**
+| Sub | Members | P/wk | Med | Last |
+|---|---|---|---|---|
+| **r/dubstep** | 242,031 | >100 | 7 | 0d |
+| **r/EDM** | 3,042,342 | >100 | **0** | 0d |
+| **r/DnB** | 303,491 | >100 | 3 | 0d |
+| **r/grime** | 139,748 | 86 | 1 | 0d |
+| **r/riddim** | 29,618 | 80 | **0** | 0d |
+| **r/realdubstep** | 49,262 | 61 | 1 | 0d |
+| **r/edmproduction** | 810,335 | 59 | **9** | 0d |
+| **r/trap** | 162,691 | 49 | **0** | 0d |
+| **r/SpaceBass** | 36,414 | 47 | 1 | 0d |
+| r/liquiddnb | 15,852 | 15 | 0 | 0d |
+| **r/DubstepFeedback** | 1,309 | 15 | 0 | 1d |
+| r/NeuroFunk | 6,988 | 12 | 0 | 0d |
+| **r/DubstepProduction** | 3,340 | 11 | 3 | 1d |
+| r/basslessons | 21,474 | 9 | 0 | 0d |
+| r/bassmusic | 4,491 | 7 | 0 | 1d |
+| r/GrimeInstrumentals | 4,584 | 7 | 1 | 1d |
+| r/chillstep | 14,342 | 3 | 0 | 2d |
+| r/Glitchhop | 5,336 | 3 | 0 | 0d |
+| r/HalftimeDnB | 2,718 | 1 | 0 | 1d |
+| r/RealDubstepProducers | 902 | 1 | 0 | 7d |
+| r/deepdubstep | 1,009 | 1 | 0 | 1d |
+| r/futureriddim | 356 | 1 | 0 | 3d |
+
+**r/edmproduction is the only music-craft sub with real discussion** — 59 posts/week at median 9 comments. Everything else in this tier is a link dump.
+
+**r/DubstepFeedback is alive** (15 posts/week) but median 0 comments — people post, nobody replies. That is either a dead-on-arrival sub or a wide-open opportunity, depending on whether you're the one replying.
+
+---
+
+## Tier C — dead or dormant (0 posts in 7 days)
+
+Do not invest in these regardless of member count.
+
+**Long dead:** r/grizzlyfi 1619d · r/bassmusicproduction **1073d** · r/LostlandsCampingTIPS 842d · r/paradisofestival 620d · r/Grizzy 406d · r/OregonEclipse 394d · r/bassnectar **233d** · r/cyclopsarmy 200d · r/lockn 186d · r/Ultramusicfestival 180d · r/electriczoo 148d · r/wakarusa 130d
+
+**Seasonal / dormant:** r/MoonriseMusicFestival 82d · r/SunsetMusicFestival 70d · r/HangoutFest 67d · r/liquidstranger 64d · r/summercampfest 54d · r/RiddimDubstep 52d · r/Wakaanfest 50d · r/Sasquatch 40d · r/FireflyFestival 39d · r/solfest 31d · r/ravememes 31d · r/stagecoach 30d · r/HiJinxFest 21d · r/resonatesuwannee 21d · **r/futuregarage 17d** · r/meredithmusicfestival 13d · r/BeyondWonderland 11d · r/scamp 10d · r/okeechobeemusicfest 9d
+
+27 more dead subs not listed individually.
+
+**Note: r/bassmusicproduction — 3,207 members, last post 1,073 days ago.** It appeared healthy on member count alone in v1.0. This is why the activity pass mattered.
+
+---
+
+## Unmeasured — 18 subs, rate limit hit
+
+r/treemusic · r/electronicmusic · r/DJs · r/ukbass · r/UKBassMusic · r/darkbass · r/Wonky · r/midtempo · r/drumstep · r/subbass · r/bassheavy · r/WorldBass · r/AnythingBass · r/electronicbassmusic · r/wompworthy · r/grimeproduction · r/darkdnb · (1 more)
+
+**r/treemusic (52,084 members, 5 artist hits) is still uncharacterised** — flagged as unknown in v1.0 and still unknown.
 
 ---
 
 ## Noise excluded (documented so it isn't re-derived)
 
-- **"grime" queries are ~50% Grimes the artist.** r/Grimes 80,872 · r/grimezs 8,954 · r/GrimesTheArtist · r/GrimesIowa · r/grimesai · r/GrimesUncensored · r/grimeszs · r/Grimesart · r/grimespolkadotbag · r/grimesupgood · r/GrimesMusic · r/grimerica · r/grimezsz. All excluded.
-- **Generic-word artist names polluted Sweep 2.** "Tape B", "DAGGZ", "Boogie T" and "Distinct Motive" matched r/nba, r/movies, r/Superstonk, r/AITAH, r/BestofRedditorUpdates, r/leagueoflegends and similar. Excluded by music-relevance filter.
-- **NSFW rave subs surfaced from festival queries:** r/RaveNSFW 180,853 · r/festivalslutsgonewild 142,267 · r/ravebabes 26,055. Sized here for completeness only.
-- Other non-music noise removed: r/CrapCad, r/PhreeX, r/G1logic, r/MartianConquest, r/cursedmiis, r/badanimalanatomy, r/sparepartsdogs, r/fuckthatfont, r/ruinedjokes, r/EnoughBucketheadSpam, r/lafufucult, r/technocirclejerk, r/knwherefest, r/PalmTreeMusicFestival, r/itsTonyHoliday, r/ChikaPH.
+- **"GRiZ" matched grizzly bears and Memphis Grizzlies:** r/memphisgrizzlies 264,858 · r/GrizzlyBear · r/grizzlyfi · r/Grizzy · r/Grizzzy · r/grizzlybears.
+- **"bass" matched instruments:** r/doublebass 20,080 · r/basslessons 21,474 · r/BassVI 11,867 (kept in tables above — verify before use; these are bass **guitar** subs).
+- **NSFW rave subs surfaced from festival queries:** r/FestivalSlut 70,624 · r/ravebooty 66,753 · r/festivalslutsover30 · r/INDYRaversandSwingers. Sized only.
+- **r/bindingofisaac** 451,860 — matched on an unrelated term.
+- **"grime" queries are ~50% Grimes the artist** — 13 subs excluded (see v1.0).
 
 ---
 
-## Gaps — what this sweep did not do
+## Gaps
 
-1. **No rules pulled.** By instruction. Self-promo policy is unknown for every sub here except the eight already verified in `WOBAR_REDDIT_PLAN` §1.
-2. **No activity measurement.** Member count says nothing about whether a sub is alive. Several 1k–5k subs may be dormant. Check "posts this week" before committing to any of them.
-3. **Sweep 2 only searched post titles and bodies, sorted by relevance, capped at 100 results per artist.** A sub where your lane is discussed rarely but meaningfully would be missed.
-4. **No sidebar/related-community crawl was run** — that was the third planned angle and would likely surface another 20–40 subs the search index doesn't rank.
-5. **Restricted subs (`r`) were not tested for whether approval is obtainable.** Some restrict posting only; some restrict everything.
-6. Reddit rate-limits the JSON API at roughly 60 requests before a multi-minute cooldown. Any re-run needs pacing.
+1. **No rules pulled for any sub** — by instruction.
+2. **Med column is confounded by post age** — see warning above. Needs an age-controlled re-sample to be trustworthy.
+3. **18 subs unmeasured**, including r/treemusic.
+4. **Sidebar / related-community crawl still not run** — the one discovery angle never executed. Would likely surface another 20–40.
+5. **Listener-vs-producer skew not measured.** Inferred from sub identity, not from post content.
+6. **Restricted subs not tested** for whether posting approval is obtainable.
+7. Reddit rate-limits at roughly 60–150 API calls before a multi-minute lockout. Budget for it.

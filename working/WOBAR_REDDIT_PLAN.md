@@ -14,7 +14,7 @@ evidence_standard: Layer A only. Every subscriber count and rule below was read 
 ## Locked inputs (Nick, 2026-07-27)
 | | |
 |---|---|
-| Account | Aged account, rebranded to **Wobar** |
+| Account | 🔴 **CORRECTED 2026-07-27 — NOT an aged account.** Verified in-browser: `u/WobarMusic` is **0 days old, 1 karma, 0 followers, "Newcomer" badge**, no bio, no links, default avatar. The plan was written assuming history that does not exist. **Consequence: karma/age gates on target subs will silently filter posts — check each sub before Lane A.** The plan's own Lane B-first sequencing (weeks of feedback, zero links) happens to be exactly right for a new account, so the strategy survives; only the premise was wrong |
 | Time | Not a constraint |
 | Currency | **Music feedback + production/sound-design help** |
 | Win metric | **SoundCloud followers** (baseline 55) |

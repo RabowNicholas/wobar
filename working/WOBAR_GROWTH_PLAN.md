@@ -29,7 +29,7 @@ Used throughout. After adversarial verification found 9 of 10 load-bearing claim
 ## Starting position (2026-07-26)
 | | |
 |---|---|
-| Spotify monthly listeners | **26** |
+| Spotify monthly listeners | **22** *(verified in-browser 2026-07-27; was recorded as 26 on 2026-07-26 — it moves, so treat any single reading as a snapshot)* |
 | SoundCloud followers | **55** (11 tracks, newest 196 plays) |
 | Instagram followers | **400** (101 posts, 116,070 views/90d) |
 | Label releases | **0** — all self-released |

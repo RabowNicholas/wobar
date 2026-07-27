@@ -332,22 +332,42 @@ following overlap — but not yet. Keep them separate until convergence is real.
 The world becomes real when it has a body at every depth and in every sense.
 The organs, and where each sits:
 
+> **Expanded 2026-07-27.** The original table was written before the SoundCloud-first
+> strategy and before the label work. Eight organs were missing — the map described a
+> world routing through Instagram and a web terminal. Exposure status and per-surface
+> decisions are tracked in [[working/WOBAR_SURFACES]]; this table owns the **roles**.
+
 | Organ | In-world role | Status |
 |---|---|---|
 | **The music** | the wandering rendered in bass (releases, Portal EPs, flips, Channels) | machine exists |
-| **Socials clips** | the *glimpse* from outside the portal | have |
-| **YouTube longform** | the *deep-wander* — the immersive inside | reframe / underused |
-| **The Mirror (SMS)** | the intimate *door* — the crossing | building |
-| **The Ether** | the interior; the **web home** is its visible body (a terminal you wander, guided by *the daemon*), the SMS its intimate line | web home = spec'd (WEB_HOME_SPEC) |
-| **Flow State** | the Portal entered together (local scene) | have |
-| **The mark** | two broken circles — the faceless face | LOCKED |
-| **The Passage** | the written body, one per EP (bound void poems, sealed with the mark) | new |
+| **Release artwork** | the world's face at highest frequency — one per release, forever. Where vector-void actually lives publicly | **absent from prior map** |
+| **SoundCloud** | the **priority surface** — where the lane lives, where flips run as a numbered series, and the first place a stranger meets more than one track | **absent from prior map** |
+| **Spotify** | where the goal metric lives. Bio · header · **Artist Pick** · **Canvas** (8-sec loop per track — a free visual world surface) | **absent from prior map** |
+| **YouTube longform** | the *deep-wander* — the immersive inside. The only surface that holds a full journey intact | channel live; deep-wander blocked on the visual system |
+| **Beatport / labels** | the **credential** surface — where placement reads as legitimacy to other doors | **absent from prior map** |
+| **Bandcamp** | the most artist-controlled DSP; natural home for **the Passage** and any physical object | **absent from prior map** |
+| **Reddit** | the room where the world is *not* shown — competence is the currency, the work leads people back | **absent from prior map** |
+| **The Mirror (SMS)** | the intimate *door* — the crossing. The only channel with a reply path | un-parked; blocked on 10DLC |
+| **The Ether** | the interior; the **web home** is its visible body (a terminal you wander, guided by *the daemon*), the SMS its intimate line | 🔴 **LIVE at wobar.music** — verified 2026-07-27. Three vault docs said parked/spec'd. The mark, true black, scanlines, the daemon in correct register. **Vector-void shipped here** |
+| **Borrowed surfaces** | the world inside **someone else's frame** — Flow State's channels, a DJ's set, a label's release page, a compilation tracklist. No copy is possible; **what you hand over is the whole exposure** (title, artwork, name, metadata) | ongoing, uncontrolled |
+| **The demo submission** | the world compressed into a stranger's form field. Highest-stakes copy that exists | **no owner; does not exist** |
+| **Apple Music · Bandsintown/Songkick · Resident Advisor · Shazam · YouTube Topic channel** | secondary discovery and listing surfaces. Bandsintown feeds Spotify's On Tour module; Shazam is the endpoint of a DJ play | absent / unreviewed |
+| **Flow State** | the Portal entered together — **the only surface where people are physically inside the world** | have; undesigned |
+| **Live AV system** | the world rendered in a room — distinct from the venue | parked with the TD work |
+| **The EPK** | the world compressed for a stranger who decides in five seconds | copy written (COPY), **document does not exist** |
+| **TikTok / X** | not strategy — **gates.** Required fields on some label submission forms | absent; may be required |
+| **The mark** | two broken circles — the faceless face. **Cross-cutting: deploys on every other organ** | LOCKED |
+| **The Passage** | the written body, one per EP (bound void poems, sealed with the mark) | new; first one owed, Nick-authored |
 | **Merch / totems** | world-*objects* you wear and carry | seeded (Obscura) |
-| **A gathering** | the physical manifestation of the world (own event) | horizon |
+| **A gathering** | the physical manifestation of the world (own event) | horizon — the long-arc goal |
 | **Obscura** | the void made physical — *a different era* of the same world | parked |
 
-**Owned vs rented.** Socials/streaming are rented land; the Ether (web home + SMS),
-the Passages, and the live room are owned. Build the owned surfaces — they compound.
+**Owned vs rented.** Socials and streaming are rented land; the Ether (web home + SMS),
+the Passages, Bandcamp, and the live room are owned. Build the owned surfaces — they compound.
+
+**Two organs carry the world visually more than any other, and both were missing:**
+**release artwork** (every release, forever) and **Spotify Canvas** (free, per-track, sitting
+directly beside the play button on the platform where the goal metric is measured).
 
 **Eras (to formalize later).** Obscura is a *different era* of the one world — the
 Ghost/Tyler mechanic (one world, distinct faces/eras). "Eras" is a real structural
