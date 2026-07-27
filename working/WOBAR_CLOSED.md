@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-07-21
+last_updated: 2026-07-27
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,23 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Denver Scene Entry — PAUSED
+
+**Closed:** 2026-07-27 — Nick's call: park it. The loop was opened to serve a local/room goal; the 12-month goal is **people listening, online**. Two of its three founding pillars also failed verification this session, so it is being parked on both grounds — strategy and evidence. Not dead: resume if the goal changes back toward the room.
+
+**What it was:** Opened 2026-06-18 off [[working/WOBAR_PLACEMENT_PLAN]], on the back of deep research (run `wf_2808965e`) that identified Denver as the global bass epicentre and **sub.mission as the scene heart**. The thesis was a convergence: **Memory Palace** (Of The Trees) and **Local Void** (INZO) are Denver labels run by two of Wobar's three core sonic comps, so the promoter/scene lever *was* the label lever — scene presence, not demo emails, was the real A&R path in. It was rated the highest-leverage lever in the whole Placement Plan and the one part that could not be shortcut with more tracks. Wobar is SLC-based; the open question was how an out-of-town artist enters the Denver corridor.
+
+**Why the premise failed (2026-07-27, browser-verified):**
+1. **`SubCarbon` is not Denver — it is Belgian**, founded by **Ganja White Night**, submissions at `submissions@subcarbon.be`. The "sub.mission = scene heart → SubCarbon = its label → doubly strategic" chain was a naming collision. The `.be` TLD had been sitting in the vault, unexamined, the whole time.
+2. **Memory Palace's door is closed** — their contact page reads *"(we are not currently accepting demos at this time)."* It is also **psy-lane**, i.e. Wobar's outro register (24% of the set), not his centre of mass.
+3. **Local Void survives as a genuine Denver label** but is likewise psy-lane (INZO's, founded March 2025). Its one real lane connection is **OkayJake** on the roster.
+
+**What was undermined vs what still stands:** The lane correction of 2026-07-26 had already moved Wobar's centre of mass to **dark/wonky 140 + rap flips (~45% of runtime)**, which meant the two Denver labels this loop was built around were aimed at the wrong register before any of the above was discovered. What still stands, unrefuted: Denver is a real bass epicentre, and **scene presence remains the only route into relationship-gated labels** — that mechanism is intact, it just no longer points at these targets.
+
+**What survives it:** The relationship-gated-label insight transfers directly to **Wormhole Music Group** — Oakland, not Denver, submissions closed, but its **entire Beatport Top 10 is artists Nick already plays** (Daggz ×3, dêtre, Chmura, Comisar) and its contact page publishes two named principals (`secretrecipe@`, `kim@wormholemusicgroup.com`). That is the same relationship-shaped door this loop existed to work, pointed at a label that actually matches the lane. Carried into the Growth Plan loop's NEXT list, item 6. The SubCarbon and Memory Palace corrections are recorded in [[working/RESEARCH_LABEL_LANDSCAPE]] §3 and amended into [[working/WOBAR_PLACEMENT_PLAN]] v1.3.
 
 ---
 

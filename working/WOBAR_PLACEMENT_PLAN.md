@@ -1,13 +1,25 @@
 ---
 title: Wobar Placement Plan
-version: 1.2 (+ DJ-promo lever, corrected doors, lane correction — amended 2026-07-26)
-last_updated: 2026-07-26
+version: 1.3 (+ browser-verified label pass — amended 2026-07-27)
+last_updated: 2026-07-27
 status: live
 scope: The "get-heard" layer on top of the release machine. Three levers — curators, promoters/scene, labels — all in service of one win: a growing listening audience. Sits on top of RELEASE_PACKET.xlsx, does not replace it. Backed by deep research run 2026-06-18 (run wf_2808965e, 19 claims verified / 6 refuted) + a Spotify-recommender field-guide pass 2026-07-23 (coherence-over-volume, Source-of-Streams instrument, pitch-metadata-as-recommender-input).
 dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEASE_PACKET.xlsx
 ---
 
 # WOBAR PLACEMENT PLAN
+
+> ## ⚠⚠ AMENDED AGAIN 2026-07-27 — browser-verified label pass
+> **[[working/RESEARCH_LABEL_LANDSCAPE]] is now governing for all label targeting.** Everything below about specific labels is superseded by it. Verified corrections to *this* file:
+>
+> 1. **SubCarbon is Belgian, not Denver.** Founded by **Ganja White Night**. The "= sub.mission's label = Denver scene heart = doubly strategic" reasoning in the Feeder Ladder and Target Label Roadmap is **VOID**. The evidence was already here — the address is `submissions@subcarbon.be`, and `.be` is Belgium.
+> 2. **Memory Palace's door is CLOSED, not absent.** Their contact page states *"(we are not currently accepting demos at this time)."* "The crown, earned via Denver scene" is also **de-prioritised** — it is psy-lane, and the 12-month goal is online, not the room.
+> 3. **Deadbeats' `DROPPED — MISMATCH` verdict is REVERSED, finally.** 11 entries in the 140 Top 100. Stated A&R posture: *"not concerned with artist size or social growth, focuses on track/release."* Its demo door is a **free four-field Google Form** — the most accessible door found anywhere in this research.
+> 4. **Local Void, Trippy Bee and Gravitas are wrong-lane.** All psy-bass. They were selected for the outro register (24% of the set), not the centre of mass (dark/wonky 140 + rap flips, ~45%).
+> 5. **The Denver convergence thesis is weakened.** Two of its three pillars were Memory Palace (closed, psy) and SubCarbon (not in Denver). Local Void remains Denver and psy. **Denver is de-weighted** — the goal is online, not local.
+> 6. **DIY Meta ads / editorial pitching stay parked.** At 26 monthly listeners there is no coherent signal for the recommender, as v1.1 already noted.
+>
+> Only browser-verified material (Chrome MCP, live page loads, 2026-07-27) is carried into these amendments.
 
 > ## ⚠ AMENDED 2026-07-26 — read [[working/WOBAR_GROWTH_PLAN]] first
 > That doc is now the governing execution plan; this one remains the lever map. Six amendments from the 2026-07-26 research session + its 13-agent adversarial verification (`wf_98fcbeed-183`):
@@ -49,15 +61,19 @@ dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEA
 
 ---
 
-## Target Label Roadmap (verified 2026-06-18)
+## Target Label Roadmap — ❌ SUPERSEDED 2026-07-27
 
-| Label | Run by | Fit | Demos | Role |
-|---|---|---|---|---|
-| **Local Void** | INZO | 🎯 Strong (genre-fluid, no limits) | ✅ Open public portal (Google Form, 2025) | **START-HERE.** Re-verify portal live before submitting. |
-| **Trippy Bee** | LSDREAM | ✅ Strong (boundary-pushing psy-bass) | ✅ Open — submission link at trippybeerecords.com/contact | Submit a reserve track when ready; new label = hungry. |
-| **Memory Palace** | Of The Trees | 🎯 Strong (psy experimental + **heavy visual emphasis = Wobar's TD identity**) | ❌ No portal; relationship/scene entry only, taste-led A&R | The crown. Earned via Denver scene + catalog, not a demo. |
-| **WAKAAN** | Liquid Stranger | ✅ Fit (experimental dubstep, festival) | ✅ Email demos | Larger/established rung; aim later. |
-| **Deadbeats** | Zeds Dead | ❌ MISMATCH (too broad/mainstream) | — | **DROPPED.** Off-sound; not worth a chain. |
+> **Do not use this table.** It was built 2026-06-18 for the **psy-bass lane**, before the centre of mass was measured off Nick's own set (dark/wonky 140 + rap flips, ~45% of runtime). Every "Fit" rating below is graded against the wrong register, and the door statuses have since been checked by live browser load and mostly changed.
+>
+> **Current target list: [[working/RESEARCH_LABEL_LANDSCAPE]] §2 (governing).**
+
+| Label | Run by | 2026-06-18 verdict | **2026-07-27 verified status** |
+|---|---|---|---|
+| **Local Void** | INZO | 🎯 "START-HERE" | ❌ **WRONG LANE** — psy/space bass, founded Mar 2025. *(OkayJake on roster is the one lane connection)* |
+| **Trippy Bee** | LSDREAM | ✅ "Strong" | ❌ **WRONG LANE** — psy-bass, 10 months old |
+| **Memory Palace** | Of The Trees | 🎯 "The crown" | 🔴 **DOOR CLOSED** — *"(we are not currently accepting demos at this time)"*. Also psy-lane. Still commercially live (#13 Beatport 140) but not submittable |
+| **WAKAAN** | Liquid Stranger | ✅ "Aim later" | ⚠️ **DOOR UNCONFIRMED** — `wakaan.com` returns an error page (extended outage); third-party emails unverified. Gunpoint on roster, real lane presence |
+| **Deadbeats** | Zeds Dead | ❌ "DROPPED — too broad/mainstream" | ✅ **REVERSED — now the single most accessible door on the list.** Free 4-field Google Form (`bit.ly/Demos4Deadbeats`). **11 entries in the Beatport 140 Top 100.** Stated A&R: *"not concerned with artist size or social growth."* Carries STVSH, Phrva, Distinct Motive, OkayJake, Hamdi |
 
 ### Feeder ladder — open-door rungs that fit ~1-release stage NOW
 - **Gravitas Recordings** — open demos, **unreleased only** (← reserve-track rule applies).

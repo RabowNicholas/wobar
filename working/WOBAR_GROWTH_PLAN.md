@@ -1,8 +1,8 @@
 ---
 title: Wobar Growth Plan
-version: 1.0
+version: 1.1
 created: 2026-07-26
-last_updated: 2026-07-26
+last_updated: 2026-07-27
 status: live — governing document for the next 12 months
 scope: What Wobar does to get people listening. Supersedes the social-media strategy in WOBAR_CONTENT.md and reweights WOBAR_PLACEMENT_PLAN.md. Built from the 2026-07-26 research session and its adversarial verification.
 dependencies: [[working/RESEARCH_VERIFICATION_MEMO]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/RESEARCH_SOUNDCLOUD_COMPS]], [[reference/WOBAR_CONTENT]]
@@ -93,24 +93,43 @@ Spotify gets fed on a 60-day lag. Acceptable.
 
 ---
 
-## 4. Labels — seven open doors, corrected
+## 4. Labels — target list rebuilt 2026-07-27
 
-**[SOLID]** All seven verified open 2026-07-26/27 by live load.
+> **The seven-door table that stood here is superseded.** It was aimed at the **psy-bass lane** — selected before the lane correction, when the vault believed the comps were Of The Trees / Shlump / INZO. That register is Wobar's *outro*, 24% of the set. Four of the seven (Gravitas, Local Void, Trippy Bee, SubCarbon) are wrong-lane and are no longer targets.
+>
+> Full tiering, evidence and the labels that didn't make it: **[[working/RESEARCH_LABEL_LANDSCAPE]]** (governing). **Only browser-verified material is reproduced below.**
+
 **[SOLID]** Audience is **not** a gate — Jadū Dala released **Vulora at ≤2,324 IG followers and 119 monthly listeners**. Wobar is already inside the range these labels demonstrably sign at.
 
-| Label | Door | Correction / requirement |
+### The doors — verified by live browser load, 2026-07-27
+
+| Label | Door | Status |
 |---|---|---|
-| **Jadū Dala** | **Email** `jadudala@gmail.com` | Their own page: *"Please send private links."* **Not** the LabelRadar portal |
-| **Gravitas** | `gravitasrecordings.com/demos` | Only stated rule is **"unreleased."** The "finished + mastered" bar is **not on their page**. Has a **second, undisclosed LabelRadar door** accepting Dubstep |
-| **Local Void** | Google Form | **TikTok and X account fields are required** — create them first |
-| **SubCarbon** | `submissions@subcarbon.be` | **Email only. Never SoundCloud DMs** (their explicit instruction) |
-| **Wubaholics** | LabelRadar portal | Credit-metered, ~$1/refill |
-| **Deep Dark & Dangerous** | `demo@deepdarkdangerous.com` | — |
-| **Trippy Bee** | `trippybeerecords.com/contact` | — |
+| **Deadbeats** | **Free Google Form** — `bit.ly/Demos4Deadbeats` | ✅ Form loaded. Four fields: artist name · tell us about yourself · **links to tracks (dropbox or private soundcloud)** · socials. **No fee, no credits, no clip, no genre gate, no mastering bar** |
+| **Jadū Dala** | Email `jadudala@gmail.com` | ✅ Contact page, verbatim: *"Looking to submit a demo? Please send private links to jadudala@gmail.com"* |
+| **Wubaholics** | LabelRadar portal | ✅ Own site confirmed to carry **no** demo page. Portal URL resolves; form never read |
+| **Wormhole** | 🔴 Submissions **CLOSED** | ✅ Linktree: *"SUBMISSIONS CURRENTLY CLOSED."* **But** the contact page publishes two named principals — `secretrecipe@wormholemusicgroup.com`, `kim@wormholemusicgroup.com`. Relationship route, not a submission |
+| **Memory Palace** | 🔴 **CLOSED** | ✅ *"(we are not currently accepting demos at this time)"* |
+| **Bassrush** | ❌ Unconfirmed | ✅ `insomniacmusicgroup.com/contact` **404s**; no demos link in nav. **The Prophecy** compilations may be the only route |
+| **Wakaan** | ❌ Unconfirmed | ✅ Site returns an error page (extended outage). Third-party emails unverified |
 
-**[SOLID]** LabelRadar judges **a 20-second clip you select**, not the full track. That clip choice is a creative decision.
+**Convention, confirmed twice independently: private links only.** Jadū Dala states it; Deadbeats' form asks for "dropbox or private soundcloud." Never public uploads — it also protects the unreleased/unpublished requirement.
 
-**Re-check every door before sending** — Wormhole's portal was found *closed* by one researcher while another found it open. State flips.
+**Check the label's own site before spending a LabelRadar credit.** Deadbeats and Jadū Dala both publish free direct doors *and* have portals. The portal is the parallel path, not the real one.
+
+### Downgraded from [SOLID]
+
+- *"LabelRadar judges a 20-second clip you select"* → **[WEAK]**. Appears in LabelRadar's own generic documentation; **never read from a live submission flow across four attempts.**
+- *"LabelRadar is credit-metered at ~$1/refill"* → **[UNVERIFIED]**. Login-walled every time.
+
+### Beatport visibility — verified 2026-07-27
+
+Sales, 140 Top 100: **Deadbeats 11 · UKF 10 · Deep Dark & Dangerous 5 · UMAD? 4 · Jadū Dala 2 · Wubaholics 0 · Wormhole 0.**
+Editorial, Best New July 2026: **DUPLOC 6 · DDD 3 · Wormhole 2 · Jadū Dala 1 — Deadbeats 0.**
+
+Two systems that barely overlap. **Beatport's editors surface smaller labels; the sales chart rewards the big ones.** The best-fitting doors have near-zero visibility — that tradeoff is real and was invisible before.
+
+**Re-check every door before sending.** Wormhole was found open and closed by two researchers on the same day.
 
 **[UNSUPPORTED]** Whether a signing *causes* listener growth is unmeasured. No difference-in-differences, synthetic control, matched-cohort or event study exists anywhere; Chartmetric, Soundcharts, Songstats and Luminate all hold the panel data and none has published. Treat each submission as a lottery ticket with genuinely unknown odds — acceptable because the ticket is nearly free.
 
@@ -186,3 +205,14 @@ Recorded so they don't get re-derived:
 - **"Labels produce listeners"** — remains **UNSUPPORTED**. The plan proceeds on cost, not on proven return.
 - **"There's no streaming problem, there's a follower problem"** — do NOT use. Interventional claim from a cross-sectional correlation shown to be a scale artifact.
 - **`WOBAR_SONIC.md` comps are wrong** — Of The Trees / Shlump / INZO describe the final 22 minutes of the set. Center of mass is dark/wonky 140 + rap flips (~45% of runtime; STVSH most-played). Needs a pass.
+
+### Added 2026-07-27 (browser-verified label pass)
+
+- **The original seven-door list was psy-lane.** Four of seven dropped. Only Jadū Dala survives to the core. The list was never re-aimed after the lane correction — a two-day-old error that would have cost four submissions.
+- **`SubCarbon` is Belgian, not Denver.** Founded by Ganja White Night. The Placement Plan's "sub.mission's label = Denver scene heart = doubly strategic" reasoning is **void**. The evidence was in the vault the whole time — the address is `submissions@subcarbon.be`, and `.be` is Belgium.
+- **Deadbeats' `DROPPED — too broad/mainstream` verdict** is dead three times over: reversed on chart evidence (11 Top-100 entries), on stated A&R posture (*"not concerned with artist size or social growth"*), and on having the most accessible door found anywhere.
+- **Nick's own DJ set is the best fit instrument in the vault.** Six tracks from it are Beatport top-10 performers on target labels — *VESPER* #3 and *Left Behind* (Wubaholics), *CROOKED* #6 (Jadū Dala), *INFATUNE* #2 (Wakaan), *Affinity* #7 (Bassrush), *The Darkness* #6 (Wormhole). Built from taste with no label list in hand; converged independently. **No external research in this vault has produced evidence this clean.**
+- **Founder share of Top 10 screens out release vehicles.** Cyclops is ~8/10 Subtronics; Drama Club 9/10 Boogie T. Both dropped. Across the small-label tier, **7 of 11 checked were one artist self-releasing.**
+- **At Wobar's tier, Beatport visibility comes from self-releasing, not from getting signed.** Villager, Froidy, Klo (US), JAZ IMSKY — the vault's own "Tier 1 direct lane match" artists — all run their own named imprints. That is *why* they chart. **[JUDGMENT]** A named imprint in the distributor's label field (rather than "DistroKid"/"Create Music Group", which read as unsigned) is nearly free positioning; unmeasured, but unanimous among lane peers.
+- **The VA compilation is the realistic first external credit.** DUPLOC (numbered series, up to 22 artists/volume) and Incurzion Audio (*We Are Incurzion*, 15–30 artists) are multi-artist VA machines in the adjacent lane. Neither is a demo inbox. Doors unchecked.
+- **Research reliability note.** Six calls in the label research were corrected within two days, every one a *failed lookup treated as a finding*. The label landscape doc now separates browser-verified material (Layer A) from agent-sourced and inferred material (Layer B). **Only Layer A has been propagated into this plan.**

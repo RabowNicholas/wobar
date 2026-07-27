@@ -1,7 +1,7 @@
 ---
 title: Wobar Context Index
-version: 1.0
-last_updated: 2026-04-16
+version: 1.1 (+ the Drift Rule — form-vs-state, one-owner-per-fact 2026-07-27)
+last_updated: 2026-07-27
 status: live
 scope: Master index for all Wobar reference files. Read this first in every conversation.
 dependencies: none
@@ -11,6 +11,47 @@ dependencies: none
 
 This is the index file for the Wobar project reference system. Read this file first. Pull additional files only as needed for the task at hand.
 
+---
+
+## ⚖ THE DRIFT RULE — read before editing any file
+
+*Added 2026-07-27 after two drift failures in one week. The vault is large enough that duplicated facts now age independently and produce wrong decisions.*
+
+### 1. Form vs state
+
+| | Holds | Files |
+|---|---|---|
+| **`reference/` — locked** | **Form and identity.** What doesn't change: positioning, registers, laws, archetypes, conventions, formats. | BRAND · SONIC · COPY · GRAMMAR · FRAMEWORK · WORLD · CONTENT · ARCHIVE |
+| **`working/` — live** | **State and plans.** Anything with a number that moves: rates, calendars, counts, door statuses, what's in flight, current targets. | GROWTH_PLAN · ACTIVE · PLACEMENT_PLAN · RESEARCH_* |
+
+**A locked doc must never contain a number that will be wrong in three months.** No cadences, no catalogues, no follower counts, no current-target lists. If it changes, it lives in `working/` and the reference doc points at it.
+
+### 2. One owner per fact
+
+Every mutable fact has **exactly one owning file**. Every other mention is a `[[link]]` to the owner, never a copy.
+
+| Fact | Owner |
+|---|---|
+| Output rate / release cadence | [[working/WOBAR_GROWTH_PLAN]] §1 |
+| Label targets, door status, tiering | [[working/RESEARCH_LABEL_LANDSCAPE]] §2 |
+| Position metrics (listeners, followers, submissions sent) | [[working/WOBAR_GROWTH_PLAN]] |
+| Open loops, current work, session history | [[working/WOBAR_ACTIVE]] |
+| Reference artists / comps, by register | [[reference/WOBAR_SONIC]] — the six-register table |
+| Bio copy (EPK + world-facing) | [[reference/WOBAR_COPY]] — BIO TEMPLATES |
+| Released catalogue | **No owner yet — deliberately not in a locked doc.** Needs a working file if it's wanted |
+
+### 3. Shape matters as much as content
+
+A **flat list standing in for a structured thing** is a drift generator, not just an error. The 2026-07 comp failure wasn't five wrong names — it was one list where six registers belonged, and every doc downstream inherited whichever register sat on top. **Before writing a list into a reference doc, ask whether the thing actually has structure.**
+
+### 4. What went wrong, so it isn't repeated
+
+- **Comps** — `Of The Trees / Shlump / INZO` sat flat in BRAND, propagated into SONIC and the **EPK bio**, and put psy-bass references in front of wonky-140 labels. Cost: four wrong label targets and a pitch that misdescribed the artist. Shlump had never appeared in the benchmark set at all.
+- **Cadence** — "one per month" lived in SONIC, CONTENT **and** the Growth Plan at once. The copies drifted; only the Growth Plan's was current (it includes flips).
+- **SubCarbon** — recorded as sub.mission's Denver label on a naming collision; it is Belgian. Voided a whole strategic chain in the Placement Plan and helped keep a loop open for a month.
+
+---
+
 ## File Registry
 
 ### Project / Brand
@@ -19,15 +60,16 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[skills/README]] | /skills | Source of truth for WOBAR Claude skills — `~/.claude/skills/` on each machine is a synced copy | live |
 | [[working/WOBAR_ACTIVE]] | /working | Open project loops, current context, session history | live |
 | [[working/WOBAR_CLOSED]] | /working | Completed project loops, archived from WOBAR_ACTIVE | live |
-| [[working/WOBAR_GROWTH_PLAN]] | /working | **GOVERNING — read before any growth/content/platform decision.** 12-month goal (people listening, online): SoundCloud-first, flips as a numbered main-account series, originals to a 2-track reserve on day-60 calendar release, 7 corrected label doors, DJ promo, IG demoted to a 5-second credibility surface. Every claim confidence-tagged. Supersedes the social strategy in WOBAR_CONTENT | live (v1.0) |
+| [[working/WOBAR_GROWTH_PLAN]] | /working | **GOVERNING — read before any growth/content/platform decision.** 12-month goal (people listening, online): SoundCloud-first, flips as a numbered main-account series, originals to a 2-track reserve on day-60 calendar release, DJ promo, IG demoted to a 5-second credibility surface. Every claim confidence-tagged. **Owner of: output rate (§1) and position metrics.** §4 label doors rebuilt 2026-07-27 from browser-verified data — the old 7-door list was psy-lane. Supersedes the social strategy in WOBAR_CONTENT | live (v1.1) |
 | [[working/RESEARCH_VERIFICATION_MEMO]] | /working | **Read before trusting any 2026-07-26 research file.** 13-agent adversarial verification — 9 of 10 claims UNSUPPORTED, two sub-reports contained fabricated data. What survived, what didn't, and what nobody has measured | live |
-| [[working/RESEARCH_LABEL_MAP]] | /working | Where the artists in Wobar's set actually release. Three lanes (US wonky-140/flip · psy-bass · deep dubstep), label→artist map, Beatport chart read, adjacent-artist list, corrected demo doors | live |
+| [[working/RESEARCH_LABEL_LANDSCAPE]] | /working | **GOVERNING for label targeting.** Tiered door list for the dark/wonky 140 lane, verified 2026-07-27 by direct browser load. Two screens do the work: **founder share of Top 10** (kills release vehicles) and **set overlap** (Nick's own set vs each label's top sellers). Deadbeats' free 4-field Google Form is the headline. **§2.5 = the Beatport visibility sweep** (sales vs editorial are two different systems; best-fit doors have near-zero visibility). **§2.6 = the artist-discography sweep — 22 new labels and the VA compilation economy: ten recurring multi-artist series, most 20+ artists per volume, all live. A 29-slot compilation vs a one-slot signing is the biggest strategic find in the file.** Supersedes the door/tier tables in RESEARCH_LABEL_MAP and the label section of WOBAR_GROWTH_PLAN | live (v4.0 — unreviewed) |
+| [[working/RESEARCH_LABEL_MAP]] | /working | Where the artists in Wobar's set actually release. Three lanes (US wonky-140/flip · psy-bass · deep dubstep), label→artist map, Beatport chart read, adjacent-artist list. **Door status superseded by RESEARCH_LABEL_LANDSCAPE** | live (partly superseded) |
 | [[working/RESEARCH_SOUNDCLOUD_COMPS]] | /working | Cross-platform comp table (SoundCloud vs IG vs Spotify listeners) for 14 lane artists. Carries corrections — see header | live |
 | [[working/RESEARCH_IG_COMPS]] | /working | Instagram comp sweep v2, neutral-frame sampled from label rosters. v1's cohort was convenience-sampled; two findings retracted | live (v2.0) |
 | [[working/RESEARCH_IG_CONVERSION]] | /working | Does IG convert? Study A (IG vs Spotify listeners) + Study B (do labels gate on audience). Study B survives; Study A downgraded — see header | live |
 | [[working/RESEARCH_IG_MECHANICS]] | /working | IG platform mechanics 2026 — ranking signals, Trial Reels, Meta Series, source-tiered claims table | live |
 | [[working/IG_COMP_SAMPLE_FRAME]] | /working | The sampling frame + handle-resolution method behind the comp sweeps. Documents the convenience-sampling failure and the fix | live |
-| [[working/WOBAR_PLACEMENT_PLAN]] | /working | Get-heard strategy — curators/promoters/labels, Denver scene convergence, label roadmap (Local Void start-here), promo-service verdicts, DIY ads playbook | live |
+| [[working/WOBAR_PLACEMENT_PLAN]] | /working | Get-heard strategy — the **lever map** (curators · promoters/scene · labels · DJ promo), promo-service verdicts, DIY ads playbook. **Its Target Label Roadmap is superseded** (psy-lane; Deadbeats' DROPPED verdict reversed) → use RESEARCH_LABEL_LANDSCAPE. The Denver convergence thesis is void — SubCarbon is Belgian, Memory Palace is closed; that loop is parked | live (v1.3 — partly superseded) |
 | [[working/MIRROR_THRESHOLD_SPEC]] | /working | Mirror Threshold build spec — the SMS door into the Ether; Twilio + Next.js/Neon/Vercel integration, state machine, compliance | live |
 | [[working/WEB_HOME_SPEC]] | /working | The web home = a terminal you wander (early-RPG), guided by *the daemon*; full rebuild of wobar-landing-page; paths, offerings, AI rails | live |
 | [[working/WOBAR_VISUAL_RESET]] | /working | **The visualizer design system — READ BEFORE ANY VISUALIZER BUILD.** Audits the old visual system vs world v0.6, then supplies the spine: the corridor is the *artifact* of perception failing to render a higher dimension (not the territory) — from which non-arrival, the drop-as-failure, and the stable-then-collapse arc all follow. §3 = the spec. Governs all visualizer work; supersedes the per-act material affinities in TD_REFERENCE §3/§4 | live (v0.2 — spine locked) |

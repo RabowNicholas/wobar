@@ -35,7 +35,9 @@ Every Mirror post is an invitation to look into a reflection. Come find it live.
 ## Release Architecture
 
 ### Original Tracks
-One per month. The primary release unit. Every drop inside the song gets its own accompanying visualizer. Track and visualizers ship together.
+The primary release unit. Every drop inside the song gets its own accompanying visualizer. Track and visualizers ship together.
+
+*(Cadence removed 2026-07-27 — it lived here, in SONIC and in the Growth Plan simultaneously, and the copies had drifted. **Output rate is owned by [[working/WOBAR_GROWTH_PLAN]] §1.**)*
 
 ### Portal EPs
 5-track complete journeys mapping the full 5-Act Portal Framework — one track per act, Rift through Integration. Built from individual tracks already released.

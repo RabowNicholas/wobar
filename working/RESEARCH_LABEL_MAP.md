@@ -9,6 +9,17 @@ dependencies: [[working/WOBAR_PLACEMENT_PLAN]], [[reference/WOBAR_SONIC]]
 
 # LABEL MAP
 
+> ## ⚠ SUPERSEDED IN PART — read [[working/RESEARCH_LABEL_LANDSCAPE]] first
+> That doc (v2.0, 2026-07-27) is now the authority on **door status, lane fit, and tiering**, verified by direct browser load of Beatport and the label sites. This file remains useful for the §0 lane analysis and the artist→label mapping.
+>
+> Corrections it carries against this file:
+> - **SubCarbon is Belgian** (Ganja White Night), **not** sub.mission/Denver. The "doubly strategic Denver on-ramp" reasoning here is void.
+> - **Memory Palace** has a submissions page and it reads *"not currently accepting demos."*
+> - **Wormhole** submissions are CLOSED — but two named principals publish emails.
+> - **Deadbeats' door is a free 4-field Google Form**, not just a LabelRadar portal.
+> - **Cyclops and Drama Club are founder vehicles** (Subtronics ~8/10, Boogie T 9/10 of their own top sellers) — dropped as targets.
+> - Gravitas, Local Void, Trippy Bee and Odyzey are **psy-lane**, not dark/wonky 140.
+
 ## §0 — LANE RESOLVED (2026-07-26, from Nick's latest set)
 
 The two-lane frame below is **incomplete**. Nick's most recent 93-minute set — his own best example of the journey — shows the center of mass sits in a **third lane** neither Lane A nor Lane B covers.
@@ -19,7 +30,7 @@ The two-lane frame below is **incomplete**. Nick's most recent 93-minute set —
 |---|---|---|---|
 | **1. Deep / hypnotic** | 0:00–19:00 | 20% | Super Future, Comisar/Daggz/Chmura, **Mur (Wobar)**, Yoko, Potions, En:vy, Jungle Rootz |
 | **2. Deep-dubstep hinge** | 19:00–22:12 | 3% | Distinct Motive — *No Mercy* |
-| **3. Dark / wonky 140** | 22:12–49:15 | **29%** | OkayJake+STVSH, **Crease (Wobar)**, Into Stone, Daggz, Gunpoint+highrollr, dêtre, Blurrd Vzn, STVSH, Milano, Quackson, Crucial+STVSH |
+| **3. Dark / wonky 140** | 22:12–49:15 | **29%** | OkayJake+STVSH, **Crease (Wobar)**, Shades, Daggz, Gunpoint+highrollr, dêtre, Blurrd Vzn, STVSH, Milano, Quackson, Crucial+STVSH |
 | **4. Rap-flip peak** | 49:15–1:04:23 | **16%** | FLY, Ero808+Coka Cobra, **Down Bad (Wobar flip)**, FLY×SAKA, SPOONE flip, Noctiil flip, Tape B×STVSH flip |
 | **5. Dub pivot** | 1:04:23–1:11:14 | 7% | Distinct Motive+Caspa, **World-A-Reggae (Wobar flip)** |
 | **6. Psy-bass emotional outro** | 1:11:14–1:33:06 | 24% | Alex Unger, Of The Trees ×2, INZO ×3, LSDREAM, **Even In Darkness (Wobar)** |
@@ -72,7 +83,7 @@ Ecosystem: SoundCloud-first, self-release and small imprints, **UKF** and **Dead
 | **Tape B** | Tape B×STVSH flip (1:02:34) | **Deadbeats** (w/ Zeds Dead + Subtronics) · **Memory Palace** (*Brackish* w/ Of The Trees) |
 | **Distinct Motive** | No Mercy (19:00) · Afinity w/ Caspa (1:04:23) | **Deadbeats** · **SubCarbon** · **Drama Club** · **Deep Dark & Dangerous** · Navy Cut · Gossip |
 | **En:vy** | Damaio (11:42) | **Critical Music** · **Gemini Gemini** · **Dial 1 Music** · **Deep Dark & Dangerous** |
-| **Into Stone** | Shades (28:09) | **Not on Beatport** — SoundCloud-native |
+| **Shades** | Into Stone (28:09) | **Corrected 2026-07-27 (Nick):** the artist is **Shades**, the track is *Into Stone* — this row previously had them swapped, and "Into Stone" was carried through the vault as an artist name. Labels not yet checked |
 | Of The Trees | Windhorse · I'll Be Ready | **Memory Palace** |
 
 Not yet swept: FLY, OkayJake, Noctiil, SPOONE, Milano, Alex Unger, Crucial (solo), Yoko, Potions, Jungle Rootz, Super Future, Comisar, Chmura.

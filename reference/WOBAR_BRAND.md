@@ -1,7 +1,7 @@
 ---
 title: Wobar Brand Foundation
 version: 1.1
-last_updated: 2026-06-10
+last_updated: 2026-07-27
 status: locked
 scope: Mission, manifesto, belief system, archetypes, the three versions, positioning.
 dependencies: none
@@ -57,14 +57,21 @@ The music doesn't take you somewhere else. It shows you yourself — from the on
 
 ## Positioning
 
-Wobar opens portals through bass music — and they go inward. The sound goes wherever the journey requires. Most of it sounds like deep dubstep — 140, sub-forward, hypnotic. All of it points inward. The genre isn't the point. The perspective is. Every track, every set, every flip is filtered through the same lens — the mirror that shows you the angle you couldn't reach alone. What people follow isn't the music. It's the way of seeing.
+Wobar opens portals through bass music — and they go inward. The sound goes wherever the journey requires. Its centre of mass is dark, wonky 140 — sub-forward, halftime, sound-design-dense — and the arc runs out from there in both directions. All of it points inward. The genre isn't the point. The perspective is. Every track, every set, every flip is filtered through the same lens — the mirror that shows you the angle you couldn't reach alone. What people follow isn't the music. It's the way of seeing.
 
-- Genre: Deep Psychedelic Dubstep — 140-centered bass music structured for transformation
-- Core Elements: Home — deep/psychedelic dubstep at 140, full-time and halftime. Range when the act requires it — drum & bass (Act 4 ceiling), midtempo/downtempo (Act 5 floor), experimental bass throughout
-- Comp Artists: Of The Trees, Shlump, INZO, LSDREAM, Tipper
+- Genre: 140-centered bass structured for transformation. **Centre of mass: dark / wonky 140.** The arc runs deep → dark/wonky → rap-flip → dub → psy.
+- Core Elements: **Six registers**, target weighting by runtime — dark/wonky 140 (29%), psy-bass outro (24%), deep/hypnotic (20%), rap-flip (16%), dub pivot (7%), deep-dubstep hinge (3%). Full register table + per-register comps in [[reference/WOBAR_SONIC]].
+- Range Anchors — **per register, NOT a flat comp list.** A single list is what caused the 2026-07 misfire; the arc has six registers and each has its own comps and its own label ecosystem:
+  - dark/wonky 140 → **STVSH, dêtre, Blurrd Vzn**
+  - rap-flip → **Ero808, Tape B, SAKA**
+  - deep/hypnotic → **Chmura, Comisar, En:vy**
+  - deep dubstep → **Distinct Motive, Caspa**
+  - psy outro → **Of The Trees, INZO, LSDREAM**
 - Differentiation: Explicit therapeutic framework manifested as complete journey architecture
 - Audience: 21–34 year old bass heads who use music/festivals/plant medicine to access altered states
-- Geography: US-based, SLC home, Denver/Colorado corridor focus
+- Geography: US-based, SLC home. **Online-first** — the 12-month goal is listeners, not a room ([[working/WOBAR_GROWTH_PLAN]]). The Denver/Colorado corridor focus is **parked** (see [[working/WOBAR_CLOSED]] — Denver Scene Entry).
+
+> **On the weightings (added 2026-07-27):** the percentages are measured from one 93-minute set, which Nick describes as an **ideal benchmark he is progressively filling in with his own originals** — reference tracks act as writing targets for the slots. So read them as **target weighting**, not as a measurement of the released catalogue. They are first-party and the best evidence available; they are also n=1.
 - Goal Reaction: "Holy shit, I just had a profound experience... at a dubstep show?"
 
 ## Color Palette

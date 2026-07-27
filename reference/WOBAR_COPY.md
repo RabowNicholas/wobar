@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
 version: 2.0 (rewritten against WORLD v0.6 + the grammar; the mirror spine, the voice stack, the act axis)
-last_updated: 2026-07-21
+last_updated: 2026-07-27
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -305,24 +305,43 @@ too clever, breaks Law 0). Grow this bank; the daemon speaks only from it.
 
 ## BIO TEMPLATES
 
-### World-facing bio (light register — socials, fans; a mirror)
-> Wobar makes bass built to take you inward. Deep psychedelic dubstep, structured as a
-> journey — safe, then heavy, then somewhere you didn't plan to go. For the part of the
-> night that stops being fun and starts being the point. Salt Lake City.
+> **Split rule (locked 2026-07-27): centre of mass in the EPK, the arc in the world-facing bio.**
+> The booker/label gets the fast, legible read; the deeper audience gets the real claim. A single
+> comp list serving both is what put psy-bass reference artists in front of wonky-140 labels.
+
+### World-facing bio (light register — socials, fans; a mirror) — THE ARC
+> Wobar makes bass built to take you inward. Structured as a journey — safe, then heavy,
+> then somewhere you didn't plan to go. For the part of the night that stops being fun
+> and starts being the point. Salt Lake City.
 
 *(Shallow-but-true. No cosmology. An insider reads the descent; an outsider reads a
-moody deep-dubstep act. Dual-valid.)*
+moody heavy act. Dual-valid. **The genre pin was removed 2026-07-27** — "deep psychedelic
+dubstep" named one register of six and contradicted the arc claim in the same sentence.)*
 
-### Functional / EPK bio (utility floor — bookers, press; informative, clean)
-> Wobar is a Salt Lake City psychedelic bass project working primarily in deep dubstep
-> (140, sub-forward, sound-design-dense), with range across halftime, drum & bass, and
-> experimental bass. Sets are built as structured journeys on a five-act arc rather than
-> as playlists. Monthly residency at Flow State. Releases roll out as Portal EPs —
-> five-track journeys mapping the full arc. Reference range: Of The Trees, Shlump, INZO.
+### Functional / EPK bio (utility floor — bookers, press) — CENTRE OF MASS
+> Wobar is a Salt Lake City bass project working primarily in **dark, wonky 140** —
+> sub-forward, halftime, sound-design-dense — with range through deep dubstep and
+> psychedelic bass. Sets and EPs are built as structured journeys rather than playlists.
+> Monthly residency at Flow State. Reference range: **STVSH, dêtre, Blurrd Vzn.**
 
 *(States the facts a booker needs, cleanly, without woo and without over-explaining the
 inner-work methodology. Utility floor: clean, doesn't break the world, no mirror
 required.)*
+
+**⚙ Swap the reference range to match the recipient's register.** The bio body stays; only
+the anchor names and the lead genre move. Register table + label ecosystems:
+[[reference/WOBAR_SONIC]] · [[working/RESEARCH_LABEL_LANDSCAPE]].
+
+| Sending to | Lead with | Reference range |
+|---|---|---|
+| Deadbeats · Wubaholics · Jadū Dala · Bassrush · Subsidia | dark, wonky 140 | STVSH, dêtre, Blurrd Vzn |
+| Sheppard · Boom Records · GOTTA MOVE | rap-flip / hybrid trap | Ero808, Tape B, SAKA |
+| Wormhole · DUPLOC · Odyzey | deep / hypnotic 140 | Chmura, Comisar, En:vy |
+| Deep Dark & Dangerous · SubCarbon | deep dubstep | Distinct Motive, Caspa |
+| Memory Palace · Gravitas · Trippy Bee · Local Void · Wakaan | psychedelic bass | Of The Trees, INZO, LSDREAM |
+
+**This is not spin — it is register-matching.** Wobar genuinely produces across all six; the
+EPK just leads with whichever one the recipient actually releases.
 
 ---
 

@@ -40,3 +40,6 @@ touchdesigner/networks/*/exports/
 
 # Local Claude settings
 .claude/settings.local.json
+
+# Browser-automation scratch output (Playwright MCP console logs + page dumps)
+.playwright-mcp/
