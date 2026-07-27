@@ -1,0 +1,495 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - link [ref=e7] [cursor=pointer]:
+            - /url: /
+          - navigation [ref=e11]:
+            - list [ref=e12]:
+              - listitem [ref=e13]:
+                - link "Home" [ref=e14] [cursor=pointer]:
+                  - /url: /discover
+              - listitem [ref=e15]:
+                - link "Feed" [ref=e16] [cursor=pointer]:
+                  - /url: /feed
+              - listitem [ref=e17]:
+                - link "Library" [ref=e18] [cursor=pointer]:
+                  - /url: /you/library
+        - search [ref=e20]:
+          - generic [ref=e21]:
+            - searchbox "Search" [ref=e22]
+            - button "Search" [ref=e23] [cursor=pointer]
+        - generic [ref=e28]:
+          - generic [ref=e29]:
+            - button "Sign in" [ref=e30] [cursor=pointer]
+            - button "Create a SoundCloud account" [ref=e31] [cursor=pointer]:
+              - generic: Create account
+          - link "Upload" [ref=e33] [cursor=pointer]:
+            - /url: /upload
+          - list [ref=e35]:
+            - listitem [ref=e36]:
+              - button "Settings and more" [ref=e37] [cursor=pointer]
+    - generic [ref=e43]:
+      - generic [ref=e47]:
+        - generic [ref=e55]:
+          - strong [ref=e56]: "Peace mode:"
+          - text: Escape the ads. Vibe in peace with Go+, no interruptions.
+          - link "Free Trial" [ref=e57] [cursor=pointer]:
+            - /url: https://checkout.soundcloud.com/go?ref=t9355
+        - button "Close" [ref=e58] [cursor=pointer]
+      - main [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e67]:
+            - generic "SWOMP’s avatar" [ref=e70] [cursor=pointer]
+            - generic [ref=e71]:
+              - heading "SWOMP" [level=2] [ref=e72]
+              - heading [level=3]
+          - generic [ref=e76]:
+            - list [ref=e78]:
+              - listitem [ref=e79]:
+                - link "All" [ref=e80]:
+                  - /url: /swomp
+              - listitem [ref=e81]:
+                - link "Popular tracks" [ref=e82] [cursor=pointer]:
+                  - /url: /swomp/popular-tracks
+              - listitem [ref=e83]:
+                - link "Tracks" [ref=e84] [cursor=pointer]:
+                  - /url: /swomp/tracks
+              - listitem [ref=e85]:
+                - link "Albums" [ref=e86] [cursor=pointer]:
+                  - /url: /swomp/albums
+              - listitem [ref=e87]:
+                - link "Playlists" [ref=e88] [cursor=pointer]:
+                  - /url: /swomp/sets
+              - listitem [ref=e89]:
+                - link "Reposts" [ref=e90] [cursor=pointer]:
+                  - /url: /swomp/reposts
+            - generic [ref=e92]:
+              - link "Go to station" [ref=e93] [cursor=pointer]:
+                - /url: /discover/sets/artist-stations:813423889
+                - generic: Station
+              - button "Follow" [ref=e94] [cursor=pointer]
+              - button "Share" [ref=e95] [cursor=pointer]
+              - button "More" [ref=e96] [cursor=pointer]
+          - generic [ref=e97]:
+            - generic [ref=e101]:
+              - heading "Recent" [level=3] [ref=e102]
+              - list [ref=e104]:
+                - listitem [ref=e105]:
+                  - 'group "Track: swomp n invoy - eaters by SWOMP" [ref=e107]':
+                    - generic [ref=e108]:
+                      - link "swomp n invoy - eaters" [ref=e110] [cursor=pointer]:
+                        - /url: /swomp/swomp-n-invoy-eaters
+                        - generic "swomp n invoy - eaters" [ref=e112]
+                      - generic [ref=e113]:
+                        - generic "swomp n invoy - eaters" [ref=e115]:
+                          - generic [ref=e116]:
+                            - button "Play" [ref=e118] [cursor=pointer]
+                            - generic [ref=e119]:
+                              - link "SWOMP" [ref=e121] [cursor=pointer]:
+                                - /url: /swomp
+                              - link "swomp n invoy - eaters" [ref=e122] [cursor=pointer]:
+                                - /url: /swomp/swomp-n-invoy-eaters
+                            - time [ref=e125]:
+                              - generic [ref=e126]: Posted 2 years ago
+                              - text: 2 years ago
+                        - generic [ref=e138]:
+                          - textbox "Write a comment" [ref=e140]
+                          - button "Submit" [disabled] [ref=e141]
+                        - generic [ref=e142]:
+                          - generic [ref=e145]:
+                            - button "Like" [ref=e146] [cursor=pointer]:
+                              - generic: "97"
+                            - button "Repost" [ref=e147] [cursor=pointer]:
+                              - generic: "13"
+                            - button "Share" [ref=e148] [cursor=pointer]
+                            - button "Copy Link" [ref=e149] [cursor=pointer]
+                            - button "More" [ref=e150] [cursor=pointer]
+                          - list "Track stats" [ref=e153]:
+                            - listitem "1,519 plays" [ref=e154]:
+                              - generic [ref=e155]:
+                                - generic [ref=e159]: 1,519 plays
+                                - text: 1,519
+                            - listitem "2 comments" [ref=e160]:
+                              - link "View all comments" [ref=e161] [cursor=pointer]:
+                                - /url: /swomp/swomp-n-invoy-eaters/comments
+                                - text: "2"
+                - listitem [ref=e166]:
+                  - 'group "Track: sleep paralysis by SWOMP" [ref=e168]':
+                    - generic [ref=e169]:
+                      - link "sleep paralysis" [ref=e171] [cursor=pointer]:
+                        - /url: /swomp/sleep-paralysis
+                        - generic "sleep paralysis" [ref=e173]
+                      - generic [ref=e174]:
+                        - generic "sleep paralysis" [ref=e176]:
+                          - generic [ref=e177]:
+                            - button "Play" [ref=e179] [cursor=pointer]
+                            - generic [ref=e180]:
+                              - link "SWOMP" [ref=e182] [cursor=pointer]:
+                                - /url: /swomp
+                              - link "sleep paralysis" [ref=e183] [cursor=pointer]:
+                                - /url: /swomp/sleep-paralysis
+                            - time [ref=e186]:
+                              - generic [ref=e187]: Posted 2 years ago
+                              - text: 2 years ago
+                        - generic [ref=e199]:
+                          - textbox "Write a comment" [ref=e201]
+                          - button "Submit" [disabled] [ref=e202]
+                        - generic [ref=e203]:
+                          - generic [ref=e206]:
+                            - button "Like" [ref=e207] [cursor=pointer]:
+                              - generic: "83"
+                            - button "Repost" [ref=e208] [cursor=pointer]:
+                              - generic: "16"
+                            - button "Share" [ref=e209] [cursor=pointer]
+                            - button "Copy Link" [ref=e210] [cursor=pointer]
+                            - button "More" [ref=e211] [cursor=pointer]
+                          - list "Track stats" [ref=e214]:
+                            - listitem "1,501 plays" [ref=e215]:
+                              - generic [ref=e216]:
+                                - generic [ref=e220]: 1,501 plays
+                                - text: 1,501
+                            - listitem "13 comments" [ref=e221]:
+                              - link "View all comments" [ref=e222] [cursor=pointer]:
+                                - /url: /swomp/sleep-paralysis/comments
+                                - text: "13"
+                - listitem
+                - listitem [ref=e227]:
+                  - 'group "Track: babysit by SWOMP" [ref=e229]':
+                    - generic [ref=e230]:
+                      - link "babysit" [ref=e232] [cursor=pointer]:
+                        - /url: /swomp/babysit
+                        - generic "babysit" [ref=e234]
+                      - generic [ref=e235]:
+                        - generic "babysit" [ref=e237]:
+                          - generic [ref=e238]:
+                            - button "Play" [ref=e240] [cursor=pointer]
+                            - generic [ref=e241]:
+                              - link "SWOMP" [ref=e243] [cursor=pointer]:
+                                - /url: /swomp
+                              - link "babysit" [ref=e244] [cursor=pointer]:
+                                - /url: /swomp/babysit
+                            - generic [ref=e245]:
+                              - time [ref=e247]:
+                                - generic [ref=e248]: Posted 3 years ago
+                                - text: 3 years ago
+                              - link "# selling" [ref=e250] [cursor=pointer]:
+                                - /url: /tags/selling
+                                - text: "#"
+                                - generic [ref=e251]: selling
+                        - generic [ref=e255]:
+                          - textbox "Write a comment" [ref=e257]
+                          - button "Submit" [disabled] [ref=e258]
+                        - generic [ref=e259]:
+                          - generic [ref=e262]:
+                            - button "Like" [ref=e263] [cursor=pointer]:
+                              - generic: "119"
+                            - button "Repost" [ref=e264] [cursor=pointer]:
+                              - generic: "20"
+                            - button "Share" [ref=e265] [cursor=pointer]
+                            - button "Copy Link" [ref=e266] [cursor=pointer]
+                            - button "More" [ref=e267] [cursor=pointer]
+                          - list "Track stats" [ref=e270]:
+                            - listitem "2,236 plays" [ref=e271]:
+                              - generic [ref=e272]:
+                                - generic [ref=e276]: 2,236 plays
+                                - text: 2,236
+                            - listitem "3 comments" [ref=e277]:
+                              - link "View all comments" [ref=e278] [cursor=pointer]:
+                                - /url: /swomp/babysit/comments
+                                - text: "3"
+                - listitem [ref=e283]:
+                  - 'group "Track: castrate by SWOMP" [ref=e285]':
+                    - generic [ref=e286]:
+                      - link "castrate" [ref=e288] [cursor=pointer]:
+                        - /url: /swomp/castrate
+                        - generic "castrate" [ref=e290]
+                      - generic [ref=e291]:
+                        - generic "castrate" [ref=e293]:
+                          - generic [ref=e294]:
+                            - button "Play" [ref=e296] [cursor=pointer]
+                            - generic [ref=e297]:
+                              - link "SWOMP" [ref=e299] [cursor=pointer]:
+                                - /url: /swomp
+                              - link "castrate" [ref=e300] [cursor=pointer]:
+                                - /url: /swomp/castrate
+                            - generic [ref=e301]:
+                              - time [ref=e303]:
+                                - generic [ref=e304]: Posted 3 years ago
+                                - text: 3 years ago
+                              - link "# Comedy" [ref=e306] [cursor=pointer]:
+                                - /url: /tags/comedy
+                                - text: "#"
+                                - generic [ref=e307]: Comedy
+                        - generic [ref=e311]:
+                          - textbox "Write a comment" [ref=e313]
+                          - button "Submit" [disabled] [ref=e314]
+                        - generic [ref=e315]:
+                          - generic [ref=e318]:
+                            - button "Like" [ref=e319] [cursor=pointer]:
+                              - generic: "70"
+                            - button "Repost" [ref=e320] [cursor=pointer]:
+                              - generic: "14"
+                            - button "Share" [ref=e321] [cursor=pointer]
+                            - button "Copy Link" [ref=e322] [cursor=pointer]
+                            - button "More" [ref=e323] [cursor=pointer]
+                          - list "Track stats" [ref=e326]:
+                            - listitem "1,795 plays" [ref=e327]:
+                              - generic [ref=e328]:
+                                - generic [ref=e332]: 1,795 plays
+                                - text: 1,795
+                            - listitem "12 comments" [ref=e333]:
+                              - link "View all comments" [ref=e334] [cursor=pointer]:
+                                - /url: /swomp/castrate/comments
+                                - text: "12"
+                - listitem [ref=e339]:
+                  - 'group "Track: cold cake by SWOMP" [ref=e341]':
+                    - generic [ref=e342]:
+                      - link "cold cake" [ref=e344] [cursor=pointer]:
+                        - /url: /swomp/cold-cake
+                        - generic "cold cake" [ref=e346]
+                      - generic [ref=e347]:
+                        - generic "cold cake" [ref=e349]:
+                          - generic [ref=e350]:
+                            - button "Play" [ref=e352] [cursor=pointer]
+                            - generic [ref=e353]:
+                              - link "SWOMP" [ref=e355] [cursor=pointer]:
+                                - /url: /swomp
+                              - link "cold cake" [ref=e356] [cursor=pointer]:
+                                - /url: /swomp/cold-cake
+                            - generic [ref=e357]:
+                              - time [ref=e359]:
+                                - generic [ref=e360]: Posted 3 years ago
+                                - text: 3 years ago
+                              - link "# i hate wind" [ref=e362] [cursor=pointer]:
+                                - /url: /tags/i%20hate%20wind
+                                - text: "#"
+                                - generic [ref=e363]: i hate wind
+                        - generic [ref=e367]:
+                          - textbox "Write a comment" [ref=e369]
+                          - button "Submit" [disabled] [ref=e370]
+                        - generic [ref=e371]:
+                          - generic [ref=e374]:
+                            - button "Like" [ref=e375] [cursor=pointer]:
+                              - generic: "231"
+                            - button "Repost" [ref=e376] [cursor=pointer]:
+                              - generic: "23"
+                            - button "Share" [ref=e377] [cursor=pointer]
+                            - button "Copy Link" [ref=e378] [cursor=pointer]
+                            - button "More" [ref=e379] [cursor=pointer]
+                          - list "Track stats" [ref=e382]:
+                            - listitem "4,027 plays" [ref=e383]:
+                              - generic [ref=e384]:
+                                - generic [ref=e388]: 4,027 plays
+                                - text: 4,027
+                            - listitem "12 comments" [ref=e389]:
+                              - link "View all comments" [ref=e390] [cursor=pointer]:
+                                - /url: /swomp/cold-cake/comments
+                                - text: "12"
+            - generic [ref=e400]:
+              - article [ref=e401]:
+                - table [ref=e402]:
+                  - rowgroup [ref=e403]:
+                    - row [ref=e404]:
+                      - cell [ref=e405]:
+                        - link "Followers 645" [ref=e406] [cursor=pointer]:
+                          - /url: /swomp/followers
+                          - heading "Followers" [level=3] [ref=e407]
+                          - generic [ref=e408]: "645"
+                      - cell [ref=e409]:
+                        - link "Following 0" [ref=e410] [cursor=pointer]:
+                          - /url: /swomp/following
+                          - heading "Following" [level=3] [ref=e411]
+                          - generic [ref=e412]: "0"
+                      - cell [ref=e413]:
+                        - link "Tracks 15" [ref=e414] [cursor=pointer]:
+                          - /url: /swomp/tracks
+                          - heading "Tracks" [level=3] [ref=e415]
+                          - generic [ref=e416]: "15"
+                - paragraph [ref=e422]:
+                  - text: you better dm on insta @
+                  - link "cripplin2g" [ref=e423] [cursor=pointer]:
+                    - /url: /cripplin2g
+                - generic:
+                  - list
+              - article [ref=e424]:
+                - link "1 like View all" [ref=e425] [cursor=pointer]:
+                  - /url: /swomp/likes
+                  - heading "1 like" [level=4] [ref=e426]
+                  - generic [ref=e428]: View all
+                - list [ref=e431]:
+                  - listitem [ref=e432]:
+                    - generic [ref=e433]:
+                      - generic "1st demo after months of nothing" [ref=e436]
+                      - generic [ref=e437]:
+                        - generic "1st demo after months of nothing" [ref=e438]:
+                          - generic [ref=e440]:
+                            - link "VONRANZ" [ref=e442] [cursor=pointer]:
+                              - /url: /trashanz
+                            - link "1st demo after months of nothing" [ref=e443] [cursor=pointer]:
+                              - /url: /trashanz/1st-demo-after-months-of-nothing
+                        - list "Track stats" [ref=e445]:
+                          - listitem "522 plays" [ref=e446]:
+                            - generic [ref=e447]:
+                              - generic [ref=e451]: 522 plays
+                              - text: "522"
+                          - listitem "22 likes" [ref=e452]:
+                            - link "View all likes" [ref=e453] [cursor=pointer]:
+                              - /url: /trashanz/1st-demo-after-months-of-nothing/likes
+                              - text: "22"
+                          - listitem "3 reposts" [ref=e458]:
+                            - link "View all reposts" [ref=e459] [cursor=pointer]:
+                              - /url: /trashanz/1st-demo-after-months-of-nothing/reposts
+                              - text: "3"
+                          - listitem "3 comments" [ref=e465]:
+                            - link "View all comments" [ref=e466] [cursor=pointer]:
+                              - /url: /trashanz/1st-demo-after-months-of-nothing/comments
+                              - text: "3"
+              - article
+              - article [ref=e471]:
+                - link "Fans also like Refresh" [ref=e472] [cursor=pointer]:
+                  - /url: "#"
+                  - heading "Fans also like" [level=4] [ref=e473]
+                  - generic [ref=e475]: Refresh
+                - list [ref=e478]:
+                  - listitem [ref=e479]:
+                    - generic [ref=e480]:
+                      - link "sakuro2’s avatar" [ref=e484] [cursor=pointer]:
+                        - /url: /sakurodubs
+                        - generic "sakuro2’s avatar" [ref=e487]
+                      - generic [ref=e488]:
+                        - heading [level=3] [ref=e490]:
+                          - link "sakuro2" [ref=e491] [cursor=pointer]:
+                            - /url: /sakurodubs
+                        - generic "User stats" [ref=e494]:
+                          - list [ref=e495]:
+                            - listitem "1,443 followers" [ref=e496]:
+                              - link "1,443 followers" [ref=e497] [cursor=pointer]:
+                                - /url: /sakurodubs/followers
+                                - generic [ref=e503]: 1,443
+                            - listitem "43 tracks" [ref=e504]:
+                              - link "43 tracks" [ref=e505] [cursor=pointer]:
+                                - /url: /sakurodubs/tracks
+                                - generic [ref=e510]: "43"
+                      - button "Follow" [ref=e512] [cursor=pointer]
+                  - listitem [ref=e513]:
+                    - generic [ref=e514]:
+                      - link "duck’s avatar" [ref=e518] [cursor=pointer]:
+                        - /url: /d_u_c_kk
+                        - generic "duck’s avatar" [ref=e521]
+                      - generic [ref=e522]:
+                        - heading [level=3] [ref=e524]:
+                          - link "duck" [ref=e525] [cursor=pointer]:
+                            - /url: /d_u_c_kk
+                        - generic "User stats" [ref=e528]:
+                          - list [ref=e529]:
+                            - listitem "1,926 followers" [ref=e530]:
+                              - link "1,926 followers" [ref=e531] [cursor=pointer]:
+                                - /url: /d_u_c_kk/followers
+                                - generic [ref=e537]: 1,926
+                            - listitem "8 tracks" [ref=e538]:
+                              - link "8 tracks" [ref=e539] [cursor=pointer]:
+                                - /url: /d_u_c_kk/tracks
+                                - generic [ref=e544]: "8"
+                      - button "Follow" [ref=e546] [cursor=pointer]
+                  - listitem [ref=e547]:
+                    - generic [ref=e548]:
+                      - link "THE DEATH STAR’s avatar" [ref=e552] [cursor=pointer]:
+                        - /url: /the_death_star
+                        - generic "THE DEATH STAR’s avatar" [ref=e555]
+                      - generic [ref=e556]:
+                        - heading [level=3] [ref=e558]:
+                          - link "THE DEATH STAR" [ref=e559] [cursor=pointer]:
+                            - /url: /the_death_star
+                        - generic "User stats" [ref=e562]:
+                          - list [ref=e563]:
+                            - listitem "153 followers" [ref=e564]:
+                              - link "153 followers" [ref=e565] [cursor=pointer]:
+                                - /url: /the_death_star/followers
+                                - generic [ref=e571]: "153"
+                            - listitem "12 tracks" [ref=e572]:
+                              - link "12 tracks" [ref=e573] [cursor=pointer]:
+                                - /url: /the_death_star/tracks
+                                - generic [ref=e578]: "12"
+                      - button "Follow" [ref=e580] [cursor=pointer]
+              - article [ref=e581]:
+                - link "Latest Comments View all" [ref=e582] [cursor=pointer]:
+                  - /url: /swomp/comments
+                  - heading "Latest Comments" [level=4] [ref=e583]
+                  - generic [ref=e585]: View all
+                - list [ref=e588]:
+                  - listitem [ref=e589]:
+                    - generic [ref=e590]:
+                      - generic [ref=e592]:
+                        - text: "on"
+                        - link "Volative - Swomp [PATREON DUBPLATE]" [ref=e593] [cursor=pointer]:
+                          - /url: /volative2/volative-swomp-patreon-dubplate
+                      - generic [ref=e594]: “а ты знаешь что есть продюсер с ником swomp?”
+                      - time [ref=e596]:
+                        - generic [ref=e597]: Posted 3 years ago
+                        - text: 3 years ago
+              - article [ref=e598]:
+                - generic [ref=e599]:
+                  - heading "Go mobile" [level=4] [ref=e600]
+                  - generic "Dismiss"
+                - generic [ref=e603]:
+                  - link "Download on the App Store" [ref=e604] [cursor=pointer]:
+                    - /url: https://itunes.apple.com/us/app/soundcloud/id336353151?mt=8
+                  - link "Get it on Google Play" [ref=e605] [cursor=pointer]:
+                    - /url: https://play.google.com/store/apps/details?id=com.soundcloud.android&hl=us&referrer=utm_source%3Dsoundcloud%26utm_medium%3Dweb%26utm_campaign%3Dweb_xsell_user_page
+              - generic [ref=e606]:
+                - link "Legal" [ref=e607] [cursor=pointer]:
+                  - /url: /terms-of-use
+                - text: ·
+                - link "Privacy" [ref=e608] [cursor=pointer]:
+                  - /url: /pages/privacy
+                - text: ·
+                - link "Cookie Policy" [ref=e609] [cursor=pointer]:
+                  - /url: /pages/cookies
+                - text: ·
+                - link "Cookie Manager" [ref=e610] [cursor=pointer]:
+                  - /url: "#"
+                - text: ·
+                - link "Imprint" [ref=e611] [cursor=pointer]:
+                  - /url: /imprint
+                - text: ·
+                - link "Artist Resources" [ref=e612] [cursor=pointer]:
+                  - /url: https://soundcloud.com/getstarted/getheard
+                - text: ·
+                - link "Newsroom" [ref=e613] [cursor=pointer]:
+                  - /url: https://soundcloud.com/company/newsroom
+                - text: ·
+                - link "Topics" [ref=e614] [cursor=pointer]:
+                  - /url: https://soundcloud.com/topic
+                - text: ·
+                - link "Charts" [ref=e615] [cursor=pointer]:
+                  - /url: /charts/top
+                - text: ·
+                - link "Transparency Reports" [ref=e616] [cursor=pointer]:
+                  - /url: /transparency-reports
+                - text: ·
+                - link "Report intimate image abuse" [ref=e617] [cursor=pointer]:
+                  - /url: https://help.soundcloud.com/hc/en-us/articles/50382224759835
+                - 'button "Language: English (US)" [ref=e619] [cursor=pointer]'
+    - contentinfo "miniplayer" [ref=e620]:
+      - generic [ref=e621]:
+        - generic:
+          - generic:
+            - generic:
+              - generic: Next up
+              - button "Clear"
+              - button "Hide queue"
+        - generic [ref=e622]:
+          - button "Skip to previous" [ref=e623] [cursor=pointer]
+          - button "Play current" [ref=e624]
+          - button "Skip to next" [ref=e629]
+          - button "Shuffle" [ref=e631] [cursor=pointer]
+          - button "Repeat track" [ref=e633] [cursor=pointer]
+          - generic [ref=e636]:
+            - generic [ref=e637]: Volume
+            - button [ref=e639] [cursor=pointer]
+            - slider "Volume"
+  - generic: Filters
+  - iframe
+  - iframe

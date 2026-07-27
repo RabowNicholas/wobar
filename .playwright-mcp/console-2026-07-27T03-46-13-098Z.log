@@ -1,0 +1,8 @@
+[    1156ms] [WARNING] yui: NOT loaded: squarespace-visitor_site_error_reporter @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1156ms] [WARNING] yui: NOT loaded: squarespace-cldr_resource_pack @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1156ms] [WARNING] yui: NOT loaded: squarespace-common_vendors_stable @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1156ms] [WARNING] yui: NOT loaded: squarespace-common_vendors @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    1158ms] [WARNING] yui: NOT loaded: squarespace-performance @ https://assets.squarespace.com/universal/scripts-compressed/common-vendors-stable-784b947826b4c445-min.en-US.js:7
+[    2356ms] [LOG] SoundCloud Embed Player (api-web) @ https://widget.sndcdn.com/widget-9-95db8791ed05.js:54
+[    2382ms] [LOG] SoundCloud Embed Player (api-web) @ https://widget.sndcdn.com/widget-9-95db8791ed05.js:54
+[    2384ms] [LOG] SoundCloud Embed Player (api-web) @ https://widget.sndcdn.com/widget-9-95db8791ed05.js:54

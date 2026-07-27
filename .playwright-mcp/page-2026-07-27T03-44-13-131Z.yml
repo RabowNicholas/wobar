@@ -1,0 +1,7 @@
+- generic [ref=f16e2]:
+  - banner [ref=f16e3]:
+    - link "SoundCloud" [ref=f16e7] [cursor=pointer]:
+      - /url: /
+  - paragraph [ref=f16e10]:
+    - link "Popular searches" [ref=f16e11] [cursor=pointer]:
+      - /url: /popular/searches

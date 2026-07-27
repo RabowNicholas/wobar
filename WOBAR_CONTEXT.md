@@ -19,6 +19,14 @@ This is the index file for the Wobar project reference system. Read this file fi
 | [[skills/README]] | /skills | Source of truth for WOBAR Claude skills — `~/.claude/skills/` on each machine is a synced copy | live |
 | [[working/WOBAR_ACTIVE]] | /working | Open project loops, current context, session history | live |
 | [[working/WOBAR_CLOSED]] | /working | Completed project loops, archived from WOBAR_ACTIVE | live |
+| [[working/WOBAR_GROWTH_PLAN]] | /working | **GOVERNING — read before any growth/content/platform decision.** 12-month goal (people listening, online): SoundCloud-first, flips as a numbered main-account series, originals to a 2-track reserve on day-60 calendar release, 7 corrected label doors, DJ promo, IG demoted to a 5-second credibility surface. Every claim confidence-tagged. Supersedes the social strategy in WOBAR_CONTENT | live (v1.0) |
+| [[working/RESEARCH_VERIFICATION_MEMO]] | /working | **Read before trusting any 2026-07-26 research file.** 13-agent adversarial verification — 9 of 10 claims UNSUPPORTED, two sub-reports contained fabricated data. What survived, what didn't, and what nobody has measured | live |
+| [[working/RESEARCH_LABEL_MAP]] | /working | Where the artists in Wobar's set actually release. Three lanes (US wonky-140/flip · psy-bass · deep dubstep), label→artist map, Beatport chart read, adjacent-artist list, corrected demo doors | live |
+| [[working/RESEARCH_SOUNDCLOUD_COMPS]] | /working | Cross-platform comp table (SoundCloud vs IG vs Spotify listeners) for 14 lane artists. Carries corrections — see header | live |
+| [[working/RESEARCH_IG_COMPS]] | /working | Instagram comp sweep v2, neutral-frame sampled from label rosters. v1's cohort was convenience-sampled; two findings retracted | live (v2.0) |
+| [[working/RESEARCH_IG_CONVERSION]] | /working | Does IG convert? Study A (IG vs Spotify listeners) + Study B (do labels gate on audience). Study B survives; Study A downgraded — see header | live |
+| [[working/RESEARCH_IG_MECHANICS]] | /working | IG platform mechanics 2026 — ranking signals, Trial Reels, Meta Series, source-tiered claims table | live |
+| [[working/IG_COMP_SAMPLE_FRAME]] | /working | The sampling frame + handle-resolution method behind the comp sweeps. Documents the convenience-sampling failure and the fix | live |
 | [[working/WOBAR_PLACEMENT_PLAN]] | /working | Get-heard strategy — curators/promoters/labels, Denver scene convergence, label roadmap (Local Void start-here), promo-service verdicts, DIY ads playbook | live |
 | [[working/MIRROR_THRESHOLD_SPEC]] | /working | Mirror Threshold build spec — the SMS door into the Ether; Twilio + Next.js/Neon/Vercel integration, state machine, compliance | live |
 | [[working/WEB_HOME_SPEC]] | /working | The web home = a terminal you wander (early-RPG), guided by *the daemon*; full rebuild of wobar-landing-page; paths, offerings, AI rails | live |
@@ -105,6 +113,8 @@ This is the index file for the Wobar project reference system. Read this file fi
 **Brand files above override the general library** — WOBAR_TD_AGENT_RULES and WOBAR_TD_REFERENCE are source of truth for brand constraints. Use td_library when the question is about TD itself, not WOBAR-specific conventions. Don't read the whole library — pull the one file the task needs via `TD_LIBRARY_INDEX`.
 
 ## Current State
+**Growth strategy rebuilt 2026-07-26.** `working/WOBAR_GROWTH_PLAN.md` is the governing execution doc for the next 12 months (goal: people listening, online). SoundCloud is the priority surface; Instagram is demoted to a credibility surface. Seven label doors verified open. **`reference/WOBAR_SONIC.md` comps are wrong and need a pass** — Of The Trees / Shlump / INZO describe only the final 22 minutes of Nick's set; the center of mass is dark/wonky 140 + rap flips. `WOBAR_CONTENT.md`'s social strategy is superseded by the growth plan. Mirror Threshold + Terminal Rebuild PARKED.
+
 Brand 6.0 locked March 2026. All files reflect current version.
 TWOZERO MCP integration added April 2026. TD agent rules established.
 Move history system added April 2026. Three slash commands: /td-build, /td-undo, /td-save.

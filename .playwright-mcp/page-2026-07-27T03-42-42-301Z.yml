@@ -1,0 +1,80 @@
+- generic [ref=f30e2]:
+  - generic [ref=f30e3]:
+    - generic [ref=f30e6]:
+      - generic [ref=f30e8]:
+        - generic [ref=f30e10]:
+          - heading "Local Void Records" [level=1] [ref=f30e12]
+          - generic [ref=f30e13]: Demo Submission Form
+        - generic [ref=f30e15]:
+          - generic [ref=f30e17]:
+            - link "Sign in to Google" [ref=f30e18] [cursor=pointer]:
+              - /url: https://accounts.google.com/AccountChooser?continue=https://docs.google.com/forms/d/e/1FAIpQLScI0h0yP0g1-BtQTkJLd7dvrzRuKmLqdhPxaZWd7wOXPxqCTw/viewform?usp%3Dheader&service=wise
+            - text: to save your progress.
+            - button "Learn more" [ref=f30e19] [cursor=pointer]
+          - generic [ref=f30e21]: "* Indicates required question"
+      - list [ref=f30e22]:
+        - listitem [ref=f30e23]:
+          - generic [ref=f30e25]:
+            - heading "Email Required question" [level=3] [ref=f30e27]:
+              - generic [ref=f30e28]: Email
+              - generic "Required question" [ref=f30e29]: "*"
+            - generic [ref=f30e33]:
+              - textbox "Your email" [disabled] [ref=f30e34]
+              - generic: Your email
+        - listitem [ref=f30e36]:
+          - generic [ref=f30e38]:
+            - heading "Artist Instagram Page Required question" [level=3] [ref=f30e41]:
+              - generic [ref=f30e42]: Artist Instagram Page
+              - generic "Required question" [ref=f30e43]: "*"
+            - generic [ref=f30e48]:
+              - textbox "Artist Instagram Page Required question" [disabled] [ref=f30e49]
+              - generic: Your answer
+        - listitem [ref=f30e51]:
+          - generic [ref=f30e53]:
+            - heading "Artist Facebook Page" [level=3] [ref=f30e56]
+            - generic [ref=f30e62]:
+              - textbox "Artist Facebook Page" [disabled] [ref=f30e63]
+              - generic: Your answer
+        - listitem [ref=f30e65]:
+          - generic [ref=f30e67]:
+            - heading "Artist Tiktok account Required question" [level=3] [ref=f30e70]:
+              - generic [ref=f30e71]: Artist Tiktok account
+              - generic "Required question" [ref=f30e72]: "*"
+            - generic [ref=f30e77]:
+              - textbox "Artist Tiktok account Required question" [disabled] [ref=f30e78]
+              - generic: Your answer
+        - listitem [ref=f30e80]:
+          - generic [ref=f30e82]:
+            - heading "Artist X account Required question" [level=3] [ref=f30e85]:
+              - generic [ref=f30e86]: Artist X account
+              - generic "Required question" [ref=f30e87]: "*"
+            - generic [ref=f30e92]:
+              - textbox "Artist X account Required question" [disabled] [ref=f30e93]
+              - generic: Your answer
+        - listitem [ref=f30e95]:
+          - generic [ref=f30e97]:
+            - heading "Link to demo 👇 Required question" [level=3] [ref=f30e100]:
+              - generic [ref=f30e101]: Link to demo 👇
+              - generic "Required question" [ref=f30e102]: "*"
+            - generic [ref=f30e107]:
+              - textbox "Link to demo 👇 Required question" [disabled] [ref=f30e108]
+              - generic: Your answer
+      - generic [ref=f30e110]:
+        - generic [ref=f30e111]:
+          - button "Submit" [ref=f30e113] [cursor=pointer]
+          - button "Clear form" [ref=f30e118] [cursor=pointer]
+        - generic [ref=f30e122]: Never submit passwords through Google Forms.
+    - generic [ref=f30e123]:
+      - generic [ref=f30e124]:
+        - text: This form was created inside of Local Void.
+        - paragraph [ref=f30e125]:
+          - text: Does this form look suspicious?
+          - link "Report" [ref=f30e126] [cursor=pointer]:
+            - /url: https://docs.google.com/forms/d/e/1FAIpQLScI0h0yP0g1-BtQTkJLd7dvrzRuKmLqdhPxaZWd7wOXPxqCTw/abuse
+      - link [ref=f30e128] [cursor=pointer]:
+        - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+        - img "Google" [ref=f30e129]
+        - text: Forms
+  - generic [ref=f30e133]:
+    - button "help and feedback" [ref=f30e134] [cursor=pointer]
+    - tooltip [ref=f30e137]: Help and feedback

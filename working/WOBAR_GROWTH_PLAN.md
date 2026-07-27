@@ -1,0 +1,188 @@
+---
+title: Wobar Growth Plan
+version: 1.0
+created: 2026-07-26
+last_updated: 2026-07-26
+status: live — governing document for the next 12 months
+scope: What Wobar does to get people listening. Supersedes the social-media strategy in WOBAR_CONTENT.md and reweights WOBAR_PLACEMENT_PLAN.md. Built from the 2026-07-26 research session and its adversarial verification.
+dependencies: [[working/RESEARCH_VERIFICATION_MEMO]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/RESEARCH_SOUNDCLOUD_COMPS]], [[reference/WOBAR_CONTENT]]
+---
+
+# WOBAR GROWTH PLAN
+
+## The goal
+**12 months: people listening. Online, not local.**
+Measurable version: **Spotify monthly listeners up from 26. SoundCloud followers up from 55.**
+
+The headline-room vision (a Wobar-headlined night with the full AV system executed) is the longer arc. It is not this year's target and nothing here is optimised for it.
+
+## Confidence tags
+Used throughout. After adversarial verification found 9 of 10 load-bearing claims **unsupported**, everything in this plan carries its evidence grade.
+
+- **[SOLID]** — verified, Tier 1 or multiple independent Tier 2
+- **[OBSERVED]** — real first-party data, uncontrolled
+- **[JUDGMENT]** — reasoned, unproven
+- **[UNSUPPORTED]** — no credible published evidence either way
+
+---
+
+## Starting position (2026-07-26)
+| | |
+|---|---|
+| Spotify monthly listeners | **26** |
+| SoundCloud followers | **55** (11 tracks, newest 196 plays) |
+| Instagram followers | **400** (101 posts, 116,070 views/90d) |
+| Label releases | **0** — all self-released |
+| Demo submissions ever sent | **0** |
+
+---
+
+## 1. Output — the only non-optional part
+
+**One original + one flip per month.**
+
+Everything below is routing. If output stops, none of it matters.
+
+Every door in this plan is taste-gated, and **no research in this session touched whether the music clears the bar.** That is the actual binding constraint and it is not addressable by strategy.
+
+---
+
+## 2. SoundCloud — the home
+
+**[OBSERVED]** The lane lives here. Tape B 162K · Phrva 51.9K · flozone 33.7K · STVSH 26K · blurrd vzn 21.9K · Gunpoint 19.5K · OkayJake 19.5K · Acyan 17.2K · dêtre 15.4K · cozy kev 13.3K · ISEEU 11.1K · DAGGZ 10.9K. Most run SoundCloud ≥ Instagram.
+
+**Wobar is inverted — 400 IG / 55 SC — and 55 sits 34× below the smallest peer account. This is the real deficit.** Six months of Instagram work went into the platform where the gap was smallest.
+
+### Flips: main account, numbered series
+**[SOLID — primary evidence, Nick 2026-07-26]** Tape B runs **multiple concurrent numbered flip series on his verified main handle**: *Vibe Check Vol. 2 / Vol. 3*, *Driptapes Vol. 5 / Vol. 6*. Vol. 3's tracklist is uncleared major-label material — Mariah Carey *Obsessed*, Lady Gaga *Alejandro*, Destiny's Child *Say My Name*, t.A.T.u., Skrillex, BAR9. GorillaT runs *Gorilla Tapes Volume 1* the same way.
+
+→ **Account separation is NOT the practice in this scene.** An earlier recommendation to split handles is retracted; it derived an action from a confirmed *mechanism* (strikes are account-level and terminal) without a measured *rate*, against an observed industry norm that runs the other way.
+
+→ **The numbered flip series is a real, established format.** Name it, number it, keep it running. *Portal Journey* already exists at 002.
+
+### Flips are the traffic
+**[OBSERVED — best-controlled datapoint in the session]** Inside *Vibe Check Vol. 3*, same account, same playlist, same period:
+- Mariah Carey flip — **867K**
+- Tape B original (*Sleeptalk VIP x Bullet Train*) — **216K**
+
+**~4× in favour of the flip**, controlled for artist, audience and timing in a way no cross-sectional comp data was.
+
+### Fix the bio
+**[JUDGMENT]** Five dense paragraphs of world-doc prose is a wall against the five-second read a DJ or A&R gives a profile. Cut to: what the music is · where he plays · how to reach him. The world **shows**; it does not explain.
+
+---
+
+## 3. Originals — the only thing that produces listeners
+
+**[SOLID]** Uncleared flips **cannot** reach Spotify or Apple. Distribution requires permission from both master and composition owner; the compulsory mechanical licence covers *covers only* and explicitly excludes remixes. The May 2026 Spotify/UMG remix product is a paid Premium AI feature, not a distribution path.
+→ **Monthly listeners come from originals. Full stop.**
+
+**[SOLID]** Unofficial remixes are **permanently non-monetisable** on SoundCloud. Zero revenue from flips, forever. Budget them as pure marketing.
+
+### Routing, per original
+1. Finish → strong? → **reserve**
+2. Submit to labels + send to DJs
+3. **Day 60: self-release regardless of response**
+4. **Hold at most TWO at a time**
+
+**Why day 60, not "after rejection":** silence is the modal outcome; rejection is rarely delivered. A conditional exit almost never fires.
+
+**Why cap at two, not 4–6:** labels commonly require unreleased **and unpublished** — explicitly including no prior free download. Holding six embargoes the release channel entirely. Two guarantees something is always shippable. *(This deadlock was surfaced by the verification pass and is a real defect in the earlier version of this plan.)*
+
+Spotify gets fed on a 60-day lag. Acceptable.
+
+---
+
+## 4. Labels — seven open doors, corrected
+
+**[SOLID]** All seven verified open 2026-07-26/27 by live load.
+**[SOLID]** Audience is **not** a gate — Jadū Dala released **Vulora at ≤2,324 IG followers and 119 monthly listeners**. Wobar is already inside the range these labels demonstrably sign at.
+
+| Label | Door | Correction / requirement |
+|---|---|---|
+| **Jadū Dala** | **Email** `jadudala@gmail.com` | Their own page: *"Please send private links."* **Not** the LabelRadar portal |
+| **Gravitas** | `gravitasrecordings.com/demos` | Only stated rule is **"unreleased."** The "finished + mastered" bar is **not on their page**. Has a **second, undisclosed LabelRadar door** accepting Dubstep |
+| **Local Void** | Google Form | **TikTok and X account fields are required** — create them first |
+| **SubCarbon** | `submissions@subcarbon.be` | **Email only. Never SoundCloud DMs** (their explicit instruction) |
+| **Wubaholics** | LabelRadar portal | Credit-metered, ~$1/refill |
+| **Deep Dark & Dangerous** | `demo@deepdarkdangerous.com` | — |
+| **Trippy Bee** | `trippybeerecords.com/contact` | — |
+
+**[SOLID]** LabelRadar judges **a 20-second clip you select**, not the full track. That clip choice is a creative decision.
+
+**Re-check every door before sending** — Wormhole's portal was found *closed* by one researcher while another found it open. State flips.
+
+**[UNSUPPORTED]** Whether a signing *causes* listener growth is unmeasured. No difference-in-differences, synthetic control, matched-cohort or event study exists anywhere; Chartmetric, Soundcharts, Songstats and Luminate all hold the panel data and none has published. Treat each submission as a lottery ticket with genuinely unknown odds — acceptable because the ticket is nearly free.
+
+---
+
+## 5. DJ promo — cheap, unproven, do it anyway
+
+**[UNSUPPORTED]** No published response rates exist. Promo platforms publish denominators (30M promos delivered, 125,000 tastemakers) and withhold every numerator. Inflyte — the industry rail — states plainly: *"Inflyte does not provide mailing lists, you are required to import your own."* Structurally closed without existing relationships.
+
+**[JUDGMENT]** Do it anyway. Cost is a private link and a message.
+
+**The unused asset: Flow State books DJs.** Direct, legitimate contact with artists in this exact lane that almost no bedroom producer has. Not cold outreach — he's the person who books and pays them.
+
+Private links, same afternoon as label submissions. Track who plays what.
+
+---
+
+## 6. Instagram — wipe, then leave it alone
+
+**[OBSERVED — first-party]** 90 days: 116,070 views · 9,148 non-follower accounts reached · **706 profile visits · 20 external link taps · ~0 follows.**
+
+**Decision (Nick, 2026-07-26): wipe the account and post full songs as phone screen recordings.** Precedented in the comp set — Of The Trees rebuilt at 25 posts, `@eatermusic` runs 12.1K followers on 4 posts.
+
+**Job: five-second credibility for people being reached out to. Not growth.** Stop opening Insights.
+
+**[JUDGMENT]** The echo-chamber read holds: what performs on peer accounts is producer-to-producer content — DAW screens, studio talking-head, "rap and dubstep go too damn well together," "no hashtags bc idk what genre my music is anymore." It recruits producers, not listeners.
+
+**[UNSUPPORTED]** The general claim that Instagram doesn't build artist careers. Untested, nobody has published. The decision to deprioritise rests on Wobar's own funnel, which is sufficient.
+
+---
+
+## 7. Parked — consciously
+
+Terminal Rebuild · Mirror Threshold / the Ether · IG growth strategy · per-track visualizers for social · world-doc expansion · the live TD performance system.
+
+None is the constraint. **The TouchDesigner work is parked, not dead** — it's what makes the headline-room version possible later, and Memory Palace (the crown target) is explicitly visual-led.
+
+---
+
+## 8. Metrics
+
+**Track:**
+- **SoundCloud followers** — primary. Baseline **55**
+- **Spotify monthly listeners** — the goal. Baseline **26**
+- **Submissions sent** — baseline **0**
+- **DJ plays / support** — binary, log who
+
+**Do not track:** IG followers, IG reach, IG views.
+
+---
+
+## 9. What this plan does not know
+
+**[SOLID — these are gaps in the world, not the research]**
+1. The causal effect of a label signing on streams
+2. Demo acceptance rates — LabelRadar has ~500K submissions, 1,000+ labels, $300K ARR selling credits, and has never published a signings figure
+3. DJ promo response rates
+4. Uncleared-flip takedown base rates
+5. Where bass/140 A&Rs actually source signings
+6. **Whether long-form drives follower conversion — every measurement anywhere was *plays*, never *followers***
+7. IG followers vs Spotify listeners for emerging electronic artists
+
+**And the one that matters most: whether the music is good enough.** Every door is taste-gated. Nothing researched speaks to it.
+
+---
+
+## 10. Corrections this plan carries
+
+Recorded so they don't get re-derived:
+- **"Split the SoundCloud accounts"** — RETRACTED. Refuted by Tape B / GorillaT running numbered flip series on main verified accounts.
+- **"Flips are the growth lever"** — was rejected by the verification pass on n=3; **reinstated** on the Tape B within-playlist comparison (867K vs 216K), which is better-controlled.
+- **"Mix series don't work"** — was the verification pass's read; **refuted** by Tape B's multiple concurrent numbered series.
+- **"Labels produce listeners"** — remains **UNSUPPORTED**. The plan proceeds on cost, not on proven return.
+- **"There's no streaming problem, there's a follower problem"** — do NOT use. Interventional claim from a cross-sectional correlation shown to be a scale artifact.
+- **`WOBAR_SONIC.md` comps are wrong** — Of The Trees / Shlump / INZO describe the final 22 minutes of the set. Center of mass is dark/wonky 140 + rap flips (~45% of runtime; STVSH most-played). Needs a pass.

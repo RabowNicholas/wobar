@@ -1,0 +1,73 @@
+- generic [ref=f28e2]:
+  - generic [ref=f28e4]:
+    - generic [ref=f28e7]:
+      - generic [ref=f28e9]:
+        - generic [ref=f28e11]:
+          - heading "Trippy Bee Records - Music Submissions" [level=1] [ref=f28e13]
+          - generic [ref=f28e14]:
+            - text: Thanks for thinking of Trippy Bee Records!
+            - generic [ref=f28e16]: Please fill out the form below and we will get back to you if your release is a fit for Trippy Bee.
+        - generic [ref=f28e18]:
+          - generic [ref=f28e20]:
+            - link "Sign in to Google" [ref=f28e21] [cursor=pointer]:
+              - /url: https://accounts.google.com/Login?continue=https%3A%2F%2Fdocs.google.com%2Fforms%2Fd%2Fe%2F1FAIpQLSfE2Xr2bAbft99zf75WP1g_NTldUfoVihjpM9MpQ0_ioajNaw%2Fviewform%3Ffbzx%3D-8285189709644073140
+            - text: to save your progress.
+            - button "Learn more" [ref=f28e22] [cursor=pointer]
+          - generic [ref=f28e24]: "* Indicates required question"
+      - list [ref=f28e25]:
+        - listitem [ref=f28e26]:
+          - generic [ref=f28e28]:
+            - heading "What is your artist name? Required question" [level=3] [ref=f28e31]:
+              - generic [ref=f28e32]: What is your artist name?
+              - generic "Required question" [ref=f28e33]: "*"
+            - generic [ref=f28e38]:
+              - textbox "What is your artist name? Required question" [ref=f28e39]
+              - generic: Your answer
+        - listitem [ref=f28e41]:
+          - generic [ref=f28e43]:
+            - heading "Email contact? Required question" [level=3] [ref=f28e46]:
+              - generic [ref=f28e47]: Email contact?
+              - generic "Required question" [ref=f28e48]: "*"
+            - generic [ref=f28e53]:
+              - textbox "Email contact? Required question" [ref=f28e54]
+              - generic: Your answer
+        - listitem [ref=f28e56]:
+          - generic [ref=f28e58]:
+            - heading "Please send Instagram link to your artist project Required question" [level=3] [ref=f28e61]:
+              - generic [ref=f28e62]: Please send Instagram link to your artist project
+              - generic "Required question" [ref=f28e63]: "*"
+            - generic [ref=f28e66]:
+              - generic: Your answer
+              - textbox "Please send Instagram link to your artist project Required question" [ref=f28e68]
+        - listitem [ref=f28e70]:
+          - generic [ref=f28e72]:
+            - heading "Please send a private SoundCloud or Dropbox link to your submission Required question" [level=3] [ref=f28e75]:
+              - generic [ref=f28e76]: Please send a private SoundCloud or Dropbox link to your submission
+              - generic "Required question" [ref=f28e77]: "*"
+            - generic [ref=f28e82]:
+              - textbox "Please send a private SoundCloud or Dropbox link to your submission Required question" [ref=f28e83]
+              - generic: Your answer
+      - generic [ref=f28e85]:
+        - generic [ref=f28e86]:
+          - button "Submit" [ref=f28e88] [cursor=pointer]
+          - button "Clear form" [ref=f28e93] [cursor=pointer]
+        - generic [ref=f28e97]: Never submit passwords through Google Forms.
+    - generic [ref=f28e98]:
+      - generic [ref=f28e99]:
+        - text: This content is neither created nor endorsed by Google. -
+        - link "Terms of Service" [ref=f28e100] [cursor=pointer]:
+          - /url: https://policies.google.com/terms
+        - text: "-"
+        - link "Privacy Policy" [ref=f28e101] [cursor=pointer]:
+          - /url: https://policies.google.com/privacy
+        - paragraph [ref=f28e102]:
+          - text: Does this form look suspicious?
+          - link "Report" [ref=f28e103] [cursor=pointer]:
+            - /url: https://docs.google.com/forms/d/e/1FAIpQLSfE2Xr2bAbft99zf75WP1g_NTldUfoVihjpM9MpQ0_ioajNaw/abuse
+      - link [ref=f28e105] [cursor=pointer]:
+        - /url: //www.google.com/forms/about/?utm_source=product&utm_medium=forms_logo&utm_campaign=forms
+        - img "Google" [ref=f28e106]
+        - text: Forms
+  - generic [ref=f28e110]:
+    - button "help and feedback" [ref=f28e111] [cursor=pointer]
+    - tooltip [ref=f28e114]: Help and feedback

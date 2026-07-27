@@ -1,13 +1,23 @@
 ---
 title: Wobar Placement Plan
-version: 1.1 (research-backed + Spotify-mechanics pass)
-last_updated: 2026-07-23
+version: 1.2 (+ DJ-promo lever, corrected doors, lane correction — amended 2026-07-26)
+last_updated: 2026-07-26
 status: live
 scope: The "get-heard" layer on top of the release machine. Three levers — curators, promoters/scene, labels — all in service of one win: a growing listening audience. Sits on top of RELEASE_PACKET.xlsx, does not replace it. Backed by deep research run 2026-06-18 (run wf_2808965e, 19 claims verified / 6 refuted) + a Spotify-recommender field-guide pass 2026-07-23 (coherence-over-volume, Source-of-Streams instrument, pitch-metadata-as-recommender-input).
 dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEASE_PACKET.xlsx
 ---
 
 # WOBAR PLACEMENT PLAN
+
+> ## ⚠ AMENDED 2026-07-26 — read [[working/WOBAR_GROWTH_PLAN]] first
+> That doc is now the governing execution plan; this one remains the lever map. Six amendments from the 2026-07-26 research session + its 13-agent adversarial verification (`wf_98fcbeed-183`):
+>
+> 1. **A fourth lever exists and was missing: DIRECT DJ PROMO.** See §DJ Promo below. In 140/dubstep the credential is *who plays you*, not stream counts.
+> 2. **Lane corrected.** The center of mass is **dark/wonky 140 + rap flips** (~45% of Nick's set; STVSH most-played). This plan was weighted for the psy-bass ladder, which is his *outro* — ~24%. A whole third label lane (Jadū Dala, Wubaholics, Good Society, PullUp, Odyzey, Wormhole) was absent. See [[working/RESEARCH_LABEL_MAP]].
+> 3. **Deadbeats "DROPPED" is REVERSED.** 10 entries in Beatport's 140 Top 100; carries STVSH, Coka Cobra+Ero808, Tape B, Distinct Motive, Zero (UK), Phrva, Borne. The "too broad/mainstream" call was made on psy-bass grounds and does not survive.
+> 4. **Audience is NOT a label gate — confirmed harder than the original myth-bust.** Jadū Dala released **Vulora at ≤2,324 IG followers and 119 monthly listeners.** The doors sign below where Wobar already is.
+> 5. **The Spotify-mechanics pass (v1.1) is calibrated for an artist who has an audience.** At **26 monthly listeners** there is no coherent signal for the recommender to read. Editorial pitching, Source-of-Streams diagnostics and save-rate targets stay correct but are not this year's lever.
+> 6. **[UNSUPPORTED] Whether a label signing causes listener growth.** No difference-in-differences, synthetic control, matched-cohort or event study exists anywhere; Chartmetric/Soundcharts/Songstats/Luminate hold the panel data and none has published. The label lever proceeds on **near-zero cost**, not on proven return.
 
 ## North Star
 **People listening. Audience growing.** Not playlist adds or a label logo as trophies — actual listeners. Every lever is judged by whether it grows the count of people hearing Wobar. A tactic that doesn't move that gets cut.
@@ -101,6 +111,40 @@ dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEA
 - **First submission target: Local Void open portal** (re-verify live).
 - Reserve unreleased originals; submit to Gravitas / SubCarbon / Trippy Bee as ready.
 - Memory Palace + WAKAAN = scene-and-catalog earned, later.
+
+---
+
+---
+
+## DJ PROMO — the fourth lever (added 2026-07-26)
+
+**Why it belongs here.** In 140/deep dubstep the currency is *who plays you*. Distinct Motive is described everywhere by support — Mala, Truth, J.Sparrow, J:Kenzo — not by stream counts. This plan had curators, promoters/scene and labels, and no channel for the thing the scene actually credentials on.
+
+**Profile — same shape as the label lever:** costs a private link and a message · requires no audience · works on unreleased material so it doesn't burn the reserve · feeds the label lever (labels notice tracks DJs are playing) · and feeds SoundCloud reposts.
+
+**The unused asset: Flow State books DJs.** Direct, legitimate contact with artists in this exact lane that almost no bedroom producer has. Not cold outreach — Nick is the person who books and pays them. This is the single most underused relationship channel in the whole plan.
+
+**[UNSUPPORTED] — stated plainly.** No published response rates exist. Promo platforms publish denominators (30M promos delivered, 125,000 tastemakers) and withhold every numerator. **Inflyte, the industry-standard rail, states: *"Inflyte does not provide mailing lists, you are required to import your own."*** — structurally closed to anyone without pre-existing relationships. Do it because it's nearly free, not because the odds are known.
+
+**Track:** who received, who played. Binary, per artist.
+
+---
+
+## Corrected label doors (verified 2026-07-26/27 by live load)
+
+| Label | Door | Correction |
+|---|---|---|
+| **Jadū Dala** | **Email** `jadudala@gmail.com` | Their own page: *"Please send private links."* **NOT the LabelRadar portal** |
+| **Gravitas** | `gravitasrecordings.com/demos` | Only stated rule is **"unreleased"** — the "finished + mastered" bar is **not on their page**. Has a **second, undisclosed LabelRadar door** accepting Dubstep |
+| **Local Void** | Google Form | **TikTok + X account fields are required** |
+| **SubCarbon** | `submissions@subcarbon.be` | **Email only — never SoundCloud DMs** (their explicit instruction) |
+| **Wubaholics** | LabelRadar | Credit-metered, ~$1/refill |
+| **Deep Dark & Dangerous** | `demo@deepdarkdangerous.com` | — |
+| **Trippy Bee** | `trippybeerecords.com/contact` | — |
+
+**LabelRadar judges a 20-second clip you select**, not the full track — that choice is a creative decision. **Re-check every door before sending**; Wormhole was found open by one researcher and closed by another within the same day.
+
+**Two circulating statistics are FABRICATED — do not build on them:** "87% of labels accept demos" / "Warner: 34% of signings from direct online submissions" (DropTrack, which sells submission credits) and "r=0.82, Billboard Pro 2025 validation study" / "MBW audit of 400 indie artists." **Neither study exists.** Both dominate search results on exactly these questions.
 
 ---
 
