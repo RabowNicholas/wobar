@@ -1,7 +1,7 @@
 ---
 title: Wobar Context Index
-version: 1.1 (+ the Drift Rule — form-vs-state, one-owner-per-fact 2026-07-27)
-last_updated: 2026-07-27
+version: 1.2 (+ Reddit channel registered 2026-07-28)
+last_updated: 2026-07-28
 status: live
 scope: Master index for all Wobar reference files. Read this first in every conversation.
 dependencies: none
@@ -42,6 +42,7 @@ Every mutable fact has **exactly one owning file**. Every other mention is a `[[
 | Surface **exposure status + decisions** | [[working/WOBAR_SURFACES]] |
 | Reference artists / comps, by register | [[reference/WOBAR_SONIC]] — the six-register table |
 | Bio copy (EPK + world-facing) | [[reference/WOBAR_COPY]] — BIO TEMPLATES |
+| Reddit strategy + subreddit data | **Loop RETIRED 2026-07-28** — [[working/WOBAR_REDDIT_PLAN]] + [[working/RESEARCH_REDDIT_SUBS]] preserved as reference only, not live strategy |
 | Released catalogue | **No owner yet — deliberately not in a locked doc.** Needs a working file if it's wanted |
 
 ### 3. Shape matters as much as content
@@ -69,6 +70,8 @@ A **flat list standing in for a structured thing** is a drift generator, not jus
 | [[working/WOBAR_ROADMAP]] | /working | **THE EXECUTION LAYER — read with the Growth Plan.** The four funnels (self-release is the only one that exits to a listener; labels/flips/DJ all feed it), the operating rhythm (the daily is "make music"; everything else is minutes), **six phase gates** from Foundation → End the zero → VA route → Cadence lock → Fill the register gaps → Relationship layer → Compound, and a scorecard split into **leading (controlled — the actual goal)** vs lagging (not controlled — direction only). **Owns milestones and phase gates**; restates nothing owned elsewhere | live (v1.0) |
 | [[working/RESEARCH_VERIFICATION_MEMO]] | /working | **Read before trusting any 2026-07-26 research file.** 13-agent adversarial verification — 9 of 10 claims UNSUPPORTED, two sub-reports contained fabricated data. What survived, what didn't, and what nobody has measured | live |
 | [[working/RESEARCH_LABEL_LANDSCAPE]] | /working | **GOVERNING for label targeting.** Tiered door list for the dark/wonky 140 lane, verified 2026-07-27 by direct browser load. Two screens do the work: **founder share of Top 10** (kills release vehicles) and **set overlap** (Nick's own set vs each label's top sellers). Deadbeats' free 4-field Google Form is the headline. **§2.5 = the Beatport visibility sweep** (sales vs editorial are two different systems; best-fit doors have near-zero visibility). **§2.6 = the artist-discography sweep — 22 new labels and the VA compilation economy: ten recurring multi-artist series, most 20+ artists per volume, all live. A 29-slot compilation vs a one-slot signing is the biggest strategic find in the file.** Supersedes the door/tier tables in RESEARCH_LABEL_MAP and the label section of WOBAR_GROWTH_PLAN | live (v4.0 — unreviewed) |
+| [[working/WOBAR_REDDIT_PLAN]] | /working | 🔴 **RETIRED 2026-07-28 — reference only, not live strategy.** Reddit as a community channel into SoundCloud. Its finding survives the loop: **the rule regimes are inverted** — feedback subs (r/edmproduction, r/trapproduction, r/WATMM) explicitly **ban SoundCloud links**, while the subs that allow them (r/dubstep ~1/day, r/riddim no rule at all) don't run on feedback, so the link lane and the name lane are two different jobs. Verbatim rule text for 8 subs. Closure reasoning in [[working/WOBAR_CLOSED]] | retired (v1.0) |
+| [[working/RESEARCH_REDDIT_SUBS]] | /working | 🔴 **RETIRED 2026-07-28 — reference only.** Discovery + activity data, 179 bass/140/fan/festival subs, 150 activity-measured. Three sweeps: genre vocabulary · **empirical artist-location** (where the lane's posts actually live — a method reusable on any platform) · artist+festival. **Finds r/SpaceBass (36,414, 16/24 lane artists, "Genre Defying Bass")** and kills 57 dead subs incl. r/bassmusicproduction at 1,073 days. **Genre subs run 0–2 median comments; festival/artist subs run 6–16** — carries its own confound warning on that column | retired (v2.0) |
 | [[working/RESEARCH_LABEL_MAP]] | /working | Where the artists in Wobar's set actually release. Three lanes (US wonky-140/flip · psy-bass · deep dubstep), label→artist map, Beatport chart read, adjacent-artist list. **Door status superseded by RESEARCH_LABEL_LANDSCAPE** | live (partly superseded) |
 | [[working/RESEARCH_SOUNDCLOUD_COMPS]] | /working | Cross-platform comp table (SoundCloud vs IG vs Spotify listeners) for 14 lane artists. Carries corrections — see header | live |
 | [[working/RESEARCH_IG_COMPS]] | /working | Instagram comp sweep v2, neutral-frame sampled from label rosters. v1's cohort was convenience-sampled; two findings retracted | live (v2.0) |

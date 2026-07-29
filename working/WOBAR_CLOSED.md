@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-07-27
+last_updated: 2026-07-28
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,28 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Reddit — community channel into SoundCloud — RETIRED, JUDGED LOW-YIELD
+
+**Closed:** 2026-07-28 — Nick's call, same day it opened: *"you can close the reddit loop. i dont think it will amount to much."* Retired on expected yield, not on evidence of failure — nothing was ever posted, so the channel was never tested. The research that produced it is preserved and the 16 joined subs cost nothing to keep.
+
+**What it was:** Opened during a funnel review in which Nick moved off Instagram/TikTok — *"I am done taking a gamble on socials being the main driver of this funnel"* — toward SoundCloud, direct artist outreach, and Reddit. The Reddit thesis was **community involvement over algorithms: win one fan at a time in rooms where listeners already look for music.** Locked inputs: Wobar-branded account, currency = music feedback + production/sound-design help, win metric = **SoundCloud followers (baseline 55)**, Nick's own voice rather than the world-doc register, starting cold, time not a constraint.
+
+**The finding that survives it — the rule regimes are inverted.** Reddit music subs split into two opposite regimes, and the split defeats the obvious strategy. **Feedback subs ban SoundCloud links outright:** r/edmproduction's daily thread reads verbatim *"no links to Spotify, Bandcamp, SoundCloud profiles, or any other streaming/distribution platforms"*, WIP-only and unlisted-only, with automod deleting any comment that doesn't link the feedback you gave; r/trapproduction Rule 1 names SoundCloud specifically; r/WeAreTheMusicMakers (3.8M) headlines with *NO POSTING MUSIC — NO PROMOTION OR FEEDBACK*. **The subs that allow links don't run on feedback at all:** r/dubstep Rule 5 permits self-promo at ~1/day for complete tracks, r/riddim has no self-promo rule whatsoever, r/futuregarage allows one per seven days. → *"give great feedback, get link clicks"* cannot run as a single loop. Any future attempt at this channel has to treat the link lane and the name lane as two separate jobs.
+
+**The second finding — where the listeners actually are.** Genre and music-posting subs run **0–2 median comments** (r/EDM **0** at >100 posts/week, r/riddim **0** at 80/week, r/trap **0**), while festival and artist-fan subs run **6–16** (r/RiotFest 16 · r/ElectricForest 15 · r/LostLandsMusicFest 14 · r/hulaween 14 · r/BassCoast 14). Music subs are drop boxes; festival subs are conversations. Nick's reframe — *"the fans live in the artist and festival subreddits more than the other ones"* — was the correct read and had been treated as a curiosity rather than a finding. **Caveat preserved:** the median was measured on each sub's newest 25 posts, which penalises high-volume subs whose recent posts haven't accrued comments; the gap is real but partly an artifact, and the age-controlled re-sample was never run.
+
+**Preserved artifacts:** [[working/WOBAR_REDDIT_PLAN]] v1.0 — strategy, verbatim rule text for 8 subs, cadence, phases, week-14 kill criteria. [[working/RESEARCH_REDDIT_SUBS]] v2.0 — 179 subs from three independent sweeps (genre vocabulary · **empirical artist-location**, i.e. post-searching 24 lane artists and tallying which subs their posts live in · artist+festival), 150 activity-measured for posts/week, median comments and days-since-last-post. Both remain accurate as of 2026-07-28 and would need only an activity refresh to reuse.
+
+**Notable data that outlives the loop:** **r/SpaceBass** — 36,414 members, hit by **16 of 24** lane artists (second only to r/dubstep's 19), self-described *"Genre Defying Bass. Share weird bass music, production techniques"* — the closest description of Wobar's centre of mass found anywhere, and missed by every prior research pass. **57 subs verified dead** at zero posts/week, including r/bassmusicproduction (3,207 members, last post **1,073 days** prior) and r/futuregarage (17 days), both of which had looked healthy on member count alone. **Reddit blocks the JSON API at network level** (403 to curl, 429 in-browser after ~60 calls) — all data came from rendered page loads and in-page fetches; budget for it on any re-run.
+
+**Method lesson transferred:** the session's own shortlist was cut from 179 subs to 4 using **artist-hit count — a size-biased metric that structurally cannot score small on-lane subs**, since the underlying search was relevance-sorted and capped at 100 results. Nick caught it (*"what disqualified everything else?"*); nothing had, and four unstated judgment filters were doing the work. Recorded in the `feedback-research-drift` memory as a third instance of the same shape.
+
+**What was never done:** nothing was posted, the Reddit profile was never set up, no rules were pulled for the fan subs, and the top-post content-pattern analysis across the 16 joined subs was **blocked by a Chrome extension disconnect** and never ran. **u/WobarMusic remains 0 days old with 1 karma** — the plan's original "aged account" premise was wrong and was corrected before close.
+
+**Joined and kept, at zero cost:** r/dubstep · r/SpaceBass · r/realdubstep · r/EDM · r/bassmusic · r/edmproduction · r/DubstepProduction · r/DubstepFeedback · r/aves · r/kandi · r/Shambhala · r/electricdaisycarnival · r/DenverEDM · r/ZedsDeadFam · r/Subtronics · r/ofthetrees.
 
 ---
 
