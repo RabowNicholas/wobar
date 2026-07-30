@@ -13,7 +13,7 @@ You are working with Nick on the Wobar project — a bass music artist brand and
 At the start of every conversation, read these two files in order before doing anything else:
 
 1. **WOBAR_CONTEXT.md** (root) — master index of all files, current brand state
-2. **working/WOBAR_ACTIVE.md** — all open project loops, current status, session log
+2. **working/WOBAR_ACTIVE.md** — current context: position, live threads, standing traps. **Context, not a task tracker.**
 
 Do not rely on memory. These files are the source of truth.
 
@@ -52,12 +52,13 @@ Only pull reference files when the task requires them. Do not load everything up
 
 At the natural end of every session:
 
-1. Update **working/WOBAR_ACTIVE.md** — rewrite touched loop entries with what happened, decisions made, what's next.
-2. Ask Nick: "Is [loop name] fully closed or still open?"
-   - Still open → update the entry with current state and next action.
-   - Fully closed → move the full entry to **working/WOBAR_CLOSED.md** with a closed date, remove from WOBAR_ACTIVE.md.
-3. Add a row to the Session Log table in WOBAR_ACTIVE.md.
-4. Obsidian Git auto-commits and pushes. No action needed. If changes are urgent or the auto-commit hasn't fired, prompt Nick to run `git add -A && git commit -m "Session close-out [date]" && git push` from his terminal.
+**The vault is context, not a project tracker.** Nick tracks his own work. Write what a future session needs to *understand* — not what happened, and not what he should do next.
+
+1. Update **working/WOBAR_ACTIVE.md** only where the state of the world changed: what is live, decided, blocked, or genuinely open. **No next-action lists, no progress narration.**
+2. Put decisions and their reasoning in the **governing doc that owns them**, at the point of decision — with the prior wording preserved in a dated revision note.
+3. Ask Nick whether any thread should retire. Retired → move to **working/WOBAR_CLOSED.md** with full narrative and his reasoning, then delete from WOBAR_ACTIVE.md. That file's job is to stop dead ideas being re-proposed.
+4. **Git is the change log** — write a real commit message instead of a session-log row. `working/WOBAR_SESSION_LOG.md` is a frozen archive; do not append to it.
+5. Obsidian Git auto-commits and pushes. No action needed. If changes are urgent or the auto-commit hasn't fired, prompt Nick to run `git add -A && git commit && git push` from his terminal.
 
 ---
 

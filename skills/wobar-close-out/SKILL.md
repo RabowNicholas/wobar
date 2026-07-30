@@ -1,92 +1,70 @@
 ---
 name: wobar-close-out
-description: "Session close-out ritual for the WOBAR vault. Use this skill whenever Nick signals the end of a WOBAR working session — 'close out', 'close-out', 'wrap up the session', 'session done', 'end of session', 'let's wrap', 'closing out', 'that's it for today', or any sign he is finishing WOBAR work. Rewrites touched loop entries in working/WOBAR_ACTIVE.md, asks open/closed per loop, moves closed loops to working/WOBAR_CLOSED.md, adds a dense session-log row, bumps frontmatter dates, and appends to working/TD_BUILD_LOG.md when a TouchDesigner build happened."
+description: "Session close-out for the WOBAR vault. Use this skill whenever Nick signals the end of a WOBAR working session — 'close out', 'close-out', 'wrap up the session', 'session done', 'end of session', 'let's wrap', 'closing out', 'that's it for today', or any sign he is finishing WOBAR work. Updates current context in working/WOBAR_ACTIVE.md, puts decisions in the governing docs that own them, retires dead threads to working/WOBAR_CLOSED.md, and appends to working/TD_BUILD_LOG.md when a TouchDesigner build happened."
 ---
 
 # WOBAR Session Close-Out
 
-Run the close-out ritual that ends every WOBAR working session. The vault's working files ARE the cross-session memory — the next session (and the next Claude) knows only what gets written here. A thin close-out loses the harvest; a precise one makes the next session start at full speed.
-
 All paths are relative to the vault root `/Users/nicholasrabow/Desktop/wobar/wobar/`.
+
+## The principle — read this before touching anything
+
+**The vault is context, not a project tracker.** It exists so a future session starts already understanding the state of the world and can answer Nick's questions well. **Nick tracks his own work and does not need his hand held.**
+
+Set by Nick, 2026-07-30: *"we can track the changes but we dont need to track the actual work. i am doing that. i dont need my hand held. i more want the vault to contain the current context so that you can understand and help with my questions as they come up."*
+
+The test for any line you are about to write:
+
+| Write it | Don't |
+|---|---|
+| A decision, and why | A next action for Nick |
+| A constraint, trap or blocker | Progress narration |
+| A technical fact needed to resume (params, paths, expressions) | A recap of what happened this session |
+| **What was tried and failed, and why** | A count of what hasn't been done yet |
+| A genuinely open question | A task list dressed as a question |
+
+**Git is the change log.** A real commit message replaces a session-log entry. `working/WOBAR_SESSION_LOG.md` is a frozen archive — **never append to it.**
+
+**Repeating an undone task back at Nick is nagging, not context.** State it once, as a fact, in the place it belongs.
 
 ## Workflow
 
-### 1. Identify what this session touched
+### 1. Update current context — only where the world changed
 
-From the conversation, list: which open loops in `working/WOBAR_ACTIVE.md` were worked on, whether a TouchDesigner build or modification happened, and whether any new loop was born this session. Read the Open Loops section of WOBAR_ACTIVE.md to match against existing entries (the file is large — read in chunks or grep for `^LOOP:` to inventory loop names first).
+`working/WOBAR_ACTIVE.md` holds **POSITION** (the numbers and the rare assets), **THREADS** (one short section per live thread), and **STANDING TRAPS**.
 
-### 2. Rewrite each touched loop entry
+Each thread carries **State** (one line: what it is, where it stands, what blocks it), the **decisions and technical facts** a future session needs to resume, and **Open** — genuine unknowns. Parked work gets a one-line `Parked` note with the reason, so it isn't lost.
 
-For every touched loop, rewrite its entry in place:
+Leave threads the session didn't touch byte-identical. Do not reflow or "improve" them.
 
-- **STATUS:** update the state plus a short dash-detail of where it stands now.
-- **LAST:** replace entirely with `<today's date> — ` followed by a dated narrative of THIS session. House style is long, dense, single-paragraph prose with **bold key phrases** marking subsystems, decisions, and verdicts. Capture exact parameter values, file paths, network names, and Nick's verbatim verdicts — these are what the next session needs to resume without re-deriving. Do not summarize down to two lines; density is the point.
-- **NEXT:** rewrite as concrete, numbered next actions — `(1) ... (2) ...` — specific enough to execute cold (exact files, exact commands, exact thresholds), not vague intentions.
+### 2. Put the reasoning in the governing doc, not the tracker
 
-Untouched loops stay byte-identical. Do not reflow, retitle, or "improve" entries the session didn't touch.
+A decision belongs in the file that owns it, at the point of decision — `WOBAR_ROADMAP`, `WOBAR_SOCIAL_PLAN`, `WOBAR_SURFACES`, `WOBAR_GROWTH_PLAN`, `reference/`. When a decision replaces an earlier one, **preserve the prior wording in a dated revision note** so the change is auditable rather than silent.
 
-Entry shape (abbreviated):
+Per the Drift Rule in `WOBAR_CONTEXT`: every mutable fact has exactly one owning file. Everything else links to it.
 
-```
-LOOP: down_bad_3stack v002 — Act 4 Phase 1 visualizer for Down Bad remix
-STATUS: in progress — pipeline wired; pending final tuning + canonical save + IG render.
-LAST: 2026-05-26 (later) — Major session. **Video timing system:** moviefileinTOP re-wired
-in `specify` playmode with index expression ... **Audio reactivity infrastructure:** new
-`base_audio_react` baseCOMP publishing 8 normalized channels ... Nick: "I think its
-looking really good" — visual passes his bar; 5 minor brand misses deferred.
-NEXT: (1) Save canonical `.toe` checkpoint as v002. (2) Final IG-ready render via
-Pipeline C (PNG → FFmpeg `-crf 18 -preset slow -tune grain`). (3) ...
-```
+**Corrections outrank additions.** If this session invalidated a claim, banner the doc that carries it and say what is void, what survives, and what error class it was. A vault that quietly keeps a dead finding is worse than a thin one.
 
-### 3. Ask Nick: open or closed?
+### 3. Retire dead threads
 
-For each touched loop, ask whether it stays open or closes. Use AskUserQuestion if available (one question per loop, options: "Still open" / "Closed"); otherwise ask in plain text. Also ask whether any new loop should open from this session's work. Never decide closure unilaterally — pausing, shipping, and retiring are Nick's calls, and WOBAR_CLOSED.md entries record his reasoning.
+Ask whether any thread should retire — never decide closure unilaterally. Retired threads move to the **top** of `working/WOBAR_CLOSED.md` with a `##` header, a resolution tag (SHIPPED / PAUSED / SUPERSEDED / RETIRED), a `**Closed:**` line carrying Nick's call and reasoning, then **full narrative**.
 
-If a new loop opens, add a full LOOP/STATUS/LAST/NEXT entry to Open Loops in the same format.
+CLOSED.md is the one place to write at length. It is read rarely, and its job is to stop dead ideas being re-proposed and to preserve what outlives the thread — findings, artifacts, transferable method lessons, and what was never done.
 
-### 4. Move closed loops to WOBAR_CLOSED.md
+Delete the thread from WOBAR_ACTIVE.md. Bump `last_updated` in CLOSED.md.
 
-For each closed loop, write an entry at the TOP of the loop list in `working/WOBAR_CLOSED.md` (most recent first, below the intro line). Closed entries use a different shape than active ones — they get a `##` header and a closure line:
+### 4. If a TD build happened — append to TD_BUILD_LOG.md
 
-```
-## <Loop name> — <RESOLUTION TAG, e.g. SHIPPED / PAUSED / QUIET RETIREMENT>
+This one **is** a genuine feedback loop, not tracking: corrections appearing 2+ times get promoted to rules in `reference/WOBAR_TD_AGENT_RULES.md`, so undercounting breaks the mechanism.
 
-**Closed:** <date> — <one-line resolution: Nick's call and why>.
+New entry at the top, below the intro. Header `## <date> — <build name> — <one-phrase verdict>`. Sections: **What was built** (op names, expressions, parameter values) · **First-pass-right** (validates existing rules) · **Corrections against the agent** (with counts, and whether logged to TD_CLAUDE_DEBUG_LOG) · **WOBAR craft (Nick-reviewed)** — usually the highest-value section. Bump `last_updated`.
 
-**What it was:** ...
-```
+### 5. Bump frontmatter and close
 
-After the closure line, carry the loop's full substance forward as bolded narrative sections. Section names flex with the loop type — shipped builds use **What it is / Arc / Key learnings**, paused work uses **Context / Build progress / Why paused / Preserved artifacts / Notable learnings transferred** — match the register of existing entries. The goal: someone reading only CLOSED.md can understand what the loop was, why it ended, and what survives it (artifacts, transferable patterns, preserved plans).
-
-Then delete the loop's entry from WOBAR_ACTIVE.md entirely, and bump `last_updated` in WOBAR_CLOSED.md's frontmatter to today.
-
-### 5. Add a Session Log row
-
-Add one row to the `## Session Log` table in WOBAR_ACTIVE.md, directly under the header row (newest first). Format: `| <date> | <summary> |` — the date cell may carry a qualifier when multiple sessions land on one day (e.g. `2026-06-10 (stress test)`).
-
-The summary is ONE dense single-cell narrative paragraph with **bold key phrases**, matching the density of existing rows. It should carry: what the session set out to do, what was built/decided (with names and paths), the verdict (including kills and failures — those are harvest, not embarrassment), what was logged where (debug-log entries, tracker rows, promotions, new memories, new files born), and loop state changes ("No loop opened" / "X closed → CLOSED.md"). A row that takes 30 seconds to read and replaces re-reading the whole session is the bar. Two-line summaries lose the harvest — write the long row.
-
-### 6. Bump WOBAR_ACTIVE.md frontmatter
-
-Set both `last_updated:` and `last_session:` in the YAML frontmatter to today's date.
-
-### 7. If a TD build happened: append to TD_BUILD_LOG.md
-
-Add a new entry at the TOP of `working/TD_BUILD_LOG.md` (below the intro, newest first). Header: `## <date> (<qualifier if needed>) — <network/build name> — <one-phrase verdict>`. Body sections, matching existing entries:
-
-- **What was built:** subsystem-by-subsystem, with op names, expressions, and parameter values.
-- **First-pass-right:** what the agent got correct without correction — this validates existing rules.
-- **Corrections against the agent:** what needed manual fixing, with counts and whether entries were logged to TD_CLAUDE_DEBUG_LOG. This feeds the promotion pipeline: corrections appearing 2+ times become rules in WOBAR_TD_AGENT_RULES.md, so undercounting here breaks the feedback loop.
-- **WOBAR craft (Nick-reviewed):** the aesthetic/brand lessons — often the highest-value section.
-
-Bump `last_updated` in TD_BUILD_LOG.md's frontmatter too. Skip this step entirely if no TD work happened.
-
-### 8. Close with a summary
-
-End with a short list of files touched: which loops were rewritten, which moved to CLOSED, the session-log row added, frontmatter bumps, and TD_BUILD_LOG entry if any. Terse — this is a receipt, not a recap.
+Set `last_updated` in WOBAR_ACTIVE.md. Then give a terse receipt: files touched, threads retired, TD_BUILD_LOG entry if any. A receipt, not a recap — Nick was there.
 
 ## Notes
 
-- Write in the vault's house voice: dense, specific, no filler. The vault files are professional prose regardless of conversational style.
-- Preserve Obsidian conventions already in the files: `[[wikilinks]]`, frontmatter fields, `---` separators between loops.
-- Source of truth for this skill is the vault copy at `skills/wobar-close-out/SKILL.md`. After editing it, copy to `~/.claude/skills/wobar-close-out/SKILL.md` so Claude Code picks up the change.
+- House voice: dense, specific, no filler. Vault files are professional prose regardless of conversational style.
+- Preserve Obsidian conventions — `[[wikilinks]]`, frontmatter, `---` separators.
+- Source of truth is the vault copy at `skills/wobar-close-out/SKILL.md`. After editing, copy to `~/.claude/skills/wobar-close-out/SKILL.md`.

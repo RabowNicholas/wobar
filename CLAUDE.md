@@ -103,11 +103,14 @@ When Nick asks to build or modify a TD network:
 
 ## Session Close-Out
 
+**The vault is context, not a project tracker.** Nick tracks his own work and does not need his hand held. Write what a future session needs to *understand* — not what happened, and not what he should do next.
+
 At the end of every session:
-1. Update `working/WOBAR_ACTIVE.md` — rewrite touched loop entries.
-2. Ask if loops are closed or still open. Move closed loops to `working/WOBAR_CLOSED.md`.
-3. Add a row to the session log in WOBAR_ACTIVE.md.
-4. If a TD build happened, append to `working/TD_BUILD_LOG.md`.
+1. **Update `working/WOBAR_ACTIVE.md` only where the state of the world actually changed.** Keep it to what is live, what is decided, what is blocked, what is genuinely open. **No next-action lists, no progress narration, no session recaps.**
+2. **Put decisions and their reasoning in the governing doc they belong to**, at the point of decision — not in ACTIVE. A revision note inside `WOBAR_ROADMAP` §1 is worth more than a paragraph in a loop entry.
+3. Ask whether any thread should retire. Retired threads move to `working/WOBAR_CLOSED.md` **with full narrative** — that file is read rarely and its job is to stop dead ideas being re-proposed.
+4. **Git is the change log.** Write a real commit message; don't duplicate it in the vault. `working/WOBAR_SESSION_LOG.md` is a frozen archive — do not append to it.
+5. If a TD build happened, append to `working/TD_BUILD_LOG.md` — that one is a genuine feedback loop, not tracking.
 
 ---
 
