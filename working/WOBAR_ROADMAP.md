@@ -18,11 +18,47 @@ dependencies: [[working/WOBAR_GROWTH_PLAN]], [[working/RESEARCH_LABEL_LANDSCAPE]
 
 ## §1 — THE GOAL
 
-**12 months: people listening. Online, not local.** Measured on Spotify monthly listeners and SoundCloud followers. Baselines and definitions: [[working/WOBAR_GROWTH_PLAN]].
+**12 months: people who come back.**
+
+A listener hears it once. **A fan returns.** That return is the only test, and it is the same test in both places — locally it is a second night; online it is a repeat listen.
+
+**Local and online are one goal with two expressions, not two tracks.** The room already exists via Flow State and will continue to; it is where the return is cheapest to produce.
 
 **No target number — deliberate (Nick, 2026-07-26).** Consistency is the metric. This makes the **leading indicators the goal** and the lagging ones the score. §5 splits them accordingly.
 
 **The long arc** — a Wobar-headlined room with the full AV system executed live. Not this year. TouchDesigner is parked *for* it, not against it.
+
+> **Revised 2026-07-30.** Previously: *"people listening. **Online, not local.** Measured on Spotify monthly listeners and SoundCloud followers."* That was a **proxy**, and it scored a local regular who attends every night at **zero**. Nick: *"the room already exists with flow state and will continue to exist because of that. **the fan is the real goal.** the fan that is local comes to shows, the fan that is not streams."* Baselines: [[working/WOBAR_GROWTH_PLAN]].
+
+### §1.1 — What a fan is
+
+**Someone who returns.** Three tests, in order of how much they cost the person:
+
+| | Test | Where it shows |
+|---|---|---|
+| **Returns** | came back without being pulled back | repeat listen · a second night |
+| **Seeks it out** | went looking rather than being served | search, direct visit, a download |
+| **Passes it on** | told one person | a send, a repost, someone brought to a show |
+
+**The floor is return.** The other two are depth, not entry.
+
+**A fan is not a follower.** A follow costs one tap and predicts nothing — 400 Instagram followers and 22 monthly listeners is the proof standing in the vault.
+
+**Fan ≠ Wanderer.** [[reference/WOBAR_WORLD]]'s **Wanderer** is a member of the Ether — someone who crossed the threshold deliberately. The ladder is **listener → fan → Wanderer**, and each rung is smaller than the last. Most fans never become Wanderers, and that is correct.
+
+### §1.2 — What makes a return: duration, not reach
+
+**Fans are made by duration.** A Reel decides in 3 seconds; a track is 4 minutes; a mix is 45; a set is 90.
+
+**116,070 Instagram views in 90 days produced ~0 follows because the surface is structurally incapable of the job** — a duration failure, not a conversion failure. Corroborated inside a single account: **Swomp's numbered mix series, 36.3K plays, against 1,232 on his most recent single track. 30×.**
+
+**Rate every surface by how long it holds someone, not by how many it touches.** Three consequences:
+
+1. **Flow State is the only fan-conversion machine in this project** — 60–90 minutes of undivided attention, bodies, volume and the AV, already booked and already running. [[working/WOBAR_SURFACES]] rates live at **ceiling 3** — deeper than every surface but the music — and still describes it as **"undesigned."**
+2. **Long-form outranks clips.** Mixes, chaptered sets, full visualizers. YouTube is the only long-form surface with a ceiling above 1.
+3. **Depth 2 is now *the* gap, not *a* gap.** *"Someone who loves the music has nowhere to meet the person."* Under a listener goal that was a curiosity; under a return goal it is where the leak is.
+
+**Instagram's scoping does not change** — [[working/WOBAR_SOCIAL_PLAN]] stands, now on a structural reason rather than a judgment call: **three seconds cannot make a fan.**
 
 ---
 
@@ -159,12 +195,34 @@ Book lane artists through Flow State — that's the engine for Tier-B DJ relatio
 | **Warm DMs sent** (peer layer) | **0** | — |
 | **1:1 give-back artifacts sent** | **0** | — |
 
+**Duration shipped** is a leading metric too, and it had no row: **long-form minutes released** — mixes, chaptered sets, full-length visualizers. It is the input the return goal actually runs on.
+
+| Metric | Baseline | 12-month |
+|---|---|---|
+| **Long-form items shipped** (≥20 min) | **0** | — |
+| **Sets captured** (filmed, usable) | **0** | every one |
+
 ### Lagging — not controlled. Direction, not magnitude.
 SoundCloud followers · Spotify monthly listeners · external placements (a VA is the likeliest first) · confirmed DJ plays.
 
 Peer-layer lagging: reposts earned · unprompted replies from lane accounts. Owner: [[working/WOBAR_SOCIAL_PLAN]] §5.
 
+### The return measures — §1's goal, and the honest state of measuring it
+
+**There is no direct fan counter.** Four proxies, ranked by how well each one actually detects a return:
+
+| Proxy | Reads | Status |
+|---|---|---|
+| **Spotify listener segments** | repeat vs one-time listening — the closest thing to a return counter that exists | **Free in Spotify for Artists, never opened.** ⚠ Exact field names unverified — check the Audience tab before quoting numbers |
+| **Bodies who came *for* Wobar** | the local return, directly | **Just ask them at the next Flow State night.** First-party, free, and the vault's memory says first-party has beaten every external sweep here |
+| **SoundCloud followers** | a return in the lane's native currency | 55. Owner: [[working/WOBAR_GROWTH_PLAN]] |
+| **SMS list size** | the deepest return — a crossing | 0, blocked on 10DLC |
+
+**The local proxy is the cheapest and the only one nobody has ever tried.** It costs one question asked in a room Nick is already standing in.
+
 Baselines: [[working/WOBAR_GROWTH_PLAN]]. **Do not track:** IG followers, reach, views, engagement rate. **One lane comment outranks 200 likes.**
+
+**And do not track raw plays as a fan signal.** A play is a listen; the goal is the second one.
 
 ---
 

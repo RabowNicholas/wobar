@@ -57,6 +57,29 @@ dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]], [[working/WOB
 3. **There is nothing between depth 1 and depth 3.** Depth 2 — Wobar as a voice — has no home. IG stories were meant to hold it; IG is demoted. SMS holds it and does not exist yet. **Someone who loves the music has nowhere to meet the person.**
 4. **The music reaches 4 without a single word.** Why the vault says the audio was always closest to the world.
 
+### §1.5 — THE SECOND AXIS: DURATION HELD
+
+Added 2026-07-30. Depth answers *how much world is exposed*. It does not answer *whether anyone comes back* — and under [[working/WOBAR_ROADMAP]] §1 the goal is **people who come back**. **Fans are made by duration, not reach.**
+
+| Surface | Holds someone for | Return power |
+|---|---|---|
+| **Flow State / live set** | **60–90 min, undivided** | **Highest in the project** |
+| A mix / chaptered set | 20–60 min | High |
+| Full visualizer / YouTube set | 4–90 min, and **evergreen in search** | High, and it does not expire |
+| A track | ~4 min | Real |
+| Release artwork · Canvas | seconds, but **repeated every play** | Low each, compounding |
+| Instagram / TikTok clip | **3 seconds to the decision** | **Structurally cannot make a fan** |
+
+**What this axis shows that the depth ladder could not:**
+
+1. **Live is the strongest surface on both axes** — ceiling 3 on depth, highest duration in the project — **and it is the one marked *undesigned*.** That is now the largest single gap in this file.
+2. **An unfilmed set converts only the bodies present.** Capture is what lets a 90-minute surface exist anywhere else. Listed in §4 as a missing surface; it is really a missing *habit*.
+3. **Instagram's demotion is structural, not a judgment.** Three seconds cannot produce a return, whatever the content is. Confirms [[working/WOBAR_SOCIAL_PLAN]] rather than revising it.
+4. **YouTube is undervalued everywhere in this vault.** It is the only long-form surface with a ceiling above 1, and search keeps it alive for years while a post dies in 48 hours.
+5. **Depth 2 is where the return leaks.** *"Someone who loves the music has nowhere to meet the person."* Under a listener goal that was a curiosity; under a return goal it is the hole.
+
+**Corroboration, inside one account:** Swomp's numbered mix series pulls **36.3K plays**; his most recent single track pulls **1,232**. **30×.** Long-form wins because duration *is* the mechanism.
+
 ### The pre/post-experience test — apply to any new surface
 **SoundCloud's bio is read *before* listening** (an A&R deciding whether to press play) → utility, five seconds, world is friction.
 **YouTube's About is read *after*** (someone who watched, asking what that was) → world belongs.
