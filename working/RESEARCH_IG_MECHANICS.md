@@ -9,6 +9,14 @@ dependencies: [[working/WOBAR_IG_RESEARCH_PLAN]], [[working/WOBAR_PLACEMENT_PLAN
 
 # RESEARCH — IG MECHANICS + COMPS
 
+> **⚠ CORRECTED 2026-07-30 — §1 and §3.3 are VOID. Read [[working/WOBAR_SOCIAL_PLAN]] §1 first.**
+> The **11,463-view / 316-send post was a collaboration with Flow State**, whose account always does those numbers. The reach was **borrowed**; Wobar's account never demonstrated distribution.
+> - **"Distribution is not the constraint" is UNSUPPORTED.** Distribution may well be a constraint.
+> - **§3.3's "utility travels without converting" is reattributed** — those were Flow State's followers seeing a co-branded post, not Wobar's followers declining to follow.
+> - **Organic median is ~205 views** (visualizers 133–314). Strip the collab and **no format on this account has ever produced a measurable result.**
+> - Error class: **a borrowed number read as a first-party result** — same as the six failed-lookups-treated-as-findings logged 2026-07-27.
+> **§2, §4 and §5 survive** — the platform mechanics, the comp teardown (elekktronaut / Of The Trees / Shlump / INZO) and the legibility diagnosis are unaffected.
+
 Source tiers: **T1** = Instagram/Meta official. **T2** = large-N first-party studies or credible tech journalism. **T3** = practitioner/agency/SEO content — hypothesis only, never load-bearing. **OBS** = first-party observation, this session.
 
 ---

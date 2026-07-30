@@ -9,6 +9,8 @@ dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]]
 
 # WOBAR CONTENT SYSTEM
 
+> **⚠ SUPERSEDED 2026-07-30 for socials — the Platforms table below is REPLACED by [[working/WOBAR_SOCIAL_PLAN]]** (governing for Instagram and TikTok: peer-facing surface, audience is producers and DJs, three buckets, the peer funnel). The "TikTok = discovery / Instagram = community depth" split is dead.
+>
 > **⚠ SUPERSEDED 2026-07-26 for platform strategy — see [[working/WOBAR_GROWTH_PLAN]].**
 > The Platforms table and the "TikTok = discovery / Instagram = community depth" split were never tested and do not survive measurement. Actual position: **SoundCloud is the priority surface** (the lane lives there — Tape B 162K, Phrva 51.9K, flozone 33.7K; most comps run SC ≥ IG, Wobar is inverted at 400 IG / 55 SC). **Instagram is demoted to a five-second credibility surface** — 9,148 non-followers reached in 90 days produced 20 link taps and ~0 follows. **Flips belong on the main SoundCloud account as a numbered series** (Tape B *Vibe Check* / *Driptapes*; GorillaT *Gorilla Tapes*) and **cannot reach Spotify at all** — uncleared remixes need both master and composition permission. Originals are the only source of monthly listeners.
 > The Mirror philosophy and release architecture below stand. The distribution assumptions do not.
@@ -66,11 +68,13 @@ Bedroom recordings. Something came through and got captured. No ceremony. Just m
 
 ## Platforms
 
-| Platform | Handle | Primary Use |
-|----------|--------|------------|
-| TikTok | wobar1 | Discovery, new audiences |
-| Instagram | wobar.exe | Community depth, retention |
-| SoundCloud | wobar | Full tracks and sets |
+**Handles only. Roles are owned by [[working/WOBAR_SOCIAL_PLAN]] (IG/TikTok) and [[working/WOBAR_GROWTH_PLAN]] (SoundCloud/Spotify).**
+
+| Platform | Handle | Role |
+|----------|--------|------|
+| TikTok | wobar1 | Crosspost only — see SOCIAL_PLAN §6 |
+| Instagram | wobar.exe | Peer-facing: producers and DJs — see SOCIAL_PLAN §1 |
+| SoundCloud | wobar | Full tracks and sets. **The priority surface** |
 | YouTube | wobar | Full visualizers and sets |
 
 **Contact/booking:** contact.wobar@gmail.com

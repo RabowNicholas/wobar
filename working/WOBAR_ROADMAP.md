@@ -64,6 +64,16 @@ Added 2026-07-27. Conversation-native, no algorithm dependency, and the stated c
 > **The structure that matters: B, C, D and E all feed A. A is the only exit.**
 > Everything else is routing. When in doubt about where effort goes, ask which funnel it feeds and whether that funnel exits.
 
+### The peer layer — beside the funnels, not one of them
+
+Added 2026-07-30. **Not a funnel. It exits nowhere and produces nothing on its own** — and B, C and D are all gated by a human saying yes, which is what it exists to earn.
+
+`Instagram / TikTok → producers and DJs one rung up → credibility + a warm DM → repost, play, VA slot`
+
+**Audience is peers, not fans.** Scored on warm DMs sent and lane accounts reached — **never on followers, reach or streams.** Three buckets (music / memes / give-back), the funnel, the targeting tier and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]].
+
+**Held on cost, not proof.** The chain is six links and every one is unmeasured; Vulora was signed on 16 posts. Cheap with a fat tail — **and it must never delay Phase 1.**
+
 ### The owned layer — beneath the funnels, not beside them
 
 Funnels A–E all run on **rented land**. The owned layer is where a relationship survives a platform change.
@@ -146,11 +156,15 @@ Book lane artists through Flow State — that's the engine for Tier-B DJ relatio
 | Submissions sent | **0** | ~24 |
 | Registers with ≥1 released track | 5 of 6 | 6 of 6 |
 | Day-60 rule broken | 0 | 0 |
+| **Warm DMs sent** (peer layer) | **0** | — |
+| **1:1 give-back artifacts sent** | **0** | — |
 
 ### Lagging — not controlled. Direction, not magnitude.
 SoundCloud followers · Spotify monthly listeners · external placements (a VA is the likeliest first) · confirmed DJ plays.
 
-Baselines: [[working/WOBAR_GROWTH_PLAN]]. **Do not track:** IG followers, reach, views.
+Peer-layer lagging: reposts earned · unprompted replies from lane accounts. Owner: [[working/WOBAR_SOCIAL_PLAN]] §5.
+
+Baselines: [[working/WOBAR_GROWTH_PLAN]]. **Do not track:** IG followers, reach, views, engagement rate. **One lane comment outranks 200 likes.**
 
 ---
 
