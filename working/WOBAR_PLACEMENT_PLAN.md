@@ -3,8 +3,8 @@ title: Wobar Placement Plan
 version: 1.3 (+ browser-verified label pass — amended 2026-07-27)
 last_updated: 2026-07-27
 status: live
-scope: The "get-heard" layer on top of the release machine. Three levers — curators, promoters/scene, labels — all in service of one win: a growing listening audience. Sits on top of RELEASE_PACKET.xlsx, does not replace it. Backed by deep research run 2026-06-18 (run wf_2808965e, 19 claims verified / 6 refuted) + a Spotify-recommender field-guide pass 2026-07-23 (coherence-over-volume, Source-of-Streams instrument, pitch-metadata-as-recommender-input).
-dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEASE_PACKET.xlsx
+scope: The "get-heard" layer on top of the release machine. Three levers — curators, promoters/scene, labels — all in service of one win: a growing listening audience. Backed by deep research run 2026-06-18 (run wf_2808965e, 19 claims verified / 6 refuted) + a Spotify-recommender field-guide pass 2026-07-23 (coherence-over-volume, Source-of-Streams instrument, pitch-metadata-as-recommender-input).
+dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]]
 ---
 
 # WOBAR PLACEMENT PLAN
@@ -106,13 +106,13 @@ dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEA
 ## Phase 0 — Shared Foundation (start now, one-time)
 - [ ] **Spotify for Artists** claimed/verified — gate for editorial pitches.
 - [ ] **EPK / press kit** — one link: bio, comps (Of The Trees / Shlump / INZO), best track, TD visualizers as differentiator, contact. *Open: press photos exist?*
-- [ ] **Curator log live** — RELEASE_PACKET.xlsx §5 becomes a real running list.
+- [ ] **Curator log live** — a running list of who was pitched and what came back. Nick owns where it lives; the vault does not hold it.
 - [ ] **Reserve-tag system** — mark which originals are held unreleased for labels.
 
 ## Phase 1 — Three Pipelines
 
 ### Curators + DIY ads (PRIMARY)
-- Editorial pitch = per-release action via S4A, 7+ days pre-release → bolt onto packet T-21/T-14.
+- Editorial pitch = per-release action via Spotify for Artists, **7+ days pre-release** — free, one per release, and never used. The lead time is the only scheduling fact the vault needs to carry.
 - **Pitch metadata is real recommender input now** (not just editor-read — Semantic-ID work). Fill EVERY field maximally specific per release: exact subgenre, BPM, half-time/full, mood, instrumentation ("melodic dubstep, 140 BPM, half-time drums, detuned supersaw, euphoric" — never "electronic"). Costs nothing, direct leverage. Packet checklist item = "metadata fully specified," not just "pitch sent."
 - DIY Meta ads: $5-10/day to pre-save/Spotify link, lookalikes of core comps. Test per release. **Govern by the kill-switch above** (save/completion, not streams).
 - **CTA asks for FOLLOW first, save second.** The only hard guaranteed mechanic in the system: pitch ≥7 days out → guaranteed Release Radar reach to existing followers. Followers = a compounding guaranteed floor every release; a stream is one-time. Ad + social + pre-save CTAs prioritize the follow.
@@ -173,7 +173,7 @@ dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]], working/RELEA
 - Rule: a lever not moving primary metrics after a fair test gets de-prioritized.
 
 ## Integration with Release Machine
-- Curators + DIY ads → new step at T-21/T-14 in RELEASE_PACKET.xlsx; §5 log filled each release.
+- Curators + DIY ads → a pre-release step in whatever calendar Nick runs. **The release schedule and its packet machinery are not in the vault** (removed 2026-07-30).
 - Promoters → standing Denver-scene relationship work (quarterly pass minimum).
 - Labels → reserve-tag decision at each original's T+7 review; submit when a track clears the bar.
 

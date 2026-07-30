@@ -22,9 +22,11 @@ This is the index file for the Wobar project reference system. Read this file fi
 | | Holds | Files |
 |---|---|---|
 | **`reference/` — locked** | **Form and identity.** What doesn't change: positioning, registers, laws, archetypes, conventions, formats. | BRAND · SONIC · COPY · GRAMMAR · FRAMEWORK · WORLD · CONTENT · ARCHIVE |
-| **`working/` — live** | **State and plans.** Anything with a number that moves: rates, calendars, counts, door statuses, what's in flight, current targets. | GROWTH_PLAN · ACTIVE · PLACEMENT_PLAN · RESEARCH_* |
+| **`working/` — live** | **Strategy and state.** Decisions, constraints, current position, door statuses, open questions. | GROWTH_PLAN · ACTIVE · PLACEMENT_PLAN · RESEARCH_* |
 
 **A locked doc must never contain a number that will be wrong in three months.** No cadences, no catalogues, no follower counts, no current-target lists. If it changes, it lives in `working/` and the reference doc points at it.
+
+**And the vault holds no operations at all.** The **release schedule** — calendars, release dates, T-minus counters, per-release packet checklists — **does not live here** (removed 2026-07-30, Nick's call). Nick runs it. The vault holds the *rate* as a strategic commitment ([[working/WOBAR_GROWTH_PLAN]] §1) and nothing else about scheduling.
 
 ### 2. One owner per fact
 

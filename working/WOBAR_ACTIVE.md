@@ -80,13 +80,6 @@ The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 
 **Deferred by Nick as "not a big deal":** no forward propulsion, CA possibly too aggressive at 8px, palette unverified, no discharge moment.
 
-### Release Schedule
-**State: system live; last verified 2026-06-10 and stale since.** 16 releases, biweekly Fridays 5/29 → 12/25. 7 assets per release, each visualizer twice (TK + IG) = 10 posts per 14-day window. T-counter dates auto-calc from B6 in `RELEASE_PACKET.xlsx`.
-
-MUR #01 shipped 2026-05-29 on time with the full packet. #02 was on track for 6/12. **#03's T-21 (6/5) was already past at last check.**
-
-**BTS is trigger-based** — a Mirror clip clearing 1.5× baseline fires one BTS clip 24–48h later, cap 3/release. **No trigger has ever fired.** ⚠ This system predates the peer-layer decision and is scored on IG performance, which [[working/WOBAR_SOCIAL_PLAN]] no longer tracks — it needs reconciling or retiring.
-
 ### POPX v1.4.0
 **State: installed at `/POPX_1_4_0` in the live project; docs updated; never used on a real build.** TD build 2025.32460 stays put — the mismatch warning against POPX's 2025.32820 target is accepted.
 

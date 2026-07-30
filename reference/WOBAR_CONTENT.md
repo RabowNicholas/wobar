@@ -57,7 +57,7 @@ Bedroom recordings. Something came through and got captured. No ceremony. Just m
 ### Original Track
 - 1 × Full track (SoundCloud + Spotify)
 - 1 × Visualizer per drop inside the song
-- BTS — reactive only. Made when a visualizer or drop hits. Gut call: could be because Nick likes it, could be because a video out-performed baseline, could be feel. Nick decides.
+- BTS — reactive only, made when something hits. **Pure gut call, Nick's.** *(The old trigger — "a video out-performed IG baseline" — is dead: [[working/WOBAR_SOCIAL_PLAN]] does not track reach, and the trigger never fired once.)*
 
 ### Channels
 - 1 × SoundCloud upload
