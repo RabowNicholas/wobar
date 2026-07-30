@@ -103,11 +103,14 @@ dependencies: [[WOBAR_CONTENT]], [[WOBAR_SONIC]], [[WOBAR_BRAND]]
 
 ---
 
-## Phase 0 — Shared Foundation (start now, one-time)
-- [ ] **Spotify for Artists** claimed/verified — gate for editorial pitches.
-- [ ] **EPK / press kit** — one link: bio, comps (Of The Trees / Shlump / INZO), best track, TD visualizers as differentiator, contact. *Open: press photos exist?*
-- [ ] **Curator log live** — a running list of who was pitched and what came back. Nick owns where it lives; the vault does not hold it.
-- [ ] **Reserve-tag system** — mark which originals are held unreleased for labels.
+## What every lever below assumes exists
+
+*This was a Phase 0 checklist and was converted 2026-07-30 — the vault records what a lever depends on, not a to-do list.*
+
+- **Spotify for Artists**, claimed and verified. It gates the editorial pitch, which is free, one per release, needs 7+ days lead time, and has never been used.
+- **An EPK** — one link carrying bio, comps, best track, the TD visualizers as the differentiator, and contact. **Copy is written and approved in [[reference/WOBAR_COPY]]; no document or URL exists.** ⚠ **The comps that used to be named here — Of The Trees / Shlump / INZO — are wrong**, and putting them in a pitch misdescribes the artist. They are psy-lane and describe only the last 22 minutes of Nick's set; the centre of mass is dark/wonky 140 plus rap flips. Correct comps by register: [[reference/WOBAR_SONIC]].
+- **A curator log** — who was pitched, and what came back. **Nick owns where that lives; the vault does not hold it.**
+- **A reserve tag** — some way to know which originals are held unreleased for labels, since the cap is two and holding more embargoes the release channel.
 
 ## Phase 1 — Three Pipelines
 

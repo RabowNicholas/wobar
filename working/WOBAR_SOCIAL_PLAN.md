@@ -4,14 +4,14 @@ version: 1.0
 created: 2026-07-30
 last_updated: 2026-07-30
 status: live — governing for Instagram and TikTok
-scope: What Instagram and TikTok are for, who they target, the three content buckets, and the funnel that runs on them. OWNS the socials role, the target tier, the buckets, and the peer-funnel metrics. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
+scope: What Instagram and TikTok are for, who they target, the three content buckets, and the funnel that runs on them. OWNS the socials role, the target tier, the buckets, and the peer funnel. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
 dependencies: [[working/WOBAR_ROADMAP]], [[working/WOBAR_SURFACES]], [[working/WOBAR_GROWTH_PLAN]], [[reference/WOBAR_CONTENT]]
 ---
 
 # WOBAR SOCIAL PLAN — THE PEER LAYER
 
-> **Ownership (per the Drift Rule).** This file owns **the socials role, the target tier, the content buckets, and the peer-funnel metrics.**
-> Funnels A–E and phase gates → [[working/WOBAR_ROADMAP]] · Depth ladder and exposure status → [[working/WOBAR_SURFACES]] · Position metrics and output rate → [[working/WOBAR_GROWTH_PLAN]] · Release content architecture → [[reference/WOBAR_CONTENT]].
+> **Ownership (per the Drift Rule).** This file owns **the socials role, the target tier, the content buckets, and the peer funnel.**
+> Funnels A–E and the peer layer → [[working/WOBAR_ROADMAP]] · Depth ladder and exposure status → [[working/WOBAR_SURFACES]] · Position metrics and output rate → [[working/WOBAR_GROWTH_PLAN]] · Release content architecture → [[reference/WOBAR_CONTENT]].
 > **Supersedes the Platforms table in [[reference/WOBAR_CONTENT]]** ("TikTok = discovery / Instagram = community depth"). That split was never tested and does not survive measurement.
 
 ---
@@ -186,20 +186,17 @@ SOUNDCLOUD ────►  they listen, download, maybe play it
 
 ---
 
-## §5 — METRICS
+## §5 — WHAT WOULD COUNT AS WORKING
 
-### Leading — controlled
-| Metric | Baseline |
-|---|---|
-| **Warm DMs sent** | 0 |
-| **Lane accounts identified in triage** | 0 |
-| **1:1 give-back artifacts sent** | 0 |
+*A leading-metric table with counts at zero lived here and was removed 2026-07-30 — counting Nick's output back at him is tracking, not strategy.*
 
-### Lagging — direction only
+**The signal is qualitative and it is about *who*, not how many.** One comment from a lane producer outranks two hundred likes. A reply from an account one rung up is the funnel working; a spike in views is not.
+
+### Direction only
 Reposts earned · confirmed DJ plays · unprompted replies or "what is this" from lane accounts · SoundCloud followers.
 
 ### Do not track
-**IG followers · reach · views · engagement rate.** Per [[working/WOBAR_ROADMAP]] §5, unchanged. Aggregate engagement is the Insights trap — **one lane comment outranks 200 likes.**
+**IG followers · reach · views · engagement rate.** Per [[working/WOBAR_ROADMAP]] §5. Aggregate engagement is the Insights trap.
 
 ### Two honest limits
 1. **This funnel does not produce listeners.** It produces relationships with people who have audiences. The listener arrives from what *they* do next, which is outside Nick's control. **Do not score it on streams.**

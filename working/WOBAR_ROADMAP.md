@@ -3,16 +3,16 @@ title: Wobar Roadmap
 version: 1.0
 created: 2026-07-27
 last_updated: 2026-07-27
-status: live — governing for milestones and operating rhythm
-scope: The execution layer. Funnels, operating rhythm, phase gates, and the scorecard. OWNS milestones and phase gates. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
+status: live — governing for the goal, the funnels, and the standing rules
+scope: The strategy layer. The goal and what a fan is, the funnels, the standing rules, sequence constraints, and how you would know any of it is working. OWNS the goal definition. Contains no schedules, task lists or progress counts — those are Nick's, not the vault's. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
 dependencies: [[working/WOBAR_GROWTH_PLAN]], [[working/RESEARCH_LABEL_LANDSCAPE]], [[reference/WOBAR_SONIC]], [[working/WOBAR_ACTIVE]]
 ---
 
 # WOBAR ROADMAP
 
-> **Ownership (per the Drift Rule).** This file owns **milestones and phase gates** only.
+> **Ownership (per the Drift Rule).** This file owns **the goal and the definition of a fan** (§1).
 > Output rate → [[working/WOBAR_GROWTH_PLAN]] §1 · Door status and tiering → [[working/RESEARCH_LABEL_LANDSCAPE]] §2 · Position metrics → [[working/WOBAR_GROWTH_PLAN]] · Registers and comps → [[reference/WOBAR_SONIC]] · Loops and session state → [[working/WOBAR_ACTIVE]].
-> Numbers below are **gates**, not restated state. If a figure here contradicts its owner, the owner wins.
+> If a figure here contradicts its owner, the owner wins.
 
 ---
 
@@ -24,7 +24,7 @@ A listener hears it once. **A fan returns.** That return is the only test, and i
 
 **Local and online are one goal with two expressions, not two tracks.** The room already exists via Flow State and will continue to; it is where the return is cheapest to produce.
 
-**No target number — deliberate (Nick, 2026-07-26).** Consistency is the metric. This makes the **leading indicators the goal** and the lagging ones the score. §5 splits them accordingly.
+**No target number — deliberate (Nick, 2026-07-26).** Consistency is the metric.
 
 **The long arc** — a Wobar-headlined room with the full AV system executed live. Not this year. TouchDesigner is parked *for* it, not against it.
 
@@ -95,7 +95,7 @@ Unproven — no published response rates exist anywhere. Near-free. **Has no exc
 ### E — Reddit & community. ONE AT A TIME.
 `real exchange → relationship → listen → follow`
 
-Added 2026-07-27. Conversation-native, no algorithm dependency, and the stated currency — **feedback and production help** — is a value exchange Nick can actually supply. Low volume, high conversion, slow. Plan: [[working/WOBAR_REDDIT_PLAN]].
+Added 2026-07-27. Conversation-native, no algorithm dependency, and the stated currency — **feedback and production help** — is a value exchange Nick can actually supply. Low volume, high conversion, slow. **Retired 2026-07-28** — judged low-yield by Nick and never tested; the findings are in [[working/WOBAR_CLOSED]]. Kept in this list because the funnel shape is sound and the channel could be revived.
 
 > **The structure that matters: B, C, D and E all feed A. A is the only exit.**
 > Everything else is routing. When in doubt about where effort goes, ask which funnel it feeds and whether that funnel exits.
@@ -108,7 +108,7 @@ Added 2026-07-30. **Not a funnel. It exits nowhere and produces nothing on its o
 
 **Audience is peers, not fans.** Scored on warm DMs sent and lane accounts reached — **never on followers, reach or streams.** Three buckets (music / memes / give-back), the funnel, the targeting tier and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]].
 
-**Held on cost, not proof.** The chain is six links and every one is unmeasured; Vulora was signed on 16 posts. Cheap with a fat tail — **and it must never delay Phase 1.**
+**Held on cost, not proof.** The chain is six links and every one is unmeasured; Vulora was signed on 16 posts. Cheap with a fat tail — **and it must never displace the music or the sends.**
 
 ### The owned layer — beneath the funnels, not beside them
 
@@ -127,20 +127,11 @@ Not substitutes. At 26 monthly listeners the Spotify floor is guaranteed and eff
 
 ---
 
-## §3 — OPERATING RHYTHM
+## §3 — STANDING RULES
 
-| Cadence | Work | Time |
-|---|---|---|
-| **Most days** | **Production.** The output rate is the only non-negotiable — owner: [[working/WOBAR_GROWTH_PLAN]] §1 | the bulk |
-| **~2× month** | Ship — release, artwork, SoundCloud, flip series | ~1 day each |
-| **Per finished original** | Private link to register-matched doors + Tier-A DJs. Log the day-60 date | ~15 min |
-| **Weekly** | Check the day-60 clock. **Never hold more than 2** | 5 min |
-| **Quarterly** | Re-check door status — doors are perishable; Wormhole was found open and closed on the same day | ~1 hr |
-| **Never** | Open Instagram Insights | — |
+*The cadence table that lived here — a daily/weekly/quarterly work schedule with time estimates — was removed 2026-07-30. That is Nick's to run. What follows are constraints, which are not.*
 
-**The daily is "make music."** Everything else is small recurring overhead. The 2026-07 research made that overhead *correct* and cheap; it did not change the daily and could not.
-
-### Standing rules
+**The daily is "make music."** Everything else is small recurring overhead.
 - **Private links only.** Never public uploads. Confirmed convention at both verified doors, and it protects the unreleased/unpublished requirement most labels impose.
 - **Day 60 is a calendar date, not a condition.** Silence is the modal response; a conditional exit almost never fires.
 - **Cap the reserve at two.** Labels commonly require unreleased *and unpublished*; holding more embargoes the release channel.
@@ -149,58 +140,27 @@ Not substitutes. At 26 monthly listeners the Spotify floor is guaranteed and eff
 
 ---
 
-## §4 — PHASE GATES
+## §4 — SEQUENCE CONSTRAINTS
 
-Gates, not dates. Each advances on completion.
+*The six phase gates that lived here were a project plan and were removed 2026-07-30. What survives is the strategy inside them — the things that genuinely cannot happen out of order, and one real gap analysis.*
 
-### Phase 0 — Foundation *(one pass)*
-Submission kit — private link, one-paragraph pitch, socials block · flip series named and numbered on the main SC account · SoundCloud bio cut to a five-second read · submissions log (track · door · sent date · day-60 date · response) · DJ list built by tier off the Flow State book.
-**GATE: kit exists, DJ list has real names in it.**
+**What actually has an ordering constraint:**
 
-### Phase 1 — End the zero *(days, not weeks)*
-The two verified-free doors: **Deadbeats** (four-field form) and **Jadū Dala** (email). Under ten minutes for both. Same afternoon: Tier-A DJs.
-**GATE: submissions sent > 0.** The single most important number on this page.
+- **Tier 2/3 doors need something to point at.** Memory Palace and the established rungs are approachable once a catalogue and some support exist — not before. Approaching early spends a door that doesn't reopen.
+- **Wormhole is a conversation, not a submission.** Closed process, two named principals publish emails, and its entire Beatport top 10 is artists Nick already plays. That only works from inside a relationship.
+- **Flow State is the engine for DJ relationships**, because booking someone is the one thing Nick can offer that his tier normally can't.
 
-### Phase 2 — Open the VA route
-Check submission routes for the ten VA series — **Subsidia** and **MONTA** first ([[working/RESEARCH_LABEL_LANDSCAPE]] §6). None has been checked.
-**GATE: ≥3 VA doors identified with a known submission route.**
+**The catalogue gap, which is the substantive finding:**
 
-### Phase 3 — Cadence lock
-The machine runs. Every original through the full pipe: reserve → register-matched doors + DJs → day-60 release. First day-60 releases start landing on Spotify.
-**GATE: 3 originals through the full pipe, 3 flips shipped, first new-system Spotify release live.**
+> **Register 2 is empty. Register 3 — the centre of mass, what the EPK leads with, and the register every verified door releases — has one released track.** The catalogue is thinnest exactly where the strategy is strongest.
 
-### Phase 4 — Fill the register gaps
-**Register 2 is empty. Register 3 — the centre of mass, what the EPK leads with, and the register every verified door releases — has one released track.** The catalogue is thinnest exactly where the strategy is strongest.
-**GATE: register 2 has a track; register 3 has three.**
-
-### Phase 5 — Relationship layer
-Book lane artists through Flow State — that's the engine for Tier-B DJ relationships. Approach **Wormhole** as a conversation, not a submission: closed process, two named principals published, and its entire Beatport top 10 is artists Nick already plays.
-**GATE: first confirmed DJ play.**
-
-### Phase 6 — Compound
-8–12 originals out, catalogue and support exist. Tier 2/3 doors become approachable *with something to point at* — Memory Palace and the established rungs enter here, not before.
+Registers: [[reference/WOBAR_SONIC]], six-register table.
 
 ---
 
-## §5 — THE SCORECARD
+## §5 — MEASUREMENT
 
-### Leading — controlled. This is the actual goal.
-| Metric | Baseline | 12-month |
-|---|---|---|
-| Originals shipped | — | 12 |
-| Flips shipped | — | 12 |
-| Submissions sent | **0** | ~24 |
-| Registers with ≥1 released track | 5 of 6 | 6 of 6 |
-| Day-60 rule broken | 0 | 0 |
-| **Warm DMs sent** (peer layer) | **0** | — |
-| **1:1 give-back artifacts sent** | **0** | — |
-
-**Duration shipped** is a leading metric too, and it had no row: **long-form minutes released** — mixes, chaptered sets, full-length visualizers. It is the input the return goal actually runs on.
-
-| Metric | Baseline | 12-month |
-|---|---|---|
-| **Long-form items shipped** (≥20 min) | **0** | — |
-| **Sets captured** (filmed, usable) | **0** | every one |
+*The leading scorecard — shipped-counts, submissions sent, warm DMs, all with 12-month targets — was removed 2026-07-30. Counting Nick's output back at him is tracking, not strategy, and he runs it. What remains is how you would know whether any of this is working, and what not to look at.*
 
 ### Lagging — not controlled. Direction, not magnitude.
 SoundCloud followers · Spotify monthly listeners · external placements (a VA is the likeliest first) · confirmed DJ plays.
@@ -234,6 +194,6 @@ Baselines: [[working/WOBAR_GROWTH_PLAN]]. **Do not track:** IG followers, reach,
 4. **Signing floors.** Unobtained for every label across six agents and a browser pass. The one real datapoint: Jadū Dala released Vulora at 119 monthly listeners.
 
 ### The failure mode, named
-**Research feels like progress and is not.** The 2026-07 sequence ran five sweeps, three vault rewrites and one push while the number that matters stayed at **0 submissions sent**. The plan has been roughly right the entire time; the target list was wrong and is now fixed. **Nothing further learned about labels will move a listener count.**
+**Research feels like progress and is not.** The 2026-07 sequence ran five sweeps and three vault rewrites, and none of them touched the binding constraint in #1. The plan was roughly right the entire time; the target list was wrong and is now fixed.
 
-**If this document is ever consulted while submissions still sit at zero, the answer is in Phase 1 and it takes ten minutes.**
+**Nothing further learned about labels will move a listener count.** Treat that as a stopping rule for research, not a reminder about tasks.

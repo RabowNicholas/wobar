@@ -3,7 +3,7 @@ title: Wobar Surfaces — Depth Map & Exposure Status
 version: 2.0
 created: 2026-07-27
 last_updated: 2026-07-27
-status: live — working tracker
+status: live — strategy: the depth and duration map
 scope: How deep into the world each surface reaches, for whom, and what is currently deployed there. OWNS the depth ladder and per-surface exposure status. Does NOT own surface roles (WORLD §7.5), voice registers (WOBAR_COPY), or source bios (WOBAR_COPY BIO TEMPLATES).
 dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]], [[working/WOBAR_ROADMAP]]
 ---
@@ -105,15 +105,15 @@ A category the map was missing entirely. The world also appears **inside someone
 
 ## §3 — LIVE SURFACE REVIEW (2026-07-27, all verified in-browser)
 
-| Surface | Found | Action |
+| Surface | Found | Resolution |
 |---|---|---|
-| **YouTube** | ✅ Live and in-register. Description correct, links SoundCloud-first, avatar = the mark, **full set published (1:39:11)** | Banner is the **pre-2026-07-21 visual identity** (purple plasma). Residency line dropped |
+| **YouTube** | ✅ Live and in-register. Description correct, links SoundCloud-first, avatar = the mark, **full set published (1:39:11)** | Banner still carries the **pre-2026-07-21 visual identity** (purple plasma) |
 | **SoundCloud** | 🔴 **The 5-act framework named and enumerated publicly** — *"rift → descension → encounter → release → integration."* Plus manifesto language, and *"psychedelic dubstep"* leading | Rewritten |
 | **Spotify** | 🔴 **Worse — the manifesto verbatim.** *"The portal goes inward. At the center is a mirror."* + the framework enumerated + *"No gurus here…"* | Rewritten. **Canvas + Artist Pick empty — free, unused** |
-| **Instagram** | ✅ **Cleanest bio of the three.** Utility-first, contact present | Fix `deep dubstep` lead and `enter the void 👇`. **Yielded `contact.wobar@gmail.com`** |
+| **Instagram** | ✅ **Cleanest bio of the three.** Utility-first, contact present | `deep dubstep` lead and `enter the void 👇` are off-register. **Yielded `contact.wobar@gmail.com`** |
 | **wobar.music** | ✅ **LIVE AND EXCELLENT** — the mark in glowing broken circles, true black, scanlines, daemon typing in correct register. **Vector-void, shipped** | ⚠️ **IG's only link pointed here** — routing depth-0 strangers to a depth-3 surface. Fix: SoundCloud first, terminal second, **no CTA on the terminal** (it is *discovered*, per its own spec) |
-| **Reddit** | 🔴 **Account is 0 days old, 1 karma, "Newcomer"** — no bio, no links, default avatar | Bio/links/avatar set. **Karma+age gates on target subs must be checked before Lane A** |
-| **Beatport** | 🔴 **Absent entirely.** No artist page, no releases | **Distribution setting, not copy.** The lane's marketplace, where DJs buy, and the source of every chart finding this week |
+| **Reddit** | 🔴 **Account is 0 days old, 1 karma, "Newcomer"** — no bio, no links, default avatar | Bio/links/avatar set. **Channel retired 2026-07-28** |
+| **Beatport** | 🔴 **Absent entirely.** No artist page, no releases | **Distribution setting, not copy.** The lane's marketplace, where DJs buy, and the source of every chart finding in the vault |
 
 ### Deployed copy
 Source bios are owned by [[reference/WOBAR_COPY]]. Surfaces deploy them + a surface-appropriate utility block. **One bio, many deployments — never a new variant.**
@@ -144,8 +144,12 @@ Source bios are owned by [[reference/WOBAR_COPY]]. Surfaces deploy them + a surf
 
 ---
 
-## §5 — PRIORITY
+## §5 — WHAT THE MAP SHOWS IS MISSING
 
-**1. The demo submission text.** Blocking Phase 1. Four form fields from being the first thing ever sent.
-**2. Release artwork + Spotify Canvas.** The depth-1 layer — visual, free, unblocked, and the layer the map shows is emptiest.
-**3. Beatport distribution.** Not copy. The lane's marketplace, and you are not in it.
+*A ranked priority list lived here and was removed 2026-07-30 — it was a to-do list, and every fact in it is already in §4.*
+
+Three absences, stated as facts rather than tasks:
+
+- **The demo submission text has no owner anywhere in the vault.** Deadbeats' form asks *"tell us about yourself"* — that is not the EPK bio and not the world-facing bio, and no doc holds it.
+- **Release artwork and Spotify Canvas are free, unblocked and unbuilt.** Depth 1 is the emptiest band on the ladder and the cheapest to fill; one design job covers artwork, Canvas and the grid.
+- **Beatport does not have a Wobar page.** That is a distribution setting, not copy — and it is the lane's marketplace, where DJs cold-shop with buying intent.
