@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.0
-last_updated: 2026-07-28
+last_updated: 2026-07-30
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,46 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Growth Plan — get people listening (SoundCloud-first, labels, DJ promo) — SUPERSEDED BY A GOAL CHANGE
+
+**Closed:** 2026-07-30 — Nick's call. Not abandoned and not completed: the goal it was built on was re-specified underneath it. The plan optimised *"people listening — online, not local,"* and Nick's own reframe the same day was **the fan is the real goal** — *"the room already exists with flow state and will continue to exist. the fan that is local comes to shows, the fan that is not streams."* Under a fan goal, "online not local" is a proxy and a local regular scores zero. The loop is retired; its unfinished execution carries forward into the **Goal Re-Specification** loop in [[working/WOBAR_ACTIVE]]. **The governing documents remain live and correct** — this closes a loop, not a plan.
+
+**What it was:** The primary loop from 2026-07-26. A 12-month push to move Spotify monthly listeners (22) and SoundCloud followers (55) via self-release as the engine, labels and VA compilations as the amplifier, flips as the traffic, and DJ promo as the slow lever. Produced [[working/WOBAR_GROWTH_PLAN]] v1.1, [[working/RESEARCH_LABEL_LANDSCAPE]] v4.0, [[working/WOBAR_ROADMAP]] v1.0 and [[working/WOBAR_SURFACES]] v2.0 — all still governing.
+
+**What it established that outlives it.** **The lane correction** — centre of mass is dark/wonky 140 + rap flips (~45% of Nick's 93-minute set, STVSH most-played ×4); the psy-bass comps in `WOBAR_SONIC` describe only the final 22 minutes. **The platform inversion** — the lane lives on SoundCloud (Tape B 162K · Phrva 51.9K · flozone 33.7K · STVSH 26K), most comps run SC ≥ IG, and Wobar is backwards at 400 IG / 55 SC. **Uncleared flips cannot reach DSPs** (both master and composition permission required; the compulsory licence covers covers only) and are permanently non-monetisable on SoundCloud — **flips are marketing, originals are the only listener source.** **Numbered flip series belong on the main account**, not a split one — Tape B runs *Vibe Check* and *Driptapes* with uncleared major-label flips; inside *Vibe Check Vol.3* the Mariah Carey flip pulled **867K against Tape B's own original at 216K**. **Audience is not a label gate** — Jadū Dala released Vulora at ≤2,324 IG followers and 119 monthly listeners, and Vanda at ≤1,724. **Two doors verified open and free** — Deadbeats' four-field Google Form and Jadū Dala's email, both confirmed by direct browser load. **The VA compilation economy** — ten live recurring series, most 20–29 artists per volume; a 29-slot compilation is a materially different proposition from a one-slot signing. **Two screens that did real work** — founder share of Top 10 (kills release vehicles: 7 of 11 small labels are one artist self-releasing) and set overlap (six tracks from Nick's own set are Beatport top-10 performers on target labels).
+
+**The negative result, which is the loop's most useful output.** Searched for a top of funnel and established there is not one. With Instagram demoted and Reddit closed, **no broadcast discovery channel remains.** What exists is **pull** — flips riding source-track search demand · Beatport, where Wobar is absent entirely · YouTube search · the free and never-used Spotify editorial pitch — and **borrowed** — VA comps · reposts · DJ plays. **Every remaining route is gated by a human saying yes**, which is the taste bar nothing has tested. **Reposts are SoundCloud's real distribution mechanic and they are human, not algorithmic:** COIDO's two most recent profile items are a **Wormhole repost (3,654 plays)** and a **Rinse FM repost (1,788)** — *reposts arrive with labels*, making the label lever the access key to three of the four routes rather than a parallel option.
+
+**The reframe that ended it.** Removing the Flow State collab from the Instagram data left no format that has ever produced a measurable result, which made the honest position sayable: **Wobar has a local presence and a skill set, not an audience.** 22 monthly listeners is the arithmetic of 11 tracks, 0 label releases, 0 demos and no Beatport presence — **a cold start, not a conversion problem.** No discovery channel converts at zero, because discovery was never the binding constraint.
+
+**⚠ Carried forward, unfinished — the number never moved.** **0 demos sent**, across four days and five research sweeps. Phase 1 is two doors and under ten minutes: **Deadbeats** (`bit.ly/Demos4Deadbeats`, four fields) and **Jadū Dala** (`jadudala@gmail.com`, private links). Also unstarted: the ten VA submission routes (**zero checked**, Subsidia and MONTA first) · **Beatport distribution** (absent entirely — a distribution setting, not copy) · the **Spotify editorial pitch** (free, one per release, unused) · the **repost-outreach lever** (released tracks and flips only — a repost publishes, and published kills the unreleased-*and-unpublished* label door) · the **demo submission text**, which has no owner and blocks Phase 1 · the EPK, which is written in COPY but exists as no document · naming the imprint · the first-party SoundCloud pass.
+
+**The failure mode it documented about itself:** *"research feels like progress and is not."* Five sweeps, three vault rewrites and one browser pass while the only number that mattered stayed at zero. Six of the landscape doc's own calls needed correcting within two days, and it was never adversarially reviewed — two attempts died on an exhausted web-search quota.
+
+---
+
+## Peer Layer — Instagram/TikTok as a producer-and-DJ surface — LOCKED, THEN RETIRED AS A LOOP
+
+**Closed:** 2026-07-30 — same day it opened. Nick's call: the strategy is settled and the doc is the deliverable, so the loop has nothing left to hold. [[working/WOBAR_SOCIAL_PLAN]] v1.0 remains **governing for Instagram and TikTok** — closing the loop retires the tracking, not the policy.
+
+**What it was:** A one-session loop that ran from *"we have established that ig and tiktok arent good for streams — lets discuss what they could be good for"* to a locked position, through several rounds of adversarial pressure Nick asked for directly.
+
+**The decision:** **Instagram and TikTok are a peer-facing surface. The audience is producers and DJs, not fans. The output is credibility and conversations — never followers, reach or streams.** Target tier is **one rung up (2K–20K)**: they still answer DMs, their audience is 10–50× Wobar's, and **Flow State only has value to people at or slightly above this stage**, which is the decisive argument. Three buckets — **music** (proof; capture-gated, and a legibility problem not a brand problem), **memes for producers** (the only plausible reach mechanism), **give-back** (split: broadcast deferred, **1:1 starts now**). The funnel runs memes → engagement → **triage** → proof → **outbound warm DM** → **SoundCloud, not a smart link**, and its first leak is *nobody reads who engaged.*
+
+**The correction that reset the session.** The vault's only evidence that *"distribution is not the constraint"* — a post at **11,463 views / 316 sends, 2.8% sends-per-reach** — **was a collaboration with Flow State, whose account always does those numbers.** The reach was borrowed and Wobar's account never demonstrated distribution. [[working/RESEARCH_IG_MECHANICS]] §1 and §3.3 are void; organic median is **~205 views** (visualizers 133–314). Same error class as the six failed-lookups-treated-as-findings logged 2026-07-27: **a borrowed number read as a first-party result.** The reframe that survives: **the only time Wobar content ever reached anyone, another account carried it** — the same shape as reposts, VA comps and DJ plays.
+
+**Rejected along the way, with reasons.** *Growing Instagram as social proof* — peers run SC ≥ IG at 1.3–2.4× and Wobar is inverted at 400/55, so an IG-heavy profile reads *content account* to the exact people being targeted. *Focusing on full visualizers* — not the bottleneck; artwork + Spotify Canvas is the better visual spend and a release must never wait on a TouchDesigner build. *DMing all 400 followers for feedback* — *"ask artists their opinion"* recruits producers, the named IG failure mode; 400 link-DMs risks a spam restriction on the one function Instagram is for; and followers are polite, so the feedback would be manufactured noise.
+
+**Four holes left unresolved** (preserved in SOCIAL_PLAN §7): the accepted chain is **six links where the just-rejected one was three**; **Vulora was signed at 16 posts**, so the peer layer may be decoration on a taste-gate; "cheap exhaust" is probably false once content is good enough to earn respect; and TouchDesigner-as-topic recruits visual artists who don't play tracks — mitigated by framing TD as *the music's output*, never as a subject. Held **on cost with a fat tail, not on proof.** The bounded test that would settle it: **5 producer-facing posts, 3 hours total, scored only on unprompted replies from lane accounts** — run alongside the demos, never instead.
+
+**External input:** Joe Rath / CUTDWN, *The Independent Artist Playbook* — source of the three-bucket model (performance / music / feedback-give-back). **Its most useful page is the cautionary one:** the 20M-view breakout was non-music, and *"my music posts after it pretty much flopped… they saw me as a content creator."* Transferable: release on a clock not a feeling (≤6 weeks), *"a small scene where you're known beats a big scene where you're a stranger,"* support given months before it's needed, and the EPK checklist. Not transferable: 450 posts/year (Of The Trees runs **25 posts / 160K at 37–66% views-per-follower** against Shlump's **1,658 / 6–13%**) and face-forward "who am I" vlogs, which the facelessness forbids.
+
+**Best idea generated, and unbuilt:** **make a visualizer for a rung-up artist's track and send it free** — competence proof, rolodex and borrowed reach in one object, in a skill nobody in dark-140 has. Build one reusable rig and swap the audio, which is what makes the TouchDesigner work compound. **It also supplies wobar.music the acquisition path it has never had** — a stranger arrives for the .tox and is standing at depth 3.
+
+**Unstarted at close:** the 5-post test · three pinned proof posts · the weekly triage habit · the first 1:1 give-back · the ~240 names in [[working/IG_COMP_SAMPLE_FRAME]], built as a research sample and never used as the targeting list it is · set capture, which gates bucket 1 entirely · the peer-tier comp set (1K–20K), which has never been built.
 
 ---
 
