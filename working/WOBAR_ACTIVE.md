@@ -38,6 +38,19 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
 **Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates bucket 1 of [[working/WOBAR_SOCIAL_PLAN]].
 
+### Master Chain — built 2026-08-01
+**State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.
+
+**Two docs, two jobs:** [[working/WOBAR_MASTER_CHECKLIST]] is the procedure — open it to work. [[working/WOBAR_MASTER_CHAIN_V1]] holds the reasoning and the change log. The form-level posture is in [[reference/WOBAR_SONIC]].
+
+**The upstream half matters as much as the chain:** production sets now carry a permanent Utility so mixes render at ~−16 LUFS-S / −6 dBFS. The first mix to the desk arrived at −7.7 LUFS-I and +1.6 dBTP off an empty master bus — gain, not damage, but it meant the master was being asked to absorb 9 dB. Done right, the mastering trim lands at 0.00 and **becomes a mix diagnostic**: a track needing +5 is telling you something before you've heard a note.
+
+**Decided:** God Particle **100%**, not the researched 35% — level-matched A/B on real material, and 35% sat inside the doc's own "too low" band · **IRC 5** on the limiter · sub mono below 120 Hz · **44.1 kHz catalog-wide**, never converted mid-pipeline · Pro-MB reframed as **insurance, not an active stage**, because Nick's basslines rarely move and the sub-evening problem is already solved in the writing.
+
+**Deliberate deviation:** landed at **−8 LUFS-S** against the doc's −9 to −10, on Delta evidence that only the leading edge of the transient was being removed. Logged as a decision. The counter-argument is unchanged — platforms normalize toward −14, so the loudness doesn't reach the listener while the transient cost does.
+
+**Genuinely open:** **Soft Clip is owned and untested** — it's inside the Maximizer, the vault had recorded it as a gap, and transient clipping ahead of a limiter is how bass music gets level without pumping. It is the highest-value unexplored move here. Also: God Particle remains largely unmeasured and the low-Amount half of that mitigation is now gone by choice · Pro-MB's threshold was calibrated on a ±1 semitone bassline, the easiest possible case · integrated loudness has still only been measured over a looped drop, never a whole arrangement · no comp dataset, so spectral targets are judgement rather than measurement.
+
 ### Mirror Threshold — the SMS door into the Ether
 **State: spec complete, build not started, blocked on 10DLC** — days-to-weeks of carrier approval, and no door copy works without a number.
 

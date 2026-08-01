@@ -1,7 +1,7 @@
 ---
 title: Wobar Context Index
-version: 1.2 (+ Reddit channel registered 2026-07-28)
-last_updated: 2026-07-28
+version: 1.3 (+ mastering docs registered 2026-08-01)
+last_updated: 2026-08-01
 status: live
 scope: Master index for all Wobar reference files. Read this first in every conversation.
 dependencies: none
@@ -44,6 +44,9 @@ Every mutable fact has **exactly one owning file**. Every other mention is a `[[
 | Surface **exposure status + decisions** | [[working/WOBAR_SURFACES]] |
 | **Instagram / TikTok role, content buckets, peer funnel** | [[working/WOBAR_SOCIAL_PLAN]] |
 | Reference artists / comps, by register | [[reference/WOBAR_SONIC]] — the six-register table |
+| **Mastering posture** (form — why it's done this way) | [[reference/WOBAR_SONIC]] — Mastering — the posture |
+| **Mastering chain values + reasoning** | [[working/WOBAR_MASTER_CHAIN_V1]] |
+| **Mastering procedure** (what to actually do) | [[working/WOBAR_MASTER_CHECKLIST]] |
 | Bio copy (EPK + world-facing) | [[reference/WOBAR_COPY]] — BIO TEMPLATES |
 | Reddit strategy | **Loop RETIRED 2026-07-28.** The plan was deleted 2026-07-30 (action items for a dead channel); the *findings* survive in [[working/WOBAR_CLOSED]] and [[working/RESEARCH_REDDIT_SUBS]] |
 | Released catalogue | **No owner yet — deliberately not in a locked doc.** Needs a working file if it's wanted |
@@ -85,6 +88,10 @@ A **flat list standing in for a structured thing** is a drift generator, not jus
 | [[working/WOBAR_PLACEMENT_PLAN]] | /working | Get-heard strategy — the **lever map** (curators · promoters/scene · labels · DJ promo), promo-service verdicts, DIY ads playbook. **Its Target Label Roadmap is superseded** (psy-lane; Deadbeats' DROPPED verdict reversed) → use RESEARCH_LABEL_LANDSCAPE. The Denver convergence thesis is void — SubCarbon is Belgian, Memory Palace is closed; that loop is parked | live (v1.3 — partly superseded) |
 | [[working/MIRROR_THRESHOLD_SPEC]] | /working | Mirror Threshold build spec — the SMS door into the Ether; Twilio + Next.js/Neon/Vercel integration, state machine, compliance. **§0 = the acquisition model (2026-07-27)** — the funnel inverted from volume to relationship, **door copy LOCKED** (plain, never reaching), ~40 right people not volume, passive placement is texture / personal invitation is mechanism, and the fifth glimpse format: **unreleased music sent for reaction**. **Owns door copy.** Blocked on 10DLC | live (v0.2) |
 | [[working/RESEARCH_REDDIT_SUBS]] | /working | Subreddit landscape for bass/140 — sizes + descriptions from live Reddit API calls, two independent sweeps (vocabulary + empirical artist-location). **No rules pulled — self-promo policy is a manual per-sub review.** Companion data for WOBAR_REDDIT_PLAN | raw research — awaiting review |
+| [[working/WOBAR_MASTER_CHECKLIST]] | /working | **The per-track mastering procedure — open this to work.** Nine steps from production render to logged master, with the fail-condition table and the standing rules. Only two things are decided per track: EQ (0–2 moves) and Maximizer Gain | live (v1.0) |
+| [[working/WOBAR_MASTER_CHAIN_V1]] | /working | **GOVERNING for mastering — the reasoning behind every value.** Built for real 2026-08-01 in Ableton and saved as a template; v1 was research, v1.1 is what survived contact. Governing design principle: **bounded error, not optimality** — under this monitoring every setting is chosen so being wrong is survivable. Carries the Ableton rig (warp, pre-fader master, the A/B compensation rig), the **render standard** that makes Stage 1 trim ≈ 0 on every track, and a change log that is the actual feedback loop. **Open items are load-bearing** — Soft Clip untested, GP still largely unmeasured | live (v1.1) |
+| [[working/RESEARCH_MASTER_CHAIN_TOOLS]] | /working | Tool capability research behind the chain — includes the unrun GP measurement protocol (Part 6) | live |
+| [[working/RESEARCH_MASTERING_EDM_DUBSTEP]] | /working | Mastering practice research for the genre. Source of the Shepherd short-term rule and the Jason Goz loop | live |
 | [[working/WEB_HOME_SPEC]] | /working | The web home = a terminal you wander (early-RPG), guided by *the daemon*; full rebuild of wobar-landing-page; paths, offerings, AI rails | live |
 | [[working/WOBAR_VISUAL_RESET]] | /working | **The visualizer design system — READ BEFORE ANY VISUALIZER BUILD.** Audits the old visual system vs world v0.6, then supplies the spine: the corridor is the *artifact* of perception failing to render a higher dimension (not the territory) — from which non-arrival, the drop-as-failure, and the stable-then-collapse arc all follow. §3 = the spec. Governs all visualizer work; supersedes the per-act material affinities in TD_REFERENCE §3/§4 | live (v0.2 — spine locked) |
 | [[prototypes/corridor/README]] | /prototypes/corridor | **Look-dev sketches — prototype HERE, port to `glslTOP` after.** Holds the Nick-approved collapse mechanic (4× same corridor, superposed, no SDF booleans, weights equalizing) + the convergence-point find + 5 recorded dead ends so they aren't re-derived. Companion build-side to VISUAL_RESET §3 | live |
@@ -93,7 +100,7 @@ A **flat list standing in for a structured thing** is a drift generator, not jus
 | [[reference/WOBAR_FRAMEWORK]] | /reference | 5-Act Portal Framework, act definitions, percentages | locked |
 | [[reference/WOBAR_GRAMMAR]] | /reference | **The cross-modal grammar — the shared root beneath visual, copy, sound.** Law 0 (ground it, let depth emerge, never reach) + the six-law × three-surface table + the mirror principle + the utility-floor + the §8 register-gate. VISUAL_RESET/COPY/SONIC all derive from it. Read to keep the three surfaces one world | live (v1.0 — governing) |
 | [[reference/WOBAR_COPY]] | /reference | **v2.0** — the mirror spine, the 4-register voice stack (light/daemon/journal/source), the act axis, the utility floor, reconciled lexicon, register-scoped anti-vocab, the 4 tests, the daemon deflection bank, EPK+world-facing bios. Derives from GRAMMAR | live (v2.0 — governing) |
-| [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning; re-parented to GRAMMAR (v1.2) | locked |
+| [[reference/WOBAR_SONIC]] | /reference | Sonic identity, reference artists, genre positioning; re-parented to GRAMMAR (v1.2). **§Mastering — the posture (v1.6, 2026-08-01)** holds the form-level mastering strategy: in-house from a fixed template, master follows mix, loudness is not a goal, sub is mono, bounded error over optimality | locked |
 | [[reference/WOBAR_CONTENT]] | /reference | Content system, release architecture, posting | locked |
 | [[reference/WOBAR_ARCHIVE]] | /reference | Archive sourcing by act, portal depth, pipeline | locked |
 | [[reference/WOBAR_CLAUDE]] | /reference | How to work with Nick | locked |
