@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.0
-last_updated: 2026-07-30
+version: 2.1
+last_updated: 2026-08-01
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -110,6 +110,44 @@ The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 **Build:** 2D, glslTOP `membrane` — blobs → comp_height → displace (noise warp) → blur (dome 42 / presence 90); ambient back-field; `latex_grain` micro-normal; motion via `noise_drift` + `noise_breath` CHOPs.
 
 **Direction (Nick):** pivot the height source to POPX **DLA** branching tendrils rendered top-down — worms burrowing under skin, growth as escalation. Keep the membrane shader, swap the source only. **POPX is not loaded in that project** (fresh NewProject); crib `example_projects/DLA.toe`. Nick also called the cadence **too slow**.
+
+### Master Chain v1 — the audio side of the practice
+**State: template written and governing, never run on a real track.** [[working/WOBAR_MASTER_CHAIN_V1]] holds the chain, every value, and the reasoning per value.
+
+**Shape:** trim → God Particle (35%) → Pro-MB (one sub band, 20–90 Hz, Dynamic Phase, Range capped −3 dB) → Ozone (Imager mono <120 Hz → EQ → Exciter low-band → Maximizer IRC IV, −1 dBTP). Per track only two things move: two broad EQ decisions and the Maximizer threshold.
+
+**Designed for bounded error, not optimality** — the monitoring cannot verify anything below 55 Hz, so every value is chosen so that being wrong is survivable. The Range cap, linked stereo, low GP Amount and modest limiting all exist for that reason.
+
+**Research behind it:** [[working/RESEARCH_MASTER_CHAIN_TOOLS]] (tool capability + the shared theory) · [[working/RESEARCH_MASTERING_EDM_DUBSTEP]] (practice, sources tiered by verifiability, eight live contradictions between credible engineers).
+
+**Decided:** streaming and large-system weighted equally · vinyl constraints dropped, digital only · loudness de-prioritised, work to short-term and let integrated fall out · Goz's *loop* and his *permission on distortion* adopted, his meter-hostility explicitly not (it rests on monitoring Nick doesn't have) · sub dynamics resolved as flatten note-to-note / protect within-note envelope / constant ceiling with contrast built above.
+
+**Open:** God Particle is unmeasured and level-dependent, so it's a bounded but unknown quantity in the middle of the chain (protocol exists, parked) · no comp dataset, so every spectral target is judgement not measurement · rig offset predicted (low-mid and treble deficit) but unconfirmed · IRC 5 vs IRC IV untested on real material · the analyzer that would close the first three is designed and parked by decision.
+
+**Accepted risk, stated once so it isn't re-litigated:** systematic low-end error is invisible on this rig and permanent once released. Mitigated by the Range cap, mono-below-120, correlation checks and system trips before release. Not eliminated. Nick's call, made knowingly — he wants 90% now and a professional engineer later.
+
+### Ear Training
+**State: not started.** The only skill investment on the audio side that doesn't depend on fixing anything else first.
+
+**Why it's live:** Goz's bar — *"an engineer who can't spot 1k from 2k from 5k, they haven't learned the fundamentals."* Nick's own framing is that he doesn't fully understand what the chain is doing. Relative frequency recognition is free, compounds, transfers to mixing and sound design, and **works despite bad monitoring** — interval recognition doesn't need a flat room, which makes it the one thing the KRK/M50x problem cannot block.
+
+**Open:** method and tool unchosen · cadence unchosen · whether it earns a log at all, or is simply practised.
+
+### Mixing Research — the mix standard that doesn't exist
+**State: not started.** The asymmetry that exposed it: a master chain is now documented to the value level, and there is no equivalent for the mix, when the mix is where most of the leverage actually sits.
+
+**The evidence it rests on:** every Tier 1 engineer in the research says the same thing, Beau Thomas most directly — *"a good mix-down that is very controlled and sounds great will nearly always become really loud easily."* Nick mixes his own tracks, so everything the master chain currently **bounds** is something the mix could **eliminate**: sub note consistency at source · sub written mono from the start · kick/sub phase alignment · deliberate frequency division (sub 40–80, kick 90–180) · sparse mid-range and negative space as the genre's actual technique.
+
+**Open:** scope — mix standard, or research first then standard · whether it gets the same treatment as the chain (constraints → defaults → verification tests → change log) · whether an audio build log should exist at all, given [[working/TD_BUILD_LOG]] is a working feedback mechanism pointed at the visuals while the music, which is the product, has none.
+
+### Headphone Correction
+**State: not applied.** Cheapest fix available anywhere in the practice — free, minutes, and it converts the most detailed monitoring device from actively misleading into the best reference in the room for 80 Hz–10 kHz.
+
+**The problem it addresses:** the ATH-M50x measures V-shaped — elevated 80–200 Hz ("woolly"), a dip at 300–400 Hz, boosted treble, sub-bass roll-off that gets over-corrected for. The KRK Rokit 5 is also bass-forward. **Both devices lie in the same direction**, so cross-checking one against the other cannot catch the shared bias. Predicted consequence: masters that come out thin in the low-mids and dull up top.
+
+**Trap:** correction EQ belongs on the **monitor path only** — never in the render or export chain. A correction curve that reaches the bounce inverts itself into the master.
+
+**Open:** which profile source · where in the signal path it sits given the DAW · whether the KRKs are worth correcting too, or whether a measurement mic should come first so the room and the speaker are separated rather than conflated.
 
 ---
 
