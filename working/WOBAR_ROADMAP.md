@@ -106,7 +106,7 @@ Added 2026-07-30. **Not a funnel. It exits nowhere and produces nothing on its o
 
 `Instagram / TikTok → producers and DJs one rung up → credibility + a warm DM → repost, play, VA slot`
 
-**Audience is peers, not fans.** Scored on warm DMs sent and lane accounts reached — **never on followers, reach or streams.** Three buckets (music / memes / give-back), the funnel, the targeting tier and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]].
+**Audience is peers, not fans.** Scored on warm DMs sent and lane accounts reached — **never on followers, reach or streams.** Three buckets (performance / music / give-back — CUTDWN's list, adopted 2026-08-03; memes demoted from a bucket to a format), the funnel, the targeting tier and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]].
 
 **Held on cost, not proof.** The chain is six links and every one is unmeasured; Vulora was signed on 16 posts. Cheap with a fat tail — **and it must never displace the music or the sends.**
 

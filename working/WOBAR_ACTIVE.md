@@ -36,7 +36,7 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Unexploited and free, none ever used:** Spotify listener segments (closest thing to a return counter that exists — ⚠ exact field names unverified) · asking the room at Flow State who came for Wobar · the Spotify editorial pitch, one per release · Beatport distribution · two verified-open label doors, **Deadbeats** (`bit.ly/Demos4Deadbeats`, four fields) and **Jadū Dala** (`jadudala@gmail.com`, private links).
 
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
-**Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates bucket 1 of [[working/WOBAR_SOCIAL_PLAN]].
+**Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates **bucket 1 (Performance)** of [[working/WOBAR_SOCIAL_PLAN]] — which as of 2026-08-03 is the **top** of the peer funnel, so that funnel currently has no entry point.
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.

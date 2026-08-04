@@ -1,8 +1,8 @@
 ---
 title: Wobar Social Plan — the peer layer
-version: 1.0
+version: 1.1
 created: 2026-07-30
-last_updated: 2026-07-30
+last_updated: 2026-08-03
 status: live — governing for Instagram and TikTok
 scope: What Instagram and TikTok are for, who they target, the three content buckets, and the funnel that runs on them. OWNS the socials role, the target tier, the buckets, and the peer funnel. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
 dependencies: [[working/WOBAR_ROADMAP]], [[working/WOBAR_SURFACES]], [[working/WOBAR_GROWTH_PLAN]], [[reference/WOBAR_CONTENT]]
@@ -84,37 +84,35 @@ Consequences:
 
 ## §3 — THE THREE BUCKETS
 
+**Joe Rath / CUTDWN's list, adopted verbatim 2026-08-03 (Nick's call).** The bucket names and their jobs are his; what goes inside them is Wobar's.
+
 | Bucket | Job | Funnel position |
 |---|---|---|
-| **1 — Music** | Proof. Prevent dismissal | Middle |
-| **2 — Memes** | Reach + in-group signal | Top |
-| **3 — Give-back** | Differentiation | Depth |
+| **1 — Performance** | **Discovery** — proof you can command a crowd | Top |
+| **2 — Music** | **Ability** — proof you're a serious, valuable producer | Middle |
+| **3 — Give-back** | **Credibility** — interactive material that serves the community directly. *This is where you differentiate* | Depth |
 
-### Bucket 1 — MUSIC
-Moments from sets. Songs over video. Release and flip pushes to SoundCloud.
+> **Revision note.** v1.0 ran **music / memes / give-back**, with memes at the top of the funnel. Adopting Joe's list displaces memes and promotes performance into the top slot. **This is not a rename — it moves the top of the funnel from the cheapest input in the plan to the most expensive one.** What memes were, why they were demoted rather than deleted, and what was rescued out of that section → **§3.5**.
+
+### Bucket 1 — PERFORMANCE
+Moments from sets: the room, the drop landing, the crowd reacting. Joe's job for it is **Discovery** — and on his list this bucket, not memes, is the top of the funnel.
+
+**⚠ It is capture-gated, and capture is parked.** Nothing systematically films the Flow State sets ([[working/WOBAR_SURFACES]] — live is the deepest physical surface in the map, ceiling 3, and still marked *undesigned*). **No footage, no bucket.** Joe named hiring a photographer as the hinge of his LA break — the cheapest lever in his playbook.
+
+**State this plainly rather than let it hide inside a taxonomy change: adopting Joe's list puts the top of the funnel on the one input Wobar does not have.** Until capture is solved, bucket 1 is an empty slot and the funnel starts at bucket 2. That is not an argument against the list — Joe's ordering is probably right, and it makes the cost of parked capture visible instead of letting memes paper over it.
+
+**Open — the facelessness question, which has never been resolved for this bucket.** Performance content is the only bucket where a body is unavoidably in frame. Hands, decks, lights, crowd and back-of-head are almost certainly compatible with [[reference/WOBAR_WORLD]]; a face is not. Decide the shot grammar *before* the first capture, not in the edit.
+
+### Bucket 2 — MUSIC
+Songs over video. Release and flip pushes to SoundCloud. Visualizers. Joe's job for it is **Ability** — proof you're a serious, valuable producer.
 
 **Its job is not to persuade. Its job is to stop a lane producer dismissing you** when they check the grid after your DM.
 
-**Two constraints:**
-- **Capture-gated.** No footage, no bucket. Nothing systematically films the Flow State sets. Joe Rath named hiring a photographer as the hinge of his LA break — the cheapest lever in his playbook.
-- **Legibility, not brand.** Visualizers pull 133–314 views. `elekktronaut` runs 45K followers on pure faceless abstract generative art at 4.9K–14.4K per Reel. **The category is not the problem.** His work is high-contrast, **one legible form per frame**, readable at thumbnail scale. Wobar's are dark-on-black full-frame texture fields — invisible as a thumbnail in a bright feed on a phone.
-
-### Bucket 2 — MEMES (aimed at producers)
-Niche entertainment for the lane. **The only bucket with a plausible reach mechanism.**
-
-- **Sends-per-reach is the strongest non-follower signal on Instagram** (VERIFIED, [[working/RESEARCH_IG_MECHANICS]] §1.2). Memes are the format that travels by DM.
-- Cheap — minutes, not sessions.
-- **Faceless-compatible.** No voice, no personality vector, no conflict with [[reference/WOBAR_WORLD]].
-- **Zero credential required.**
-
-**⚠ GUARDRAIL — this is CUTDWN's documented failure mode.** Joe Rath's breakout was a non-music viral reel (20M views, 1.5M likes, ~800K shares); followers went 5,000 → 20,000 and then, verbatim: *"My music posts after it pretty much flopped, because the new fanbase expected comedy skits. They did not see me as an artist, they saw me as a content creator."*
-
-A meme bucket that works **will** outperform bucket 1 by 10–20×. Two fixes, both free:
-
-1. **Memes must signal competence, not be generally funny.** A joke only a dark-140 producer gets **is a credential**. A joke anyone could make is a content account. That line is the whole difference.
-2. **Pin the proof.** Three pinned posts, always music or performance. Whatever the feed does below, the top of the grid reads *producer* on inspection.
+**Constraint — legibility, not brand.** Visualizers pull 133–314 views. `elekktronaut` runs 45K followers on pure faceless abstract generative art at 4.9K–14.4K per Reel. **The category is not the problem.** His work is high-contrast, **one legible form per frame**, readable at thumbnail scale. Wobar's are dark-on-black full-frame texture fields — invisible as a thumbnail in a bright feed on a phone.
 
 ### Bucket 3 — GIVE-BACK
+Joe's job for it is **Credibility: interactive material that serves the community directly. This is where you differentiate.** The vault reached *differentiation* independently — that part of the two models agrees. **"Interactive" is Joe's word and is a sharper constraint than "artifact"** — it has not yet been tested against what follows.
+
 **Split in two. Nick's instinct to defer was right for one half and wrong for the other.**
 
 | | Works when | Cost | Call |
@@ -143,10 +141,37 @@ A meme bucket that works **will** outperform bucket 1 by 10–20×. Two fixes, b
 
 ---
 
+## §3.5 — MEMES: DEMOTED, NOT DELETED
+
+Memes were bucket 2 in v1.0 and are not on Joe's list. **Demoted to an available format 2026-08-03 — not retired to [[working/WOBAR_CLOSED]], because nothing about it was disproved.** It lost a taxonomy argument, not an evidence one, and deleting the section would have destroyed two things worth keeping.
+
+**What was true about it, and still is:**
+- **Sends-per-reach is the strongest non-follower signal on Instagram** (VERIFIED, [[working/RESEARCH_IG_MECHANICS]] §1.2), and memes are the format that travels by DM.
+- Cheap — minutes, not sessions.
+- **Faceless-compatible.** No voice, no personality vector, no conflict with [[reference/WOBAR_WORLD]].
+- **Zero credential required** — the only bucket-grade idea in the plan that needs no capture, no release and no result.
+
+**Why that is uncomfortable:** it was the plan's only reach mechanism, and the bucket that replaced it at the top of the funnel is the one that is blocked. The honest position is that **the plan currently has no working top of funnel** — which is not a new finding, it is the same one recorded on 2026-07-30 ("top of funnel searched for and not found — *that is the finding*"), now visible in the taxonomy instead of hidden by it.
+
+**If it comes back, it comes back as a format inside bucket 2 or as a bounded test (§7), never as a fourth bucket.** The condition that would justify reviving it: capture still parked and bucket 1 still empty three months out.
+
+### ⚠ THE STANDING RAIL — CUTDWN's documented failure mode
+
+*Promoted out of the meme section 2026-08-03. It was never really about memes — it applies to **any** non-music content that outperforms the music.*
+
+Joe Rath's breakout was a non-music viral reel (20M views, 1.5M likes, ~800K shares); followers went 5,000 → 20,000 and then, verbatim: *"My music posts after it pretty much flopped, because the new fanbase expected comedy skits. They did not see me as an artist, they saw me as a content creator."*
+
+**This is the most valuable page in the playbook and it is the cautionary one.** Two fixes, both free, both applying plan-wide:
+
+1. **Non-music content must signal competence, not be generally entertaining.** A joke only a dark-140 producer gets **is a credential**. A joke anyone could make is a content account. That line is the whole difference — and it governs give-back artifacts exactly as much as it governed memes.
+2. **Pin the proof.** Three pinned posts, always music or performance. Whatever the feed does below, the top of the grid reads *producer* on inspection.
+
+---
+
 ## §4 — THE FUNNEL
 
 ```
-MEMES ─────────►  reach, uncontrolled
+PERFORMANCE ───►  reach, uncontrolled          ⚠ BLOCKED — capture parked
    │               job: get seen by producers at all
    ▼
 ENGAGEMENT ────►  they like / comment / follow
@@ -164,13 +189,15 @@ WARM DM ───────►  you reach out, already known
 SOUNDCLOUD ────►  they listen, download, maybe play it
 ```
 
-**Memes get attention. Music prevents dismissal. Behavior converts.**
+**Performance gets attention. Music prevents dismissal. Behavior converts.**
+
+**⚠ Read the top of that diagram literally.** Under Joe's list the entry point is performance footage, and there is none. **Until capture exists, this funnel has no mouth** — everything from ENGAGEMENT down is a machine for processing arrivals that nothing is currently producing. Give-back (bucket 3) is the only entry point available today that Nick can build unilaterally, which is a large part of why it is worth a session. See §3.5.
 
 ### Three rules the diagram encodes
 
 **1. The DM is outbound.** Waiting for a stranger to DM at 55 followers is waiting for nothing. **The funnel's only job is to make Nick's DM warm.** Joe Rath, same conclusion: *"I gave support months before I ever needed or asked for anything. By the time I reached out, I wasn't a cold name."*
 
-**2. Triage is a step, and it is the one that will kill this.** Memes travel to producers *generally*, not to the target tier. The right people are found by **reading who engaged, not how many** — a weekly ten-minute habit. It is operational, not creative, which is exactly why it gets skipped.
+**2. Triage is a step, and it is the one that will kill this.** Whatever runs at the top travels to producers *generally*, not to the target tier. The right people are found by **reading who engaged, not how many** — a weekly ten-minute habit. It is operational, not creative, which is exactly why it gets skipped.
 
 **3. The destination is SoundCloud, not Spotify.** It is where DJs download, repost and play from, and the producer-follow is the native action there. **The DM links SoundCloud — not a smart link.** Spotify serves non-local fans arriving by other routes.
 
@@ -180,7 +207,7 @@ SOUNDCLOUD ────►  they listen, download, maybe play it
 |---|---|---|---|
 | 1 | **Nobody notices who engaged** | The weekly triage habit | free |
 | 2 | **Grid reads as a content account** | Three pinned proof posts | free |
-| 3 | Meme travels, profile never checked | Mark + handle legible in-frame | free |
+| 3 | Post travels, profile never checked | Mark + handle legible in-frame | free |
 | 4 | DM sent, no reply | Track quality. Nothing else fixes it | — |
 | 5 | Listens once, never returns | Catalogue depth. Not solvable this year | — |
 
