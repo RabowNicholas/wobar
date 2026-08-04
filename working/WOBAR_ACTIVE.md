@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.1
-last_updated: 2026-08-01
+version: 2.2
+last_updated: 2026-08-04
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -37,6 +37,21 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
 **Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates **bucket 1 (Performance)** of [[working/WOBAR_SOCIAL_PLAN]] — which as of 2026-08-03 is the **top** of the peer funnel, so that funnel currently has no entry point.
+
+### Give-Back Content — the niche
+**State: subject locked 2026-08-04, no format.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]]; evidence is [[working/RESEARCH_STORYTELLING]].
+
+**Locked:** audience is **DJ-producers who do both** · vocabulary is **tension and release** · thesis is **the mechanic never changes, only the scale does** · content comes from a six-rung scale ladder, where rungs 2–5 are the territory and the **3↔4 crossing is the lane**.
+
+**Why that audience** — structural, not demographic. A pure producer works rungs 1–3 and 5; a pure DJ works rung 4. Only someone who does both has felt the mechanic at both ends, so the thesis is **checkable against their own memory rather than taken on faith** — the strongest position available to someone with no credential.
+
+**The bucket list changed underneath it.** CUTDWN's list adopted verbatim — **performance / music / give-back** — displacing memes, which are demoted to a format rather than retired (nothing was disproved; it lost a taxonomy argument). Reasoning at the point of decision in [[working/WOBAR_SOCIAL_PLAN]] §3 and §3.5.
+
+**Three constraints the research imposes, and they bind hard:** show, never explain — abstract posts about narrative score 0 while a writeup of a set actually played scored 648 · say **`tell a story`**, never **`storytelling`** (measured: the noun is thin in every craft sub and saturated in r/musicmarketing — it is a marketer's word) · think in public, never claim results.
+
+**A second branch exists and is a sibling, not a child:** brand psychology, taught as analysis rather than testimony. Round designed and unrun — [[working/RESEARCH_PLAN_BRAND]], blocked on WebSearch budget.
+
+**Open:** **neither branch has a format.** Both have a subject and no object, and the show-don't-explain constraint means the object needs a specific set Nick actually played. Also open: whether the flagship claim carries numbers at all (§4 argues it must not — the proportions are free and fixing them is both false and the guru posture) · whether the two branches share a name or a channel · the listener-facing branch, deferred not dropped.
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.
@@ -157,3 +172,4 @@ The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 - **Uncleared flips cannot reach DSPs** and are permanently non-monetisable — marketing, never a listener source.
 - **Never delay a release on a TouchDesigner build.**
 - **Borrowed numbers read as first-party results** — this has now happened repeatedly. Check provenance before a number becomes load-bearing, especially the best one.
+- **A scraped zero is not evidence until a control query passes in the same pass.** Same error class as the above, and it cost a confident false finding on 2026-08-03 — *"track endings are severely under-discussed"* was built entirely on rate-limit responses recorded as zero results. **The number 0 looks like data, which is why it survives review.** Harness and the full rule: `scripts/reddit_research.py`, [[working/RESEARCH_STORYTELLING]] §9.
