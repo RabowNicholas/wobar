@@ -202,33 +202,55 @@ Not independently verified. Directionally:
 
 ---
 
-## §6.5 — THE THINNESS MAP ✅ VERIFIED
+## §6.5 — THE ATTENTION MAP ✅ VERIFIED
 
-Since nothing is absent, the useful question becomes **what is thin relative to everything around it.** Full table in `scratchpad/absence_results.txt`.
+> **Framing correction, Nick, 2026-08-04 — and it inverts how this section was first written.**
+> **Saturation is the target, not the problem.** A thin term means nobody cares; it is not an opening. The v1.0 draft presented a "thinness map" as if sparse language marked opportunity. **That is the gap fallacy: an unoccupied niche is usually unoccupied because it is uninteresting.** Content needs an audience that is already paying attention. Read every count below as *attention available*, not *space to fill*.
 
-**The thinnest results in the entire sweep:**
+**Under that frame, the field is wide open in the good way** — nearly every structural term is saturated. `arrangement` · `tension and release` · `contrast` · `ending` · `outro` · `silence` · `repetition` · `drop` in the production subs. `set structure` · `energy management` · `reading the crowd` · `warm up` · `closing set` · `peak time` on the DJ side. **Every** release-level term in r/LetsTalkMusic — `sequencing`, `tracklist`, `concept album`, `cohesive`, `narrative`, `album flow`, `interlude`, `era`. In r/Techno, `narrative`, `arc` and `journey` are all saturated, making it markedly more receptive to literary vocabulary than r/DJs.
 
-| Term | Sub | Count |
+### The thin list is a vocabulary warning, not a topic map
+
+Thin terms tell you **which words to avoid**, not which subjects to avoid — and the split is by *phrasing of the same idea*:
+
+| Idea | Dead phrasing | Live phrasing |
 |---|---|---|
-| **emotional arc** | r/edmproduction | **1** |
-| **lore** | r/musicmarketing | **7** |
-| **arc** | r/DJs | **8** |
-| **storytelling** | r/DJs | **9** |
-| storytelling | r/edmproduction · r/musicproduction | 12 |
-| faceless | r/musicmarketing | 12 |
-| tension and release | r/musicproduction | 12 |
-| storytelling | r/Beatmatch | 14 |
-| negative space | r/edmproduction | 16 |
+| set narrative — r/DJs | `storytelling` **9** · `arc` **8** · `narrative` 12 | **`tell a story` saturated · `journey` saturated** |
+| set narrative — r/Beatmatch | `storytelling` 14 · `arc` 16 · `narrative` 21 | **`tell a story` saturated · `journey` saturated** |
 
-**Three readings, in order of confidence:**
+**The noun is dead and the verb is alive.** Same concept, two phrasings, order-of-magnitude difference in engagement. `storytelling` is thin in every craft sub and saturated in r/musicmarketing — **it is a marketer's word, and using it in a DJ or producer space marks you as an outsider on sight.**
 
-1. **`storytelling` is thin in every craft sub and saturated in the marketing sub** (r/musicmarketing: saturated; r/WeAreTheMusicMakers: saturated; but r/DJs 9, r/edmproduction 12, r/musicproduction 12, r/Beatmatch 14). **The word belongs to the marketing discourse, not the craft discourse.** This independently corroborates §2's finding that narrative vocabulary is educator- and marketer-side. It is the clearest signal in the sweep.
+**⚠ Confound on `journey`, stated so the number isn't over-read.** Spot-checking r/DJs titles, `journey` carries at least three unrelated senses: set-arc (*"Gave them a nice journey from deep house, disco, house"*), **career progress** (*"is it right move in my djing journey?"*), and the proper noun *Journeys by DJ* (a 90s mix series). Its saturation is materially inflated. `tell a story` is the cleaner signal.
 
-2. **`emotional arc` at 1 in r/edmproduction is the thinnest result found anywhere** — against `arrangement`, `tension and release`, `contrast` and `journey` all saturated in the same sub. The *components* are discussed exhaustively; the phrase that names the whole shape barely appears. Suggestive, but a single two-word phrase is weak evidence on its own — do not build on it without a second probe.
+---
 
-3. **`lore` at 7 and `faceless` at 12 in r/musicmarketing**, against `persona`, `world` and `aesthetic` all saturated. Consistent with §6's unverified claim that the discourse lacks mythic vocabulary — but note **`world` is saturated**, so the vocabulary gap is narrower than that agent asserted.
+## §6.6 — THE ACTUAL GAP: ASSERTION WITHOUT DEMONSTRATION ✅ VERIFIED
 
-**What this does not license:** thin ≠ unmet need. A term can be thin because nobody needs it, not because nobody serves it. §1's demand evidence is what carries that argument — this table only shows where the language is sparse.
+**This is the strongest strategic finding in the file, and it only appeared once saturation was read as a positive.**
+
+The topic is not under-discussed. It is **over-asserted and under-demonstrated** — and the community says so itself.
+
+✅ Thread fetched and read: **"'Mix in a way to tell a story' is almost cliche on this thread. Haven't seen any examples though. So what's a mix that you think tells a story and what is that story?"** — r/DJs, 2015-05-08, 5 pts / 13 comments, `/comments/358rly/`
+
+> "I always found the 'mix to tell a story' instruction kind of vague, so I'm looking for clear examples in order to better grasp the idea." — u/lemonjalo
+
+**The answers prove the point.** One restates the abstraction (*"a good intro, climax and ending"*). One says it can't be taught from a chair: *"Wanna know how to tell a story? Go see some good veterans play 5h+ sets to big club crowds."* — u/PhreekHouse, 4 pts. One names two mixes and never says what the story was.
+
+**The question was "what is the story" and nobody answered it.**
+
+🟡 The same shape appears across r/DJs search metadata — people asking what the cliché means, and asking for examples:
+
+| Thread | Score |
+|---|---|
+| "Great examples of story telling in a mix?" | 73 |
+| "What does 'telling a story' in a DJ set even mean?" | 30 |
+| "Greatest Dance-floor focused DnB DJ's at telling a story/journey in their sets?" | 0 |
+| "What are some of the most amazing journeys DJs have ever brought their audience on?" | 0 |
+| **"Just finished a 5 hour set a whiskey bar. Gave them a nice journey from deep house, disco, house…"** | **648** |
+
+**Read the top and bottom rows together.** Abstract questions *about* narrative score 0. A post by someone who **actually did it and described what they played** scores 648.
+
+**The conclusion, and it should govern the format before a single post is made: this audience does not reward discussion of storytelling. It rewards demonstration of it.** Explainer content walks into a field where the advice is already a cliché people are tired of. Showing the thing — a specific set, a specific sequence, and what it did — is the move nobody is making, in a conversation everybody is already having.
 
 ---
 
@@ -239,7 +261,8 @@ Since nothing is absent, the useful question becomes **what is thin relative to 
 3. **Frequency of the beginner question.** "At least weekly per sub" is an estimate from a convenience sample, not a count. Still open.
 4. **Whether structure content converts to listeners.** Nothing here touches it. The demand is evidenced; the conversion is not.
 5. **Whether audiences perceive structure at all.** The adversarial agent hunted this specifically and found no usable evidence either way. **This is the real hole in the thesis and it is still open** — and it is now the most valuable unanswered question in the file.
-6. **Whether thin means unserved.** §6.5 measures sparseness of language, not unmet need. Nothing yet distinguishes the two.
+6. ✅ ~~Whether thin means unserved~~ — **resolved by decision, not by data (Nick, 2026-08-04): thin means nobody cares, and is not a target.** See §6.5.
+7. **Whether the demonstration finding holds outside r/DJs.** §6.6 is verified but single-sub. The assertion-without-demonstration pattern has not been tested in the production or release subs, and it should be before format is locked.
 
 ---
 
@@ -248,7 +271,9 @@ Since nothing is absent, the useful question becomes **what is thin relative to 
 1. **The demand is real and the language is emotional.** People say *boring, empty, goes nowhere*. They are describing structure and being answered with EQ. ✅ evidenced.
 2. **"Consistency of world, not access to your kitchen."** One verified stranger articulated the exact distinction, on a thread about not wanting to become content. ✅ verified.
 3. **Teaching is survivable; selling is not.** The credential reaction is specific, harsh, and aimed at people who claim results — not at people who think out loud. ✅ threads verified.
-4. **Nothing is missing — the vocabulary is just sorted.** ✅ measured. There is no empty field to walk into. *Journey* is the craft word, *storytelling* is the marketing word, and the two populations barely share language. **The opportunity is not an unsaid subject; it is the fact that the people with the structural problem and the people with the structural vocabulary are in different rooms using different words.**
+4. **Nothing is missing, and that is the good news.** ✅ measured. Saturation is the target — a thin term means nobody cares. The subject is alive nearly everywhere it was tested.
+5. **Use the live phrasing.** ✅ measured. **`tell a story`, not `storytelling`.** The noun is a marketer's word and is thin in every craft sub; the verb form is saturated in the same subs. This is free and it is the difference between reading as native or as an outsider.
+6. **The gap is demonstration, not doctrine.** ✅ verified. The advice *"mix in a way to tell a story"* is already a cliché the community complains about, and the complaint is that **nobody ever shows an example.** Abstract posts about narrative score 0; a post describing a five-hour set someone actually played scores 648. **Show the thing. Do not explain the thing.**
 
 ---
 

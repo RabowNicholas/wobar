@@ -113,6 +113,8 @@ Songs over video. Release and flip pushes to SoundCloud. Visualizers. Joe's job 
 ### Bucket 3 — GIVE-BACK
 Joe's job for it is **Credibility: interactive material that serves the community directly. This is where you differentiate.** The vault reached *differentiation* independently — that part of the two models agrees. **"Interactive" is Joe's word and is a sharper constraint than "artifact"** — it has not yet been tested against what follows.
 
+> **⚠ The niche was decided 2026-08-04 and is owned by [[working/WOBAR_GIVEBACK_NICHE]], not by this file.** Locked there: audience is **DJ-producers who do both**, vocabulary is **tension and release**, thesis is **the mechanic never changes, only the scale does**, and content comes from a six-rung scale ladder. Evidence in [[working/RESEARCH_STORYTELLING]]. The candidate-artifact list below predates that decision and is now *one possible format* for the niche, not the strategy itself.
+
 **Split in two. Nick's instinct to defer was right for one half and wrong for the other.**
 
 | | Works when | Cost | Call |
