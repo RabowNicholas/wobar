@@ -1,8 +1,8 @@
 ---
 title: Wobar Roadmap
-version: 1.0
+version: 1.1
 created: 2026-07-27
-last_updated: 2026-07-27
+last_updated: 2026-08-04
 status: live — governing for the goal, the funnels, and the standing rules
 scope: The strategy layer. The goal and what a fan is, the funnels, the standing rules, sequence constraints, and how you would know any of it is working. OWNS the goal definition. Contains no schedules, task lists or progress counts — those are Nick's, not the vault's. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
 dependencies: [[working/WOBAR_GROWTH_PLAN]], [[working/RESEARCH_LABEL_LANDSCAPE]], [[reference/WOBAR_SONIC]], [[working/WOBAR_ACTIVE]]
@@ -57,6 +57,12 @@ A listener hears it once. **A fan returns.** That return is the only test, and i
 1. **Flow State is the only fan-conversion machine in this project** — 60–90 minutes of undivided attention, bodies, volume and the AV, already booked and already running. [[working/WOBAR_SURFACES]] rates live at **ceiling 3** — deeper than every surface but the music — and still describes it as **"undesigned."**
 2. **Long-form outranks clips.** Mixes, chaptered sets, full visualizers. YouTube is the only long-form surface with a ceiling above 1.
 3. **Depth 2 is now *the* gap, not *a* gap.** *"Someone who loves the music has nowhere to meet the person."* Under a listener goal that was a curiosity; under a return goal it is where the leak is.
+
+> **⚠ Unresolved, logged 2026-08-04 — evidence exists that points the other way, and this file should not pretend otherwise.** The strongest available research on very small brands finds the opposite emphasis: brands under 1% share show **deficit** loyalty (less than expected, not more), and when they grow, gains come *"primarily from increased penetration rather than purchase frequency"* — explicitly *"challenging the idea that tiny brands depend on niche loyalty strategies."* Barker-Trowse, Dunn, Graham, **Sharp** & Corsi (2026), *Journal of Business Research* 204.
+>
+> **This is a flag, not an amendment. The goal in §1 is unchanged and no decision has been made.** Three reasons it does not simply overturn the duration principle: the paper measures distributed FMCG brands in panel data and its sample floor is unknown, so it does not reach 22 monthly listeners · Sharp's own 2002 paper names **stationarity** as a necessary condition, so a brand growing from zero sits outside the law's stated scope anyway · and the strongest critique of that camp concedes availability logic fits small brands *better*, which cuts against reading it as a caution.
+>
+> Recorded here so a future session cannot read §1.2 and believe the evidence is silent or agrees. Full treatment, with the counter-arguments and the verification trail: [[working/RESEARCH_BRAND_PSYCHOLOGY]] §1 and §6.
 
 **Instagram's scoping does not change** — [[working/WOBAR_SOCIAL_PLAN]] stands, now on a structural reason rather than a judgment call: **three seconds cannot make a fan.**
 

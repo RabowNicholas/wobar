@@ -1,6 +1,6 @@
 ---
 title: Wobar Active — current context
-version: 2.2
+version: 2.3
 last_updated: 2026-08-04
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
@@ -38,10 +38,27 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
 **Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates **bucket 1 (Performance)** of [[working/WOBAR_SOCIAL_PLAN]] — which as of 2026-08-03 is the **top** of the peer funnel, so that funnel currently has no entry point.
 
-### Give-Back Content — the niche
-**State: subject locked 2026-08-04, no format.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]]; evidence is [[working/RESEARCH_STORYTELLING]].
+### Give-Back Content — two beliefs, fifteen pieces, no scripts
+**State: both beliefs locked 2026-08-04. Idea bank built. Nothing written.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.1, two beliefs); the content bank is [[working/GIVEBACK_CONTENT_PLAN]]; evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
 
-**Locked:** audience is **DJ-producers who do both** · vocabulary is **tension and release** · thesis is **the mechanic never changes, only the scale does** · content comes from a six-rung scale ladder, where rungs 2–5 are the territory and the **3↔4 crossing is the lane**.
+**🔴 OPEN LOOP — fifteen scripts, none written. Nick writes them by hand** (his call, 2026-08-04 — the vault holds the claims, the objects and the durations; the words are his). Two drafts were written in session as calibration (#1, #7) and are **not** canonical.
+
+Two of the fifteen — #3 *the two consistencies* and #10 *the empty chair* — are the best lines in the set and **have no object solved**. They default to talking-head, which is the register [[working/RESEARCH_STORYTELLING]] §6.6 measured at zero. **They are the ones to solve first and the last ones to shoot.**
+
+**A pattern found while drafting, and it is one problem not two:** the pieces with no music in them are the same pieces with no object — #1, #3, #10, all three line-driven rather than object-driven. **The fix is not a tie-in tag.** Make the *evidence* musical and leave the claim universal: the through-line then comes from the object, not from the words, and no piece ever has to say *"and this applies to your music too."* A generic version also competes against The Futur at 2.81M instead of in the small room where the DJ-producer standing is worth something.
+
+**The bucket holds two beliefs, and they are one loop:**
+> **Consistency builds the reference point. Contrast is what you spend it against.**
+
+Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface** (the same world at different depths). Both failure modes follow: all contrast and no reference is the 10k-stream artist whose next song sounds like someone else; all consistency and no contrast is a gray wall.
+
+**Belief 1 — locked:** audience is **DJ-producers who do both** · vocabulary is **tension and release** · thesis is **the mechanic never changes, only the scale does** · six-rung scale ladder, rungs 2–5 the territory, **3↔4 crossing the lane**.
+
+**Belief 2 — locked 2026-08-04:** ***"Nobody comes back to your project to meet you — they come back for somewhere to go."*** Enemy is **let people in** — depth is not access. Territory is the **failure modes of a place** read through artists who lost theirs (Getter, SBTRKT, deadmau5, Burial, Fred again.., Bassnectar), against counterweights who kept one cheap thing forever (Overmono, Four Tet, Aphex, Bicep).
+
+**Two decisions that unblocked everything:**
+- **Criticism, not education.** The education format was run properly by someone else and died at 150–700 views; the audience is specifically hostile to uncredentialed strategy teaching. Criticism needs no credential — authority comes from the quality of the reading.
+- **§5.1 amended: the object no longer has to be Nick's.** It was written under the education frame and made belief 1 hostage to capture — the same parked blocker that empties bucket 1. Reading someone else's arrangement satisfies show-don't-explain *and* never-claim-results at once.
 
 **Why that audience** — structural, not demographic. A pure producer works rungs 1–3 and 5; a pure DJ works rung 4. Only someone who does both has felt the mechanic at both ends, so the thesis is **checkable against their own memory rather than taken on faith** — the strongest position available to someone with no credential.
 
@@ -49,9 +66,14 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **Three constraints the research imposes, and they bind hard:** show, never explain — abstract posts about narrative score 0 while a writeup of a set actually played scored 648 · say **`tell a story`**, never **`storytelling`** (measured: the noun is thin in every craft sub and saturated in r/musicmarketing — it is a marketer's word) · think in public, never claim results.
 
-**A second branch exists and is a sibling, not a child:** brand psychology, taught as analysis rather than testimony. Round designed and unrun — [[working/RESEARCH_PLAN_BRAND]], blocked on WebSearch budget.
+**The research that reshaped belief 2 rather than feeding it** — [[working/RESEARCH_BRAND_PSYCHOLOGY]], four of six briefs, 2026-08-04. Three findings, and each one closed a door:
+- The brand evidence base **does not reach a brand this small, and its own authors say where it stops** (Sharp co-authoring a 2026 paper admitting brands under 1% share were *"overlooked"*). The only authority available is **methodological** — *I read the papers and know where they stop* — never *science says do X*.
+- The space is **densely occupied**, including a 71.7K-sub channel running the exact concept in the exact genre, with a new episode the day the sweep ran.
+- **The null result:** `effi summers creative` ran the proposed product properly — analysis posture, small-artist audience, no self-promotion — and got **150–700 views a video** before stopping three years ago.
 
-**Open:** **neither branch has a format.** Both have a subject and no object, and the show-don't-explain constraint means the object needs a specific set Nick actually played. Also open: whether the flagship claim carries numbers at all (§4 argues it must not — the proportions are free and fixing them is both false and the guru posture) · whether the two branches share a name or a channel · the listener-facing branch, deferred not dropped.
+**Still unrun: briefs 3 (brand voice) and 4 (visual identity).** Brief 4 is the higher-value one — it anchors on distinctive brand assets, the most measurable part of brand theory and the part most likely to survive the same scrutiny.
+
+**Open:** **neither belief has a format** — the fifteen pieces have claims, objects and durations, but no shape as a series · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.

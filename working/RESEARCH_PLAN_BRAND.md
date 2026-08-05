@@ -1,18 +1,32 @@
 ---
 title: Research plan — brand psychology for music projects
-version: 1.0
+version: 1.1
 created: 2026-08-04
 last_updated: 2026-08-04
-status: ready to run — blocked on WebSearch budget
-scope: The unrun research round for the brand-psychology sibling series. Briefs are written to be pasted straight into subagents. Not findings — a plan.
-dependencies: [[working/WOBAR_GIVEBACK_NICHE]], [[working/RESEARCH_STORYTELLING]]
+status: partly run — briefs 1, 2, 5, 6 complete; 3 and 4 outstanding
+scope: The research round for the brand-psychology sibling series. Briefs are written to be pasted straight into subagents. A plan, not findings — findings live in [[working/RESEARCH_BRAND_PSYCHOLOGY]].
+dependencies: [[working/WOBAR_GIVEBACK_NICHE]], [[working/RESEARCH_STORYTELLING]], [[working/RESEARCH_BRAND_PSYCHOLOGY]]
 ---
 
 # RESEARCH PLAN — BRAND PSYCHOLOGY FOR MUSIC PROJECTS
 
-**Why this exists as a doc rather than a completed round:** the session's WebSearch budget (200 calls) was exhausted by the storytelling round's failed Reddit agents before this could run. WebFetch still works, so *retrieval* is possible and *discovery* is not — and the part of this round that most needs discovery is the evidence war. Running it half would produce a one-sided map that looks complete. Parked deliberately.
+## STATUS — updated 2026-08-04
 
-**To run it:** raise `CLAUDE_CODE_MAX_WEB_SEARCHES_PER_SESSION`, or start a fresh session. The six briefs below are ready to paste.
+**Briefs 1, 2, 5 and 6 ran. Findings: [[working/RESEARCH_BRAND_PSYCHOLOGY]].** The budget blocker was an artifact of the exhausted session — a fresh session had the full 200 calls, and the four briefs used 131 between them.
+
+**Still unrun: brief 3 (brand voice) and brief 4 (visual identity).** Brief 4 is the higher-value of the two, because it anchors on distinctive brand assets — the most measurable part of brand theory, and the part most likely to survive the §1 scrutiny that the completed round applied to everything else.
+
+### ⚠ Two defects in this plan, found by running it
+
+**1. Brief 5 contained a pre-loaded absence and had to be inverted before it could be run.** It read: *"Is anyone teaching brand theory with rigour…? **Almost certainly not — confirm with evidence.**"* That is the same failure class as the scraped zero in [[working/RESEARCH_STORYTELLING]] §9 — an agent told to expect nothing, finding nothing, and reporting the nothing. **It was right to invert: the first target query returned seven operators, and the space turned out to be densely occupied.** Rewritten to *find who is doing it*, with a mandatory control.
+
+**This is a new failure mode and it belongs beside the old one: a pre-loaded absence in the brief is as dangerous as a scraped zero in the data.** The prompt itself can manufacture the false finding. Never write an expected conclusion into a brief.
+
+**2. Brief 2's highest-value question was buried as a bullet** — *does any of this apply to a very small brand.* Promoted to the headline before running, and it produced the most decision-relevant finding in the round. Briefs 3 and 4 should be checked for the same burial before they run.
+
+**A third lesson, for whoever runs 3 and 4:** vocabulary mismatch produces false absences. `brand psychology` returns nothing; `artist branding` returns the entire field. Vary the vocabulary aggressively before reporting scarcity.
+
+---
 
 ---
 
