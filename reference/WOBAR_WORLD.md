@@ -1,7 +1,7 @@
 ---
 title: Wobar World Mechanics
-version: 0.6 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained)
-last_updated: 2026-07-21
+version: 0.7 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained) · §4 amended 2026-08-04 (facelessness is not the lead — a face is allowed in frame)
+last_updated: 2026-08-04
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]]
@@ -166,6 +166,51 @@ behind them.
   the mirror: facelessness isn't only "a surface you see yourself in," it's that
   the totality has no single form. (Sleep Token invented a void to get
   facelessness. Wobar's cosmology *requires* it.)
+
+> ### ⚠ AMENDED 2026-08-04 — facelessness is not the lead
+>
+> **Nick's call, brand-wide: a face is always allowed in frame. Facelessness is
+> demoted from a governing rule to a property of the entity.** It stops
+> constraining capture on any surface.
+>
+> **What survives, unchanged.** Everything in the bullet above is a claim about
+> **Wobar the entity** — the totality has no single form, and no image of Nick
+> makes it have one. The paragraph was never invalidated; it was *over-applied*.
+> It described what Wobar is and got read as a rule about what Nick may show.
+> Those are different claims and only the second one is lifted.
+>
+> **The distinction that replaces the rule:**
+>
+> | | Status |
+> |---|---|
+> | The entity has no face | **true, cosmological, unchanged** — carried by the mark, the music, the void poems, the daemon |
+> | Nick's face is withheld | **lifted.** Was never load-bearing; it was inherited from the mask-act comps |
+>
+> **Consequences, stated rather than left to be discovered:**
+> 1. **Wobar is no longer in the mask-act category.** The Sleep Token / Ghost
+>    comparison above is now a *contrast*, not a lineage. Their facelessness is
+>    the product; Wobar's is a fact about the entity that the artist does not
+>    have to perform.
+> 2. **§7's "every threshold is faceless" is a different word and survives.**
+>    There it means *a line into the world, never "text Nick"* — a rule about
+>    what the door points at, not about what is visible. Unaffected.
+> 3. **§7.5's "faceless-intimate" (the Mirror/SMS) is now a design choice, not a
+>    constraint.** SMS still lets Nick be maximally personal in word; that it
+>    also happens to show nothing is no longer the reason to do it.
+> 4. **The mark stays LOCKED and stays "the faceless face."** It is the entity's
+>    face. Nothing about a person in frame touches it.
+>
+> **The rail that replaces the rule.** The old constraint did real work: it kept
+> the personality vector out. That job now needs stating directly, because
+> "no face" was doing it by accident — **a face in frame is permitted; a
+> personality being sold is not.** The failure mode is CUTDWN's, already on the
+> record in [[working/WOBAR_SOCIAL_PLAN]] §3.5: *"They did not see me as an
+> artist, they saw me as a content creator."* Facelessness made that impossible
+> for free. It now has to be a choice each time.
+>
+> *Scope note: written brand-wide because "isn't the lead" is a statement about
+> the world, not about one bucket. If the intent was socials-only, narrow this
+> block — do not leave it ambiguous.*
 - **The voice leans the Sage register** — transmitting down from outside time —
   but the entity behind it is the whole vertical.
 - **Wobar is not a guru and cannot be one** (§5, §6.4, §8). The source is

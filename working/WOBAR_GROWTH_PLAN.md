@@ -2,7 +2,7 @@
 title: Wobar Growth Plan
 version: 1.1
 created: 2026-07-26
-last_updated: 2026-07-27
+last_updated: 2026-08-04
 status: live — governing document for the next 12 months
 scope: What Wobar does to get people listening. Supersedes the social-media strategy in WOBAR_CONTENT.md and reweights WOBAR_PLACEMENT_PLAN.md. Built from the 2026-07-26 research session and its adversarial verification.
 dependencies: [[working/RESEARCH_VERIFICATION_MEMO]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/RESEARCH_SOUNDCLOUD_COMPS]], [[reference/WOBAR_CONTENT]]
@@ -59,6 +59,8 @@ Every door in this plan is taste-gated, and **no research in this session touche
 → **Account separation is NOT the practice in this scene.** An earlier recommendation to split handles is retracted; it derived an action from a confirmed *mechanism* (strikes are account-level and terminal) without a measured *rate*, against an observed industry norm that runs the other way.
 
 → **The numbered flip series is a real, established format.** Name it, number it, keep it running. *Portal Journey* already exists at 002.
+
+→ **NAMED 2026-08-04 (Nick): *SAMPLES I'LL NEVER GET CLEARED*.** The instruction above had been open since 2026-07-26. **No collision — *Portal Journey* is the mix/set series, *Samples* is the flip series**, and two concurrent numbered series on one main handle is exactly the Tape B pattern this section cites. Format spec, open questions and kill condition → [[working/FORMAT_TESTING]]. Bucket placement → [[working/WOBAR_SOCIAL_PLAN]] §3, bucket 2.
 
 ### Flips are the traffic
 **[OBSERVED — best-controlled datapoint in the session]** Inside *Vibe Check Vol. 3*, same account, same playlist, same period:

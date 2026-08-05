@@ -13,7 +13,7 @@ dependencies: [[RESEARCH_TOOL_STACK_PHASE1]], [[RESEARCH_TOOL_STACK_PHASE2]]
 - **Foundation: SoundCloud.** Every track uploads to SC. Clean profile. No active community-engagement work beyond what happens naturally. The 16-release plan IS the SC credibility play.
 - **Cadence: biweekly Fridays, 16 releases through 12/31** (5/29 → 12/25).
 - **MUR ships 2026-05-29.** T-21 distributor deadline is Friday 2026-05-08.
-- **Brand constraint: no face-of-artist content.** Visualizers carry video presence. The mirror is the artist.
+- ~~**Brand constraint: no face-of-artist content.** Visualizers carry video presence. The mirror is the artist.~~ **VOID 2026-08-04** — facelessness lifted brand-wide; a face is allowed in frame ([[reference/WOBAR_WORLD]] §4). Visualizers still carry video presence, but no longer because they have to.
 
 ---
 

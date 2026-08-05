@@ -50,6 +50,8 @@ Recorded live at Flow State events. Flow State pushes the full YouTube set. Clip
 ### Channels
 Bedroom recordings. Something came through and got captured. No ceremony. Just more music in the world.
 
+**Extended 2026-08-04 — Channels now covers the captured-on-video version too.** Bedroom capture is **Nick's own songs only** ([[working/WOBAR_SOCIAL_PLAN]] §3, bucket 2). Same format, same register, a camera on it. **Do not create a second name for it.**
+
 ---
 
 ## What Gets Made Per Release
@@ -81,4 +83,4 @@ Bedroom recordings. Something came through and got captured. No ceremony. Just m
 
 ---
 
-Series formats and content experiments live in working/FORMAT_TESTING.md until they earn brand-doc status.
+Series formats and content experiments live in [[working/FORMAT_TESTING]] until they earn brand-doc status. *(That file was created 2026-08-04 — this line had pointed at nothing since it was written.)*

@@ -93,6 +93,8 @@ Two sub-routes, and the second is newer and wider:
 
 Permanently non-monetisable, permanently off DSPs. **Budget as pure marketing.** Best available evidence: Tape B's Mariah flip at 867K vs his own original at 216K — same account, same playlist, same period.
 
+**The series has a name as of 2026-08-04: *SAMPLES I'LL NEVER GET CLEARED*** (Nick). This funnel had a shape and no vehicle; it now has one. Spec → [[working/FORMAT_TESTING]]. **The arrow that matters is the last one** — the series is not the destination, the back-catalogue of originals is, because only originals produce the goal metric.
+
 ### D — DJ & relationship. THE SLOW ONE.
 `unreleased track → private link → plays → ID requests → discovery + label attention`
 

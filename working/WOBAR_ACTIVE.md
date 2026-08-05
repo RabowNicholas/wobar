@@ -1,6 +1,6 @@
 ---
 title: Wobar Active — current context
-version: 2.3
+version: 2.4
 last_updated: 2026-08-04
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
@@ -36,7 +36,22 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Unexploited and free, none ever used:** Spotify listener segments (closest thing to a return counter that exists — ⚠ exact field names unverified) · asking the room at Flow State who came for Wobar · the Spotify editorial pitch, one per release · Beatport distribution · two verified-open label doors, **Deadbeats** (`bit.ly/Demos4Deadbeats`, four fields) and **Jadū Dala** (`jadudala@gmail.com`, private links).
 
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
-**Parked (Nick, "not now"):** designing the Flow State set, and capturing sets at all. Live is ceiling-3 and still marked *undesigned*; capture also gates **bucket 1 (Performance)** of [[working/WOBAR_SOCIAL_PLAN]] — which as of 2026-08-03 is the **top** of the peer funnel, so that funnel currently has no entry point.
+**Parked (Nick, "not now"):** designing the Flow State set. Live is ceiling-3 and still marked *undesigned*. **Capture is no longer parked with it** — see *Socials* below.
+
+### Socials — the three buckets
+**State: all three buckets have content, none has a running cadence.** Governing doc is [[working/WOBAR_SOCIAL_PLAN]] (v1.2); format specs are [[working/FORMAT_TESTING]] (new 2026-08-04).
+
+**Bucket 1 — Performance. Unblocked 2026-08-04, and the old blocker was misdiagnosed.** v1.1 read *"capture is parked, no footage, no bucket, the funnel has no mouth."* **Footage exists** — the published 1:39:11 set plus ad hoc live clips. The blocker was **no habit, not no footage**, and [[working/WOBAR_SURFACES]] §2 had said exactly that. Same error class as cold-start-vs-conversion: *two problems with opposite responses, read as one.*
+
+**Bucket 1 is event-gated on both its remaining sources** — live shows, and clips cut from recorded sets. **Episodic, not weekly, and it should not be planned as one.** Recorded sets are a *surface* (YouTube, ceiling 3), not clip feedstock.
+
+**Bedroom capture is bucket 2, not bucket 1 (Nick) — his own songs only.** It is *Channels* with a camera on it, not a new format. **It is also the version that survives SOCIAL_PLAN §7.3's "is it cheap exhaust" test:** the track exists whether or not it gets filmed, where bedroom-as-DJ-selection would have produced a clip and no artifact. Cost of the move, stated so it isn't rediscovered: **bucket 1 lost its only source needing no booking and no second person.** The selection credential isn't lost — it moves to *what Nick flips*.
+
+**Funnel C finally has a vehicle: *SAMPLES I'LL NEVER GET CLEARED*** — the numbered flip series (Nick). Closes GROWTH_PLAN's standing *"name it, number it, keep it running,"* open since 2026-07-26. No collision with *Portal Journey* (that is sets; this is flips). **Scored on lane-account response, never views or listeners — flips are off-DSP and non-monetisable by construction, so the series drives to the back catalogue or it does nothing.**
+
+**Open:** whether one name covers both SoundCloud and IG · the title is *industry*-insider, not *lane*-insider, so the dark-140 specificity has to live in the sample selections rather than the name · numbering scheme.
+
+**The honest limit under all of it:** flips out-traffic originals ~4× on Tape B's account, **and Tape B has an audience.** Nothing in the vault tests that mechanism at 55 SoundCloud followers.
 
 ### Give-Back Content — two beliefs, fifteen pieces, no scripts
 **State: both beliefs locked 2026-08-04. Idea bank built. Nothing written.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.1, two beliefs); the content bank is [[working/GIVEBACK_CONTENT_PLAN]]; evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
@@ -58,11 +73,11 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **Two decisions that unblocked everything:**
 - **Criticism, not education.** The education format was run properly by someone else and died at 150–700 views; the audience is specifically hostile to uncredentialed strategy teaching. Criticism needs no credential — authority comes from the quality of the reading.
-- **§5.1 amended: the object no longer has to be Nick's.** It was written under the education frame and made belief 1 hostage to capture — the same parked blocker that empties bucket 1. Reading someone else's arrangement satisfies show-don't-explain *and* never-claim-results at once.
+- **§5.1 amended: the object no longer has to be Nick's.** It was written under the education frame and made belief 1 hostage to capture — then believed to be the blocker emptying bucket 1. **That blocker turned out to be misdiagnosed (see *Socials*), but the amendment stands on its own merit:** reading someone else's arrangement satisfies show-don't-explain *and* never-claim-results at once.
 
 **Why that audience** — structural, not demographic. A pure producer works rungs 1–3 and 5; a pure DJ works rung 4. Only someone who does both has felt the mechanic at both ends, so the thesis is **checkable against their own memory rather than taken on faith** — the strongest position available to someone with no credential.
 
-**The bucket list changed underneath it.** CUTDWN's list adopted verbatim — **performance / music / give-back** — displacing memes, which are demoted to a format rather than retired (nothing was disproved; it lost a taxonomy argument). Reasoning at the point of decision in [[working/WOBAR_SOCIAL_PLAN]] §3 and §3.5.
+**The bucket list changed underneath it.** CUTDWN's list adopted verbatim — **performance / music / give-back** — displacing memes, which are demoted to a format rather than retired (nothing was disproved; it lost a taxonomy argument). Reasoning at the point of decision in [[working/WOBAR_SOCIAL_PLAN]] §3 and §3.5; current bucket state in *Socials* above. **Give-back is no longer the only entry point Nick can build unilaterally** — that was true only while bucket 1 was believed empty.
 
 **Three constraints the research imposes, and they bind hard:** show, never explain — abstract posts about narrative score 0 while a writeup of a set actually played scored 648 · say **`tell a story`**, never **`storytelling`** (measured: the noun is thin in every craft sub and saturated in r/musicmarketing — it is a marketer's word) · think in public, never claim results.
 
@@ -108,12 +123,16 @@ The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 
 **Open:** how much of it is actually built past the shell (paths, Sanity load) is unknown · the 30-fragment wander pool isn't loaded into Sanity · **the first Passage is owed and must be Nick-authored** — Passage mode is his verse, never generated · offering length/format limits · naming the terminal/world as a whole.
 
-### World Doc — `WOBAR_WORLD.md` v0.6
+### World Doc — `WOBAR_WORLD.md` v0.7
 **State: teardown live, doc still draft.**
+
+**§4 amended 2026-08-04 — facelessness is not the lead** (Nick: *"face always allowed. faceless isnt the lead."*). The amendment splits a claim the doc had fused: **the entity has no face** (cosmological, unchanged, carried by the mark and the music) versus **Nick's face is withheld** (lifted — never load-bearing, inherited from the mask-act comps). Wobar is out of the Sleep Token / Ghost category. §7's *"every threshold is faceless"* is a different word — a line into the world, never "text Nick" — and survives untouched.
+
+**The rail that replaces it, because the old rule did an unnamed job:** facelessness kept the personality vector out for free. **A face in frame is permitted; a personality being sold is not.** The CUTDWN failure mode (*"they saw me as a content creator"*) is now reachable and has to be refused deliberately each time.
 
 **Lexicon locked:** **Mirror** (one thing, mirrors-all-the-way-in) · **seeing** (the act of entering) · **Wanderer** (member) · **the Ether** (the *interior* — web home + SMS are two ways in, not the SMS list) · **glimpses** (list content). **The mark = two broken circles**, the faceless face. **The Passage** = the written body per Portal EP.
 
-**Cosmology:** the entity is a two-axis vertical — timeless self × all-possibility self. Facelessness is over-determined. Void poems are a translation layer, POV Wobar→down→all of us, under figurative-licence and empower-never-instruct guardrails. §8 is the anti-guru rail.
+**Cosmology:** the entity is a two-axis vertical — timeless self × all-possibility self. The **entity's** facelessness is over-determined — but that is a fact about Wobar, not a rule about Nick: **a face in frame is allowed as of 2026-08-04** ([[reference/WOBAR_WORLD]] §4). Void poems are a translation layer, POV Wobar→down→all of us, under figurative-licence and empower-never-instruct guardrails. §8 is the anti-guru rail.
 
 **Open:** §1 ground-truth placement (in-file vs Nick-eyes-only, now the cosmology is deeper) · the first **void poem** and first **Passage**, both untested voice · **eras** flagged as a mechanic and not formalised (Obscura is a different era, parked) · when the doc leaves draft.
 
