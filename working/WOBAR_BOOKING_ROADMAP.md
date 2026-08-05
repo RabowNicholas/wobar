@@ -173,6 +173,63 @@ Effin · Zingara · Ashez · Artifakts · **ProbCause** · Levity · **Wreckno**
 
 ---
 
+## §5.5 — THE ORBIT LAYER ⭐ *(added 2026-08-04 — Nick's call)*
+
+> **The premise, and it is right:** everything above is **label proximity** — who releases beside whom. A bill is **stage proximity** — who a promoter and an artist actually put in a room together. **They are different graphs, and the second is the one a booker lives in.** An artist can sit deep in someone's touring orbit and nowhere near their label.
+
+### The instrument
+
+**Songkick publishes the graph pre-computed.** Artist pages with enough tracked gigography carry an **"Appears most with"** block — co-billing counts, top five — plus **touring frequency by year** and **most-played cities**, which is the regional filter this layer needs. One page load replaces walking every event.
+
+⚠ **Three limits, stated before the data.**
+1. **Coverage is partial.** The block renders only for artists with enough tracked history — **EAZYBAKED has none** despite touring constantly. Absence is a Songkick data gap, **not evidence of an empty orbit**.
+2. **Counts are co-appearance, not billing order.** They don't separate opener from headliner and they include festivals — the same inflation risk the mega-compilations carried in §4. Read a high count as *"shares rooms with"*, never *"opens for"*.
+3. **Profiles fragment, exactly as on Beatport.** INZO splits across `IN-ZO` (43,738 fans, full stats) and `INZO (US)` (561 fans, one event). Same rail: enumerate variants.
+
+### The four orbits mapped
+
+| Artist | Appears most with |
+|---|---|
+| **Of The Trees** | CloZee 37× · CharlesTheFirst 26× · Freddy Todd 25× · Tripp St. 24× · **EAZYBAKED 23×** |
+| **INZO** | Liquid Stranger 13× · Dirt Monkey 12× · Mersiv 12× · HYDRAULIX 10× · **Blookah 9×** |
+| **LSDREAM** | CloZee 61× · Liquid Stranger 51× · **Zingara 50×** · G-REX (US) 38× · Champagne Drip 25× |
+| **Tape B** | Subtronics 22× · Liquid Stranger 20× · **Effin 20×** · **Ravenscoon 17×** · Wooli 15× |
+
+⚠ **CharlesTheFirst — do not treat as a booking target. I believe he died in 2022; verify before any outreach.** The general rail behind it: **these counts are lifetime and say nothing about whether an artist is currently active.**
+
+### The cross-graph result — the payload
+
+**Artists appearing in BOTH a label cluster and a touring orbit.** Nick's prediction was that some would show up in the orbit *without* the label network. It holds.
+
+| Artist | Label graph | Stage graph | Move |
+|---|---|---|---|
+| **Zingara** | Band D, PROX 2 *(We Are Deadbeats Vol.5 · LSZEE Synergy)* · **50,257 SC** | **LSDREAM 50×** | **PROMOTE** — near the top of an orbit, mid-table on labels |
+| **Blookah** | Band D, PROX 2 *(INZO ×7 releases · SSKWAN Synergy)* · **4,622 SC** | **INZO 9×** | **PROMOTE** — studio *and* stage collaborator, and the smallest measured artist in either graph |
+| **Effin** | Unranked *(Tape B ×2 releases · LSZEE Synergy)* | **Tape B 20×** | **ADD** |
+| **Ravenscoon** | Unranked *(Wakaan HEARTBEAT · Yoko's PERIPHERY remix LP)* | **Tape B 17×** | **ADD** |
+| **HYDRAULIX** | Unranked *(**We Are Deadbeats Vol.6**)* | **INZO 10×** | **ADD** |
+| **Champagne Drip** | Unranked *(Wakaan CONVOY · Shlump orbit)* | **LSDREAM 25×** | **ADD** |
+| **Mersiv** | Unranked *(Mersiv Sound Music · INZO *Digital Night Drive*)* | **INZO 12×** | **ADD** |
+| **Dirt Monkey** | Unranked *(Boogie T ×3)* | **INZO 12×** | **ADD** |
+| **Freddy Todd** | Unranked *(Memory Palace ×3 · Wakaan)* | **Of The Trees 25×** | **ADD** |
+| **Tripp St.** | Unranked *(Odyzey *Muzique Vol.01*)* | **Of The Trees 24×** | **ADD** |
+
+**Liquid Stranger is the structural finding, not a target.** He is in **three of the four orbits** (INZO 13×, LSDREAM 51×, Tape B 20×) and runs **Wakaan** — which §2 scores at 6 dream-tier artists **with a dead website**. **The label is unreachable and the man is everywhere.** That is the sharpest statement in this document that the centre of this scene is entered through rooms, not inboxes.
+
+**CloZee is the second hub** — Of The Trees 37×, LSDREAM 61× — and runs **Odyzey**, the label whose door has never been checked. Two hubs, two labels, both entered the same way.
+
+### Two dates in Nick's own market
+
+**INZO — The Great Saltair, Magna UT, Aug 7** · **Tape B — Granary Live, Salt Lake City, Sep 26.** Not bookings, but two of the twenty-two are playing his city and only the orbit layer surfaced it. **[[working/WOBAR_BOOKING_LIST]] has no "playing SLC" column and should.**
+
+### What this changes about the scoring
+
+**ORBIT belongs as a fourth dimension beside DOOR / PROXIMITY / TASTE** — not folded into PROXIMITY, for the same reason strategic value and cost stay on separate axes. **An artist strong on both graphs is a materially better target than one strong on either.** Zingara and Blookah are the first two to clear that bar.
+
+⚠ **Eighteen of the twenty-two orbits are unrun.** Four were mapped. Recorded as coverage, not completeness.
+
+---
+
 ## §6 — OPEN
 
 - **🔴 Odyzey's door has never been checked.** Highest-value single action pointed at this file. Five dream-tier artists and the opening two tracks of Nick's set.
