@@ -1,9 +1,9 @@
 ---
 title: Research — Label Landscape (dark/wonky 140)
-version: 4.0
+version: 4.1
 created: 2026-07-26
-last_updated: 2026-07-27
-status: live — v4.0 verified by direct browser load. NOT yet adversarially reviewed.
+last_updated: 2026-08-04
+status: live — v4.1. Browser-verified. §3 gained five corrections + two Beatport failure modes from the 2026-08-04 dream-tier sweep. NOT yet adversarially reviewed.
 scope: Tiered label list for the dark/wonky 140 lane. Doors, rosters, sound, Beatport commercial data, the visibility sweep (§2.5 — who gets featured) and the artist-discography sweep (§2.6 — the VA compilation economy). Supersedes the label tables in RESEARCH_LABEL_MAP and the label section of WOBAR_GROWTH_PLAN. Artists used only as a discovery index; no artist-side output.
 dependencies: [[working/WOBAR_GROWTH_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_VERIFICATION_MEMO]]
 ---
@@ -310,6 +310,31 @@ This is a **fundamentally higher-throughput door than a demo inbox**, it is wher
 7. **"Private links" is the confirmed convention** — Jadū Dala says it explicitly; Deadbeats' form asks for "dropbox or private soundcloud." Default to private links always. This also protects the unreleased/unpublished requirement most labels impose.
 
 8. **Deadbeats' `DROPPED — too broad/mainstream` verdict** in the Placement Plan is dead three times over: reversed on chart evidence, on stated A&R posture, and now on having the most accessible door on the list.
+
+### Corrections from the dream-tier discography sweep (2026-08-04) — 🟢 LAYER A
+
+All from direct browser reads of Beatport artist pages, all 22 dream-tier artists. Full detail: [[working/WOBAR_BOOKING_ROADMAP]] §4.
+
+15. **"Gravitas is wrong lane" — WRONG, and it is one of the better doors in the vault.** Filed in §2 WRONG LANE as world-bass/psydub with "zero wonky-140 artists," partially reversed later for register 6 only. In fact it is **Of The Trees' origin label** (~15 releases 2012–18), **Chmura releases there right now** (5 releases 2025–26), **rSUN curated a Gravitas compilation in Feb 2026** (*Heliosphere: Collected by rSUN*), and *Gravitas Recordings: Best of 2025* carries **Chmura, Comisar and Swomp** together. Door verified open, *"listens to every demo,"* requires finished + mastered + **unreleased**.
+
+16. **Odyzey Music is the biggest unchecked door in this document.** Five dream-tier artists (Of The Trees, SAKA, Chmura, rSUN, Yoko), plus **Super Future — *Open Up*, track 1 of Nick's set** — and Yoko, track 4. *The Cosmos* (2024) is **Daggz + Comisar + Chmura + Lowcation + Ooga**. Every prior sweep missed it because **Odyzey has never charted in the 140 Top 100**, and this file's discovery method was chart-led. **Its door has never been checked by anyone.**
+
+17. **rSUN is on ten labels, not four.** The vault credits Wubaholics + Jadū Dala + Bassrush + Memory Palace. Add **Good Society (5) · Gravitas (2, one as curator) · Odyzey (2) · Trippy Bee · HypnoVizion · Boom Records · Awakening**. **rSUN × STVSH — *Outreach*, Wubaholics, Nov 2025** puts him beside the most-played artist in Nick's set.
+
+18. **Distinct Motive is on Deep Medi Musik** — *Hypnotize*, 2025. Mala's label, filed here under "likely deep dubstep, not lane-verified." Also confirms **Drama Club** twice (*Snakes EP* 2023, *Psych Remix EP* 2025), so **Boogie T's label released Nick's most-cited reference artist.**
+
+19. **Shlump is on Deep Dark & Dangerous six times** — *Alien Technology* + remixes, *Flying Saucer*, *Shaolin Shadowboxing*, *Zero Gravity*, *Pull Up* (2025) — plus Deadbeats ×5 and Circus ×4. [[reference/WOBAR_SONIC]] struck him as a *comp*, correctly; that says nothing about him being a **genuine cross-lane bridge**, which he is.
+
+### ⚠ METHOD — two Beatport failure modes, and the second is new
+
+**Fragmentation** was already recorded (§2.6): one artist split across profiles. **Confirmed again** — INZO across `/inzo/32815` (48 releases) and `/inzo/1593559` (3); SAKA across `/saka/1170770` and `/saka-us/917306`.
+
+**CONFLATION is the inverse and was not recorded.** One profile merging unrelated artists: **Tape B** merges the bass artist with a Brazilian house producer (2011–15); **Yoko** merges the bass artist with a house/electro artist (2005–15); **FLY** (`/artist/fly/50224`) is a **three-way merge** — a deep-house producer, a Thai rock band on GMM Grammy (1996–2017, dozens of entries), and the bass artist, who has **two entries in it, both as a guest**.
+→ **Before trusting any artist page, check that release dates, genres and BPM ranges form one coherent career.**
+
+**Two efficiency findings that supersede §2.6's stated method:** `?per_page=150` returns a **full discography in one page load** (the documented method budgets 4–6 calls per artist and assumes pagination at 25), and **`read_page` with `filter: interactive` enumerates profile variants that `find` hides**, because `find` returns only the best name match.
+
+**And the negative result worth keeping:** FLY has **no independent Beatport catalogue at all.** That is not a lookup failure — it is direct confirmation of §2.6's structural claim that uncleared flips cannot be distributed, so **the rap-flip register is genuinely invisible to this platform.** SPOONE, Noctiil, Milano and Shades are the same case.
 
 ### Corrections from the visibility sweep (v3.0)
 

@@ -1,7 +1,7 @@
 ---
 title: Wobar Sonic Identity
-version: 1.6 (+ mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
-last_updated: 2026-08-01
+version: 1.7 (+ En:vy corrected to D&B 2026-08-04; + mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
+last_updated: 2026-08-04
 status: locked
 scope: Sonic identity, reference artists, anti-references, genre positioning, mastering posture.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -77,6 +77,13 @@ The container — the sound design decisions, the structural arc, the sequencing
 | 6 | **Psy-bass outro** | 24% | Of The Trees · INZO · LSDREAM · Alex Unger | Memory Palace · Gravitas · Trippy Bee · Local Void · Wakaan · Odyzey |
 
 **Every register has a door.** Submission strategy is *match the track's register, then send to that register's label* — not "find my lane." Full door status and verification: [[working/RESEARCH_LABEL_LANDSCAPE]].
+
+> ### ⚠ Correction, 2026-08-04 — **En:vy is a drum & bass artist**
+> A discography sweep found his catalogue is **Critical Music ×15 · Overview ×8 · Flexout ×8 · Shogun ×4 · 1985 Music · Gemini Gemini · V Recordings · Dispatch**. **Two of roughly sixty releases are 140** — *Medieval* (Dial 1) and *Codebreaker* w/ JAZ IMSKY (DDD, July 2026).
+>
+> **He stays in register 1 as a *sonic* reference** — *Damaio* is in the set at 11:42 and the read of what that register sounds like is unaffected. **But his label ecosystem must never be used to aim a submission, a booking or an outreach**, because it points at the D&B scene, not this one.
+>
+> **The error class, which is the transferable part:** a register table built from one track per artist describes *sound* accurately and *career* not at all. The two are different facts and only one of them has doors attached. Full sweep and the other seven corrections: [[working/WOBAR_BOOKING_ROADMAP]] §4.
 
 **On the weightings:** measured from one 93-minute set that Nick describes as an **ideal benchmark he is progressively filling in with his own originals**. Read as **target weighting**, not as a measurement of the released catalogue. First-party and the best evidence available — and n=1.
 

@@ -10,6 +10,20 @@ dependencies: [[working/WOBAR_BOOKING_ROADMAP]], [[working/WOBAR_COLLAB_TARGETS]
 
 # BOOKING LIST — RANKED
 
+> ## 📊 **WORK FROM THE SPREADSHEET: `working/WOBAR_BOOKING_LIST.xlsx`**
+> **370 rows, three sheets — `Artists` (filterable by Band, with four empty columns for Fee / Played FS / Priority / Notes), `Labels` (the hub map, door status colour-coded), `Method` (scoring key and rails).** This markdown file is the readable version and holds the reasoning; **the spreadsheet is the working surface.** Keep them in step — if they disagree on a score, the spreadsheet was built last.
+
+> ## 🔴 SOUNDCLOUD SWEEP, 2026-08-04 — Bands C and D are NOT a small-artist tier
+> **36 artists measured. Nine of them have more SoundCloud followers than STVSH (26K), the most-played artist in Nick's own set:** Zingara 50,257 · SubDocta 49,661 · Seth David 43,465 · Capochino 42,319 · Super Future 40,008 · Lumasi 39,996 · ProbCause 37,534 · VCTRE 34,635 · Wreckno 32,400.
+>
+> **The tier was assumed cheap because the names were unfamiliar. Unfamiliar to Nick is not small** — and that assumption was load-bearing for the whole "book one degree from the closed doors" argument.
+>
+> **What survives, and it is better than what was assumed:** the booking is worth most from roughly **2K–20K**, and **23 named artists now sit in that band** — including **Comisar at 10,522, who also holds the top strategic score.** He is now unambiguously #1: highest score, in the set, on three key labels, *and* inside the currency band. **Chmura moved the other way at 30,139** — same score, but a booking means materially less to him.
+>
+> **A failure caught mid-sweep, recorded so it isn't repeated:** guessing handles directly (`soundcloud.com/<name>`) returned **rSUN 4 followers, Secret Recipe 1, Super Future 10** — squatted accounts. Those numbers look exactly like data, the same class as the scraped-zero of 2026-08-03. Handle resolution moved to the **search page**, where competing accounts and their counts are visible together and the ambiguity is checkable.
+>
+> **Not measured:** **Yoko** and **Elohim** (both names collide with other artists — logged unresolved, never scored 0) · Instagram and Spotify (IG is login-walled and already demoted; SoundCloud is the platform this lane lives on) · Bands F–I.
+
 > **How to use this.** Bands are ordered by **how quickly you can act**, not by how good the artist is. Band A is first because you can evaluate those artists today; Band H is last because nothing about them is actionable yet. Within a band, order is by strategic score then by evidence strength.
 >
 > **Scores are DOOR + PROXIMITY + TASTE, 0–3 each, max 9.** Definitions in [[working/WOBAR_BOOKING_ROADMAP]] §1. **Score measures strategic value, never cost** — a 7 can be unaffordable and a 3 can be free.
@@ -41,7 +55,7 @@ dependencies: [[working/WOBAR_BOOKING_ROADMAP]], [[working/WOBAR_COLLAB_TARGETS]
 | 8 | **Comisar** | **7** | **On *Magicians*, track 2 of the set**, with Daggz and Chmura. On **Wormhole + Odyzey + Gravitas** — the closed door, the unchecked door and the open door, simultaneously | |
 | 9 | **rSUN** | **7** | **Ten labels** — Wubaholics, Jadū Dala, Bassrush, Memory Palace, Good Society ×5, Gravitas ×2, Odyzey ×2, Trippy Bee, HypnoVizion, Boom. **Curated a Gravitas compilation (Feb 2026)** — A&R influence at an open door. ***Outreach* with STVSH** | ✅ |
 | 10 | **Secret Recipe** | **6** | **Wormhole principal who publishes his own email** (`secretrecipe@wormholemusicgroup.com`). Wormhole holds Chmura, Daggz and dêtre behind a closed door | |
-| 11 | **Chmura** | **6** | **Currently on Gravitas** (5 releases 2025–26, open door). *Yung Tumbo* is **#1 in Wormhole's top 10**. Odyzey, Memory Palace (*ALCHEMY* w/ EAZYBAKED). On track 2 of the set | ✅ |
+| 11 | **Chmura** | **7** | **Currently on Gravitas** (5 releases 2025–26, open door). *Yung Tumbo* is **#1 in Wormhole's top 10**. Odyzey, Memory Palace (*ALCHEMY* w/ EAZYBAKED). On track 2 of the set | ✅ |
 | 12 | **Super Future** | **5** | ***Open Up* is track 1 of the set.** Odyzey ×2 **with rSUN**; Bassrush *Prophecy Vol.2* alongside Fly; SSKWAN *Synergy* | |
 | 13 | **Wraz.** | **5** | **Distinct Motive's constant collaborator — 5+ releases.** DDD, Deadbeats, DUPLOC, *We Are Deadbeats Vol.6*. The most direct route to Nick's #1 dream name | |
 | 14 | **Yoko** | **5** | ***Serve It Like* is track 4 of the set.** **Odyzey is his home** (4 releases). Street Ritual ×3, HypnoVizion, MorFlo, Wakaan | ✅ |

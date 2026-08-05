@@ -1,6 +1,6 @@
 ---
 title: Wobar Active — current context
-version: 2.4
+version: 2.5
 last_updated: 2026-08-04
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
@@ -37,6 +37,21 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
 **Parked (Nick, "not now"):** designing the Flow State set. Live is ceiling-3 and still marked *undesigned*. **Capture is no longer parked with it** — see *Socials* below.
+
+### Booking + Collab Targeting — the Flow State lever, aimed
+**State: built and ranked 2026-08-04. Nobody contacted.** Three docs and a spreadsheet: [[working/WOBAR_COLLAB_TARGETS]] (the dream tier), [[working/WOBAR_BOOKING_ROADMAP]] (method + the label hub map), [[working/WOBAR_BOOKING_LIST]] (**the ranked list — open this to work**, plus `WOBAR_BOOKING_LIST.xlsx`, 370 rows).
+
+**The reframe the whole thing rests on: the booking IS the outreach.** Nick has a residency and books the bill, so booking someone means **they hear his set at full length, in a room, without being asked to** — which nothing else in the vault does. Rail: **book → relationship → send, never in one breath**; a booking arriving with a pitch attached burns the one non-replicable asset.
+
+**Scored on two axes that are never summed** — strategic value (DOOR + PROXIMITY + TASTE, 0–3 each) separate from cost rung. Collapsing stature and reach into one tier is what made the first pass useless.
+
+**The label hub map is the load-bearing output.** Counting the 22 dream names across labels: **Memory Palace 7 (closed) · Wakaan 6 (site down) · Deadbeats 5 (open) · Odyzey 5 (⚠ NEVER CHECKED) · Bassrush 5 · Gravitas 3 (open, "listens to every demo")**. **The two densest labels are both shut** — which is not a dead end but a statement of shape: the centre of this map is entered by relationship, not submission, and a booking is what produces one.
+
+**The SoundCloud sweep inverted the premise it was built on.** The VA-roster tier was assumed cheap because the names were unfamiliar. It isn't: **nine of them out-follow STVSH (26K), the most-played artist in Nick's own set** — Zingara 50,257 · SubDocta 49,661 · Seth David 43,465 · Capochino 42,319 · Super Future 40,008 · Lumasi 39,996 · ProbCause 37,534 · VCTRE 34,635 · Wreckno 32,400. **Unfamiliar to Nick is not small.** What survives is better: the booking is worth most at **2K–20K**, and **23 named artists sit in that band**.
+
+**Comisar is the standout and was in nobody's list.** Top score (7), on *Magicians* — **track 2 of Nick's own set** — with Daggz and Chmura, on **Wormhole + Odyzey + Gravitas simultaneously**, and at **10,522** he sits mid-band where the booking is worth the most. Nothing else scores that high inside the currency band. **Chmura moved the other way at 30,139** — same score, booking means materially less.
+
+**Genuinely open:** **Odyzey's door has never been checked by anyone** and it holds five dream names plus tracks 1 and 4 of the set · the Nick-only inputs (fee, capacity, routing, who has already played) — the ranking is strategic value and **cannot rank affordability** · **Yoko and Elohim are unresolved on SoundCloud** (names collide; logged, never scored 0) · whether registers 5 and 6 belong in the room at all, which gates about a third of the aspirational band · **local/SLC is still empty and no external method reaches it.**
 
 ### Socials — the three buckets
 **State: all three buckets have content, none has a running cadence.** Governing doc is [[working/WOBAR_SOCIAL_PLAN]] (v1.2); format specs are [[working/FORMAT_TESTING]] (new 2026-08-04).
