@@ -4,8 +4,8 @@ version: 1.0
 created: 2026-08-04
 last_updated: 2026-08-04
 status: raw research — unreviewed
-scope: Findings from four of the six briefs in [[working/RESEARCH_PLAN_BRAND]], run 2026-08-04. The evidence layer under the brand-psychology sibling branch of give-back. Every claim carries an evidence grade and a source that was actually loaded.
-dependencies: [[working/RESEARCH_PLAN_BRAND]], [[working/WOBAR_GIVEBACK_NICHE]], [[working/RESEARCH_STORYTELLING]]
+scope: The evidence layer under belief 2 of the give-back bucket, run 2026-08-04. Every claim carries an evidence grade and a source that was actually loaded. NOTE — the round was commissioned for an educational series that this research then killed; that frame is RETIRED (see WOBAR_CLOSED). The evidence stands; the frame it was gathered for does not.
+dependencies: [[working/WOBAR_GIVEBACK_NICHE]], [[working/GIVEBACK_CONTENT_PLAN]], [[working/RESEARCH_STORYTELLING]], [[working/WOBAR_CLOSED]]
 ---
 
 # RESEARCH — BRAND PSYCHOLOGY FOR MUSIC PROJECTS
@@ -16,7 +16,11 @@ dependencies: [[working/RESEARCH_PLAN_BRAND]], [[working/WOBAR_GIVEBACK_NICHE]],
 
 ## §0 — WHAT WAS RUN, AND WHAT WASN'T
 
-Four of six briefs from [[working/RESEARCH_PLAN_BRAND]]. **Briefs 3 (brand voice) and 4 (visual identity) were not run.** Brief 4 is the higher-value of the two — it anchors on distinctive brand assets, the most measurable part of brand theory, and the part §1 below suggests is most likely to survive scrutiny.
+Four of six briefs ran. The plan doc that held them was **deleted at close-out 2026-08-04** along with the educational frame it served — full narrative in [[working/WOBAR_CLOSED]].
+
+⚠ **Read this file as evidence, not as a plan.** It was commissioned to feed a series teaching brand theory to small artists. §2 below is what killed that series. The findings stand; the frame does not, and must not be rebuilt from them.
+
+**Of the two unrun briefs, one survives the retirement and one does not.** **Brief 4 — visual identity, anchored on distinctive brand assets — is still worth running**, because distinctive assets are the only empirically supported mechanism for *"this compounds,"* which is the backbone of belief 2's repetition argument. **Brief 3 — brand voice — is retired with the frame**: the plan itself suspected it was mostly vibes, and *teaching brand voice* is precisely the dead thing.
 
 **Budget:** 131 of 200 WebSearch calls. The plan's stated blocker — an exhausted search budget — was gone in a fresh session and the round came in well under cap.
 
@@ -270,7 +274,7 @@ Four briefs, run independently, point at the same conclusion — and it is **not
 
 That also satisfies both constraints [[working/WOBAR_GIVEBACK_NICHE]] already imposes — **show, never explain** and **think in public, never claim results** — which the education framing quietly violates, since teaching strategy at 55 followers *is* a claim of results.
 
-⚠ **This is a finding, not a decision.** The pivot from education to criticism has not been made — see §7.
+✅ **DECIDED 2026-08-04.** The pivot was made: **criticism, not education.** The educational frame is retired to [[working/WOBAR_CLOSED]]; the surviving belief and its territory are in [[working/WOBAR_GIVEBACK_NICHE]], and the fifteen pieces built on it in [[working/GIVEBACK_CONTENT_PLAN]].
 
 ---
 
@@ -293,10 +297,9 @@ The best available evidence on the small end points the other way. The 2026 *Tin
 
 ## §7 — WHAT THIS ROUND DID NOT ANSWER
 
-- **The series still has no format.** Unchanged from [[working/RESEARCH_PLAN_BRAND]] §6, and unchanged for the first branch too. Research will not close it.
-- **The criticism pivot is undecided.** §5 is a convergence, not a decision.
+- **No format.** Still true for both beliefs — the fifteen pieces have claims, objects and durations but no shape as a series. Research will not close it.
 - **Short-form was never measured** ❓ — TikTok and Instagram were unreachable. The entire landscape read is YouTube + web. **If the identity lane is thin on short-form specifically, a short-form-native position could be open even though YouTube is not. This is the highest-value unanswered question in the round** and it needs a different tool.
-- **Briefs 3 and 4 unrun** — brand voice, and visual identity / distinctive assets. Brief 4 is the higher-value one.
+- **Brief 4 unrun** — visual identity / distinctive assets, and it is the one worth running. Brief 3 (brand voice) is retired with the frame.
 - **Whether the two branches share a name, a channel, or an audience funnel.** Still undecided.
 - **Whether "digestible on social" and "the evidence is contested" survive in the same piece.** A design problem, not a research question.
 

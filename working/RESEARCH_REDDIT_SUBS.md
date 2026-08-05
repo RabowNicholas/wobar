@@ -7,7 +7,7 @@ status: raw research output — for manual review and curation by Nick
 scope: Discovery + activity measurement of bass/140 genre subs AND artist/festival fan subs. Sizes, activity, engagement. NO RULES PULLED — Nick reviews self-promo policy manually per sub.
 supersedes: v1.0 (genre-only discovery, no activity data)
 method_note: Three sweeps, all from live Reddit API calls in-browser, 2026-07-27. Nothing from memory or search summaries.
-dependencies: [[working/WOBAR_REDDIT_PLAN]], [[working/WOBAR_GROWTH_PLAN]]
+dependencies: [[working/WOBAR_GROWTH_PLAN]]  # WOBAR_REDDIT_PLAN deleted on retirement 2026-07-30; see WOBAR_CLOSED
 ---
 
 # REDDIT SUBS — BASS / 140 / FAN + FESTIVAL

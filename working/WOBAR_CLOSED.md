@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
-version: 1.0
-last_updated: 2026-07-30
+version: 1.1
+last_updated: 2026-08-04
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,46 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Brand Psychology as an educational series — SUPERSEDED BY ITS OWN RESEARCH
+
+**Closed:** 2026-08-04 — Nick's call, on the evidence the branch itself commissioned. It was not abandoned and it did not fail in the field: **it was killed before launch by the round designed to feed it.** Nick: *"i want only the context that we ended on being marked as active in the vault. i want no chance of old context sneaking in."* The **subject** survives and is now belief 2 of [[working/WOBAR_GIVEBACK_NICHE]]; the **frame** — teaching brand theory to small artists — is dead and must not be rebuilt.
+
+**What it was.** The second branch of give-back, conceived as a sibling to the tension-and-release branch: brand psychology *taught*, as analysis rather than testimony, to the same DJ-producer audience. Nick's spine for it: *"Brand is what ties together every release, every show, every set — a way to have intention behind every action. It's really easy to get lost on the marketing side of music."* **Planned series: brand archetypes · brand voice · visual identity — online, live and physical.** Three decisions were locked up front — **curator not judge · no teardowns yet · analysis not testimony** — and six research briefs were written to be pasted into subagents. Four ran on 2026-08-04 (131 of 200 searches). The plan doc `RESEARCH_PLAN_BRAND.md` was **deleted** at close-out; its method lessons survive below and in [[working/RESEARCH_BRAND_PSYCHOLOGY]] §8.
+
+**What killed it — three findings, each independently sufficient.**
+
+**1. The null result, and it is the single most decisive datapoint the vault has ever produced about a format.** `effi summers creative` — 2.51K subscribers, 122 videos, verified directly off the channel page. Her catalogue is the proposed product almost exactly: *"music artist branding case study | Måneskin / Sia / Lizzo / The White Stripes,"* plus *"5 branding pillars for music artists,"* *"defining your tone of voice,"* *"building your authentic visual world (brand) as a musician."* Analysis-and-curation posture, aimed at small artists, no *look-what-I-did*. **Typical video: 150–700 views** (Måneskin 664, Sia 701, Lizzo 575, White Stripes 260). Last upload three years ago. **The format was run, at length, in the right posture, at the right audience, and it did not travel.**
+
+**2. The space is occupied, and by better-credentialed people.** The scarcity hypothesis was not merely wrong, it was an artifact of vocabulary — `brand psychology` returns nothing; `artist branding` returns the entire field. **Chris Alba / Neighborhood Art Supply**: 71.7K subs, a named *"Art Direction Playbook"* teardown series on EDM artists (Dom Dolla 103,004 views), a new episode published the day the sweep ran, and the agency behind James Hype, SIDEPIECE and Valentino Khan. Below that a full paid floor — a £499 *"Brand World Document,"* a $149 visual-identity course, and a saturated archetype-quiz layer. The same content clears 100K+ only when it carries a client list or targets **spectators** rather than practitioners (zoeunlimited, 3.41M subs).
+
+**3. The audience punishes exactly this.** r/musicmarketing, *"Stop charging broke indie artists for you 'strategy'"* — 103 points, top comment 21: ***"if you were so great at developing strategy… you'd have a job at a mgmt company or label."*** At 22 monthly listeners that objection is unanswerable inside an education frame. Adjacent, on importing marketing theory into music at all: *"I don't think this can be applied to music bro, unless you wanna be a commercial puppet to the masses. Art has different rules."*
+
+**And the archetype lane specifically was folklore — recorded so it is never rebuilt.** The twelve archetypes are not Jung. Jung never enumerated twelve and held archetypes to be effectively unbounded. The chain is Jung (open-ended) → Campbell (narrative, not taxonomy) → **Pearson 1986, *The Hero Within*, six** → **Pearson 1991, *Awakening the Heroes Within*, twelve — a personal-development book** → Mark & Pearson 2001, twelve *renamed* (Orphan→Everyman, Warrior→Hero, Seeker→Explorer, Destroyer→Outlaw, Fool→Jester). The founding book's entire empirical claim — *"MVA… rose by 97% more"* — rests on **one unreplicated proprietary Young & Rubicam analysis of ~50 brands, 1993–99**, on a 10% threshold that Spangenberg's data makes look like an artefact. **No peer-reviewed validation of the framework exists.** The one real empirical test (Spangenberg 2021, UW dissertation) found the twelve *are* perceptually distinct but **the four-motivation structure fails** and 18 of 30 real brands read as multiple archetypes. The defensible weaker version — archetypes as a generative tool with no predictive claim — **is stated by practitioners only to be rejected by them** (Liddell states it best, then: *"I'd avoid it if you possibly can"*; Meyerson grants a licence, not a defence: *"just don't claim it's 'backed by science'"*). It was never available to borrow.
+
+**What survives, and it is most of the value.**
+
+- **"Analysis, not testimony."** Untouched and now load-bearing — criticism *is* analysis, and it is what makes the posture work without a credential.
+- **The audience.** DJ-producers who do both. Unchanged across both beliefs.
+- **The subject.** Reorganised, not discarded: it is now belief 2 of [[working/WOBAR_GIVEBACK_NICHE]] — ***"Nobody comes back to your project to meet you — they come back for somewhere to go"*** — with the failure modes of a place as its territory.
+- **The evidence.** [[working/RESEARCH_BRAND_PSYCHOLOGY]] stands in full, including the 2026 *Tiny brands* admission, Sharp's stationarity boundary conditions, and the folklore table.
+- **Brief 4 (visual identity / distinctive assets) is still worth running**, reframed. Distinctive assets are the only empirically supported mechanism for *"this compounds,"* which is the backbone of belief 2's repetition argument. **Brief 3 (brand voice) is not** — the plan itself suspected it was mostly vibes, and under a criticism frame "teaching brand voice" is precisely the dead thing.
+
+**What died with it, explicitly, so it is not re-proposed.**
+
+- **"Curator, not judge."** Superseded. It is right about *camps* — *"I'm an Ehrenberg-Bass guy"* recruits enemies and dates badly — and wrong about *claims*. The plan named its own failure mode as **mush**, and Nick's requirement was the opposite: *"good content ideas are ones that take a solid stance."* The operating rule is now **maximum opinion on specific claims, zero allegiance to any camp.**
+- **"No teardowns yet."** Fully inverted. Readings of other people's work are now the entire format, because they are the only thing that satisfies show-don't-explain *and* never-claim-results at once.
+- **The three-part series structure** (archetypes / voice / visual identity). Varying the *concept* is teaching; the surviving format varies the *subject* under a fixed lens.
+- **"Digestible on social media"** as the organising constraint, and with it the unresolved design problem of whether *"digestible"* and *"the evidence is contested"* could survive in the same piece. The question dissolved rather than being answered — criticism is digestible and contested by nature.
+
+**Two method lessons the round paid for, and they generalise.**
+
+1. **A pre-loaded absence in a brief is as dangerous as a scraped zero in the data.** Brief 5 was written as *"Is anyone teaching brand theory with rigour…? **Almost certainly not — confirm with evidence.**"* That is the same failure class as the false *"endings are under-discussed"* finding ([[working/RESEARCH_STORYTELLING]] §9), moved up a layer into the prompt. It was inverted before running and the first target query returned seven operators. **The prompt itself can manufacture the false finding. Never write an expected conclusion into a brief.**
+2. **Vocabulary mismatch manufactures false absences.** The practitioners in a field rarely use the analyst's word for it. Vary the vocabulary aggressively before reporting scarcity.
+
+**⚠ Never done.** Briefs 3 and 4 unrun. **Short-form was never measured at all** — TikTok and Instagram were unreachable, so the entire landscape read is YouTube-only, and it remains the one gap that could overturn the null result. No scripts were written under this frame, and none should be.
 
 ---
 
