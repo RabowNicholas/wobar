@@ -226,7 +226,62 @@ Effin · Zingara · Ashez · Artifakts · **ProbCause** · Levity · **Wreckno**
 
 **ORBIT belongs as a fourth dimension beside DOOR / PROXIMITY / TASTE** — not folded into PROXIMITY, for the same reason strategic value and cost stay on separate axes. **An artist strong on both graphs is a materially better target than one strong on either.** Zingara and Blookah are the first two to clear that bar.
 
-⚠ **Eighteen of the twenty-two orbits are unrun.** Four were mapped. Recorded as coverage, not completeness.
+### The remaining orbits — and the finding that reframes this whole layer
+
+**Ran on 2026-08-05. Two more orbit blocks existed. Ten artists had none.**
+
+| Artist | Appears most with |
+|---|---|
+| **Zeds Dead** | Excision 55× · Paper Diamond 49× · Keys N Krates 43× · Gramatik 43× · Dillon Francis 43× |
+| **Boogie T** | Subtronics 93× · Ganja White Night 91× · **SubDocta 64×** · **Dirt Monkey 61×** · SoDown 53× |
+
+**No orbit block at all:** EAZYBAKED · Shlump · SAKA · STVSH · Gunpoint · Blurrd Vzn · Daggz · Chmura · rSUN · Distinct Motive.
+
+> ## 🔴 THE ORBIT BLOCK ONLY EXISTS FOR ARTISTS NICK CANNOT BOOK
+> Every artist with the block is arena/large-tier — Of The Trees, INZO, LSDREAM, Tape B, Zeds Dead, Boogie T. **Every artist in the bookable band has none.** Songkick computes it from tracked gigography volume, and the bookable tier doesn't generate enough.
+>
+> **So the instrument is inverted against the need**, and the fix is already in hand: **the gigography page is the better tool for this project.** It covers everyone, and its event titles carry the actual billing — *"Tape B at Boxpac Project"*, *"with Zingara"*, *"Subtronics at Great Saltair"*. **That is opener data directly, not a co-appearance proxy.** Use the orbit block top-down to find hubs; use gigography for anyone you might actually book.
+
+**Confirmed from Boogie T's orbit:** **SubDocta** (Band D, 49,661 SC) at 64× and **Dirt Monkey** at 61× — Dirt Monkey now appears in two orbits (INZO 12×, Boogie T 61×). **Zeds Dead's orbit contains nobody from this project** — his co-billing is a different stratum of the industry, which is itself a useful negative.
+
+---
+
+## §5.6 — SLC DATES AND THE HOME-MARKET VENUE MAP ⭐
+
+**Past and upcoming Utah dates for the dream tier, from Songkick gigography (page 1 = roughly the last two years).**
+
+| Artist | Date | Venue | Billing |
+|---|---|---|---|
+| **Gunpoint** | 2024-03-22 | **Boxpac Project** | **HEADLINED — no co-billing** |
+| **Gunpoint** | 2024-04-12 | Boxpac Project | supporting **Tape B** |
+| **Gunpoint** | 2024-01-20 | Boxpac Project | with Hol |
+| **Gunpoint** | 2025-01-31 | Rockwell, The Complex | supporting ATLiens |
+| **SAKA** | 2024-07-06 | Fear Factory SLC | **with Zingara** |
+| **SAKA** | 2024-07-05 | Fear Factory SLC | with TroyBoi |
+| **STVSH** | 2025-06-14 | **The Great Saltair** | supporting **Subtronics** |
+| **EAZYBAKED** | 2025-06-14 | *(SLC)* | **same bill as STVSH** |
+| **Distinct Motive** | 2025-04-11 | The Complex | supporting Ganja White Night |
+| **Of The Trees** | 2025-10-24/26 | Utah State Fairpark | **Get Freaky Festival 2025** |
+| **Zeds Dead** | 2025-10-24/26 | Utah State Fairpark | **Get Freaky 2025** *(Project Awake)* |
+| **Shlump** | 2026-01-10 | **Soundwell** | — |
+| **Boogie T** | 2026-01-30 | The Complex | — |
+| **INZO** | **2026-08-07** | **The Great Saltair** | ⏭ **UPCOMING** |
+| **Tape B** | **2026-09-26** | **Granary Live** | ⏭ **UPCOMING** |
+
+**No Utah dates found:** Blurrd Vzn · Daggz · Chmura · rSUN.
+**Not run:** LYNY · dêtre · Yoko · En:vy · Potions · FLY.
+
+### What this produces that nothing else in the vault has
+
+**1. The SLC venue map for this lane** — **Boxpac Project · The Complex / Rockwell · Soundwell · Fear Factory SLC · The Great Saltair (Magna) · Granary Live · Utah State Fairpark (Get Freaky, Project Awake).** These are the rooms and promoters that already book Wobar's exact tier in Wobar's own city. **Nick is a promoter and this is his competitive set.**
+
+**2. Nine of the twenty-two have already played SLC.** The dream tier is not remote — **Gunpoint has played the city four times and headlined once**, which makes him, with 19.5K followers and a place in Nick's set, arguably the most provably bookable name on the entire list.
+
+**3. Two dream-tier artists shared one SLC bill** — STVSH *and* EAZYBAKED behind Subtronics at Great Saltair, 2025-06-14.
+
+**4. Zingara has played SLC**, on a Fear Factory bill with SAKA. She was promoted into this file an hour earlier off LSDREAM's orbit with no label-side evidence. **She is now the only artist confirmed on all three graphs — label, stage, and home market.**
+
+⚠ **A false positive caught, and the rail that follows.** A first query returned *"Ogden Theatre"* as a Utah date. **Ogden Theatre is in Denver.** Venue names contain city names that are not their city — **always filter on the location field, never the venue string.** Same error class as every failed-lookup-as-finding in this vault, and it would have put a phantom home-market date in the spreadsheet.
 
 ---
 
