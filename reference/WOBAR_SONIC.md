@@ -1,7 +1,7 @@
 ---
 title: Wobar Sonic Identity
-version: 1.7 (+ En:vy corrected to D&B 2026-08-04; + mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
-last_updated: 2026-08-04
+version: 1.8 (+ "deep dubstep" is room-wrong as well as register-wrong 2026-08-06; + En:vy corrected to D&B 2026-08-04; + mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
+last_updated: 2026-08-06
 status: locked
 scope: Sonic identity, reference artists, anti-references, genre positioning, mastering posture.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -45,6 +45,26 @@ Heavy bass that serves the journey. Sometimes confrontational and disorienting. 
 - **Introduction layer — what a promoter or first-contact listener is told.** Lead with **"dark, wonky 140."** *"Deep dubstep"* is a **register-1/2 descriptor and should not be the default first-contact framing** — it was, and it is what put psy-bass comps in front of wonky-140 labels. Register-match the descriptor to the recipient (swap table in [[reference/WOBAR_COPY]] BIO TEMPLATES).
 - **The full arc, in order:** deep/hypnotic → deep-dubstep hinge → **dark/wonky 140** → rap-flip → dub pivot → psy-bass outro. Range beyond it when the act requires: drum & bass (Act 4 ceiling), midtempo/downtempo (Act 5 floor).
 - **Never use "EDM" as a genre descriptor for Wobar.**
+
+> ### ⚠ Addition, 2026-08-06 — *"deep dubstep"* is also **room**-wrong, not only register-wrong
+> The 2026-07-27 ruling above is about **proportion**: the term names registers 1/2 and skips
+> the centre of mass. There is a **second and independent** problem with it, and the two do not
+> overlap — **it is a US word.** The scene that owns the term treats *dubstep* as the name of
+> the music and *"deep"* as a prefix invented to escape brostep stigma; US listeners hear
+> "dubstep" and think Excision, so the hedge exists to solve an American problem and is not
+> used in the UK at all. Sourced from a live r/realdubstep thread, 2026-08-06 (`redd.it/1vh8srz`,
+> 54 comments) — the UK contributors say it unprompted and independently, and the US
+> contributors agree with the diagnosis while explaining why they still say it at home.
+>
+> **Consequence, and it points the opposite way from what you'd guess:** the term is *most*
+> dangerous exactly where it is *most* register-accurate — the UK-lineage doors (**Deep Dark &
+> Dangerous, SubCarbon**), which are the only recipients register 2/5 would ever lead with.
+> Say **dubstep**, plain; let the reference names carry the register. Swap table + the full
+> reasoning: [[reference/WOBAR_COPY]] BIO TEMPLATES.
+>
+> **The transferable rule: a genre word carries two payloads — what it says about the music,
+> and what it says about who is saying it.** This file's register table matches the first.
+> Only the second can make an accurate word the wrong one.
 
 ---
 

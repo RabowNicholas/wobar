@@ -1,14 +1,23 @@
 ---
 title: Wobar Booking List — every artist, ranked
-version: 1.0
+version: 1.1
 created: 2026-08-04
-last_updated: 2026-08-04
+last_updated: 2026-08-06
 status: live — the working list. Ranked on evidence available 2026-08-04; no new research.
 scope: THE RANKED LIST. Every artist surfaced by the 2026-08-04 sweeps, in booking priority order, with what is known about each and what Nick has to check. Owns the ranking. Method, scoring definitions and the label hub map live in [[working/WOBAR_BOOKING_ROADMAP]]; the dream tier lives in [[working/WOBAR_COLLAB_TARGETS]] §1.
 dependencies: [[working/WOBAR_BOOKING_ROADMAP]], [[working/WOBAR_COLLAB_TARGETS]], [[working/IG_COMP_SAMPLE_FRAME]], [[working/RESEARCH_SOUNDCLOUD_COMPS]], [[working/RESEARCH_IG_COMPS]]
 ---
 
 # BOOKING LIST — RANKED
+
+> ## 🔴 MEASUREMENT COMPLETE TO 283/370 — AND IT REORDERED THE BANDS (2026-08-05/06)
+> **Band G, the ~270-artist neutral roster pool this file ranks LAST, is where the booking-band density actually is.** 151 of 272 measured artists sit in 2K–20K, and the concentration is thickest in G. Nick's call — *"this is where the value is. small artists that haven't blown up but will"* — against my recommendation twice.
+>
+> **Best small targets, all from the pool:** **Xenotype 17,153 (Wormhole)** · **Dreamers Delight 17,004 (Odyzey)** · **A Hundred Drums 16,193 (Good Society)** · Slippy 19,634 · Thought Process 19,451 · VKTM 19,021 · Pretty Sweet 18,196 · Deadcrow 17,883 · Zen Selekta 16,592 · Raaket 16,500 · capshun 16,167. Small end: **Fervor 3,063**, **Thug Shells 2,230** — both Wormhole.
+>
+> **§0's band ordering is therefore wrong on its own terms and is kept only as a record of how it was built.** It ordered by *how fast Nick could act*, and put the unmeasured pool last — but "unmeasured" was a property of the research, not of the artists. **The bands below should be read as provenance, not priority.**
+>
+> **87 rows remain blank on purpose.** The generic-name tail (Havoc · Radiant · Matter · Holly · Riot · Veil · Levity · Anon · Eater · Killa P · Simula · Snowy · Wiley) returns a confident wrong artist on name search. Blank beats fabricated — the fix is handle resolution from each label's own following list.
 
 > ## 📊 **WORK FROM THE SPREADSHEET: `working/WOBAR_BOOKING_LIST.xlsx`**
 > **370 rows, three sheets — `Artists` (filterable by Band, with four empty columns for Fee / Played FS / Priority / Notes), `Labels` (the hub map, door status colour-coded), `Method` (scoring key and rails).** This markdown file is the readable version and holds the reasoning; **the spreadsheet is the working surface.** Keep them in step — if they disagree on a score, the spreadsheet was built last.

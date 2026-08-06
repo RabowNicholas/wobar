@@ -39,7 +39,16 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Parked (Nick, "not now"):** designing the Flow State set. Live is ceiling-3 and still marked *undesigned*. **Capture is no longer parked with it** — see *Socials* below.
 
 ### Booking + Collab Targeting — the Flow State lever, aimed
-**State: built and ranked 2026-08-04. Nobody contacted.** Three docs and a spreadsheet: [[working/WOBAR_COLLAB_TARGETS]] (the dream tier), [[working/WOBAR_BOOKING_ROADMAP]] (method + the label hub map), [[working/WOBAR_BOOKING_LIST]] (**the ranked list — open this to work**, plus `WOBAR_BOOKING_LIST.xlsx`, 370 rows).
+**State: built, ranked and measured. Nobody contacted. Nick took it manual from 2026-08-06.** Three docs and a spreadsheet: [[working/WOBAR_COLLAB_TARGETS]] (the dream tier), [[working/WOBAR_BOOKING_ROADMAP]] (method, the label hub map, the orbit layer, the SLC venue map), [[working/WOBAR_BOOKING_LIST]] (the ranked list) — and **`working/WOBAR_BOOKING_LIST.xlsx` is the working surface**: 370 rows, 23 columns, tabs for Findings · SLC Venues · Labels · Method.
+
+**283 of 370 rows carry a measured SoundCloud follower count** (was 50). Bands A–F and H are complete; **87 remain, and they are almost entirely the generic-name tail** — Havoc, Radiant, Matter, Holly, Riot, Veil, Levity, Anon, Eater, Killa P, Simula, Snowy, Wiley — where a name search returns a confident *wrong* artist. **Left blank deliberately** (Nick's instruction: *"if you can't find someone then leave it blank"*), because the alternative is dozens of numbers that look like data and aren't. The correct method for that tail is handle resolution from each label's own following list, as [[working/IG_COMP_SAMPLE_FRAME]] did for Instagram.
+
+> ### 🔴 THE MEASUREMENT INVERTED THE RANKING, AND NICK CALLED IT
+> The vault filed **Band G — the ~270-artist neutral roster pool — as research stock**, furthest from a booking decision, and I twice argued against measuring it. **Nick overruled it: *"this is where the value is. small artists that haven't blown up but will."*** He was right. **151 of the 272 measured artists sit in the 2K–20K currency band, and the densest concentration is in Band G** — the tier the ranking had put last.
+>
+> **The best small targets came out of the pool, not the tiers above it:** **Xenotype 17,153 (Wormhole)** and **Dreamers Delight 17,004 (Odyzey)** — the closed door and the never-checked door — plus **A Hundred Drums 16,193 (Good Society)**, Slippy 19,634, Thought Process 19,451, VKTM 19,021, Pretty Sweet 18,196, Deadcrow 17,883, Zen Selekta 16,592. At the small end, **Fervor 3,063** and **Thug Shells 2,230**, both Wormhole.
+>
+> **The transferable lesson is about the shape of the error, not the names.** A band assembled as a *neutral sampling frame* got ranked last **because it was unranked** — absence of evidence read as low value. That is the same error class as the scraped zero, one level up: **not a wrong number, but a wrong ordering built on missing numbers.**
 
 **The reframe the whole thing rests on: the booking IS the outreach.** Nick has a residency and books the bill, so booking someone means **they hear his set at full length, in a room, without being asked to** — which nothing else in the vault does. Rail: **book → relationship → send, never in one breath**; a booking arriving with a pitch attached burns the one non-replicable asset.
 

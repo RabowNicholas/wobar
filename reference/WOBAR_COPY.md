@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.0 (rewritten against WORLD v0.6 + the grammar; the mirror spine, the voice stack, the act axis)
-last_updated: 2026-07-27
+version: 2.1 (+ genre-vocabulary pass 2026-08-06 — anti-vocab EDM row, EPK range clause, DDD swap row)
+last_updated: 2026-08-06
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -235,10 +235,18 @@ figurative register free.
 | Ego death (as status marker) | The shadow is the portal |
 | Higher self / lower self | Surrender to the frequency |
 | Trust the Universe | The work is happening whether you know it or not |
-| EDM (as genre label) | Psychedelic bass / deep dubstep |
+| EDM (as genre label) | Dark, wonky 140 — or the recipient's register |
 | Conscious music | There's no escaping yourself — that's the point |
 | Spiritual awakening (as promise) | What just happened? |
 | Healing frequencies | Integration is the morning after |
+
+> **⚠ Revised 2026-08-06 — the EDM row.** It previously read *"Psychedelic bass / deep
+> dubstep,"* which was the pre-correction flat comp vocabulary surviving in a governing doc
+> as the **prescribed replacement**. It named registers 2/5 and 6 (10% and 24%) and skipped
+> the 45% centre of mass, directly contradicting [[reference/WOBAR_SONIC]] §Genre Positioning
+> — which had already ruled that *"deep dubstep"* is a register-1/2 descriptor and must not be
+> first-contact framing. **This is the 2026-07-27 comp correction, one row deeper than that
+> sweep looked.** The replacement is register-matched by construction, so it cannot re-flatten.
 
 **Additional (all registers):** never "I don't have an ego" energy. Never claim
 transcendence you haven't demonstrated. Never "ceremony" for a standard club booking.
@@ -320,13 +328,30 @@ dubstep" named one register of six and contradicted the arc claim in the same se
 
 ### Functional / EPK bio (utility floor — bookers, press) — CENTRE OF MASS
 > Wobar is a Salt Lake City bass project working primarily in **dark, wonky 140** —
-> sub-forward, halftime, sound-design-dense — with range through deep dubstep and
-> psychedelic bass. Sets and EPs are built as structured journeys rather than playlists.
-> Monthly residency at Flow State. Reference range: **STVSH, dêtre, Blurrd Vzn.**
+> sub-forward, halftime, sound-design-dense — with range from deep, hypnotic 140 through
+> rap flips and psychedelic bass. Sets and EPs are built as structured journeys rather than
+> playlists. Monthly residency at Flow State. Reference range: **STVSH, dêtre, Blurrd Vzn.**
 
 *(States the facts a booker needs, cleanly, without woo and without over-explaining the
 inner-work methodology. Utility floor: clean, doesn't break the world, no mirror
 required.)*
+
+> **⚠ Range clause rewritten 2026-08-06 — it was naming 63% of the sound.**
+> The old clause (*"range through deep dubstep and psychedelic bass"*) named registers 2/5
+> and 6 and **left registers 1 and 4 unnamed — 36% of the set, including the second-largest
+> register (deep/hypnotic, 20%) and the rap-flip peak (16%).** The rap-flip omission was the
+> costly one: [[working/FORMAT_TESTING]]'s flip series is Funnel C's only vehicle and the
+> selection credential now lives in *what Nick flips*, so the fixed bio body was silent about
+> the register the content plan is built on.
+>
+> **"Deep dubstep" left the fixed body deliberately.** It is 10% of runtime and the most
+> contested term in the lane — it survives as a *lead* on its swap row, which is the whole
+> point of having a swap table. **The body names the range; the row names the recipient.**
+
+**The line that survives every taxonomy fight: `sub-forward, halftime, sound-design-dense`.**
+Those are checkable claims about the audio. Genre words are the disposable layer — swapped
+per recipient, contested inside the scene, and periodically re-litigated. **When a genre word
+and a mechanism description compete for the same slot, keep the mechanism.**
 
 **⚙ Swap the reference range to match the recipient's register.** The bio body stays; only
 the anchor names and the lead genre move. Register table + label ecosystems:
@@ -337,11 +362,28 @@ the anchor names and the lead genre move. Register table + label ecosystems:
 | Deadbeats · Wubaholics · Jadū Dala · Bassrush · Subsidia | dark, wonky 140 | STVSH, dêtre, Blurrd Vzn |
 | Sheppard · Boom Records · GOTTA MOVE | rap-flip / hybrid trap | Ero808, Tape B, SAKA |
 | Wormhole · DUPLOC · Odyzey | deep / hypnotic 140 | Chmura, Comisar, En:vy |
-| Deep Dark & Dangerous · SubCarbon | deep dubstep | Distinct Motive, Caspa |
+| Deep Dark & Dangerous · SubCarbon | **dubstep** (plain — see below) | Distinct Motive, Caspa |
 | Memory Palace · Gravitas · Trippy Bee · Local Void · Wakaan | psychedelic bass | Of The Trees, INZO, LSDREAM |
 
 **This is not spin — it is register-matching.** Wobar genuinely produces across all six; the
 EPK just leads with whichever one the recipient actually releases.
+
+> **⚠ The DDD/SubCarbon row changed 2026-08-06 — `deep dubstep` → `dubstep`.**
+> **The word is not register-wrong; it is *room*-wrong, and that is a different failure.**
+> Those two are the UK-lineage doors, and the scene that owns the term is unanimous that the
+> name of the music is **dubstep** — that *"deep"* is a US prefix invented to escape brostep
+> stigma, not a description of the sound. Sourced from a live r/realdubstep thread, 2026-08-06
+> (`redd.it/1vh8srz`, 54 comments): the UK contributors state it unprompted and independently,
+> and the US contributors agree while explaining *why they still say it at home.*
+>
+> So the term does not mis-describe the music — it **identifies the sender as outside the
+> scene**, which in a one-shot cold email costs more than being slightly less specific.
+> Distinct Motive and Caspa already carry the register; the reference names do that work and
+> the genre word doesn't have to.
+>
+> **The transferable rule: a genre word carries two payloads — what it says about the music,
+> and what it says about who is saying it.** The swap table was built to match the first.
+> This row is the case where the second one decides.
 
 ---
 
