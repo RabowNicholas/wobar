@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.5
-last_updated: 2026-08-04
+version: 2.6
+last_updated: 2026-08-05
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -68,14 +68,16 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **The honest limit under all of it:** flips out-traffic originals ~4× on Tape B's account, **and Tape B has an audience.** Nothing in the vault tests that mechanism at 55 SoundCloud followers.
 
-### Give-Back Content — two beliefs, fifteen pieces, no scripts
-**State: both beliefs locked 2026-08-04. Idea bank built. Nothing written.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.1, two beliefs); the content bank is [[working/GIVEBACK_CONTENT_PLAN]]; evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
+### Give-Back Content — two beliefs, fourteen pieces, one built
+**State: both beliefs locked 2026-08-04. Idea bank built. #1 built 2026-08-05; thirteen unwritten.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.1, two beliefs); the content bank is [[working/GIVEBACK_CONTENT_PLAN]] (v1.1 — **§10 holds built pieces**); evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
 
-**🔴 OPEN LOOP — fifteen scripts, none written. Nick writes them by hand** (his call, 2026-08-04 — the vault holds the claims, the objects and the durations; the words are his). Two drafts were written in session as calibration (#1, #7) and are **not** canonical.
+**🔴 OPEN LOOP — thirteen scripts unwritten. Nick writes them by hand** (his call, 2026-08-04 — the vault holds the claims, the objects and the durations; the words are his).
 
-Two of the fifteen — #3 *the two consistencies* and #10 *the empty chair* — are the best lines in the set and **have no object solved**. They default to talking-head, which is the register [[working/RESEARCH_STORYTELLING]] §6.6 measured at zero. **They are the ones to solve first and the last ones to shoot.**
+**#1 *The concession* is spec'd at 15/30/45/61, hooks written, and it absorbed #2** — the box-ownership claim is #1's middle beat, CUTDWN is the case. Fifteen pieces became fourteen. **Not shot: the CUTDWN story is unverified, the 90s has no sourced producer case, and no object shots exist at any length.** Full beat sheet, the two corrections that must not regress, and the reasoning are in GIVEBACK_CONTENT_PLAN §10.
 
-**A pattern found while drafting, and it is one problem not two:** the pieces with no music in them are the same pieces with no object — #1, #3, #10, all three line-driven rather than object-driven. **The fix is not a tie-in tag.** Make the *evidence* musical and leave the claim universal: the through-line then comes from the object, not from the words, and no piece ever has to say *"and this applies to your music too."* A generic version also competes against The Futur at 2.81M instead of in the small room where the DJ-producer standing is worth something.
+Two of the remaining — #3 *the two consistencies* and #10 *the empty chair* — are the best lines in the set and **have no object solved**. They default to talking-head, which is the register [[working/RESEARCH_STORYTELLING]] §6.6 measured at zero. **They are the ones to solve first and the last ones to shoot.**
+
+**The line-driven pieces are the ones with no music in them, and it is one problem not two** — it was #1, #3, #10; **#1 escaped by a route that generalises.** It kept its object on the feed and narrowed the *subject* to musicians posting their music, so it stays a posting argument without becoming a content-creator argument. **The fix is never a tie-in tag** — make the *evidence* musical, or narrow who the piece is about, and the through-line comes from the object rather than the words. A generic version also competes against The Futur at 2.81M instead of in the small room where the DJ-producer standing is worth something.
 
 **The bucket holds two beliefs, and they are one loop:**
 > **Consistency builds the reference point. Contrast is what you spend it against.**
@@ -103,7 +105,7 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **One brief still worth running: visual identity / distinctive assets** — the only empirically supported mechanism for *"this compounds,"* which is the backbone of belief 2's repetition argument. **The brand-voice brief is retired with the frame**, along with the whole educational series it belonged to — [[working/WOBAR_CLOSED]] carries what died, what survived and why, and the plan doc was deleted so it cannot be rebuilt by accident.
 
-**Open:** **neither belief has a format** — the fifteen pieces have claims, objects and durations, but no shape as a series · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
+**Open:** **neither belief has a format** — the pieces have claims, objects and durations, and #1 now has beats, but there is still no shape as a *series* · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.

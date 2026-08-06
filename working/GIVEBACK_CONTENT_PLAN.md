@@ -1,10 +1,10 @@
 ---
 title: Give-back content plan — the five lists and fifteen pieces
-version: 1.0
+version: 1.1
 created: 2026-08-04
-last_updated: 2026-08-04
-status: live — ideas locked, no scripts written
-scope: The content bank for bucket 3. Five lists, fifteen pieces, each with its claim, its on-screen object and its native duration. OWNS the idea set and its cuts. The thesis, audience and territory live in WOBAR_GIVEBACK_NICHE and are not restated here.
+last_updated: 2026-08-05
+status: live — ideas locked; one piece built (#1), thirteen unwritten
+scope: The content bank for bucket 3. Five lists, fourteen pieces (was fifteen — #2 absorbed into #1), each with its claim, its on-screen object and its native duration. OWNS the idea set, its cuts, and the per-piece beat sheets in §10. The thesis, audience and territory live in WOBAR_GIVEBACK_NICHE and are not restated here.
 dependencies: [[working/WOBAR_GIVEBACK_NICHE]], [[working/WOBAR_SOCIAL_PLAN]], [[working/RESEARCH_BRAND_PSYCHOLOGY]], [[working/RESEARCH_STORYTELLING]]
 ---
 
@@ -48,11 +48,11 @@ A 15s piece and a 90s piece on the same idea are **different genres, not a cut-d
 
 | # | Piece | Claim | Object on screen | Native |
 |---|---|---|---|---|
-| **1** | **The concession** | **1,000** videos at 1,000 views *is* a million views — granted in full. Frequency buys attention; character decides whether it accumulates or evaporates. **A million views that don't compound is a million you have to earn again tomorrow.** ⚠ The raw version said 10,000 × 1,000 = a million; that is ten million, and 10,000 clips is 27 years of daily posting. 1,000 is correct *and* realistic | The arithmetic, over a real artist page — dense grid, flat numbers, beside one with a single spike | **61s** |
-| **2** | **Whose box** | The viral artist got boxed in by an *accident* — the algorithm chose their box and now they serve it. The consistent artist chose theirs. Same cage, opposite ownership. | Two pages side by side | **45s** |
+| **1** | **The concession** | **1,000** videos at 1,000 views *is* a million views — granted in full. But the thousand are not the *alternative* to the viral hit, they are the **preparation** for it: one of them pops regardless, and consistency decides what it finds when it does. **Virality isn't a goal, it's a deadline.** ⚠ The raw version said 10,000 × 1,000 = a million; that is ten million, and 10,000 clips is 27 years of daily posting. 1,000 is correct *and* realistic | The feed — but the *subject* is musicians posting their music, never creators generally. CUTDWN is the case | **61s native, built at 15/30/45/61** |
+| ~~2~~ | ~~Whose box~~ | **ABSORBED INTO #1, 2026-08-05.** Its claim *is* #1's middle beat once #1 is argued in the right order, and CUTDWN is the object it always wanted. Do not shoot separately — the merged piece is stronger than either half | — | — |
 | **3** | **The two consistencies** | *Showing up consistently* vs *being consistent when you show up.* Everyone teaches the first. The second is the one that works. | ⚠ **unsolved** — a posting calendar against a visual grid? | **15s** |
 
-**Note:** #2 resolves a contradiction that existed in the raw material — the box read as a trap in this list and as freedom in list 3. The reconciliation is ownership, and it is backed by the one piece of hard evidence in the research: **externally imposed constraints damage creativity; the identical constraint self-imposed does not** (Acar, Tarakci & van Knippenberg, *J. Management* 2019, 145 studies).
+**The contradiction #2 was resolving now resolves inside #1** — the box read as a trap in this list and as freedom in list 3. The reconciliation is ownership, and it is backed by the one piece of hard evidence in the research: **externally imposed constraints damage creativity; the identical constraint self-imposed does not** (Acar, Tarakci & van Knippenberg, *J. Management* 2019, 145 studies). ⚠ **The evidence survives the merge and is currently unused** — #1 does not cite it, and it is the only hard citation available to this list.
 
 **Killed:** *"if it's not building momentum, don't do it"* as a rule. Good line, unusable — you cannot know in advance. Replaced by the checkable version: **does this repeat something?**
 
@@ -132,9 +132,46 @@ A 15s piece and a 90s piece on the same idea are **different genres, not a cut-d
 
 ## §9 — OPEN
 
-1. **No scripts exist. Fifteen ideas, zero written — and Nick writes them by hand** (his call, 2026-08-04). This file holds the claim, the object and the duration; the words are his. Two calibration drafts (#1, #7) were produced in session and are **not** canonical. Loop is live in [[working/WOBAR_ACTIVE]].
-2. **The tie-to-music rule, decided while drafting:** the claim may be universal, **the evidence may not.** The object on screen and the examples come from music, always — then the through-line is automatic and no piece ever has to say *"and this applies to your music too,"* which is a bolt-on and reads as one. Twelve of the fifteen already pass because their object is inherently musical. **The three that fail — #1, #3, #10 — are exactly the three with no object solved.** One problem, not two. Vary *which part* of music does the work (production, DJing, releases, artwork, the page itself) or the tie-in becomes a tic.
+1. **Thirteen pieces still unwritten, and Nick writes them by hand** (his call, 2026-08-04). This file holds the claim, the object and the duration; the words are his. **#1 is built — §10.** The two in-session calibration drafts (#1, #7) are superseded and were never canonical.
+2. **The tie-to-music rule, decided while drafting:** the claim may be universal, **the evidence may not.** The object on screen and the examples come from music, always — then the through-line is automatic and no piece ever has to say *"and this applies to your music too,"* which is a bolt-on and reads as one. **#1 resolved it a third way, and the method generalises:** it kept its object on the feed and narrowed the *subject* to **musicians posting their music** — so the piece stays a posting argument without becoming a content-creator argument. Where an object can't be made musical, narrow who it is about instead. **#3 and #10 still fail** — they are the two with no object at all.
 3. **"Consistency lives below genre" has no single owner** — it is currently the substance of #4 (Post Malone) and the tail of list 4's genre argument. One of them has to give it up or the same video gets made twice.
 4. **Two pieces have no object** — #3 and #10, both among the best lines. Unsolved.
 5. **Duration spread is uneven by design:** belief 2 is natively short-form (images prove claims instantly), belief 1 is not (its evidence is time-based). Do not force an even distribution across the five durations — that is the container dictating the argument.
 6. **Order is undecided.** #4 is the argued opener; nothing else is sequenced.
+
+---
+
+## §10 — BUILT PIECES
+
+Beat sheets only. Hooks are Nick's, verbatim and canonical; bullets are structure, not script.
+
+### #1 — The concession · belief 2 · absorbs #2 · built 2026-08-05
+
+**The argument was reordered during the build, and the reorder is the reason it works.** The v1.0 claim was *a million views that don't compound is a million you earn again tomorrow* — a **deficiency** claim: your views were worthless. The built version says **the million arrived before you were ready to catch it** — a **permission** claim, which is [[working/WOBAR_GIVEBACK_NICHE]] §2's own stated preference (*"someone is closer than they thought"*), reached independently from Nick's side. It is more sympathetic, more actionable, and it is what made #2 collapse into it.
+
+**Why it is on-brand rather than merely correct:** "compounding" is [[working/WOBAR_GIVEBACK_NICHE]] §3.5's **recognition counter** stated in the unit the audience already tracks. That also makes **#1 and #9 one argument on two surfaces** — #9 is the recognition counter across a catalogue, #1 across a feed. Deeper still, the piece argues for the exact metric [[working/WOBAR_ROADMAP]] §1 chose for Wobar — *people who come back* — which makes it think-in-public rather than claim-results, and it costs something to say at 55 followers.
+
+**The spine, in order:** the felt problem (promoting your own music is exhausting in a way making it isn't) → concede virality fully and in their unit → **you don't get to pick which one pops, so the box is chosen by accident** → the thousand videos are the **preparation**, not the alternative → what "ready" buys (settled message, on-thesis follow-ups, arrival instead of evaporation) → stop aiming at virality; judge the body, not the post.
+
+**Durations are different genres, not cut-downs** (§1). Word budgets at ~155 wpm: **15s ≈ 40 · 30s ≈ 78 · 45s ≈ 115 · 61s ≈ 158.** Overwriting is the main failure mode.
+
+| | Hook (Nick, canonical) | Beats |
+|---|---|---|
+| **15s** | *Going viral is the worst thing for your music project that can happen before you know what you are.* + *You need an identity for those new followers to identify with.* | The assertion, then the consequence — **they arrive and there is nothing to attach to.** Then stop. No CUTDWN, no arithmetic, no remedy. §1 allows one assertion here and explaining drains the provocation |
+| **30s** | *You don't want to actually go viral* → too soon and you can't capitalise on who shows up → *you get forced into whatever box that one clip put you in* | Assertion, then **CUTDWN** in one sentence. No turn — 30s cannot hold one |
+| **45s** | *You don't need a million views on one video* → 1,000 × 1,000 is the same million → *the math is simple and it works, posting more works* | Concession granted in full, then **one reversal: one of the thousand pops on its own — the question is what it finds** |
+| **61s** | ⚠ unwritten. Three angles offered: concede-first · ***"virality isn't a goal, it's a deadline"*** (recommended) · the arithmetic as surprise | Four beats — concede (15s) · the box you didn't choose, CUTDWN (20s) · the reframe, preparation not alternative (18s) · land on judge-the-body (8s) |
+| **90s** | not started | The only version that earns **the complication** |
+
+**Two corrections made during the build. Both will regress if not held:**
+- **"the box you *created*"** → you did not create it. The algorithm picked it off one clip you didn't know was the audition. "Created" hands back the ownership the piece exists to deny, and ownership is the whole #1/#2 axis.
+- **"no consistent theme and you're stuck at 1,000 views forever"** → this says consistency *causes* the pop. It does not. That is the growth-guru claim, it is unsupportable, and it contradicts the piece's own complication.
+
+**The complication is reserved for the 90s, deliberately:** *consistency doesn't cause the pop — it only decides what the pop finds.* It is what keeps the argument honest under the never-claim-results rail, and half-stating it at 61s turns the piece into a promise.
+
+**Rails specific to this piece:** the word **"brand" cannot appear** — it stays a *posting* problem end to end, and the identity claim arrives as a consequence, never a topic (§3.5's *"place must not be heard as lore"*, plus #7's smuggling logic) · **the arithmetic audits their claim and never prescribes yours** — #1 is the only piece running on numbers, and [[working/WOBAR_GIVEBACK_NICHE]] §4 makes the proportions free by rule.
+
+**Blocking before it shoots:**
+1. **The CUTDWN story is unverified** — the joke video with Hannah, the audience shift, the recovery timeline. Standing trap, and this piece has already been bitten once (10,000 × 1,000; "Zeds Dead, 30 years"). **If Joe has told it himself, cite that version** — quoting a self-diagnosis converts a swipe into a citation and is the safest handling of a named living person.
+2. **The 90s needs a producer case and none is sourced.** CUTDWN is a music-marketing figure, not someone posting their own tracks. A generated name reads identically to a sourced one — vault standing rule.
+3. **No object shots spec'd at any length.** Most urgent at **15s**, where there is no argument to carry a talking head — the register [[working/RESEARCH_STORYTELLING]] §6.6 measured at zero. Shortest pieces need the strongest visual, which is the opposite of how they get made.
