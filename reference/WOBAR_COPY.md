@@ -167,6 +167,39 @@ darkness is the only place you see yourself") are the same register, different w
 
 ---
 
+## THE THREE SLOTS — where a genre word is READ vs SEARCHED
+
+**Added 2026-08-06**, from [[working/RESEARCH_GENRE_VOCABULARY]]. This sits above the
+BIO TEMPLATES swap table and explains what that table is for.
+
+A genre word does three unrelated jobs, and the vault has twice been damaged by
+letting one string do two of them.
+
+| Slot | Surfaces | Chosen by | Owner |
+|---|---|---|---|
+| **Retrieval** | genre fields · tags · hashtags · distributor selector | **volume** | [[working/WOBAR_UPLOAD_SPEC]] |
+| **Positioning** | EPK lead · pitch · demo text · DM | **the recipient's register** | **this file** — BIO TEMPLATES swap table |
+| **Identity** | world-facing bio · wobar.music | **accuracy + world** | **this file** — mechanism, no genre word |
+
+> **Where a genre word is READ, accuracy and room-fit decide it. Where a genre word
+> is SEARCHED, reach decides it. Never let the searched layer set the read layer.**
+
+**That inversion is the vault's recurring failure in its clearest form.** The 2026-07
+comp misfire was a *reach*-chosen list ("psychedelic bass") sitting in a *read* slot
+(the EPK) in front of wonky-140 labels. The same error was still live on 2026-08-06 in
+this file's anti-vocabulary table and in [[reference/WOBAR_YOUTUBE]]'s tags line.
+
+**The measured consequence, and why the split is not theoretical:** the words that get
+*found* and the words that are *precise* barely overlap. `dubstep` returns 2.6M
+SoundCloud tracks; **`wonky 140` returns 17.** And the two sets reach different people
+— bare genre words autocomplete to listener intent (*meaning, songs, artists*), while
+every qualifier autocompletes to producer intent (*sample pack, serum presets,
+tutorial*). Under [[working/WOBAR_ROADMAP]] §1 the goal is **listeners**; under
+[[working/WOBAR_SOCIAL_PLAN]] the audience is **producers**. Both vocabularies are
+needed — this table says which is which.
+
+---
+
 ## THE UTILITY FLOOR — functional copy, off the grid
 
 Some copy is pure function: **logistics** (dates, doors, price, venue), **links**
@@ -352,6 +385,22 @@ required.)*
 Those are checkable claims about the audio. Genre words are the disposable layer — swapped
 per recipient, contested inside the scene, and periodically re-litigated. **When a genre word
 and a mechanism description compete for the same slot, keep the mechanism.**
+
+> **⚠ `dark, wonky 140` is PROSE ONLY — confirmed 2026-08-06, and it stays in this bio.**
+> It is measured at **17 SoundCloud tracks** as `wonky 140` and 1,538 as `dark 140`
+> ([[working/RESEARCH_GENRE_VOCABULARY]] §2), so it does **no retrieval work whatsoever**
+> and is barred from every genre field, tag and hashtag by
+> [[working/WOBAR_UPLOAD_SPEC]] §2.
+>
+> **It is kept here deliberately.** A human A&R reads this sentence; nobody searches it.
+> In a *read* slot the phrase is legible, accurate and register-correct — which is exactly
+> what the three-slot rule above predicts. **The string does not change; what changed is
+> that it is no longer being asked to do two jobs.**
+>
+> Secondary caveat, unmeasured and non-blocking: *wonky* has a prior claim — a 2008 UK
+> moment (the purple sound, Joker/Rustie-adjacent) that is **not** what this bio means by
+> it. Search does not surface that sense at all (`wonky bass` returns an unrelated disco
+> record), so the collision is historical rather than live. Noted, not acted on.
 
 **⚙ Swap the reference range to match the recipient's register.** The bio body stays; only
 the anchor names and the lead genre move. Register table + label ecosystems:

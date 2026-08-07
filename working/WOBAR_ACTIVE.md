@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.6
-last_updated: 2026-08-05
+version: 2.7 (+ Genre Vocabulary thread 2026-08-06)
+last_updated: 2026-08-06
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -115,6 +115,21 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 **One brief still worth running: visual identity / distinctive assets** — the only empirically supported mechanism for *"this compounds,"* which is the backbone of belief 2's repetition argument. **The brand-voice brief is retired with the frame**, along with the whole educational series it belonged to — [[working/WOBAR_CLOSED]] carries what died, what survived and why, and the plan doc was deleted so it cannot be rebuilt by accident.
 
 **Open:** **neither belief has a format** — the pieces have claims, objects and durations, and #1 now has beats, but there is still no shape as a *series* · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
+
+### Genre Vocabulary — measured 2026-08-06, and the vault is now ahead of the surfaces
+**State: the doc work is done and the deployed surfaces are unverified against it.** Governing files: [[working/WOBAR_UPLOAD_SPEC]] (new — the retrieval layer, open it to upload) and [[reference/WOBAR_COPY]] §THE THREE SLOTS. Evidence: [[working/RESEARCH_GENRE_VOCABULARY]]; harness `scripts/genre_vocab_sweep.py`.
+
+**The split that organises it: a genre word is either READ or SEARCHED, and the two are chosen by opposite criteria** — room-fit versus reach. **Never let the searched layer set the read layer.** That is the 2026-07 comp misfire stated in its general form, and two instances of it were still live on 2026-08-06: this file's own anti-vocab table and YOUTUBE's tags line both prescribed the flat psy-lane vocabulary.
+
+**The measurements that force it:** `dubstep` returns 2,585,351 SoundCloud tracks and **`wonky 140` returns 17** · `deep dubstep` is at or below Google's worldwide measurement threshold, and **`uk dubstep` — the term the scene calls obsolete — is searched ~3× more** · **Beatport carries Dubstep (18) and 140/Deep Dubstep/Grime (95) as two separate top-level genres, and "Deep Dubstep" is selectable in neither.** Riddim and tearout have no Beatport category at all.
+
+**The finding nobody asked for, and it is the useful one: bare genre words are searched by listeners; every qualifier is searched by producers** (*sample pack · serum presets · tutorial*, near-universally). That maps onto [[working/WOBAR_ROADMAP]] §1's listener goal versus [[working/WOBAR_SOCIAL_PLAN]]'s producer audience — **both vocabularies are needed and nothing previously said which served which.**
+
+**`dark, wonky 140` survives as EPK prose and is barred from every retrieval field.** The string did not change; it stopped doing two jobs.
+
+**🔴 The US/UK thesis is UNTESTED, not confirmed.** `deep dubstep` returns no regional breakdown because it is too small to geolocate — controls passed, so that is a real below-threshold result and not a block. The r/realdubstep thread remains the only evidence that it is an American word, and it is one room with one allegiance. **Do not let RESEARCH_GENRE_VOCABULARY be cited as confirmation.**
+
+**Genuinely open:** **no live surface has been checked against any of this** — [[working/WOBAR_SURFACES]] §3's last verification is 2026-07-27 and already recorded IG leading with `deep dubstep`, Beatport absent entirely, and Apple Music never reviewed · artist- and label-name tags are untested and may be how this music is actually found · whether Spotify/Apple genre assignment can be influenced at all.
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.
