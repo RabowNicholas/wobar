@@ -107,6 +107,13 @@ The container — the sound design decisions, the structural arc, the sequencing
 
 **On the weightings:** measured from one 93-minute set that Nick describes as an **ideal benchmark he is progressively filling in with his own originals**. Read as **target weighting**, not as a measurement of the released catalogue. First-party and the best evidence available — and n=1.
 
+> ### 📍 The benchmark set is public — located 2026-08-07
+> **`youtube.com/watch?v=m_mQHzTQF7Y`** — *"WOBAR — Deep Dubstep Mix 2026 | Live Sunrise Set"*, 1:39:11, with a full timestamped tracklist in the description.
+>
+> **This table was measured from that tracklist**, and until now the file cited it only as *"one 93-minute set"* with no pointer — **the most load-bearing evidence in the vault was uncited for six weeks.** Confirmed by *Magicians* (Comisar, Daggz, Chmura) at 2:07, which [[working/WOBAR_ACTIVE]] independently names as track 2 of Nick's own set.
+>
+> **Why the pointer matters more than it looks:** every register weight, the 2026-07 comp correction, the label targeting built on top of it and the whole booking roadmap descend from this one artifact. **A future session can now re-derive the table instead of trusting it.** Address also carried in [[working/WOBAR_SURFACES]] §2.5.
+
 ### Retained from the previous version
 - **Tipper** — sound design mastery, space bass. A craft reference, not a positioning comp.
 - **Shpongle** — ceremonial textures, integration phases. Act 5 floor.

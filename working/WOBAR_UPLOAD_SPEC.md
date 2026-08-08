@@ -1,6 +1,6 @@
 ---
 title: Wobar Upload Spec — release + post metadata
-version: 1.0
+version: 1.1 (+ tags downgraded to hygiene — kill condition fired 2026-08-07)
 created: 2026-08-06
 last_updated: 2026-08-06
 status: live — governing for retrieval fields
@@ -54,6 +54,25 @@ Register definitions and weights: [[reference/WOBAR_SONIC]] six-register table.
 tracks, producer-intent in search, and a tag field is exactly where a
 producer-facing word costs nothing. It is still barred from the read layer
 ([[reference/WOBAR_SONIC]] §Genre Positioning).
+
+> ### ⚠ §4's kill condition FIRED, 2026-08-07 — tags are hygiene, not the lever
+> This section was written assuming tags do the retrieval work. **Measured on
+> Wobar's own catalogue, they don't — the two tracks that rank best in SoundCloud
+> search carry no tags at all**, while the title carries the match. Genre-term
+> queries (`dark wonky 140`, `deep dubstep 140`) return nothing of Wobar's in 50
+> results.
+>
+> **What actually retrieves on SoundCloud is the TITLE.** The `Artist - Title
+> (Wobar Flip)` convention is doing the work, unaided, and it is why the flips
+> out-rank everything else. **Keep tags tidy; do not expect them to move anything.**
+>
+> **The genre field stays specified** — it costs nothing, it is one dropdown, and
+> consistency across a catalogue is worth having whether or not it retrieves.
+>
+> **Method note, because it nearly cost a false rule:** the first read of this
+> evidence produced a "competition density" finding built on raw play counts across
+> tracks spanning 262 days of age. It died when release dates were pulled. See
+> [[working/WOBAR_ACTIVE]] standing traps — *age-normalise before comparing.*
 
 ### 🔴 Barred from every retrieval field
 
@@ -109,10 +128,16 @@ ranking disagrees with §2, §2 loses. Nothing here outranks first-party evidenc
 
 ## §5 — OPEN
 
-- **Artist- and label-name tags are untested.** Bass music is plausibly discovered
-  on SoundCloud by adjacency rather than genre, and this sweep did not look at it.
-  The register table already holds the names that would be used
-  ([[reference/WOBAR_SONIC]]) — nobody has checked whether it works.
+- **Artist- and label-name tags are untested — but already in use on YouTube.** The
+  99-min set carries `of the trees`, `inzo`, `lsdream` in its tag field, alongside
+  `melodic dubstep` (the highest-volume qualifier measured, 17.3 vs `deep dubstep`'s
+  4.5). Nobody has checked whether adjacency tagging works on either platform; it is
+  the most plausible untested retrieval mechanism left.
+- **Register 4's genre field is unresolved and deliberately untouched.** dêtre splits
+  his — `Dubstep` ×7 for the 140, `Hip-hop & Rap` ×6 for the flips. Wobar's flips are
+  all filed `Dubstep` **and they are the best-performing tracks in the catalogue**,
+  so there is no case for changing a working thing on one comp's practice. Recorded
+  so the observation isn't lost, not as a pending change.
 - **Apple Music and Spotify genre are not selectable** the way Beatport's is; they
   are assigned by distributor category and algorithm. Unverified what Wobar is
   currently filed as on either.

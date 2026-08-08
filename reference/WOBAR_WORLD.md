@@ -1,7 +1,7 @@
 ---
 title: Wobar World Mechanics
-version: 0.7 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained) · §4 amended 2026-08-04 (facelessness is not the lead — a face is allowed in frame)
-last_updated: 2026-08-04
+version: 0.7 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained) · §4 amended 2026-08-04 (facelessness is not the lead — a face is allowed in frame) · §9 scope note 2026-08-07 ("Portal" was NOT retired — the 2026-04-30 call was visual-lens only)
+last_updated: 2026-08-07
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]]
@@ -85,10 +85,21 @@ map.
 
 | Element | What it is | Why it exists |
 |---|---|---|
-| **The Portal** | the passage inward | The way in. Unique to Wobar: it goes *inward*, not up or out. Everyone else's world is a place you travel *to*; this one is a place already inside you. |
+| **The Portal** | the passage inward | The way in. Unique to Wobar: it goes *inward*, not up or out. Everyone else's world is a place you travel *to*; this one is a place already inside you. **⚠ See the scope note below — this word is LIVE.** |
 | **The Void / the Chamber** | where the passage leads — the black chamber at the end of the portal | The destination. Where the walls are thin. Where you meet what you came to find. |
 | **The Mirror** | what waits at the center of the chamber | The point of it all. Not a guide, not an answer — a reflection from the one angle your perception can't reach. "Everything you need is already there." |
 | **Wandering** | how you move through it | The verb of the world. Not passive listening — active movement through the interior. The set/track is the wandering rendered in bass. |
+
+> ### ⚠ "Portal" was NOT retired — scope note added 2026-08-07
+> **Written because Nick himself remembered it as retired, which means a future session will too.**
+>
+> The 2026-04-30 decision was: *"Visual identity lens shifts to **mirrors and encounter** over **portals and journey**."* It is recorded in [[reference/WOBAR_TD_AGENT_RULES]] §185 and the session log, **both of which state the scope explicitly: brand docs keep their existing language; the lens governs visual decisions only.**
+>
+> **"Journey" did effectively die** — everything downstream moved to *the arc*, and the mix series dropped it 2026-08-07 ([[working/FORMAT_TESTING]]). **"Portal" did not.** It remains the spine of [[reference/WOBAR_BRAND]]'s mission and all four core beliefs, the name of the 5-Act Portal Framework, the *Portal EP* as compositional unit, and half the justification for **the Passage** (*a passage of text and a passage through the portal*, locked 2026-07-04).
+>
+> **Why the memory drifted:** the mirror vocabulary has grown enormously since April — the Mirror, the Ether, mirrors-all-the-way-in, the vector-void — so it *feels* like portal was replaced. In the visual system it was. In the brand it wasn't.
+>
+> **If it is ever retired for real, it is a brand decision and not a cleanup.** Blast radius: BRAND's mission and four beliefs · FRAMEWORK's name · SONIC's release unit · the Passage's rationale · ~33 files. **The reconciliation that would make it work already exists in one line of the locked lexicon — *mirrors-all-the-way-in* dissolves the route/destination split**, since portal is the *movement* and mirror is the *surface*, and straight substitution produces sentences mirrors can't carry.
 
 **The Mirror is one thing, and it recurs at every depth.** Glimpsed from
 *outside* (Mirror content, top of funnel, pushing out to streaming/live) · met at

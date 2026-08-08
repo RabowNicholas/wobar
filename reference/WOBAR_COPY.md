@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.1 (+ genre-vocabulary pass 2026-08-06 — anti-vocab EDM row, EPK range clause, DDD swap row)
-last_updated: 2026-08-06
+version: 2.2 (+ claim-the-scale constraint 2026-08-07)
+last_updated: 2026-08-07
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -183,6 +183,15 @@ letting one string do two of them.
 
 > **Where a genre word is READ, accuracy and room-fit decide it. Where a genre word
 > is SEARCHED, reach decides it. Never let the searched layer set the read layer.**
+
+> **⚠ A fourth constraint cuts across all three slots — added 2026-08-07.**
+> **Claim only the scale the surface actually delivers.** A claim pitched above a
+> surface's duration reads as a promise it cannot keep: an arc asserted on Spotify,
+> which is consumed as standalone tracks, argues with the platform. **The arc's home
+> is YouTube.** This does not weaken the thesis, it locates it — *the mechanic never
+> changes, only the scale does* ([[working/WOBAR_GIVEBACK_NICHE]] belief 1), so a
+> four-minute track is the arc at a lower rung rather than a diminished version of it.
+> **Owned by [[working/WOBAR_SURFACES]] §3.2**, which holds the per-surface table.
 
 **That inversion is the vault's recurring failure in its clearest form.** The 2026-07
 comp misfire was a *reach*-chosen list ("psychedelic bass") sitting in a *read* slot

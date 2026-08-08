@@ -1,8 +1,8 @@
 ---
 title: Wobar Growth Plan
-version: 1.1
+version: 1.2 (+ position metrics re-read 2026-08-07)
 created: 2026-07-26
-last_updated: 2026-08-04
+last_updated: 2026-08-07
 status: live — governing document for the next 12 months
 scope: What Wobar does to get people listening. Supersedes the social-media strategy in WOBAR_CONTENT.md and reweights WOBAR_PLACEMENT_PLAN.md. Built from the 2026-07-26 research session and its adversarial verification.
 dependencies: [[working/RESEARCH_VERIFICATION_MEMO]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/RESEARCH_SOUNDCLOUD_COMPS]], [[reference/WOBAR_CONTENT]]
@@ -35,6 +35,19 @@ Used throughout. After adversarial verification found 9 of 10 load-bearing claim
 | Label releases | **0** — all self-released |
 | Demo submissions ever sent | **0** |
 
+### Re-read 2026-08-07 (12 days later, all verified first-party)
+
+| | 2026-07-26/27 | 2026-08-07 | |
+|---|---|---|---|
+| **Spotify monthly listeners** | 22 *(26 on 07-26)* | **19** | 🔴 **the goal metric, and it is falling** — 26 → 22 → 19 |
+| **SoundCloud followers** | 55 (11 tracks) | **63** (12 tracks, 1 playlist) | ✅ the primary metric, up |
+| Instagram followers | 400 (101 posts) | **423** (117 posts) | not tracked by decision — recorded only to stop it being re-derived |
+| **YouTube subscribers** | — | **23** (2 videos) | never previously recorded; the channel is `@wobar_music` |
+
+**The two tracked numbers moved in opposite directions**, which is the first time this file can say that. Followers up 15%, listeners down 14%.
+
+**Do not over-read a single pair of readings** — this file already warns that any one Spotify figure is a snapshot, and 19 vs 22 is inside the noise a 20-listener account generates. **What is not noise is the direction of three consecutive readings.** §1's measurable version — *"monthly listeners up from 26"* — is currently moving away from its own baseline, and the file's own §80 finding says why: **monthly listeners come from originals, full stop**, and the only releases since have been flips, which are permanently off-DSP by construction.
+
 ---
 
 ## 1. Output — the only non-optional part
@@ -58,9 +71,9 @@ Every door in this plan is taste-gated, and **no research in this session touche
 
 → **Account separation is NOT the practice in this scene.** An earlier recommendation to split handles is retracted; it derived an action from a confirmed *mechanism* (strikes are account-level and terminal) without a measured *rate*, against an observed industry norm that runs the other way.
 
-→ **The numbered flip series is a real, established format.** Name it, number it, keep it running. *Portal Journey* already exists at 002.
+→ **The numbered flip series is a real, established format.** Name it, number it, keep it running. The mix/set series already exists — **`Portal // 001–003`**, renamed from *Portal Journey* 2026-08-07 ([[working/FORMAT_TESTING]]).
 
-→ **NAMED 2026-08-04 (Nick): *SAMPLES I'LL NEVER GET CLEARED*.** The instruction above had been open since 2026-07-26. **No collision — *Portal Journey* is the mix/set series, *Samples* is the flip series**, and two concurrent numbered series on one main handle is exactly the Tape B pattern this section cites. Format spec, open questions and kill condition → [[working/FORMAT_TESTING]]. Bucket placement → [[working/WOBAR_SOCIAL_PLAN]] §3, bucket 2.
+→ **NAMED 2026-08-04 (Nick): *SAMPLES I'LL NEVER GET CLEARED*.** The instruction above had been open since 2026-07-26. **No collision — *Portal //* is the mix/set series, *Samples* is the flip series**, and two concurrent numbered series on one main handle is exactly the Tape B pattern this section cites. Format spec, open questions and kill condition → [[working/FORMAT_TESTING]]. Bucket placement → [[working/WOBAR_SOCIAL_PLAN]] §3, bucket 2.
 
 ### Flips are the traffic
 **[OBSERVED — best-controlled datapoint in the session]** Inside *Vibe Check Vol. 3*, same account, same playlist, same period:

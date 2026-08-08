@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.7 (+ Genre Vocabulary thread 2026-08-06)
-last_updated: 2026-08-06
+version: 2.9 (+ surface audit deployed, two standing traps · Terminal audited against deployed code, Mirror `source` field corrected to un-deployed — 2026-08-07)
+last_updated: 2026-08-07
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -71,7 +71,7 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **Bedroom capture is bucket 2, not bucket 1 (Nick) — his own songs only.** It is *Channels* with a camera on it, not a new format. **It is also the version that survives SOCIAL_PLAN §7.3's "is it cheap exhaust" test:** the track exists whether or not it gets filmed, where bedroom-as-DJ-selection would have produced a clip and no artifact. Cost of the move, stated so it isn't rediscovered: **bucket 1 lost its only source needing no booking and no second person.** The selection credential isn't lost — it moves to *what Nick flips*.
 
-**Funnel C finally has a vehicle: *SAMPLES I'LL NEVER GET CLEARED*** — the numbered flip series (Nick). Closes GROWTH_PLAN's standing *"name it, number it, keep it running,"* open since 2026-07-26. No collision with *Portal Journey* (that is sets; this is flips). **Scored on lane-account response, never views or listeners — flips are off-DSP and non-monetisable by construction, so the series drives to the back catalogue or it does nothing.**
+**Funnel C finally has a vehicle: *SAMPLES I'LL NEVER GET CLEARED*** — the numbered flip series (Nick). Closes GROWTH_PLAN's standing *"name it, number it, keep it running,"* open since 2026-07-26. No collision with *Portal //* (that is sets; this is flips — renamed from *Portal Journey* 2026-08-07). **Scored on lane-account response, never views or listeners — flips are off-DSP and non-monetisable by construction, so the series drives to the back catalogue or it does nothing.**
 
 **Open:** whether one name covers both SoundCloud and IG · the title is *industry*-insider, not *lane*-insider, so the dark-140 specificity has to live in the sample selections rather than the name · numbering scheme.
 
@@ -116,8 +116,12 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **Open:** **neither belief has a format** — the pieces have claims, objects and durations, and #1 now has beats, but there is still no shape as a *series* · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
 
-### Genre Vocabulary — measured 2026-08-06, and the vault is now ahead of the surfaces
-**State: the doc work is done and the deployed surfaces are unverified against it.** Governing files: [[working/WOBAR_UPLOAD_SPEC]] (new — the retrieval layer, open it to upload) and [[reference/WOBAR_COPY]] §THE THREE SLOTS. Evidence: [[working/RESEARCH_GENRE_VOCABULARY]]; harness `scripts/genre_vocab_sweep.py`.
+### Genre Vocabulary + Surface Audit — measured 2026-08-06, surfaces corrected 2026-08-07
+**State: the vocabulary work is settled and four of five surfaces are now verified against it.** Governing files: [[working/WOBAR_UPLOAD_SPEC]] (the retrieval layer, open it to upload) · [[reference/WOBAR_COPY]] §THE THREE SLOTS · [[working/WOBAR_SURFACES]] §3.1 (deployed state), §3.2 (claim-the-scale), §5 (terminal strategy). Evidence: [[working/RESEARCH_GENRE_VOCABULARY]]; harness `scripts/genre_vocab_sweep.py`.
+
+**Deployed 2026-08-07:** Instagram bio · SoundCloud genre fields, the `Portal // 001–003` rename, the `Portal` playlist, and 001's description (which had enumerated the five acts publicly since Nov 2025) · YouTube's 99-min set description. **Spotify is diagnosed and not deployed** — its bio still carries the old range clause and an arc claim the surface can't deliver. **Apple Music skipped by decision.**
+
+**The audit's own finding, and it outranks the vocabulary work:** *"Rewritten" in a vault doc meant the bio only.* Track descriptions, Canvas, tags and links were never touched on any surface, and no doc distinguished them. **A surface is not one artifact.** Now a standing trap.
 
 **The split that organises it: a genre word is either READ or SEARCHED, and the two are chosen by opposite criteria** — room-fit versus reach. **Never let the searched layer set the read layer.** That is the 2026-07 comp misfire stated in its general form, and two instances of it were still live on 2026-08-06: this file's own anti-vocab table and YOUTUBE's tags line both prescribed the flat psy-lane vocabulary.
 
@@ -129,7 +133,7 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **🔴 The US/UK thesis is UNTESTED, not confirmed.** `deep dubstep` returns no regional breakdown because it is too small to geolocate — controls passed, so that is a real below-threshold result and not a block. The r/realdubstep thread remains the only evidence that it is an American word, and it is one room with one allegiance. **Do not let RESEARCH_GENRE_VOCABULARY be cited as confirmation.**
 
-**Genuinely open:** **no live surface has been checked against any of this** — [[working/WOBAR_SURFACES]] §3's last verification is 2026-07-27 and already recorded IG leading with `deep dubstep`, Beatport absent entirely, and Apple Music never reviewed · artist- and label-name tags are untested and may be how this music is actually found · whether Spotify/Apple genre assignment can be influenced at all.
+**Genuinely open:** **Spotify's bio is written and undeployed**, and its Canvas + Artist Pick remain empty and free · **Instagram still links only wobar.music** — SoundCloud is absent from the highest-traffic surface, routing strangers to the depth-3 room ([[working/WOBAR_SURFACES]] §3.3) · Apple Music never reviewed · Beatport absent, which is a distributor setting · **permalinks still read `portal-journey-00X`** against the new titles · artist-adjacency tagging is the last untested retrieval mechanism · **nobody knows what carried *World-A-Reggae* to 246 likes on 314 plays** — 4× the follower count, and the largest unexplained event in the catalogue.
 
 ### Master Chain — built 2026-08-01
 **State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.
@@ -153,16 +157,29 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **Design note worth keeping:** a `source` field (`invited` | `found`) is one column and the only way to ever tell whether passive placement works. Per spec §0 the two must not be confused. **Acquisition is ~40 right people, invited personally — not volume.**
 
+⚠ **It is specified and not deployed** — verified 2026-08-07. `lib/db/schema.sql` is `subscribers(id, phone, opted_in, opted_out_at, created_at)`; there is no `source` column and no analytics anywhere in the project. [[working/WOBAR_SURFACES]] §6 had read this design note as a built field and named `found` its one real metric — **so the single measure that section rests on has no instrument.** The column has to land *with* the Mirror build; added afterwards it cannot backfill the people it was meant to distinguish.
+
 The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 
 ### Terminal Rebuild — wobar.music
 **State: LIVE and public.** Verified in-browser 2026-07-27 — the mark in glowing broken circles, true black, CRT scanlines, the daemon typing in register. Three vault docs had said parked/not-started; they were wrong. **Vector-void is shipped, not merely locked.**
 
+**2026-08-07 — `listen` promoted to the primary action.** The arrival-to-music path now completes without a keyboard, and SoundCloud leads the platform order. Deployed to production from `main` (`9c03a45`). Reasoning, the prohibition it was checked against, and the cost accepted are in [[working/WOBAR_SURFACES]] §6.
+
 **Form** (`WEB_HOME_SPEC`): the site *is* the Ether made visible, built as an early-RPG terminal you type into — wandering as the literal interaction. Renders the void without depicting the sacred center (§8). Paths: `passages` / `listen` / `wander`+`lore` / `mirror` / `offer`. Guide is **the daemon** — Unix daemon + Socratic *daimonion*, guides by deflection, wayfinder not guru.
 
-**Hard rail:** the daemon's AI **routes and selects from an authored bank, never free-generates.** Free generation breaks Law 0 and the anti-guru rail. Bank lives in `WOBAR_COPY` §daemon.
+**Hard rail:** the daemon's AI **routes and selects from an authored bank, never free-generates.** Free generation breaks Law 0 and the anti-guru rail. Bank lives in `WOBAR_COPY` §daemon. **Held in the deployed code** — the bank is static arrays and there is no model call anywhere in the terminal.
 
-**Open:** how much of it is actually built past the shell (paths, Sanity load) is unknown · the 30-fragment wander pool isn't loaded into Sanity · **the first Passage is owed and must be Nick-authored** — Passage mode is his verse, never generated · offering length/format limits · naming the terminal/world as a whole.
+**What is actually built — audited 2026-08-07 against `9c03a45`, replacing "unknown".**
+Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wander` (alias `lore`) · `clear`, plus a 9-entry deflection bank matched as substrings, first hit wins, with the broad matchers ordered last. **`mirror` is authored but disabled in code** — the copy is intact in `components/terminal/daemon.ts`, the command case and sub-mode are commented out pending the door. **`offer` does not exist.**
+
+**Content is hardcoded, not Sanity, by decision recorded in the file itself** — `components/terminal/content.ts` declares itself the source of truth and carries append instructions. The 30-fragment wander pool **is** loaded; it was never going to Sanity. Three poems are in and Nick-authored (`blind`, `standing dead`, `two trees`) — note these carry no `ep`, so whether any of them is *the Passage* in the EP-sealing sense is a separate question this does not close.
+
+**Structure is flat and holds no state** — finite bank, `Math.random()` with replacement, no persistence. The duration property is designed for and not built; the arithmetic and the strategic consequence are in [[working/WOBAR_SURFACES]] §6.
+
+**Repo facts worth having before the next edit:** ~1,900 lines of the pre-terminal site are still present and fully unreferenced (`PortalContainer`, `UnifiedCanvas`, `CanvasBackground`, `PersistentBackground`, `ActBackground`, all three `components/sections/*`, `app/scroll-test`) — the three.js / GSAP / framer-motion dependencies exist only for that dead tree. `/epk` queries Sanity types that have no schema (`siteConfig`, `epkConfig`, `featuredTrack`, `tourDate`; only `release` and `set` are defined), and the queries swallow the miss, so the page renders empty rather than erroring.
+
+**Open:** offering length/format limits · naming the terminal/world as a whole · whether the flat structure gets built into something duration actually pays off in, and when.
 
 ### World Doc — `WOBAR_WORLD.md` v0.7
 **State: teardown live, doc still draft.**
@@ -254,4 +271,14 @@ The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 - **Uncleared flips cannot reach DSPs** and are permanently non-monetisable — marketing, never a listener source.
 - **Never delay a release on a TouchDesigner build.**
 - **Borrowed numbers read as first-party results** — this has now happened repeatedly. Check provenance before a number becomes load-bearing, especially the best one.
+- **Age-normalise before comparing any performance number.** Raw play counts across items of different ages are not comparable, and the error is invisible because the output looks like a table of evidence. Cost, 2026-08-06: a "competition density" finding built on a track that looked like a failure at 29 plays and was **six days old and third-best in the catalogue by rate**. A "declining series" finding died in the same pass — 131→78→19 was 0.50/0.50/0.31 per day, i.e. flat. **Pull the release date in the same query as the metric, or don't compare.**
+- **"Rewritten" in a vault doc does not mean deployed — and the vault cannot tell the difference.** Found 2026-08-07: [[working/WOBAR_SURFACES]] §3 marked SoundCloud and Spotify *Rewritten* on 2026-07-27. Spotify's bio genuinely was. SoundCloud's bio was, **but its track descriptions were not, and one still enumerated the five acts publicly for another eleven days.** Instagram was recorded as resolved and nothing had shipped at all. **A resolution column records an intention; only the surface records the fact.** Verify before writing a fix down, and write down what is *deployed*, never what was *decided*.
+
+---
+
+## THE TRAP UNDER BOTH OF THOSE
+
+Three failures now share one shape, and it is worth naming once: **a thing that is formatted like evidence gets read as evidence.** A borrowed number formatted like a first-party one. A scraped zero formatted like an absence. A raw count formatted like a rate. A resolution column formatted like a verification.
+
+**The defence is always the same and it is cheap: carry the provenance next to the value.** Where it came from, when, and what it was measured against. Every one of these would have been caught by one extra column.
 - **A scraped zero is not evidence until a control query passes in the same pass.** Same error class as the above, and it cost a confident false finding on 2026-08-03 — *"track endings are severely under-discussed"* was built entirely on rate-limit responses recorded as zero results. **The number 0 looks like data, which is why it survives review.** Harness and the full rule: `scripts/reddit_research.py`, [[working/RESEARCH_STORYTELLING]] §9.

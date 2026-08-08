@@ -1,8 +1,8 @@
 ---
 title: Research — Genre Vocabulary Across Surfaces
-version: 1.0
+version: 1.1 (+ §8 discovery measured; third dead method 2026-08-07)
 created: 2026-08-06
-last_updated: 2026-08-06
+last_updated: 2026-08-07
 status: raw research — unreviewed
 scope: What the lane's genre words are worth on each surface. Measures three different things that are routinely conflated — what platforms PERMIT, what people LABEL, and what people SEARCH — and finds they disagree. Source of the retrieval/read split now governing [[reference/WOBAR_COPY]] and [[working/WOBAR_UPLOAD_SPEC]].
 dependencies: [[reference/WOBAR_SONIC]], [[reference/WOBAR_COPY]], [[working/WOBAR_UPLOAD_SPEC]]
@@ -268,6 +268,61 @@ Recorded so the file cannot be over-read later.
   proposal.
 - **n and provenance.** Every number here is first-party and dated 2026-08-06.
   SoundCloud's `client_id` rotates; the harness re-scrapes it per run.
+
+---
+
+## §8 — DISCOVERY, MEASURED — 2026-08-07
+
+**§6 said this sweep "did not measure discovery." This closes that**, for one
+surface. Method: `api-v2.soundcloud.com/search/tracks`, top 50 per query, checking
+whether any result belongs to `soundcloud.com/wobar`.
+
+| Query | Competing tracks | Wobar rank |
+|---|---:|---|
+| world a reggae dubstep | 853 | **#14** |
+| kingston town dubstep | 1,265 | **#17** |
+| down bad dubstep remix | 923 | #41 |
+| swimming pools dubstep | 4,199 | not in top 50 |
+| eyes cut deep remix | 1,249 | not in top 50 |
+| **dark wonky 140** | 1,391 | **not in top 50** |
+| **deep dubstep 140** | 5,379 | **not in top 50** |
+
+**Two findings, both durable:**
+
+1. **Genre terms do not retrieve Wobar at all.** Neither the vault's own lead
+   descriptor nor the contested term returns him in 50 results. This is the
+   negative claim §6 said was the only supported one, now confirmed on the surface
+   [[working/WOBAR_GROWTH_PLAN]] designates as primary.
+2. **The title carries retrieval, and tags do not.** The two best-ranking tracks
+   carry **no tags whatsoever**. The `Artist - Title (Wobar Flip)` convention is
+   doing the work unaided. This fired [[working/WOBAR_UPLOAD_SPEC]] §4's kill
+   condition against its own §2.
+
+### 🔴 A third dead method — and it is the costliest so far
+
+**Raw play counts were compared across tracks spanning 262 days of age**, producing a
+confident "competition density" rule: *Wobar ranks in thin niches (853–1,265
+competitors) and fails in saturated ones (4,199).*
+
+**It was an artifact.** The single track holding the thesis up was **six days old** and
+running at the **third-best plays-per-day rate in the catalogue**. A companion finding
+— *"Portal Journey is declining, 131→78→19"* — died in the same pass: age-normalised
+it is 0.50 / 0.50 / 0.31 per day, i.e. flat.
+
+**The rule, now standing** ([[working/WOBAR_ACTIVE]]): *pull the release date in the
+same query as the metric, or don't compare.* It joins the borrowed number and the
+scraped zero as the third instance of **a value that reads as evidence because it is
+formatted like evidence.**
+
+**What survived the correction is smaller and better grounded:** Kingston Town and
+Swimming Pools were released **the same day** — a genuinely controlled pair — and the
+reggae flip took **209 plays to 31**. Suggestive only; n=1 vs n=1, and logged as an
+open question in [[working/FORMAT_TESTING]], never as a selection rule.
+
+**Unexplained and worth more than any of the above:** *World-A-Reggae* carries **246
+likes on 314 plays** — 78%, against 2–12% everywhere else in the catalogue, and nearly
+4× the whole follower count. Something carried that track. Nothing in the vault records
+what.
 
 ---
 

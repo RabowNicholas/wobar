@@ -53,6 +53,9 @@ Every mutable fact has **exactly one owning file**. Every other mention is a `[[
 | Bio copy (EPK + world-facing) | [[reference/WOBAR_COPY]] — BIO TEMPLATES |
 | **Genre words in RETRIEVAL fields** (genre selector, tags, hashtags, distributor genre) | [[working/WOBAR_UPLOAD_SPEC]] — *chosen by volume* |
 | **Genre words in READ copy** (EPK lead, pitch, bios) | [[reference/WOBAR_COPY]] — *chosen by register + room fit*. The split itself: COPY §THE THREE SLOTS |
+| **Surface addresses** (handles, URLs, the benchmark-set link) | [[working/WOBAR_SURFACES]] §2.5 — *had no owner before 2026-08-07* |
+| **What copy may claim on a given surface** (scale vs duration) | [[working/WOBAR_SURFACES]] §3.2 |
+| **wobar.music — what the terminal is FOR** (strategy) | [[working/WOBAR_SURFACES]] §5 — *form + mechanics stay in [[working/WEB_HOME_SPEC]]; role stays in WORLD §7.5* |
 | Reddit strategy | **Loop RETIRED 2026-07-28.** The plan was deleted 2026-07-30 (action items for a dead channel); the *findings* survive in [[working/WOBAR_CLOSED]] and [[working/RESEARCH_REDDIT_SUBS]] |
 | Released catalogue | **No owner yet — deliberately not in a locked doc.** Needs a working file if it's wanted |
 

@@ -1,6 +1,6 @@
 ---
 title: Format Testing — series and content experiments
-version: 1.0
+version: 1.1 (+ Portal // rename; reggae-vs-rap open question 2026-08-07)
 created: 2026-08-04
 status: live — holding pen
 scope: Series formats and content experiments, held here until they earn brand-doc status. OWNS format specs, their open questions and their kill conditions. Does NOT own bucket strategy ([[working/WOBAR_SOCIAL_PLAN]]), funnel shape ([[working/WOBAR_ROADMAP]]), or output rate ([[working/WOBAR_GROWTH_PLAN]]).
@@ -26,7 +26,13 @@ A numbered flip series. The name is the frame: each entry is a flip of something
 
 **It closes a standing instruction.** [[working/WOBAR_GROWTH_PLAN]] §2 has read ***"Name it, number it, keep it running"*** since 2026-07-26, with no name attached. This is the name.
 
-**No collision with *Portal Journey*.** That is the mix/set series (currently at 002). **Portal Journey = sets. Samples = flips.** Two numbered series on one main handle is the observed norm in this lane, not a conflict — Tape B runs *Vibe Check* and *Driptapes* concurrently on his verified account.
+**No collision with *Portal // ***. That is the mix/set series (at 003). **Portal // = sets. Samples = flips.** Two numbered series on one main handle is the observed norm in this lane, not a conflict — Tape B runs *Vibe Check* and *Driptapes* concurrently on his verified account.
+
+> **⚠ Renamed 2026-08-07: *Portal Journey* → `Portal // 001–003`**, and the SoundCloud playlist is now `Portal`. **"Journey" was the defect, not "Portal."** It is the word deprecated alongside portals in the 2026-04-30 visual-lens call, and everything downstream had already moved to **the arc**. Dropping it also unified the two series under one grammar — `Portal // NNN` for sets, `Channel // MMDDYY` for bedroom captures — which previously looked unrelated.
+>
+> **The rename was nearly free and that is the transferable part:** 228 combined plays across nine months meant there was no equity to lose. **A numbered series can only be renamed cheaply while it is small**; the window closes as it works.
+>
+> **"Portal" itself stays** — see the note in [[reference/WOBAR_WORLD]] §9. The mix series and the *Portal EP* are the same shape at two durations, which is a family, not a collision.
 
 ### Why the premise is safe
 The title sounds like a confession and is not. **Tape B's *Vibe Check Vol. 3* is openly uncleared major-label material** — Mariah Carey, Lady Gaga, Destiny's Child, t.A.T.u. — published on his verified main handle. GorillaT runs *Gorilla Tapes* the same way. **The practice is the scene norm; naming it is the only novel part.**
@@ -54,7 +60,10 @@ beat 2   what it became                    ← the credential
 1. **Does the name cover both surfaces, or only SoundCloud?** The strongest read is one name across both — the SoundCloud numbered series is the release container, the IG clips are its promotion, exactly as *Driptapes* works. **Not yet decided.** If it is SoundCloud-only, the IG clips need their own frame and the serialization argument weakens.
 2. **The title is industry-insider, not lane-insider.** §3.5's rail distinguishes *"a joke only a dark-140 producer gets"* from *"a joke anyone could make."* Sample clearance is legible to any music person. **The title gets it in the door; the sample choices are what make it a credential.** A Mariah flip and a rap flip in Wobar's actual register say very different things about who this is for. **The lane specificity has to live in the selections, because the name does not supply it.**
 3. **The name forecloses the clearable case.** A flip of an indie artist, a friend, or anything licensable cannot live in a series premised on never clearing. Small, but it means the series can never graduate into a release — every entry is terminal by design. That is consistent with Funnel C and worth knowing rather than discovering.
-4. **Numbering scheme undecided** — volumes (Tape B) vs single increments (*Portal Journey 002*).
+4. **Numbering scheme undecided** — volumes (Tape B) vs single increments. ⚠ *Portal //* settled on single increments with the `//` separator 2026-08-07; the flip series has not inherited that by default, but the account now has a house grammar to either match or deliberately break.
+5. **🟡 Do reggae sources outperform rap sources? Open, and it cuts against the format's own premise.** One controlled pair, 2026-08-07: *Kingston Town* (Alborosie) and *Swimming Pools* (Kendrick) went out **the same day** — **209 plays to 31**. The other reggae flip, *World-A-Reggae*, is the catalogue's most-played and most-liked track by a distance. The two rap flips are the two weakest things released.
+   **Why it matters here:** this series is built on the **rap-flip register** ([[reference/WOBAR_SONIC]] register 4, 16%), and beat 1 of the two-beat unit is *the sample, recognisable*. If reggae sources travel further, the format's strongest material may sit in a register the series wasn't designed around — and register 5 (dub pivot) is adjacent and currently near-empty.
+   **Confidence: low. n=1 vs n=1 on the clean pair, 2 vs 3 overall.** Do not act on it; test it. **Two more reggae/dub flips against two more rap flips would settle it**, and the series is producing entries anyway.
 
 ### Kill condition
 **Per [[working/WOBAR_SOCIAL_PLAN]] §5 this is not scored on views.** The signal is who: unprompted replies, ID requests, or reposts from lane accounts, and SoundCloud follows.
