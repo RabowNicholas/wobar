@@ -106,7 +106,9 @@ Added 2026-07-30. **Not a funnel. It exits nowhere and produces nothing on its o
 
 `Instagram / TikTok → producers and DJs one rung up → credibility + a warm DM → repost, play, VA slot`
 
-**Audience is peers, not fans.** Scored on warm DMs sent and lane accounts reached — **never on followers, reach or streams.** Three buckets (music / memes / give-back), the funnel, the targeting tier and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]].
+⚠ **Revised 2026-08-12.** This read *"Audience is peers, not fans … never scored on followers, reach or streams."* **Audience is now lane-weighted and growth is a goal** — account strength is the credibility this layer exists to earn, so it is measured. **The role, the scoring and the guardrails are owned by [[working/WOBAR_SOCIAL_PLAN]] §1 and §5 and are not restated here.** Three buckets (music / memes / give-back), the funnel and the targeting tier are owned there too.
+
+**What still holds at this level:** the peer layer exits nowhere on its own, and **warm DMs sent and lane accounts reached remain the signals that matter most** — a follower count made of the wrong accounts earns nothing here.
 
 **Held on cost, not proof.** The chain is six links and every one is unmeasured; Vulora was signed on 16 posts. Cheap with a fat tail — **and it must never displace the music or the sends.**
 
@@ -180,7 +182,9 @@ Peer-layer lagging: reposts earned · unprompted replies from lane accounts. Own
 
 **The local proxy is the cheapest and the only one nobody has ever tried.** It costs one question asked in a room Nick is already standing in.
 
-Baselines: [[working/WOBAR_GROWTH_PLAN]]. **Do not track:** IG followers, reach, views, engagement rate. **One lane comment outranks 200 likes.**
+Baselines: [[working/WOBAR_GROWTH_PLAN]].
+
+⚠ **Revised 2026-08-12.** This line read *"Do not track: IG followers, reach, views, engagement rate."* **That prohibition is lifted** — [[working/WOBAR_SOCIAL_PLAN]] §1 makes account strength the credibility mechanism, so it is now measured. **Social measurement is owned by SOCIAL_PLAN §5 and is not restated here.** What survives, and still governs: **one lane comment outranks 200 likes** — *who* engaged beats how many, and where the two disagree, who wins.
 
 **And do not track raw plays as a fan signal.** A play is a listen; the goal is the second one.
 

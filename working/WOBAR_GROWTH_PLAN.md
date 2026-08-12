@@ -147,13 +147,16 @@ Private links, same afternoon as label submissions. Track who plays what.
 
 ---
 
-## 6. Instagram — wipe, then leave it alone
+## 6. Instagram
+
+> ⚠ **SUPERSEDED 2026-08-12 — see [[working/WOBAR_SOCIAL_PLAN]] §1, which owns the socials role.**
+> This section read *"wipe, then leave it alone"* and *"Job: five-second credibility. Not growth. Stop opening Insights."* **All three are reversed.** Instagram is now a surface in its own right, growth is a goal because account strength is the credibility mechanism, and Insights is read on a biweekly cycle. **The section is kept for its first-party data, which is still good, and for the record of what was believed.**
 
 **[OBSERVED — first-party]** 90 days: 116,070 views · 9,148 non-follower accounts reached · **706 profile visits · 20 external link taps · ~0 follows.**
 
-**Decision (Nick, 2026-07-26): wipe the account and post full songs as phone screen recordings.** Precedented in the comp set — Of The Trees rebuilt at 25 posts, `@eatermusic` runs 12.1K followers on 4 posts.
+**Still the most useful number here, and it survives the reversal:** enormous reach converted almost nothing. Under the old plan that was the argument for walking away. Under SOCIAL_PLAN §1 it is the scope boundary — **reach is not the credential and does not become one at volume.** What the account is now measured on is whether the *right* accounts arrive, and whether SoundCloud moves with it.
 
-**Job: five-second credibility for people being reached out to. Not growth.** Stop opening Insights.
+**Decision (Nick, 2026-07-26): wipe the account and post full songs as phone screen recordings.** Precedented in the comp set — Of The Trees rebuilt at 25 posts, `@eatermusic` runs 12.1K followers on 4 posts. ⚠ **Status unverified** — whether the wipe happened is not recorded anywhere in the vault.
 
 **[JUDGMENT]** The echo-chamber read holds: what performs on peer accounts is producer-to-producer content — DAW screens, studio talking-head, "rap and dubstep go too damn well together," "no hashtags bc idk what genre my music is anymore." It recruits producers, not listeners.
 
@@ -163,7 +166,9 @@ Private links, same afternoon as label submissions. Track who plays what.
 
 ## 7. Parked — consciously
 
-Terminal Rebuild · Mirror Threshold / the Ether · IG growth strategy · per-track visualizers for social · world-doc expansion · the live TD performance system.
+Terminal Rebuild · Mirror Threshold / the Ether · per-track visualizers for social · world-doc expansion · the live TD performance system.
+
+**Unparked 2026-08-12: IG growth strategy.** Now governed by [[working/WOBAR_SOCIAL_PLAN]] §1, and bounded by its §0 — it runs on surplus and never ahead of a release.
 
 None is the constraint. **The TouchDesigner work is parked, not dead** — it's what makes the headline-room version possible later, and Memory Palace (the crown target) is explicitly visual-led.
 
@@ -177,7 +182,9 @@ None is the constraint. **The TouchDesigner work is parked, not dead** — it's 
 - **Submissions sent** — baseline **0**
 - **DJ plays / support** — binary, log who
 
-**Do not track:** IG followers, IG reach, IG views.
+**Social metrics: owned by [[working/WOBAR_SOCIAL_PLAN]] §5, not restated here.**
+
+⚠ **Revised 2026-08-12.** This line read *"Do not track: IG followers, IG reach, IG views."* **Lifted** — under SOCIAL_PLAN §1 Instagram is a surface in its own right and its size is the credibility mechanism, so it is measured on a biweekly cycle. **The constraint that replaces it:** IG growth only counts as credibility if SoundCloud moves with it. **Watch the ratio, not the IG number alone.**
 
 ---
 

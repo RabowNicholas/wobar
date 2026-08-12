@@ -1,36 +1,81 @@
 ---
-title: Wobar Social Plan — the peer layer
-version: 1.0
+title: Wobar Social Plan
+version: 2.0
 created: 2026-07-30
-last_updated: 2026-07-30
+last_updated: 2026-08-12
 status: live — governing for Instagram and TikTok
-scope: What Instagram and TikTok are for, who they target, the three content buckets, and the funnel that runs on them. OWNS the socials role, the target tier, the buckets, and the peer funnel. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
+scope: What Instagram and TikTok are for, who they target, the three content buckets, and the funnel that runs on them. OWNS the socials role, the priority rule, the target tier, the buckets, the peer funnel, and what counts as working. Does not restate facts owned elsewhere — see the Drift Rule in WOBAR_CONTEXT.
 dependencies: [[working/WOBAR_ROADMAP]], [[working/WOBAR_SURFACES]], [[working/WOBAR_GROWTH_PLAN]], [[reference/WOBAR_CONTENT]]
 ---
 
-# WOBAR SOCIAL PLAN — THE PEER LAYER
+# WOBAR SOCIAL PLAN
 
-> **Ownership (per the Drift Rule).** This file owns **the socials role, the target tier, the content buckets, and the peer funnel.**
+> **Ownership (per the Drift Rule).** This file owns **the socials role, the priority rule, the target tier, the content buckets, the peer funnel, and what counts as working.**
 > Funnels A–E and the peer layer → [[working/WOBAR_ROADMAP]] · Depth ladder and exposure status → [[working/WOBAR_SURFACES]] · Position metrics and output rate → [[working/WOBAR_GROWTH_PLAN]] · Release content architecture → [[reference/WOBAR_CONTENT]].
 > **Supersedes the Platforms table in [[reference/WOBAR_CONTENT]]** ("TikTok = discovery / Instagram = community depth"). That split was never tested and does not survive measurement.
 
 ---
 
+## §0 — THE PRIORITY RULE
+
+**Music first, always. Instagram runs on genuine surplus and never competes with a release.**
+
+Confirmed by Nick 2026-08-12 when the rest of this plan was revised upward — **the expansion of §1 did not buy a claim on the calendar.** The v1.0 line stands unchanged: *if this delays [[working/WOBAR_ROADMAP]] Phase 1 by a single day it has already cost more than it can return.*
+
+**This is what makes the growth goal safe.** §1 says grow it as much as possible; §0 sets what "possible" means. The two are not in tension — they are the same decision, and reading §1 without §0 reproduces the exact failure §7 names.
+
+**Consequence, and it shapes everything downstream:** *post more* is not an available recommendation. See §5 — yield, not volume.
+
+---
+
 ## §1 — THE DECISION
 
-**Instagram and TikTok are a peer-facing surface. The audience is producers and DJs, not fans. The output is credibility and conversations. Never scored on followers, reach, or streams.**
+**Instagram is a surface in its own right and growing it is a goal. The audience is lane-weighted — producers, DJs and the people who listen to this music — and the account must keep reading as a producer's account. It does two jobs: it carries the credibility that makes a peer take the DM seriously, and it reads reaction to the music faster than any other surface can.**
 
-Locked 2026-07-30. Everything below is downstream of that sentence.
+**Revised 2026-08-12, superseding the 2026-07-30 lock.** Everything below is downstream of that sentence.
 
-### Why — the evidence that forced it
+### Why the previous decision fell
+
+v1.0 read: *"peer-facing surface … the output is credibility and conversations. Never scored on followers, reach, or streams."* **It prohibited a goal using evidence that never addressed that goal.**
+
+- spüke-vs-ISEEU shows IG size does not predict **listeners**.
+- Vulora shows label doors are not **audience-gated**.
+
+Neither speaks to whether a larger account makes a producer take a DM seriously — which is the actual claim. §7.1 already conceded the peer chain was *"six links, every one unmeasured."* **The prohibition was never better-evidenced than what replaces it. It was only more restrictive.**
+
+**Nick's correction, 2026-08-12:** credibility with peers is a property of a strong account, and 400 followers does not buy the conversation however good the grid is. Content is also not a tax here — he enjoys making it and it is already part of how he shares music, which closes §7.3 differently than that section expected.
+
+⚠ **Pending verification.** The account is reported improving on its own numbers, **first-party, not borrowed**. Not yet read directly from Insights. Until it is, treat it as Nick's report rather than a measurement — [[working/WOBAR_ACTIVE]] STANDING TRAPS, *borrowed numbers read as first-party results*, is the most-repeated error in this vault and the check is cheap.
+
+### The second job — reading the music
+
+**Instagram answers faster than SoundCloud.** A snippet reads in days; SoundCloud needs a finished track and moves slowly. **No other surface in this vault does this**, and no prior version assigned the job to anything.
+
+**Scope, decided 2026-08-12 — it never kills a sketch.** The signal lands *after* the track exists and shapes three things:
+
+| It decides | It does not decide |
+|---|---|
+| **Which finished tracks lead** — release order, what gets pitched | **Which ideas get finished.** The music gets made either way |
+| **Sound direction** — read across months, not posts | |
+| **Which tracks earn a visual treatment** — where TD effort goes | |
+
+⚠ **The sample is small and the loop must say so.** Organic median is ~205 views, and scoring finished tracks yields a handful of comparisons a quarter rather than many cheap ones. **Sound direction across months is answerable at that size. "Which of these two tracks leads" often is not.** A loop that manufactures a verdict from two posts is producing noise with a decision attached to it.
+
+### The evidence, demoted from prohibition to constraint
+
+*These were the reasons for v1.0's ban. They remain true and none of them contradicts the new decision — they bound it.*
 
 **IG does not produce listeners.** Same IG size, 35× listener spread: spüke 5,453 IG → 98,468 monthly listeners; ISEEU 5,638 IG → 2,831. ([[working/RESEARCH_IG_CONVERSION]] Study A.)
 
 **IG is not the label gate.** Jadū Dala released Vulora at ≤2,324 IG followers, 119 monthly listeners, **16 posts**. Vanda at ≤1,724. The doors are taste-gated, not audience-gated. (Study B — survives verification.)
 
-**A large IG following is the wrong signal in this lane.** Peers run SoundCloud ≥ Instagram — Acyan 2.4×, ISEEU 2.0×, dêtre 1.6×, Gunpoint 1.3×. Wobar is inverted at 400 IG / 55 SC. **Growing IG hard deepens the inversion**, and IG-heavy/SC-light reads as a content account to exactly the people being targeted.
+**⚠ THE INVERSION — the one objection that survives, because it is about peer perception.** Peers run SoundCloud ≥ Instagram: Acyan 2.4×, ISEEU 2.0×, dêtre 1.6×, Gunpoint 1.3×. Wobar is inverted at 400 IG / 55 SC — ⚠ **the 400 is stale as of 2026-08-12 and the inversion has almost certainly deepened.**
 
-**Fans are made by duration, not reach.** A Reel decides in 3 seconds. A track is 4 minutes; a mix is 45; a set is 90. 116,070 views in 90 days produced ~0 follows because the surface is structurally incapable of the job — a duration failure, not a conversion failure. Corroborated inside one account: **Swomp's numbered mix series 36.3K plays vs 1,232 on his most recent single track.**
+This argument does **not** fall with the rest, because it speaks to exactly the thing the new decision claims — how the account reads to a lane producer. **IG-heavy and SC-light reads as a content account to the precise people the credibility is for.**
+
+It is not an argument against growing Instagram. It is a constraint on doing it alone: **a growing IG against a flat SoundCloud makes the credibility problem worse, not better.** The ratio is the thing to watch, not either number.
+
+**Fans are made by duration, not reach — now a scope boundary, not an objection.** A Reel decides in 3 seconds; a track is 4 minutes, a mix 45, a set 90. 116,070 views in 90 days produced ~0 follows. Corroborated inside one account: **Swomp's numbered mix series 36.3K plays vs 1,232 on his most recent single track.** Under v1.0 this was a reason not to invest. Under this decision it simply means **fan-making is not Instagram's job** — credibility and reading the music are. Do not score it on returns, and do not expect it to produce listeners directly.
 
 ### ⚠ Correction to the record — the 316-sends finding is void
 
@@ -41,7 +86,7 @@ Locked 2026-07-30. Everything below is downstream of that sentence.
 Consequences:
 - **"Distribution is not the constraint" is UNSUPPORTED.** Distribution may well be a constraint.
 - §3.3's "utility travels without converting" is reattributed — those were Flow State's followers seeing a co-branded post, not Wobar's followers declining to follow.
-- Organic median is ~205 views (visualizers 133–314). **Removing the collab, no format on this account has ever produced a measurable result.**
+- Organic median is ~205 views (visualizers 133–314). **Removing the collab, no format on this account had ever produced a measurable result** — ⚠ **as of 2026-07-30. Nick reports this is no longer true (2026-08-12), first-party. Unverified.** If it holds, this is the single most consequential update available to this file, because it is the first evidence the account can distribute on its own.
 - Same error class as the six failed-lookups-treated-as-findings logged 2026-07-27: **a borrowed number read as a first-party result.**
 
 **The reframe that survives:** the only time Wobar content ever reached anyone, another account carried it. That is the same shape as reposts, VA comps and DJ plays — **borrowed audience is the only distribution this project has ever had.**
@@ -190,17 +235,39 @@ SOUNDCLOUD ────►  they listen, download, maybe play it
 
 *A leading-metric table with counts at zero lived here and was removed 2026-07-30 — counting Nick's output back at him is tracking, not strategy.*
 
-**The signal is qualitative and it is about *who*, not how many.** One comment from a lane producer outranks two hundred likes. A reply from an account one rung up is the funnel working; a spike in views is not.
+**Revised 2026-08-12.** v1.0 said *do not track IG followers, reach, views or engagement rate — aggregate engagement is the Insights trap.* **That prohibition is lifted.** Under §1 the account's size is the credibility mechanism, so refusing to measure it means refusing to measure the strategy.
 
-### Direction only
-Reposts earned · confirmed DJ plays · unprompted replies or "what is this" from lane accounts · SoundCloud followers.
+**The trap it was guarding against is real and is now handled by scope instead of by blindness:** a number is only worth tracking if a decision hangs on it. Anything measured here that never changes what gets posted is decoration.
 
-### Do not track
-**IG followers · reach · views · engagement rate.** Per [[working/WOBAR_ROADMAP]] §5. Aggregate engagement is the Insights trap.
+### The governing principle — yield, not volume
 
-### Two honest limits
-1. **This funnel does not produce listeners.** It produces relationships with people who have audiences. The listener arrives from what *they* do next, which is outside Nick's control. **Do not score it on streams.**
-2. **It is slow.** Weeks to months per person. Fine across ~100 targets; not measurable monthly.
+**Instagram runs on genuine surplus (§0 priority: music first, always). The lever of "post more" is closed.** So measurement exists to raise the return on a fixed and modest output, which means **the review must be as willing to say stop as to say do more.** A loop that only ever adds is not reading anything.
+
+### Three tiers, and they answer different questions
+
+| Tier | Reads | Examples |
+|---|---|---|
+| **1 — Account strength** | Is the credential getting real? The §1 claim, directly | Followers · reach · per-post `Follows` · profile activity |
+| **2 — Who** | Is it the *right* growth? The lane-weighting test | Which accounts comment, save, share, follow. Lane or not |
+| **3 — Music signal** | Which work lands, per §1's second job | Reaction across finished-track posts, read over months |
+
+**Tier 2 outranks tier 1 when they disagree.** One comment from a lane producer still outranks two hundred likes — that judgement survives v1.0 intact. A rising follower count made of non-lane accounts is the CUTDWN failure in progress (§3, bucket 2), not success, and tier 1 alone cannot see the difference.
+
+**And the ratio, per §1's inversion:** IG growth is only credibility if SoundCloud moves with it. **Track the two together or the number is lying to you.**
+
+### Still the strongest signals, unchanged
+Reposts earned · confirmed DJ plays · unprompted replies or *"what is this"* from lane accounts · SoundCloud followers.
+
+### ⚠ Why the cadence is not optional
+
+**Account-level Instagram Insights is a rolling 90-day window and nothing survives it.** Presets are 7 / 14 / 30 days, previous month and 90 days; custom ranges must fall inside 90 days. Per-post and per-reel insights persist ~2 years, but the account-level series does not exist unless it is captured. **A biweekly snapshot is the only reason any of this data exists a year from now** — that, not analysis, is the load-bearing half of the habit.
+
+Also: **audience demographics require a preset timeframe and >100 accounts reached or engaged.** At current size some windows will return nothing. That is a missing reading, not a result.
+
+### Three honest limits
+1. **This does not produce listeners directly.** It produces credibility, relationships and a read on the music. The listener arrives from what a peer does next, which is outside Nick's control. **Do not score it on streams.**
+2. **The relationship half is slow.** Weeks to months per person. Fine across ~100 targets; not measurable fortnightly.
+3. **The music-signal half is sample-starved** (§1). Direction over months is readable. Single-post verdicts mostly are not.
 
 ---
 
@@ -214,15 +281,23 @@ Reposts earned · confirmed DJ plays · unprompted replies or "what is this" fro
 
 1. **Whether producer-facing content produces distribution access.** The chain — content → producer respect → DM taken seriously → repost/play → their audience hears → some convert — is **six links, every one unmeasured. [JUDGMENT, unmeasured.]** A shorter chain (content → fan → listener) was just rejected for being unproven; this one is longer. Held because it is cheap with a fat tail, **not** because it is proven.
 2. **Whether the peer layer is decoration on the only variable that matters.** Vulora: 16 posts, 119 monthly listeners, signed. If doors are taste-gated, content may change nothing. Untested and unfalsified.
-3. **Whether "cheap exhaust" is true.** Content good enough to earn a lane producer's respect is *selected*, not exhaust. If it costs 3 hours a post, the asymmetry inverts and this funds a lottery ticket with the daily.
-4. **The peer-tier comp set** (1K–20K) has never been built. Every comp is 45K+.
+3. ~~**Whether "cheap exhaust" is true.**~~ **Closed 2026-08-12 — by decision, not by measurement.** Nick enjoys making content and it is already part of how he shares music, so the cost is not a tax the strategy has to earn back. The residual risk is unchanged in kind but no longer decisive: **enjoyable work still consumes hours, and §0 is what bounds it.**
+4. **The peer-tier comp set** (1K–20K) has never been built. Every comp is 45K+. **This now costs more than it did under v1.0** — a growth goal without a benchmark at this size means there is no external answer to *"is this number good?"*, only movement against Wobar's own past.
 
-### The bounded test that would settle #1 and #3
+### The bounded test that would settle #1
 **Ship 5 producer-facing posts over a month. Cap total time at 3 hours. Score one number: unprompted replies or DMs from lane accounts.** Zero after five and it is dead for three hours' cost. Two or three and it is real.
 
-**Run it alongside the demos, never instead.** If this delays [[working/WOBAR_ROADMAP]] Phase 1 by a single day it has already cost more than it can return.
+**Run it alongside the demos, never instead** — §0.
 
-### The failure mode, named
+### The failure mode, named — and it applies harder to v2.0 than it did to v1.0
 The vault's documented pattern is *"research feels like progress and is not"* — five sweeps, three rewrites, **0 demos sent.** A peer-layer strategy licenses content and TouchDesigner builds, which are the comfortable work, and requires nothing to be sent or judged.
 
 **Test any expansion of this plan against one question: does it cause an uncomfortable action, or license a comfortable one?**
+
+⚠ **Applied to the biweekly review itself, honestly:** a recurring analytics ritual is close to the archetype of comfortable work. It reads as progress, it is pleasant, and it can run for a year without a single demo being sent. **Three things keep it legitimate, and if any of them lapses the review is the failure mode wearing a spreadsheet:**
+
+1. **It must change what gets posted.** A cycle that produces observations and no decision was a waste of the hour.
+2. **It must be able to say stop** (§5, yield not volume). A review that only ever recommends more is not reading anything.
+3. **It never moves ahead of the music** (§0).
+
+**The honest reason it is still worth running:** the 90-day window means the data is destroyed if nobody captures it (§5). That much is true regardless of whether the analysis is any good.

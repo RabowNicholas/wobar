@@ -18,7 +18,7 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 
 ## POSITION
 
-22 Spotify monthly listeners · 55 SoundCloud followers (11 tracks) · 400 Instagram followers · **0 label releases · 0 demos ever sent** · not on Beatport.
+22 Spotify monthly listeners · 55 SoundCloud followers (11 tracks) · ~~400 Instagram followers~~ **IG figure is stale — Nick reports growth, first-party, not yet read from Insights** · **0 label releases · 0 demos ever sent** · not on Beatport.
 
 **A local presence and a skill set, not an audience.** Those numbers are the arithmetic of the inputs, not underperformance — this is a cold start, and it needs the opposite response to a conversion problem. Baselines owned by [[working/WOBAR_GROWTH_PLAN]].
 
@@ -27,6 +27,21 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 ---
 
 ## THREADS
+
+### Instagram — strategy reversed 2026-08-12
+**State: decision made and written; the measurement loop is not built.**
+
+**Instagram is a surface in its own right and growing it is a goal.** [[working/WOBAR_SOCIAL_PLAN]] v2.0 governs and holds the reasoning. The short version: credibility with producers and DJs is a property of a **strong** account, and v1.0's ban on that goal rested on evidence about listeners and label gates that never addressed it.
+
+**Two jobs, and the second one is new to the vault:** carry credibility, and **read reaction to the music** — faster than SoundCloud, which needs a finished track. It shapes release order, sound direction and where visual effort goes. **It never kills a sketch.**
+
+**Bounded by §0 — music first, always.** The growth goal did not buy a claim on the calendar, which is what keeps it from becoming the failure mode §7 names.
+
+**Genuinely open:**
+- **The current numbers are unverified.** Nick reports the account improving on its own strength — first-party, not a collab. Not yet read from Insights, and the vault's most-repeated error is borrowed numbers read as first-party.
+- **The biweekly loop does not exist yet** — cadence agreed, instrument not designed. What it must be able to do: change what gets posted, say *stop* as readily as *more*, and never run ahead of the music.
+- **No benchmark at this size.** The peer-tier comp set (1K–20K) has never been built, so there is no external answer to *"is this number good?"* — only movement against Wobar's own past.
+- **The inversion.** Peers run SoundCloud ≥ Instagram; Wobar is inverted. Growing IG against a flat SoundCloud deepens the thing the credibility is supposed to fix. **Watch the ratio.**
 
 ### Goal Re-Specification — settled 2026-07-30
 **State: the doc work is done.** [[working/WOBAR_ROADMAP]] §1 is governing: **"12 months: people who come back."** A listener hears it once, a fan returns — the same test locally (a second night) and online (a repeat listen). Local and online are one goal with two expressions.

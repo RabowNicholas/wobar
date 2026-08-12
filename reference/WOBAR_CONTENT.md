@@ -73,7 +73,7 @@ Bedroom recordings. Something came through and got captured. No ceremony. Just m
 | Platform | Handle | Role |
 |----------|--------|------|
 | TikTok | wobar1 | Crosspost only — see SOCIAL_PLAN §6 |
-| Instagram | wobar.exe | Peer-facing: producers and DJs — see SOCIAL_PLAN §1 |
+| Instagram | wobar.exe | **A surface in its own right; growth is a goal.** Lane-weighted — producers, DJs, bass listeners — see SOCIAL_PLAN §1 |
 | SoundCloud | wobar | Full tracks and sets. **The priority surface** |
 | YouTube | wobar | Full visualizers and sets |
 

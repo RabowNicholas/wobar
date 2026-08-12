@@ -38,7 +38,7 @@ dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]], [[working/WOB
 | Beatport / labels | — | **0** | Structurally cannot hold world. Metadata and a title |
 | DJ plays / VA credits | 0 | **0** | Someone else's context entirely |
 | Reddit | 0 | **0 by choice** | World does not show. **Competence is the exposure** |
-| Instagram | 0 | 1 | **Audience is peers, not fans** — see [[working/WOBAR_SOCIAL_PLAN]]. Ceiling was never the problem; the surface cannot make a fan in 3 seconds |
+| Instagram | 0 | 1 | **Audience is lane-weighted — peers first, but growth is now a goal** ([[working/WOBAR_SOCIAL_PLAN]] §1, revised 2026-08-12). Ceiling was never the problem; the surface cannot make a fan in 3 seconds — **and no longer needs to.** Its jobs are credibility and reading the music, neither of which this axis measures |
 | TikTok | — | 1 | Crosspost of the above. Never designed for |
 | Spotify | 0 | **1** | Canvas is depth-1: shape, wordless |
 | SoundCloud | 0–1 | **2** | Catalogue + flip series = shape. Descriptions could carry voice |
@@ -54,7 +54,7 @@ dependencies: [[reference/WOBAR_WORLD]], [[reference/WOBAR_COPY]], [[working/WOB
 ### What the map shows
 1. **Almost everything operates at depth 0**, with ceilings of 0–1. That is what those surfaces *are*. The mistake is pushing world into them.
 2. **Depth 1 is the entire mid-range and it is almost unbuilt** — artwork, Canvas, chaptered sets, the mark recurring. Shape and image, no words. Cheapest depth to build, least built.
-3. **There is nothing between depth 1 and depth 3.** Depth 2 — Wobar as a voice — has no home. IG stories were meant to hold it; IG is demoted. SMS holds it and does not exist yet. **Someone who loves the music has nowhere to meet the person.**
+3. **There is nothing between depth 1 and depth 3.** Depth 2 — Wobar as a voice — has no home. IG stories were meant to hold it; ~~IG is demoted~~ **IG is no longer demoted (2026-08-12), but that does not fix this** — its assigned jobs are credibility and reading the music, not carrying voice, and its ceiling is still 1. SMS holds depth 2 and does not exist yet. **Someone who loves the music still has nowhere to meet the person.**
 4. **The music reaches 4 without a single word.** Why the vault says the audio was always closest to the world.
 
 ### §1.5 — THE SECOND AXIS: DURATION HELD
@@ -74,7 +74,7 @@ Added 2026-07-30. Depth answers *how much world is exposed*. It does not answer 
 
 1. **Live is the strongest surface on both axes** — ceiling 3 on depth, highest duration in the project — **and it is the one marked *undesigned*.** That is now the largest single gap in this file.
 2. **An unfilmed set converts only the bodies present.** Capture is what lets a 90-minute surface exist anywhere else. Listed in §4 as a missing surface; it is really a missing *habit*.
-3. **Instagram's demotion is structural, not a judgment.** Three seconds cannot produce a return, whatever the content is. Confirms [[working/WOBAR_SOCIAL_PLAN]] rather than revising it.
+3. **Three seconds cannot produce a return, whatever the content is.** That finding stands. ⚠ **What it was used for has changed (2026-08-12):** it read *"Instagram's demotion is structural, not a judgment."* **Instagram is no longer demoted** — [[working/WOBAR_SOCIAL_PLAN]] §1 makes it a surface in its own right with a growth goal. **The two axes in this file measure depth of world and duration held. Instagram's actual jobs — credibility with peers, and reading reaction to the music — are invisible to both.** A surface can score 0/1 here and still be worth building. This file no longer speaks to Instagram's priority.
 4. **YouTube is undervalued everywhere in this vault.** It is the only long-form surface with a ceiling above 1, and search keeps it alive for years while a post dies in 48 hours.
 5. **Depth 2 is where the return leaks.** *"Someone who loves the music has nowhere to meet the person."* Under a listener goal that was a curiosity; under a return goal it is the hole.
 
