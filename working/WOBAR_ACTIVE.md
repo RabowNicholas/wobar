@@ -37,9 +37,26 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 
 **Bounded by §0 — music first, always.** The growth goal did not buy a claim on the calendar, which is what keeps it from becoming the failure mode §7 names.
 
+**VERIFIED 2026-08-12, first-party, read directly from Insights.** The account distributes on its own. 30 days: **44,756 views · 24,401 viewers · 84.8% non-followers · 466 followers (+66) · 496 profile visits · 27 link taps.** Reach *rate* is up only ~16% on the old baseline — **what changed is conversion off it**: profile visits 2.1×, link taps 4×, follows from ~0 to +66, and the top organic post went ~314 → 3,831 views. The account was never wiped (128 posts, up from 101). [[working/WOBAR_SOCIAL_PLAN]] §1's *"no format has ever produced a measurable result"* is dead.
+
+**The finding that matters, and it inverts the view-count read.** Six posts at near-identical reach (2,200–3,000 viewers):
+
+| bucket | shares | follows |
+|---|---|---|
+| music / studio ×4 | 331 · 25 · 19 · 16 | 7 · 10 · 15 · 12 |
+| meme / commentary ×2 | 3 · 0 | 2 · 1 |
+
+**Music content drives shares and follows ~8×; memes drive views and comments and convert almost nothing.** The top post by views returned **0 shares and 1 follow**. And it is *not* a facelessness question — five of the six show his face, including every high performer. The variable is **music/craft vs commentary**, not face vs faceless.
+
+**`roots of dubstep` did 331 shares at a 15% share rate** — five times the Flow State collab the vault once called "unusually strong", and first-party. It also ran 2 comments, against the meme posts' 73 and 35. **Posts travel or they talk; averaging the two into "engagement" destroys the distinction.**
+
+**The instrument exists.** `skills/wobar-ig-review/` — capture → refresh → report. Raw log in the **"WOBAR — IG Post Log"** Sheet (`contact.wobar@gmail.com`), dated reports in `working/ig_reports/`. **Scores an offset window: the 14 days ending 7 days ago** — reels keep accumulating, and a naive trailing window drops posts permanently instead of merely delaying them.
+
 **Genuinely open:**
-- **The current numbers are unverified.** Nick reports the account improving on its own strength — first-party, not a collab. Not yet read from Insights, and the vault's most-repeated error is borrowed numbers read as first-party.
-- **The biweekly loop does not exist yet** — cadence agreed, instrument not designed. What it must be able to do: change what gets posted, say *stop* as readily as *more*, and never run ahead of the music.
+- **~14 of ~20 posts in the window are uncaptured.** The insights grid renders cards as video elements outside the accessibility tree, so opening one is a coordinate click that only lands before thumbnails paint. The profile grid has real links and is the better route.
+- **Dates on 5 of 6 logged rows are inferred** from top-content ordering, not read. Worth spot-checking.
+- **The 7-day maturity cutoff is an assumption.** Refreshing posts under 21 days old across a few cycles will measure the real curve.
+- **No benchmark at this size.** Instagram publishes no rates ([[working/RESEARCH_IG_PLATFORM_GUIDANCE]] §8), and the peer-tier comp set still doesn't exist — so "is this good?" has no external answer, only movement against Wobar's own past.
 - **No benchmark at this size.** The peer-tier comp set (1K–20K) has never been built, so there is no external answer to *"is this number good?"* — only movement against Wobar's own past.
 - **The inversion.** Peers run SoundCloud ≥ Instagram; Wobar is inverted. Growing IG against a flat SoundCloud deepens the thing the credibility is supposed to fix. **Watch the ratio.**
 

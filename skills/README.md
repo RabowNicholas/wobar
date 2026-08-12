@@ -31,6 +31,9 @@ Correction-tracker → rule promotion pipeline with mandatory verification ("pro
 ### `wobar-brand-check/`
 On-brand check against `reference/WOBAR_EMOTIONAL_REGISTER.md`. Establishes act/cusp target (with Vilos cross-brand guard), grabs eyes on the piece (TWOZERO screenshot or render), evaluates six register elements + always-on fundamentals (palette desat, never-pure-white, mirror lens, figurative-cheese test, audio reactivity), reports scored verdict with CRITICAL/MINOR misses + one concrete move per miss. Advisory only — never auto-fixes. Added 2026-06-12.
 
+### `wobar-ig-review/`
+Fortnightly Instagram cycle — capture → refresh → report. Pulls post-level Insights from Chrome into the **"WOBAR — IG Post Log"** Google Sheet (`contact.wobar@gmail.com`), then writes a dated report to `working/ig_reports/`. **Scores an offset window — the 14 days ending 7 days ago** — because reels keep accumulating and a naive trailing window drops posts permanently. Carries the learned capture mechanics (grid cards aren't in the accessibility tree; click the corner format icon before thumbnails paint; `comments` and `follows` aren't sortable and need the per-post page). Governed by `working/WOBAR_SOCIAL_PLAN.md` §0/§1/§5. Added 2026-08-12.
+
 **Bundled references** live under `~/.claude/skills/wobar-td-coach/references/` on disk — that file (`WOBAR_TD_REFERENCE.md`) is a copy of the vault's brand TD reference and isn't tracked here. Don't duplicate it; sync manually when the brand reference changes materially.
 
 ## Install / sync pattern
