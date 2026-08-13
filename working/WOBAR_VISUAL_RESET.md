@@ -1,10 +1,10 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.0 (VECTOR-VOID — the wireframe-void world is the identity; corridor spine RETIRED)
-last_updated: 2026-07-21
-last_session: 2026-07-21
+version: 1.1 (+ §2.5 THE COMPOSITE — the wireframe form as a physically present object in a photoreal world; the cosmos ban corrected from geography to register)
+last_updated: 2026-08-13
+last_session: 2026-08-13
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
-scope: The Wobar visualizer design system. v1.0 replaces the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms in true black, muted-psychedelic, naturally empty, one contrasting element holding attention. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
+scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 supersedes: the corridor spine (this file's v0.1/v0.2 — full text in git history, e.g. `git show 1b7afaa:working/WOBAR_VISUAL_RESET.md`)
 ---
@@ -100,9 +100,14 @@ Old system = `WOBAR_TD_REFERENCE §3/§4` + `WOBAR_GLSL_PATTERNS` + `WOBAR_OBSCU
   you project onto it — at any depth, **up to and including the center itself** (the
   §8 wide strike, 2026-07-21: the center may be *shown*, never *explained*).
 
+**Two permitted world-states (2026-08-13).** The above — form in true black — is the
+first. **§2.5 opens the second: the same form standing as a physically present object
+inside a photoreal environment.** The frame is no longer necessarily black and empty.
+What is invariant across both is the *form* and the restraint, not the ground it sits on.
+
 **Coherence comes from the shared world, not from a repeated mechanic.** Every piece
-is recognizably WOBAR because it lives in the same world — the same black, the same
-wireframe, the same restraint — not because it re-runs a formula.
+is recognizably WOBAR because it lives in the same world — the same wireframe, the same
+restraint — not because it re-runs a formula.
 
 **Simplicity is doctrine, not compromise.** The tightrope (WORLD §0.2) says the
 surface stays simple while the cosmology stays submerged. A clean wireframe form
@@ -112,13 +117,89 @@ ambitious. This is the visual guardrail G5 was missing.
 
 ---
 
+## 2.5 THE COMPOSITE — the form as an object in a real world *(added 2026-08-13, Nick's direction)*
+
+The second permitted world-state: the low-poly wireframe form standing as a
+**physically present object inside a photoreal environment.** Both registers in one
+frame — not a variation on the black void, a different thing the world can do.
+
+**Why it is doctrine and not a look:**
+
+- **It renders the interface.** WORLD §1: *the void is the interface, where the
+  lower-dimensional (time-bound) meets the higher-dimensional.* Black-and-empty renders
+  one side of that. The composite renders **the meeting.** Photoreal = the collapsed,
+  rendered, time-bound world. Low-poly wireframe = the blueprint, uncollapsed (Axis 1 +
+  Axis 2, §3). Putting the second inside the first is §1 made visible.
+- **It is Law 0 by construction.** The photoreal half is the plain, real *ground*; the
+  wireframe half is where the depth emerges. Grounded surface, depth never reached for.
+- **Act home: Act 1 RIFT**, and it is the strongest mapping available for that act,
+  which was the thinnest in §4. A rift is a tear in the ordinary — and the ordinary has
+  to be **intact and continuous** for the tear to read. Act 3 ENCOUNTER is the second
+  home.
+
+### The presence law — LOAD-BEARING
+
+**The object obeys the world completely.** Scene lighting, contact shadow, perspective,
+depth of field, lens, grain, grade. Total integration. **The contradiction is in its
+construction, never in its integration.**
+
+This is the whole mechanic, so the reasoning matters:
+
+- An unlit form floating free of the scene reads as an **overlay** — a sticker, an
+  effect. An overlay is dismissible; the viewer files it as compositing and moves on. A
+  thing that is genuinely *there*, obeying the light and casting a shadow, and is still
+  wrong, is uncanny. **Presence is what makes wrongness land.**
+- Breaking the comp to signal otherworldliness is **reaching** (Law 0) — it announces
+  the depth instead of letting it emerge.
+- **NO ESCAPE (§6.2).** A hovering, unlit, separate thing is the transcendence register.
+  An object standing in the room is in the body.
+
+**Where the wrongness lives.** Everything else in the frame lands on its surface. This
+one thing you see *through* — WORLD §4's facelessness and §3's "never land on its skin."
+The photoreal frame is a field of skins for the one skinless thing to be the exception
+to, which reads **harder** than it can in black, where there is nothing to be an
+exception to.
+
+### Build rule
+
+**The wireframe must be real geometry, not a shader.** Wireframe modifier → actual
+beams → lit by the scene HDRI → real material response. Three consequences, all wanted:
+
+1. It catches the environment's light like anything else does.
+2. It has weight and scale relative to the space (scale ambiguity is a second lever).
+3. **It casts a real shadow — and a wireframe's shadow is a fractured mess of lines.**
+   The shadow is the proof of presence and is likely the strongest single element in the
+   frame.
+
+A solid faceted (non-wireframe) version is permitted but weaker: surface returns, and
+"you see through it" goes with it.
+
+### What does NOT relax
+
+- **K1 muted ceiling applies to the photoreal half.** Hyperreal never means vivid.
+- **K5 abstraction only.** A form — never a craft, creature, or object carrying a
+  narrative referent. A recognizable object instructs a reading instead of being
+  projected onto (Law 5).
+- **No nostalgia read.** "Low-poly like an old video game" is the meaning-wink
+  cheese-vector (Law 0). Low-poly is here because it is *the blueprint = the source*
+  (§3) — a style reference collapses that argument.
+
+Environment is governed by the register test in §6, **not** by geography.
+
+---
+
 ## 3. THE BELIEFS BUILD IN — why the medium IS the brand
 
 Most of these are not metaphors. The medium literally *is* the belief.
 
 **Geography (WORLD §2):**
 - **True black = the Void / Chamber.** Empty *is* the content. Where the walls are thin.
-- **The one wireframe element = what you meet in the chamber.** The encounter.
+  ⚠ **The chamber is metaphysical, not architectural** (2026-08-13) — it is an
+  *interface* (WORLD §1), not a room to be built. True black is one way to render it,
+  not the only permitted ground. See §2.5 and the §6 register correction.
+- **The one wireframe element = what you meet in the chamber.** The encounter. In the
+  composite (§2.5) it is a **physically present object** — it obeys the world's physics
+  completely and is wrong only in its construction.
 - **Wireframe (edges, no surface) = the Portal goes inward.** You see *into* / *through*
   the form, never land on its skin. Looking-in is built into the medium.
 - **Wandering = the slow breathing / drift** through the emptiness.
@@ -152,7 +233,9 @@ the single element + palette temperature + the layer mix (§5)** — not in a di
 primitive per act.
 
 - **Act 1 — RIFT:** element stable, whole, contained. The safe container. Cool/neutral,
-  clean wireframe, minimal decay.
+  clean wireframe, minimal decay. **Primary home of the composite (§2.5)** — a rift is a
+  tear in the ordinary, so the ordinary must be intact and continuous for the tear to
+  read. The photoreal environment *is* the intact ordinary.
 - **Act 2 — DESCENSION:** element breathes, hypnotic, sinking. It *persists* and pulses
   with the sub — never becomes a different form (EMO Act 2 law: "the form is the same
   form throughout"). Deep dubstep home. (First build: `kekkai_low_poly`.)
@@ -207,14 +290,37 @@ white — tint the wireframe slightly first, then rotate hue.
 - **Synthwave / outrun / neon-grid.** THE vector-cheese vector. Vector-void is
   early-80s Battlezone/Elite register — desaturated, not glowing-magenta nostalgia.
   *This is the sharpest anti-target for the new world.*
-- **Cosmic / galaxy / floating / dissolution / ascension.** Banned by NO ESCAPE (§6.2).
-  "The void" here is a **black chamber** — a room, enclosed — never cosmos.
+- **Ascension / dissolution / floating / weightlessness — the escape register.** Banned
+  by NO ESCAPE (§6.2).
+
+  ⚠ **CORRECTED 2026-08-13 (Nick).** The prior wording — *"the void here is a black
+  chamber, a room, enclosed — never cosmos"* — took a **metaphysical** claim and enforced
+  it as a **set-design** rule. WORLD §1's chamber is an *interface*, not architecture;
+  the cosmology says nothing about which physical spaces may appear in a frame. **"No
+  sky" was never the rule and is struck.**
+
+  **The test is register, not geography: does the frame read as *leaving*, or as *being
+  here*?** A photoreal sky over ground you are standing on is grounded — you are in your
+  body, in a place. A nebula with a form dissolving upward is escape. Both have sky.
+  **Operational tell: implied viewer position.** Is there gravity, ground, a horizon you
+  are *on* rather than above? **Weight and tether, not walls.**
+
+  Still banned on that test: the cosmos as destination, the untethered camera,
+  dissolution, ascension — anything whose implied position is nowhere.
+
+  *Watch for the same category error elsewhere in this file: a metaphysical claim in
+  WORLD hardened into a literal art-direction constraint here.*
 - **Full-woo:** sacred-geometry mandalas, third eyes, DMT-entity kaleidoscopes. Banned
   by the tightrope (§0.2), not by taste.
 - **Vivid / high-saturation.** Reads as the trip/escape; violates muted-psych + NO ESCAPE.
 - **The "make it pro" stack as the identity** (CA + bloom + grade + grain). Fine as
   finish; never the substance (D3).
-- **Filling the frame.** Emptiness is the point. A busy frame is not this world.
+- **Filling the frame** *(black world-state only)*. Emptiness is the point there. Does
+  not apply to the composite (§2.5), where the environment is the ground Law 0 needs —
+  but the **one element** rule holds in both: one focal form, never a pile.
+- **Reading as an overlay / composite artifact.** The named failure mode of §2.5 — an
+  element pasted *over* a scene rather than standing *in* it. Breaks the presence law,
+  and with it the whole mechanic.
 
 **No longer banned (2026-07-21):** resolving, arrival, a form sitting whole. The
 corridor's never-resolve law is retired. Forms may resolve; the center may be shown.
@@ -253,3 +359,10 @@ Act 2 / deep dubstep (kekkai). Full recipe in §5 and `working/TD_BUILD_LOG.md` 
 **Still open at build level:** true geodesic icosphere via Blender (sphereSOP has none);
 bias the hue drift to the cool half (full spectrum dilutes the Act-2 ID); map the
 transient signal; the sphere is *one example* — the world is bigger than the sphere.
+
+**The composite (§2.5) has no build yet.** It is a **Blender** job, not TD — real
+wireframe geometry lit by a scene HDRI with a real cast shadow. This also absorbs the
+open Blender-import item above: the same modelling pass produces the geodesic form for
+both world-states. Note it lands as a **still** as easily as a sequence, which matters —
+release artwork and Spotify Canvas are the two organs WORLD §7.5 names as carrying the
+world visually more than any other, and neither has vector-void on it.
