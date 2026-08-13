@@ -253,6 +253,13 @@ The Trees' Moonglade Park (phone→text unlock, on Memory Palace — Wobar's tar
 label). The IG-wipe move is explicitly rejected: it only pays off with an
 existing audience to convert, and erases nothing at Wobar's current scale.
 
+**A second threshold lives inside the record itself.** A brand belief printed backwards
+into a track — crossed by the act of recording it and reversing it, which is doctrine #3
+made literal at the smallest possible scale. It is the threshold version of the Mirror,
+not the centre (§2): reversal *is* a mirror operation, so the mechanic and the meaning are
+the same object. **The frame is never explained publicly.** Mechanic, content rules and the
+anti-messianic rail: [[WOBAR_COPY]] — *The Reversed Message*.
+
 ### The Ether — what flows through the door
 
 Once a Wanderer crosses (via **seeing**, the MIRROR keyword), they are in **the

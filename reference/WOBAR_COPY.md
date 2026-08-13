@@ -1,9 +1,9 @@
 ---
 title: Wobar Copy Standards
-version: 2.0 (rewritten against WORLD v0.6 + the grammar; the mirror spine, the voice stack, the act axis)
-last_updated: 2026-07-27
+version: 2.1 (+ the reversed message, 2026-08-13)
+last_updated: 2026-08-13
 status: live — governing
-scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
+scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
 supersedes: WOBAR_COPY v1.1 (2026-06-10 — predated the cosmology; full text in git history)
 ---
@@ -279,6 +279,76 @@ bio. Never royal "we" — "we" is for the Ether (community) only.
 
 ---
 
+## THE REVERSED MESSAGE — the belief hidden in the record
+
+*Added 2026-08-13.*
+
+A brand belief, stated plainly, printed backwards into the track. Reversed texture to
+anyone listening; a sentence to anyone who records it and reverses it. **The mechanic and
+the meaning are the same object — reversal is a mirror operation** — so it performs the
+thesis rather than decorating it. That read is internal. **Never explain the frame
+publicly.** Said out loud it becomes clever, and clever is where it dies.
+
+**A threshold, not an Easter egg.** Recording a track and reversing it is an act, not a
+click — the effort *is* the intention (WORLD §6, doctrine #3). It is the threshold version
+of the Mirror, never the centre: same glass, less deep (WORLD §2).
+
+**What it says: one of the eight beliefs (`[[WOBAR_BRAND]]`), stated flat.** Not an
+observation about the track, not a line written for the occasion. Per-song cleverness was
+tried and rejected 2026-08-13 — every candidate came out twist-shaped, and a line that is
+profound *because* it's hidden is meaning-winking (Law 0). Choose the belief that matches
+what the song's **structure** does, and never the one the track already says out loud.
+
+**The content rule — describe the terrain, never the person.** *"there is no way out, only
+through"* works because the listener supplies what they have been trying to get out of; the
+words are fixed, so the recognition has to be theirs. *"you've been running"* does not —
+it stops being glass and becomes a fortune teller. Note that this is the same constraint as
+the anti-guru rail (WORLD §8): **declare the terrain, never assign status, never issue an
+imperative.** The mirror mechanic and the messianic rail want the identical thing.
+
+- **No status class.** "the realized," "those who know" — any group the listener stands
+  outside of. A reversed message is heard by one person at a time, so a class implies *them,
+  and not you*. This is the most likely way it breaks.
+- **Never acknowledge being found.** No "you found it," no welcome, no congratulation.
+- **No CTA** — no keyword, number, or link. An ad inside the artifact stops it being one.
+- **Never confirm it exists.** If asked, deflect.
+
+**Register — this one may preach.** Plain declarative, second person or impersonal. §8's
+doctrine-register ban covers the **cosmology** (the void, the axes, the source), not the
+beliefs — the anti-vocabulary *say instead* column is already this register. It carries heat
+the light register cannot, because the finder supplied the effort that buys the sermon.
+**The forward test still applies and it tests truth, not deliverability:** the line must be
+worth hearing forward, even where you would never caption it.
+
+**Placement and frequency.**
+- **Originals only.** A flip is borrowed material and is not yours to hide something in.
+- **Not every track.** A mandated signature is a checkbox, and it makes the catalogue
+  sweepable — a content system, i.e. the ARG that WORLD §7 bans by name. Sparse means each
+  find is synchronicity (belief 8).
+- **~20 words is the ceiling.** Past that, reversing it stops being a discovery and becomes
+  a transcription job.
+- Sit it where a phone mic can catch a sentence — a gap, a tail, a collapse. Never under a
+  drop.
+
+**Worked example — first instance (the emergency-broadcast / DnB track).** The broadcast
+offers a way out, the track takes it at 174, and it merges back into its own opening. That
+structure is **belief 3, NO ESCAPE**; belief 1 is what the sample already says aloud, so it
+is unavailable.
+
+> `there is no way out, only through. you don't leave the world. you make it what you want.`
+
+Three beats, ends on agency. The source passage (WORLD §6.2) reads *"the realized don't
+leave the world"* — the status class is cut and the claim moved to second person, which
+turns a description of people who arrived into a statement of what is already true of the
+listener (belief 1).
+
+Short form where the placement cannot hold twenty words:
+`there is no way out, only through.`
+
+**Open:** the mechanic has no in-world name (WORLD §9 lexicon).
+
+---
+
 ## THE DAEMON DEFLECTION BANK (starter — authored, never AI-free-generated)
 
 The terminal's AI **routes and selects**; it never free-writes daemon lines (drift =
@@ -357,6 +427,7 @@ Map the surface to its **register + act**, then write.
 | The terminal / web home | DAEMON | authored deflection bank only |
 | SMS glimpses | JOURNAL / SOURCE | honest, or a void poem; empower-never-instruct |
 | The Passage | SOURCE | the deep register; figurative license |
+| The reversed message (in-record) | BELIEF — plain declarative | one of the eight beliefs stated flat; may preach; see *The Reversed Message* |
 | Flyer / show / logistics | UTILITY | clean, plain, doesn't break the world |
 | World-facing bio | LIGHT | the mirror bio |
 | EPK / press one-sheet | UTILITY | the functional bio |
