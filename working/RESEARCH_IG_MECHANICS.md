@@ -4,7 +4,7 @@ version: 1.0
 created: 2026-07-26
 status: live — Phase 1 + partial Phase 3 complete
 scope: Platform-mechanics research and first-party comp observation for the wobar.exe strategy rewrite. Claims logged verified / partial / refuted with source tier. Instagram only — TikTok dropped per Nick 2026-07-26.
-dependencies: [[working/WOBAR_IG_RESEARCH_PLAN]], [[working/WOBAR_PLACEMENT_PLAN]]
+dependencies: [[working/WOBAR_SOCIAL_PLAN]], [[working/WOBAR_PLACEMENT_PLAN]]  # WOBAR_IG_RESEARCH_PLAN deleted on retirement; see WOBAR_CLOSED
 ---
 
 # RESEARCH — IG MECHANICS + COMPS

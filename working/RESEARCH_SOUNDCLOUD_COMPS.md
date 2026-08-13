@@ -106,7 +106,7 @@ The bio is the world doc surfaced almost verbatim — five dense paragraphs open
 ## §8 — What this changes
 1. **SoundCloud is the priority surface**, not Instagram. The audience, the A&R listening, the DJ sends and the repost mechanic all live there.
 2. **Flips go to SoundCloud** and should be framed as flips of recognisable records — that's the observed engine.
-3. **The mix/set series is the highest-value unexploited format**, and it's the one that carries the arc. *Portal Journey* already exists as a numbered series.
+3. **The mix/set series is the highest-value unexploited format**, and it's the one that carries the arc. The series already exists — **`Portal // 001–003`** (renamed from *Portal Journey* 2026-08-07).
 4. **The bio needs cutting** to something readable in five seconds, with the world showing rather than explaining.
 5. The Instagram wipe-and-rebuild is fine, but it's now the *secondary* surface.
 

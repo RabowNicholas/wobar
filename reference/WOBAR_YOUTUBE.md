@@ -1,7 +1,7 @@
 ---
 title: Wobar YouTube Description System
-version: 1.0
-last_updated: 2026-07-23
+version: 1.1 (+ tags field split from identity copy 2026-08-06 — retrieval vs read)
+last_updated: 2026-08-06
 status: live — governing
 scope: How Wobar structures YouTube video descriptions (DJ sets, mixes, AV pieces) for discovery + conversion. Research-backed structure fused with the COPY voice stack. Utility floor + light register.
 dependencies: [[WOBAR_COPY]], [[WOBAR_BRAND]], [[WOBAR_EMOTIONAL_REGISTER]]
@@ -49,8 +49,24 @@ reads the descent. Dual-valid, but discovery comes first.
 - Genre + brand aligned. Excess hashtags read as spam and cut credibility.
 
 ### Tags (the separate YouTube "tags" field, not description)
-- 10–15: DJ name, genre ("deep dubstep", "heavy bass"), mix type ("dj set", "live mix"),
-  location, featured artists.
+- 10–15: DJ name, genre, mix type ("dj set", "live mix"), location, featured artists.
+- **Genre tags lead with the centre of mass** — `dark 140`, `wonky 140`, `140`, `dubstep`,
+  `heavy bass` — then whichever registers the mix actually contains
+  ([[reference/WOBAR_SONIC]] six-register table).
+
+> **⚠ This field is RETRIEVAL, not identity — the one place the two come apart.**
+> The tags field's only job is to be typed into a search box by someone who would like the
+> mix. **It is therefore allowed to carry terms the bio must not** — including `deep dubstep`,
+> which people genuinely search even though [[reference/WOBAR_SONIC]] rules it out as
+> first-contact framing. Nobody reads a tags field and forms an impression of the artist.
+>
+> **The rule, and it generalises past YouTube:** where a genre word is *read*, accuracy and
+> room-fit decide it (bio, EPK, pitch). Where a genre word is *searched*, reach decides it
+> (tags, SoundCloud tags, hashtags). **Never let the searched layer set the read layer** —
+> that is how the flat comp list got into the EPK in the first place.
+>
+> Previously this line prescribed `"deep dubstep"` as *the* genre example, which quietly made
+> the retrieval layer the identity layer for every set upload.
 
 ### Body length
 - Aim ~107–250 words of real copy (keyword-rich) before/around the tracklist. Full field
