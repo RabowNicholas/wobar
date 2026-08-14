@@ -1,7 +1,7 @@
 ---
 title: Wobar Context Index
-version: 1.5 (+ UPLOAD_SPEC and RESEARCH_GENRE_VOCABULARY registered, retrieval-vs-read ownership split 2026-08-06)
-last_updated: 2026-08-06
+version: 1.6 (+ WOBAR_MERCH_PLAN registered 2026-08-14)
+last_updated: 2026-08-14
 status: live
 scope: Master index for all Wobar reference files. Read this first in every conversation.
 dependencies: none
@@ -112,6 +112,7 @@ A **flat list standing in for a structured thing** is a drift generator, not jus
 | [[working/RESEARCH_MASTER_CHAIN_TOOLS]] | /working | Tool capability research behind the chain — includes the unrun GP measurement protocol (Part 6) | live |
 | [[working/RESEARCH_MASTERING_EDM_DUBSTEP]] | /working | Mastering practice research for the genre. Source of the Shepherd short-term rule and the Jason Goz loop | live |
 | [[working/WEB_HOME_SPEC]] | /working | The web home = a terminal you wander (early-RPG), guided by *the daemon*; full rebuild of wobar-landing-page; paths, offerings, AI rails | live |
+| [[working/WOBAR_MERCH_PLAN]] | /working | **On-demand merch — platform, blank and terminal-integration decisions.** Apliiq (fulfillment) + Shopify (storefront), picked for blank/embroidery quality over cost and integration ease; Printful is the fallback, Fourthwall and Printify ruled out. Tee = DTG, hat + hoodie = embroidery. `shop` is a one-line addition to the daemon's command table — opens the Shopify URL in a new tab, no native cart. Nothing built yet | live (v1.0 — decided, not built) |
 | [[working/WOBAR_VISUAL_RESET]] | /working | **The visualizer design system — READ BEFORE ANY VISUALIZER BUILD.** Audits the old visual system vs world v0.6, then supplies the spine: the corridor is the *artifact* of perception failing to render a higher dimension (not the territory) — from which non-arrival, the drop-as-failure, and the stable-then-collapse arc all follow. §3 = the spec. Governs all visualizer work; supersedes the per-act material affinities in TD_REFERENCE §3/§4 | live (v0.2 — spine locked) |
 | [[prototypes/corridor/README]] | /prototypes/corridor | **Look-dev sketches — prototype HERE, port to `glslTOP` after.** Holds the Nick-approved collapse mechanic (4× same corridor, superposed, no SDF booleans, weights equalizing) + the convergence-point find + 5 recorded dead ends so they aren't re-derived. Companion build-side to VISUAL_RESET §3 | live |
 | [[reference/WOBAR_BRAND]] | /reference | Foundation, mission, archetypes, beliefs, positioning | locked |

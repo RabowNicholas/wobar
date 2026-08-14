@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.9 (+ surface audit deployed, two standing traps · Terminal audited against deployed code, Mirror `source` field corrected to un-deployed — 2026-08-07)
-last_updated: 2026-08-07
+version: 3.0 (+ Merch Store thread opened — platform and blanks decided, nothing built — 2026-08-14)
+last_updated: 2026-08-14
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -180,6 +180,19 @@ Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wa
 **Repo facts worth having before the next edit:** ~1,900 lines of the pre-terminal site are still present and fully unreferenced (`PortalContainer`, `UnifiedCanvas`, `CanvasBackground`, `PersistentBackground`, `ActBackground`, all three `components/sections/*`, `app/scroll-test`) — the three.js / GSAP / framer-motion dependencies exist only for that dead tree. `/epk` queries Sanity types that have no schema (`siteConfig`, `epkConfig`, `featuredTrack`, `tourDate`; only `release` and `set` are defined), and the queries swallow the miss, so the page renders empty rather than erroring.
 
 **Open:** offering length/format limits · naming the terminal/world as a whole · whether the flat structure gets built into something duration actually pays off in, and when.
+
+### Merch Store — on-demand, quality-first
+**State: platform and blanks decided 2026-08-14, nothing built.** Governing doc: [[working/WOBAR_MERCH_PLAN]].
+
+**Decided:** Apliiq (fulfillment, quality-first pick — broadest premium blank range of any platform compared, USA in-house embroidery) + Shopify (storefront, required since Apliiq is Shopify-native, not a standalone headless API) — chosen over Printful (strongest runner-up, no Shopify dependency, but narrower blanks and no confirmed domestic embroidery) and Fourthwall (best integration story via its purpose-built Storefront API, but no New Era-tier caps and no true die-cut sticker). Printify ruled out first — an aggregator, so quality depends on which of many print partners fulfills a given order.
+
+**Production method locked, not incidental:** tee = DTG, hat + hoodie ("wear") = embroidery — Nick's stated preference, holds regardless of platform.
+
+**Terminal integration resolved simpler than first scoped:** `shop` is a one-line addition to the daemon's command table, same pattern as `listen` — opens the Shopify store URL in a new tab. No cart/checkout logic lives in the terminal. This dissolved the entire headless-API comparison that drove most of the platform research.
+
+**Cost accepted knowingly:** Shopify's monthly fee (~$25–39/mo) is the one recurring cost in the plan — every zero-fee alternative was ruled out on blank quality, not cost.
+
+**Open:** Apliiq's die-cut holographic sticker availability unconfirmed (Printful holographic die-cut is the fallback for that one SKU only) · Bella Canvas vs Comfort Colors (tee) and Champion vs Independent Trading Co (hoodie) undecided until designs exist to sample · designs not yet made (mark for DTG tee; a bolded/embroidery-safe mark or wordmark for hoodie+cap, since Futura PT Heavy's fine strokes don't embroider cleanly small) · Shopify plan tier, pricing/margins, and the `shop` daemon command itself all unbuilt · **Richardson was accepted as the New Era substitute on reputation research, not a hands-on comparison — worth Nick's own gut-check against a physical cap before treating it as settled.**
 
 ### World Doc — `WOBAR_WORLD.md` v0.7
 **State: teardown live, doc still draft.**
