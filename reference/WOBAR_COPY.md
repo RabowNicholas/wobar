@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.3 (+ the reversed message 2026-08-13, on top of the claim-the-scale constraint 2026-08-07)
-last_updated: 2026-08-13
+version: 2.4 (+ track naming 2026-08-14, on top of the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
+last_updated: 2026-08-14
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -206,6 +206,43 @@ every qualifier autocompletes to producer intent (*sample pack, serum presets,
 tutorial*). Under [[working/WOBAR_ROADMAP]] §1 the goal is **listeners**; under
 [[working/WOBAR_SOCIAL_PLAN]] the audience is **producers**. Both vocabularies are
 needed — this table says which is which.
+
+---
+
+## TRACK NAMING — one noun for what the track does
+
+*Added 2026-08-14, at three originals — named as the convention formed rather than after it
+hardened. **Owner of the track-title convention.** [[WOBAR_FRAMEWORK]]'s Track Naming by Act
+table owns the emotional **register** a title must sit in; it does not own the form.*
+
+**One noun. It names what the track does to the listener** — a state it leaves them in, *or*
+the transition it moves them through. Both are valid and the second is not a lesser case:
+`GRUND` is a state, `ERNSTFALL` is a pivot (the moment the drill becomes the real thing),
+`crease` is the fold and the mark it leaves at once.
+
+**English when English has a word precise enough. Otherwise whichever language does.** This is
+a *precision* catalogue, not a foreign-word catalogue — the distinction is load-bearing, and
+`crease` is the proof. English wins whenever it can.
+
+**The state comes first, the language second.** Identify what the track does, then find the
+word that already exists for it. Choosing a language and shopping inside it for something that
+sounds good is decoration — Law 0's reaching wearing an accent. *(This is why Japanese was not
+committed catalogue-wide, 2026-08-14, despite `kekkai`.)*
+
+**Sayability is a hard filter.** If a DJ cannot announce it, it is out — DJ promo is a live
+funnel. `Ernstfall` passes; `Entschlossenheit` was cut on this alone, having already won on
+meaning.
+
+**Never explained.** No translation in the description, no gloss, no footnote, no English
+subtitle. Someone who looks it up *found* something; someone handed it received a fact. Same
+mechanic as the reversed message — the effort is the meaning, so supplying it destroys it.
+
+**The finishing test — this is a constraint on writing, not only on naming.** If no single
+noun fits, the track is holding more than one idea. A transition noun covers what *looks* like
+two states, because the transition is the one idea; but two unrelated movements need two words,
+and that is two tracks. **This is GRAMMAR Law 1 (*void + one element — one idea, never a pile*)
+enforced at the end of the process instead of during it**, which is the only place a
+finishing test can run.
 
 ---
 

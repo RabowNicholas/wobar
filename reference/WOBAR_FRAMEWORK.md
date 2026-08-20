@@ -1,9 +1,9 @@
 ---
 title: Wobar 5-Act Portal Framework
-version: 1.0
-last_updated: 2026-03-10
+version: 1.1 (+ naming-table scope note, 2026-08-14)
+last_updated: 2026-08-14
 status: locked
-scope: 5-Act Portal Framework only. Act definitions, percentages, non-negotiables, emotional registers.
+scope: 5-Act Portal Framework only. Act definitions, percentages, non-negotiables, emotional registers. Track naming by act sets the **register** only — the naming convention itself is owned by [[WOBAR_COPY]] § TRACK NAMING.
 dependencies: [[WOBAR_BRAND]]
 ---
 
@@ -115,3 +115,15 @@ A therapeutic bass music structure mapping electronic music performance to authe
 | Act 3: ENCOUNTER | Confrontation, recognition, dissonance | MIRROR / WITNESS / RECKONING / FRICTION / FRACTURE / EXPOSED / RECOIL |
 | Act 4: RELEASE | Movement, catharsis, discharge, flood | FLOOD / BREAK / DISCHARGE / SURGE / OUTPOUR / CURRENT / HEAVE |
 | Act 5: INTEGRATION | Return, grounding, stillness, light after dark | SETTLE / ANCHOR / RETURN / STILL / BLOOM / LANDFALL / MYELIN |
+
+> **⚠ Revision note — 2026-08-14. The words above are register examples, not a vocabulary.**
+>
+> **The naming convention is owned by [[WOBAR_COPY]] § TRACK NAMING: one noun for what the
+> track does to the listener** — a state, or the transition through one — in whichever
+> language holds that word precisely, English included. This table still governs the
+> **emotional register** a title must sit in for its act. It does not supply the words.
+>
+> Written because the columns above read as a word bank, and a future session naming an Act 2
+> track `SINKER` off this table would be following the examples while breaking the convention.
+> The convention was identified at three originals (`kekkai` · `crease` · the HOHLWEG EP),
+> early enough that the catalogue does not need retrofitting.
