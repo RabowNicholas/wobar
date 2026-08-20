@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 2.9 (+ surface audit deployed, two standing traps · Terminal audited against deployed code, Mirror `source` field corrected to un-deployed — 2026-08-07)
-last_updated: 2026-08-07
+version: 3.0 (+ HOHLWEG EP thread added and the Flow State set un-parked against it — 2026-08-19)
+last_updated: 2026-08-19
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -27,6 +27,22 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 ---
 
 ## THREADS
+
+### HOHLWEG EP — the record, in production
+**State: structure locked and titled, one track's build system written, none of it tested on an arrangement.** [[working/HOHLWEG_EP]] governs — structure and act mapping. [[working/ABGRUND_BUILD]] holds track 2's mechanism.
+
+**HOHLWEG** — three originals as one story: **ERNSTFALL · ABGRUND · GRUND**, rooted in belief 3 **NO ESCAPE**. Title locked 2026-08-17 (file renamed from `ERNSTFALL_EP`); it names **the corridor** — a sunken lane, a void with a direction — because the three track titles all *fall* and the EP had to say the one thing they cannot, that the way is *through*.
+
+**Act mapping revised 2026-08-15: ABGRUND moved Act 2 → Act 3 purely.** That pushed Act 2 into ERNSTFALL's tail — the deceleration 174 → 140 *is* the descent — and made **the encounter span two tracks and never discharge.** Three deliberate deviations: the Act 1→2 cusp broken on purpose, the 2→3 marking moment relocated to the track boundary, and **Acts 4/5 absent**, legal because the framework is scoped to the journey and the journey is EP + set.
+
+**This un-parks the Flow State set.** The resolution happens in the room, which makes the record a return mechanism — but bounded by the hard constraint that **the EP must be whole for someone who will never be in the room.** An unresolved ending needs a signature (the alarm callback) or listeners hear an unfinished record.
+
+**ABGRUND's build system, untested on the arrangement:** a loop is the opposite of a fall, so the groove stays put and a parameter underneath descends. Cheap Shepard–Risset (static bandpass over moving tones *is* the envelope) · **four rates** — bar / phrase / track / event, because the ear normalises any single one in ~30s · no tonic, whole-tone and octatonic, never land on the 1 · `risset` M4L generator installed to the Ableton User Library. §6 is the kill-list: no riser, no tension curve, no downlifter that lands, no silence-as-impact.
+
+**Open:**
+- **The seam between ABGRUND and GRUND.** ABGRUND cannot resolve — a track that falls continuously lies the moment it lands — so it must be **cut off**, with the floor arriving from outside the track. Most important second on the EP, undecided.
+- **Whether ABGRUND still wants a groove-locked kick.** Act 3 keeps the body still; a locked 4/4 that makes people move is Act 2/4 behaviour. Raised 2026-08-15, unresolved.
+- **The set that completes it does not exist.** The EP's structure now depends on it.
 
 ### Instagram — strategy reversed 2026-08-12
 **State: decision made and written; the measurement loop is not built.**
@@ -68,7 +84,7 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **Unexploited and free, none ever used:** Spotify listener segments (closest thing to a return counter that exists — ⚠ exact field names unverified) · asking the room at Flow State who came for Wobar · the Spotify editorial pitch, one per release · Beatport distribution · two verified-open label doors, **Deadbeats** (`bit.ly/Demos4Deadbeats`, four fields) and **Jadū Dala** (`jadudala@gmail.com`, private links).
 
 **Open:** the Mirror hasn't been re-read against a return goal, and depth 2 has no other home.
-**Parked (Nick, "not now"):** designing the Flow State set. Live is ceiling-3 and still marked *undesigned*. **Capture is no longer parked with it** — see *Socials* below.
+**~~Parked (Nick, "not now"): designing the Flow State set.~~ Un-parked 2026-08-17 by the EP.** [[working/HOHLWEG_EP]] §Live-set dependency puts the record's resolution in the room, so the set is now the second half of a structure that already exists rather than a blank design problem. Live is ceiling-3 and still marked *undesigned*. **Capture was never parked with it** — see *Socials* below.
 
 ### Booking + Collab Targeting — the Flow State lever, aimed
 **State: built, ranked and measured. Nobody contacted. Nick took it manual from 2026-08-06.** Three docs and a spreadsheet: [[working/WOBAR_COLLAB_TARGETS]] (the dream tier), [[working/WOBAR_BOOKING_ROADMAP]] (method, the label hub map, the orbit layer, the SLC venue map), [[working/WOBAR_BOOKING_LIST]] (the ranked list) — and **`working/WOBAR_BOOKING_LIST.xlsx` is the working surface**: 370 rows, 23 columns, tabs for Findings · SLC Venues · Labels · Method.
