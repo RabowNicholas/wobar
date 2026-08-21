@@ -1,10 +1,10 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.1 (+ §2.5 THE COMPOSITE — the wireframe form as a physically present object in a photoreal world; the cosmos ban corrected from geography to register)
-last_updated: 2026-08-13
-last_session: 2026-08-13
+version: 1.2 (+ §8 — the composite's first build, HOHLWEG cover; Nick confirms the composite direction for the brand's visual identity going forward, not a one-off test)
+last_updated: 2026-08-20
+last_session: 2026-08-20
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
-scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
+scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 supersedes: the corridor spine (this file's v0.1/v0.2 — full text in git history, e.g. `git show 1b7afaa:working/WOBAR_VISUAL_RESET.md`)
 ---
@@ -360,9 +360,60 @@ Act 2 / deep dubstep (kekkai). Full recipe in §5 and `working/TD_BUILD_LOG.md` 
 bias the hue drift to the cool half (full spectrum dilutes the Act-2 ID); map the
 transient signal; the sphere is *one example* — the world is bigger than the sphere.
 
-**The composite (§2.5) has no build yet.** It is a **Blender** job, not TD — real
-wireframe geometry lit by a scene HDRI with a real cast shadow. This also absorbs the
-open Blender-import item above: the same modelling pass produces the geodesic form for
-both world-states. Note it lands as a **still** as easily as a sequence, which matters —
-release artwork and Spotify Canvas are the two organs WORLD §7.5 names as carrying the
-world visually more than any other, and neither has vector-void on it.
+**New ground truth, not yet built to — added 2026-08-20 (`WOBAR_WORLD.md` §1).** Nick's
+actual experience of the void is disorientation from the geometry itself not resolving:
+infinite corridors in every direction, rooms with no floor/ceiling/walls to orient
+against. This is *not* a reopening of the retired corridor spine (§7 — that died trying
+to build the impossible geometry literally). The mandate is to produce the same
+disorientation by buildable means — reference-removal pushed past the current
+one-object-in-black state, corrupted spatial legibility (surfaces that stop reading as
+floor/wall/ceiling — datamosh-type corruption is one candidate mechanism), and recursion
+(TD Feedback TOP) standing in for true infinity rather than modeling it. No build exists
+yet; no act mapping decided.
+
+**The composite (§2.5) has its first build — 2026-08-20, the HOHLWEG EP cover, ERNSTFALL.**
+Nick, on seeing it finished: *"this is the first iteration of the brand's visual identity...
+move in this direction as a whole."* Not a one-off test — this is now the confirmed direction
+for the brand's visual identity, not only this piece. Release artwork has vector-void on it
+for the first time (WORLD §7.5's organ that carries the world visually most); Spotify Canvas
+still doesn't.
+
+**The pipeline that actually worked departs from the pure-Blender spec above — worth
+recording as a validated alternate path, not a violation of the build rule:**
+- **Environment plate: Midjourney (v8.2, `--raw`, low-moderate `--s`), not photographed or
+  hand-modeled in Blender.** Iterated via Remix/Vary(Subtle) on one candidate rather than
+  fresh generations per pass, so composition held steady while only the grade language
+  changed between rounds. A clearing described in-prompt as *empty and undisturbed* (never
+  as an object) kept Midjourney from pre-filling the spot reserved for the wireframe.
+- **Object: Blender, per spec.** Wireframe modifier on real geometry, Principled BSDF with
+  built-in Emission (single muted hue, no pure white), rendered on a black ground for a clean
+  matte. The bore-hole refinement discussed for the object's specific EP-message payload was
+  deliberately skipped (Nick's call) — the form carries the piece as an abstract mirror-object,
+  not as the literal "hollow = one way through" pun originally proposed.
+- **Compositing: Photoshop, not Blender's own HDRI/shadow-catcher pipeline.** The presence law
+  (§2.5) was hit through manual moves instead of a physical render: Screen blend mode to drop
+  the render's black background; **partial burial** — a masked, feathered duplicate of the
+  ground plate painted back in front of the object's base — standing in for a cast shadow,
+  arguably stronger than one would have been since it's true occlusion rather than an inferred
+  shape; a hair of Gaussian Blur plus reduced opacity so the object's edges pick up the same
+  atmospheric haze as the rest of the frame; **light wrap** — the surrounding foliage's own
+  sampled color painted faintly along the object's silhouette in Overlay; **light spill** — the
+  object's own color, low-opacity Screen/Linear-Dodge, pooled onto the ground and nearest
+  surfaces around it, so the light reads as coming from the object instead of sitting on top of
+  the frame.
+- **Grade: a Gradient Map built from the documented patina route**
+  (`#0E0813 → #1E505A → #4D6149 → #5C7470 → #7A8A6F`), Soft Light blend at moderate opacity,
+  plus a Curves pass lifting the black point off pure `#000000` and capping the white point —
+  the whole-image unification step that made object and environment read as one photograph
+  instead of two separately-toned pieces.
+
+**⚠ Open tension, flagged not resolved.** The brand check (`wobar-brand-check`, 2026-08-20)
+scored this piece against ERNSTFALL's actual register (Act 1 → the rift → Act 2 cusp) and
+found it reading closer to the **Act 2→3 cusp's anticipation/dread** than Act 1's *"you are
+safe here."* Nick accepted that register as this piece's intentional read and has now
+generalized the grade as brand direction — which means **the default mood this pipeline
+produces skews heavier than Act 1's canonical promise.** A future Act 1 piece built on this
+pipeline will need deliberate attention (more light held in, less crush in the walls) to still
+land as safety rather than defaulting to the dread register this first build settled into.
+Not a contradiction to resolve now — the thing to watch the next time this pipeline is used
+for an Act 1 piece specifically.

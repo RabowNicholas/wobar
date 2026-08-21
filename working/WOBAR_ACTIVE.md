@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.0 (+ HOHLWEG EP thread added and the Flow State set un-parked against it — 2026-08-19)
-last_updated: 2026-08-19
+version: 3.1 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20)
+last_updated: 2026-08-20
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -39,10 +39,14 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 
 **ABGRUND's build system, untested on the arrangement:** a loop is the opposite of a fall, so the groove stays put and a parameter underneath descends. Cheap Shepard–Risset (static bandpass over moving tones *is* the envelope) · **four rates** — bar / phrase / track / event, because the ear normalises any single one in ~30s · no tonic, whole-tone and octatonic, never land on the 1 · `risset` M4L generator installed to the Ableton User Library. §6 is the kill-list: no riser, no tension curve, no downlifter that lands, no silence-as-impact.
 
+**The cover art has its first build — 2026-08-20, the composite system's first working piece.** A photoreal sunken-lane (hohlweg) environment with a low-poly wireframe form composited in, per [[working/WOBAR_VISUAL_RESET]] §2.5/§8 — that file owns the pipeline (Midjourney plate, Blender object, Photoshop compositing) and the register tension it surfaced. Nick: *"this is the first iteration of the brand's visual identity... move in this direction as a whole"* — confirmed as the forward direction for the brand's visual identity, not a one-off for this cover.
+
 **Open:**
 - **The seam between ABGRUND and GRUND.** ABGRUND cannot resolve — a track that falls continuously lies the moment it lands — so it must be **cut off**, with the floor arriving from outside the track. Most important second on the EP, undecided.
 - **Whether ABGRUND still wants a groove-locked kick.** Act 3 keeps the body still; a locked 4/4 that makes people move is Act 2/4 behaviour. Raised 2026-08-15, unresolved.
 - **The set that completes it does not exist.** The EP's structure now depends on it.
+- **Whether the mark's corner placement (added to the cover as a signature, not the sacred center) becomes the standard treatment for every future cover, or was a one-off.** Undecided — needs a rule if it's the former, since a signature only reads as one if it repeats identically.
+- **Whether the cover itself is locked.** Framing was discussed and kept wide (deliberately, over pushing in tighter); the mark was added after. Not explicitly confirmed final.
 
 ### Instagram — strategy reversed 2026-08-12
 **State: decision made and written; the measurement loop is not built.**
