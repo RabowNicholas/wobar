@@ -1,9 +1,9 @@
 ---
 title: Wobar Copy Standards
-version: 2.4 (+ track naming 2026-08-14, on top of the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
-last_updated: 2026-08-14
+version: 2.5 (+ THE ACCOUNT registered 2026-08-21 — EP/album companion narrative, distinct from the Passage, on top of track naming 2026-08-14, the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
+last_updated: 2026-08-21
 status: live — governing
-scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
+scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, THE ACCOUNT (EP/album companion narrative), the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
 supersedes: WOBAR_COPY v1.1 (2026-06-10 — predated the cosmology; full text in git history)
 ---
@@ -142,6 +142,55 @@ with the terminal build; grow it there. Examples: *"the way out is further in. i
 always further in."* (no escape) · *"you are not one person. you are every version you
 could have been, standing in the same dark."* (Axis 2) · *"nothing found you by
 accident. not the track. not the dark. not this."* (synchronicity).
+
+---
+
+## THE ACCOUNT — EP/album companion narrative (distinct from the Passage)
+
+A different order of thing from the four registers above — not a depth on the voice
+stack, a separate narrative object. Where the Passage is elemental and imagistic
+(inhabit a natural form and speak as it), the Account is scene-based: a chapter per
+track, first-person, telling the literal events the EP's story moves through — the
+room, the body, the sequence of what happens.
+
+- **Voice:** first-person `i`, lowercase, present tense — testimony as it's happening,
+  not recalled. Same convention as journal, different job.
+- **Who the "i" is: the felt experience inside the song, never a named or biographical
+  person.** No name, no physical description, no backstory. This is what keeps it
+  inside WORLD §0 — a protagonist turns the mirror into a window; a porous, unnamed
+  "i" keeps the listener as the one living it.
+- **Plain, never clever.** Weight from the situation, not the phrasing — the Passage's
+  own rule, imported wholesale. Watch for two specific failure modes, both caught by
+  hand drafting HOHLWEG's chapter one: the **paradox-aphorism** (a neat rhetorical
+  inversion standing in for a real feeling) and **rule-of-three constructions** (a
+  triadic list used for rhythm rather than because three things are true). Both read
+  as generated the instant they appear.
+- **Show the body, not the label.** Never name the emotion ("anxiety," "fear") —
+  render what it does physically. Same discipline [[working/RESEARCH_STORYTELLING]]
+  already found externally: abstract description scores nothing, specific detail
+  carries the weight.
+- **Never instructs, doesn't dramatize.** No line steps outside the moment to comment
+  on what it means. The ending is allowed to just cut.
+- **Structural device: the withheld release.** A chapter doesn't have to resolve — the
+  EP itself doesn't, per belief 3. An ending on silence or an unanswered cut is not
+  unfinished, it's correct, provided the record's own signature (a callback, a
+  repeated line) marks it as withheld-on-purpose rather than abandoned.
+
+**Authorship is the line that actually separates it from the Passage.** The Passage is
+Nick's own writing, never generated for him. The Account is written together —
+drafted, workshopped, edited in the room. This is the load-bearing distinction;
+everything else above sits closer to the Passage than not.
+
+| | The Passage | The Account |
+|---|---|---|
+| Who writes it | Nick — not generated for him | Written together |
+| Form | Elemental / imagistic — inhabits a natural form and speaks as it | Scene-based — room, body, event, sequence |
+| Length / structure | One sealed piece per EP | One chapter per track |
+| Register | DEEP / source — figurative license | Adjacent to journal's first-person convention, but its own thing — not on the depth axis |
+| Governed by | WORLD §7, this file's DEEP section | This section |
+
+First instance: HOHLWEG's Chapter One, drafted 2026-08-21 — see
+[[working/HOHLWEG_EP]] for how it maps to the record's own act structure.
 
 ---
 
