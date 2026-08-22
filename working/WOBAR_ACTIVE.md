@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.0 (+ HOHLWEG EP thread added and the Flow State set un-parked against it — 2026-08-19)
-last_updated: 2026-08-19
+version: 3.1 (+ landscape footage sourcing thread opened — 2026-08-22)
+last_updated: 2026-08-22
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -310,6 +310,11 @@ Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wa
 **Trap:** correction EQ belongs on the **monitor path only** — never in the render or export chain. A correction curve that reaches the bounce inverts itself into the master.
 
 **Open:** which profile source · where in the signal path it sits given the DAW · whether the KRKs are worth correcting too, or whether a measurement mic should come first so the room and the speaker are separated rather than conflated.
+
+### Explore landscape video sources
+**State: not started.** [[working/RESEARCH_LANDSCAPE_FOOTAGE_SOURCES]] holds a general market survey — highest-quality places to license or find empty-world/landscape footage (not wildlife), tiered from curated cinematic agencies (Filmsupply, individual timelapse artists) down through subscription marketplaces to free and public-domain sources, with pricing. **Deliberately general** — not filtered through the Act framework or curated to any specific Wobar use.
+
+**Open:** everything — no source evaluated firsthand, no account created, no clip pulled. Whether/how this connects to [[reference/WOBAR_ARCHIVE]]'s Act-by-Act sourcing is undecided.
 
 ---
 
