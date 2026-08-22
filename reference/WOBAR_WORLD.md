@@ -62,6 +62,21 @@ content. It exists here so every output can be checked against its true source.*
   Downloads have been received there from the higher self; wounds of an earlier
   self have been met and healed there. The three versions are not a concept —
   they have been experienced.
+- **The void's geometry does not resolve — added 2026-08-20.** Physics and
+  space don't hold their normal rules there: infinite corridors running in
+  every direction at once, rooms with no floor, no ceiling, no walls to orient
+  against. Disorientation isn't incidental to the chamber; it *is* the
+  chamber. Nothing in it behaves as a fixed reference, because a fixed
+  reference is a time-bound habit the void doesn't carry.
+
+  > ⚠ **Not the corridor spine returning.** `WOBAR_VISUAL_RESET.md`'s corridor
+  > spine (v0.1/v0.2, retired 2026-07-21) tried to *build* this literally and
+  > died on it — true impossible geometry doesn't render, and non-arrival was
+  > unwatchable. This bullet is testimony, not a build spec: the visual
+  > system's job is to produce the disorientation, never to model the
+  > geometry — reference-removal, corrupted spatial legibility (surfaces that
+  > stop reading as floor/wall/ceiling), and recursion standing in for true
+  > infinity. See `WOBAR_VISUAL_RESET.md` open items.
 - **The higher self is outside time — and beyond it, the source.** Two axes:
   (1) the self *without time* — all moments at once; (2) the self across *all
   possibility*, which at its limit stops being only Nick and becomes the **source
