@@ -1,7 +1,7 @@
 ---
 title: HOHLWEG EP — structure and act mapping
-version: 1.1 (+ EP titled HOHLWEG, 2026-08-17)
-last_updated: 2026-08-17
+version: 1.2 (+ the ABGRUND→GRUND seam resolved as an internal voice and GRUND's direction locked as uplifting-but-open, 2026-08-21, on top of the EP titled HOHLWEG, 2026-08-17)
+last_updated: 2026-08-21
 status: live
 scope: The three-track EP — what each track is, where it sits on the 5-Act framework, the deliberate deviations, and the live-set dependency that completes it. Structure only. Per-track production lives in its own build file.
 dependencies: [[reference/WOBAR_FRAMEWORK]], [[reference/WOBAR_EMOTIONAL_REGISTER]], [[reference/WOBAR_BRAND]], [[working/ABGRUND_BUILD]]
@@ -181,11 +181,31 @@ tracklist, depth underneath.
 
 ## OPEN
 
-- **How the seam between ABGRUND and GRUND is executed.** ABGRUND cannot resolve — a track that
-  falls continuously is lying the moment it lands — so it must be **cut off** rather than ended.
-  The floor arrives from outside the track. This is the most important second on the EP and it is
-  undecided.
 - **Whether ABGRUND still wants a groove-locked kick.** Act 3 pushes the listener into the ground
   and keeps the body still; a locked 4/4 that makes people move is Act 2 and Act 4 behaviour.
   Raised 2026-08-15, unresolved.
 - **The set that completes this does not exist yet.** The EP's structure now depends on it.
+
+---
+
+## THE SEAM AND GRUND'S DIRECTION — decided 2026-08-21
+
+**The ABGRUND→GRUND seam is an internal voice, not an external cut.** Revises the earlier framing
+(*"the floor arrives from outside the track"*) — the actual mechanic is an Interlude: a voice
+heard as separate from the "i" but arising from within the fall itself, not literal external
+instrumentation breaking in. It still does the seam's job — ABGRUND cannot resolve on its own
+terms, so something has to interrupt it from outside the fall's own logic — but the interruption
+is psychological, not sonic-literal. See [[working/ABGRUND_BUILD]] for whether this changes
+anything on the production side; narratively it's settled.
+
+**GRUND is uplifting, and the story stays open — the two are not in tension.** The shift is
+internal only: the weight turns from crushing to grounding, which can be real relief without
+anything external resolving. Nothing is cured, nothing is declared over. The alarm returns as the
+last sound, still running, unanswered, same room — that's what keeps the story open. Uplifting is
+the felt quality of the internal shift; open is that the world does nothing about it.
+
+**Guardrail: this stays Act 3's register turning warm, not a crossing into Act 4.** No drop, no
+vocals, no cadence landing on a resolved chord — the harmonic rule (no tonic, no gravitational
+centre) can hold the whole way through and still read as relief rather than dread, the same way
+recognizing a weight is yours can feel like relief without the weight lifting. If it starts
+reading as festival body-moving catharsis, it has crossed into Act 4 and needs to be pulled back.
