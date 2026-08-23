@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.2 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22)
-last_updated: 2026-08-22
+version: 3.3 (+ Artgrid chosen as landscape source, belief 2's format decided — landscape/3D-object/wander-fragment overlay, wander fragments promoted to a social surface — 2026-08-23; + HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22)
+last_updated: 2026-08-23
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -130,7 +130,9 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 **The honest limit under all of it:** flips out-traffic originals ~4× on Tape B's account, **and Tape B has an audience.** Nothing in the vault tests that mechanism at 55 SoundCloud followers.
 
 ### Give-Back Content — two beliefs, fourteen pieces, one built
-**State: both beliefs locked 2026-08-04. Idea bank built. #1 built 2026-08-05; thirteen unwritten.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.1, two beliefs); the content bank is [[working/GIVEBACK_CONTENT_PLAN]] (v1.1 — **§10 holds built pieces**); evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
+**State: both beliefs locked 2026-08-04. Idea bank built. #1 built 2026-08-05; thirteen unwritten. Belief 2's format decided 2026-08-23.** Governing doc is [[working/WOBAR_GIVEBACK_NICHE]] (v1.2 — two beliefs, belief 2 now has a format); the content bank is [[working/GIVEBACK_CONTENT_PLAN]] (v1.1 — **§10 holds built pieces**); evidence is [[working/RESEARCH_STORYTELLING]] and [[working/RESEARCH_BRAND_PSYCHOLOGY]].
+
+**Belief 2's format, decided 2026-08-23: landscape (Artgrid) + an embedded 3D low-poly object (the HOHLWEG cover's composite pipeline) + one overlaid wander fragment, original Wobar music as soundtrack — savable and shareable by design.** This is [[reference/WOBAR_COPY]] Mode B (wander fragments) promoted from terminal-exclusive to a second, social surface — same pool, same voice, continuity between someone saving a fragment off socials and later meeting the same language in the terminal's `wander` path, rather than a second vocabulary invented for reach. **Niches the audience one layer further**, per Nick: DJ-producers who additionally find something about the world relatable — his hypothesis is that this is the super-fan layer. First phrases drafted 2026-08-23, one per brand belief, unshot. Belief 1 still has no format.
 
 **🔴 OPEN LOOP — thirteen scripts unwritten. Nick writes them by hand** (his call, 2026-08-04 — the vault holds the claims, the objects and the durations; the words are his).
 
@@ -166,7 +168,7 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **One brief still worth running: visual identity / distinctive assets** — the only empirically supported mechanism for *"this compounds,"* which is the backbone of belief 2's repetition argument. **The brand-voice brief is retired with the frame**, along with the whole educational series it belonged to — [[working/WOBAR_CLOSED]] carries what died, what survived and why, and the plan doc was deleted so it cannot be rebuilt by accident.
 
-**Open:** **neither belief has a format** — the pieces have claims, objects and durations, and #1 now has beats, but there is still no shape as a *series* · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
+**Open:** **belief 1 still has no format** — the pieces have claims, objects and durations, and #1 now has beats, but there is still no shape as a *series* · whether the landscape/3D/wander-fragment format needs its own numbered series name or runs unnumbered · whether the flagship claim carries numbers at all ([[working/WOBAR_GIVEBACK_NICHE]] §4 argues it must not — the proportions are free, and fixing them is both false and the guru posture) · whether the two beliefs share a name and a channel (the shared root argues yes; undecided) · *"consistency lives below genre"* has two owners in the plan and needs one · the listener-facing branch, deferred not dropped · **short-form was never measured — TikTok and IG were unreachable, so the entire landscape read is YouTube-only, and it is the one gap that could overturn the null result.**
 
 ### Genre Vocabulary + Surface Audit — measured 2026-08-06, surfaces corrected 2026-08-07
 **State: the vocabulary work is settled and four of five surfaces are now verified against it.** Governing files: [[working/WOBAR_UPLOAD_SPEC]] (the retrieval layer, open it to upload) · [[reference/WOBAR_COPY]] §THE THREE SLOTS · [[working/WOBAR_SURFACES]] §3.1 (deployed state), §3.2 (claim-the-scale), §5 (terminal strategy). Evidence: [[working/RESEARCH_GENRE_VOCABULARY]]; harness `scripts/genre_vocab_sweep.py`.
@@ -316,9 +318,11 @@ Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wa
 **Open:** which profile source · where in the signal path it sits given the DAW · whether the KRKs are worth correcting too, or whether a measurement mic should come first so the room and the speaker are separated rather than conflated.
 
 ### Explore landscape video sources
-**State: not started.** [[working/RESEARCH_LANDSCAPE_FOOTAGE_SOURCES]] holds a general market survey — highest-quality places to license or find empty-world/landscape footage (not wildlife), tiered from curated cinematic agencies (Filmsupply, individual timelapse artists) down through subscription marketplaces to free and public-domain sources, with pricing. **Deliberately general** — not filtered through the Act framework or curated to any specific Wobar use.
+**State: source decided 2026-08-23 — Artgrid.** [[working/RESEARCH_LANDSCAPE_FOOTAGE_SOURCES]] holds the general market survey this came out of. Nick liked Filmsupply's curation but wanted comparable quality cheaper; Artgrid is the subscription-priced peer ($19.99–49.99/mo unlimited vs Filmsupply's $99–5k **per clip**), Professional tier for RAW/LOG. Tier 2 (Olbinski, Tom Lowe, Farrell, Sørgjerd — direct-license individual artists) stays the fallback for a specific hero shot Artgrid's catalog doesn't cover.
 
-**Open:** everything — no source evaluated firsthand, no account created, no clip pulled. Whether/how this connects to [[reference/WOBAR_ARCHIVE]]'s Act-by-Act sourcing is undecided.
+**This is no longer general-market research — it has a use.** It's the visual base layer for the new give-back bucket 3 / belief 2 content format: see *Give-Back Content* below and [[working/WOBAR_GIVEBACK_NICHE]] §6.1.
+
+**Open:** no Artgrid account created yet, no clip pulled firsthand. Whether/how this connects to [[reference/WOBAR_ARCHIVE]]'s Act-by-Act sourcing is still undecided.
 
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.4 (+ track naming 2026-08-14, on top of the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
-last_updated: 2026-08-14
+version: 2.5 (+ wander fragments promoted to a second, social surface 2026-08-23, on top of track naming 2026-08-14, the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
+last_updated: 2026-08-23
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -120,10 +120,24 @@ with the **mark**. Derived from Nick's real poems:
 Anchor: *"i sway in the wind more than i ever have before… soon i will fall and be no
 more."* This mode is **Nick's personal verse — do not generate it for him.**
 
-**Mode B — WANDER fragments** *(the terminal's `wander` path; generatable brand copy)*
+**Mode B — WANDER fragments** *(dual-surface as of 2026-08-23 — the terminal's `wander`
+path AND [[working/WOBAR_GIVEBACK_NICHE]] belief 2's format; generatable brand copy)*
 Short belief-mirrors a Wanderer stumbles on in the void — **downloads**, not poems.
 Their job: **describe the void and the belief system so a reader identifies with the
 brand.** Calling cards. A mirror, not a scene.
+
+> **⚠ AMENDED 2026-08-23 — promoted to a second surface.** Wander fragments are no
+> longer terminal-exclusive. They are also the overlay text for the give-back bucket 3
+> / belief 2 social format: an Artgrid landscape plate + an embedded 3D low-poly object
+> (the HOHLWEG cover's composite pipeline, [[working/WOBAR_VISUAL_RESET]] §2.5/§8) +
+> one wander fragment, original Wobar music as soundtrack, built savable/shareable.
+> **This is a promotion, not a fork** — same pool, same six rules below, same voice.
+> The point is continuity: someone who saves a fragment off socials and later lands in
+> the terminal's `wander` path meets the same language, not a second one invented for
+> reach. **No separate copy standard needed for the social format** — write to this
+> mode, deploy wherever. The one new constraint the social surface adds: it has to
+> stand alone with no daemon framing and no terminal chrome, which the "served raw"
+> rule (6, below) already requires.
   1. **Philosophical / abstract — NOT a natural-form narrative.** Mode B does *not*
      inhabit a tree. It states a truth about the interior.
   2. **Second-person or impersonal** ("you," "the void," "the drop") — mirror-facing.

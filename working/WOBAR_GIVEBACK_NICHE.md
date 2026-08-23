@@ -1,8 +1,8 @@
 ---
 title: The give-back niche — one fixed thing, exposed at varying scale
-version: 1.1
+version: 1.2 (+ belief 2's format decided 2026-08-23 — landscape/3D-object/wander-fragment overlay)
 created: 2026-08-04
-last_updated: 2026-08-04
+last_updated: 2026-08-23
 status: live — governing for bucket 3 content
 scope: What the give-back bucket is actually about — audience, the TWO beliefs, their shared root, and where content comes from. OWNS the niche definition. Evidence lives in RESEARCH_STORYTELLING and RESEARCH_BRAND_PSYCHOLOGY; bucket definitions live in WOBAR_SOCIAL_PLAN.
 dependencies: [[working/WOBAR_SOCIAL_PLAN]], [[working/RESEARCH_STORYTELLING]], [[working/RESEARCH_BRAND_PSYCHOLOGY]]
@@ -151,7 +151,7 @@ What persists in music is not a template but a **shape**: the tension/release cy
 
 ## §6 — OPEN
 
-1. **Format is undecided** for both beliefs. The strategy is set; the object is not. Whatever it is, it has to satisfy §5.1 — which is now easier, since the object no longer has to be Nick's.
+1. **Belief 2's format is decided, 2026-08-23 — belief 1's is still open.** Landscape footage (Artgrid) + an embedded 3D low-poly object (the HOHLWEG cover's composite pipeline, [[working/WOBAR_VISUAL_RESET]] §2.5/§8) + one overlaid wander fragment ([[reference/WOBAR_COPY]] Mode B, promoted to this surface the same day) + original Wobar music as soundtrack, built to be saved and shared. This is the belief-2 asymmetry resolved by its own logic below — the object is an image (the plate + the form), which a 15-second container eats whole, and the fragment supplies the recognition instead of a caption explaining it. **It also niches the audience one layer further**: DJ-producers who additionally find something in the world relatable — Nick's hypothesis is that this is the super-fan layer, people who already believe bass music holds more than partying. Belief 1 still has no object and needs one satisfying §5.1.
    - ⚠ **A known asymmetry to design around: belief 2 is natively short-form and belief 1 is not.** Belief 2's evidence is *images* — covers, marks, press shots — which a 15-second container eats whole and which prove a claim instantly. Belief 1's evidence is *time-based*, which fights the container. Expect belief 1 to need the longer durations, or a visual proxy (arrangement view, an energy curve drawn over a set).
    - ⚠ **Negative examples must be big enough to take it.** Using a small artist's covers as the "nothing repeats" case is punching down at exactly the peer audience this bucket is for. Use large artists, or anonymise.
 2. **The flagship claim has no numbers yet** — and per §4 it may be that it never should. Unresolved whether the headline instruction carries positions at all.
