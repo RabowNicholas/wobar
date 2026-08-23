@@ -1,6 +1,6 @@
 ---
 title: Wobar Copy Standards
-version: 2.5 (+ wander fragments promoted to a second, social surface 2026-08-23, on top of track naming 2026-08-14, the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
+version: 2.6 (+ Mode B rules 7-12 locked 2026-08-23 from direct testing against the social surface, on top of wander fragments' promotion to that surface the same day, track naming 2026-08-14, the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
 last_updated: 2026-08-23
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
@@ -151,6 +151,42 @@ brand.** Calling cards. A mirror, not a scene.
   5. **Plain, lowercase, short** — one breath to a few lines. A set of them, read
      together, teaches the whole belief system.
   6. Served **raw** — no title, no daemon framing. The world speaking, not the daemon.
+
+> **⚠ SHARPENED 2026-08-23 — nine rounds of testing real candidate lines against the
+> social surface.** The six rules above held; this is what running them against a cold
+> scroll surfaced that they didn't yet specify. Rules 7–12, same mode, same pool.
+>
+> 7. **Two resolution shapes, both valid — pick one, never blend.**
+>    - **Negate-and-replace.** State the assumption, negate it, land on a *completed*
+>      action or state owned by "you" — never left ongoing, never owned by the object.
+>      *"you thought the weight would lift eventually. it didn't. you just stopped
+>      needing it to."*
+>    - **The causal reveal (permission claim).** A plain, checkable cause-and-effect
+>      truth, stated flat, application left for the reader to supply — never spelled out
+>      as instruction. Same mechanism as [[working/WOBAR_GIVEBACK_NICHE]] §2's
+>      permission claim. *"you are drowning because you are fighting the current."*
+> 8. **A physical anchor must be a raw sensation, never a symbol.** Ground, weight,
+>    water, cold, breath — things a body has actually felt. Never an object whose payoff
+>    depends on a pun about its function (an alarm that "needs answering," a door that
+>    "opens") — reads as built, not found, no matter how clean the resolution is.
+> 9. **No unfilled pronouns.** "This," "it," "something" needs a referent already in the
+>    line, or the line has to survive without it. On a cold scroll an empty pronoun reads
+>    as absence, not depth — mystery still has to give the reader something to stand on.
+> 10. **Name the real stake.** *"The life you want," "the current"* beat an abstraction
+>     with the specificity sanded off. Concreteness is not in tension with depth — it's
+>     what depth needs to land on.
+> 11. **No "should" / "need to" / "have to."** Rule 4's instruction ban, restated as a
+>     hard litmus test after it kept breaking under pressure: if a line survives with the
+>     instructional verb removed and says nothing weaker, the verb wasn't doing real work
+>     — cut it. WORLD §8's empower-never-instruct rail and RESEARCH_STORYTELLING's
+>     measured finding (abstract/instructive posts score 0) meeting at sentence level.
+> 12. **The mirror is a special case of rule 8, not an exception — the highest-risk
+>     anchor in the brand.** Never explain what it does ("acts like a mirror into your
+>     subconscious" is doctrine-register, banned by §8 regardless of phrasing). If a line
+>     is *about* the mirror mechanic, render the mechanism as a plain specific human
+>     behavior and never say the word. *"you didn't get angry at them. you got angry at
+>     the part of you they were showing you."*
+
 The starter wander pool (30 fragments, mapped to the 8 beliefs + the cosmology) lives
 with the terminal build; grow it there. Examples: *"the way out is further in. it was
 always further in."* (no escape) · *"you are not one person. you are every version you
