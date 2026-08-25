@@ -1,7 +1,7 @@
 ---
 title: Skills (source of truth)
-version: 1.1
-last_updated: 2026-06-12
+version: 1.2
+last_updated: 2026-08-24
 status: live
 scope: Canonical, git-tracked versions of WOBAR-specific Claude skills. This folder is the source; `~/.claude/skills/` on each machine is a local copy.
 ---
@@ -33,6 +33,9 @@ On-brand check against `reference/WOBAR_EMOTIONAL_REGISTER.md`. Establishes act/
 
 ### `wobar-ig-review/`
 Fortnightly Instagram cycle — capture → refresh → report. Pulls post-level Insights from Chrome into the **"WOBAR — IG Post Log"** Google Sheet (`contact.wobar@gmail.com`), then writes a dated report to `working/ig_reports/`. **Scores an offset window — the 14 days ending 7 days ago** — because reels keep accumulating and a naive trailing window drops posts permanently. Carries the learned capture mechanics (grid cards aren't in the accessibility tree; click the corner format icon before thumbnails paint; `comments` and `follows` aren't sortable and need the per-post page). Governed by `working/WOBAR_SOCIAL_PLAN.md` §0/§1/§5. Added 2026-08-12.
+
+### `wobar-wander-writer/`
+Drafts new Mode B wander fragments (the terminal's `wander`/`lore` path) — belief-mirror lines, not the Nick-authored Passages. Runs the locked Writing process from `reference/WOBAR_COPY.md` (belief → paradox → four kills → recognition test) against the live `LORE` array coverage map in the **wobar-landing-page repo** (`components/terminal/content.ts`, a separate git repo from this vault) to pick a thin belief and draft candidates. A first pick is never a lock — mandatory one-round-minimum workshop (push on the pick, offer tightened variants, Nick revises or defends) before anything ships; only an explicit lock signal ("lock it," "ship it") triggers the append. Never auto-ships or commits. Added 2026-08-24.
 
 **Bundled references** live under `~/.claude/skills/wobar-td-coach/references/` on disk — that file (`WOBAR_TD_REFERENCE.md`) is a copy of the vault's brand TD reference and isn't tracked here. Don't duplicate it; sync manually when the brand reference changes materially.
 

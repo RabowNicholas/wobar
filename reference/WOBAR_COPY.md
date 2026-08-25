@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.4 (+ track naming 2026-08-14, on top of the reversed message 2026-08-13 and the claim-the-scale constraint 2026-08-07)
-last_updated: 2026-08-14
+version: 2.5 (+ wander fragment writing process 2026-08-24, on top of track naming 2026-08-14, the reversed message 2026-08-13, and the claim-the-scale constraint 2026-08-07)
+last_updated: 2026-08-24
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -142,6 +142,26 @@ with the terminal build; grow it there. Examples: *"the way out is further in. i
 always further in."* (no escape) · *"you are not one person. you are every version you
 could have been, standing in the same dark."* (Axis 2) · *"nothing found you by
 accident. not the track. not the dark. not this."* (synchronicity).
+
+**Writing process (locked 2026-08-24):**
+1. **Start from one belief, never an image.** Pick one of the 8 (`[[WOBAR_BRAND]]`) or a
+   doctrine line (`[[WOBAR_WORLD]]` §6), and write down what it *means* in plain words
+   before drafting the line. Starting from an image is how Mode A leaks into Mode B by
+   accident — the exact 2026-07-21 failure above.
+2. **Bend the belief into a paradox, not a statement of it.** Test: strip the draft down
+   — could it be filed as doctrine with "it means" put back in front? If yes, it's still
+   stating, not staging. Keep bending until the tension itself is the content, not the
+   belief with a costume on.
+3. **Draft short, then run rules 1–6 above as kills** (narrative kill, doctrine kill,
+   clever kill, fortune-cookie kill are rules 1/4/2/4 restated as a pass), **then run the
+   recognition test:** read it cold, zero context. A stranger should think *that's me* in
+   one pass, not on explanation. If it needs a second read to land, it's a draft, not a
+   fragment.
+4. **Tag every survivor to its belief or doctrine point**, the way the starter 30 are
+   mapped. The tag is what keeps the pool's coverage of the belief system visible — without
+   it, new fragments drift toward whichever beliefs are easiest to phrase (synchronicity,
+   no-escape) and the harder ones (bass-as-mirror, transformation-as-well-as-entertainment)
+   go unrendered.
 
 ---
 
