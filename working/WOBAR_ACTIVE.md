@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.2 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22)
-last_updated: 2026-08-22
+version: 3.3 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27)
+last_updated: 2026-08-27
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -125,7 +125,11 @@ Written with it: **§1.1** what a fan is (returns → seeks it out → passes it
 
 **Funnel C finally has a vehicle: *SAMPLES I'LL NEVER GET CLEARED*** — the numbered flip series (Nick). Closes GROWTH_PLAN's standing *"name it, number it, keep it running,"* open since 2026-07-26. No collision with *Portal //* (that is sets; this is flips — renamed from *Portal Journey* 2026-08-07). **Scored on lane-account response, never views or listeners — flips are off-DSP and non-monetisable by construction, so the series drives to the back catalogue or it does nothing.**
 
-**Open:** whether one name covers both SoundCloud and IG · the title is *industry*-insider, not *lane*-insider, so the dark-140 specificity has to live in the sample selections rather than the name · numbering scheme.
+**First entry in production, 2026-08-27: a flip of LSDREAM × Kill The Noise's "Stink Mode."** Dark/wonky 140, deliberately funny/light (weed-is-stinky), not philosophical like Nick's originals — the format's comfortable-format latitude, not a register violation. Cover art built: LSDREAM's official cover art, the WOBAR mark (two broken circles) overlaid at Nick's actual logo scale directly over the illustration — a top/bottom split of the two rings was prototyped and dropped in favor of this — plus a new whole-image Gradient Map grade (recipe now formalized in [[working/WOBAR_VISUAL_RESET]] §8 as two reusable presets, `WOBAR — Green (Patina)` and `WOBAR — Purple`). Wordmark set in **Letter Gothic Std family / OCR A Std** (caps, per `WOBAR_BRAND.md`'s locked case rule), rendered via a new local tool, `scripts/font-to-png.html` — renders any local font file to a transparent PNG without OS-level installation, reusable beyond this piece.
+
+**Brand-checked against Act 2 — DESCENSION, 5/10.** Unresolved critical: the rings and the wordmark are still pure white, a direct K1 violation (fix identified — clipped Solid Color layer, blend mode Color, off the purple ramp). Also flagged: a static cover cannot actually be evaluated against Act 2's core criteria at all (breathing-with-sound, hypnotic persistence are motion-dependent) — re-run the check if a moving asset (DAW-screen clip, per the two-beat-unit format) gets made for this entry. Not yet fixed as of session end.
+
+**Open:** whether one name covers both SoundCloud and IG · the title is *industry*-insider, not *lane*-insider, so the dark-140 specificity has to live in the sample selections rather than the name · numbering scheme · **whether "official cover art + logo-scale mark overlay + whole-image grade" becomes the standard flip-cover template, or was specific to this entry** · the two pure-white elements above are unresolved.
 
 **The honest limit under all of it:** flips out-traffic originals ~4× on Tape B's account, **and Tape B has an audience.** Nothing in the vault tests that mechanism at 55 SoundCloud followers.
 

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Font to PNG</title>
+<style>
+  body { font-family: -apple-system, sans-serif; background:#1c1c1c; color:#eee; padding:24px; max-width:700px; }
+  h2 { margin-top:0; }
+  label { display:block; margin-top:14px; font-size:14px; }
+  input[type=text], input[type=number] { font-size:15px; padding:4px 6px; }
+  #canvasWrap {
+    margin-top:20px;
+    display:inline-block;
+    background-image:
+      linear-gradient(45deg, #444 25%, transparent 25%),
+      linear-gradient(-45deg, #444 25%, transparent 25%),
+      linear-gradient(45deg, transparent 75%, #444 75%),
+      linear-gradient(-45deg, transparent 75%, #444 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+    background-color: #333;
+  }
+  canvas { display:block; max-width:100%; }
+  button { margin-top:18px; margin-right:10px; padding:10px 18px; font-size:14px; cursor:pointer; }
+  .hint { font-size:12px; color:#999; margin-top:4px; }
+</style>
+</head>
+<body>
+<h2>Font &rarr; PNG</h2>
+<p class="hint">Load a local .ttf/.otf/.woff file, type your text, export a transparent PNG. Everything happens in this browser tab — nothing uploads anywhere.</p>
+
+<label>Font file: <input type="file" id="fontFile" accept=".ttf,.otf,.woff,.woff2"></label>
+<label>Text: <input type="text" id="textInput" value="WOBAR"></label>
+<label>Font size (px): <input type="number" id="fontSize" value="150"></label>
+<label>Text color: <input type="color" id="textColor" value="#ffffff"></label>
+<label><input type="checkbox" id="transparentBg" checked style="width:auto;display:inline;"> Transparent background</label>
+<label>Background color (if not transparent): <input type="color" id="bgColor" value="#000000"></label>
+
+<div id="canvasWrap"><canvas id="canvas" width="900" height="300"></canvas></div>
+<br>
+<button id="renderBtn">Re-render</button>
+<button id="downloadBtn">Download PNG</button>
+<p class="hint" id="status">Waiting for a font file — will preview in a system font until one loads.</p>
+
+<script>
+let fontLoaded = false;
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+const status = document.getElementById('status');
+
+document.getElementById('fontFile').addEventListener('change', async (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  try {
+    const buffer = await file.arrayBuffer();
+    const fontFace = new FontFace('CustomFont', buffer);
+    await fontFace.load();
+    document.fonts.add(fontFace);
+    fontLoaded = true;
+    status.textContent = 'Font loaded: ' + file.name;
+    render();
+  } catch (err) {
+    status.textContent = 'Could not load that file as a font: ' + err.message;
+  }
+});
+
+function render() {
+  const text = document.getElementById('textInput').value || '';
+  const size = parseInt(document.getElementById('fontSize').value) || 150;
+  const color = document.getElementById('textColor').value;
+  const transparent = document.getElementById('transparentBg').checked;
+  const bgColor = document.getElementById('bgColor').value;
+  const fontFamily = fontLoaded ? 'CustomFont' : 'sans-serif';
+
+  ctx.font = `${size}px "${fontFamily}"`;
+  const metrics = ctx.measureText(text);
+  const padding = size * 0.4;
+  canvas.width = Math.max(Math.ceil(metrics.width + padding * 2), 200);
+  canvas.height = Math.max(Math.ceil(size * 1.6), 100);
+
+  ctx.font = `${size}px "${fontFamily}"`;
+  ctx.textBaseline = 'middle';
+  ctx.textAlign = 'center';
+
+  if (!transparent) {
+    ctx.fillStyle = bgColor;
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+  }
+  ctx.fillStyle = color;
+  ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+}
+
+document.getElementById('renderBtn').addEventListener('click', render);
+['textInput','fontSize','textColor','transparentBg','bgColor'].forEach(id => {
+  document.getElementById(id).addEventListener('input', render);
+});
+
+document.getElementById('downloadBtn').addEventListener('click', () => {
+  const link = document.createElement('a');
+  link.download = 'wobar-text.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+});
+
+render();
+</script>
+</body>
+</html>

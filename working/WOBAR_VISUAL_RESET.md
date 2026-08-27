@@ -1,10 +1,10 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.2 (+ §8 — the composite's first build, HOHLWEG cover; Nick confirms the composite direction for the brand's visual identity going forward, not a one-off test)
-last_updated: 2026-08-20
-last_session: 2026-08-20
+version: 1.3 (+ §8 — two named Gradient Map presets, GREEN and PURPLE, formalized for reuse across pieces; first non-composite use case, a flip cover)
+last_updated: 2026-08-27
+last_session: 2026-08-27
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
-scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
+scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 supersedes: the corridor spine (this file's v0.1/v0.2 — full text in git history, e.g. `git show 1b7afaa:working/WOBAR_VISUAL_RESET.md`)
 ---
@@ -417,3 +417,32 @@ pipeline will need deliberate attention (more light held in, less crush in the w
 land as safety rather than defaulting to the dread register this first build settled into.
 Not a contradiction to resolve now — the thing to watch the next time this pipeline is used
 for an Act 1 piece specifically.
+
+**Named grade presets — formalized 2026-08-27, saved as Photoshop `.grd` gradient
+presets.** The whole-image Gradient Map + Curves finish from the HOHLWEG cover build is
+now two reusable house treatments, not a one-off recipe re-derived per piece:
+
+- **`WOBAR — Green (Patina)`** — the original HOHLWEG ramp:
+  `#0E0813 → #1E505A → #4D6149 → #5C7470 → #7A8A6F`
+  (offblack-purple shadow → oxidized teal → aged moss → patina green → lichen sage.)
+- **`WOBAR — Purple`** — new, assembled from the already-locked "Purple spine" +
+  mauve family in `WOBAR_GLSL_PATTERNS.md`'s color constants, not invented fresh:
+  `#190028 → #2D0546 → #5A0F78 → #6B2E87 → #A085AE`
+  (Deep Purple Dark → Deep Purple Mid → Deep Purple Hi → WOBAR Purple → Dusty Lavender.)
+  Highlight stop is Dusty Lavender, not white — holds K1's no-pure-white ceiling the
+  same way Lichen Sage does on the green ramp.
+
+**Procedure, either preset:** Gradient Map adjustment layer set to the saved gradient,
+blend mode Soft Light, opacity 40–70% to taste, plus a Curves pass lifting the black
+point off pure `#000000` and capping the white point — the same unification step that
+made the HOHLWEG object and environment read as one photograph. Soft Light on a
+Gradient Map also retints any pure-white elements in the frame (e.g. line art) toward
+the preset's hue for free, without a separate color pass on those elements.
+
+**First use outside the composite system, 2026-08-27:** the green preset applied to a
+flat cut/graphic asset (a *SAMPLES I'LL NEVER GET CLEARED* flip cover — LSDREAM ×
+Kill The Noise *Stink Mode*, dark/wonky 140 register) rather than a photoreal-composite
+piece. Worked without modification — the grade travels across both the composite
+world-state (§2.5) and a plain graphic-cut piece, which is the first evidence it's a
+house finish and not something specific to the HOHLWEG pipeline. Purple is saved but
+not yet used on a real piece.
