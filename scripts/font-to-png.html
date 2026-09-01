@@ -4,10 +4,15 @@
 <meta charset="UTF-8">
 <title>Font to PNG</title>
 <style>
-  body { font-family: -apple-system, sans-serif; background:#1c1c1c; color:#eee; padding:24px; max-width:700px; }
+  body { font-family: -apple-system, sans-serif; background:#1c1c1c; color:#eee; padding:24px; max-width:760px; }
   h2 { margin-top:0; }
   label { display:block; margin-top:14px; font-size:14px; }
-  input[type=text], input[type=number] { font-size:15px; padding:4px 6px; }
+  input[type=text], input[type=number], textarea, select { font-size:15px; padding:4px 6px; font-family:inherit; }
+  textarea { width:100%; max-width:400px; resize:vertical; }
+  .row { display:flex; flex-wrap:wrap; gap:24px; }
+  .row > div { flex:1 1 160px; }
+  .inline { display:flex; align-items:center; gap:8px; }
+  .inline input[type=checkbox] { width:auto; }
   #canvasWrap {
     margin-top:20px;
     display:inline-block;
@@ -23,6 +28,8 @@
   canvas { display:block; max-width:100%; }
   button { margin-top:18px; margin-right:10px; padding:10px 18px; font-size:14px; cursor:pointer; }
   .hint { font-size:12px; color:#999; margin-top:4px; }
+  fieldset { margin-top:18px; border:1px solid #444; border-radius:4px; }
+  legend { font-size:13px; color:#aaa; padding:0 6px; }
 </style>
 </head>
 <body>
@@ -30,11 +37,70 @@
 <p class="hint">Load a local .ttf/.otf/.woff file, type your text, export a transparent PNG. Everything happens in this browser tab — nothing uploads anywhere.</p>
 
 <label>Font file: <input type="file" id="fontFile" accept=".ttf,.otf,.woff,.woff2"></label>
-<label>Text: <input type="text" id="textInput" value="WOBAR"></label>
-<label>Font size (px): <input type="number" id="fontSize" value="150"></label>
-<label>Text color: <input type="color" id="textColor" value="#ffffff"></label>
-<label><input type="checkbox" id="transparentBg" checked style="width:auto;display:inline;"> Transparent background</label>
-<label>Background color (if not transparent): <input type="color" id="bgColor" value="#000000"></label>
+<label>Text (supports line breaks): <textarea id="textInput" rows="2">WOBAR</textarea></label>
+
+<fieldset>
+<legend>Type</legend>
+<div class="row">
+  <div>
+    <label>Font size (px): <input type="number" id="fontSize" value="150"></label>
+  </div>
+  <div>
+    <label>Tracking / letter-spacing (px): <input type="number" id="letterSpacing" value="0" step="1"></label>
+  </div>
+  <div>
+    <label>Line height (&times;): <input type="number" id="lineHeight" value="1.2" step="0.05"></label>
+  </div>
+  <div>
+    <label>Align:
+      <select id="textAlign">
+        <option value="center" selected>Center</option>
+        <option value="left">Left</option>
+        <option value="right">Right</option>
+      </select>
+    </label>
+  </div>
+</div>
+<div class="row">
+  <div class="inline"><input type="checkbox" id="bold"> <label style="margin:0" for="bold">Bold</label></div>
+  <div class="inline"><input type="checkbox" id="italic"> <label style="margin:0" for="italic">Italic</label></div>
+  <div class="inline"><input type="checkbox" id="uppercase"> <label style="margin:0" for="uppercase">Uppercase</label></div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Fill &amp; stroke</legend>
+<div class="row">
+  <div>
+    <label>Text color: <input type="color" id="textColor" value="#ffffff"></label>
+  </div>
+  <div class="inline" style="margin-top:14px;">
+    <input type="checkbox" id="strokeEnabled"> <label style="margin:0" for="strokeEnabled">Outline</label>
+  </div>
+  <div>
+    <label>Outline color: <input type="color" id="strokeColor" value="#000000"></label>
+  </div>
+  <div>
+    <label>Outline width (px): <input type="number" id="strokeWidth" value="2" step="1"></label>
+  </div>
+</div>
+</fieldset>
+
+<fieldset>
+<legend>Canvas</legend>
+<div class="row">
+  <div class="inline">
+    <input type="checkbox" id="transparentBg" checked> <label style="margin:0" for="transparentBg">Transparent background</label>
+  </div>
+  <div>
+    <label>Background color (if not transparent): <input type="color" id="bgColor" value="#000000"></label>
+  </div>
+  <div>
+    <label>Padding (px): <input type="number" id="padding" value="-1" placeholder="auto"></label>
+    <p class="hint" style="margin-top:2px;">-1 = auto (0.4&times; font size)</p>
+  </div>
+</div>
+</fieldset>
 
 <div id="canvasWrap"><canvas id="canvas" width="900" height="300"></canvas></div>
 <br>
@@ -47,6 +113,7 @@ let fontLoaded = false;
 const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const status = document.getElementById('status');
+const supportsLetterSpacing = 'letterSpacing' in ctx;
 
 document.getElementById('fontFile').addEventListener('change', async (e) => {
   const file = e.target.files[0];
@@ -64,35 +131,116 @@ document.getElementById('fontFile').addEventListener('change', async (e) => {
   }
 });
 
+function val(id) { return document.getElementById(id).value; }
+function checked(id) { return document.getElementById(id).checked; }
+
+// Measures a line's width including manual letter-spacing (used as fallback
+// and for layout even when native ctx.letterSpacing is available).
+function measureLine(line, spacing) {
+  if (!line) return 0;
+  let width = 0;
+  for (const ch of line) width += ctx.measureText(ch).width + spacing;
+  return width - spacing;
+}
+
+function drawLine(line, x, y, spacing, align) {
+  if (spacing === 0 || supportsLetterSpacing) {
+    if (supportsLetterSpacing) ctx.letterSpacing = spacing + 'px';
+    ctx.textAlign = align;
+    const drawX = align === 'left' ? x : align === 'right' ? x : x;
+    if (ctx.strokeEnabledFlag) ctx.strokeText(line, drawX, y);
+    ctx.fillText(line, drawX, y);
+    if (supportsLetterSpacing) ctx.letterSpacing = '0px';
+    return;
+  }
+  // Manual fallback: draw char by char, left-anchored, then caller
+  // has already positioned x for the chosen alignment.
+  ctx.textAlign = 'left';
+  let cx = x;
+  for (const ch of line) {
+    if (ctx.strokeEnabledFlag) ctx.strokeText(ch, cx, y);
+    ctx.fillText(ch, cx, y);
+    cx += ctx.measureText(ch).width + spacing;
+  }
+}
+
 function render() {
-  const text = document.getElementById('textInput').value || '';
-  const size = parseInt(document.getElementById('fontSize').value) || 150;
-  const color = document.getElementById('textColor').value;
-  const transparent = document.getElementById('transparentBg').checked;
-  const bgColor = document.getElementById('bgColor').value;
+  let text = val('textInput') || '';
+  if (checked('uppercase')) text = text.toUpperCase();
+  const lines = text.split('\n');
+
+  const size = parseInt(val('fontSize')) || 150;
+  const spacing = parseFloat(val('letterSpacing')) || 0;
+  const lineHeightMult = parseFloat(val('lineHeight')) || 1.2;
+  const align = val('textAlign');
+  const bold = checked('bold');
+  const italic = checked('italic');
+  const color = val('textColor');
+  const transparent = checked('transparentBg');
+  const bgColor = val('bgColor');
+  const strokeEnabled = checked('strokeEnabled');
+  const strokeColor = val('strokeColor');
+  const strokeWidth = parseFloat(val('strokeWidth')) || 0;
+  const paddingInput = parseFloat(val('padding'));
+  const padding = paddingInput < 0 || isNaN(paddingInput) ? size * 0.4 : paddingInput;
+
   const fontFamily = fontLoaded ? 'CustomFont' : 'sans-serif';
+  const style = `${italic ? 'italic ' : ''}${bold ? 'bold ' : ''}${size}px "${fontFamily}"`;
+  ctx.font = style;
 
-  ctx.font = `${size}px "${fontFamily}"`;
-  const metrics = ctx.measureText(text);
-  const padding = size * 0.4;
-  canvas.width = Math.max(Math.ceil(metrics.width + padding * 2), 200);
-  canvas.height = Math.max(Math.ceil(size * 1.6), 100);
+  const lineHeight = size * lineHeightMult;
+  let maxWidth = 0;
+  const lineWidths = lines.map(line => {
+    const w = measureLine(line, spacing);
+    if (w > maxWidth) maxWidth = w;
+    return w;
+  });
 
-  ctx.font = `${size}px "${fontFamily}"`;
+  canvas.width = Math.max(Math.ceil(maxWidth + padding * 2), 200);
+  canvas.height = Math.max(Math.ceil(lineHeight * lines.length + padding * 2), 100);
+
+  ctx.font = style;
   ctx.textBaseline = 'middle';
-  ctx.textAlign = 'center';
+  ctx.lineJoin = 'round';
+  ctx.strokeEnabledFlag = strokeEnabled;
 
   if (!transparent) {
     ctx.fillStyle = bgColor;
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   }
+
   ctx.fillStyle = color;
-  ctx.fillText(text, canvas.width / 2, canvas.height / 2);
+  ctx.strokeStyle = strokeColor;
+  ctx.lineWidth = strokeWidth * 2;
+
+  const totalTextHeight = lineHeight * lines.length;
+  const startY = (canvas.height - totalTextHeight) / 2 + lineHeight / 2;
+
+  lines.forEach((line, i) => {
+    const y = startY + i * lineHeight;
+    const w = lineWidths[i];
+    let x;
+    if (align === 'center') x = canvas.width / 2 - (supportsLetterSpacing ? 0 : w / 2);
+    else if (align === 'right') x = canvas.width - padding - (supportsLetterSpacing ? 0 : w);
+    else x = padding;
+    if (supportsLetterSpacing) {
+      // native letterSpacing respects ctx.textAlign directly
+      ctx.textAlign = align;
+      x = align === 'center' ? canvas.width / 2 : align === 'right' ? canvas.width - padding : padding;
+    }
+    drawLine(line, x, y, spacing, align);
+  });
 }
 
 document.getElementById('renderBtn').addEventListener('click', render);
-['textInput','fontSize','textColor','transparentBg','bgColor'].forEach(id => {
+[
+  'textInput','fontSize','letterSpacing','lineHeight','textAlign',
+  'bold','italic','uppercase','textColor',
+  'strokeEnabled','strokeColor','strokeWidth',
+  'transparentBg','bgColor','padding'
+].forEach(id => {
   document.getElementById(id).addEventListener('input', render);
+  document.getElementById(id).addEventListener('change', render);
 });
 
 document.getElementById('downloadBtn').addEventListener('click', () => {
