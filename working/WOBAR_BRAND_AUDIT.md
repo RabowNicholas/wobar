@@ -24,7 +24,8 @@ dependencies: [[WOBAR_CONTEXT]], [[working/RESEARCH_CHRIS_ALBA_FRAMEWORK]], [[re
 **Phase 5 — Plot: LOCKED (2026-09-01).** Quest 80% / Overcoming the Monster 20%. See below.
 **Phase 6 — Signature look / consistency-as-boundaries: LOCKED (2026-09-01).** Both pass. No changes required. See below for two new convergences found while checking.
 **Phase 7 — Campaigns as scenes: LOCKED (2026-09-01).** HOHLWEG EP confirmed as the strongest existing proof of the whole framework, not a gap to fix. Nick's note on record: HOHLWEG is what triggered wanting this audit in the first place.
-**Phase 8 — Final edit-down + migration execution: UNBLOCKED. Not yet run — awaiting explicit go-ahead to touch locked docs.**
+**Phase 8 — Migration EXECUTED (2026-09-01).** `reference/WOBAR_BRAND.md` rewritten (v2.0): The Enemy added, belief system 8→9, Magician 80% / Creator 20% replaces Magician 70% / Sage 30%, Origin Story / Superpower / Plot sections added. Ripple fixes applied to `reference/WOBAR_WORLD.md`, `reference/WOBAR_OBSCURA.md`, `reference/WOBAR_COPY.md` (items 12–15 below). **Item 16 — the deployed wander pool in `wobar-landing-page` — is explicitly NOT done.** That repo isn't reachable from this session; check it before treating the migration as fully closed.
+**Phase 8a — Dependency resolution / ripple map across derived docs: DONE (2026-09-01), grep-verified, not assumed.** See below.
 
 ---
 
@@ -262,6 +263,115 @@ Open items on HOHLWEG itself (ABGRUND/GRUND seam, groove-locked-kick question, m
 
 ---
 
+## PHASE 8a — DEPENDENCY RESOLUTION & RIPPLE MAP (2026-09-01)
+
+Grep-verified against `reference/` and `working/` — not reconstructed from memory, per the vault's own standing rule about unverified citations. Organized by what's actually changing.
+
+### A. Archetype swap (Sage out, Creator in)
+
+| File | What it says | Verdict |
+|---|---|---|
+| `reference/WOBAR_BRAND.md` | "Secondary: THE SAGE (30%)"; also the Three Versions section — *"The Sage voice is this version speaking"* | **Direct edit** — the source of both |
+| `reference/WOBAR_COPY.md:34` | *"Magician/Sage (the old top-level split) drops to a tool used within a register, not the organizer."* | **Already compatible.** COPY.md independently demoted the archetype pair from organizing role months ago. Cosmetic label swap only, not structural |
+| `reference/WOBAR_WORLD.md` §4 + lexicon | *"the voice leans the Sage register"*; glimpses tagged Sage-register | **Compatible as-is — different axis (voice-device, not brand archetype).** Add cross-reference note only |
+| `reference/WOBAR_OBSCURA.md` | *"The voice is Sage entirely... Nick as conduit, not author"* | **Compatible as-is.** OBSCURA is a distinct parked era/register (WORLD §7.5), not required to match the primary pair. Add cross-reference note only |
+| `working/WEB_HOME_SPEC.md:119` | *"stay in the desaturated Sage-adjacent void voice"* | **Compatible as-is**, same reasoning. No edit |
+| `working/MIRROR_THRESHOLD_SPEC.md:121` | Placeholder note, *"final passes through WOBAR_COPY (Sage/Magician..."* | **Low priority** — spec is unbuilt (blocked on 10DLC). Update label when the build actually happens, not now |
+
+### B. Belief system (cut #5, cut #8, reword #1/#6/#7, add 2)
+
+| File | What it says | Verdict |
+|---|---|---|
+| `reference/WOBAR_BRAND.md` | The 8 beliefs | **Direct edit** — the source |
+| `reference/WOBAR_WORLD.md` §6 THE DOCTRINE | Restates 6 of the 8 as "world-rules": items map BRAND-1→WORLD-1, BRAND-3→WORLD-2, BRAND-2→WORLD-3, BRAND-7→WORLD-4, BRAND-6→WORLD-5, **BRAND-8→WORLD-6**, plus a WORLD-only 7th (the tightrope). **BRAND-4 and BRAND-5 are NOT restated here.** | **Needs edit** — WORLD-6 (synchronicity) must be removed/renumbered since BRAND-8 is cut. Belief 5's cut doesn't ripple here — it was never restated. Items 1, 4, 5 (WORLD's versions of BRAND's repaired beliefs 1, 7, 6) should get matching connective-tissue language for consistency, though they aren't broken as-is |
+| `reference/WOBAR_COPY.md` (reversed-message spec) | The sparse-placement rule for the reversed-message Easter egg is justified by name: *"each find is synchronicity (belief 8)"* | **Small edit needed.** The rule itself (keep it sparse) is sound on its own merits — just needs re-anchoring to a belief that survives, or restating without the citation |
+| `working/WOBAR_VISUAL_RESET.md:216` | Cites belief 1 directly as a design principle (*"you see the inside/structure, never the external skin"*) | **No edit required** — belief 1 survives (repaired, not cut). Light consistency check once final wording locks |
+| `working/CREASE_VEIL_BRIEF.md` | Cites "the paradox" (belief 6) as the visualizer's core mechanic | **No edit required** — belief 6 survives (repaired, not cut). Same light consistency check |
+
+### C. Out of this repo's reach — flagging, not resolving
+
+**The deployed wander pool** (30 fragments, live in production at `wobar.music`, per `WOBAR_ACTIVE.md`) is described as *"belief-mirrors covering the whole belief system."* That almost certainly means at least one live fragment mirrors belief 8 (synchronicity) and possibly one mirrors belief 5. **That content lives in `wobar-landing-page`, a separate repo this session has no access to.** Cannot verify or resolve from here. Needs a dedicated pass in that repo before or during migration — flagging as the single highest-real-stakes item in this whole map, since everything else is doc text and this is live production content.
+
+### D. New sections (Enemy, Origin Story, Superpower, Plot)
+
+Pure additions — nothing currently in the vault stakes contradictory territory (checked via the greps above, nothing found). Low ripple risk.
+
+---
+
+## PHASE 9 — THE ONE SENTENCE (locked, 2026-09-01, post-migration)
+
+The actual test of everything above: can it collapse into one sentence simple enough that every piece of the brand implies it without ever stating it. Run as a comparative exercise — five other strong artist brands, broken down for their own one-sentence mechanic, before building Wobar's from what's actually true rather than borrowing a shape.
+
+**Five artists, five mechanics, general-knowledge reads confirmed by Nick, not vault-verified facts:**
+- **Summit** (for reference, from the original Alba-lens pass) — occupational contrast. Accountant → DJ. Plainness of the sentence performs his Everyman archetype.
+- **INZO** — aesthetic collision. *"He set a nature documentary to dubstep."* Two things that don't belong together, colliding.
+- **Of The Trees** — identity-as-thesis. *"He named himself after the forest, and everything since has just been proving it true."* The name states the claim before any commercial reason exists to back it — this is Wobar's own mechanic too, flagged here before being built below.
+- **Distinct Motive** — the control case, chosen deliberately by Nick to show a *weak* brand: no distinct story, tagline is literally "dubstep." Fails the unique test completely — any dubstep artist could claim it. The absence of a visual/narrative world, not just a quiet one.
+- **LSDREAM** — rupture-through-recovery. Former trap-EDM producer under the alias Brills, got sober, became a psychedelic bass/meditation artist. A real name change backing a real personal transformation — closest to Booker's Rebirth plot.
+- **Disco Lines** — sequencing/inversion. Internet-personality-first, DJ-career second — the hook is which came first, not a contrast or a collision.
+
+**The finding that redirected the whole exercise:** re-examining why each of the five actually works, Nick independently noticed that in four of five cases the *visual world* differentiates harder than the sound does — and the one weak case (Distinct Motive) is also the one with no distinct visual world at all. **Same finding Phase 6 already logged, arrived at from a completely different direction** — Nick's own words then: *"the visual identity is currently headed [somewhere] and that is the freshest part of the brand."*
+
+**Wobar's mechanic: identity-as-thesis, same shape as Of The Trees, built from something actually true rather than borrowed.** Wobar is a personal word Nick carried for years before there was a project attached to it — not a chosen stage name, a name that grew into meaning. Two prior attempts at this sentence failed and are worth keeping as a record of what doesn't work: a thematic/poetic synthesis sentence (touched every locked piece but wasn't a *story*), and a direct structural copy of Summit's occupational-contrast template (technically simple, but borrowed the wrong archetype's register — plainness performs Everyman, and Wobar isn't Everyman).
+
+> **"Wobar existed before the music did."**
+
+Migrated into `reference/WOBAR_BRAND.md` as a new capstone section, **"The One Sentence,"** placed immediately after the Manifesto — first thing a reader hits after mission, before any of the machinery (enemy, beliefs, archetype, origin, superpower, plot) that all derives from it.
+
+**A second, related lock came out of confirming this one.** Nick's own way of explaining the composite visual system to someone unfamiliar with it — real-world footage as "the real world," the low-poly wireframe as "the code underneath it, showing through," using the kind of simulation/glitch-in-reality shorthand people already culturally have — turned out to be the plain-language version of `WOBAR_VISUAL_RESET.md` §2.5's already-locked technical reasoning (photoreal = the collapsed world, wireframe = the blueprint/source, uncollapsed). **Locked as the public explainer for the composite system**, written into `VISUAL_RESET.md` §2.5 directly. It clears `WORLD.md` §0/§8's ban on stating the cosmology in plain doctrine-register because it's a cultural reference, not a claim about what Wobar actually is — the analogy is the whole answer, nothing past it.
+
+---
+
+## PHASE 11 — MAKING THE DOCUMENT ACTUALLY COMPLETE (2026-09-01)
+
+Nick reframed the deferred "one-page summary" question: the real requirement isn't a condensed version, it's that `reference/WOBAR_BRAND.md` has to be complete and correct **on its own**, since it's the reference he actually talks to. Checked against that standard, three of the audit's strongest findings lived only in other files. All three built and added directly, one at a time, confirmed before each edit:
+
+- **Reordered Archetypes above Belief System** — matches Alba's own sequence (enemy → archetype → beliefs, so beliefs get checked against the archetype's voice). The doc had them backwards.
+- **"What Wobar Refuses"** — the §8 THE SACRED boundaries system, pulled in as real content, not a pointer. Phase 6 found this was the strongest pillar in the brand; it wasn't in the reference doc at all.
+- **"The Mark"** — the two broken circles and the diamond-O wordmark treatment, previously living only in `WORLD.md`'s lexicon. Description corrected against the actual asset files once Nick shared them (asymmetric offset gaps, not a clean break).
+- **"Campaigns As Scenes"** — HOHLWEG as the proof point, pulled in from Phase 7 directly instead of left as an audit-only finding.
+
+**Open loop, not resolved here:** WOBAR.light, a secondary wordmark lockup shown during the mark review. Still being tested — Nick's call to revisit once the brand definition itself is closed, not folded into The Mark section.
+
+`reference/WOBAR_BRAND.md` is now the complete reference on its own terms — full section order: Manifesto → The One Sentence → The Enemy → Brand Archetypes → Belief System → What Wobar Refuses → The Three Versions → Origin Story → Superpower → Plot → Positioning → Campaigns As Scenes → The Mark → Color Palette → Typography → Texture & Finish → North Star.
+
+---
+
+## PHASE 10 — COLD-READ PASS (2026-09-01, post-migration)
+
+Nick's ask: forget the process, look at the finished `reference/WOBAR_BRAND.md` cold, as Chris Alba would, and give an honest critique — not a validation pass. Nine findings surfaced; worked through one at a time, fixes applied live to the locked doc as each was confirmed.
+
+1. **Mission duplicated Manifesto's opening verbatim.** Fixed — Mission section cut.
+2. **Two competing "one sentence" claims with no stated hierarchy** (Manifesto's thematic opener vs. the origin hook). Fixed — origin hook relabeled *"The One Sentence — the origin hook"* with an explicit line distinguishing the two jobs (thematic vs. biographical).
+3. **Belief 1 and belief 8 restated the same "earned, not given" claim.** Fixed — belief 1 reverted to a plain locus claim (*"It never adds — it only clears"*); belief 8 owns the earned/given territory alone. Belief 7 checked for the same overlap and found distinct (guru-refusal, not a restatement).
+4. **The Enemy section read as analyst prose, not brand voice** — *"optimized for immediate impact,"* and a defensive *"not a strawman"* clause with no place in a myth. Fixed — rewritten image-first, matched to the Manifesto's register, the strawman line cut entirely.
+5. **Origin/Superpower/Plot read almost entirely Creator despite Magician being 80%.** Resolved, not a flaw — the 80/20 split describes the promise *to the listener*; those three sections describe the *process behind it*, which reads as Creator because that's what building looks like from inside it. Noted directly in the doc, after the archetype section.
+6. **Is "rushed tension and release" actually a villain the audience feels, or a craft philosophy borrowing villain language?** Resolved, no edit — it's an *earned* enemy, not an automatic one: it doesn't land on a stranger the way pretentiousness lands on anyone, but it lands hard on exactly the audience already named in Positioning (people who've had or are seeking the transcendent-set experience). Confirmed against real evidence already in the vault — `RESEARCH_STORYTELLING.md`'s finding that abstract narrative posts score zero while an actual five-hour-set writeup scored 648. Consistent with belief 9, not a contradiction of it.
+7. **The Future Version's description had an audit scar mid-sentence** — a defensive clause about voice-vs-archetype sitting inside mythic prose. Fixed — the myth restored to plain description; the clarifying note moved to its own blockquote after the section instead of breaking the sentence it was correcting.
+8. **North Star and Plot never referenced each other**, despite plausibly describing the same eventual event in two different vocabularies (aspiration vs. narrative resolution). Fixed — one forward-pointer added at the end of Plot, without diluting its honest "not yet resolved" stance.
+9. **The document has grown long enough that it may need a one-page version sitting above it** — nine beliefs, an enemy, an archetype pair, three versions, origin, superpower, plot, positioning is a lot of surface area for something meant to be held in the head. **Deferred, not resolved** — a real scope decision, not a quick fix; Nick chose to close out items 1–8 first and revisit this separately.
+
+All of items 1–8 executed directly in `reference/WOBAR_BRAND.md` during this session, confirmed one at a time before each edit. Item 9 (the one-page-summary question) reframed rather than resolved — see Phase 11.
+
+## PHASE 12 — WOBAR.LITE (2026-09-01) — open loop #1, closed
+
+Mined properly, not assumed — same method as the rest of the audit. Nick's own answers: separate mark exists for practical booking/flyer reasons (distinguishing set types) and a longer-arc reason (opening his own headline show with a different vibe, same night, three years out). What pulled him toward it wasn't a single transcendent set — it was noticing a body of sound (Skysha, Mfinity, Contra, Chimera) that doesn't fit his current dark/wonky 140 production. Character: organic instead of hypnotic and structured, 80–120 BPM, same audience as core Wobar but a different room/night. Structurally: Acts 1 and 5 of the existing 5-Act framework, isolated, without the confrontational middle. The enemy still applies and is, in Nick's words, "actually the reason for this to exist." Not yet in production — currently DJ/curation only, though he expects it to become production since it's the same bookend material he's already learning to make inside his own sets.
+
+**Real complication, surfaced and resolved:** Nick named this as Obscura evolving, but the actual Obscura document (read in full for the first time this session) is a specific, elaborate, Act-5-only hypnotic installation — direct tension with "organic... rather than hypnotic." Flagged rather than silently merged. **Nick's call: retire Obscura outright** ("it was all abstract with no real action"), keep the file on disk for parts rather than delete it, and let WOBAR.lite diverge on purpose.
+
+**Executed:**
+- `reference/WOBAR_OBSCURA.md` marked retired (status + title changed), kept on disk for future parts.
+- `reference/WOBAR_WORLD.md` — the parked "Eras" mechanic (§7.5, §10) formalized; WOBAR.lite named as its first instance; Surfaces table entry updated.
+- `working/WOBAR_ACTIVE.md`, `WOBAR_CONTEXT.md` file registry — updated to match.
+- `working/WOBAR_CLOSED.md` — full retirement narrative added (what Obscura was, why it's retired, what survives and where).
+- `working/WOBAR_LITE.md` created — the actual working definition: what it is, what it inherits from core Wobar unchanged (enemy, archetype pair, audience), what's different (tempo, character, references, production status), relationship to retired Obscura, what's visually confirmed vs. still open, and a genuinely-open items list. **Deliberately a working file, not locked** — Nick's own framing: "we will iterate and pivot as needed and as we learn."
+
+---
+
+~~🔴 OPEN LOOP: WOBAR.light~~ **Resolved as WOBAR.lite — see Phase 12.** The wordmark shown during the mark review turned out to be the mark for a real, separate identity (the softer/emotional side of the project), not a variant of the primary mark needing its own small decision. Full definition: `working/WOBAR_LITE.md`.
+
+---
+
 ## 5. MIGRATION PLAN — NOT EXECUTED
 
 When every phase above is closed and Nick approves the full set in one pass, apply to `reference/WOBAR_BRAND.md` (bump to v2.0, changelog entry citing this file):
@@ -278,4 +388,11 @@ When every phase above is closed and Nick approves the full set in one pass, app
 10. Re-run the archetype/superpower/plot sections (Phases 4–5) and append findings, confirming or amending the existing Magician 70/Sage 30 split.
 11. Cross-check final belief count lands in Alba's 6–12 range once additions/cuts are settled.
 
-**Do not execute any of the above individually. This runs as one batch, once, after full approval.**
+**From Phase 8a's ripple map:**
+12. Cosmetic label update in `reference/WOBAR_COPY.md:34` (Sage → Creator in the deprecated top-level-split note).
+13. Add a short cross-reference note in `reference/WOBAR_WORLD.md` §4/lexicon and `reference/WOBAR_OBSCURA.md` clarifying that voice-register and brand-archetype are separate axes, so "Sage" surviving there doesn't read as drift.
+14. Remove/renumber item 6 (synchronicity) in `reference/WOBAR_WORLD.md` §6 THE DOCTRINE; optionally sync items 1/4/5 with the connective-tissue language added to BRAND's beliefs 1/7/6.
+15. Re-anchor or restate the sparse-placement rule for the reversed-message mechanic in `reference/WOBAR_COPY.md` — currently cites "belief 8" by name.
+16. **Before considering this migration complete: check the deployed wander pool in `wobar-landing-page` (separate repo, not accessible this session) for fragments mirroring the cut beliefs (5, 8).** Flagged in Phase 8a §C as the highest-real-stakes unresolved item — live production content, not doc text.
+
+**EXECUTED 2026-09-01, items 1–15, as one batch, per Nick's approval.** Item 16 (the deployed wander pool) remains open — out of this repo's reach, not skipped by choice, needs a separate session with access to `wobar-landing-page`.

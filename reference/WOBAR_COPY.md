@@ -1,7 +1,7 @@
 ---
 title: Wobar Copy Standards
-version: 2.5 (+ wander fragment writing process 2026-08-24, on top of track naming 2026-08-14, the reversed message 2026-08-13, and the claim-the-scale constraint 2026-08-07)
-last_updated: 2026-08-24
+version: 2.5.1 (+ wander fragment writing process 2026-08-24, on top of track naming 2026-08-14, the reversed message 2026-08-13, and the claim-the-scale constraint 2026-08-07; two small ripple fixes 2026-09-01 from the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md)
+last_updated: 2026-09-01
 status: live — governing
 scope: How Wobar writes, across every surface. The mirror spine, the four-register voice stack, the act axis, the utility floor, the reconciled lexicon, register-scoped anti-vocabulary, the four tests, the reversed message, the daemon deflection bank, and bio templates. Derives from the cross-modal grammar; every rule here is that grammar rendered in words.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]], [[WOBAR_BRAND]]
@@ -31,7 +31,8 @@ Under everything:
 - **The §8 register-gate** — plain register stays at the surface; figurative/source
   register may reach the center. Reveal in art-register, never in doctrine-register.
 
-Magician/Sage (the old top-level split) drops to a **tool used within a register**, not
+Magician/Creator (the old top-level split — Sage until 2026-09-01, see
+reference/WOBAR_BRAND) drops to a **tool used within a register**, not
 the organizer. The organizers are the two axes below.
 
 ---
@@ -431,7 +432,9 @@ worth hearing forward, even where you would never caption it.
 - **Originals only.** A flip is borrowed material and is not yours to hide something in.
 - **Not every track.** A mandated signature is a checkbox, and it makes the catalogue
   sweepable — a content system, i.e. the ARG that WORLD §7 bans by name. Sparse means each
-  find is synchronicity (belief 8).
+  find stays rare, not scheduled — a discovery, not a mechanic. *(Previously anchored to
+  "synchronicity," belief 8, cut 2026-09-01 — the rule holds on its own merits; see
+  working/WOBAR_BRAND_AUDIT.md Phase 8a.)*
 - **~20 words is the ceiling.** Past that, reversing it stops being a discovery and becomes
   a transcription job.
 - Sit it where a phone mic can catch a sentence — a gap, a tail, a collapse. Never under a

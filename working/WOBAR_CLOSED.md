@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
-version: 1.1
-last_updated: 2026-08-04
+version: 1.2
+last_updated: 2026-09-01
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,18 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Obscura — RETIRED, EVOLVED INTO WOBAR.LITE
+
+**Closed:** 2026-09-01 — Nick's call, mid-session while building out the Chris Alba–lens brand audit. His own words at retirement: *"it was all abstract with no real action."* Full session record: [[working/WOBAR_BRAND_AUDIT.md]], WOBAR.lite section.
+
+**What it was.** A fully-designed, Act-5-only immersive installation, locked as `reference/WOBAR_OBSCURA.md` since 2026-04-05: four internal stages (Aperture/Chamber/Projection/Exposure), each with its own solfeggio frequencies, isochronic pulse targets, and minimum durations, built on Yoga Nidra and Holotropic States theory. Staging included a haze wall keeping Nick invisible until the deepest stage, and engraved personal objects meant to become "identity totems." Its defining musical instruction, at the deepest stage: *"maximum hypnotic repetition."* Never built or performed — a complete concept that stayed a concept.
+
+**Why it's retired, not just archived.** When Nick described what he actually wanted next — a bookable, separately-marked identity for the softer, more emotional 80–120 BPM side of his sets (Acts 1 and 5, without the confrontational middle) — he named Obscura directly: *"This is what Obscura was and is becoming."* But checked against the actual document, the two didn't match on the axis that mattered most: Obscura's core musical language is explicitly hypnotic; what Nick described wanting is explicitly **organic, "rather than hypnotic and structured."** Rather than quietly merge two things that pull in different directions, the discrepancy got surfaced and Nick chose retirement over a rename — WOBAR.lite is a new, practical identity that evolved out of Obscura's territory (Act 5, "the void made physical," the same-world-different-era mechanic) without inheriting its specific hypnotic/installation design.
+
+**What survives, and where.** The Eras mechanic itself — flagged and parked in `WORLD.md` §7.5 since before Obscura existed — is now formalized, with WOBAR.lite as its first real instance. `reference/WOBAR_OBSCURA.md` is kept on disk, marked retired rather than deleted, specifically because Nick wants the option to pull elements forward (the haze wall, the totems, the four-stage structure) into a future, more built-out version of WOBAR.lite once it's further along. Nothing here is a dead end — it's the "idea" stage of the audit's own Superpower pattern (idea → action → results decide), and WOBAR.lite is where that cycle finally reaches "action."
 
 ---
 

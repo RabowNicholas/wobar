@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.3 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27)
-last_updated: 2026-08-27
+version: 3.4 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
+last_updated: 2026-09-01
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -215,6 +215,8 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 ⚠ **It is specified and not deployed** — verified 2026-08-07. `lib/db/schema.sql` is `subscribers(id, phone, opted_in, opted_out_at, created_at)`; there is no `source` column and no analytics anywhere in the project. [[working/WOBAR_SURFACES]] §6 had read this design note as a built field and named `found` its one real metric — **so the single measure that section rests on has no instrument.** The column has to land *with* the Mirror build; added afterwards it cannot backfill the people it was meant to distinguish.
 
+**2026-09-01 — the backbone claim above is now actually true, not just written.** `lib/db/index.ts`'s `sql` client was silently broken since it was written (see Terminal Rebuild thread) — `subscribers`/`messages` would have thrown on first real use. Fixed and verified against a live database for the first time. Still blocked on 10DLC, same as before — just no longer *also* blocked by an undiscovered code bug underneath it.
+
 The Mirror is the `mirror` path inside the Terminal, discovered by wandering.
 
 ### Terminal Rebuild — wobar.music
@@ -233,9 +235,17 @@ Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wa
 
 **Structure is flat and holds no state** — finite bank, `Math.random()` with replacement, no persistence. The duration property is designed for and not built; the arithmetic and the strategic consequence are in [[working/WOBAR_SURFACES]] §6.
 
-**Repo facts worth having before the next edit:** ~1,900 lines of the pre-terminal site are still present and fully unreferenced (`PortalContainer`, `UnifiedCanvas`, `CanvasBackground`, `PersistentBackground`, `ActBackground`, all three `components/sections/*`, `app/scroll-test`) — the three.js / GSAP / framer-motion dependencies exist only for that dead tree. `/epk` queries Sanity types that have no schema (`siteConfig`, `epkConfig`, `featuredTrack`, `tourDate`; only `release` and `set` are defined), and the queries swallow the miss, so the page renders empty rather than erroring.
+**Dead pre-terminal code removed 2026-09-01.** The ~1,900-line pre-terminal tree (`PortalContainer`, `UnifiedCanvas`, `CanvasBackground`, `PersistentBackground`, `ActBackground`, all three `components/sections/*`, `app/scroll-test`) is gone — verified unreferenced first, deleted, build + typecheck clean, committed (`4de0236`) and pushed. `/epk`'s broken Sanity queries (`siteConfig`, `epkConfig`, `featuredTrack`, `tourDate` have no schema) are untouched — separate, known issue, not part of this cleanup.
 
-**Open:** offering length/format limits · naming the terminal/world as a whole · whether the flat structure gets built into something duration actually pays off in, and when.
+**Raw event logging shipped and verified live in production, 2026-09-01.** New `terminal_events` table + `/api/terminal/events`, instrumented at every real interaction point (typed commands — matched, deflected, or entirely unmatched, with raw input preserved — the tap-to-listen button, platform picks, listen-mode invalid/back-out). Anonymous per-tab `sessionStorage` id, no personal data. Confirmed by running a real command on `wobar.music` and reading the row back from the live database, not just checking the build.
+
+**Found and fixed while verifying: `lib/db/index.ts`'s `sql` client had been silently non-functional since it was written.** Its Proxy wrapped a plain `{}` instead of a function — a Proxy is only callable if its target already is — so every DB-touching route (`subscribe`, `broadcast`, `sms/inbound`, and the new terminal events) would have thrown on first real use. Never caught because nothing had hit a live database before (Neon was never actually set up until today). One-line fix; now verified working end-to-end.
+
+**Neon is live, linked, and deployed** — previously unconfigured. `DATABASE_URL` set in both `.env.local` and Vercel production env. `neon.ts` config-as-code in place (`@neon/config`, starter branch policy — 7-day auto-expiry on non-default branches). Committed (`d233f6c`), pushed, deployed, verified.
+
+**Open:** offering length/format limits · naming the terminal/world as a whole · whether the flat structure gets built into something duration actually pays off in, and when · **the deployed wander pool has fragments built around beliefs that no longer exist (see Brand Foundation thread below) and none yet for the two new ones.**
+
+*(The `npm audit` findings and the three.js/GSAP/framer-motion dependency cleanup from today's work are archived, not tracked here — Nick's call.)*
 
 ### World Doc — `WOBAR_WORLD.md` v0.7
 **State: teardown live, doc still draft.**
@@ -248,7 +258,29 @@ Live paths: `menu` (aliases `help`/`?`/`look`/`ls`) · `listen` · `poem` · `wa
 
 **Cosmology:** the entity is a two-axis vertical — timeless self × all-possibility self. The **entity's** facelessness is over-determined — but that is a fact about Wobar, not a rule about Nick: **a face in frame is allowed as of 2026-08-04** ([[reference/WOBAR_WORLD]] §4). Void poems are a translation layer, POV Wobar→down→all of us, under figurative-licence and empower-never-instruct guardrails. §8 is the anti-guru rail.
 
-**Open:** §1 ground-truth placement (in-file vs Nick-eyes-only, now the cosmology is deeper) · the first **void poem** and first **Passage**, both untested voice · **eras** flagged as a mechanic and not formalised (Obscura is a different era, parked) · when the doc leaves draft.
+**Open:** §1 ground-truth placement (in-file vs Nick-eyes-only, now the cosmology is deeper) · the first **void poem** and first **Passage**, both untested voice · when the doc leaves draft. ~~eras flagged as a mechanic and not formalised~~ **Formalized 2026-09-01 — WOBAR.lite is the first era; Obscura retired into it. See working/WOBAR_LITE.md and working/WOBAR_BRAND_AUDIT.md.**
+
+### Brand Foundation — rebuilt via the Chris Alba lens, 2026-09-01
+**State: `reference/WOBAR_BRAND.md` rewritten top to bottom (v2.3), locked. One open follow-up outside this repo.**
+
+The full Alba-method audit — enemy, archetype, origin, superpower, plot — plus a cold-read pass that fixed real seams (duplicated Mission/Manifesto, redundant beliefs, wrong section order, three of the audit's strongest findings living nowhere the doc itself pointed to) is complete and migrated. Full reasoning and every fact-check: [[working/WOBAR_BRAND_AUDIT]].
+
+**What changed:** new enemy (**rushed tension and release**, scale-invariant — track/set/record/career), belief system 8→9 (three repaired, two cut, two added — `earned, not given` and `not everybody's cup of tea`, one new belief replacing the weakest original), archetype **Magician 80% / Creator 20%** replaces Magician/Sage, plus new Origin Story, Superpower (`idea → action → results decide`), Plot (Quest 80/Monster 20), a `What Wobar Refuses` section, The Mark, Campaigns As Scenes (HOHLWEG as the proof), and a closing `Quick Use` — the two-sentence overview and seven-question self-check, both meant to actually get run against real decisions, not just read once.
+
+**Ripple fixed the same day:** `WORLD.md` (archetype-vs-voice-register cross-refs, synchronicity removed from §6 doctrine), `WOBAR_OBSCURA.md` (retired — see below), `WOBAR_COPY.md` (label swap, reversed-message rule re-anchored off the cut belief).
+
+**Open — genuinely outside this session's reach:** the deployed wander pool (`wobar-landing-page/components/terminal/content.ts`) has two live fragments built around **synchronicity** (now cut) and one that happens to already fit the new belief 5 without changes. **No fragments exist yet for the two new beliefs.** Writing them is a gated process (`skills/wobar-wander-writer`), not something to improvise — flagging so it isn't lost, not attempting it here.
+
+### WOBAR.lite — the first formalized Era
+**State: defined, working, not locked.** [[working/WOBAR_LITE]] — the softer, more emotional side of the project: Acts 1 and 5 of the 5-Act framework, isolated, without the confrontational middle. 80–120 BPM, organic instead of hypnotic and structured. Same audience as core Wobar, different room/night. The enemy still applies — Nick's own words, "actually the reason for this to exist."
+
+**Evolved from, and retires, Obscura.** `reference/WOBAR_OBSCURA.md` — a fully-designed, never-built, Act-5-only hypnotic installation — is retired ("it was all abstract with no real action"). Kept on disk for parts, not deleted; full narrative in [[working/WOBAR_CLOSED]]. This is also the first real instance of the **Eras** mechanic, parked in `WORLD.md` §7.5 since before Obscura existed.
+
+**Not yet in production** — currently a DJ/curation identity, a separate wordmark (stacked/unstacked, black/white — already exists as an asset) for flyers and booking. Reference sounds: Skysha, Mfinity, Contra, Chimera.
+
+**Open:** full visual system beyond the wordmark · whether the nine beliefs need era-specific emphasis or just carry over as-is · first real booking as WOBAR.lite · production timeline.
+
+*(Correction, 2026-09-01: an earlier pass here logged "WOBAR.light" as a second, separate, still-undecided wordmark. It isn't — the asset files are consistently `wobar-lite-*`; "light" was a one-time typo in a message that got corrected to "lite" shortly after. There is one wordmark, not two. Confirmed by Nick — "wobar.light should not exist.")*
 
 ### down_bad_3stack v002 — Act 4 Phase 1 visualizer
 **State: full pipeline wired and brand-reviewed. Not saved as a canonical checkpoint, not final-rendered.** 720×1280 (NC licence caps 1280×1280).

@@ -1,8 +1,8 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.3 (+ §8 — two named Gradient Map presets, GREEN and PURPLE, formalized for reuse across pieces; first non-composite use case, a flip cover)
-last_updated: 2026-08-27
-last_session: 2026-08-27
+version: 1.4 (+ §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
+last_updated: 2026-09-01
+last_session: 2026-09-01
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
 scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -185,6 +185,21 @@ A solid faceted (non-wireframe) version is permitted but weaker: surface returns
   (§3) — a style reference collapses that argument.
 
 Environment is governed by the register test in §6, **not** by geography.
+
+### The public explainer — locked 2026-09-01
+
+When someone asks "what's with the wireframe thing," this is the line: **the photoreal
+half is the real world — nature, real footage. The wireframe half is the code underneath
+it, showing through** — the kind of everyday cultural shorthand people already have from
+simulation/glitch-in-reality stories, not a doctrine statement. It says exactly what §1
+above says technically (photoreal = the collapsed, time-bound world; wireframe = the
+blueprint, uncollapsed) in one breath, and it clears WORLD §0/§8's ban on explaining the
+cosmology in plain doctrine-register, because it's a cultural reference, not a claim about
+what Wobar actually is. Use it. Don't go further than it — the analogy is the whole
+answer, not an opening into the private layer underneath.
+
+*(Found while deriving the one-sentence brand story — full reasoning in
+`working/WOBAR_BRAND_AUDIT.md`.)*
 
 ---
 

@@ -1,16 +1,16 @@
 ---
 title: Wobar Obscura Framework
-version: 1.0
-last_updated: 2026-04-05
-status: locked
-scope: OBSCURA framework — four-stage structure, neuroscience foundation, frequency guidelines, staging, musical elements.
+version: 1.1 — RETIRED 2026-09-01
+last_updated: 2026-09-01
+status: retired — superseded by WOBAR.lite. Kept on disk, not deleted, because specific elements (the haze wall, the four-stage structure, the totems) may get pulled forward into a future production of WOBAR.lite once it's further along. Nick's own words at retirement: "it was all abstract with no real action." Do not build from this file without checking working/WOBAR_LITE.md first — WOBAR.lite is not this framework renamed; it diverges on purpose (organic instead of hypnotic, Acts 1+5 instead of Act 5 alone). Full reasoning: working/WOBAR_BRAND_AUDIT.md, WOBAR.lite section. Narrative: working/WOBAR_CLOSED.md.
+scope: OBSCURA framework — four-stage structure, neuroscience foundation, frequency guidelines, staging, musical elements. Historical / reference-for-parts only as of retirement.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 ---
-# WOBAR: OBSCURA
+# WOBAR: OBSCURA — RETIRED, KEPT FOR PARTS
 ## What It Is
 The future version of Wobar made performable. Not a separate alias — the same vessel, different frequency. Where Wobar takes you through the portal, OBSCURA is what exists inside the mirror. Behind the reflection. The gap between the observer and the image looking back.
 OBSCURA expands Act 5 Integration into its own complete world. It does not arc horizontally. It builds vertically — not moving somewhere, going deeper into the same place. The void as destination, not passage.
-The voice is Sage entirely. Messages from the future self transmitted through the present vessel. Nick as conduit, not author.
+The voice is Sage entirely. Messages from the future self transmitted through the present vessel. Nick as conduit, not author. *(OBSCURA is a distinct era/register of the one world — see WORLD §7.5 — so it isn't required to match Wobar's primary brand archetype, Magician + Creator as of 2026-09-01. Voice and archetype are separate axes; see reference/WOBAR_BRAND.)*
 ---
 ## Relationship To Wobar
 Two modes of the same project. Wobar takes you through. OBSCURA receives you on the other side. Neither is complete without the other — but each stands alone.

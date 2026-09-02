@@ -1,7 +1,7 @@
 ---
 title: Wobar World Mechanics
-version: 0.7 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained) · §4 amended 2026-08-04 (facelessness is not the lead — a face is allowed in frame) · §9 scope note 2026-08-07 ("Portal" was NOT retired — the 2026-04-30 call was visual-lens only)
-last_updated: 2026-08-07
+version: 0.8 (web home = a terminal you wander, guided by the daemon; teardown ongoing) — §8 amended 2026-07-21 (the center may be shown, never explained) · §4 amended 2026-08-04 (facelessness is not the lead — a face is allowed in frame) · §9 scope note 2026-08-07 ("Portal" was NOT retired — the 2026-04-30 call was visual-lens only) · §4/§6/§9 touched 2026-09-01 (Chris Alba–lens audit: cross-reference notes on the Sage-toned voice vs. the archetype pair, synchronicity removed from §6 as a world-rule) · §7.5/§10 amended 2026-09-01 (Eras formalized — WOBAR.lite is the first era, Obscura retired into it — see working/WOBAR_BRAND_AUDIT.md)
+last_updated: 2026-09-01
 status: live — draft; promote toward locked once Nick tears it apart
 scope: The under-the-hood architecture of the Wobar world — its ground truth, geography, engine, entity, listener, doctrine, sacred core, and lexicon. This is the skeleton beneath the visual skin. Every release, rollout, transmission, and door is built to be consistent with this file. Built off the locked belief system in WOBAR_BRAND.
 dependencies: [[WOBAR_BRAND]], [[WOBAR_COPY]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_FRAMEWORK]]
@@ -238,7 +238,10 @@ behind them.
 > the world, not about one bucket. If the intent was socials-only, narrow this
 > block — do not leave it ambiguous.*
 - **The voice leans the Sage register** — transmitting down from outside time —
-  but the entity behind it is the whole vertical.
+  but the entity behind it is the whole vertical. *(This is a narrative-voice
+  choice, separate from the brand's strategic archetype pair, which is Magician
+  + Creator as of 2026-09-01 — see [[reference/WOBAR_BRAND]]. The two don't have
+  to match; this line isn't drift.)*
 - **Wobar is not a guru and cannot be one** (§5, §6.4, §8). The source is
   *universal* — Axis 2 encompasses everyone, so it is the common blueprint your
   own higher self connects to just as much. Wobar transmits from the source and
@@ -291,13 +294,18 @@ load-bearing; breaking one breaks the world.
    This is why the threshold is a ritual, not a signup (see §7). Without
    intention, the subconscious keeps you safe from what you came to find.
 4. **YOUR PATH ALONE.** No guru. See §5 — enforced by the entity/listener
-   mechanic, not asserted.
+   mechanic, not asserted. A guru handing you the answer is a shortcut; insight
+   that isn't earned isn't insight.
 5. **THE PARADOX.** Nothing matters and everything matters at once. This is the
-   condition freedom runs on; the world holds it rather than resolving it.
-6. **SYNCHRONICITY.** Nothing is random. The track that found you found you for
-   a reason. The world behaves as if this is true.
-7. **THE TIGHTROPE (§0.2).** Surface language stays psychological; cosmology
+   condition freedom runs on; the world holds it rather than resolving it — and
+   holding both at once requires giving something the full time it needs.
+   Rushed, it collapses to one side.
+6. **THE TIGHTROPE (§0.2).** Surface language stays psychological; cosmology
    stays submerged. This is a doctrine, not a preference.
+
+> **Synchronicity removed as a world-rule, 2026-09-01** — cut from the belief
+> system (`reference/WOBAR_BRAND.md`) for doing no work downstream; the same
+> finding held here. Reasoning: `working/WOBAR_BRAND_AUDIT.md` Phase 2.
 
 ---
 
@@ -318,7 +326,8 @@ it *is* the world's movement.
 
 **First door: MIRROR (the SMS list).** See the *Mirror Threshold* loop. Keyword
 **MIRROR**. Entering = setting an intention = crossing into the chamber. Inside
-= **glimpses** (early raw music + downloads pointed outward, Sage-register).
+= **glimpses** (early raw music + downloads pointed outward, Sage-register —
+voice choice, not the brand archetype; see §4 note above).
 Faceless — a line *into the world*, never "text Nick." Validated in-lane by Of
 The Trees' Moonglade Park (phone→text unlock, on Memory Palace — Wobar's target
 label). The IG-wipe move is explicitly rejected: it only pays off with an
@@ -436,9 +445,9 @@ The organs, and where each sits:
 | **TikTok / X** | not strategy — **gates.** Required fields on some label submission forms | absent; may be required |
 | **The mark** | two broken circles — the faceless face. **Cross-cutting: deploys on every other organ** | LOCKED |
 | **The Passage** | the written body, one per EP (bound void poems, sealed with the mark) | new; first one owed, Nick-authored |
-| **Merch / totems** | world-*objects* you wear and carry | seeded (Obscura) |
+| **Merch / totems** | world-*objects* you wear and carry | seeded (via the retired Obscura framework — elements may return via WOBAR.lite) |
 | **A gathering** | the physical manifestation of the world (own event) | horizon — the long-arc goal |
-| **Obscura** | the void made physical — *a different era* of the same world | parked |
+| **WOBAR.lite** | the first *era* of the one world, formalized — Acts 1 + 5, organic instead of hypnotic, bookable and separately marked | live — see `working/WOBAR_LITE.md`. Evolved from and retires Obscura (`reference/WOBAR_OBSCURA.md`, RETIRED 2026-09-01) |
 
 **Owned vs rented.** Socials and streaming are rented land; the Ether (web home + SMS),
 the Passages, Bandcamp, and the live room are owned. Build the owned surfaces — they compound.
@@ -447,9 +456,12 @@ the Passages, Bandcamp, and the live room are owned. Build the owned surfaces �
 **release artwork** (every release, forever) and **Spotify Canvas** (free, per-track, sitting
 directly beside the play button on the platform where the goal metric is measured).
 
-**Eras (to formalize later).** Obscura is a *different era* of the one world — the
-Ghost/Tyler mechanic (one world, distinct faces/eras). "Eras" is a real structural
-mechanic worth its own section; parked for now.
+**Eras — formalized 2026-09-01.** The Ghost/Tyler mechanic (one world, distinct
+faces/eras) is no longer parked. **WOBAR.lite is the first era** — Acts 1 and 5 without
+the confrontational middle, organic instead of hypnotic, its own mark for booking and
+flyers. It evolved out of Obscura, which never got past the idea stage ("all abstract,
+no real action" — Nick, at retirement) and is now retired; see
+`reference/WOBAR_OBSCURA.md` and `working/WOBAR_LITE.md`.
 
 ---
 
@@ -572,8 +584,7 @@ Flagged against WOBAR_COPY / WOBAR_CONTENT / WOBAR_FRAMEWORK / WOBAR_EMOTIONAL_R
   (two broken circles); the web home = the Ether made visible.
 - Decide whether §1 (ground truth) stays in this file or moves to a
   Nick-eyes-only note — most sensitive layer now the cosmology is deeper.
-- **Eras** — formalize as a mechanic (Obscura = a different era of the one world;
-  Ghost/Tyler pattern). Parked but real.
+- ~~**Eras** — formalize as a mechanic~~ **Done 2026-09-01** — see §7.5. WOBAR.lite is the first era; Obscura retired into it.
 - BUILD: Mirror Threshold (spec done → `working/MIRROR_THRESHOLD_SPEC.md`) + the
   **web home** (the Ether's visible body — hosts the Mirror entry, the Passages,
   the poems, the mark).
