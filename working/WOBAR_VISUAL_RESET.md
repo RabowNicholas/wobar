@@ -1,8 +1,8 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.4 (+ §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
-last_updated: 2026-09-01
-last_session: 2026-09-01
+version: 1.5 (+ §9/§9.5, the online video presence and live-show lighting ideas — both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
+last_updated: 2026-09-03
+last_session: 2026-09-03
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
 scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -461,3 +461,49 @@ piece. Worked without modification — the grade travels across both the composi
 world-state (§2.5) and a plain graphic-cut piece, which is the first evidence it's a
 house finish and not something specific to the HOHLWEG pipeline. Purple is saved but
 not yet used on a real piece.
+
+---
+
+## 9. THE VIDEO PRESENCE — audio-reactive fixture as source *(experimental, added 2026-09-03 — idea only, not yet built)*
+
+**⚠ Experimental. Not doctrine — nothing below is locked until something is actually
+built on it.** This records an idea reached in conversation, to test, not a rule to
+build to.
+
+The open question was what WOBAR's **online video presence** actually looks like —
+distinct from a single cover-art piece (§2.5/§8) and distinct from live-show lighting
+(§9.5). Proposed direction:
+
+- **Simple, low-detail environments** — forest, canyon, similar — kept dark/
+  underexposed. The scene's job is to be a plain, mostly-dark ground, not a rendered
+  set piece. Detail stays low on purpose, so it doesn't compete with the light for
+  attention.
+- **The light source is the visual event.** An audio-reactive fixture (form open —
+  could be the existing wireframe form per §2.5, could be something else) provides the
+  only meaningful light in the frame and is what moves/responds to the track. Same
+  "source, not receiver" logic as HOHLWEG's wireframe (§8) — it should look like the
+  fixture is lighting the space, not sitting in someone else's light.
+- **Reference, not a style mandate: Klangkuenstler's stage-lighting work** (concentric
+  rings, tiered tower structures at Monegros/Outworld). What's being borrowed is the
+  *intentionality* — synced, restrained, reads as one coherent instrument rather than a
+  scattershot rig — never the palette (monochrome was Nick's example only, explicitly
+  not a rule) or the specific rig geometry. Palette and fixture form stay open per-piece.
+- **Distinct from live-show lighting (§9.5).** No shared literal mechanic is required
+  between the two — per §2.5's own principle, coherence comes from the shared world,
+  not a repeated mechanic (line 108).
+
+## 9.5 LIVE-SHOW LIGHTING *(experimental, added 2026-09-03 — idea only, not yet built)*
+
+**⚠ Experimental, unbuilt.** Physical lighting design for live performance — wash
+lights, simple lasers, tube lights — audio-synced, built to create a seamless
+audio/visual experience. No prior doctrine covers this; `working/WOBAR_ACTIVE.md`
+flags live as "the strongest expression of the world anywhere," but nothing before
+this was written on lighting specifically.
+
+- Everything fires because the audio calls for it — intentional and synced, never
+  unsynced ambient or spectacle-for-its-own-sake lighting.
+- Multiple fixtures are fine as long as they read as one instrument responding, not a
+  pile of independent effects each running its own pattern — the physical-rig version
+  of "one focal form, never a pile" (§6, line 335).
+- Palette, rig shape, hardware: open. Klangkuenstler is a reference for the
+  intentionality/restraint, not a spec.
