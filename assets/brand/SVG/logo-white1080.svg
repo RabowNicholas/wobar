@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-width: 20px;
+      }
+
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        stroke-width: 40px;
+      }
+    </style>
+  </defs>
+  <rect width="1000" height="1000"/>
+  <g id="white_ring_outer" data-name="white ring outer">
+    <path class="cls-2" d="M789.3,238.45c62.58,69.18,100.7,160.91,100.7,261.55,0,215.39-174.61,390-390,390S110,715.39,110,500,284.61,110,500,110c100.41,0,191.96,37.95,261.08,100.28"/>
+  </g>
+  <g id="white_ring_inner" data-name="white ring inner">
+    <path class="cls-1" d="M251.84,717.54c-50.95-58.08-81.84-134.2-81.84-217.54,0-182.25,147.75-330,330-330s330,147.75,330,330-147.75,330-330,330c-83.34,0-159.46-30.89-217.54-81.84"/>
+  </g>
+</svg>

@@ -22,7 +22,7 @@
 *.hdr
 
 # Large content directories (gigabytes of source/render media)
-assets/
+assets/videos/
 touchdesigner/hdri/
 touchdesigner/third_party/
 touchdesigner/renders/
