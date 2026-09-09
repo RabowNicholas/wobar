@@ -1,8 +1,8 @@
 ---
 title: WOBAR.lite
-version: 0.1
+version: 0.2 (+ first real performance logged — Flow State: Dawn, 2026-09-06)
 created: 2026-09-01
-last_updated: 2026-09-01
+last_updated: 2026-09-08
 status: live — forming, not locked. First real instance of the Eras mechanic (WORLD §7.5).
 scope: The softer, more emotional side of the project — a separately-marked identity for Acts 1 and 5 of the 5-Act Portal Framework, without the confrontational middle. Evolved from and replaces the retired Obscura framework (reference/WOBAR_OBSCURA.md).
 dependencies: [[reference/WOBAR_BRAND]], [[reference/WOBAR_WORLD]], [[reference/WOBAR_FRAMEWORK]], [[working/WOBAR_BRAND_AUDIT]]
@@ -36,11 +36,12 @@ WOBAR.lite evolved out of Obscura's territory — Act 5, "the void made physical
 - **A separate wordmark exists**, distinct typeface from the primary WOBAR mark, in stacked/unstacked and black/white lockups. Not yet formally documented with rationale the way the primary mark is in `reference/WOBAR_BRAND.md` — asset files exist, the *why* behind the typeface choice hasn't been captured yet.
 - Everything else visual (palette, whether it shares core Wobar's desaturated psychedelic range or shifts, texture, motion) is **open** — not yet decided, and shouldn't be assumed from Obscura's old visual language ("same palette, differently expressed, geometry still instead of moving") without Nick confirming that's still the direction.
 
+**First real performance, 2026-09-06.** Live at Flow State: Dawn — melodic/organic bass, ~80–120 BPM territory (Of The Trees, Mfinity, Alex Unger, rSUN, sumthin sumthin and others), recorded and uploaded to YouTube. No longer theoretical — this is the reference instance for what a WOBAR.lite set actually sounds and feels like in the room. Same YouTube description/upload rules as core Wobar sets govern the upload ([[reference/WOBAR_YOUTUBE]]), with the hook/body weighted to the softer register per that file's act-weighting rule.
+
 ## Genuinely open
 
 - Full visual system beyond the wordmark.
 - Whether WOBAR.lite gets its own explicit belief-system emphasis (which of the nine beliefs read differently in a softer context) or simply inherits all nine as-is — not yet tested the way core Wobar's beliefs were stress-tested.
-- First real booking/performance as WOBAR.lite specifically — when this moves from "a set I could theoretically flyer differently" to an actual scheduled thing.
 - Production timeline — when the first WOBAR.lite original gets made.
 - Method going forward, per Nick's own framing at the start of this: **"we will iterate and pivot as needed and as we learn."** This document should get revised as that happens, not treated as a finished spec the way `reference/WOBAR_BRAND.md` now is.
 
