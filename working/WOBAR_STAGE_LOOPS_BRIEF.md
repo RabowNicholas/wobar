@@ -51,6 +51,3 @@ Before you build anything, I'd love to just hear how you'd approach it. A quick 
 ## Where this goes
 
 This starts as a paid job for four loops, but honestly I'm not just looking for loops. I'm looking for someone to build the live side of Wobar with me. Down the line that's a fully audio-reactive show and someone on the team running it. If this world clicks for you and that sounds like something you'd want, the door's open.
-
-**Budget:**
-**Timeline:**
