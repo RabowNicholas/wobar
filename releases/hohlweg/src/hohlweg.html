@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>HOHLWEG</title>
+<link href="g.css" rel="stylesheet">
+<style>
+  @page { size: 720px 1280px; margin: 0; }
+  :root {
+    --bone: #E6E0D4;
+    --ash: #A8A29A;
+    --offblack: #0E0813;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #000; }
+  p, h2, .num { text-shadow: 0 1px 3px rgba(0,0,0,0.6); }
+  body { font-family: 'Montserrat', sans-serif; color: var(--bone); -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  .page {
+    width: 720px; height: 1280px; position: relative; overflow: hidden;
+    page-break-after: always; break-after: page;
+    background-size: cover; background-position: center;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* ---------- title ---------- */
+  .title { background-image: url(cover_blur.jpg); display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .title::before { content: ""; position: absolute; inset: 0; background: rgba(14, 8, 19, 0.35); }
+  .title > * { position: relative; }
+  .title h1 {
+    font-weight: 900; font-size: 64px; letter-spacing: 0.22em; margin-right: -0.22em;
+    margin-bottom: 56px;
+  }
+  .title h1 a { color: var(--bone); text-decoration: none; }
+  .title .cover { width: 600px; height: 600px; display: block; box-shadow: 0 30px 80px rgba(0,0,0,0.6); }
+  .title .tracks {
+    margin-top: 52px; font-weight: 500; font-size: 15px; letter-spacing: 0.32em; margin-right: -0.32em;
+    color: var(--bone);
+  }
+  .title .tracks span { color: var(--ash); padding: 0 0.6em; }
+  .title .wordmark { position: absolute; bottom: 72px; width: 120px; opacity: 0.9; }
+
+  /* ---------- chapters ---------- */
+  .chapter::before {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(5,3,8,0.45) 0%, rgba(5,3,8,0.62) 28%, rgba(5,3,8,0.66) 100%);
+  }
+  .chapter .inner { position: relative; padding: 88px 72px 64px; height: 100%; display: flex; flex-direction: column; }
+  .chapter .num {
+    font-weight: 700; font-size: 12px; letter-spacing: 0.4em; color: var(--ash);
+  }
+  .chapter h2 {
+    font-weight: 900; font-size: 46px; letter-spacing: 0.16em; margin: 14px 0 44px;
+  }
+  .chapter .text { flex: 1; display: flex; flex-direction: column; justify-content: flex-start; }
+  .chapter p {
+    font-weight: 400; font-size: 15.5px; line-height: 1.62; margin-bottom: 1.05em;
+  }
+  .chapter p.broadcast {
+    font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; line-height: 1.6;
+    color: var(--ash); padding-left: 18px; border-left: 1px solid rgba(230,224,212,0.35);
+  }
+  .chapter.dense p { font-size: 14.5px; line-height: 1.6; margin-bottom: 0.95em; }
+  .chapter.dense p.broadcast { font-size: 13px; }
+  .chapter.dense h2 { margin-bottom: 32px; }
+  .chapter.dense .inner { padding-top: 72px; }
+  .chapter.loose .text { justify-content: center; }
+  .chapter.loose p { font-size: 17px; line-height: 1.7; margin-bottom: 1.2em; }
+
+  .p-ernstfall { background-image: url(erntsfall.jpg); }
+  .p-abgrund { background-image: url(abgrund.jpg); }
+  .p-grund { background-image: url(grund.jpg); }
+</style>
+</head>
+<body>
+
+<section class="page title">
+  <h1><a href="https://on.soundcloud.com/rtyUJFMOHxOwIpnbhw">HOHLWEG</a></h1>
+  <img class="cover" src="cover.jpg" alt="">
+  <div class="tracks">ERNSTFALL<span>·</span>ABGRUND<span>·</span>GRUND</div>
+  <img class="wordmark" src="wordmark.png" alt="WOBAR">
+</section>
+
+<section class="page chapter dense p-ernstfall"><div class="inner">
+  <div class="num">CHAPTER ONE</div>
+  <h2>ERNSTFALL</h2>
+  <div class="text">
+    <p>i wake to a siren already going. for a second it's still part of the dream, distant, not mine to worry about. then my eyes are open and the room is exactly where i left it and the sound hasn't moved an inch. it was never far away. i was just still asleep for it.</p>
+    <p>i press my palms into my eyes until the dark goes bright, dragging myself up out of the dream one layer at a time. when i take my hands away the room looks sharper than it should. something in the air has changed shape. i can't point to what yet.</p>
+    <p>then the phone. that tone. not an app, not a person, the system itself reaching in. and under it, a flat, procedural voice:</p>
+    <p class="broadcast">"the following message is transmitted at the request of civil authorities. this is not a test. a state of emergency has been declared for all areas. residents should remain indoors. do not attempt to travel. do not use the telephone system. move to the interior of the building. the interior is the safest location. emergency services operate at reduced capacity. response times cannot be estimated. the cause has not been determined. this is not a test. i repeat this is not a test."</p>
+    <p>my pulse jumps before the words even land. my hands go cold. my throat goes tight.</p>
+    <p>whatever's under my ribs doesn't ask permission. it starts climbing, one breath tighter than the last, and it doesn't level off. it keeps going, past anywhere i know how to hold it.</p>
+    <p>then, just as fast, it starts to loosen. i notice my breath again, longer pulls than before. the room is still the room. my hands remember they're mine.</p>
+    <p>and just as i'm getting back to something like level, the voice comes back one more time, shorter than before:</p>
+    <p class="broadcast">"this concludes the emergency message."</p>
+    <p>then nothing.</p>
+    <p>just the particular quiet of a room that was, a second ago, full of a voice telling me exactly what to do, and now isn't.</p>
+  </div>
+</div></section>
+
+<section class="page chapter loose p-abgrund"><div class="inner">
+  <div class="num">CHAPTER TWO</div>
+  <h2>ABGRUND</h2>
+  <div class="text">
+    <p>the quiet isn't actually quiet. underneath it something is already moving, and i can't tell if i'm hearing it or just starting to think it.</p>
+    <p>i keep looking for something solid to hold the thought against and there isn't one. i reach for whatever was steady a second ago and it's already gone, already sinking, and i can't point to when that started.</p>
+    <p>nothing pushed. i keep checking for what pushed and there's nothing there. there was never anything there.</p>
+    <p>i keep going down anyway.</p>
+    <p>something familiar drifts through, warped, already gone before i can place it.</p>
+    <p>i keep asking what's doing this to me. i ask it over and over like the asking is going to change the answer. it doesn't. i ask again.</p>
+    <p>whatever's pulling isn't waiting on me to figure out where it's coming from.</p>
+    <p>i keep going down and</p>
+  </div>
+</div></section>
+
+<section class="page chapter loose p-grund"><div class="inner">
+  <div class="num">CHAPTER THREE</div>
+  <h2>GRUND</h2>
+  <div class="text">
+    <p>the falling stops being falling. not with a jolt. just a bottom under it that was already there before i landed on it.</p>
+    <p>it takes a while to understand what's actually here. not something new. everything i've been dragging without looking at, waiting exactly where i left it.</p>
+    <p>the whole way down i kept asking what was pulling. i'm standing on the answer.</p>
+    <p>i keep expecting it to crush me the way it always has. it doesn't. it's the same weight. it just isn't only weight anymore. there's something under me that wasn't there a second ago, made of the same stuff that was pulling me down.</p>
+    <p>i stop trying to get out from under it. i stand on it instead.</p>
+    <p>nothing left. nothing gone. i'm just holding it differently now, and it holds me too.</p>
+    <p>i'm still not safe. i'm less afraid of it than i was. both of those are true, and i don't need one to cancel out the other.</p>
+    <p>somewhere above all this, so faint i almost miss it, the alarm from the very beginning is still going. they said it concluded. it never actually stopped.</p>
+  </div>
+</div></section>
+
+</body>
+</html>
