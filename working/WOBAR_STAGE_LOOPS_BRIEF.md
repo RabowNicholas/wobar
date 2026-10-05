@@ -33,7 +33,7 @@ I attached three: the cube field with the sphere, the purple contour pattern, an
 
 Four loops, one for each energy level: low, building, peak, settling. What they look like and how they move is up to you. Peak is the one where the world can start breaking apart.
 
-Before you build anything, I'd love to just hear how you'd approach it. A frame or rough sketch for any one of the four would be perfect. If it clicks, we go from there.
+Before you build anything, I'd love to just hear how you'd approach it. A quick explanation is perfect. If it clicks, we go from there.
 
 ## Specs
 
