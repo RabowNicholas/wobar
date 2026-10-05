@@ -237,6 +237,8 @@ Checked against existing vault material (mostly `reference/WOBAR_BRAND.md`'s pal
 
 **Signature look — passes.** Mark (two broken circles), vector-void wireframe-on-black, the desaturated palette, the typography system — locked, consistently applied. Alba's own test (would a stranger recognize you well enough to costume as you) doesn't map cleanly, and it shouldn't: the entity is deliberately faceless, so there's no personal styling to costume. The real equivalent — would a Wobar visual be recognized on sight with no name attached — passes.
 
+> **⚠ Amended 2026-10-05 — the costume half of this was wrongly skipped.** The reasoning above rests on facelessness, but WORLD §4 had already lifted it for Nick on 2026-08-04: *the entity* has no face, *Nick* does. The costume test applies to Nick and was never run. It is now run in [[working/WOBAR_STAGE_LOOK]]. The visual-system half (would a Wobar visual be recognised with no name) still passes.
+
 **Consistency-as-boundaries — passes, still the strongest pillar in the audit.** §8 THE SACRED, anti-vocab, restraint-over-vividness, show-don't-explain. Nothing here needed today's work to hold up; it was already the most rigorously codified part of the brand before this session started.
 
 **Two convergences found while checking, not manufactured — same shape as Phase 1's belief-system match:**
