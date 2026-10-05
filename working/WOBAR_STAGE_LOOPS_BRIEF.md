@@ -1,4 +1,4 @@
-# Wobar — stage visuals
+# Wobar — world visuals
 
 ## What Wobar is
 
@@ -29,7 +29,7 @@ A few things that make it feel like Wobar to me:
 
 ## References
 
-I attached three: the cube field with the sphere, the purple contour pattern, and the line terrain. What I love in all of them is the movement. Hypnotic, kind of hard to look at in a good way, your eye never really lands anywhere. They're all way more saturated than what I'm going for though.
+These three are yours, and they're what got me reaching out. What I love in all of them is the movement. Hypnotic, kind of hard to look at in a good way, your eye never really lands anywhere. For Wobar I'd take the color more muted, like the palettes above.
 
 ## What I'm looking for first
 
