@@ -41,11 +41,10 @@ Before you build anything, I'd love to just hear how you'd approach it. A quick 
 
 - 140 BPM, locked to the bar. Each loop is 16 bars (64 beats, about 27.4 seconds) and loops clean.
 - 30 fps.
-- These are going to end up on all kinds of screens: wide, vertical, square, weird LED shapes. So nothing important dead center or right at the edges.
+- These are going to end up on all kinds of screens: wide, vertical, square, weird LED shapes. I'll cut the vertical versions out of the middle of the wide frame myself, so it has to hold up if I crop a vertical slice out of the center.
 - For each loop:
-  - 3840×3840 ProRes 422 HQ master
-  - 1920×1080 HAP
-  - graded and grayscale versions of all of the above
+  - 3840×2160 MP4, 10-bit, high bitrate
+  - graded and grayscale versions
   - project files
 - If you can set it up so things like speed, density and displacement are easy to dial in later, that'd be huge. Eventually I want this reacting to the music live.
 
