@@ -360,7 +360,7 @@ The full Alba-method audit — enemy, archetype, origin, superpower, plot — pl
 **State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.
 
 **Outside:** [[working/WOBAR_OUTSIDE_CHECKLIST]], a pass/fail checklist for covers + flyers, draft, never run against a real piece.
-**Inside:** a phase-1 brief for a VJ: four rendered loops, one per energy tier, 16 bars at 140, composed to survive any crop, procedural so it can port to a real-time TD system later. The long-run goal is a collaborator who buys into the project, not a vendor.
+**Inside:** [[working/WOBAR_STAGE_LOOPS_BRIEF]], a phase-1 brief for a VJ: four rendered loops, one per energy tier, 16 bars at 140, composed to survive any crop, procedural so it can port to a real-time TD system later. The long-run goal is a collaborator who buys into the project, not a vendor.
 
 **Open:** whether the checklist holds up against HOHLWEG · what the flyer's "tear open wider" actually looks like · whether any of this graduates into `WOBAR_VISUAL_RESET.md`.
 
