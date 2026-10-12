@@ -365,6 +365,27 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 
 **Open:** everything — no source evaluated firsthand, no account created, no clip pulled. Whether/how this connects to [[reference/WOBAR_ARCHIVE]]'s Act-by-Act sourcing is undecided.
 
+### skid — Act 4 original, named and covered 2026-10-12
+**State: name locked, cover exported, track unreleased.** An Act 4 RELEASE original: a dirty, cocky skanker, fast rapping from an Australian MC over a liquid psychedelic bass texture. Playful and rude, not philosophical.
+
+**`skid` over `slick`.** The naming rule's subject is the listener, not the MC: the track is the slick, the listener is what skids on it. `slick` would also have captioned its own cover (an oil slick titled slick is the gloss *never explained* forbids), lands as the adjective *polished* on a DJ's mic, and collides with Kacie's "Slick" (Feb 2025, tagged 140 / Deep Dubstep / Grime). Rejected earlier as too literary: spate, slipstream, torrent, volley, aplomb, muster.
+
+**Cover:** `assets/cover-art/skid/skid_cover.png` (2048 × 2048) plus the PSD. A macro plate of oil film on wet asphalt with no wireframe object, graded with `WOBAR — Purple`; pipeline notes are in [[working/WOBAR_VISUAL_RESET]] §8.
+
+**Open:**
+- **`skid` has not been checked against existing titles in the lane.** Only broad web searches ran, with no exact-title lookup on Beatport or SoundCloud, so a clean result there is not evidence.
+- **The mark is white on this cover**, as on HOHLWEG. Nick's plan going in was to tint it `#A085AE`; exported white. With the HOHLWEG question above, that is now two covers with a white corner mark and no written rule.
+- **Whether "macro material, no object" is a permitted cover mode** alongside the composite. It is not written into VISUAL_RESET as one; this cover is the first square cover built that way.
+- **The export is 2048px.** Distributors commonly want 3000 × 3000.
+
+### Inside vs outside — stage visuals and release art as two views of one world
+**State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.
+
+**Outside:** [[working/WOBAR_OUTSIDE_CHECKLIST]], a pass/fail checklist for covers + flyers, draft, never run against a real piece.
+**Inside:** [[working/WOBAR_STAGE_LOOPS_BRIEF]], a phase-1 brief for a VJ: four rendered loops, one per energy tier, 16 bars at 140, composed to survive any crop, parameters exposed so it can become a real-time system later. The VJ works in Blender; the brief deliberately names no software. The three references are **his own pieces** (IG `kaydn_the_asian`), credited as such in the brief. The long-run goal is a collaborator who buys into the project, not a vendor; the brief signals the door is open without naming terms. Budget and timing are settled in person, before any work starts. **Sent-ready as `working/WOBAR_World_Visuals.pdf`**, to go alongside the HOHLWEG release packet.
+
+**Open:** his read on the brief (the first step asked for is an explanation of his approach, not a sketch) · what collaborator terms Nick would actually offer · whether the checklist holds up against HOHLWEG · what the flyer's "tear open wider" actually looks like · whether any of this graduates into `WOBAR_VISUAL_RESET.md`.
+
 ---
 
 ## STANDING TRAPS

@@ -459,8 +459,17 @@ flat cut/graphic asset (a *SAMPLES I'LL NEVER GET CLEARED* flip cover — LSDREA
 Kill The Noise *Stink Mode*, dark/wonky 140 register) rather than a photoreal-composite
 piece. Worked without modification — the grade travels across both the composite
 world-state (§2.5) and a plain graphic-cut piece, which is the first evidence it's a
-house finish and not something specific to the HOHLWEG pipeline. Purple is saved but
-not yet used on a real piece.
+house finish and not something specific to the HOHLWEG pipeline.
+
+**Purple's first use, 2026-10-12: the `skid` cover** (`assets/cover-art/skid/`), and the
+first cover with **no wireframe object** — a Midjourney macro plate of a motor-oil film on
+wet asphalt, graded and marked, nothing composited in. The preset now has a file:
+`assets/brand/gradients/wobar_purple.grd` (stops evenly spaced at 0/25/50/75/100; the green
+preset still has no exported file). **Soft Light landed at 30%, below the 40–70% range
+above.** At 50% the plate's teal was gone and the frame read as a nebula: dark field, pale
+flecks as stars, the streak as a galaxy arm. The second hue was what said *oil on a road*.
+On a plate whose material is identified by its colour interference, the grade's ceiling is
+wherever the second hue dies, not the range.
 
 ---
 
