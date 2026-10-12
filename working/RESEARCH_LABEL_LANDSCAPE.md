@@ -1,9 +1,9 @@
 ---
 title: Research — Label Landscape (dark/wonky 140)
-version: 4.1
+version: 4.4
 created: 2026-07-26
-last_updated: 2026-08-04
-status: live — v4.1. Browser-verified. §3 gained five corrections + two Beatport failure modes from the 2026-08-04 dream-tier sweep. NOT yet adversarially reviewed.
+last_updated: 2026-08-25
+status: live — v4.4. Browser-verified. §3 gained five corrections + two Beatport failure modes from the 2026-08-04 dream-tier sweep. Wubaholics and DUPLOC doors confirmed live 2026-08-25; DUPLOC deep-dived via founder's own r/realdubstep posts same day — label reset to VA-only (Q3 2025), A&R filter, sublabel correction. §7 added same day — the ladder question (§6.5, previously deliberately out of scope) answered via a 34-artist Beatport discography walk across both rosters, then all 16 surfaced labels' submission doors checked live: 11 open, 5 dead ends. NOT yet adversarially reviewed.
 scope: Tiered label list for the dark/wonky 140 lane. Doors, rosters, sound, Beatport commercial data, the visibility sweep (§2.5 — who gets featured) and the artist-discography sweep (§2.6 — the VA compilation economy). Supersedes the label tables in RESEARCH_LABEL_MAP and the label section of WOBAR_GROWTH_PLAN. Artists used only as a discovery index; no artist-side output.
 dependencies: [[working/WOBAR_GROWTH_PLAN]], [[working/RESEARCH_LABEL_MAP]], [[working/WOBAR_PLACEMENT_PLAN]], [[working/RESEARCH_VERIFICATION_MEMO]]
 ---
@@ -75,7 +75,7 @@ Plus **Super Future** (opens the set) has *Technicolor EP* on Bassrush, and Worm
 |---|---|---|---|
 | **Deadbeats** | **Free Google Form** — `bit.ly/Demos4Deadbeats` | 🟢 **✅ VERIFIED — form loaded, fields read, 2026-07-27** | 0, but UK-140 core |
 | **Jadū Dala** | Email `jadudala@gmail.com` | 🟢 **✅ VERIFIED — contact page loaded, quoted verbatim, 2026-07-27** | 1 |
-| **Wubaholics** | LabelRadar portal (no door on own site) | 🟡 **PARTIAL** — own site confirmed to have no demo page (✅); portal URL resolves but **the form was never read** (⚠️) | **2** |
+| **Wubaholics** | **Google Form** (2026 cycle) — via Linktree, not LabelRadar | 🟢 **✅ VERIFIED — form loaded, fields read, 2026-08-25** | **2** |
 
 **Deadbeats — the headline finding.** Zeds Dead's label, currently **#1 on Beatport's 140/Deep Dubstep chart** (Zero UK *ON JOB*), carrying STVSH, Phrva, Distinct Motive, OkayJake, Hamdi, Casey Club. Its demo door is a **four-field Google Form**:
 
@@ -90,7 +90,9 @@ Their stated A&R posture (UKF label spotlight): *"not concerned with artist size
 
 **Jadū Dala** — contact page, verbatim: *"Looking to submit a demo? Please send private links to jadudala@gmail.com"*. Philadelphia, founded 2016, Nathaniel Kosko + Jesse Babini. No genre restriction, no mastering bar, no track minimum stated. Beatport top 10 carries **Blurrd Vzn *GIVE IT UP (BUCKSHOT)* #2** and **STVSH *CROOKED* #6**.
 
-**Wubaholics** — Boca Raton FL, April 2020. Own words: *"a collective of bass enthusiasts and wub-addicts... strives to highlight **producers from all over the world who bring their own unique style** to powerful bass driven dubstep, hybrid trap, and experimental bass tracks."* Also does **management**. Top 10 is STVSH ×3, Phrva ×2, Crucial, Flozone ×2, Cozy Kev ×2, Detre, Austeria. Recent signings include **Wiley**. Their own site has no demo page — LabelRadar is the route.
+**Wubaholics** — Boca Raton FL, April 2020. Own words: *"a collective of bass enthusiasts and wub-addicts... strives to highlight **producers from all over the world who bring their own unique style** to powerful bass driven dubstep, hybrid trap, and experimental bass tracks."* Also does **management**. Top 10 is STVSH ×3, Phrva ×2, Crucial, Flozone ×2, Cozy Kev ×2, Detre, Austeria. Recent signings include **Wiley**.
+
+> **The door — verified live 2026-08-25.** Their Linktree (`linktr.ee/wubaholics`) carries a **"Wubaholics 2026 Demo Submission Form"**, a live Google Form (not LabelRadar — that route is stale). Header text: *"We are primarily targeting 3-5 track EPs. Please allow 4-6 weeks for turnaround. Make sure all submissions are private SoundCloud links with DL enabled."* Six fields, no login required: **Email\*, Artist Name\*, Private SoundCloud Link w/ DL Enabled\*** (all required) + optional TikTok/Instagram/X usernames. No genre gate stated, no fee, no mastering bar. **Targets EPs, not singles** — the one real constraint against a one-off submission.
 
 > **Second door — the Wubaholics Anonymous Mix Series.** Their framing: *"Tracks define your sound as a producer, but a mix is a different weapon altogether... the journey that you take your listeners on."* This fits the 93-minute set that already exists, burns no reserve track, carries no exclusivity, and showcases **the arc** — which the vault argues is Wobar's actual identity rather than any single sound.
 
@@ -211,7 +213,17 @@ Unchecked, probable vehicles by name: **DirtySnatcha Records · CASHEK · Wilder
 
 ### The two genuine finds — and they share a shape
 
-**DUPLOC** (Belgium) — the most editorially-featured label in the lane and **completely absent from the prior target list**. Top 10: **Hamdi *Skanka* #1**, Criso ×2, Jungle Rootz ×2, Ternion Sound, Teffa, Syxx, Packet Loss. Roster orbit includes Joe Nice, ENiGMA Dubz, ONHELL, Hypho. Runs a **numbered VA series** — `DUPLOC//001`–`//011`, `DUPLOC140` (**22 artists**), `This is DUPLOC Vol. 1/2`, `DUPLOC LEGACY 1/2` samplers. Lane: deep dubstep / 140, UK-underground and dub-leaning — the **Distinct Motive end** of Nick's set, not the STVSH end.
+**DUPLOC** (Belgium) — the most editorially-featured label in the lane and **completely absent from the prior target list**. Top 10: **Hamdi *Skanka* #1**, Criso ×2, Jungle Rootz ×2, Ternion Sound, Teffa, Syxx, Packet Loss. Roster orbit includes Joe Nice, ENiGMA Dubz, ONHELL, Hypho. Runs a **numbered VA series** — `DUPLOC//001`–`//011`, `DUPLOC140` (**22 artists**), `This is DUPLOC Vol. 1/2`, `DUPLOC LEGACY 1/2` samplers. Lane: deep dubstep / 140, UK-underground and dub-leaning — the **Distinct Motive end** of Nick's set, not the STVSH end. Legal entity `DUPLOC.COM CommV`, director **Pieter Grauwels** (launched the brand in 2012, incorporated the label 2015).
+
+> **The door — verified live 2026-08-25.** Their bio page (`bio.to/duploc`) states plainly: *"contact / demos via **info@duploc.com**"*. No portal, no form, no LabelRadar. A 2026 UKF retrospective on the label's 10th anniversary describes Grauwels's actual A&R pattern as **relationship-driven, not submission-driven**: he cites signing Hamdi after the artist "commented on our first ever upload" and kept sending music "from time to time" over ten years before *Skanka* got released. **Read this as: the email is real, but a cold one-off drop is unlikely to convert — engagement with DUPLOC's own channels (comments, SoundCloud reposts, the YouTube/podcast side of the brand) over time is the pattern that's actually worked.**
+
+> **Deeper dig, 2026-08-25 — the founder's own words, r/realdubstep.** Two posts by `u/DUPLOCOfficial` (verified live Reddit account, both from ~2025, found via `old.reddit.com/r/realdubstep` search — the label is a one-man operation, **Pieter Grauwels**, a Belgian lawyer who runs it "from the couch" since 2010/founded 2015, married, no touring, no A&Ring/networking by his own admission):
+>
+> - **"Insights into my DUPLOC label reset plans"** (his post, ~120 pts): as of **Q3 2025** the label stopped releasing artist EPs entirely and now releases **only 5-track VA compilations**, numbered `DUPLOC//001` onward. His stated reasons, in his own words: he personally prefers curating comps over negotiating a full EP with one producer; comps sell better than EPs on the label's own data; a comp is a much lighter production/coordination lift; and — the sharpest one — **he's increasingly locked out of bigger producers**, who are being bought into exclusive deals by larger labels "buying their way in," so cherry-picking a single track per artist for a VA is now the only realistic way he can still work with them. He explicitly signs off with *"I'm of course happy to listen to tunes — as always, feel free to send anything."*
+> - **"I'm running the DUPLOC label for 10 years now, AMA"** (his post, 152 pts, 66 comments): confirms the email again directly in a reply — *"always feel free to tell him to send an email to info at duploc dot com - always listening to everything!"* — and states his A&R filter in his own words: (1) he wants **tunes people can dance to, that DJs will play** — not overly experimental/forward-thinking demos; post-reset there is **"no specific sound"** he's chasing (broader than the label's old, more tightly-themed sub-series like *140 ALLSTARS* or *BLXCK TXPES*); (2) for **artist EPs** (no longer offered) he wanted proof of long-term genre dedication, but he states this bar is **"less of a problem" for compilation submissions**. No exclusivity — "no artist is signed exclusively and everyone can take their own bookings."
+> - **Correction to this doc's own §5 negative-findings sweep**, which found "no sublabel structure" at DUPLOC: three side labels existed — **Basskruit, D-BLK, BT** — all retired as part of the same 2025 reset, folded back into the main DUPLOC brand.
+> - **Cadence, cross-checked against the r/realdubstep monthly release-tracker threads**: `DUPLOC//007` (Mar 2026) → `//008` (May) → `//009` (May) → `//010` (Jun) → `//011` (Aug), plus `DUPLOC Legacy 1` (Jul) and `Legacy 2` (Aug) samplers. **A new 5-track VA roughly every 4–6 weeks** — this is a genuinely high-throughput, actively-curated door, not a dead inbox.
+> - **Read together, this reframes the DUPLOC door:** it is not "submit an EP, wait for a signing." It is **"send tunes to info@duploc.com and get considered for whichever `DUPLOC//0XX` 5-track VA is next in the queue."** One-man A&R, no formal process, no fee, no login — but also no guaranteed timeline, since the whole operation runs on one person's spare hours around a full-time legal career.
 
 **Incurzion Audio** — `We Are Incurzion Vol. 5` and `Vol. 6` (split SLOW / FAST) carry **15–30 artists per volume**; `Sometimes Summer Sonics Vol. 3` carries 16. Top 10 led by Lokal, plus Phosphr, Fake Two Piece, Para, Casey Club, Kaya.
 
@@ -370,7 +382,7 @@ All from direct browser reads of Beatport artist pages, all 22 dream-tier artist
 
 > 🔴 **LAYER B — agent-sourced 2026-07-26, unverified.** Negative findings are the *safest* class of Layer B material — a missed sublabel costs an opportunity, not a bad action — but "no sublabel found" is not proof one doesn't exist.
 
-**The sublabel hypothesis largely failed.** No sublabel structure at: Deadbeats · Cyclops · Gravitas · Prime Audio · Rottun · Space Yacht · Dome of Doom · HypnoVizion · Memory Palace · Odyzey · Good Society · Wubaholics · Jadū Dala · Deep Dark & Dangerous · Wormhole.
+**The sublabel hypothesis largely failed.** No sublabel structure at: Deadbeats · Cyclops · Gravitas · Prime Audio · Rottun · Space Yacht · Dome of Doom · HypnoVizion · Memory Palace · Odyzey · Good Society · Wubaholics · Jadū Dala · Deep Dark & Dangerous · Wormhole. **Correction (2026-08-25, Layer A — the founder confirmed it himself):** DUPLOC did have three — **Basskruit, D-BLK, BT** — all retired in the Q3 2025 label reset, folded back into the main brand. No independent door ever existed for them and none does now; they're dead, not worth chasing.
 
 Sublabels that exist have **no independent door** — all route through the parent: **Pilot.** (UKF) · **SSKWAN** (Wakaan, downtempo) · **Circus Electric** + **DPMO** (Circus).
 
@@ -385,9 +397,72 @@ Insomniac's imprints (Bassrush, Dreamstate, IN/ROTATION, Discovery Project, Inso
 1. **Signing floors.** Six agents failed; one browser pass failed. The only real datapoint remains Jadū Dala releasing **Vulora at 119 monthly listeners**. Founder-share and set-overlap are the working substitutes.
 2. **The LabelRadar submission flow.** Four attempts, all login-walled. Needs a human to make an account — five minutes.
 3. **Bassrush's and Wakaan's actual doors.**
-3b. **The VA doors — now the biggest open question in this document.** Ten recurring multi-artist series identified in §2.6, **none checked for a submission route**: **Subsidia** (Dusk/Night, 20–29 artists/vol, 8 lane appearances) · **MONTA** (24–32/vol) · **DUPLOC** · **Incurzion Audio** · **We Are Deadbeats** · **Bassrush Prophecy Vol. 15** · **Good Society Vol. 6** · **Space Yacht A Sequence In Time** · **Cimmerian**. A 29-slot compilation is a materially different proposition from a one-slot signing. **Check Subsidia and MONTA first.**
+3b. **The VA doors — mostly still open.** Ten recurring multi-artist series identified in §2.6; **DUPLOC's route is now confirmed** (`info@duploc.com`, verified 2026-08-25 — see §2 entry), the rest still unchecked for a submission route: **Subsidia** (Dusk/Night, 20–29 artists/vol, 8 lane appearances) · **MONTA** (24–32/vol) · **Incurzion Audio** · **We Are Deadbeats** · **Bassrush Prophecy Vol. 15** · **Good Society Vol. 6** · **Space Yacht A Sequence In Time** · **Cimmerian**. A 29-slot compilation is a materially different proposition from a one-slot signing. **Check Subsidia and MONTA first.**
 3c. **Unread pagination.** Blurrd Vzn, Quackson and Ero808 all have page 2+ of releases not yet read. More labels are certainly there.
 3d. **The rap-flip half of the lane.** Segment 4 (16% of runtime) is largely invisible to Beatport because uncleared flips can't be distributed. Noctiil, SPOONE, FLY and others need a SoundCloud-side method that has never been attempted.
 4. **Labels that don't advertise.** The discovery pass built to find them never ran — killed by the search quota. **Biggest remaining gap; most likely to hold short-queue doors.**
-5. **The ladder question** — do T1 credentials precede bigger placements, or do those artists enter by collaboration? Needs artist release histories, deliberately out of scope.
+5. ~~The ladder question~~ — **answered, see §7 (2026-08-25).**
 6. **Whether the music clears the bar.** Unchanged, unaddressed, still the binding constraint. The one cheap instrument found for it is watching **Tune Reactor** — a label A&R reacting to ~40 tracks a week, live and free.
+
+---
+
+## §7 — THE LADDER: labels that feed Wubaholics' and DUPLOC's own rosters (2026-08-25)
+
+🟢 **LAYER A — browser-verified, 2026-08-25.** Method: full Beatport discography walk (`?per_page=150`, all profile variants checked for fragmentation, all profiles sanity-checked against genre/BPM/date for conflation) across **15 Wubaholics-affiliated artists** and **19 DUPLOC-affiliated artists** — every artist either label has a confirmed release with. For each artist, every *other* label they've released on was logged, then tallied across the roster. A label that recurs across several different artists on one roster (or both) is a real structural bridge, not a coincidence — that's the actual ladder signal, distinct from a label just having "a lot of releases."
+
+**Reframe first: Deadbeats, Bassrush, Jadū Dala and UKF are not rungs *below* Wubaholics/DUPLOC — they're beside or above them.** All four turned up as the strongest cross-roster bridges (artists on both target labels also release on all four), which makes sense: success flows outward and upward, not down. Their doors are already known (§2). Treat them as parallel targets, not stepping stones.
+
+**Create Music Group turned up across 6 different Wubaholics-roster artists** — but it's a distributor, not a label (already flagged out-of-scope in §2.5's majors list). A credit there isn't a credential. Excluded from the ranking below.
+
+### The real rungs — real, multi-artist labels, smaller than the two targets, that their own artists cut teeth on
+
+🟢 **Doors verified live 2026-08-25**, same method as the Wubaholics/DUPLOC door hunt: label's own site/Bandcamp/Instagram bio, checked directly.
+
+| Label | Bridges (artist count) | Roster | Door |
+|---|---|---|---|
+| **Deep Dark & Dangerous** | **8** — Criso, Ternion Sound, Teffa, Syxx, Kyber, ENiGMA Dubz, 11th Hour, Rygby | DUPLOC | ✅ `demo@deepdarkdangerous.com` — Instagram bio, verbatim |
+| **Locus Sound** | 4 — Criso, Q100, 11th Hour, Rygby (+ Hamdi, incidental find) | DUPLOC | ✅ `locussounduk@gmail.com` — Instagram bio, verbatim |
+| **Infernal Sounds** | 4 — Ternion Sound, Teffa (×2), Q100, Kyber | DUPLOC | ✅ `infernalsoundsdubstep@gmail.com` — official site contact page |
+| **Good Society** | 4 — Phrva, dêtre, rSUN, OkayJake | Wubaholics | ❌ **No door found.** IG bio, `pear.us/good-society` link hub, Bandcamp all checked — only contact is a text line for **event invites**, not music. Genuinely curator/relationship-driven; LA party brand with a label attached, not a cold-submission target. |
+| **MorFlo Records** | 4 — Flozone, Austeria, 2TD, Odd Language | Wubaholics | ✅ Web form at `morflorecords.com/contact`, page explicitly labeled **"CONTACT + SUBMISSIONS"**. Founded by Mersiv. No public email, form only. |
+| **SubCarbon Records** | 4 DUPLOC (Criso, Ternion Sound, Packet Loss, Subculture) + 1 Wubaholics (2TD) = 5 | Both | ✅ `submissions@subcarbon.be` — Bandcamp bio, verbatim: *"Submit tracks : submissions@subcarbon.be"*, **email only, they state they don't answer SoundCloud messages**. Founded by Ganja White Night. Found independently twice (both door-hunt passes hit the same address) — treat as solid despite the vault's older unreliable-data flag on this label, which concerned an unrelated claim (location), not this. |
+| **Vision Recordings** | 3 — Hamdi, Criso, Ternion Sound | DUPLOC | ✅ Live Google Form, `visionrecordings.nl/demos`. Required: email, private SoundCloud (DL enabled), artist name, track title, type, recipient tier, signed status. **MP3 only, no WAV.** Caveat: this is a **Netherlands DnB-core label** (Sleepnet, Thys, Noisia) with 140/dubstep as a visible-but-secondary lane — don't expect a 140-first read. |
+| **Artikal Music UK** | 3 — Criso, Jungle Rootz, Ternion Sound | DUPLOC | ❌ **No dedicated door.** Website doesn't resolve (the Ltd company dissolved 2018, though releases continue); no email on Instagram or Linktree. Only channel is Bandcamp's generic "Contact" message-through-Bandcamp link. Run by J:Kenzo & Mosaix. |
+| **Sound in Picture** | 3 — Teffa, 11th Hour, Mob Killa | DUPLOC | ❌ **No dedicated door.** Sofia, Bulgaria label/photography-magazine hybrid. Only a generic Bandcamp contact-message link found. |
+| **Foundation Audio** | 3 — Teffa, Mob Killa, Rygby | DUPLOC | ❌ **No dedicated door.** Bristol, founded 2013 by Chad Dubz. Only generic Bandcamp contact-message link. Mild responsiveness flag: a 2022 r/realdubstep thread shows a buyer getting no reply for weeks via Bandcamp/SoundCloud DM. |
+| **Foto Sounds** | 3 — Jungle Rootz, ENiGMA Dubz, 11th Hour | DUPLOC | ✅ `Fotosoundsuk@gmail.com` — Instagram bio, verbatim: *"Demos - Fotosoundsuk@gmail.com"* |
+| **WiddFam** | 3 — IDHS, Kyber, Subculture | DUPLOC | ✅ `WiddFamSubmission@gmail.com` — dedicated submission address on their Bandcamp page, distinct from general contact. No separate door found for their own comp series — same inbox appears to serve both. |
+| **Odyzey Music** | 3 — dêtre, Austeria, rSUN | Wubaholics | ✅ `music@odyzeymusic.com` — official contact page, `odyzeymusic.com/contact`. **The long-flagged "biggest unchecked door" is now checked and open.** |
+| **Subsidia** | 3 — STVSH, OZZTIN, OkayJake | Wubaholics | ❌ **No submission channel found.** `subsidia.ca` has no contact/submit page (404s on guessed paths); Instagram bio only links to the main site; no public LabelRadar profile. As an Excision corporate-adjacent imprint, likely routes entirely through management — **treat as closed until proven otherwise.** |
+| **Trippy Bee Records** | 3 — Austeria, OZZTIN, rSUN | Wubaholics | ✅ Live Google Form via `trippybeerecords.com/contact`. Header: *"Thanks for thinking of Trippy Bee Records! ... we will get back to you if your release is a fit."* Four fields: artist name, email, Instagram, private SoundCloud/Dropbox. No genre gate. **Young label (LSDREAM's, launched Sept 2025) — actively building its roster**, arguably the most receptive door on this whole list. |
+| **Aspire Higher** | 3 — UrBoiN8 (Wubaholics), IDHS + Subculture (DUPLOC) | **Both** | ✅ `AspireHighderProductions@gmail.com` — surfaced consistently across search results for both their "Tune Tuesday" and EP/album submissions. **Moderate confidence** — not independently re-verified on-site this pass. |
+
+### The submission shortlist — doors confirmed open, ranked
+
+1. **Deep Dark & Dangerous** — `demo@deepdarkdangerous.com` (8-artist bridge, strongest signal in the whole sweep)
+2. **Odyzey Music** — `music@odyzeymusic.com` (long-flagged top priority, now open)
+3. **Trippy Bee Records** — [Google Form](https://docs.google.com/forms/d/e/1FAIpQLSfE2Xr2bAbft99zf75WP1g_NTldUfoVihjpM9MpQ0_ioajNaw/viewform) — young, actively building, no genre gate
+4. **SubCarbon Records** — `submissions@subcarbon.be` (email only, no SoundCloud DMs)
+5. **Locus Sound** — `locussounduk@gmail.com`
+6. **Infernal Sounds** — `infernalsoundsdubstep@gmail.com`
+7. **Foto Sounds** — `Fotosoundsuk@gmail.com`
+8. **WiddFam** — `WiddFamSubmission@gmail.com`
+9. **MorFlo Records** — [contact/submissions form](https://morflorecords.com/contact)
+10. **Vision Recordings** — [demo form](https://visionrecordings.nl/demos) — DnB-core, 140 is secondary
+11. **Aspire Higher** — `AspireHighderProductions@gmail.com` (moderate confidence)
+
+**Dead ends (no usable door found):** Good Society (event-invite line only) · Artikal Music UK (Bandcamp-message only) · Sound in Picture (Bandcamp-message only) · Foundation Audio (Bandcamp-message only, mild non-responsiveness flag) · Subsidia (nothing public — corporate/management-routed)
+
+### A verdict this sweep reopens
+
+**Morii Records** was filed in §3 as "❌ Vehicle — ENiGMA Dubz 8/10." That founder-share number describes Morii's Beatport *sales* chart, which it still probably dominates. But **three other DUPLOC-roster artists actually release there** — Criso, Ternion Sound, Noclu — none of them ENiGMA. Read this as: Morii may be a sales vehicle for ENiGMA and *still* be a real, working multi-artist A&R door underneath that. Worth a second look before writing it off entirely.
+
+### Low ladder value despite being on-roster
+
+**Crucial, Austeria, Cozy Kev** mostly self-release (DistroKid / own imprint) rather than getting signed elsewhere — high release counts, weak external credentialing. **Gisaza and Sam Cosmic** are close to DUPLOC-exclusive with no outside footprint yet. **Wiley** is the actual UK grime legend on Wubaholics' roster — not a peer datapoint for anyone building toward these labels.
+
+### Method notes for next pass
+
+- **dêtre** (two Beatport profiles) and **Subculture** (severe 4-way conflation — only 7 of ~40 labels on that profile belong to the DUPLOC artist) both required the fragmentation/conflation checks documented in §2.6/§3. **Kyber** also conflates a 2010s psytrance producer with the 2018+ bass artist — only the latter's labels are counted above.
+- No search-quota wall was hit on either roster walk — all 34 artists resolved.
+- **Doors checked 2026-08-25** (same day) — 11 of 16 confirmed open with a real email or form, 5 dead ends. See the shortlist above. **Next action is submission, not more research** — the ladder question and its doors are both answered.

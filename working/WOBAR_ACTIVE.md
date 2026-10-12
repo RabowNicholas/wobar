@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.4 (+ HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
-last_updated: 2026-09-01
+version: 3.5 (+ HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
+last_updated: 2026-09-04
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -40,6 +40,8 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 **ABGRUND's build system, untested on the arrangement:** a loop is the opposite of a fall, so the groove stays put and a parameter underneath descends. Cheap Shepard–Risset (static bandpass over moving tones *is* the envelope) · **four rates** — bar / phrase / track / event, because the ear normalises any single one in ~30s · no tonic, whole-tone and octatonic, never land on the 1 · `risset` M4L generator installed to the Ableton User Library. §6 is the kill-list: no riser, no tension curve, no downlifter that lands, no silence-as-impact.
 
 **The cover art has its first build — 2026-08-20, the composite system's first working piece.** A photoreal sunken-lane (hohlweg) environment with a low-poly wireframe form composited in, per [[working/WOBAR_VISUAL_RESET]] §2.5/§8 — that file owns the pipeline (Midjourney plate, Blender object, Photoshop compositing) and the register tension it surfaced. Nick: *"this is the first iteration of the brand's visual identity... move in this direction as a whole"* — confirmed as the forward direction for the brand's visual identity, not a one-off for this cover.
+
+**Track art — a second mode, macro material photography, added 2026-08-28.** [[working/WOBAR_VISUAL_RESET]] §8.5 now owns this: no wireframe object, one material per track (leaf/ERNSTFALL, root/ABGRUND, dirt/GRUND), same grade language as the cover pipeline. GRUND's dirt shot is flagged — reads too continuous with ABGRUND, doesn't land the crushing-to-grounding turn. ATEM has no image yet: a hollow-in-root-wood concept was tried and rejected (reliably pareidolia'd into an eye); pivoted to the interlude text's *"strips you down to your core"* — an exposed broken-root core, prompted but not yet generated. Moss-on-stone explored as a fifth world material, not yet assigned to a track, needs a harder desaturation pass before it matches the family grade.
 
 **Open:**
 - **The seam between ABGRUND and GRUND.** ABGRUND cannot resolve — a track that falls continuously lies the moment it lands — so it must be **cut off**, with the floor arriving from outside the track. Most important second on the EP, undecided.
@@ -350,6 +352,13 @@ The full Alba-method audit — enemy, archetype, origin, superpower, plot — pl
 **Trap:** correction EQ belongs on the **monitor path only** — never in the render or export chain. A correction curve that reaches the bounce inverts itself into the master.
 
 **Open:** which profile source · where in the signal path it sits given the DAW · whether the KRKs are worth correcting too, or whether a measurement mic should come first so the room and the speaker are separated rather than conflated.
+
+### Stage Look — the costume test, opened 2026-10-05
+**State: direction set, nothing built.** [[working/WOBAR_STAGE_LOOK]] governs.
+
+The costume test was never run — the 2026-09-01 audit skipped it on facelessness, a rule WORLD §4 had already lifted for Nick. **The base look (hair, baggy cargos, boots, big tee) is authentic but not iconic**; the signature is a **~10cm chest piece: aged metal plate, the mark cut through as slots, warm LED behind, leather cord worn high.** Hair down on stage, light top, uniform stops varying. Warm light is the hard line against reading as an arc reactor.
+
+**Open:** material (verdigris copper + clean face leading, not locked) · amber vs bone · no prototype yet — v0 is a commission from a light-up-logo-pendant maker · fan pendant (mic-reactive) is gated on audience.
 
 ### Explore landscape video sources
 **State: not started.** [[working/RESEARCH_LANDSCAPE_FOOTAGE_SOURCES]] holds a general market survey — highest-quality places to license or find empty-world/landscape footage (not wildlife), tiered from curated cinematic agencies (Filmsupply, individual timelapse artists) down through subscription marketplaces to free and public-domain sources, with pricing. **Deliberately general** — not filtered through the Act framework or curated to any specific Wobar use.

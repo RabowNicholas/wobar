@@ -1,7 +1,7 @@
 ---
 title: HOHLWEG EP — structure and act mapping
-version: 1.1 (+ EP titled HOHLWEG, 2026-08-17)
-last_updated: 2026-08-17
+version: 1.2 (+ ATEM added as the interlude between ABGRUND and GRUND, 2026-08-27)
+last_updated: 2026-08-27
 status: live
 scope: The three-track EP — what each track is, where it sits on the 5-Act framework, the deliberate deviations, and the live-set dependency that completes it. Structure only. Per-track production lives in its own build file.
 dependencies: [[reference/WOBAR_FRAMEWORK]], [[reference/WOBAR_EMOTIONAL_REGISTER]], [[reference/WOBAR_BRAND]], [[working/ABGRUND_BUILD]]
@@ -9,7 +9,7 @@ dependencies: [[reference/WOBAR_FRAMEWORK]], [[reference/WOBAR_EMOTIONAL_REGISTE
 
 # HOHLWEG EP
 
-**HOHLWEG** — three originals, one story. **ERNSTFALL · ABGRUND · GRUND.**
+**HOHLWEG** — three originals and an interlude, one story. **ERNSTFALL · ABGRUND · ATEM · GRUND.**
 
 ---
 
@@ -36,6 +36,12 @@ which is ABGRUND's deepening shaft · it is cut **into ground**, which is GRUND'
 landscape feature, so it gives nothing away — and a sunken road is also a defile, the classic
 ambush ground, which sits with the emergency on track one rather than against it.
 
+**A fourth convergence, found after the fact, 2026-08-27:** *hohl* is hollow, and *Atem* is
+breath — air moving through a hollow. Adding the interlude put the corridor's own geometry
+inside the tracklist for the first time; before ATEM, *hollow plus direction* was something the
+EP title asserted about the record, never something the record did. Now it's enacted at the
+exact center of the walk.
+
 **Rejected, with the rule that killed each** — kept so they are not re-proposed:
 
 | Candidate | Killed by |
@@ -54,8 +60,8 @@ ambush ground, which sits with the emergency on track one rather than against it
 | `AUSHALTEN` · `DURCHSTEHEN` | Endurance words. The move through the weight is **a decision, not an endurance** |
 
 > **⚠ Not a Portal EP.** [[reference/WOBAR_SONIC]] has the Portal EP as a **5-song** unit
-> mapping the full arc. This is three tracks stopping at the 3→4 cusp. Release copy must not
-> call it one, and the title inherits no Portal-EP framing.
+> mapping the full arc. This is three tracks and an interlude, stopping at the 3→4 cusp. Release
+> copy must not call it one, and the title inherits no Portal-EP framing.
 
 ---
 
@@ -66,12 +72,13 @@ place what's happening, the ground gives way at 174 and the emergency is on top 
 broadcast cuts in, names it, tells them what to do, and then ends, leaving them alone with it.
 What follows is not flight: as they slow down, the slowing is what pulls them under, into a
 grinding descent that won't let them look away — and nothing outside them is causing it, their
-own nature is what forces the confrontation. The falling stops when they hit the floor, where
-every emergency they have been carrying is already waiting. The heaviness is all around them,
-and it is theirs. They move through it — a decision, not an endurance — and come back up into
-the room they were standing in the whole time. The emergency is still running. It was always
-coming from inside. What changed is that they stopped looking for the way out, and started
-deciding how to face what's there.
+own nature is what forces the confrontation. Before it stops, there is one breath — not relief,
+not resolution, just air. The falling stops when they hit the floor, where every emergency they
+have been carrying is already waiting. The heaviness is all around them, and it is theirs. They
+move through it — a decision, not an endurance — and come back up into the room they were
+standing in the whole time. The emergency is still running. It was always coming from inside.
+What changed is that they stopped looking for the way out, and started deciding how to face
+what's there.
 
 **Belief root: NO ESCAPE ([[reference/WOBAR_BRAND]] belief 3 / [[reference/WOBAR_WORLD]] §6
 doctrine 2)** — *a way through, never a way out; you live in the world and build it.* The
@@ -89,13 +96,48 @@ be shown, never explained.**
 
 ---
 
+## ATEM — THE INTERLUDE, ADDED 2026-08-27
+
+Sits between ABGRUND and GRUND, at the seam this file had logged as **undecided** — *how ABGRUND
+gets cut off, since a track that falls continuously lies the moment it lands.* ATEM is the
+answer: not a resolution, a breath.
+
+**The text, Nick's own:**
+
+> rock bottom — people speak of it as if it's the end, as if it's where dreams and hopes go to
+> die. but maybe rock bottom is a necessary place that everyone must endure. as it strips you
+> down to your core and it makes you really sit. maybe. maybe it's not the end. rather maybe
+> it's where your story truly begins.
+
+**Why *Atem* and not a fall-word.** The naming pattern up to this point: *Ernstfall* falls,
+*Abgrund* is the fall's ground gone, *Grund* is the ground it lands on — **all three carry
+`-fall` or `-grund`.** *Atem* breaks that root on purpose. It is the one title on the record
+that does not fall and is not ground — it is what's left standing between them. That break **is
+the point**, not an inconsistency: belief 3's build clause — *"you don't leave the world, you
+make it what you want"* — has lived nowhere on the record except the reversed message on
+ERNSTFALL. ATEM is the first place it is *enacted* rather than asserted.
+
+**Why it bridges the sound, not just the text.** ABGRUND is held, still, confrontational — Act 3,
+witnessing, the body doesn't move. GRUND is the opposite texture: rolling, hypnotic, pulsing
+sub-bass, spacious and open. A pulsing bass reads as a breathing rhythm before it reads as
+anything else — **ATEM names the register GRUND is already in**, rather than describing the cut
+itself. It doesn't resolve ABGRUND's fall (nothing on this record is allowed to); it's the exhale
+between being held under and finding the pulse again.
+
+**Closes the naming half of the OPEN item below.** The production question — length, whether
+it's spoken word over sub-bass or something else, how it physically cuts from ABGRUND and into
+GRUND — is still undecided.
+
+---
+
 ## ACT MAPPING — revised 2026-08-15
 
 | Track | Acts | Tempo | What it is |
 |---|---|---|---|
 | **ERNSTFALL** | **Act 1 → the rift → Act 2** | opens on the approach · drop at **174** · decelerates to **140** by the end | The familiar, an alarm closing distance, the tear, the broadcast, and the abandonment after it |
 | **ABGRUND** | **Act 3 ENCOUNTER, purely** | **140** throughout | The descent that will not let them look away. Nothing external causes it |
-| **GRUND** | **Act 3 → the 3→4 cusp.** Stops there | 140 | The floor, the recognition that the weight is theirs, and the weight turning from crushing to grounding |
+| **ATEM** | **Act 3, the breath before the floor** | undecided | The interlude. The one title that doesn't fall — breath, not descent or ground |
+| **GRUND** | **Act 3 → the 3→4 cusp.** Stops there | 140, rolling/hypnotic sub-bass | The floor, the recognition that the weight is theirs, and the weight turning from crushing to grounding |
 
 > **⚠ Revised 2026-08-15 — ABGRUND was mapped as Act 2 DESCENSION and is now Act 3 purely.**
 > The reclassification came from the music, not the plan. Two consequences:
@@ -181,10 +223,12 @@ tracklist, depth underneath.
 
 ## OPEN
 
-- **How the seam between ABGRUND and GRUND is executed.** ABGRUND cannot resolve — a track that
-  falls continuously is lying the moment it lands — so it must be **cut off** rather than ended.
-  The floor arrives from outside the track. This is the most important second on the EP and it is
-  undecided.
+- **The seam between ABGRUND and GRUND is named — ATEM, added 2026-08-27** (see the section
+  above). ABGRUND still cannot resolve — a track that falls continuously is lying the moment it
+  lands — so it must be **cut off**, not ended; the floor now arrives *through* ATEM rather than
+  from outside the track with nothing named. **The production is still undecided** — length,
+  whether it's spoken word over sub-bass or something else, how it physically cuts from ABGRUND
+  and into GRUND. Still the most important stretch on the EP.
 - **Whether ABGRUND still wants a groove-locked kick.** Act 3 pushes the listener into the ground
   and keeps the body still; a locked 4/4 that makes people move is Act 2 and Act 4 behaviour.
   Raised 2026-08-15, unresolved.

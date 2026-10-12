@@ -1,10 +1,10 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.5 (+ §9/§9.5, the online video presence and live-show lighting ideas — both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
-last_updated: 2026-09-03
-last_session: 2026-09-03
+version: 1.6 (+ §8.5 — the per-track macro material set for HOHLWEG's track art, reconciled 2026-09-04 after a cross-machine sync gap left it out of the v1.4/v1.5 line since 2026-08-28 — on top of v1.5's §9/§9.5, the online video presence and live-show lighting ideas, both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
+last_updated: 2026-09-04
+last_session: 2026-09-04
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
-scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
+scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. §8.5 adds a fourth mode: per-track macro material photography (no object, no wireframe) used for individual track art within an EP. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_EMOTIONAL_REGISTER]], [[WOBAR_OBSCURA]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
 supersedes: the corridor spine (this file's v0.1/v0.2 — full text in git history, e.g. `git show 1b7afaa:working/WOBAR_VISUAL_RESET.md`)
 ---
@@ -461,6 +461,62 @@ piece. Worked without modification — the grade travels across both the composi
 world-state (§2.5) and a plain graphic-cut piece, which is the first evidence it's a
 house finish and not something specific to the HOHLWEG pipeline. Purple is saved but
 not yet used on a real piece.
+
+---
+
+## 8.5 THE PER-TRACK MACRO SET — HOHLWEG track art *(added 2026-08-28, reconciled into this line 2026-09-04 — see version note)*
+
+**A second mode alongside §2.5's composite, used for individual track art rather than the
+cover.** No wireframe object, no compositing — pure macro material photography, same
+grade language as §8's pipeline, one material per track. The cover keeps the wide corridor +
+wireframe composite from §8 unchanged; this is what sits under it per-track.
+
+**Shared prompt architecture, for reuse:** `Extreme macro close-up of [material], cropped so
+tight it fills the entire frame edge to edge with no background visible, [material-specific
+detail], natural surface irregularity, [matte / damp-sheen line], no water droplets,
+documentary nature photography, medium format film, desaturated cool color grade, muted
+[color family] tones, petrol and oxidized-teal undertones in the shadow, overcast diffuse
+light, no warm tones, heavy and quiet, vertical frame --ar 9:16`. Explicit `--ar 9:16` —
+the words "vertical frame" alone did not hold the aspect ratio.
+
+**Assignment against [[working/HOHLWEG_EP]]'s act mapping:**
+- **ERNSTFALL** (Act 1 → the rift) — beech leaf surface, translucent cuticle over visible
+  cell structure, veins converging on a diagonal that reads as a fault line under an intact
+  skin. The pre-tear frame, not the tear itself.
+- **ABGRUND** (Act 3 ENCOUNTER, purely) — tangled root, sinewed and knotted, descending into
+  black at the frame's edge. Strongest match of the set — reads as held, still, confrontational
+  without any staging.
+- **GRUND** (Act 3→4 cusp, the floor) — packed earthen ground, compacted dirt and stone.
+  **⚠ Flagged, not resolved:** this reads as continuous with ABGRUND's register (tight,
+  airless, still falling) rather than landing the crushing-to-grounding turn the track
+  itself is doing. Right material (*Grund* = ground, literally), register not yet solved.
+  Candidate fix if revisited: something that signals arrival/opening rather than another
+  claustrophobic macro — not yet attempted.
+
+**ATEM has no image yet, and the first concept was rejected.** A knot-hole/cavity in root
+wood (hollow = *hohl*, breath = *Atem*, air moving through the hollow) generated as a
+symmetric dark void with a soft internal glow — and reliably pareidolia'd into an eye
+(centered circular hole + blurred highlight = pupil), which read as staged rather than
+documentary regardless of prompt tuning (`--no eye, pupil, face, symmetry, perfect circle`
+did not fully kill it). **Concept pivoted to the interlude's own text** (*"rock bottom...
+strips you down to your core"*) rather than the *hohl/Atem* wordplay: a broken root, bark
+split and pulled away, pale inner core exposed against dark weathered bark, irregular
+fracture edges (no clean cut, no symmetry to read as a face), breath as low mist in the cold
+air around the break, no internal light source. Prompted, **not yet generated/reviewed.**
+
+**Moss on stone — a fifth world material, not yet assigned to a track.** Pulled directly
+from the corridor prompt's own environment description ("moss and lichen covering the
+banks"), so it belongs to the set without argument on subject matter. First generation came
+back too saturated/lush-green against the rest of the family's desaturated grade — reads as
+a healthier, more vivid green than "muted moss-green," needs the same desaturation pass
+pushed harder before it sits next to the other three without looking like a different shoot.
+Of the four variants generated, the ones with a rock face cutting the frame on a clean
+diagonal (echoing the vein-line composition in the ERNSTFALL leaf shot) read stronger than
+the ones with uniform moss coverage and no exposed stone to anchor the eye.
+
+**Open:** GRUND's dirt shot needs a register fix (see above) · ATEM's revised prompt is
+untested · moss needs a regrade toward the muted family palette before use · what job the
+moss piece is for (an EP piece, Spotify Canvas, general world-texture bank) is undecided.
 
 ---
 
