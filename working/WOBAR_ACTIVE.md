@@ -356,6 +356,19 @@ The full Alba-method audit — enemy, archetype, origin, superpower, plot — pl
 
 **Open:** everything — no source evaluated firsthand, no account created, no clip pulled. Whether/how this connects to [[reference/WOBAR_ARCHIVE]]'s Act-by-Act sourcing is undecided.
 
+### skid — Act 4 original, named and covered 2026-10-12
+**State: name locked, cover exported, track unreleased.** An Act 4 RELEASE original: a dirty, cocky skanker, fast rapping from an Australian MC over a liquid psychedelic bass texture. Playful and rude, not philosophical.
+
+**`skid` over `slick`.** The naming rule's subject is the listener, not the MC: the track is the slick, the listener is what skids on it. `slick` would also have captioned its own cover (an oil slick titled slick is the gloss *never explained* forbids), lands as the adjective *polished* on a DJ's mic, and collides with Kacie's "Slick" (Feb 2025, tagged 140 / Deep Dubstep / Grime). Rejected earlier as too literary: spate, slipstream, torrent, volley, aplomb, muster.
+
+**Cover:** `assets/cover-art/skid/skid_cover.png` (2048 × 2048) plus the PSD. A macro plate of oil film on wet asphalt with no wireframe object, graded with `WOBAR — Purple`; pipeline notes are in [[working/WOBAR_VISUAL_RESET]] §8.
+
+**Open:**
+- **`skid` has not been checked against existing titles in the lane.** Only broad web searches ran, with no exact-title lookup on Beatport or SoundCloud, so a clean result there is not evidence.
+- **The mark is white on this cover**, as on HOHLWEG. Nick's plan going in was to tint it `#A085AE`; exported white. With the HOHLWEG question above, that is now two covers with a white corner mark and no written rule.
+- **Whether "macro material, no object" is a permitted cover mode** alongside the composite. It is not written into VISUAL_RESET as one; this cover is the first square cover built that way.
+- **The export is 2048px.** Distributors commonly want 3000 × 3000.
+
 ### Inside vs outside — stage visuals and release art as two views of one world
 **State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.
 
