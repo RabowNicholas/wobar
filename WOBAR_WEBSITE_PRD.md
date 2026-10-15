@@ -76,6 +76,8 @@ No other routes. Navigation on the main page is ambient — not the organizing p
 - **Interactions:** Restrained. Hover on release card: album art brightness +10%. Hover on CTA: text shifts white → purple, no border change. Submit fires logo pulse once. Nothing else.
 
 ### Typography
+
+> **⚠ Stale, 2026-10-15.** The Futura PT specified below, including every "Futura PT Heavy" wordmark and header later in this doc, is superseded. The house typeface is **OCR A Std**, and the wordmark is a fixed asset, never retyped. Owner: [[reference/WOBAR_BRAND]] § Typography.
 Source: Art Direction Playbook 2025 (locked). All fonts available on Adobe Fonts.
 
 **Primary — Futura PT**

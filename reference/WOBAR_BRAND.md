@@ -1,7 +1,7 @@
 ---
 title: Wobar Brand Foundation
-version: 2.3 (Chris Alba–lens audit — enemy added, belief system revised 8→9, archetype Magician/Creator replaces Magician/Sage, origin story + superpower + plot + the one-sentence capstone added 2026-09-01; cold-read pass same day cut the redundant Mission section, reordered Archetypes above Belief System, added What Wobar Refuses / The Mark / Campaigns As Scenes so the doc is complete on its own, and closed with a Quick Use section — two-sentence overview + seven-question self-check — reasoning in working/WOBAR_BRAND_AUDIT.md)
-last_updated: 2026-09-01
+version: 2.4 (+ Typography rewritten 2026-10-15: OCR A Std is the house typeface, the old geometric-sans list voided; on top of 2.3, Chris Alba–lens audit — enemy added, belief system revised 8→9, archetype Magician/Creator replaces Magician/Sage, origin story + superpower + plot + the one-sentence capstone added 2026-09-01; cold-read pass same day cut the redundant Mission section, reordered Archetypes above Belief System, added What Wobar Refuses / The Mark / Campaigns As Scenes so the doc is complete on its own, and closed with a Quick Use section — two-sentence overview + seven-question self-check — reasoning in working/WOBAR_BRAND_AUDIT.md)
+last_updated: 2026-10-15
 status: locked
 scope: Manifesto, quick use, the enemy, archetypes, belief system, what Wobar refuses, the three versions, origin story, superpower, plot, positioning, campaigns as scenes, the mark, visual identity, north star.
 dependencies: none
@@ -200,14 +200,33 @@ The palette is the **WOBAR desaturated psychedelic range**. Black and deep purpl
 The percentage-tier framework (80% backgrounds, 60% primary, 30% secondary, 10% accent) is **deprecated** as of the 2026-04-30 refresh.
 
 ## Typography
-Source: Art Direction Playbook 2025 (locked)
 
-- Font style: Geometric, bold, LSDREAM-inspired
-- Recommended: Montserrat (Bold/Black), Futura PT (Bold/Heavy), Bebas Neue (headers), DIN (Bold)
-- Note: Gotham is on the brand list but requires separate license — not on Adobe Fonts
-- ALL CAPS for brand name and headers
-- Generous letter-spacing (tracking +50 to +100)
-- Never use more than 2 fonts in one piece
+**The house typeface is OCR A Std.** The wordmark is set in it unmodified: the diamond O is
+OCR A's own capital O, not a custom glyph (verified 2026-10-15 by rendering `WOBAR` from
+the font file against `assets/brand/wobar-wordmark-white.png`).
+
+- **Use OCR A wherever it makes sense:** the wordmark, release and track titles, cover and
+  flyer type, headers, labels, Canvas and video text, and display text on the site.
+- **Where it does not:** long-form reading (bios, EPK paragraphs, captions, anything over a
+  few lines). OCR A is a monospaced machine face and tires the eye at length. Body copy takes
+  a quiet second face, which is not yet chosen.
+- **The wordmark is an asset, never retyped.** Use the PNGs in `assets/brand/`; type set
+  fresh in OCR A for titles and headers sits beside it, it does not replace it.
+- ALL CAPS for the brand name and headers.
+- Generous letter-spacing (tracking +50 to +100).
+- Never more than 2 fonts in one piece.
+- Rendering without installing: `scripts/font-to-png.html` turns a local font file into a
+  transparent PNG.
+
+> **⚠ Revision note — 2026-10-15.** This section previously read, sourced to the Art
+> Direction Playbook 2025: *"Font style: Geometric, bold, LSDREAM-inspired · Recommended:
+> Montserrat (Bold/Black), Futura PT (Bold/Heavy), Bebas Neue (headers), DIN (Bold) · Note:
+> Gotham is on the brand list but requires separate license — not on Adobe Fonts."* None of
+> those was ever the wordmark's face. The wordmark had been OCR A all along and the doc did
+> not say so; the only record was a line about the Stink Mode cover in WOBAR_ACTIVE. Nick,
+> 2026-10-15: *"ocr a should be used everywhere it makes sense."* The geometric-sans list is
+> void as a recommendation. `WOBAR_WEBSITE_PRD.md` specifies Futura PT throughout and is
+> stale on this point.
 
 ## Texture & Finish
 Source: Art Direction Playbook 2025 (locked)
