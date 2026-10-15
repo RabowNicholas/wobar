@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.5 (+ HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
-last_updated: 2026-09-04
+version: 3.6 (+ skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
+last_updated: 2026-10-15
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -370,12 +370,12 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 
 **`skid` over `slick`.** The naming rule's subject is the listener, not the MC: the track is the slick, the listener is what skids on it. `slick` would also have captioned its own cover (an oil slick titled slick is the gloss *never explained* forbids), lands as the adjective *polished* on a DJ's mic, and collides with Kacie's "Slick" (Feb 2025, tagged 140 / Deep Dubstep / Grime). Rejected earlier as too literary: spate, slipstream, torrent, volley, aplomb, muster.
 
-**Cover:** `assets/cover-art/skid/skid_cover.png` (2048 × 2048) plus the PSD. A macro plate of oil film on wet asphalt with no wireframe object, graded with `WOBAR — Purple`; pipeline notes are in [[working/WOBAR_VISUAL_RESET]] §8.
+**Cover:** `assets/cover-art/skid/skid_cover.png` (2048 × 2048) plus the PSD. A macro plate of oil film on wet asphalt with no wireframe object, graded with `WOBAR — Purple` at Soft Light 30%. The prompt, its failures and the plate are in [[working/WOBAR_VISUAL_RESET]] §8.5; the grade's ceiling is in §8.
 
 **Open:**
 - **`skid` has not been checked against existing titles in the lane.** Only broad web searches ran, with no exact-title lookup on Beatport or SoundCloud, so a clean result there is not evidence.
 - **The mark is white on this cover**, as on HOHLWEG. Nick's plan going in was to tint it `#A085AE`; exported white. With the HOHLWEG question above, that is now two covers with a white corner mark and no written rule.
-- **Whether "macro material, no object" is a permitted cover mode** alongside the composite. It is not written into VISUAL_RESET as one; this cover is the first square cover built that way.
+- **Whether §8.5's macro mode is now a cover mode for singles**, or `skid` is a one-off. §8.5 was written for per-track art under an EP cover that keeps the composite; this is its first use as a release's only cover.
 - **The export is 2048px.** Distributors commonly want 3000 × 3000.
 
 ### Inside vs outside — stage visuals and release art as two views of one world

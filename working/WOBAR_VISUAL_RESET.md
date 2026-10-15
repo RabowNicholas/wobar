@@ -461,9 +461,8 @@ piece. Worked without modification — the grade travels across both the composi
 world-state (§2.5) and a plain graphic-cut piece, which is the first evidence it's a
 house finish and not something specific to the HOHLWEG pipeline.
 
-**Purple's first use, 2026-10-12: the `skid` cover** (`assets/cover-art/skid/`), and the
-first cover with **no wireframe object** — a Midjourney macro plate of a motor-oil film on
-wet asphalt, graded and marked, nothing composited in. The preset now has a file:
+**Purple's first use, 2026-10-12: the `skid` cover** (`assets/cover-art/skid/`), built in
+§8.5's macro-material mode (no object, nothing composited in). The preset now has a file:
 `assets/brand/gradients/wobar_purple.grd` (stops evenly spaced at 0/25/50/75/100; the green
 preset still has no exported file). **Soft Light landed at 30%, below the 40–70% range
 above.** At 50% the plate's teal was gone and the frame read as a nebula: dark field, pale
@@ -522,6 +521,28 @@ pushed harder before it sits next to the other three without looking like a diff
 Of the four variants generated, the ones with a rock face cutting the frame on a clean
 diagonal (echoing the vein-line composition in the ERNSTFALL leaf shot) read stronger than
 the ones with uniform moss coverage and no exposed stone to anchor the eye.
+
+**First use outside HOHLWEG, 2026-10-12: the `skid` cover.** The mode used as a
+standalone single's square cover, where §8.5 was written for per-track art under an EP
+cover. Material: a thin motor-oil film on wet black asphalt (Act 4 RELEASE). Composition:
+the film covers most of the frame, a wedge of bare wet tarmac on one edge, a pale diagonal
+streak as the focal shape, and a dark empty corner reserved for the mark. Grade and its
+ceiling are in §8.
+
+The prompt **departs from the shared architecture above**, and the departures were forced:
+- **"Extreme macro" plus *thick / viscous / dragged* turned the film into sludge.** The
+  working prompt is *top-down close-up* with *thin iridescent film*, plus negatives for
+  *thick, sludge, paste, paint, mud*.
+- **"One single ribbon" gave almost all asphalt.** Ask for a wide slick covering most of
+  the frame, and get the shape by describing direction (*streaked in one diagonal
+  direction as if pulled fast*).
+- **"rainbow" in `--no` killed the colour.** Leave it out; *no neon, saturated* is enough.
+- **Flat matte light read as dry, and as a fold.** Wet highlights and *overcast sky
+  reflecting in the water* are what keep it oil and stop it reading like `crease`.
+- **`--ar 1:1`, not 9:16**, since it is a cover. *Lower right corner dark and empty* held.
+
+**The one realism tell:** the bare stones on the edge melt into each other with a webbed
+gloss at full resolution. Invisible at cover size.
 
 **Open:** GRUND's dirt shot needs a register fix (see above) · ATEM's revised prompt is
 untested · moss needs a regrade toward the muted family palette before use · what job the
