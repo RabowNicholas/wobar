@@ -527,6 +527,8 @@ touchpoints so the world speaks its own tongue. **Status flags: [locked],
 | The mark / sigil (the faceless face) | **two broken circles** | [LOCKED 2026-07-04 — observer + image / aperture / offset versions / the cycle that won't close] |
 | The written body (one per Portal EP) | **the Passage** | [LOCKED 2026-07-04 — a passage of text + a passage through the portal; bound void poems, sealed with the mark] |
 | The live night | **Flow State** | [locked — exists] |
+| Wobar's radio show | **localhost** — "Wobar presents localhost on Flow State Radio" | [LOCKED 2026-11-02 — Flow State Radio is the station (Flow State owns it; other FS artists host their own shows); localhost is Wobar's show on it. The local room broadcasting out] |
+| The super-fan room (IG broadcast channel) | **root access** | [LOCKED 2026-11-02 — snippets + works-in-progress shared for feedback; fans meet Nick and each other. Status/trigger in WOBAR_SURFACES §4] |
 | The 5 regions of the interior | **the 5 Acts** (Rift / Descension / Encounter / Release / Integration) | [locked — exists] |
 | Bedroom/no-ceremony captures | **Channels** | [locked — exists] |
 
