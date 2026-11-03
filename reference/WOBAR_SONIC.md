@@ -1,7 +1,7 @@
 ---
 title: Wobar Sonic Identity
-version: 1.8 (+ "deep dubstep" is room-wrong as well as register-wrong 2026-08-06; + En:vy corrected to D&B 2026-08-04; + mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
-last_updated: 2026-08-06
+version: 1.9 (+ mastering posture rewritten for clip-to-zero 2026-11-03; + "deep dubstep" is room-wrong as well as register-wrong 2026-08-06; + En:vy corrected to D&B 2026-08-04; + mastering posture 2026-08-01; six-register table; genre positioning + anti-references reconciled; mutable state removed — catalog + cadence 2026-07-27)
+last_updated: 2026-11-03
 status: locked
 scope: Sonic identity, reference artists, anti-references, genre positioning, mastering posture.
 dependencies: [[WOBAR_GRAMMAR]], [[WOBAR_WORLD]], [[WOBAR_BRAND]], [[WOBAR_FRAMEWORK]]
@@ -139,15 +139,13 @@ The container — the sound design decisions, the structural arc, the sequencing
 
 ## Mastering — the posture
 
-**Added 2026-08-01.** Form only. Tools, settings and every number live in [[working/WOBAR_MASTER_CHAIN_V1]] and [[working/WOBAR_MASTER_CHECKLIST]] — nothing here should ever go stale.
+**Rewritten 2026-11-03** — clip-to-zero replaced the mix-quiet-then-master posture (2026-08-01). Form only. Current chain state lives in [[working/WOBAR_ACTIVE]] §Clip-to-Zero; the retired posture and why it lost is in [[working/WOBAR_CLOSED]].
 
-- **Wobar masters in-house, from a fixed template, not by per-track deliberation.** The target is most of a professional result, repeatably, on every track. A mix/master engineer is a later hire; the template exists to raise the catalogue now rather than to be the final answer.
-- **The master follows the mix.** Anything the chain struggles with is a mix problem, and the mix is where it gets fixed — free, lossless, and at the source. Mastering is not a repair stage.
-- **Loudness is not a goal.** Transient integrity and translation to a large system are. Streaming platforms normalize playback, so loudness bought at the limiter is loudness the listener never receives — while the cost to the transient is received in full.
-- **Two playback contexts are weighted equally: a phone and a large system.** The sub that defines this music is inaudible on one and everything on the other, and the master has to serve both without choosing.
+- **The mixdown is the master.** Wobar works clip-to-zero (method: Bafmetrics). The project is built into a clipper from the start, so every production and mix decision is made against the final sound. There is no separate stage at the end that finishes the record.
+- **Loudness is built in the mix, surgically.** It comes from the moves made while producing, where you can hear what each one costs. Nothing is left to hope it comes out loud enough at the end.
 - **The sub is mono.** Low-frequency stereo cancels when summed, and the rooms this music is made for sum it.
-- **Under compromised monitoring, design for bounded error rather than optimality.** Every setting is chosen so that being wrong is survivable — because the band that defines the genre is the band the room can't reproduce, and a systematic low-end error is invisible here and permanent once released.
-- **Verification is procedural, not by ear alone.** The checks that catch real failures are the ones that don't depend on the room being good, and they get run every time.
+- **Two playback contexts are weighted equally: a phone and a large system.** The sub that defines this music is inaudible on one and everything on the other.
+- **A mastering engineer is a later hire.** In-house clip-to-zero is the practice now. It is not the final answer.
 
 ---
 

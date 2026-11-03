@@ -2,12 +2,15 @@
 title: Wobar Mastering Checklist
 version: 1.0
 last_updated: 2026-08-01
-status: live
+status: retired
 scope: The per-track procedure. Follow this to master a track. Reasoning lives in [[working/WOBAR_MASTER_CHAIN_V1]] — come here to work, go there to understand or change something.
 dependencies: [[working/WOBAR_MASTER_CHAIN_V1]]
 ---
 
 # MASTERING CHECKLIST
+
+> **🔴 RETIRED 2026-11-03.** Replaced by clip-to-zero: the mixdown is the master. This doc is kept as a record of the old approach, not as a procedure. See [[working/WOBAR_CLOSED]] §Master Chain v1 and [[working/WOBAR_ACTIVE]] §Clip-to-Zero.
+
 
 **Only two things get decided per track: the EQ (0–2 moves) and the Maximizer Gain.** Everything else is template. If you find yourself adjusting a third thing, stop and ask why — that's either a mix problem or a template problem, and neither gets solved by tweaking here.
 

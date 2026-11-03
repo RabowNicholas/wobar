@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.2
-last_updated: 2026-09-01
+last_updated: 2026-11-03
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,22 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Master Chain v1 — mix quiet, master hard — RETIRED, REPLACED BY CLIP-TO-ZERO
+
+**Closed:** 2026-11-03. Nick's call, after rebuilding his project structure on Bafmetrics' clip-to-zero method. Current state: [[working/WOBAR_ACTIVE]] §Clip-to-Zero. Rewritten posture: [[reference/WOBAR_SONIC]] §Mastering.
+
+**What it was: the other school.** Mix with headroom, then master as its own stage. Production sets carried a permanent Utility so every render landed at **~−16 LUFS-S, peaks around −6 dBFS**. That fed a fixed in-house chain: trim → **God Particle** (100%) → **Pro-MB** (one sub band, insurance) → **Ozone** (Imager mono <120 → EQ → Exciter → Maximizer IRC 5, −1 dBTP). Two decisions per track: EQ and Maximizer gain. It was built 2026-08-01 from heavy research and designed for *bounded error under compromised monitoring*. Every value was chosen so a wrong guess stayed survivable. Full record kept on disk: [[working/WOBAR_MASTER_CHAIN_V1]] (reasoning + change log), [[working/WOBAR_MASTER_CHECKLIST]] (procedure), both marked retired.
+
+**Why it lost.** The level and the final character were decided *last*, by pushing a quiet mix into a complex chain that nobody could fully see into. God Particle was never measured. You produced and mixed blind to the final sound, then hoped the chain would make it loud and good. Clip-to-zero moves that decision to the start. You work into the clipper the whole time, so every move is heard at its final level. Nick's words: much louder mixes, much more surgical, no hoping at the end. **The win is systemic.** Production itself got better, not just the master.
+
+**Which old rules died with it:** *master follows the mix* (there is no separate master now) · *loudness is not a goal* (loudness is now built deliberately, in the mix) · *fixed template, bounded error* (the chain was the template). **Survives:** a mastering engineer is still a later hire · sub mono <120 Hz carried straight over onto the new bus · Ozone's Maximizer stays as the final stage.
+
+**Don't re-propose:** going back to a −16 LUFS mix bus feeding God Particle/Pro-MB, or rebuilding a multi-stage master chain on top of a clip-to-zero mix. The old open items (Soft Clip untested, the GP measurement protocol, IRC IV vs 5) went down with the chain. They aren't live questions now.
+
+**Caveat at retirement:** the replacement **hasn't been heard in the wild yet**: no big system, no phone, no level-matched references. If it fails there, the fix is in the clip-to-zero mix, not a revived chain.
 
 ---
 

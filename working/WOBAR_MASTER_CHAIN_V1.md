@@ -1,8 +1,11 @@
 # WOBAR Master Chain — v1.1
 
+> **🔴 RETIRED 2026-11-03.** Replaced by clip-to-zero: the mixdown is the master. This doc is kept as a record of the old approach, not as a procedure. See [[working/WOBAR_CLOSED]] §Master Chain v1 and [[working/WOBAR_ACTIVE]] §Clip-to-Zero.
+
+
 **Created:** 2026-08-01
 **Revised:** 2026-08-01 — **built for real, at the desk, in Ableton.** v1 was written from research; every stage below has now been instantiated, and the values that survived contact are marked. Several did not.
-**Status:** live. **Built and saved as an Ableton template.**
+**Status:** 🔴 **retired 2026-11-03.**
 **Companions:** `WOBAR_MASTER_CHECKLIST.md` (the per-track procedure — use that one to work) · `RESEARCH_MASTER_CHAIN_TOOLS.md` (tool capabilities) · `RESEARCH_MASTERING_EDM_DUBSTEP.md` (practice research)
 
 > **This doc holds the reasoning. The checklist holds the procedure.** If you are mastering a track, open the checklist. Come here when you want to know *why* a value is what it is, or when something needs to change.

@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
 version: 3.6 (+ skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
-last_updated: 2026-10-15
+last_updated: 2026-11-03
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -193,18 +193,16 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **Genuinely open:** **Spotify's bio is written and undeployed**, and its Canvas + Artist Pick remain empty and free · **Instagram still links only wobar.music** — SoundCloud is absent from the highest-traffic surface, routing strangers to the depth-3 room ([[working/WOBAR_SURFACES]] §3.3) · Apple Music never reviewed · Beatport absent, which is a distributor setting · **permalinks still read `portal-journey-00X`** against the new titles · artist-adjacency tagging is the last untested retrieval mechanism · **nobody knows what carried *World-A-Reggae* to 246 likes on 314 plays** — 4× the follower count, and the largest unexplained event in the catalogue.
 
-### Master Chain — built 2026-08-01
-**State: built, verified, and saved as an Ableton template.** First track taken all the way through. Wobar now masters in-house, from a fixed template, with only two decisions per track — EQ (0–2 moves) and Maximizer Gain.
+### Clip-to-Zero — testing, opened 2026-11-03
+**State: in use, being tested. Has not seen the wild** — no big-system play, no phone check, no level-matched reference comparison yet. "Works better" so far is a judgement from inside the production process.
 
-**Two docs, two jobs:** [[working/WOBAR_MASTER_CHECKLIST]] is the procedure — open it to work. [[working/WOBAR_MASTER_CHAIN_V1]] holds the reasoning and the change log. The form-level posture is in [[reference/WOBAR_SONIC]].
+**What it is:** the project structure was rebuilt on the clip-to-zero method (Bafmetrics — [source doc](https://docs.google.com/document/d/1Ogxa5-X_QdbtfLLQ_2mDEgPgHxNRLebQ7pps3rXewPM/edit?tab=t.0#heading=h.lwtkibvu0gr)). The mixdown is the master. **It replaces the master chain.** The old chain (God Particle → Pro-MB → Ozone, fed by a −16 LUFS-S mix) is retired. See [[working/WOBAR_CLOSED]] for what it was and why it lost.
 
-**The upstream half matters as much as the chain:** production sets now carry a permanent Utility so mixes render at ~−16 LUFS-S / −6 dBFS. The first mix to the desk arrived at −7.7 LUFS-I and +1.6 dBTP off an empty master bus — gain, not damage, but it meant the master was being asked to absorb 9 dB. Done right, the mastering trim lands at 0.00 and **becomes a mix diagnostic**: a track needing +5 is telling you something before you've heard a note.
+**Master bus, in order:** analysis (SPAN ×2, Youlean, MiniMeters, Multichannel) · Sides Only and Mono audition utilities, normally off · **Bass Mono <120 Hz → KClip3 → Ozone Maximizer** · metering (Swiss Army, Blue Cat, dpMeter).
 
-**Decided:** God Particle **100%**, not the researched 35% — level-matched A/B on real material, and 35% sat inside the doc's own "too low" band · **IRC 5** on the limiter · sub mono below 120 Hz · **44.1 kHz catalog-wide**, never converted mid-pipeline · Pro-MB reframed as **insurance, not an active stage**, because Nick's basslines rarely move and the sub-evening problem is already solved in the writing.
+**Why it won (Nick):** much louder mixes, and much more surgical. You stop hoping it comes out loud and good at the end of a chain. It's a systems win: production itself got better.
 
-**Deliberate deviation:** landed at **−8 LUFS-S** against the doc's −9 to −10, on Delta evidence that only the leading edge of the transient was being removed. Logged as a decision. The counter-argument is unchanged — platforms normalize toward −14, so the loudness doesn't reach the listener while the transient cost does.
-
-**Genuinely open:** **Soft Clip is owned and untested** — it's inside the Maximizer, the vault had recorded it as a gap, and transient clipping ahead of a limiter is how bass music gets level without pumping. It is the highest-value unexplored move here. Also: God Particle remains largely unmeasured and the low-Amount half of that mitigation is now gone by choice · Pro-MB's threshold was calibrated on a ±1 semitone bassline, the easiest possible case · integrated loudness has still only been measured over a looped drop, never a whole arrangement · no comp dataset, so spectral targets are judgement rather than measurement.
+**Genuinely open:** translation outside the studio · true-peak handling. One reading showed **+1.30 dBTP at −9.3 LUFS-I**, possibly with the Maximizer bypassed. The old chain held −1 dBTP, and nothing has replaced that standard yet.
 
 ### Mirror Threshold — the SMS door into the Ether
 **State: spec complete, build not started, blocked on 10DLC** — days-to-weeks of carrier approval, and no door copy works without a number.
@@ -315,21 +313,6 @@ The full Alba-method audit — enemy, archetype, origin, superpower, plot — pl
 
 **Direction (Nick):** pivot the height source to POPX **DLA** branching tendrils rendered top-down — worms burrowing under skin, growth as escalation. Keep the membrane shader, swap the source only. **POPX is not loaded in that project** (fresh NewProject); crib `example_projects/DLA.toe`. Nick also called the cadence **too slow**.
 
-### Master Chain v1 — the audio side of the practice
-**State: template written and governing, never run on a real track.** [[working/WOBAR_MASTER_CHAIN_V1]] holds the chain, every value, and the reasoning per value.
-
-**Shape:** trim → God Particle (35%) → Pro-MB (one sub band, 20–90 Hz, Dynamic Phase, Range capped −3 dB) → Ozone (Imager mono <120 Hz → EQ → Exciter low-band → Maximizer IRC IV, −1 dBTP). Per track only two things move: two broad EQ decisions and the Maximizer threshold.
-
-**Designed for bounded error, not optimality** — the monitoring cannot verify anything below 55 Hz, so every value is chosen so that being wrong is survivable. The Range cap, linked stereo, low GP Amount and modest limiting all exist for that reason.
-
-**Research behind it:** [[working/RESEARCH_MASTER_CHAIN_TOOLS]] (tool capability + the shared theory) · [[working/RESEARCH_MASTERING_EDM_DUBSTEP]] (practice, sources tiered by verifiability, eight live contradictions between credible engineers).
-
-**Decided:** streaming and large-system weighted equally · vinyl constraints dropped, digital only · loudness de-prioritised, work to short-term and let integrated fall out · Goz's *loop* and his *permission on distortion* adopted, his meter-hostility explicitly not (it rests on monitoring Nick doesn't have) · sub dynamics resolved as flatten note-to-note / protect within-note envelope / constant ceiling with contrast built above.
-
-**Open:** God Particle is unmeasured and level-dependent, so it's a bounded but unknown quantity in the middle of the chain (protocol exists, parked) · no comp dataset, so every spectral target is judgement not measurement · rig offset predicted (low-mid and treble deficit) but unconfirmed · IRC 5 vs IRC IV untested on real material · the analyzer that would close the first three is designed and parked by decision.
-
-**Accepted risk, stated once so it isn't re-litigated:** systematic low-end error is invisible on this rig and permanent once released. Mitigated by the Range cap, mono-below-120, correlation checks and system trips before release. Not eliminated. Nick's call, made knowingly — he wants 90% now and a professional engineer later.
-
 ### Ear Training
 **State: not started.** The only skill investment on the audio side that doesn't depend on fixing anything else first.
 
@@ -338,9 +321,9 @@ The full Alba-method audit — enemy, archetype, origin, superpower, plot — pl
 **Open:** method and tool unchosen · cadence unchosen · whether it earns a log at all, or is simply practised.
 
 ### Mixing Research — the mix standard that doesn't exist
-**State: not started.** The asymmetry that exposed it: a master chain is now documented to the value level, and there is no equivalent for the mix, when the mix is where most of the leverage actually sits.
+**State: not started.** **Sharper since 2026-11-03:** under clip-to-zero the mix *is* the master, so there's no chain left to catch what the mix doesn't. The original asymmetry was a master chain documented to the value level with no equivalent for the mix.
 
-**The evidence it rests on:** every Tier 1 engineer in the research says the same thing, Beau Thomas most directly — *"a good mix-down that is very controlled and sounds great will nearly always become really loud easily."* Nick mixes his own tracks, so everything the master chain currently **bounds** is something the mix could **eliminate**: sub note consistency at source · sub written mono from the start · kick/sub phase alignment · deliberate frequency division (sub 40–80, kick 90–180) · sparse mid-range and negative space as the genre's actual technique.
+**The evidence it rests on:** every Tier 1 engineer in the research says the same thing, Beau Thomas most directly — *"a good mix-down that is very controlled and sounds great will nearly always become really loud easily."* Nick mixes his own tracks, and everything the old chain used to **bound** now has to be **eliminated** in the mix: sub note consistency at source · sub written mono from the start · kick/sub phase alignment · deliberate frequency division (sub 40–80, kick 90–180) · sparse mid-range and negative space as the genre's actual technique.
 
 **Open:** scope — mix standard, or research first then standard · whether it gets the same treatment as the chain (constraints → defaults → verification tests → change log) · whether an audio build log should exist at all, given [[working/TD_BUILD_LOG]] is a working feedback mechanism pointed at the visuals while the music, which is the product, has none.
 
