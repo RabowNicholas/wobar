@@ -487,7 +487,7 @@ have pulled the frame cool. It derives from the vault's **oxidized-rust route**
   Gradient Map's mask, then add a Hue/Saturation layer (Cyans/Greens) clipped to the inverted
   mask so it can be nudged toward patina `#5C7470`. The orange around it does most of the
   popping through complementary contrast, so the saturation push stays low.
-- **No `.grd` exported yet.** Saved only as a Photoshop gradient preset.
+- **File:** `assets/brand/gradients/wobar_rust.grd`.
 
 ---
 

@@ -374,7 +374,7 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 
 **Decisions:** Japanese was Nick's choice after the state was identified, so it doesn't break *state first, language second*. **The cover prints 魔境, not 魔鏡**, because printing the mirror kanji would explain the homophone. **No macron anywhere, `MAKYO` in caps:** `makyo` is what people type, SoundCloud's accent-folding is unreliable, the permalink would mangle `ō`, and cover text has to match metadata for Apple. `makyō` and `魔境` go in as SoundCloud tags. Kanji set in Hiragino Sans (OCR A has none).
 
-**Cover:** a found photograph of cloud-to-cloud spider lightning, graded with the new `WOBAR — Rust` preset ([[working/WOBAR_VISUAL_RESET]] §8). Brand-checked 2026-11-03 against Act 4 before the act was known, 7/10. **Nick kept it as is.** The file is not in the repo.
+**Cover:** a found photograph of cloud-to-cloud spider lightning, graded with the new `WOBAR — Rust` preset ([[working/WOBAR_VISUAL_RESET]] §8). Brand-checked 2026-11-03 against Act 4 before the act was known, 7/10. **Nick kept it as is.** Files: `assets/cover-art/yagami/yagami_cover.png` plus the PSD (folder still named for the working title).
 
 **Open:**
 - **The sample is uncleared anime dialogue.** That decides the release route (DSPs vs SoundCloud only, re-performed lines, or a SAMPLES I'LL NEVER GET CLEARED entry) and was set aside by Nick, not resolved.
