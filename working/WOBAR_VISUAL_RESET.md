@@ -1,7 +1,7 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.6 (+ §8.5 — the per-track macro material set for HOHLWEG's track art, reconciled 2026-09-04 after a cross-machine sync gap left it out of the v1.4/v1.5 line since 2026-08-28 — on top of v1.5's §9/§9.5, the online video presence and live-show lighting ideas, both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
-last_updated: 2026-09-04
+version: 1.7 (+ §8 third grade preset WOBAR — Rust, first used on the MAKYO cover, 2026-11-03 — on top of v1.6's §8.5 — the per-track macro material set for HOHLWEG's track art, reconciled 2026-09-04 after a cross-machine sync gap left it out of the v1.4/v1.5 line since 2026-08-28 — on top of v1.5's §9/§9.5, the online video presence and live-show lighting ideas, both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
+last_updated: 2026-11-03
 last_session: 2026-09-04
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
 scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. §8.5 adds a fourth mode: per-track macro material photography (no object, no wireframe) used for individual track art within an EP. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
@@ -469,6 +469,25 @@ above.** At 50% the plate's teal was gone and the frame read as a nebula: dark f
 flecks as stars, the streak as a galaxy arm. The second hue was what said *oil on a road*.
 On a plate whose material is identified by its colour interference, the grade's ceiling is
 wherever the second hue dies, not the range.
+
+**Third preset, 2026-11-03: `WOBAR — Rust`, first used on the `MAKYO` cover** (a found
+photograph of orange spider lightning; see [[working/WOBAR_ACTIVE]]). It was built to
+accentuate a warm subject and make a grey-green cloud pop, where Green and Purple would both
+have pulled the frame cool. It derives from the vault's **oxidized-rust route**
+(`WOBAR_TD_REFERENCE.md`), with every stop taken from its warm-desaturated table:
+`#0E0813 → #6F4E3A → #8A5A3D → #A6633D → #C17A4E → #C7BBA6`
+(offblack → oxidized copper → dried tobacco → burnt amber → muted orange → bone), stops at
+0/20/40/60/80/100. The highlight stop is bone, which holds K1 the way Lavender and Lichen Sage do.
+- **The route's `#2D0546` purple stop was dropped (Nick).** A Gradient Map maps the darkest
+  tones to the first stops, so the purple cast the dark sky violet. That muddied the orange
+  and added a second cool hue competing with the cloud. The shared purple-black shadow end is
+  a family tie across presets, not a requirement. Drop it when the piece's one cool element
+  has to stand alone.
+- **The cool element is protected with a mask, not a separate preset.** Paint it out of the
+  Gradient Map's mask, then add a Hue/Saturation layer (Cyans/Greens) clipped to the inverted
+  mask so it can be nudged toward patina `#5C7470`. The orange around it does most of the
+  popping through complementary contrast, so the saturation push stays low.
+- **No `.grd` exported yet.** Saved only as a Photoshop gradient preset.
 
 ---
 

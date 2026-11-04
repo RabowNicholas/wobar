@@ -1,6 +1,6 @@
 ---
 title: Wobar Active — current context
-version: 3.6 (+ skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
+version: 3.7 (+ MAKYO — Act 3 original named, cover graded with the new Rust preset — 2026-11-03; on top of v3.6's skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
 last_updated: 2026-11-03
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
@@ -360,6 +360,28 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 - **The mark is white on this cover**, as on HOHLWEG. Nick's plan going in was to tint it `#A085AE`; exported white. With the HOHLWEG question above, that is now two covers with a white corner mark and no written rule.
 - **Whether §8.5's macro mode is now a cover mode for singles**, or `skid` is a one-off. §8.5 was written for per-track art under an EP cover that keeps the composite; this is its first use as a release's only cover.
 - **The export is 2048px.** Distributors commonly want 3000 × 3000.
+
+### MAKYO — Act 3 original, named and covered 2026-11-03
+**State: name locked, cover graded, track unreleased.** Pure Act 3 ENCOUNTER. The main sample is Light Yagami's final speech, his laugh, and his rant at L's grave (*Death Note*). The concept is **ego eating itself**. Nick: *"this is my favorite track we have named yet."*
+
+**`MAKYO` (魔境) over `YAGAMI`.** The working title named the sample's speaker, not what the track does, which fails [[reference/WOBAR_COPY]] § TRACK NAMING. It also handed Death Note fans the source, so it arrived already explained. *Makyō* is the Zen term for the visions that come up in deep meditation and get mistaken for awakening: the ego dressed as enlightenment. That is Light's arc at the moment it collapses, and it names what the track does to the listener: a self that looks like a god, met as the delusion.
+
+**Why it's the strongest title in the catalogue:** every layer is there to be *found*, never told.
+- **NO ESCAPE.** Makyō is the false exit, transcendence as a way out. The title names the trap the escape register falls into.
+- **Anti-woo from inside the tradition.** Zen's own word for why spectacle isn't awakening.
+- **The Mirror.** The homophone 魔鏡 is the Japanese magic mirror, which reveals a hidden image only when *light* strikes it. It holds light, mirror and the concealed thing at once.
+- **The cover.** A lightning flash is makyō as an image: blinding, revelatory, gone.
+
+**Decisions:** Japanese was Nick's choice after the state was identified, so it doesn't break *state first, language second*. **The cover prints 魔境, not 魔鏡**, because printing the mirror kanji would explain the homophone. **No macron anywhere, `MAKYO` in caps:** `makyo` is what people type, SoundCloud's accent-folding is unreliable, the permalink would mangle `ō`, and cover text has to match metadata for Apple. `makyō` and `魔境` go in as SoundCloud tags. Kanji set in Hiragino Sans (OCR A has none).
+
+**Cover:** a found photograph of cloud-to-cloud spider lightning, graded with the new `WOBAR — Rust` preset ([[working/WOBAR_VISUAL_RESET]] §8). Brand-checked 2026-11-03 against Act 4 before the act was known, 7/10. **Nick kept it as is.** The file is not in the repo.
+
+**Open:**
+- **The sample is uncleared anime dialogue.** That decides the release route (DSPs vs SoundCloud only, re-performed lines, or a SAMPLES I'LL NEVER GET CLEARED entry) and was set aside by Nick, not resolved.
+- **The cover was scored against the wrong act.** It was checked as Act 4 (discharge). The track is pure Act 3, and the check was not re-run.
+- **The mark is white again.** That's the third cover with a white corner mark and still no rule.
+- **The source photo is a ~1526px screenshot of unknown origin.** It's below 3000 × 3000 and the license is unknown.
+- **Title collisions are unchecked.** An existing artist named *Makyo* may exist. No exact-title search has been run on SoundCloud, Spotify or Beatport.
 
 ### Inside vs outside — stage visuals and release art as two views of one world
 **State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.
