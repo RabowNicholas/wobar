@@ -1,6 +1,6 @@
 ---
 title: Blender Footguns — Confirmed Failure Patterns
-version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-9, R-5 confirmed, Open Track partly settled — 2026-11-07)
+version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-10, R-5 confirmed, Open Track partly settled — 2026-11-07)
 last_updated: 2026-11-07
 status: live
 scope: Confirmed failure patterns + fixes for agent-driven Blender work via the MCP connector. Mirror of TD_FOOTGUNS / TD_CLAUDE_DEBUG_LOG. Read before any non-trivial agent action. Append empirically as new failures surface — no speculative entries.
@@ -259,6 +259,13 @@ Entries observed in real work, not seeded from research.
 **Symptom:** A partial file written with only the kit collections also contained the objects' original collections (`Collection`, `SHAPES`) and the song's sound datablock.
 **Fix:** After appending into the final file, remove every collection not prefixed `KIT_` and every sound (`scripts/blender/kit/assemble.py`), then re-run the integrity check.
 **Source:** 2026-11-07, kit build.
+**Status:** confirmed.
+
+### V-10 — `APPEND_REUSE` is listed but rejected on a user asset library
+**Symptom:** `lib.import_method = "APPEND_REUSE"` raises `enum "APPEND_REUSE" not found in ('LINK', 'APPEND', 'PACK')`, although `bpy.types.UserAssetLibrary.bl_rna.properties["import_method"].enum_items` lists it.
+**Cause:** The enum is filtered per instance. A user library in 5.2.3 offers only Link / Append / Pack, and a newly added library defaults to Pack.
+**Fix:** Set `"APPEND"` (or `"LINK"`) explicitly after `preferences.asset_library_add`. Don't trust `bl_rna` enum_items for dynamic enums; read the error, or test-assign inside `try/except TypeError`.
+**Source:** 2026-11-07, registering the WOBAR Kit library.
 **Status:** confirmed.
 
 ---

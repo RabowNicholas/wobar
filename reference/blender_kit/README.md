@@ -19,7 +19,11 @@ dependencies: [[reference/blender_library/BLENDER_FOOTGUNS]], [[reference/blende
 | Catalogs | `/Volumes/music/blender/wobar_kit/blender_assets.cats.txt` — WOBAR / Tunnel · MAKYO · Control · Compositor · World · NodeGroups |
 | Build + verify scripts | `scripts/blender/kit/` — `prep.py` (source → partial), `assemble.py` (partials → library), `verify_kit.py`, `imgdiff.py` |
 
-Binaries live on the drive, text lives in git. The library folder is **not registered** in Blender's Preferences → File Paths → Asset Libraries yet. Until it is, append by script:
+Binaries live on the drive, text lives in git. **Registered 2026-11-07** in Preferences → File Paths → Asset Libraries as **"WOBAR Kit"**, import method **Append** (Append (Reuse Data) is not offered for user libraries in 5.2; FOOTGUNS V-10). It shows in the Asset Browser on any file while the drive is mounted.
+
+**Asset Browser caveat for MAKYO parts:** each dragged-in part appends its own copy of the control empty as a dependency, so two parts give `WOBAR_CTRL` + `WOBAR_CTRL.001` and split the drivers. That's expected from Append and the script behaviour, but not yet observed in the UI. For MAKYO parts, use the script below with every part plus `KIT_CTRL` in one load. The Browser is fine for the tunnel, worlds and compositors.
+
+Append by script:
 
 ```python
 with bpy.data.libraries.load("/Volumes/music/blender/wobar_kit/wobar_kit.blend", link=False) as (src, dst):
