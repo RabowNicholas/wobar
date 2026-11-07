@@ -3,12 +3,18 @@
 # ableton_backup.sh
 # Copies installed plugins, Ableton templates, racks, M4L devices, and Serum
 # presets from this machine to the "music" external drive.
-# Skips anything that already exists at the destination. Asks for confirmation
+# Never overwrites: skips any file or plugin bundle already at the destination,
+# but looks inside existing folders for new files. Asks for confirmation
 # per category before copying.
+#
+# Usage: ableton_backup.sh [--dry-run]
+#   --dry-run  list what would be copied, copy nothing
 
 set -u
 
 DEST_ROOT="/Volumes/music"
+DRY_RUN=0
+[ "${1:-}" = "--dry-run" ] && DRY_RUN=1
 
 if [ ! -d "$DEST_ROOT" ]; then
     echo "Error: destination drive not found at $DEST_ROOT. Plug it in and retry."
@@ -44,42 +50,64 @@ confirm() {
     esac
 }
 
+# Plugin bundles are directories on disk but get copied whole, never merged.
+is_bundle() {
+    case "$1" in
+        *.component|*.vst3|*.vst|*.clap|*.aaxplugin|*.bundle|*.app) return 0 ;;
+        *) return 1 ;;
+    esac
+}
+
+# walk SRC_DIR DEST_DIR REL_PREFIX
+# Recurses into ordinary folders that already exist at the destination, so new
+# files inside them are found. Folders missing at the destination are queued
+# whole. Fills NEW_SRC / NEW_DST / NEW_LABEL and bumps SKIP_COUNT.
+walk() {
+    local s="$1" d="$2" rel="$3" item base n
+    for item in "$s"/*; do
+        [ -e "$item" ] || [ -L "$item" ] || continue
+        base="${item##*/}"
+        case "$base" in
+            .*|SaveYour*.txt) continue ;;
+        esac
+        # top-level "Imported" folder is flattened into dest separately
+        if [ -z "$rel" ] && [ "$base" = "Imported" ]; then
+            continue
+        fi
+        if [ -d "$item" ] && [ ! -L "$item" ] && ! is_bundle "$base"; then
+            if [ -d "$d/$base" ]; then
+                walk "$item" "$d/$base" "$rel$base/"
+            elif [ -e "$d/$base" ]; then
+                SKIP_COUNT=$((SKIP_COUNT + 1))
+            else
+                n=$(find "$item" -type f ! -name '.*' | wc -l | tr -d ' ')
+                NEW_SRC+=("$item"); NEW_DST+=("$d/$base")
+                NEW_LABEL+=("$rel$base/  (new folder, $n files)")
+            fi
+        else
+            if [ -e "$d/$base" ] || [ -L "$d/$base" ]; then
+                SKIP_COUNT=$((SKIP_COUNT + 1))
+            else
+                NEW_SRC+=("$item"); NEW_DST+=("$d/$base")
+                NEW_LABEL+=("$rel$base")
+            fi
+        fi
+    done
+}
+
 process_category() {
-    local label="$1" src="$2" dest="$3"
+    local label="$1" src="$2" dest="$3" i
 
     if [ ! -d "$src" ]; then
         return
     fi
 
-    local -a new_items=()
-    local -a existing_items=()
-    local item base
+    NEW_SRC=(); NEW_DST=(); NEW_LABEL=(); SKIP_COUNT=0
 
-    for item in "$src"/*; do
-        [ -e "$item" ] || continue
-        base=$(basename "$item")
-        case "$base" in
-            .*|Imported|SaveYour*.txt) continue ;;
-        esac
-        if [ -e "$dest/$base" ]; then
-            existing_items+=("$base")
-        else
-            new_items+=("$base")
-        fi
-    done
-
-    # also pick up files inside an "Imported" subfolder, if present, flattened
+    walk "$src" "$dest" ""
+    # files inside a top-level "Imported" subfolder land flat in dest
     if [ -d "$src/Imported" ]; then
-        for item in "$src/Imported"/*; do
-            [ -e "$item" ] || continue
-            base=$(basename "$item")
-            case "$base" in .*) continue ;; esac
-            if [ -e "$dest/$base" ]; then
-                existing_items+=("$base (from Imported)")
-            else
-                new_items+=("$base|IMPORTED")
-            fi
-        done
+        walk "$src/Imported" "$dest" "Imported/"
     fi
 
     echo ""
@@ -87,39 +115,35 @@ process_category() {
     echo "Source: $src"
     echo "Dest:   $dest"
 
-    if [ ${#new_items[@]} -eq 0 ]; then
-        echo "Nothing new to copy (${#existing_items[@]} already present)."
-        TOTAL_SKIPPED=$((TOTAL_SKIPPED + ${#existing_items[@]}))
+    TOTAL_SKIPPED=$((TOTAL_SKIPPED + SKIP_COUNT))
+
+    if [ ${#NEW_SRC[@]} -eq 0 ]; then
+        echo "Nothing new to copy ($SKIP_COUNT already present)."
         return
     fi
 
-    echo "New items to copy (${#new_items[@]}):"
-    for item in "${new_items[@]}"; do
-        echo "  - ${item%%|IMPORTED}"
+    echo "New items to copy (${#NEW_SRC[@]}):"
+    for i in "${!NEW_LABEL[@]}"; do
+        echo "  - ${NEW_LABEL[$i]}"
     done
-    if [ ${#existing_items[@]} -gt 0 ]; then
-        echo "Already present, will skip (${#existing_items[@]}):"
-        for item in "${existing_items[@]}"; do
-            echo "  - $item"
-        done
+    echo "Already present, will skip: $SKIP_COUNT"
+
+    if [ "$DRY_RUN" -eq 1 ]; then
+        echo "(dry run: nothing copied)"
+        TOTAL_COPIED=$((TOTAL_COPIED + ${#NEW_SRC[@]}))
+        return
     fi
 
-    if confirm "Copy these ${#new_items[@]} item(s) into \"$dest\"?"; then
-        mkdir -p "$dest"
-        for item in "${new_items[@]}"; do
-            if [[ "$item" == *"|IMPORTED" ]]; then
-                base="${item%%|IMPORTED}"
-                cp -R "$src/Imported/$base" "$dest/$base"
-            else
-                cp -R "$src/$item" "$dest/$item"
-            fi
+    if confirm "Copy these ${#NEW_SRC[@]} item(s) into \"$dest\"?"; then
+        for i in "${!NEW_SRC[@]}"; do
+            mkdir -p "$(dirname "${NEW_DST[$i]}")"
+            cp -R "${NEW_SRC[$i]}" "${NEW_DST[$i]}"
         done
-        echo "Copied ${#new_items[@]} item(s)."
-        TOTAL_COPIED=$((TOTAL_COPIED + ${#new_items[@]}))
-        TOTAL_SKIPPED=$((TOTAL_SKIPPED + ${#existing_items[@]}))
+        echo "Copied ${#NEW_SRC[@]} item(s)."
+        TOTAL_COPIED=$((TOTAL_COPIED + ${#NEW_SRC[@]}))
     else
         echo "Skipped."
-        TOTAL_SKIPPED=$((TOTAL_SKIPPED + ${#existing_items[@]}))
+        TOTAL_SKIPPED=$((TOTAL_SKIPPED + ${#NEW_SRC[@]}))
     fi
 }
 
@@ -132,5 +156,9 @@ done
 
 echo ""
 echo "== Done =="
-echo "Copied:  $TOTAL_COPIED"
+if [ "$DRY_RUN" -eq 1 ]; then
+    echo "Would copy: $TOTAL_COPIED (dry run)"
+else
+    echo "Copied:  $TOTAL_COPIED"
+fi
 echo "Skipped (already present or declined): $TOTAL_SKIPPED"
