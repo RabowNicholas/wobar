@@ -1,7 +1,7 @@
 ---
 title: Blender Footguns — Confirmed Failure Patterns
-version: 1.0
-last_updated: 2026-05-22
+version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-9, R-5 confirmed, Open Track partly settled — 2026-11-07)
+last_updated: 2026-11-07
 status: live
 scope: Confirmed failure patterns + fixes for agent-driven Blender work via the MCP connector. Mirror of TD_FOOTGUNS / TD_CLAUDE_DEBUG_LOG. Read before any non-trivial agent action. Append empirically as new failures surface — no speculative entries.
 dependencies: BLENDER_LIBRARY_INDEX.md, BLENDER_PYTHON_API.md, BLENDER_WORKFLOW_AGENT_DRIVEN.md
@@ -154,7 +154,7 @@ The file will grow naturally as we use the MCP connector and the brain — that'
 **Cause:** EEVEE Next replaced legacy EEVEE in 4.2. The engine string changed. (Note: Blender 5.0 may reclaim `'BLENDER_EEVEE'` for EEVEE Next.)
 **Fix:** Use `'BLENDER_EEVEE_NEXT'` for 4.2 through (at least) 4.5. Verify the exact string for the installed version via `bpy.types.RenderSettings.bl_rna.properties['engine'].enum_items.keys()` at install time.
 **Source:** `[[BLENDER_RENDER_EEVEE]]`.
-**Status:** expected, not yet confirmed.
+**Status:** **confirmed 2026-11-07, and the 5.0 note was right.** Blender 5.2.3 reads the engine as `BLENDER_EEVEE`; 4.5.3 reads the same file as `BLENDER_EEVEE_NEXT`. Opening a 5.2 file in 4.5 prints `Engine 'BLENDER_EEVEE' not available for scene`. On 5.x, assign `'BLENDER_EEVEE'` inside `try/except TypeError`.
 
 ### R-6 — Expecting Bloom in EEVEE — removed in 4.2
 **Symptom:** Looking for the EEVEE Bloom checkbox; can't find it.
@@ -187,12 +187,79 @@ The file will grow naturally as we use the MCP connector and the brain — that'
 
 The following are flagged for empirical verification once the MCP connector is installed and used. Each should be promoted to a confirmed entry above (or deleted as false positive) after observation.
 
-- **Claude Code vs Claude Desktop compatibility** — does the official Blender connector reach Claude Code? Research file flagged as untested.
+- **Claude Code vs Claude Desktop compatibility** — does the official Blender connector reach Claude Code? Research file flagged as untested. *Settled 2026-11-07 for the connector actually in use:* the rig runs **MCP for Blender** (addon 1.8, protocol 15, `uvx mcp-for-blender`), not the Blender Foundation connector this library was researched against. It works in Claude Code: `get_addon_status`, `get_scene_info`, `execute_blender_code`, `look` (`get_viewport_screenshot` is in its capability list).
 - **Viewport screenshot availability** — does the official MCP expose screenshots? ahujasid's variant does; official's tutorial doesn't explicitly demo this.
 - **The exact tool surface of the official MCP** — research was based on press coverage. The full tool list, parameter shapes, and limitations are empirical-only.
 - **`execute_blender_code` undo behavior** — flagged as "unreliable; save before" by the agent-driven workflow file. Worth confirming empirically.
 - **Grease Pencil v3 vs v2 collection naming** — Blender 4.3+ renamed; 4.2 LTS uses legacy. The exact installed version determines which bpy.data collection to use.
-- **Action Slot system (4.4+)** — multi-slot Actions require the agent to understand which slot is active; verify behavior on installed build.
+- **Action Slot system (4.4+)** — multi-slot Actions require the agent to understand which slot is active; verify behavior on installed build. *Partly settled 2026-11-07 (5.2.3):* F-curves are read via `action.layers[].strips[].channelbags[].fcurves`; `action.fcurves` is the legacy path. Assigning `obj.animation_data.action = None` cleanly detaches. Multi-slot behaviour is still unexercised.
+
+---
+
+## Confirmed in WOBAR Sessions
+
+Entries observed in real work, not seeded from research.
+
+### V-1 — Headless Blender is the wrong version
+**Symptom:** A background `Blender -b file.blend` run prints `File written by newer Blender binary (502.45), expect loss of data!` and engine errors.
+**Cause:** On Nick's rig `/Applications/Blender.app` is **4.5.3**. The working install is `/Applications/Blender 5.2.app`.
+**Fix:** Run headless as `"/Applications/Blender 5.2.app/Contents/MacOS/Blender" -b …`. Check with `--version` before trusting any read.
+**Source:** 2026-11-07, reading tunnel_v1 / MAKYO. The 4.5 reads happened to match 5.2 on every value checked, but that was luck.
+**Status:** confirmed.
+
+### V-2 — Geometry-nodes modifier inputs moved in 5.x
+**Symptom:** `modifier["Socket_2"]` or `modifier.keys()` raises `TypeError: this type doesn't support IDProperties`.
+**Cause:** 5.x exposes GN modifier inputs as RNA, not ID properties.
+**Fix:** `getattr(mod.properties.inputs, item.identifier).value` (read and write), where `item` comes from `mod.node_group.interface.items_tree` (`item_type == "SOCKET"`, `in_out == "INPUT"`). That also gives the human-readable `item.name`.
+**Source:** 2026-11-07. `scripts/blender/kit/prep.py` uses the working pattern.
+**Status:** confirmed.
+
+### V-3 — Driver audit that only checks `idb.animation_data` misses material and world drivers
+**Symptom:** A driver listing shows no lighting drivers on a file whose lights and glows obviously move.
+**Cause:** Drivers on shader-node values live on `material.node_tree.animation_data` / `world.node_tree.animation_data`, and light-energy drivers on `light_data.animation_data`, not on the object or material ID.
+**Fix:** Check `idb.animation_data` **and** `idb.node_tree.animation_data` for materials and worlds, and the light datablocks too. The first MAKYO audit missed 6 drivers, including every snare-driven glow.
+**Source:** 2026-11-07, MAKYO.
+**Status:** confirmed.
+
+### V-4 — A saved file's static value of a driven property means nothing on its own
+**Symptom:** Two saves of a file show very different light energy or emission values; the difference is wrongly read as a design change.
+**Cause:** A driven or animated property stores whatever it evaluated to on the frame the file was saved (`scene.frame_current`). makyo_final was saved on frame 1263 and makyo_intro on frame 900.
+**Fix:** Compare driver **expressions**, or `frame_set()` both files to the same frame before comparing values.
+**Source:** 2026-11-07, a wrong "intro runs dimmer" claim retracted after this check.
+**Status:** confirmed.
+
+### V-5 — `to_mesh()` on an instancing GN object returns 0 vertices
+**Symptom:** A loop or geometry check on a GN object compares two empty meshes and "passes".
+**Cause:** When the node tree outputs instances, the evaluated mesh is empty; the geometry is in the instances.
+**Fix:** Count or inspect via `depsgraph.object_instances` (`inst.is_instance`, `inst.parent`), or compare renders. A check that reads 0 vertices has measured nothing.
+**Source:** 2026-11-07, tunnel_v1 loop check.
+**Status:** confirmed.
+
+### V-6 — Render diff between a 16-bit and an 8-bit PNG is meaningless
+**Symptom:** Two visually identical renders diff at about 44/255.
+**Cause:** A 16-bit PNG loads into `bpy.data.images` as float linear; an 8-bit one loads as sRGB bytes.
+**Fix:** Force `image_settings.color_depth = "8"` and `color_mode = "RGB"` on both sides of any render comparison (`scripts/blender/kit/verify_kit.py`). With depth matched the same pair diffed 0.000.
+**Source:** 2026-11-07, kit verification.
+**Status:** confirmed.
+
+### V-7 — Compositor tree location changed in 5.x
+**Symptom:** `scene.node_tree` is `None` on a file with a working compositor (or `scene.compositing_node_group` is missing on 4.5).
+**Cause:** 5.x stores the compositor as a node group assigned to `scene.compositing_node_group`; 4.5 uses `scene.node_tree`.
+**Fix:** `getattr(scene, "compositing_node_group", None) or scene.node_tree`.
+**Source:** 2026-11-07.
+**Status:** confirmed.
+
+### V-8 — "Excluded from view layer" does not survive moving parts into another file
+**Symptom:** Source collections for Collection Info (shard kits, fracture pieces) were kept out of the render by being excluded in the view layer. That flag is per view layer, so it doesn't come along on append.
+**Fix:** Set `collection.hide_render = True` on source collections. Collection Info still instances them: verified at 3000 ShardStream / 7000 HatDust instances, with a render matching the original to 0.13/255.
+**Source:** 2026-11-07, kit build.
+**Status:** confirmed.
+
+### V-9 — `bpy.data.libraries.write` drags in extra dependencies
+**Symptom:** A partial file written with only the kit collections also contained the objects' original collections (`Collection`, `SHAPES`) and the song's sound datablock.
+**Fix:** After appending into the final file, remove every collection not prefixed `KIT_` and every sound (`scripts/blender/kit/assemble.py`), then re-run the integrity check.
+**Source:** 2026-11-07, kit build.
+**Status:** confirmed.
 
 ---
 

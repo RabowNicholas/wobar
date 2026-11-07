@@ -182,6 +182,9 @@ A **flat list standing in for a structured thing** is a drift generator, not jus
 | [[working/HOHLWEG_VISUALIZER]] | /working | **Creative decisions + staged build for the HOHLWEG continuous-push visualizer** — what is decided, the ten build stages with a stopping point after each, and what is still open | live (v0.1) |
 | [[working/BLENDER_COURSE]] | /working | Nick's 12-module course toward the HOHLWEG continuous-push visualizer; techniques only | live |
 | [[working/BLENDER_CHEATSHEET]] | /working | Nick's own keybinding/workflow lookup sheet | live — growing |
+| [[reference/blender_kit/README]] | /reference/blender_kit | **Check before building any Blender visualizer.** The parts kit: verified parts from finished pieces as appendable assets in `/Volumes/music/blender/wobar_kit/wobar_kit.blend` (KIT_Tunnel, KIT_MAKYO_Shards/Dust/Mirror/Light/Cam, KIT_CTRL, worlds, compositors). One card per part, the **`WOBAR_CTRL` control-channel contract** every audio-driven part reads, and the verification record (render diffs against source). Build/verify scripts in `scripts/blender/kit/`. **Blender is the primary visualizer tool as of 2026-11-07** | live (v0.1) |
+| [[reference/blender_cases/TUNNEL_V1]] | /reference/blender_cases | Case file: the seamless 206-frame kaleidoscope loop. Which layer makes which effect (colour offsets, rim-shift glass, compositor-only symmetry); no audio | live (v0.1) — reasoning pending VISUAL_IDENTITY merge |
+| [[reference/blender_cases/MAKYO]] | /reference/blender_cases | Case file: the full-song, audio-locked piece. Stems → curves → one control empty → 87 drivers; **the snare is the master light**; held mirror → frame-824 shatter → shard stream; final vs intro diff; known debts (hard-coded frame 827, unused channels, no vocal) | live (v0.1) — build log pending merge |
 
 ### TouchDesigner — General Library (brand-agnostic)
 | File | Location | Scope | Status |
