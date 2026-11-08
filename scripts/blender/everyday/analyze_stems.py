@@ -11,6 +11,7 @@ Writes one value per video frame (30 fps, frame 1 = t 0) for each channel:
   kick_shove / snare_step / hat_step   eased running counts: each hit adds exactly 1, eased out over a
                                    short window, so a driver can turn "hits" into smooth travel/spin/colour
   low                              0-1 low-end envelope (no kick), normalised to drop level
+  low_slow                         the same, smoothed to section level (attack 0.4 s, release 1.5 s)
   low_acc                          integral of the travel base speed (floor + low), in seconds-equivalent
 
 Times are sample-accurate: index * hop / sr. (An earlier analysis multiplied indices by a nominal
@@ -28,7 +29,7 @@ STEMS = {"kick": "everyday_kick_stem.wav", "snare": "everyday_snare_stem.wav",
 ONSET = {  # min gap between hits (s), decay time constant (s), eased-step duration (s)
     "kick":  dict(gap=0.12, tau=0.15, ease=0.30),
     "snare": dict(gap=0.12, tau=0.25, ease=0.15),
-    "hat":   dict(gap=0.05, tau=0.06, ease=0.08),
+    "hat":   dict(gap=0.05, tau=0.12, ease=0.08),   # tau 0.12: glints need ~4 frames to read
 }
 TRAVEL_FLOOR = 0.35   # travel base speed never drops below this share, so the tunnel never stalls
 
@@ -114,6 +115,14 @@ def main(stem_dir, out):
     ref = np.percentile(low, 90)
     low = np.clip(low / ref, 0, 1.2) if ref > 0 else low
     ch["low"] = low
+    # section-level energy: the same envelope, slower (attack 0.4 s, release 1.5 s) so it follows
+    # the arrangement instead of individual bass notes. Drives psychedelic intensity (colour).
+    b_up, b_dn = np.exp(-1 / FPS / 0.4), np.exp(-1 / FPS / 1.5)
+    slow = np.zeros(nfr)
+    for i in range(1, nfr):
+        b = b_up if low[i] > slow[i - 1] else b_dn
+        slow[i] = b * slow[i - 1] + (1 - b) * min(low[i], 1.0)
+    ch["low_slow"] = slow
     speed = TRAVEL_FLOOR + (1 - TRAVEL_FLOOR) * np.clip(low, 0, 1)
     ch["low_acc"] = np.concatenate([[0.0], np.cumsum(speed[:-1]) / FPS])
 
