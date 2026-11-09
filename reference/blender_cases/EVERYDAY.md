@@ -74,7 +74,7 @@ Run order: `bake_curves → drop2_peak → break_void → break_chaos → intro_
 ## Render
 
 - **Quality test (2026-11-09):** at 1080p, 64 samples is within 38.5–42.6 dB of 128 (invisible); 32 is visibly grainy on glints. 4K at 32 samples, downscaled, matches 4K at 128 downscaled and is cleaner than native 1080 at 128. 4K costs ~1.5× per frame at equal samples. Glint-heavy frames (the peak) are the slowest to clean.
-- **Final spec (Nick: highest quality, diminishing returns):** 2160×3840, **64 samples**, motion blur on (shutter 0.5), 16-bit PNG frames, full song. One master serves YouTube (4K upload) and IG/TikTok (downscaled). To run on the faster machine. **Not run yet.**
+- **Final spec (Nick: highest quality, diminishing returns):** 2160×3840, **64 samples**, motion blur on (shutter 0.5), 16-bit PNG frames, full song. One master serves YouTube (4K upload) and IG/TikTok (downscaled). To run on the faster machine with `scripts/blender/everyday/render_final.sh` (resumable, shareable across two machines, then encodes a 4K ProRes 422 HQ master, a 4K YouTube H.264 and a 1080 social H.264). Frames are ~38 MB each at 16-bit, ~250 GB total. **Not run yet** (frame 3400 rendered as the script test).
 - Motion blur costs almost nothing in EEVEE here; samples are the cost.
 
 ## Known debts
