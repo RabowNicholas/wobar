@@ -16,7 +16,7 @@ import bpy
 import numpy as np
 
 BPM, FPS, N = 140, 30, 6583
-TUNE = dict(reveal_soft=0.005, pop_amp=0.6, pop_glow=6.0, light_sub=0.8, outside_dist=45.0)
+TUNE = dict(reveal_soft=0.005, pop_amp=0.6, pop_glow=1.5, light_sub=0.8, outside_dist=45.0)
 LAST_KICK = 6573          # frame of the final kick (from everyday_curves.json kick_idx)
 CLEAR_KICK = 6559         # the kick that removes the last pieces; light alone until LAST_KICK
 
@@ -57,9 +57,24 @@ intro = fr < F15
 rev_r[intro] = norm(drums, 1, F15 - 1)[intro]
 rev_h[intro] = 0.6 * norm(hats, 1, F15 - 1)[intro]
 outro = fr >= F113
-rev_r[outro] = (1 - norm(drums, F113, ease_end))[outro]
-rev_h[outro] = (1 - norm(hats, F113, ease_end))[outro]
-rev_r[fr >= ease_end] = 0; rev_h[fr >= ease_end] = 0
+# Outro: early hits take big bites, late hits small ones (power curve), and the result is low-passed so
+# each shape shrinks over ~half a second instead of snapping. Without this the last kick fill
+# (6534/6546/6559) deleted the final quarter of the tunnel in three chunks while everything else stood
+# still, which read as choppy (Nick, 2026-11-09).
+OUT_POW, OUT_TAU = 1.8, 0.25
+
+
+def lowpass(x, tau):
+    a = np.exp(-1 / (FPS * tau)); y = x.copy()
+    for i in range(1, len(y)):
+        y[i] = a * y[i - 1] + (1 - a) * x[i]
+    return y
+
+
+fade = 1 - smooth((fr - CLEAR_KICK) / (LAST_KICK - 2 - CLEAR_KICK))      # residual -> 0 before the cut
+for arr, src in ((rev_r, drums), (rev_h, hats)):
+    o = np.where(outro, (1 - norm(src, F113, ease_end)) ** OUT_POW, 1.0)
+    arr[outro] = (lowpass(o, OUT_TAU) * fade)[outro]
 intro_mask = 1 - smooth((fr - F17) / (60 / BPM * FPS))
 outside = smooth((fr - F113) / (F125 - F113))
 cut = (fr >= LAST_KICK).astype(float)
@@ -90,7 +105,7 @@ if ng.animation_data:
 for n in [n for n in N_ if n.name.startswith("Reveal")]:
     N_.remove(n)
 L = ng.links.new
-shapes, chaos, cube_scale, ppr = N_["Shapes On Walls"], N_["Chaos Offset"], N_["Cube Scale"], N_["Points Per Ring"]
+shapes, chaos, cube_scale = N_["Shapes On Walls"], N_["Chaos Offset"], N_["Cube Scale"]
 x0, y0 = chaos.location.x, chaos.location.y + 600
 
 
@@ -114,6 +129,11 @@ def math(op, name, dx, dy, a=None, b=None):
 vR, vH, vS = (node("ShaderNodeValue", n, -900, -i * 120) for i, n in enumerate(("Reveal R", "Reveal H", "Reveal Soft")))
 vP = node("ShaderNodeValue", "Reveal Pop Amp", -900, -360)
 idx = node("GeometryNodeInputIndex", "Reveal Index", -900, 200)
+# own ring counter: the original "Points Per Ring" node counts the MESH component of a point cloud, so it
+# returns 0 and every shape lands in "ring 0" (the whole tunnel then toggles at once). Left untouched because
+# the existing look (Random Axis / Random Phase) depends on it.
+ppr = node("GeometryNodeAttributeDomainSize", "Reveal Points Per Ring", -900, 350, component="POINTCLOUD")
+L(N_["Stand Ring Up"].outputs[0], ppr.inputs[0])
 ring = math("DIVIDE", "Reveal Ring Div", -750, 200, idx.outputs[0], ppr.outputs["Point Count"])
 ringf = math("FLOOR", "Reveal Ring", -600, 200, ring.outputs[0])
 kr = node("FunctionNodeRandomValue", "Reveal Ring Key", -450, 200, data_type="FLOAT")
@@ -132,14 +152,15 @@ pop = math("SINE", "Reveal Pop", 350, 0, pt.outputs[0])
 popa = math("MULTIPLY", "Reveal Pop Scaled", 500, 0, pop.outputs[0], vP.outputs[0])
 popk = math("ADD", "Reveal Pop Gain", 650, 0, popa.outputs[0], 1.0)
 sc_ = math("MULTIPLY", "Reveal Scale", 800, 100, t.outputs[0], popk.outputs[0])
-vis = math("GREATER_THAN", "Reveal Visible", 800, 250, t.outputs[0], 0.0)
 store = node("GeometryNodeStoreNamedAttribute", "Reveal Store Pop", 950, -300, data_type="FLOAT", domain="POINT")
 store.inputs["Name"].default_value = "pop"
 L(chaos.outputs[0], store.inputs["Geometry"]); L(pop.outputs[0], store.inputs["Value"])
 L(store.outputs[0], shapes.inputs["Points"])
 vs = node("ShaderNodeVectorMath", "Reveal Scale Vec", 950, 100, operation="SCALE")
 L(cube_scale.outputs[0], vs.inputs[0]); L(sc_.outputs[0], vs.inputs["Scale"])
-L(vs.outputs[0], shapes.inputs["Scale"]); L(vis.outputs[0], shapes.inputs["Selection"])
+L(vs.outputs[0], shapes.inputs["Scale"])
+# Hidden shapes stay as zero-scale instances: the instance count must not change between frames,
+# or motion blur pairs the wrong instances and smears the frame (FOOTGUNS V-14).
 
 
 def var(d, name):
@@ -173,7 +194,7 @@ nt = bpy.data.materials["ColorGlass"].node_tree
 for n in [n for n in nt.nodes if n.name.startswith("Reveal")]:
     nt.nodes.remove(n)
 vm = nt.nodes["Void Mix"]
-src = next(l.from_socket for l in nt.links if l.to_node == vm and l.to_socket == vm.inputs[1])
+src = nt.nodes["Glass + Glow + Glint"].outputs[0]      # by name: re-runs delete Reveal Add, which fed Void Mix
 at = nt.nodes.new("ShaderNodeAttribute"); at.name = at.label = "Reveal Pop Attr"
 at.attribute_type = "INSTANCER"; at.attribute_name = "pop"
 pg = nt.nodes.new("ShaderNodeValue"); pg.name = pg.label = "Reveal Pop Glow"

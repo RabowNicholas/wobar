@@ -1,7 +1,7 @@
 ---
 title: Blender Footguns — Confirmed Failure Patterns
-version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-13, R-5 confirmed, Open Track partly settled — 2026-11-07)
-last_updated: 2026-11-08
+version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-15, R-5 confirmed, Open Track partly settled — 2026-11-07)
+last_updated: 2026-11-09
 status: live
 scope: Confirmed failure patterns + fixes for agent-driven Blender work via the MCP connector. Mirror of TD_FOOTGUNS / TD_CLAUDE_DEBUG_LOG. Read before any non-trivial agent action. Append empirically as new failures surface — no speculative entries.
 dependencies: BLENDER_LIBRARY_INDEX.md, BLENDER_PYTHON_API.md, BLENDER_WORKFLOW_AGENT_DRIVEN.md
@@ -287,6 +287,20 @@ Entries observed in real work, not seeded from research.
 **Cause:** A bpy collection with zero items evaluates False, so the `or` picks the fallback.
 **Fix:** In 5.x, use `se.strips` directly (`se = scene.sequence_editor_create()`; `se.strips.new_sound(...)`). Never feature-detect with `or` on a collection.
 **Source:** 2026-11-07, adding the Everyday master WAV.
+**Status:** confirmed.
+
+### V-14 — Changing the instance count between frames breaks EEVEE motion blur
+**Symptom:** On frames where a GN "Instance on Points" gains or loses instances (here: a Selection that revealed shapes on hits), the whole frame smears into grey streaks for one frame. Neighbouring frames are clean.
+**Cause (inferred from the fix):** motion blur pairs instances across shutter steps by index. When the count changes, indices shift and unrelated instances get blurred toward each other.
+**Fix:** keep the instance count constant. Hide instances with zero scale instead of a Selection. Verified: the same frames (233, 349) render clean after the change.
+**Source:** 2026-11-09, Everyday intro reveal, found in the full 10-sample render.
+**Status:** confirmed.
+
+### V-15 — "Domain Size" defaults to the Mesh component and returns 0 on a point cloud
+**Symptom:** `GeometryNodeAttributeDomainSize` wired to a point cloud (e.g. from Curve to Points) outputs `Point Count` = 0. Anything divided or wrapped by it collapses to 0: every shape fell into "ring 0", so a per-ring reveal toggled all 4440 shapes on one frame.
+**Fix:** set `node.component = "POINTCLOUD"` (or the matching type). Check the count with the evaluated geometry: `ob.evaluated_get(dg).evaluated_geometry().instances_pointcloud()`, and keep a reference to the geometry object, or the point cloud is freed (`StructRNA of type PointCloud has been removed`).
+**Note:** tunnel_v1's own "Points Per Ring" has this bug (count 0, verified). Blender's math nodes return 0 for modulo by zero, so "Position Around Ring" is presumably always 0 (inferred, not inspected) and Random Axis / Random Phase are the same for every shape. The look Nick approved depends on that, so it's left alone.
+**Source:** 2026-11-09, Everyday outro white-out at frame 6199.
 **Status:** confirmed.
 
 ---

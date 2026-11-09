@@ -1,7 +1,7 @@
 ---
 title: Wobar Visual Design System — the Wireframe-Void World
-version: 1.7 (+ §8 third grade preset WOBAR — Rust, first used on the MAKYO cover, 2026-11-03 — on top of v1.6's §8.5 — the per-track macro material set for HOHLWEG's track art, reconciled 2026-09-04 after a cross-machine sync gap left it out of the v1.4/v1.5 line since 2026-08-28 — on top of v1.5's §9/§9.5, the online video presence and live-show lighting ideas, both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
-last_updated: 2026-11-03
+version: 1.8 (+ §6 restructured into Locked / Testing / Denied, §2 spine revised to match — five rules the finished Blender pieces broke are denied with reasons, the shared instrument physics and the light enter testing, 2026-11-09 — on top of v1.7's §8 third grade preset WOBAR — Rust, first used on the MAKYO cover, 2026-11-03 — on top of v1.6's §8.5 — the per-track macro material set for HOHLWEG's track art, reconciled 2026-09-04 after a cross-machine sync gap left it out of the v1.4/v1.5 line since 2026-08-28 — on top of v1.5's §9/§9.5, the online video presence and live-show lighting ideas, both explicitly experimental/unbuilt, added 2026-09-03 — on top of v1.4's §2.5 public explainer for the composite system, locked 2026-09-01 during the Chris Alba–lens brand audit — see working/WOBAR_BRAND_AUDIT.md — on top of §8's two named Gradient Map presets, GREEN and PURPLE, formalized 2026-08-27 for reuse across pieces)
+last_updated: 2026-11-09
 last_session: 2026-09-04
 status: live — governing. READ BEFORE ANY VISUALIZER BUILD.
 scope: The Wobar visualizer design system. v1.0 replaced the corridor spine (v0.2) wholesale. The visualizer is not a rendering of a concept — it is a WORLD with its own physics: low-poly wireframe forms, muted-psychedelic, one contrasting element holding attention. v1.1 opens a second permitted world-state — the same form standing as a physically present object inside a photoreal environment (§2.5). v1.2 records the composite's first build and Nick's confirmation that this is the direction for the brand's visual identity as a whole, not just this piece. v1.3 formalizes the finishing grade as two named, reusable presets and records its first use outside the composite system. §8.5 adds a fourth mode: per-track macro material photography (no object, no wireframe) used for individual track art within an EP. Governs all visualizer work across all five acts. Supersedes the per-act material affinities in TD_REFERENCE §3/§4.
@@ -74,6 +74,9 @@ Old system = `WOBAR_TD_REFERENCE §3/§4` + `WOBAR_GLSL_PATTERNS` + `WOBAR_OBSCU
 - **D3 — CA + bloom + grade + grain** = the universal "make it look pro" stack.
 
 ### Still-good (carried into v1.0 as house law — see §6)
+*2026-11-09: §6 now sorts these into Locked / Testing / Denied. K1's colour half and K5 are
+locked (L2, L1); K1's no-pure-white half and K3 are denied (D1, D2). C1/D1's tunnel ban is
+denied as D5.*
 - **K1 — Desaturation law** (muted, no pure white, neon ban). Strongest asset.
   Kept, now **muted-psychedelic**.
 - **K2 — The palette.** Keep; per-act temperature is the tuning knob (§4).
@@ -86,19 +89,25 @@ Old system = `WOBAR_TD_REFERENCE §3/§4` + `WOBAR_GLSL_PATTERNS` + `WOBAR_OBSCU
 
 ---
 
-## 2. THE SPINE — the wireframe-void world (LOCKED 2026-07-21)
+## 2. THE SPINE — the void world (LOCKED 2026-07-21, revised 2026-11-09)
 
-**The physics of the world:**
+**The physics of the world** *(revised 2026-11-09 — the rules themselves live in §6;
+this is the picture they add up to)*:
 
-- **Low-poly wireframe forms in true black.** Edges, not surfaces. Faceted, not smooth.
-- **Muted-psychedelic** (K1). Vector *structure*, WOBAR *desaturation* — never the
-  bright-line vector-cheese of synthwave/outrun.
-- **Naturally empty.** The frame is mostly black — because the void *is* empty (WORLD
-  §2). You do not fill it.
-- **One contrasting element that holds attention.** Empty + a single focal form. That
-  form is *what you meet in the chamber* (WORLD §2). It is a **mirror** — abstract, so
-  you project onto it — at any depth, **up to and including the center itself** (the
-  §8 wide strike, 2026-07-21: the center may be *shown*, never *explained*).
+- **Forms in black.** Abstract forms — glass, shard, or low-poly wireframe — in a black
+  ground. *Was: "low-poly wireframe, edges not surfaces" as the only form; denied as the
+  only form 2026-11-09 (§6.3 D3) after both finished Blender pieces landed in glass.
+  Wireframe remains permitted, and remains the composite's build rule (§2.5).*
+- **Muted-psychedelic** (§6.1 L2). Full palette at an act's peak, muted ceiling always —
+  never the bright-line vector-cheese of synthwave/outrun.
+- **Density is allowed.** *Was: "naturally empty, you do not fill it"; denied 2026-11-09
+  (§6.3 D4).* A dense frame is fine; what keeps it from being a pile is the one element.
+- **One element holds attention: the light** (§6.2 T2, testing). One near-white core,
+  far down the axis — what you meet in the chamber (WORLD §2), a mirror at any depth
+  **up to and including the center itself** (the §8 wide strike, 2026-07-21: the center
+  may be *shown*, never *explained*).
+- **The music is the physics** (§6.2 T1, testing). Every piece moves under the same
+  instrument laws, so pieces with different forms and palettes still read as one world.
 
 **Two permitted world-states (2026-08-13).** The above — form in true black — is the
 first. **§2.5 opens the second: the same form standing as a physically present object
@@ -106,8 +115,8 @@ inside a photoreal environment.** The frame is no longer necessarily black and e
 What is invariant across both is the *form* and the restraint, not the ground it sits on.
 
 **Coherence comes from the shared world, not from a repeated mechanic.** Every piece
-is recognizably WOBAR because it lives in the same world — the same wireframe, the same
-restraint — not because it re-runs a formula.
+is recognizably WOBAR because it lives in the same world — the same physics, the same
+restraint, the same light — not because it re-runs a formula.
 
 **Simplicity is doctrine, not compromise.** The tightrope (WORLD §0.2) says the
 surface stays simple while the cosmology stays submerged. A clean wireframe form
@@ -293,54 +302,72 @@ white — tint the wireframe slightly first, then rotate hue.
 
 ---
 
-## 6. THE LAWS — house rules + anti-targets
+## 6. THE RULES — locked, testing, denied *(restructured 2026-11-09, Nick)*
 
-**House law (carried from the audit K-rules):**
-- **K1 — Muted-psychedelic. No pure white. No neon.** The desaturation law.
-- **K3 — Imperfect mirror 85–90%** wherever mirroring is used. 100% = decorative, not
-  confrontational.
-- **K5 — Abstraction only. Zero figures.** Faceless + anti-cheese.
+**Why three lists.** The old §6 was one list of house law, and the finished pieces Nick
+approved broke five of them (tunnel_v1, MAKYO, Everyday). A rule a best piece breaks is not
+a constraint, it is drift in the doc. The fix is not to drop constraints but to give
+experiments a legal place: **constraints hold, and there is always something being tried.**
 
-**Anti-targets — what kills it:**
-- **Synthwave / outrun / neon-grid.** THE vector-cheese vector. Vector-void is
-  early-80s Battlezone/Elite register — desaturated, not glowing-magenta nostalgia.
-  *This is the sharpest anti-target for the new world.*
-- **Ascension / dissolution / floating / weightlessness — the escape register.** Banned
-  by NO ESCAPE (§6.2).
+**How a rule moves**
+- **Testing → Locked:** holds across **two finished pieces**, or Nick calls it.
+- **Locked → Denied:** only by explicit decision, with the date and the reason written here.
+  Breaking a locked rule without that is drift, not a decision.
+- **Denied → back:** only through Testing, never straight to Locked.
+- Every entry carries where it came from. A rule with no source is not a rule.
 
-  ⚠ **CORRECTED 2026-08-13 (Nick).** The prior wording — *"the void here is a black
-  chamber, a room, enclosed — never cosmos"* — took a **metaphysical** claim and enforced
-  it as a **set-design** rule. WORLD §1's chamber is an *interface*, not architecture;
-  the cosmology says nothing about which physical spaces may appear in a frame. **"No
-  sky" was never the rule and is struck.**
+### 6.1 LOCKED — holds on every piece
 
-  **The test is register, not geography: does the frame read as *leaving*, or as *being
-  here*?** A photoreal sky over ground you are standing on is grounded — you are in your
-  body, in a place. A nebula with a form dissolving upward is escape. Both have sky.
-  **Operational tell: implied viewer position.** Is there gravity, ground, a horizon you
-  are *on* rather than above? **Weight and tether, not walls.**
+- **L1 — Abstraction only. Zero figures** (K5). A form, never a creature, craft or object
+  with a narrative referent. Load-bearing for the anti-cheese stance and for facelessness of
+  the entity (WORLD §4).
+- **L2 — Muted-psychedelic** (K1, the colour half). Full palette is permitted at the act's
+  peak (§4 Act 4), but the ceiling is muted. **No neon. No synthwave / outrun / neon-grid** —
+  the sharpest anti-target, the vector-cheese vector.
+- **L3 — The ground is black** — or, in the composite (§2.5), a real photographed world the
+  form stands in. Never a gradient sky, nebula or decorative backdrop.
+- **L4 — Being here, not leaving** (the escape register, NO ESCAPE §6.2 of WORLD). The test is
+  register, not geography: does the frame read as *leaving* or as *being here*? Tell =
+  implied viewer position — gravity, ground, a place you are in. Banned on that test: the
+  cosmos as destination, the untethered camera, ascension, dissolution of the *viewer*,
+  anything whose implied position is nowhere. *(Corrected 2026-08-13: the old "black chamber,
+  never cosmos, no sky" wording enforced a metaphysical claim as set design. Struck. Watch for
+  that category error elsewhere: a WORLD claim hardened into a literal art-direction rule.)*
+  Note: a world that comes apart *around* a viewer who stays put (Everyday's outro) passes —
+  the viewer is still here.
+- **L5 — No woo symbols.** Third eyes, sacred-geometry mandalas, DMT-entity imagery. Banned by
+  the tightrope (WORLD §0.2), not by taste. Symmetry itself is allowed (see Denied D2); an
+  *iconographic* symbol is not.
+- **L6 — The finish is never the identity.** CA + bloom + grade + grain is fine as finish,
+  never the substance (D3). **Chromatic aberration is killed** (2026-11-06, HOHLWEG: invisible
+  or gimmicky; compression eats it) — do not re-propose.
+- **L7 — No overlay read** (composite only, §2.5). An element pasted over a scene instead of
+  standing in it breaks the presence law and the whole mechanic.
 
-  Still banned on that test: the cosmos as destination, the untethered camera,
-  dissolution, ascension — anything whose implied position is nowhere.
+- **L8 — Held breath → lunge.** Before a drop, motion stops in the near-silence (the form may
+  draw back slightly toward the light); the downbeat releases it in one surge and the colour
+  floods in at once instead of ramping. *Promoted from Testing (T5) by Nick, 2026-11-09, on
+  Everyday drop 1 (bars 15–17; `scripts/blender/everyday/drop1_outro.py`).*
 
-  *Watch for the same category error elsewhere in this file: a metaphysical claim in
-  WORLD hardened into a literal art-direction constraint here.*
-- **Full-woo:** sacred-geometry mandalas, third eyes, DMT-entity kaleidoscopes. Banned
-  by the tightrope (§0.2), not by taste.
-- **Vivid / high-saturation.** Reads as the trip/escape; violates muted-psych + NO ESCAPE.
-- **The "make it pro" stack as the identity** (CA + bloom + grade + grain). Fine as
-  finish; never the substance (D3).
-- **Filling the frame** *(black world-state only)*. Emptiness is the point there. Does
-  not apply to the composite (§2.5), where the environment is the ground Law 0 needs —
-  but the **one element** rule holds in both: one focal form, never a pile.
-- **Reading as an overlay / composite artifact.** The named failure mode of §2.5 — an
-  element pasted *over* a scene rather than standing *in* it. Breaks the presence law,
-  and with it the whole mechanic.
+### 6.2 TESTING — in trial, with where and what promotes it
 
-**No longer banned (2026-07-21):** resolving, arrival, a form sitting whole. The
-corridor's never-resolve law is retired. Forms may resolve; the center may be shown.
+| # | Rule | Testing on | Promotes when |
+|---|---|---|---|
+| T1 | **Instrument physics.** Kick = physical (push, mass, shove). Snare = light (the master light). Hats = small detail (dust, glints, sparkle). Sub / low end = the section's intensity (speed, density, colour depth). | MAKYO (verified in its case file) · Everyday | **Already holds across two pieces** — promote on Nick's call |
+| T2 | **The light.** One near-white core at the far end of the axis: the centre, shown, never explained. The one near-white thing in frame by intent. | MAKYO (core) · Everyday (vanishing light) | Already holds across two — promote on Nick's call |
+| T3 | **Open and close on the light alone.** Frame 1 and the last frame are the light in black, so a series reads as visits to one world. | Everyday | A second piece |
+| T4 | **Act 4 breaks form, then locks back.** The form may come apart (wander → break → scatter) and snaps back on the drop. Matches §4 Act 4. | Everyday break (bars 49–65) | A second Act 4 piece |
+| T6 | **The music builds the world.** Hits assemble the form at the start and take it away at the end. | Everyday intro / outro | A second piece |
 
----
+### 6.3 DENIED — retired, with the reason, so they are not re-proposed
+
+| # | Was | Denied | Why |
+|---|---|---|---|
+| D1 | **No pure white** (K1, the white half) | 2026-11-09 | The centre light, the glints and the appear-flash need it, and those are what landed. Near-white is now governed by T2 (the light is the near-white element by intent), not banned. |
+| D2 | **Imperfect mirror 85–90%** (K3) | 2026-11-09 | Perfect symmetry is part of what landed in tunnel_v1 and Everyday ("symmetry = order", VISUAL_IDENTITY). The woo risk it guarded against is covered by L5. |
+| D3 | **Wireframe / low-poly as *the* form** (§2 spine) | 2026-11-09 | Both finished Blender pieces are glass (MAKYO shards, Everyday pills) and both landed. Wireframe stays a permitted form and is still the composite's build rule (§2.5). §3's reasoning for it stands as history. |
+| D4 | **Never fill the frame** (black world-state) | 2026-11-09 | Density landed (tunnel_v1, Everyday drops; "density anytime", VISUAL_IDENTITY). The one-focal-element idea survives in T2. |
+| D5 | **No tunnel / portal motion** (§1 C1, D1) | 2026-11-09 | Everyday is a tunnel and landed. The generic-EDM risk D1 named is real; what keeps a tunnel from being stock is T1's physics and the restraint in L2, not a ban on the shape. |
 
 ## 7. CLOSED THREADS + LEGACY
 
