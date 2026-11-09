@@ -50,7 +50,7 @@ for name, arr in (("shear", shear), ("peak", peak)):
     fc.update()
 ad.action = None; ad.action = act; ad.action_slot = slot     # FOOTGUNS V-11
 for k, v in TUNE.items():
-    c.setdefault(k, v)                                        # keep values already tuned in the file
+    if k not in c: c[k] = v                                      # keep values already tuned in the file
 
 
 def var(d, name):
