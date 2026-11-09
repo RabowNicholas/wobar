@@ -1,7 +1,7 @@
 ---
 title: Blender Footguns — Confirmed Failure Patterns
-version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-10, R-5 confirmed, Open Track partly settled — 2026-11-07)
-last_updated: 2026-11-07
+version: 1.1 (+ Confirmed in WOBAR Sessions V-1–V-13, R-5 confirmed, Open Track partly settled — 2026-11-07)
+last_updated: 2026-11-08
 status: live
 scope: Confirmed failure patterns + fixes for agent-driven Blender work via the MCP connector. Mirror of TD_FOOTGUNS / TD_CLAUDE_DEBUG_LOG. Read before any non-trivial agent action. Append empirically as new failures surface — no speculative entries.
 dependencies: BLENDER_LIBRARY_INDEX.md, BLENDER_PYTHON_API.md, BLENDER_WORKFLOW_AGENT_DRIVEN.md
@@ -266,6 +266,27 @@ Entries observed in real work, not seeded from research.
 **Cause:** The enum is filtered per instance. A user library in 5.2.3 offers only Link / Append / Pack, and a newly added library defaults to Pack.
 **Fix:** Set `"APPEND"` (or `"LINK"`) explicitly after `preferences.asset_library_add`. Don't trust `bl_rna` enum_items for dynamic enums; read the error, or test-assign inside `try/except TypeError`.
 **Source:** 2026-11-07, registering the WOBAR Kit library.
+**Status:** confirmed.
+
+### V-11 — A new F-curve on an action that is already assigned doesn't evaluate
+**Symptom:** After `action.fcurve_ensure_for_datablock(obj, '["low_slow"]')` and filling its keys, the custom property stays at its static value on every frame. Drivers that read it see no motion.
+**Cause (inferred, not traced in source):** the channel binding seems to be resolved when the action is assigned, so a channel added later isn't picked up until reassignment. The symptom and the fix are confirmed.
+**Fix:** `slot = ad.action_slot; ad.action = None; ad.action = act; ad.action_slot = slot`. Then `frame_set` and check the value moves.
+**Source:** 2026-11-07, baking `low_slow` onto WOBAR_CTRL (Everyday); again 2026-11-08 for `shear` / `peak`.
+**Status:** confirmed (twice).
+
+### V-12 — A driver that errored once stays flagged invalid after the cause is fixed
+**Symptom:** A driver keeps showing invalid (red), and its target stays frozen, after the missing variable or property is added.
+**Cause:** `driver.is_valid` is set to False on the first failed evaluation. Observed: fixing the expression or adding the property didn't clear it.
+**Fix:** `d.driver.is_valid = True`, then `ctrl.update_tag(); node_tree.update_tag(); bpy.context.view_layer.update()`. Audit afterwards: `[d.data_path for d in ad.drivers if not d.driver.is_valid]` should be empty.
+**Source:** 2026-11-07, the Everyday psych and glint drivers on ColorGlass.
+**Status:** confirmed.
+
+### V-13 — An empty sequencer `strips` collection is falsy
+**Symptom:** `strips = getattr(se, "strips", None) or se.sequences` falls through to the removed 4.x API (AttributeError) on a scene with no strips yet.
+**Cause:** A bpy collection with zero items evaluates False, so the `or` picks the fallback.
+**Fix:** In 5.x, use `se.strips` directly (`se = scene.sequence_editor_create()`; `se.strips.new_sound(...)`). Never feature-detect with `or` on a collection.
+**Source:** 2026-11-07, adding the Everyday master WAV.
 **Status:** confirmed.
 
 ---
