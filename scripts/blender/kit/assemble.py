@@ -12,7 +12,20 @@ for p in parts:
     with D.libraries.load(p, link=False) as (src, dst):
         dst.collections = [c for c in src.collections if c.startswith("KIT_")]
         dst.worlds = list(src.worlds)
-        dst.node_groups = [n for n in src.node_groups if n in ("TunnelComp", "MakyoComp")]
+        dst.node_groups = [n for n in src.node_groups if n in ("TunnelComp", "MakyoComp", "EverydayComp")]
+
+# one control object: a later part's WOBAR_CTRL arrives as WOBAR_CTRL.001 (driver dependency). Copy the
+# channels the kit empty lacks, then point every user at the kit empty and drop the duplicate.
+main = D.objects.get("WOBAR_CTRL")
+for dup in [o for o in D.objects if o.name.startswith("WOBAR_CTRL.")]:
+    added = [k for k in dup.keys() if k not in main.keys()]
+    for k in added:
+        main[k] = dup[k]
+    clash = [k for k in dup.keys() if k in main.keys() and k not in added and main[k] != dup[k]]
+    name = dup.name
+    dup.user_remap(main)
+    D.objects.remove(dup)
+    print("MERGED", name, "into WOBAR_CTRL: +", len(added), "channels; same name, different value (kept kit's):", clash)
 
 # link only top-level KIT collections into the scene (children come along)
 child_names = {ch.name for c in D.collections for ch in c.children}
@@ -28,7 +41,7 @@ for s in list(D.sounds):
     print("REMOVE sound", s.name)
     D.sounds.remove(s)
 
-CATS = ["WOBAR", "WOBAR/Tunnel", "WOBAR/MAKYO", "WOBAR/Control", "WOBAR/Compositor", "WOBAR/World", "WOBAR/NodeGroups"]
+CATS = ["WOBAR", "WOBAR/Tunnel", "WOBAR/MAKYO", "WOBAR/Everyday", "WOBAR/Control", "WOBAR/Compositor", "WOBAR/World", "WOBAR/NodeGroups"]
 cat_id = {c: str(uuid.uuid5(uuid.NAMESPACE_URL, "wobar-kit/" + c)) for c in CATS}
 
 ASSETS = {
@@ -38,6 +51,10 @@ ASSETS = {
     ("collections", "KIT_MAKYO_Mirror"): ("WOBAR/MAKYO", "Cracked mirror that holds, then shatters toward camera at Drop Frame. Needs KIT_CTRL.", ["makyo", "mirror", "drop"]),
     ("collections", "KIT_MAKYO_Light"): ("WOBAR/MAKYO", "White-hot core, core light, halo, haze volume, kick rim light. Snare-driven brightness. Needs KIT_CTRL.", ["makyo", "light", "snare"]),
     ("collections", "KIT_MAKYO_Cam"): ("WOBAR/MAKYO", "28mm camera with kick jolt drivers. Needs KIT_CTRL.", ["makyo", "camera", "shake"]),
+    ("collections", "KIT_Everyday"): ("WOBAR/Everyday", "Audio-reactive tunnel (Everyday): TunnelWalls_AV with chaos + reveal stages, psych/glint glass, snare-lit light/orb. Use with EverydayWorld + EverydayComp. Needs KIT_CTRL; song channels are baked by the section scripts.", ["tunnel", "audio", "everyday"]),
+    ("worlds", "EverydayWorld"): ("WOBAR/World", "Everyday world (tunnel world, black to camera).", ["world"]),
+    ("node_groups", "EverydayComp"): ("WOBAR/Compositor", "Snare-driven bloom + 4-way mirror kaleidoscope. Needs KIT_CTRL.", ["compositor", "kaleido", "audio"]),
+    ("node_groups", "TunnelWalls_AV"): ("WOBAR/NodeGroups", "TunnelWalls with control-driven phases, chaos offset and hit reveal stages.", ["gn", "tunnel", "audio"]),
     ("collections", "KIT_CTRL"): ("WOBAR/Control", "WOBAR_CTRL empty: the audio control channels every driven part reads. Bake song curves onto its custom props.", ["control", "audio", "drivers"]),
     ("worlds", "TunnelWorld"): ("WOBAR/World", "Tunnel world: camera sees black, lighting sees white.", ["world"]),
     ("worlds", "MakyoWorld"): ("WOBAR/World", "MAKYO world: patina #5C7470 at 0.004 to camera, HDRI for reflections.", ["world", "hdri"]),

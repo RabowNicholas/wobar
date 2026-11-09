@@ -102,11 +102,11 @@ this is the picture they add up to)*:
   never the bright-line vector-cheese of synthwave/outrun.
 - **Density is allowed.** *Was: "naturally empty, you do not fill it"; denied 2026-11-09
   (§6.3 D4).* A dense frame is fine; what keeps it from being a pile is the one element.
-- **One element holds attention: the light** (§6.2 T2, testing). One near-white core,
+- **One element holds attention: the light** (§6.1 L10). One near-white core,
   far down the axis — what you meet in the chamber (WORLD §2), a mirror at any depth
   **up to and including the center itself** (the §8 wide strike, 2026-07-21: the center
   may be *shown*, never *explained*).
-- **The music is the physics** (§6.2 T1, testing). Every piece moves under the same
+- **The music is the physics** (§6.1 L9). Every piece moves under the same
   instrument laws, so pieces with different forms and palettes still read as one world.
 
 **Two permitted world-states (2026-08-13).** The above — form in true black — is the
@@ -349,12 +349,20 @@ experiments a legal place: **constraints hold, and there is always something bei
   floods in at once instead of ramping. *Promoted from Testing (T5) by Nick, 2026-11-09, on
   Everyday drop 1 (bars 15–17; `scripts/blender/everyday/drop1_outro.py`).*
 
+- **L9 — Instrument physics.** Kick = physical (push, mass, shove). Snare = light (the master
+  light). Hats = small detail (dust, glints, sparkle). Sub / low end = the section's intensity
+  (speed, density, colour depth). Every piece moves under these laws, so pieces with different
+  forms and palettes still read as one world. *Promoted from Testing (T1) by Nick, 2026-11-09:
+  held across MAKYO and Everyday.* No role for a voice yet: Everyday kept
+  the vocal out (Nick, 2026-11-09). Whether a voice ever gets one is open.
+- **L10 — The light.** One near-white core at the far end of the axis: the centre, shown, never
+  explained. The one near-white thing in frame by intent. *Promoted from Testing (T2) by Nick,
+  2026-11-09: held across MAKYO (core) and Everyday (vanishing light).*
+
 ### 6.2 TESTING — in trial, with where and what promotes it
 
 | # | Rule | Testing on | Promotes when |
 |---|---|---|---|
-| T1 | **Instrument physics.** Kick = physical (push, mass, shove). Snare = light (the master light). Hats = small detail (dust, glints, sparkle). Sub / low end = the section's intensity (speed, density, colour depth). | MAKYO (verified in its case file) · Everyday | **Already holds across two pieces** — promote on Nick's call |
-| T2 | **The light.** One near-white core at the far end of the axis: the centre, shown, never explained. The one near-white thing in frame by intent. | MAKYO (core) · Everyday (vanishing light) | Already holds across two — promote on Nick's call |
 | T3 | **Open and close on the light alone.** Frame 1 and the last frame are the light in black, so a series reads as visits to one world. | Everyday | A second piece |
 | T4 | **Act 4 breaks form, then locks back.** The form may come apart (wander → break → scatter) and snaps back on the drop. Matches §4 Act 4. | Everyday break (bars 49–65) | A second Act 4 piece |
 | T6 | **The music builds the world.** Hits assemble the form at the start and take it away at the end. | Everyday intro / outro | A second piece |
@@ -363,11 +371,11 @@ experiments a legal place: **constraints hold, and there is always something bei
 
 | # | Was | Denied | Why |
 |---|---|---|---|
-| D1 | **No pure white** (K1, the white half) | 2026-11-09 | The centre light, the glints and the appear-flash need it, and those are what landed. Near-white is now governed by T2 (the light is the near-white element by intent), not banned. |
+| D1 | **No pure white** (K1, the white half) | 2026-11-09 | The centre light, the glints and the appear-flash need it, and those are what landed. Near-white is now governed by L10 (the light is the near-white element by intent), not banned. |
 | D2 | **Imperfect mirror 85–90%** (K3) | 2026-11-09 | Perfect symmetry is part of what landed in tunnel_v1 and Everyday ("symmetry = order", VISUAL_IDENTITY). The woo risk it guarded against is covered by L5. |
 | D3 | **Wireframe / low-poly as *the* form** (§2 spine) | 2026-11-09 | Both finished Blender pieces are glass (MAKYO shards, Everyday pills) and both landed. Wireframe stays a permitted form and is still the composite's build rule (§2.5). §3's reasoning for it stands as history. |
-| D4 | **Never fill the frame** (black world-state) | 2026-11-09 | Density landed (tunnel_v1, Everyday drops; "density anytime", VISUAL_IDENTITY). The one-focal-element idea survives in T2. |
-| D5 | **No tunnel / portal motion** (§1 C1, D1) | 2026-11-09 | Everyday is a tunnel and landed. The generic-EDM risk D1 named is real; what keeps a tunnel from being stock is T1's physics and the restraint in L2, not a ban on the shape. |
+| D4 | **Never fill the frame** (black world-state) | 2026-11-09 | Density landed (tunnel_v1, Everyday drops; "density anytime", VISUAL_IDENTITY). The one-focal-element idea survives in L10. |
+| D5 | **No tunnel / portal motion** (§1 C1, D1) | 2026-11-09 | Everyday is a tunnel and landed. The generic-EDM risk D1 named is real; what keeps a tunnel from being stock is L9's physics and the restraint in L2, not a ban on the shape. |
 
 ## 7. CLOSED THREADS + LEGACY
 

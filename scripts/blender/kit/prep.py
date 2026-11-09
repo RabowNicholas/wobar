@@ -1,4 +1,4 @@
-"""Prep one source file into a partial kit .blend.  usage: blender -b SRC -P prep.py -- tunnel|makyo OUT"""
+"""Prep one source file into a partial kit .blend.  usage: blender -b SRC -P prep.py -- tunnel|makyo|everyday OUT"""
 import bpy, sys
 
 mode, out = sys.argv[sys.argv.index("--") + 1:][:2]
@@ -57,6 +57,40 @@ if mode == "tunnel":
     ids |= {top, sc.world}
     if comp:
         ids.add(comp)
+
+elif mode == "everyday":
+    # Source = everyday_tunnel_v1 (2026-11-09). The audio-reactive tunnel: TunnelWalls_AV (+ chaos and reveal
+    # stages), ColorGlass with psych / glint / reveal flash / void, the snare-driven light, orb and glow.
+    # Names that clash with KIT_Tunnel get an EV_ prefix. WOBAR_CTRL is NOT put in a collection: it comes along
+    # as a driver dependency and assemble.py merges it into the one kit WOBAR_CTRL.
+    ctrl = D.objects["WOBAR_CTRL"]
+    animated = {fc.data_path[2:-2] for l in ctrl.animation_data.action.layers for s in l.strips
+                for cb in s.channelbags for fc in cb.fcurves}
+    ctrl.animation_data.action = None
+    for k in animated:                      # song channels -> neutral; tuning constants keep Everyday's values
+        ctrl[k] = 1.0 if k in ("reveal_r", "reveal_h") else 0.0   # reveal 1 = the whole tunnel shows
+    ren = {"Tunnel": "EV_Tunnel", "Tunnel_Mid": "EV_Tunnel_Mid", "Tunnel_Inner": "EV_Tunnel_Inner",
+           "VanishingLight": "EV_VanishingLight", "VanishingOrb": "EV_VanishingOrb", "Camera": "EverydayCam"}
+    for o in [o for o in D.objects if o.name.startswith("Shape_")]:
+        ren[o.name] = "EV_" + o.name
+    for old, new in ren.items():
+        o = D.objects[old]; o.name = new
+        if o.data is not None and o.type in ("LIGHT", "CAMERA"):
+            o.data.name = new
+    for m in ("ColorGlass", "OrbGlow", "PillGlass", "TunnelGlow"):
+        if m in D.materials:
+            D.materials[m].name = "EV_" + m
+    comp = sc.compositing_node_group
+    comp.name = "EverydayComp"
+    sc.world.name = "EverydayWorld"
+    top = coll("KIT_Everyday", ["EV_Tunnel", "EV_Tunnel_Mid", "EV_Tunnel_Inner", "EV_VanishingLight",
+                                "EV_VanishingOrb", "EverydayCam"])
+    coll("KIT_Everyday_Shapes", [o for o in D.objects if o.name.startswith("EV_Shape_")], parent=top)
+    for o in D.objects:
+        if o.name.startswith("EV_Shape_"):
+            o.hide_render = True
+    print("EVERYDAY neutralised", len(animated), "channels; renamed", len(ren))
+    ids |= {top, sc.world, comp}
 
 else:
     # Source = makyo_intro (latest MAKYO save, Nov 4). Strip song-specific animation.
