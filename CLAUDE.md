@@ -24,6 +24,12 @@ If the user gives unambiguous brand context up-front (e.g., "let's build a wobar
 - Only available when TouchDesigner is running with the twozero plugin active.
 - Before using TWOZERO tools: read the agent rules and reference files below.
 
+### Blender
+- Server: `blender` (`uvx mcp-for-blender`, user scope). Drives the live Blender session via Python.
+- Only available when Blender is open with the MCP for Blender add-on's server started.
+- Before any Blender action: read `working/BLENDER_BUILD_LOG.md` §1–§3 (rig, rules, confirmed failures, proven patterns) and `reference/blender_library/BLENDER_FOOTGUNS.md` V-1 onward (confirmed failures from the Everyday / MAKYO / kit work).
+- At the end of any session where Blender was driven: append failures, patterns and a session entry to that file.
+
 ---
 
 ## Orientation — Every Session

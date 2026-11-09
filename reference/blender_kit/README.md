@@ -163,7 +163,7 @@ Section channels (baked by the scripts from bar numbers and the channels above):
 Tuning constants (Everyday values): `travel_rate` 0.18 · `kick_push` 0.05 · `spin_rate` 0.0728 · `spin_step` 1/24 · `color_rate` 0.0874 · `hat_nudge` 0 · `pulse_rate` 0.17 · `pulse_base` 0.75 · `pulse_depth` 0.5 · `light_floor` 0.85 · `light_depth` 0.45 · `glow_floor` 0.9 · `glow_depth` 0.35 · `psych_lo` 0.4 · `psych_span` 0.45 · `sat_depth` 0.6 · `rim_depth` 0.6 · `glint_frac` 0.18 · `glint_strength` 5 · `glint_focus` 16 · `glint_band` 8 · `inner_shear` 1/16 · `peak_sat` 0.35 · `peak_rim` 0.4 · `peak_glint_frac` 0.5 · `peak_glint_gain` 0.6 · `break_hold` 0.5 · `wander_amp` 3 · `shape_amp` 1.6 · `scatter_amp` 4 · `tumble_amp` 3 · `chaos_snare` 0.35 · `chaos_kick` 0.2 · `reveal_soft` 0.005 · `pop_amp` 0.6 · `pop_glow` 1.5 · `light_sub` 0.8 · `lunge_amt` 0.5 · `lunge_pull` 0.12 · `dis_shape` 1.2 · `dis_scatter` 3 · `dis_tumble` 1 · `dis_rate` 0.15. Switches: `void_on` 0, `break_desat` 0, `break_dim` 0, `outside_dist` 0.
 
 **Gap:** no vocal channel (Everyday kept the vocal out by choice, 2026-11-09). A vocal-led piece needs new channels (e.g. `vocal_env`, `vocal_onset`) added to the analysis and to this table before any part reads them.
-**Unverified:** that `makyo_curves.json` was generated from the per-bar `makyo_stems.json`. That's inferred from file dates; the generating script is on the other machine.
+**Verified 2026-11-09:** `makyo_curves.json` is generated from `makyo_stems.json` (from `scripts/post/makyo_stems.py`: same keys and file time, not re-run) by `scripts/post/makyo_bake.py`; a re-run to a scratch path reproduced it exactly.
 
 ---
 

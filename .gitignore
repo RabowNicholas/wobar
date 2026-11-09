@@ -43,3 +43,7 @@ touchdesigner/networks/*/exports/
 
 # Browser-automation scratch output (Playwright MCP console logs + page dumps)
 .playwright-mcp/
+
+# Python bytecode
+__pycache__/
+*.pyc

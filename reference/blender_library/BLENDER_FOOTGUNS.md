@@ -202,9 +202,9 @@ Entries observed in real work, not seeded from research.
 
 ### V-1 — Headless Blender is the wrong version
 **Symptom:** A background `Blender -b file.blend` run prints `File written by newer Blender binary (502.45), expect loss of data!` and engine errors.
-**Cause:** On Nick's rig `/Applications/Blender.app` is **4.5.3**. The working install is `/Applications/Blender 5.2.app`.
-**Fix:** Run headless as `"/Applications/Blender 5.2.app/Contents/MacOS/Blender" -b …`. Check with `--version` before trusting any read.
-**Source:** 2026-11-07, reading tunnel_v1 / MAKYO. The 4.5 reads happened to match 5.2 on every value checked, but that was luck.
+**Cause:** The two machines differ, and the app name doesn't say the version. On the machine that built tunnel_v1 / MAKYO / Everyday, `/Applications/Blender.app` is **4.5.3** and the working install is `/Applications/Blender 5.2.app` (5.2.3). On the M1 Max (the HOHLWEG machine), `/Applications/Blender.app` **is 5.2.2** and there is no other Blender (checked 2026-11-09).
+**Fix:** Run `"<path>/Contents/MacOS/Blender" -b --version` before trusting any headless read or render. `scripts/blender/everyday/render_final.sh` checks this and takes `BLENDER=`; on the M1 Max that is `BLENDER=/Applications/Blender.app/Contents/MacOS/Blender`. 5.2.2 opened the 5.2.3-saved Everyday file and rendered it with no newer-binary warning (2026-11-09).
+**Source:** 2026-11-07, reading tunnel_v1 / MAKYO. The 4.5 reads happened to match 5.2 on every value checked, but that was luck. 2026-11-09, the M1 Max check when the Everyday render moved there.
 **Status:** confirmed.
 
 ### V-2 — Geometry-nodes modifier inputs moved in 5.x

@@ -25,7 +25,7 @@ A **full-song, audio-locked vertical piece**: 2160×3840, 30 fps, 5452 frames (3
 
 ```
 makyo_stems.json   per-bar analysis (bpm 140, bar 1.714 s): kick/snare/hat counts, low_db, low_sus, pitch range, hat_hz, master_db
-      ↓ (generating script on the other machine — the derivation is INFERRED from file dates, not verified)
+      ↓ scripts/post/makyo_bake.py (verified 2026-11-09: re-run to a scratch path, output identical to the file on the drive)
 makyo_curves.json  per-frame curves, fps 30, 5452 frames, 23 channels + drop_frame 824
       ↓ baked as keyframes (5452 keys per channel)
 MAKYO_CTRL empty   custom properties = the channels  (kit: WOBAR_CTRL, keys stripped)

@@ -2,7 +2,7 @@
 title: Case File — tunnel_v1
 version: 0.1
 last_updated: 2026-11-07
-status: live — reverse-engineered from the files; Nick's reasoning not yet merged
+status: live — reverse-engineered from the files; Nick's reasoning is in WOBAR_VISUAL_IDENTITY
 scope: How tunnel_v1 works and what it established, so a new piece can start from it. Parameters live in the kit card; this file holds structure, what each part is for, and what is known vs inferred.
 dependencies: [[reference/blender_kit/README]] (KIT_Tunnel), [[reference/blender_library/BLENDER_FOOTGUNS]]
 ---
@@ -35,7 +35,7 @@ A **seamless 206-frame vertical loop** (1080×1920, 30 fps, EEVEE, Standard view
 
 ## What it established
 
-The vault index records Nick's read on this piece (owned by `reference/WOBAR_VISUAL_IDENTITY.md`, **which exists only on the other machine and is not merged**): *color is what lands: muted, against black, mauve/copper/teal, iridescent shift; white center light for portal pieces; density anytime; symmetry = order; form open.* The full reasoning arrives when that file is merged. Until then, treat this line as the summary and nothing more.
+Nick's read on this piece lives in [[reference/WOBAR_VISUAL_IDENTITY]] (merged 2026-11-09): *color is what lands: muted, against black, mauve/copper/teal, iridescent shift; white center light for portal pieces; density anytime; symmetry = order; form open.* Color is what he liked most, and he named all four parts. Symmetry reads as **order** (it makes chaos look designed), not as a face or mandala. The white light belongs in portal pieces, not every visual. That file also logs two pulls against WOBAR_BRAND (gloss, pure white). VISUAL_RESET §6.3 has since denied the no-pure-white and imperfect-mirror rules (D1, D2) on this reading.
 
 ## Using it as a base
 
