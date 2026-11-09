@@ -1,7 +1,7 @@
 ---
 title: Wobar Active — current context
-version: 3.7 (+ MAKYO — Act 3 original named, cover graded with the new Rust preset — 2026-11-03; on top of v3.6's skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
-last_updated: 2026-11-03
+version: 3.8 (+ Everyday — the first Blender full-song piece built with Claude, visual rules restructured — 2026-11-09; on top of v3.7's MAKYO — Act 3 original named, cover graded with the new Rust preset — 2026-11-03; on top of v3.6's skid — Act 4 original named, cover built in the macro mode, Purple preset first used — 2026-10-12; on top of v3.5's HOHLWEG track art — per-track macro material set opened, ATEM concept pivoted to "strips you down to your core" — 2026-08-28, reconciled into this line 2026-09-04 after a cross-machine sync gap; on top of v3.4's HOHLWEG cover — the composite system's first build, confirmed as brand visual direction — 2026-08-20; + landscape footage sourcing thread opened — 2026-08-22; + first SAMPLES I'LL NEVER GET CLEARED cover in production, two named grade presets, brand-checked — 2026-08-27; + Brand Foundation rebuilt via the Chris Alba lens, WOBAR.lite formalized as the first Era, Obscura retired, Terminal Rebuild's dead code removed and raw event logging shipped live, a silent DB-client bug found and fixed — 2026-09-01)
+last_updated: 2026-11-09
 status: live
 scope: The current state of every live thread — what it is, where it stands, and what is genuinely unresolved. **Context, not a task tracker.** Nick tracks his own work; this file exists so a session can start already knowing the state of the world. Decisions and their reasoning live in the governing docs; history lives in git and [[working/WOBAR_SESSION_LOG]].
 dependencies: [[WOBAR_CONTEXT]]
@@ -22,7 +22,7 @@ Retired threads move to [[working/WOBAR_CLOSED]], which is worth reading — it 
 
 **A local presence and a skill set, not an audience.** Those numbers are the arithmetic of the inputs, not underperformance — this is a cold start, and it needs the opposite response to a conversion problem. Baselines owned by [[working/WOBAR_GROWTH_PLAN]].
 
-**Assets that are rare at this stage:** Flow State (Nick is on the *buying* side — he books DJs) · a working TouchDesigner AV practice · `wobar.music`, live and the strongest expression of the world anywhere.
+**Assets that are rare at this stage:** Flow State (Nick is on the *buying* side — he books DJs) · a working AV practice — **Blender primary since 2026-11-07** (two full-song audio-locked pieces, a verified parts kit), TouchDesigner secondary · `wobar.music`, live and the strongest expression of the world anywhere.
 
 ---
 
@@ -382,6 +382,18 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 - **The mark is white again.** That's the third cover with a white corner mark and still no rule.
 - **The source photo is a ~1526px screenshot of unknown origin.** It's below 3000 × 3000 and the license is unknown.
 - **Title collisions are unchecked.** An existing artist named *Makyo* may exist. No exact-title search has been run on SoundCloud, Spotify or Beatport.
+
+### Everyday — A$AP Rocky flip visualizer (Blender), built 2026-11-07 → 11-09
+**State: built and approved section by section; the final 4K render runs on the faster machine.** Act 4 pure, full song (3:39, 128 bars), audio-locked to Nick's kick / snare / hat / low-end stems. tunnel_v1 with the clock taken out. Structure, section moves, what was tried and dropped, render findings and debts: [[reference/blender_cases/EVERYDAY]]. Reusable part: `KIT_Everyday` in kit v0.2 ([[reference/blender_kit/README]]).
+
+**To resume:** working file `/Volumes/music/blender/everyday_tunnel_v1.blend` (saved, final). Final render = `scripts/blender/everyday/render_final.sh` — 2160×3840, 64 samples, motion blur, 16-bit PNG to `/Volumes/music/blender/renders/everyday_final_4k/`, resumable and shareable across both machines, encodes a ProRes master + 4K YouTube + 1080 social H.264 when every frame exists. ~250 GB of frames against 365 GB free on 2026-11-09. Requires Blender 5.2 (FOOTGUNS V-1).
+
+**What the build changed beyond the piece:** [[working/WOBAR_VISUAL_RESET]] v1.8 — §6 is now Locked / Testing / Denied. Five rules the finished Blender pieces broke were denied with reasons; held breath → lunge (L8), instrument physics (L9) and the light (L10) were locked on Nick's call. Short-form cut-downs: Nick does those himself.
+
+**Open:**
+- The final render has not been watched. The full 10-sample preview predates the drop-1 and outro changes, so nobody has seen the finished piece end to end.
+- Nick's read on the bar-97 peak glints at full quality (review image in `renders/everyday_quality_test/`).
+- The Blender build logs and `WOBAR_VISUAL_IDENTITY` still live uncommitted on the other machine; WOBAR_CONTEXT links them, and VISUAL_RESET §6.3 quotes VISUAL_IDENTITY via its index summary only.
 
 ### Inside vs outside — stage visuals and release art as two views of one world
 **State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.
