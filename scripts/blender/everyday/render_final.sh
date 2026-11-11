@@ -38,14 +38,15 @@ if [[ $have -lt $N || $small -gt 0 ]]; then
 fi
 
 echo "encoding deliverables..."
+# Deliverable set (Nick, 2026-11-11): ProRes master in the orientation it was made, 4K horizontal for YouTube, 1080 vertical for socials.
 # master: 4K ProRes 422 HQ (10-bit) - the archive copy everything else is made from
 ffmpeg -loglevel error -y -framerate 30 -i $OUT/f_%04d.png -i "$WAV" -map 0:v -map 1:a \
-  -c:v prores_ks -profile:v 3 -pix_fmt yuv422p10le -c:a pcm_s24le -shortest $OUT/delivery/everyday_4k_master_prores.mov
-# YouTube: 4K H.264 high bitrate (upload in 4K so YouTube serves its better encode)
-ffmpeg -loglevel error -y -i $OUT/delivery/everyday_4k_master_prores.mov -c:v libx264 -preset slow -crf 14 \
-  -pix_fmt yuv420p -profile:v high -c:a aac -b:a 320k -movflags +faststart $OUT/delivery/everyday_4k_youtube.mp4
-# IG / TikTok: downscaled 1080x1920 from the 4K master (cleaner than a native 1080 render)
-ffmpeg -loglevel error -y -i $OUT/delivery/everyday_4k_master_prores.mov -vf "scale=1080:1920:flags=lanczos" \
+  -c:v prores_ks -profile:v 3 -pix_fmt yuv422p10le -c:a pcm_s24le -shortest $OUT/delivery/everyday_visualizer_master_prores.mov
+# YouTube: 4K horizontal = the vertical master rotated 90 deg clockwise (the piece is designed for it)
+ffmpeg -loglevel error -y -i $OUT/delivery/everyday_visualizer_master_prores.mov -vf transpose=1 -c:v libx264 -preset slow -crf 14 \
+  -pix_fmt yuv420p -profile:v high -c:a aac -b:a 320k -movflags +faststart $OUT/delivery/everyday_visualizer_4k_horizontal.mp4
+# IG / TikTok / Shorts: 1080x1920 downscaled from the 4K master
+ffmpeg -loglevel error -y -i $OUT/delivery/everyday_visualizer_master_prores.mov -vf "scale=1080:1920:flags=lanczos" \
   -c:v libx264 -preset slow -crf 16 -pix_fmt yuv420p -profile:v high -c:a aac -b:a 320k -movflags +faststart \
-  $OUT/delivery/everyday_1080_social.mp4
+  $OUT/delivery/everyday_visualizer_1080_vertical.mp4
 ls -la $OUT/delivery
