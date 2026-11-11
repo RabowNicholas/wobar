@@ -2,7 +2,7 @@
 title: Case File — Everyday visualizer (A$AP Rocky flip)
 version: 0.1
 last_updated: 2026-11-09
-status: live — built 2026-11-07 → 11-09 with Claude over MCP; final 4K render not yet run
+status: live — built 2026-11-07 → 11-09 with Claude over MCP; final 4K rendered and encoded 2026-11-11
 scope: How the Everyday full-song visualizer works — the stem pipeline, the section moves, what was tried and dropped — so the next song-driven tunnel starts from it. Parameters live in the kit card and channel table; this file holds structure, reasons and what is verified vs not.
 dependencies: [[reference/blender_kit/README]] (KIT_Everyday, Everyday channels), [[reference/blender_cases/TUNNEL_V1]] (the base it grew from), [[reference/blender_cases/MAKYO]] (the other audio-locked piece), [[working/WOBAR_VISUAL_RESET]] §6 (the rules it tested), [[reference/blender_library/BLENDER_FOOTGUNS]] V-11 – V-15
 ---
@@ -74,11 +74,11 @@ Run order: `bake_curves → drop2_peak → break_void → break_chaos → intro_
 ## Render
 
 - **Quality test (2026-11-09):** at 1080p, 64 samples is within 38.5–42.6 dB of 128 (invisible); 32 is visibly grainy on glints. 4K at 32 samples, downscaled, matches 4K at 128 downscaled and is cleaner than native 1080 at 128. 4K costs ~1.5× per frame at equal samples. Glint-heavy frames (the peak) are the slowest to clean.
-- **Final spec (Nick: highest quality, diminishing returns):** 2160×3840, **64 samples**, motion blur on (shutter 0.5), 16-bit PNG frames, full song. One master serves YouTube (4K upload) and IG/TikTok (downscaled). To run on the faster machine with `scripts/blender/everyday/render_final.sh` (resumable, shareable across two machines, then encodes a 4K ProRes 422 HQ master, a 4K YouTube H.264 and a 1080 social H.264). Frames are ~38 MB each at 16-bit, ~250 GB total. **Not run yet** (frame 3400 rendered as the script test).
+- **Final spec (Nick: highest quality, diminishing returns):** 2160×3840, **64 samples**, motion blur on (shutter 0.5), 16-bit PNG frames, full song. One master serves YouTube (4K upload) and IG/TikTok (downscaled). To run on the faster machine with `scripts/blender/everyday/render_final.sh` (resumable, shareable across two machines, then encodes a 4K ProRes 422 HQ master, a 4K YouTube H.264 and a 1080 social H.264). Frames came out ~36 MB each at 16-bit, ~235 GB total. **Ran 2026-11-09 → 11-11 on the M1 Max: 6,583 frames in ~37 h (~20–23 s/frame at peak), encodes ~50 min after.** Deliverables filed in the release packet (`/Volumes/music/releases/…/everyday/visualizer/`).
 - Motion blur costs almost nothing in EEVEE here; samples are the cost.
 
 ## Known debts
 
 - **Section scripts hard-code Everyday's bars and frames** (F49, F65, F97, LAST_KICK 6573…) and address the source file's object/material names. Generalise to a bar map + name map before the next piece.
 - **The base conversion is not scripted:** turning `TunnelWalls` into `TunnelWalls_AV`, the psych-saturation node, the glint chain and the first drivers were built live over MCP (2026-11-07). They survive in the file and in `KIT_Everyday`, which is now the way to get them — not a script.
-- The final 4K render and its review are still open.
+- The final 4K render has not been reviewed end to end.

@@ -5,7 +5,7 @@
 set -e
 B="/Applications/Blender 5.2.app/Contents/MacOS/Blender"     # not Blender.app (4.5) - FOOTGUNS V-1
 BLEND=/Volumes/music/blender/everyday_tunnel_v1.blend
-WAV="/Volumes/music/sessions/WIP (ACTIVE)/everday_flip Project/master_102226_everday_flip.wav"
+WAV="/Volumes/music/sessions/FINISHED/flips/everday_flip Project/master_102226_everday_flip.wav"
 RENDERS=/Volumes/music/blender/renders
 b1=$1; b2=$2; pct=${3:-100}; smp=${4:-8}
 f0=$(python3 -c "print(round(($b1-1)*60/140*4*30)+1)")

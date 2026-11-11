@@ -15,7 +15,7 @@ set -e
 B=${BLENDER:-"/Applications/Blender 5.2.app/Contents/MacOS/Blender"}
 DIR=${0:A:h}
 BLEND=/Volumes/music/blender/everyday_tunnel_v1.blend
-WAV="/Volumes/music/sessions/WIP (ACTIVE)/everday_flip Project/master_102226_everday_flip.wav"
+WAV="/Volumes/music/sessions/FINISHED/flips/everday_flip Project/master_102226_everday_flip.wav"
 OUT=/Volumes/music/blender/renders/everyday_final_4k
 N=6583
 mkdir -p $OUT/delivery
