@@ -81,4 +81,5 @@ Run order: `bake_curves → drop2_peak → break_void → break_chaos → intro_
 
 - **Section scripts hard-code Everyday's bars and frames** (F49, F65, F97, LAST_KICK 6573…) and address the source file's object/material names. Generalise to a bar map + name map before the next piece.
 - **The base conversion is not scripted:** turning `TunnelWalls` into `TunnelWalls_AV`, the psych-saturation node, the glint chain and the first drivers were built live over MCP (2026-11-07). They survive in the file and in `KIT_Everyday`, which is now the way to get them — not a script.
-- The final 4K render has not been reviewed end to end.
+- Final 4K approved by Nick 2026-11-11 ("perfect").
+- **Deliverables (Nick, 2026-11-11):** ProRes master in the orientation the piece was made, 4K horizontal for YouTube, 1080 vertical for socials. Nothing else. Nick designs pieces to work rotated, so the second orientation is a 90° rotate of the master (Everyday: clockwise; the kaleidoscope reads the same sideways). No second render, no crop.
