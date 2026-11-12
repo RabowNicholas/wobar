@@ -2,7 +2,7 @@
 title: Case File — Everyday visualizer (A$AP Rocky flip)
 version: 0.1
 last_updated: 2026-11-09
-status: live — built 2026-11-07 → 11-09 with Claude over MCP; final 4K rendered and encoded 2026-11-11
+status: shipped — built 2026-11-07 → 11-09 with Claude over MCP; final 4K approved 2026-11-11
 scope: How the Everyday full-song visualizer works — the stem pipeline, the section moves, what was tried and dropped — so the next song-driven tunnel starts from it. Parameters live in the kit card and channel table; this file holds structure, reasons and what is verified vs not.
 dependencies: [[reference/blender_kit/README]] (KIT_Everyday, Everyday channels), [[reference/blender_cases/TUNNEL_V1]] (the base it grew from), [[reference/blender_cases/MAKYO]] (the other audio-locked piece), [[working/WOBAR_VISUAL_RESET]] §6 (the rules it tested), [[reference/blender_library/BLENDER_FOOTGUNS]] V-11 – V-15
 ---
@@ -81,5 +81,5 @@ Run order: `bake_curves → drop2_peak → break_void → break_chaos → intro_
 
 - **Section scripts hard-code Everyday's bars and frames** (F49, F65, F97, LAST_KICK 6573…) and address the source file's object/material names. Generalise to a bar map + name map before the next piece.
 - **The base conversion is not scripted:** turning `TunnelWalls` into `TunnelWalls_AV`, the psych-saturation node, the glint chain and the first drivers were built live over MCP (2026-11-07). They survive in the file and in `KIT_Everyday`, which is now the way to get them — not a script.
-- Final 4K approved by Nick 2026-11-11 ("perfect").
+- Final 4K approved by Nick 2026-11-11 ("perfect"); the bar-97 peak glints read good at full quality. **Done.**
 - **Deliverables (Nick, 2026-11-11):** ProRes master in the orientation the piece was made, 4K horizontal for YouTube, 1080 vertical for socials. Nothing else. Nick designs pieces to work rotated, so the second orientation is a 90° rotate of the master (Everyday: clockwise; the kaleidoscope reads the same sideways). No second render, no crop.
