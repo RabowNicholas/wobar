@@ -87,6 +87,10 @@ Real failures from real sessions only. Check this before acting; if the planned 
 | 2026-11-04 | Ran the root-shape tests in one session while another session applied the ground-colour fix to the same `hohlweg_3` | The root tests (and their "before" column) rendered a state without the ground fix: the trench floor still orange (R/B 1.95 vs 1.24), so the sheet showed a problem already fixed | Before any test sheet, print the file's `*_applied` scene keys and check them against the latest applied change; re-render the "before" from the current file | workflow |
 | 2026-11-04 | Hid MAKYO hat dust before the break by gating the `DustDensity` driver on `intact` | DustDensity only feeds the stored glow attribute; the 7000 specks are lit geometry and stayed visible (instance scales unchanged) | Trace a value's links downstream before gating on it; to remove an element, key the object's `hide_render`/`hide_viewport` (CONSTANT) | geo-nodes |
 ---
+| 2026-11-13 | Bent a straight tube onto a winding path with a Curve modifier and planned to loop the camera along it | A curve's frame twists along a 3D path (holonomy, ~10° per 36 m here), so a "periodic" tunnel came back rotated and the loop could never close | For a seamless tunnel loop build the wall yourself in a rotation-minimising frame, measure the twist over one period and spread the opposite twist linearly along the spine; spine and wall terms must be integer harmonics of the period, camera travels exactly one period, roll exactly n×360° | geo-nodes |
+| 2026-11-13 | `keyframe_insert(path, index=0)` on a Value node's `default_value` | `TypeError: index 0 was given while property ... is not an array` | Scalars: call without `index` (or index=-1); only arrays (location, quaternion) take an index | animation |
+| 2026-11-13 | Radial features uniform along a tunnel (cos 2θ/3θ vowel lobes lit by glow, cos 5θ folds) | Seen down the axis they line up into wedges / a five-point star — a pinwheel, the mandala ban | Weight angular terms by a smooth 0..1 patch field that varies along the tube, and mix angular orders with different helical pitch (3θ + 4θ, not a single nθ) | look |
+| 2026-11-13 | Riser "whip" bends with periods 1.3–2.2 m on a 1.6 m-radius tube | Bend radius below the tube radius: the inner wall folded into dark sheets and came within 0.13 m of the lens | Keep bend radius > ~2× tube radius (amplitude/period² budget), then check the evaluated wall distance from the camera with a KDTree on sampled frames | geo-nodes |
 
 ## 3. Patterns that worked
 
@@ -266,6 +270,16 @@ Reusable snippets and recipes, proven in a session. Keep each short; put long sc
   - **Painted glow on fragments reads fake; real light reads real:** drop per-instance emission, flash a small (1 m) area light behind the camera on the kick. A 6 m disc filled whole near faces with flat colour and showed as a disc in the intact mirror.
 
 ## 4. Session log
+
+### 2026-11-13 - STILL TIPPIN: concept search → membrane tunnel → full-song grey structure (`still_tippin_song_grey_v3.blend`)
+Case file: [[reference/blender_cases/STILL_TIPPIN]]. Six concepts tried before the tunnel stuck (spokes, candy liquid, moiré ×2, chamber, contour bands) — all logged there as rejected.
+- **Long tube, cheap per frame:** bake static per-vertex attributes (θ, y, spine point C, frame N/B, lump fields) once; a GN tree rebuilds the radius each frame from keyed Value nodes and **deletes every point outside [camera−4 m, camera+45 m]** first. 795k-vertex tube evaluates in ~0.01 s; 0.37 s/frame at 50 % / 8 smp EEVEE, full song (6686 f) ~50 min.
+- **Bulk keys:** one `keyframe_insert` to create the F-curve, then `keyframe_points.add(n)` + `foreach_set("co")` + `foreach_set("interpolation", [1]*n)` (LINEAR). ~100k keys in seconds.
+- **Spine features timed to the music:** compute the camera's travel y(t) first, then build the spine with amplitudes looked up by "what section is the camera in when it reaches this y" (moving-averaged along y so no kinks). Same trick bakes the transitions chaos into the geometry.
+- **Smoothing transitions:** 2-pole critically damped filter (tau 0.2–0.5 s) on section-driven channels, with kick impulses added back after so they keep their punch; risers release over ~0.2 s instead of cutting.
+- **Repetition you can feel:** a periodic stretch of tunnel (period = distance travelled per 4-bar line, measured from the actual camera travel) + roll locked = the same passage each line; mutate with a twin lump field blended by a slow Mut value.
+- Headlamp in a tight tube: fill ahead at 5.5 m with `specular_factor 0` and no shadow; at 3 m it blew the near walls out.
+- Loop check that works: render frame 1 and frame N+1 and diff the pixels.
 
 ### 2026-11-05 - HOHLWEG brightness audit: exposure +3 (`hohlweg_3`)
 - **At exposure 0 the 16-bit AgX PNG threw the shadows away.** Pass-2 stills: median p50 0.2/255 in ERNSTFALL/ABGRUND, 65% of pixels under 0.5/255, up to 85% exactly 0 (5:23). 4K EXR probes (`renders/bright_probe`, `p_*.exr`) show the scene-linear render has ~no zeros: dark frames sit ~9 stops under mid-grey, in AgX's nearly flat toe, so the bottom half of a frame got 1-16 codes. Lifted in a grade: black walls with blue/orange blotches, oversaturated blue shadows. Fix `scripts/blender/exposure_plus3.py`: view exposure 0 -> +3 (0..+4 tested via `save_render` of the EXRs at each exposure): no zeros, 73-786 codes in the bottom half, fall max 0.89, no render cost. Backup `hohlweg_3_pre_exposure.blend`, key `exposure_plus3_applied`, synced to `hohlweg_final`.
