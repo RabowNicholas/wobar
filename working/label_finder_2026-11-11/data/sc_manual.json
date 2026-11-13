@@ -1,0 +1,10 @@
+{
+ "_note": "Second SoundCloud pass 2026-11-11 (release playlists + tracks matched in-page). Bio wording copied exactly.",
+ "69987": {"permalink": "deadbeatsrecords", "followers": 91659, "identity": "weak: 0 title matches, but the bio links the label's own demo form", "bio_door": "Got music you want us to hear? Submit it to: http://bit.ly/Demos4Deadbeats", "door_type": "form"},
+ "68422": {"permalink": "locus_sound", "followers": 7794, "identity": "confirmed (25 title matches)", "bio_door": "locussounduk@gmail.com | submissions via private streaming links", "door_type": "email", "owner_signal": "bio: 'run by @arch_luun'"},
+ "72037": {"permalink": "jadudala", "followers": 47399, "identity": "confirmed (83 title matches)", "bio_door": "demos link in bio links (not in text)", "door_type": "check site"},
+ "23236": {"permalink": "kannibalenrecords", "followers": 75663, "identity": "confirmed (3 title matches)", "bio_door": "forms.gle/ND9WL1AZWP8JkPyS6 (link, label not stated in text)", "door_type": "check form"},
+ "68956": {"permalink": "ophelia_records", "followers": 23849, "identity": "confirmed (6)", "bio_door": null},
+ "117522": {"permalink": "cd91x", "followers": 131819, "identity": "confirmed (30)", "bio_door": null, "general_contact": "wesley@cd91x.com"},
+ "129124": {"permalink": "local-void-records", "followers": 328, "identity": "wrong or unmatched (0 of 4); no confirmed SoundCloud", "bio_door": null}
+}

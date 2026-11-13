@@ -194,7 +194,7 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 **Genuinely open:** **Spotify's bio is written and undeployed**, and its Canvas + Artist Pick remain empty and free · **Instagram still links only wobar.music** — SoundCloud is absent from the highest-traffic surface, routing strangers to the depth-3 room ([[working/WOBAR_SURFACES]] §3.3) · Apple Music never reviewed · Beatport absent, which is a distributor setting · **permalinks still read `portal-journey-00X`** against the new titles · artist-adjacency tagging is the last untested retrieval mechanism · **nobody knows what carried *World-A-Reggae* to 246 likes on 314 plays** — 4× the follower count, and the largest unexplained event in the catalogue.
 
 ### Clip-to-Zero — testing, opened 2026-11-03
-**State: in use, being tested. Has not seen the wild** — no big-system play, no phone check, no level-matched reference comparison yet. "Works better" so far is a judgement from inside the production process.
+**State: in use. Big-system test passed (reported 2026-11-09): the mix was much cleaner.** Still no phone check and no level-matched reference comparison.
 
 **What it is:** the project structure was rebuilt on the clip-to-zero method (Bafmetrics — [source doc](https://docs.google.com/document/d/1Ogxa5-X_QdbtfLLQ_2mDEgPgHxNRLebQ7pps3rXewPM/edit?tab=t.0#heading=h.lwtkibvu0gr)). The mixdown is the master. **It replaces the master chain.** The old chain (God Particle → Pro-MB → Ozone, fed by a −16 LUFS-S mix) is retired. See [[working/WOBAR_CLOSED]] for what it was and why it lost.
 
@@ -202,7 +202,13 @@ Belief 1 varies **time** (8 bars → set → career); belief 2 varies **surface*
 
 **Why it won (Nick):** much louder mixes, and much more surgical. You stop hoping it comes out loud and good at the end of a chain. It's a systems win: production itself got better.
 
-**Genuinely open:** translation outside the studio · true-peak handling. One reading showed **+1.30 dBTP at −9.3 LUFS-I**, possibly with the Maximizer bypassed. The old chain held −1 dBTP, and nothing has replaced that standard yet.
+**Genuinely open:** phone translation. *(True peak was decided 2026-11-09 as not managed for now. See [[reference/WOBAR_SONIC]] §Mastering.)*
+
+**Ozone pre-master test on MAKYO (2026-11-09), now the release master.** Chain: **Ozone 12 (Master Assistant, EDM target, Maximizer off) → Bass Mono → KClip3 → Ozone Maximizer.** Ozone sits *before* the clipper so KClip still has the last word on peaks, which follows the CTZ order (processing → clipper → limiter). The level was restored with Ozone's output gain, not the final Maximizer. The new master `makyo_master.wav` is −6.7 LUFS / +2.0 dBTP; the old one is kept as `makyo_master_pre-ozone.wav`. At matched loudness vs the old master: 4–10 kHz +3.6 dB, 10–20 kHz +2.8 dB, 300 Hz–1 kHz −1.3 dB, lows unchanged. 3× more samples at the clip ceiling (0.70% vs 0.23%). Nick picked it on a gain-matched A/B ("top end clearer"). New visualizer muxes are `makyo_visualizer_4k{,_horizontal}_ozone.mp4`, originals kept. The Assistant's EDM chain *widens* 100 Hz–2 kHz and its Impact is negative on all bands, and neither has been checked on its own.
+
+**What the test showed about the bus:** the mix reaches KClip about 6 dB hot (KClip max clipped 6.8 dB), and the final Maximizer does **zero** gain reduction. KClip's 0 dB ceiling means nothing reaches it, and adding gain there makes it ride the whole drop, because KClip has already flattened the hits. KClip delta on MAKYO: −27 dB under the music, 76% above 1 kHz, attributed to snare ~37%, low_pass stem ~44%, **kick ~1%**. So the kick isn't the loudest hit. Baphometrix's "limiter dances only on kick/snare" needs the framework hits to stand above the rest *into* the final clipper. That's mix work for the next track, not a master fix.
+
+**True-peak measurements (2026-11-09, ffmpeg ebur128):** the clip-to-zero bounces (still_tippin flip, palm_trees flip) read **0.0 sample / +2.1 dBTP at about −8.6 to −9.1 LUFS-I**. The old-chain HOHLWEG master read −1.0 / −1.0 at −10.1. Encoding the still_tippin bounce raised decoded peaks to: AAC 256 +3.8, Opus 128 +3.4, Vorbis q9 +2.2, MP3 320 +2.3 dBTP. Pulling it down 2.5 dB before the AAC encode left 26 overs instead of ~32k. If a player clamps the AAC at 0, what gets cut off sits about 48 dB below the music, on the transients. Whether that's audible in an already-clipped mix is untested. Listening files are in that day's session scratchpad and are not kept. Rips of reference tracks (WRAZ & Substance *Nostromo*, Tape B *Purple Swag* flip) decode at +4.3–4.5 dBTP, −8.8 and −6.1 LUFS. They're lossy rips, so this doesn't show the original master's true peak, only that the scene ships hot.
 
 ### Mirror Threshold — the SMS door into the Ether
 **State: spec complete, build not started, blocked on 10DLC** — days-to-weeks of carrier approval, and no door copy works without a number.
@@ -383,16 +389,8 @@ The costume test was never run — the 2026-09-01 audit skipped it on facelessne
 - **The source photo is a ~1526px screenshot of unknown origin.** It's below 3000 × 3000 and the license is unknown.
 - **Title collisions are unchecked.** An existing artist named *Makyo* may exist. No exact-title search has been run on SoundCloud, Spotify or Beatport.
 
-### Everyday — A$AP Rocky flip visualizer (Blender), built 2026-11-07 → 11-09
-**State: built and approved section by section; the final 4K render is queued on the M1 Max to start when the HOHLWEG render finishes (2026-11-09).** Frames 1–12, 3400 and 5100–5102 exist. Peak frames took ~22.5 s each at 4K / 64 samples while sharing the GPU with HOHLWEG. Act 4 pure, full song (3:39, 128 bars), audio-locked to Nick's kick / snare / hat / low-end stems. tunnel_v1 with the clock taken out. Structure, section moves, what was tried and dropped, render findings and debts: [[reference/blender_cases/EVERYDAY]]. Reusable part: `KIT_Everyday` in kit v0.2 ([[reference/blender_kit/README]]).
-
-**To resume:** working file `/Volumes/music/blender/everyday_tunnel_v1.blend` (saved, final). Final render = `scripts/blender/everyday/render_final.sh` — 2160×3840, 64 samples, motion blur, 16-bit PNG to `/Volumes/music/blender/renders/everyday_final_4k/`, resumable, shareable across both machines only if the other one mounts the drive over the network (it is USB on the M1 Max), encodes a ProRes master + 4K YouTube + 1080 social H.264 when every frame exists. ~250 GB of frames against 365 GB free on 2026-11-09. Requires Blender 5.2 (FOOTGUNS V-1).
-
-**What the build changed beyond the piece:** [[working/WOBAR_VISUAL_RESET]] v1.8 — §6 is now Locked / Testing / Denied. Five rules the finished Blender pieces broke were denied with reasons; held breath → lunge (L8), instrument physics (L9) and the light (L10) were locked on Nick's call. Short-form cut-downs: Nick does those himself.
-
-**Open:**
-- The final render has not been watched. The full 10-sample preview predates the drop-1 and outro changes, so nobody has seen the finished piece end to end.
-- Nick's read on the bar-97 peak glints at full quality (review image in `renders/everyday_quality_test/`).
+### Still Tippin — flip visualizer (Blender), opened 2026-11-13
+**State: full-song structure built in grey on fake signals; Drop 1, Drop 2 and outro approved, v3 (smoothed transitions, harder Drop 2) unreviewed. Blocked on the final mix: Nick exports the transitions stem + kick / snare / sub / hats.** A winding membrane tunnel, headlamp only, **no core light on this track** (deliberate L10 exception). Structure, decisions, rejected directions and files: [[reference/blender_cases/STILL_TIPPIN]].
 
 ### Inside vs outside — stage visuals and release art as two views of one world
 **State: exploratory, deliberately not written into doctrine (Nick, 2026-10-05: "just toying around with this idea").** Release art is the **outside** view: one wireframe form in a real place, inviting people in (HOHLWEG). Stage visuals and Spotify Canvas are the **inside** view: the form grows into the whole field, hypnotic and disorienting, psychedelic as a *feeling*, not as color. Progression: cover = the tear held small · flyer = the tear opening · show = fully inside. The physical room and the sub do the tethering that photoreal ground does in a frame, which is why the stage can go more abstract without breaking NO ESCAPE.

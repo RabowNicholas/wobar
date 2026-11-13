@@ -1,0 +1,328 @@
+{
+ "_rule": "Door = demo route labelled as such on the label's own page or bio. General/booking/promo contact does not count. Checked 2026-11-11.",
+ "109502": {
+  "type": "form",
+  "where": "linktr.ee/wubaholics",
+  "address": "https://docs.google.com/forms/d/e/1FAIpQLSdH_eYbbY-fV5s5dJqCDGX8Uew4BtYgWmnbNHtLVY9d7FlYrA/viewform",
+  "wording": "Wubaholics 2026 Demo Submission Form",
+  "rules": "vault 2026-08-25: 3-5 track EPs; private SoundCloud with DL; 4-6 week turnaround"
+ },
+ "150059": {
+  "type": "form",
+  "where": "trippybeerecords.com/contact",
+  "address": "https://docs.google.com/forms/d/e/1FAIpQLSfE2Xr2bAbft99zf75WP1g_NTldUfoVihjpM9MpQ0_ioajNaw/viewform",
+  "wording": "Music Submissions: LINK"
+ },
+ "131258": {
+  "type": "email",
+  "where": "go.theportzero.com/connect",
+  "address": "demos@theportzero.com",
+  "wording": "mailto link on the label's connect page"
+ },
+ "14081": {
+  "type": "closed",
+  "where": "wewillneversaydie.com/contact",
+  "wording": "WE ARE NOT ACCEPTING DEMOS"
+ },
+ "78866": {
+  "type": "none",
+  "where": "cyclopsrecordings.net/contact",
+  "wording": "general contact form (name, email, message); SoundCloud lists promos@ only"
+ },
+ "74919": {
+  "type": "none",
+  "where": "incurzionaudio.com/pages/contact",
+  "wording": "general contact form; unlabelled incurzionaudio@outlook.com in SoundCloud links"
+ },
+ "90526": {
+  "type": "none",
+  "where": "subsidia.ca",
+  "wording": "no contact or demo route on site"
+ },
+ "23236": {
+  "type": "none",
+  "where": "SoundCloud link forms.gle/ND9WL1AZWP8JkPyS6",
+  "wording": "the form is a DJ promo sign-up, not demos"
+ },
+ "82292": {
+  "type": "form",
+  "where": "dirtysnatcharecords.com/submit",
+  "address": "https://www.dirtysnatcharecords.com/submit",
+  "wording": "DEMO SUBMISSION",
+  "rules": "private SoundCloud link; release type single/EP/album; asks about samples; no fee shown"
+ },
+ "110914": {
+  "type": "portal",
+  "where": "SoundCloud link",
+  "address": "https://hypeddit.com/badmedicrecords/submitademo",
+  "wording": "Submit a Demo (Hypeddit)",
+  "rules": "fee not stated on page; check before sending"
+ },
+ "126878": {
+  "type": "portal",
+  "where": "circus-records.co.uk",
+  "address": "https://www.labelradar.com/labels/circusrecords/profile",
+  "wording": "Demo Submission (LabelRadar)"
+ },
+ "47581": {
+  "type": "email",
+  "where": "bio.to/duploc",
+  "address": "info@duploc.com",
+  "wording": "contact / demos via info@duploc.com",
+  "rules": "vault 2026-08-25: VA-only since Q3 2025, 5-track compilations"
+ },
+ "166303": {
+  "type": "portal",
+  "where": "linktr.ee/arcticempireofficial",
+  "address": "https://arcticempire.portal.district.biz/",
+  "wording": "SUBMIT MUSIC OR ARTWORK"
+ },
+ "73191": {
+  "type": "unknown",
+  "where": "manukaplates.co.uk/contact",
+  "wording": "site shows a Cloudflare bot check; stopped, not worked around"
+ },
+ "80849": {
+  "type": "none",
+  "where": "dirtmonkey.music",
+  "wording": "no demo route; 19ksounds@gmail.com on SoundCloud is unlabelled"
+ },
+ "14690": {
+  "type": "none",
+  "where": "deepmedi.com",
+  "wording": "SoundCloud bio mentions demos ('we cannot respond individually to every demo received, but we listen!') but no address on bio or site"
+ },
+ "117522": {
+  "type": "none",
+  "where": "cd91x.com (does not load)",
+  "wording": "wesley@cd91x.com unlabelled"
+ },
+ "103220": {
+  "type": "form",
+  "where": "SoundCloud bio 'Demos: https://bit.ly/nlm-demos'",
+  "address": "https://forms.gle/Dg63wB3x9WYgccJc7",
+  "wording": "Neoluminum Demo Submission Form",
+  "rules": "checked every Tuesday; reply usually 1-2 weeks; follow up via Discord A&R"
+ },
+ "24198": {
+  "type": "none",
+  "where": "artikalmusicuk.com (does not load)",
+  "wording": "no door on SoundCloud"
+ },
+ "40841": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "submissions@subcarbon.be",
+  "wording": "We do not answer Soundcloud messages, submit your songs by email : submissions@subcarbon.be"
+ },
+ "43229": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "demo@deepdarkdangerous.com",
+  "wording": "demo@deepdarkdangerous.com"
+ },
+ "55847": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "1985demos@gmail.com",
+  "wording": "Demos ----> 1985demos@gmail.com"
+ },
+ "112736": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "demos@soundsofmayhem.com",
+  "wording": "Demos: demos@soundsofmayhem.com"
+ },
+ "130914": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "demos@antagonistrecs.com",
+  "wording": "demos@antagonistrecs.com"
+ },
+ "97630": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "Cimmerianrec@gmail.com",
+  "wording": "Premieres and Demos to - Cimmerianrec@gmail.com"
+ },
+ "98363": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "liverpooldubstepheadz@gmail.com",
+  "wording": "~ Submissions & bookings ~ (Please only send Soundcloud / Google Drive / Dropbox links when submitting tracks)"
+ },
+ "107385": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "AspireHigherProductions@gmail.com",
+  "wording": "For All Tune Tuesday & EP/Album Submissions Please Email:"
+ },
+ "68422": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "locussounduk@gmail.com",
+  "wording": "locussounduk@gmail.com | submissions via private streaming links"
+ },
+ "89126": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "WiddFamsubmission@gmail.com",
+  "wording": "Submit to WiddFamsubmission (at) gmail.com"
+ },
+ "90781": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "music@odyzeymusic.com",
+  "wording": "Submissions: music@odyzeymusic.com"
+ },
+ "52116": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "Contact/Info (NO DEMOS): martin@fullflexaudio.co.uk"
+ },
+ "69987": {
+  "type": "form",
+  "where": "SoundCloud bio",
+  "address": "http://bit.ly/Demos4Deadbeats",
+  "wording": "Got music you want us to hear? Submit it to: http://bit.ly/Demos4Deadbeats"
+ },
+ "68217": {
+  "type": "closed",
+  "where": "SoundCloud bio",
+  "wording": "SUBMISSIONS CURRENTLY CLOSED"
+ },
+ "56129": {
+  "type": "email",
+  "where": "SoundCloud bio (identity weak)",
+  "address": "aarecordscontact@gmail.com",
+  "wording": "Demos (only private soundcloud link): aarecordscontact@gmail.com"
+ },
+ "104173": {
+  "type": "email",
+  "where": "SoundCloud bio",
+  "address": "station.demos@gmail.com",
+  "wording": "Accepting Demos: station.demos@gmail.com"
+ },
+ "106994": {
+  "type": "email",
+  "where": "SoundCloud bio (identity weak)",
+  "address": "demos@hypnovizion.com",
+  "wording": "demos@hypnovizion.com"
+ },
+ "373903": {
+  "type": "portal",
+  "where": "labelradar.com/our-labels (public list, page 1)",
+  "address": "LabelRadar profile 'Disciple'",
+  "wording": "listed under 'Labels Accepting Demos'",
+  "rules": "LabelRadar may use credits; check before sending"
+ },
+ "72037": {
+  "type": "email",
+  "where": "jadudala.com/pages/contact",
+  "address": "jadudala@gmail.com",
+  "wording": "Looking to submit a demo? Please send private links to jadudala@gmail.com"
+ },
+ "18130": {
+  "type": "form",
+  "where": "ukf.com/submit-your-demo",
+  "address": "https://ukf.com/submit-your-demo/",
+  "wording": "Want to have a track of yours released on UKF or Pilot? We're all ears. ... please fill out the form below",
+  "rules": "do not send demos to the support address; Discord recommended first"
+ },
+ "65158": {
+  "type": "form",
+  "where": "insomniacmusicgroup.com, section anchored #DEMOS",
+  "address": "https://www.insomniacmusicgroup.com/#DEMOS",
+  "wording": "section labelled DEMOS; generic fields (name, email, subject, 'Tell us what's on your mind'), reCAPTCHA",
+  "rules": "covers all Insomniac labels, not Bassrush-specific"
+ },
+ "110315": {
+  "type": "unknown",
+  "where": "wakaan.com",
+  "wording": "site shows a certificate privacy error (also seen 2026-07-26); not bypassed. Chloe@wakaan.com on SoundCloud is unlabelled"
+ },
+ "73029": {
+  "type": "none",
+  "where": "infernalsounds.co.uk/contact",
+  "wording": "'Eager to explore a collaboration?' general form + infernalsoundsdubstep@gmail.com (mailto link on the site is misspelled INFERNALSOUNDSFDUBSTEP)"
+ },
+ "108075": {
+  "type": "email",
+  "where": "soundinpicture.com/contact",
+  "address": "contact@soundinpicture.com",
+  "wording": "Feel free to send us unpublished, exclusive content on our mail",
+  "rules": "EXCLUSIVE content only; sending grants consent to publish on site and socials"
+ },
+ "115076": {
+  "type": "closed",
+  "where": "vault RESEARCH_LABEL_LANDSCAPE, read 2026-07-27",
+  "wording": "(we are not currently accepting demos at this time) - not re-verified today; no door in SoundCloud bio"
+ },
+ "113575": {
+  "type": "none",
+  "where": "SoundCloud bio; vault 2026-08-25",
+  "wording": "goodsocietyla@gmail.com unlabelled; vault: contact line is for event invites"
+ },
+ "129124": {
+  "type": "none",
+  "where": "web search + SoundCloud",
+  "wording": "no demo route found; launched to release INZO first, others later"
+ },
+ "78868": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "dramaclubrecordings@gmail.com unlabelled"
+ },
+ "23412": {
+  "type": "portal",
+  "where": "SoundCloud bio link",
+  "address": "http://monster.cat/demo-submissions",
+  "wording": "demo-submissions link (page not opened)"
+ },
+ "24539": {
+  "type": "portal",
+  "where": "SoundCloud bio",
+  "address": "http://gravitasrecordings.com/demos",
+  "wording": "Demos Go Here: gravitasrecordings.com/demos (page not opened)"
+ },
+ "56364": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "crucast.com/contact link, not labelled for demos"
+ },
+ "168391": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "management email only"
+ },
+ "125074": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "Mersiv@redlightmanagement.com (management)"
+ },
+ "127988": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "no door found (SoundCloud bio has none; no label site linked)"
+ },
+ "96746": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "no door found (SoundCloud bio has none; no label site linked)"
+ },
+ "77607": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "no door found (SoundCloud bio has none; no label site linked)"
+ },
+ "58064": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "no door found (SoundCloud bio has none; no label site linked)"
+ },
+ "91551": {
+  "type": "none",
+  "where": "SoundCloud bio",
+  "wording": "no door found (SoundCloud bio has none; no label site linked)"
+ }
+}

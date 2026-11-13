@@ -1,0 +1,8861 @@
+[
+ {
+  "id": 15200,
+  "name": "Record Union",
+  "catalogue_tracks": 10000,
+  "last_release": "2026-11-09",
+  "rel_6m": 60,
+  "rel_recent": 60,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 1,
+   "140 / Deep Dubstep / Grime": 1,
+   "Minimal / Deep Tech": 1,
+   "Melodic House & Techno": 5,
+   "Hard Dance / Hardcore / Neo Rave": 1,
+   "Trance (Main Floor)": 1,
+   "Tech House": 1,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 63,
+  "non_owner_artists": 63,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 3,
+  "peer_overlap": 4,
+  "newcomer_share": 0.57,
+  "repeat_share": 0.17,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 29,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "high volume, no chart, median footprint 1: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 32310,
+  "name": "Foundation Audio",
+  "catalogue_tracks": 391,
+  "last_release": "2026-08-21",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 12
+  },
+  "n_artists_24m": 17,
+  "non_owner_artists": 17,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4,
+  "goal_overlap": 2,
+  "peer_overlap": 8,
+  "newcomer_share": 0.12,
+  "repeat_share": 0.24,
+  "rsi": 51,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 37,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 56129,
+  "name": "A Records",
+  "catalogue_tracks": 187,
+  "last_release": "2026-11-06",
+  "rel_6m": 13,
+  "rel_recent": 4,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "Mainstage": 2,
+   "Dance / Pop": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 59,
+  "non_owner_artists": 59,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 8,
+  "peer_overlap": 1,
+  "newcomer_share": 0.24,
+  "repeat_share": 0.17,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 68768,
+  "name": "Reinelex Records",
+  "catalogue_tracks": 768,
+  "last_release": "2026-09-04",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Trap / Future Bass": 2
+  },
+  "n_artists_24m": 62,
+  "non_owner_artists": 62,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 7,
+  "peer_overlap": 0,
+  "newcomer_share": 0.37,
+  "repeat_share": 0.06,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 75783,
+  "name": "White Peach Records",
+  "catalogue_tracks": 442,
+  "last_release": "2026-08-07",
+  "rel_6m": 4,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 8,
+   "Dubstep": 4
+  },
+  "n_artists_24m": 33,
+  "non_owner_artists": 33,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 4,
+  "peer_overlap": 6,
+  "newcomer_share": 0.42,
+  "repeat_share": 0.27,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 47,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 80849,
+  "name": "19K",
+  "catalogue_tracks": 269,
+  "last_release": "2026-11-06",
+  "rel_6m": 10,
+  "rel_recent": 6,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 9,
+   "Drum & Bass": 1,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 19,
+  "non_owner_artists": 18,
+  "owner": [
+   "Dirt Monkey"
+  ],
+  "owner_ids": [
+   164792
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 7,
+  "peer_overlap": 2,
+  "newcomer_share": 0.37,
+  "repeat_share": 0.32,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 44,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 82292,
+  "name": "DirtySnatcha Records",
+  "catalogue_tracks": 345,
+  "last_release": "2026-10-23",
+  "rel_6m": 9,
+  "rel_recent": 2,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 52,
+  "non_owner_artists": 52,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 13,
+  "peer_overlap": 6,
+  "newcomer_share": 0.38,
+  "repeat_share": 0.25,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 47,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 97630,
+  "name": "Cimmerian Records",
+  "catalogue_tracks": 153,
+  "last_release": "2026-10-30",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 16,
+  "non_owner_artists": 15,
+  "owner": [
+   "Kilbourne"
+  ],
+  "owner_ids": [
+   267444
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Curated by Kilbourne (@jkilbourne)'",
+  "owner_share_last12": 2,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 1,
+  "peer_overlap": 4,
+  "newcomer_share": 0.25,
+  "repeat_share": 0.19,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 98363,
+  "name": "LDH Records",
+  "catalogue_tracks": 225,
+  "last_release": "2026-10-15",
+  "rel_6m": 8,
+  "rel_recent": 2,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Dubstep": 2
+  },
+  "n_artists_24m": 55,
+  "non_owner_artists": 55,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 6,
+  "peer_overlap": 13,
+  "newcomer_share": 0.42,
+  "repeat_share": 0.18,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 103030,
+  "name": "Helix Records",
+  "catalogue_tracks": 1386,
+  "last_release": "2026-11-06",
+  "rel_6m": 70,
+  "rel_recent": 19,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Tech House": 2,
+   "Afro House": 1,
+   "House": 1,
+   "Dance / Pop": 4,
+   "Melodic House & Techno": 2,
+   "Bass House": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 8,
+  "non_owner_artists": 8,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.25,
+  "repeat_share": 0.12,
+  "rsi": 48,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 40,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 103997,
+  "name": "Exodus Records",
+  "catalogue_tracks": 74,
+  "last_release": "2026-08-19",
+  "rel_6m": 7,
+  "rel_recent": 0,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 8,
+   "Drum & Bass": 4
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 6,
+  "owner": [
+   "Long Range"
+  ],
+  "owner_ids": [
+   26570
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 3,
+  "peer_overlap": 1,
+  "newcomer_share": 0.29,
+  "repeat_share": 0.71,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 104173,
+  "name": "Station Underground",
+  "catalogue_tracks": 109,
+  "last_release": "2026-08-21",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 9,
+   "House": 1,
+   "140 / Deep Dubstep / Grime": 2
+  },
+  "n_artists_24m": 26,
+  "non_owner_artists": 26,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 5,
+  "peer_overlap": 2,
+  "newcomer_share": 0.65,
+  "repeat_share": 0.31,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 32,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 108075,
+  "name": "Sound in Picture",
+  "catalogue_tracks": 261,
+  "last_release": "2026-11-06",
+  "rel_6m": 17,
+  "rel_recent": 5,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Ambient / Experimental": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 24,
+  "non_owner_artists": 23,
+  "owner": [
+   "SMYAH"
+  ],
+  "owner_ids": [
+   1098962
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 1,
+  "peer_overlap": 8,
+  "newcomer_share": 0.46,
+  "repeat_share": 0.67,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 18,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 33,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 112451,
+  "name": "TuneCore",
+  "catalogue_tracks": 10000,
+  "last_release": "2026-11-11",
+  "rel_6m": 48,
+  "rel_recent": 48,
+  "last12_accepted": "2/12",
+  "last12_genres": {
+   "House": 1,
+   "Techno (Peak Time / Driving)": 1,
+   "Melodic House & Techno": 1,
+   "Psy-Trance": 1,
+   "140 / Deep Dubstep / Grime": 1,
+   "UK Garage / Bassline": 1,
+   "Deep House": 1,
+   "Tech House": 2,
+   "Dance / Pop": 2,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 143,
+  "non_owner_artists": 143,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.93,
+  "repeat_share": 0.42,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 24,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "high volume, no chart, median footprint 1: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 126144,
+  "name": "Lumasi Music",
+  "catalogue_tracks": 20,
+  "last_release": "2026-10-14",
+  "rel_6m": 5,
+  "rel_recent": 3,
+  "last12_accepted": "9/10",
+  "last12_genres": {
+   "Dubstep": 9,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 6,
+  "non_owner_artists": 5,
+  "owner": [
+   "Lumasi"
+  ],
+  "owner_ids": [
+   1004785
+  ],
+  "owner_status": "candidate (10/12 credits), unconfirmed",
+  "owner_share_last12": 10,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4.5,
+  "goal_overlap": 5,
+  "peer_overlap": 3,
+  "newcomer_share": 0.0,
+  "repeat_share": 1.0,
+  "rsi": 45,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 5
+  },
+  "score_pre_reach": 35,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 131208,
+  "name": "ZOT Records",
+  "catalogue_tracks": 52,
+  "last_release": "2026-10-30",
+  "rel_6m": 12,
+  "rel_recent": 3,
+  "last12_accepted": "7/12",
+  "last12_genres": {
+   "Dubstep": 6,
+   "Trap / Future Bass": 3,
+   "140 / Deep Dubstep / Grime": 1,
+   "Drum & Bass": 1,
+   "Bass House": 1
+  },
+  "n_artists_24m": 12,
+  "non_owner_artists": 11,
+  "owner": [
+   "Ahee"
+  ],
+  "owner_ids": [
+   465592
+  ],
+  "owner_status": "candidate (10/12 credits), unconfirmed",
+  "owner_share_last12": 10,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 6,
+  "peer_overlap": 5,
+  "newcomer_share": 0.42,
+  "repeat_share": 0.58,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 137824,
+  "name": "Independent",
+  "catalogue_tracks": 4319,
+  "last_release": "2026-11-11",
+  "rel_6m": 40,
+  "rel_recent": 40,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "R&B": 1,
+   "African": 1,
+   "Dance / Pop": 1,
+   "Hip-Hop": 6,
+   "Afro House": 1,
+   "Country": 2
+  },
+  "n_artists_24m": 15,
+  "non_owner_artists": 15,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 3,
+  "peer_overlap": 1,
+  "newcomer_share": 0.6,
+  "repeat_share": 0.4,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "high volume, no chart, median footprint 1: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 152175,
+  "name": "GorillaT Records",
+  "catalogue_tracks": 14,
+  "last_release": "2026-07-17",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "6/6",
+  "last12_genres": {
+   "Dubstep": 6
+  },
+  "n_artists_24m": 5,
+  "non_owner_artists": 4,
+  "owner": [
+   "GorillaT"
+  ],
+  "owner_ids": [
+   1072211
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 6,
+  "goal_overlap": 3,
+  "peer_overlap": 1,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.6,
+  "rsi": 47,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 35,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 152464,
+  "name": "bitbird",
+  "catalogue_tracks": 1295,
+  "last_release": "2026-11-06",
+  "rel_6m": 24,
+  "rel_recent": 9,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Trap / Future Bass": 3,
+   "Dance / Pop": 4,
+   "Drum & Bass": 2,
+   "140 / Deep Dubstep / Grime": 2,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 18,
+  "non_owner_artists": 18,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.44,
+  "repeat_share": 0.28,
+  "rsi": 48,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 166303,
+  "name": "Arctic Empire",
+  "catalogue_tracks": 84,
+  "last_release": "2026-10-16",
+  "rel_6m": 7,
+  "rel_recent": 1,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "Trap / Future Bass": 3,
+   "Downtempo": 1
+  },
+  "n_artists_24m": 29,
+  "non_owner_artists": 29,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 5,
+  "peer_overlap": 0,
+  "newcomer_share": 0.86,
+  "repeat_share": 0.24,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 5,
+   "fit": 5
+  },
+  "score_pre_reach": 29,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 168391,
+  "name": "Buku",
+  "catalogue_tracks": 26,
+  "last_release": "2026-10-16",
+  "rel_6m": 8,
+  "rel_recent": 5,
+  "last12_accepted": "9/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "140 / Deep Dubstep / Grime": 1,
+   "Drum & Bass": 1,
+   "Dance / Pop": 2
+  },
+  "n_artists_24m": 6,
+  "non_owner_artists": 5,
+  "owner": [
+   "Buku"
+  ],
+  "owner_ids": [
+   209920
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 5,
+  "peer_overlap": 1,
+  "newcomer_share": 0.33,
+  "repeat_share": 0.17,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 175901,
+  "name": "Left Coast Records",
+  "catalogue_tracks": 50,
+  "last_release": "2026-10-15",
+  "rel_6m": 4,
+  "rel_recent": 1,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 12,
+  "non_owner_artists": 11,
+  "owner": [
+   "Smoakland"
+  ],
+  "owner_ids": [
+   785927
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 5.0,
+  "goal_overlap": 9,
+  "peer_overlap": 2,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.25,
+  "rsi": 61,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 378114,
+  "name": "Murder We Wrote",
+  "catalogue_tracks": 32,
+  "last_release": "2026-10-29",
+  "rel_6m": 11,
+  "rel_recent": 2,
+  "last12_accepted": "6/11",
+  "last12_genres": {
+   "Electronica": 5,
+   "Dubstep": 6
+  },
+  "n_artists_24m": 14,
+  "non_owner_artists": 13,
+  "owner": [
+   "Gawm"
+  ],
+  "owner_ids": [
+   727352
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 3,
+  "peer_overlap": 2,
+  "newcomer_share": 0.21,
+  "repeat_share": 0.07,
+  "rsi": 44,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 378148,
+  "name": "Emengy Bass",
+  "catalogue_tracks": 369,
+  "last_release": "2026-10-30",
+  "rel_6m": 6,
+  "rel_recent": 3,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "Trap / Future Bass": 1,
+   "Drum & Bass": 2,
+   "Breaks / Breakbeat / UK Bass": 1
+  },
+  "n_artists_24m": 77,
+  "non_owner_artists": 77,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 10,
+  "peer_overlap": 0,
+  "newcomer_share": 0.43,
+  "repeat_share": 0.08,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 382886,
+  "name": "Benda Music",
+  "catalogue_tracks": 9,
+  "last_release": "2026-08-12",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "3/3",
+  "last12_genres": {
+   "Dubstep": 3
+  },
+  "n_artists_24m": 6,
+  "non_owner_artists": 6,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 6.0,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.5,
+  "rsi": 47,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 35,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 7505,
+  "name": "Tru Thoughts",
+  "catalogue_tracks": 6329,
+  "last_release": "2026-11-10",
+  "rel_6m": 22,
+  "rel_recent": 8,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Nu Disco / Disco": 1,
+   "Breaks / Breakbeat / UK Bass": 3,
+   "Indie Dance": 2,
+   "Dance / Pop": 2,
+   "Organic House": 1,
+   "Electronica": 1,
+   "House": 1,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 67,
+  "non_owner_artists": 67,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 5,
+  "peer_overlap": 1,
+  "newcomer_share": 0.76,
+  "repeat_share": 0.16,
+  "rsi": 65,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 19,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "high volume, no chart, median footprint 1: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 7839,
+  "name": "LW Recordings",
+  "catalogue_tracks": 10000,
+  "last_release": null,
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/0",
+  "last12_genres": {},
+  "n_artists_24m": 623,
+  "non_owner_artists": 623,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 7,
+  "peer_overlap": 5,
+  "newcomer_share": 0.65,
+  "repeat_share": 0.21,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 24,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 11966,
+  "name": "Amorphous Music",
+  "catalogue_tracks": 328,
+  "last_release": "2026-11-06",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 29,
+  "non_owner_artists": 28,
+  "owner": [
+   "Bassnectar"
+  ],
+  "owner_ids": [
+   1539
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 98,
+  "chart_list": [
+   "Bassnectar, Jesse Edwards - Black Cat feat. Jesse Edwards (Original Mix) {'dubstep': 98}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 3,
+  "peer_overlap": 4,
+  "newcomer_share": 0.83,
+  "repeat_share": 0.24,
+  "rsi": 58,
+  "score_parts": {
+   "chart": 8,
+   "roster": 19,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 40,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 13396,
+  "name": "Wheel & Deal Records",
+  "catalogue_tracks": 458,
+  "last_release": "2026-09-04",
+  "rel_6m": 4,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 12
+  },
+  "n_artists_24m": 28,
+  "non_owner_artists": 27,
+  "owner": [
+   "N-Type"
+  ],
+  "owner_ids": [
+   69527
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'formed in 2009 by DJ N-Type'",
+  "owner_share_last12": 8,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 11,
+  "peer_overlap": 6,
+  "newcomer_share": 0.18,
+  "repeat_share": 0.5,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 14081,
+  "name": "Never Say Die Records",
+  "catalogue_tracks": 1151,
+  "last_release": "2026-10-02",
+  "rel_6m": 9,
+  "rel_recent": 1,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 60,
+  "non_owner_artists": 60,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 3,
+  "chart_owner": 0,
+  "chart_best_pos": 10,
+  "chart_list": [
+   "Excision, Space Laces - True Killers (Original Mix) {'dubstep': 10}",
+   "SampliFire, Jkyl & Hyde - Play With Fire (Original Mix) {'dubstep': 56}",
+   "Habstrakt, Badjokes - Right Here (Silcrow Remix) {'dubstep': 75}"
+  ],
+  "median_footprint": 4.0,
+  "goal_overlap": 31,
+  "peer_overlap": 6,
+  "newcomer_share": 0.27,
+  "repeat_share": 0.27,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 93,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 14690,
+  "name": "Deep Medi Musik",
+  "catalogue_tracks": 581,
+  "last_release": "2026-10-23",
+  "rel_6m": 7,
+  "rel_recent": 4,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Dubstep": 1,
+   "Electronica": 1
+  },
+  "n_artists_24m": 20,
+  "non_owner_artists": 20,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 5.0,
+  "goal_overlap": 9,
+  "peer_overlap": 8,
+  "newcomer_share": 0.05,
+  "repeat_share": 0.3,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 16346,
+  "name": "Atlantic Records UK",
+  "catalogue_tracks": 5119,
+  "last_release": "2026-11-10",
+  "rel_6m": 41,
+  "rel_recent": 18,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Pop": 8,
+   "Tech House": 2,
+   "Dance / Pop": 1,
+   "House": 1
+  },
+  "n_artists_24m": 56,
+  "non_owner_artists": 56,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 97,
+  "chart_list": [
+   "Skrillex, Flowdan, Fred again.. - Rumble (Original Mix) {'140-deep-dubstep-grime': 97}"
+  ],
+  "median_footprint": 1.0,
+  "goal_overlap": 2,
+  "peer_overlap": 0,
+  "newcomer_share": 0.68,
+  "repeat_share": 0.54,
+  "rsi": 47,
+  "score_parts": {
+   "chart": 16,
+   "roster": 13,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 20357,
+  "name": "RCA Records",
+  "catalogue_tracks": 191,
+  "last_release": "2026-10-23",
+  "rel_6m": 19,
+  "rel_recent": 13,
+  "last12_accepted": "2/12",
+  "last12_genres": {
+   "Country": 2,
+   "Pop": 6,
+   "140 / Deep Dubstep / Grime": 2,
+   "Rock": 2
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 2,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 87,
+  "chart_list": [
+   "D Double E, Hamdi - Heart & Soul (Original Mix) {'140-deep-dubstep-grime': 87}"
+  ],
+  "median_footprint": 7.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 1.0,
+  "rsi": 25,
+  "score_parts": {
+   "chart": 16,
+   "roster": 15,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 31,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 23236,
+  "name": "Kannibalen Records",
+  "catalogue_tracks": 1460,
+  "last_release": "2026-11-11",
+  "rel_6m": 42,
+  "rel_recent": 8,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Trap / Future Bass": 2
+  },
+  "n_artists_24m": 146,
+  "non_owner_artists": 146,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 17,
+  "chart_list": [
+   "Kai Wachi - EARTHQUAKE (Original Mix) {'dubstep': 17}",
+   "Kai Wachi, Tisoki - FACEDOWN (Original Mix) {'dubstep': 36}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 50,
+  "peer_overlap": 8,
+  "newcomer_share": 0.34,
+  "repeat_share": 0.59,
+  "rsi": 64,
+  "score_parts": {
+   "chart": 29,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 73,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 23412,
+  "name": "Monstercat",
+  "catalogue_tracks": 9278,
+  "last_release": "2026-11-11",
+  "rel_6m": 67,
+  "rel_recent": 49,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "Dubstep": 4,
+   "Organic House": 2,
+   "Melodic House & Techno": 2,
+   "Dance / Pop": 1,
+   "Bass House": 1,
+   "Psy-Trance": 1,
+   "Hard Dance / Hardcore / Neo Rave": 1
+  },
+  "n_artists_24m": 280,
+  "non_owner_artists": 280,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 6,
+  "chart_owner": 0,
+  "chart_best_pos": 32,
+  "chart_list": [
+   "SHOSH - Waiting (Original Mix) {'140-deep-dubstep-grime': 47}",
+   "Skybreak, longstoryshort - WHIPLASH (Original Mix) {'140-deep-dubstep-grime': 48}",
+   "Linney, COSTA (US) - Siren Call (Original Mix) {'dubstep': 32}",
+   "Virtual Riot - Sh*t's On F*re (Original Mix) {'dubstep': 60}",
+   "Virtual Riot - Burning Out (Original Mix) {'dubstep': 77}",
+   "ZERO POINT, Nyrus - Never (Original Mix) {'dubstep': 100}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 80,
+  "peer_overlap": 18,
+  "newcomer_share": 0.4,
+  "repeat_share": 0.23,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 40,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 79,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 24198,
+  "name": "Artikal Music UK",
+  "catalogue_tracks": 387,
+  "last_release": "2026-11-06",
+  "rel_6m": 6,
+  "rel_recent": 4,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Drum & Bass": 1,
+   "Breaks / Breakbeat / UK Bass": 1
+  },
+  "n_artists_24m": 19,
+  "non_owner_artists": 19,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 5,
+  "peer_overlap": 8,
+  "newcomer_share": 0.21,
+  "repeat_share": 0.32,
+  "rsi": 60,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 50,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 24539,
+  "name": "Gravitas Recordings",
+  "catalogue_tracks": 2177,
+  "last_release": "2026-10-30",
+  "rel_6m": 10,
+  "rel_recent": 3,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "Downtempo": 3,
+   "140 / Deep Dubstep / Grime": 1,
+   "Trap / Future Bass": 1,
+   "Electronica": 1,
+   "Bass House": 1,
+   "Dubstep": 3,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Ambient / Experimental": 1
+  },
+  "n_artists_24m": 70,
+  "non_owner_artists": 70,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.5,
+  "goal_overlap": 14,
+  "peer_overlap": 17,
+  "newcomer_share": 0.5,
+  "repeat_share": 0.41,
+  "rsi": 58,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 32145,
+  "name": "Saturate!Records",
+  "catalogue_tracks": 974,
+  "last_release": "2026-11-07",
+  "rel_6m": 12,
+  "rel_recent": 4,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 6,
+   "Dubstep": 5,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 24,
+  "non_owner_artists": 24,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.5,
+  "goal_overlap": 3,
+  "peer_overlap": 3,
+  "newcomer_share": 0.5,
+  "repeat_share": 0.21,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 34322,
+  "name": "RCA Records Label",
+  "catalogue_tracks": 10000,
+  "last_release": "2026-11-05",
+  "rel_6m": 34,
+  "rel_recent": 16,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "UK Garage / Bassline": 1,
+   "Dance / Pop": 2,
+   "Pop": 8,
+   "Rock": 1
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 2,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 74,
+  "chart_list": [
+   "Cap1talA, Saint Ludo - 808 (Original Mix) {'140-deep-dubstep-grime': 74}"
+  ],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.0,
+  "rsi": 10,
+  "score_parts": {
+   "chart": 16,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 20,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 42863,
+  "name": "Arkade",
+  "catalogue_tracks": 411,
+  "last_release": "2026-09-25",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "2/12",
+  "last12_genres": {
+   "Dance / Pop": 6,
+   "Dubstep": 2,
+   "Melodic House & Techno": 1,
+   "House": 1,
+   "Nu Disco / Disco": 1,
+   "Mainstage": 1
+  },
+  "n_artists_24m": 16,
+  "non_owner_artists": 15,
+  "owner": [
+   "Kaskade"
+  ],
+  "owner_ids": [
+   370
+  ],
+  "owner_status": "candidate (10/12 credits), unconfirmed",
+  "owner_share_last12": 10,
+  "chart_indep": 0,
+  "chart_owner": 2,
+  "chart_best_pos": 11,
+  "chart_list": [
+   "Kaskade, Crankdat - A Little Bit (Extended Mix) {'dubstep': 11}",
+   "Kaskade, Maxine, Wooli - Hear Me Now (Extended Mix) {'dubstep': 49}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 2,
+  "peer_overlap": 1,
+  "newcomer_share": 0.44,
+  "repeat_share": 0.25,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 16,
+   "roster": 18,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 49,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 52116,
+  "name": "Full Flex Audio",
+  "catalogue_tracks": 885,
+  "last_release": "2026-09-21",
+  "rel_6m": 7,
+  "rel_recent": 1,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Trap / Future Bass": 1
+  },
+  "n_artists_24m": 150,
+  "non_owner_artists": 150,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 9,
+  "peer_overlap": 1,
+  "newcomer_share": 0.52,
+  "repeat_share": 0.21,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 53610,
+  "name": "OWSLA/Atlantic",
+  "catalogue_tracks": 161,
+  "last_release": "2026-06-04",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Trap / Future Bass": 3,
+   "Dance / Pop": 6,
+   "Latin Electronic": 2,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 50,
+  "non_owner_artists": 49,
+  "owner": [
+   "Skrillex"
+  ],
+  "owner_ids": [
+   121017
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 3,
+  "chart_best_pos": 7,
+  "chart_list": [
+   "Skrillex, Nitepunk - Soma (Original Mix) {'dubstep': 7}",
+   "Skrillex, Moody Good, Nakeesha - move ting (Original Mix) {'dubstep': 19}",
+   "Skrillex, Isoxo - fuze (Original Mix) {'dubstep': 89}"
+  ],
+  "median_footprint": 1.0,
+  "goal_overlap": 2,
+  "peer_overlap": 0,
+  "newcomer_share": 0.58,
+  "repeat_share": 0.2,
+  "rsi": 47,
+  "score_parts": {
+   "chart": 16,
+   "roster": 13,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 44,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 55847,
+  "name": "1985 Music",
+  "catalogue_tracks": 670,
+  "last_release": "2026-11-05",
+  "rel_6m": 20,
+  "rel_recent": 6,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Drum & Bass": 4,
+   "140 / Deep Dubstep / Grime": 8
+  },
+  "n_artists_24m": 41,
+  "non_owner_artists": 40,
+  "owner": [
+   "Visages"
+  ],
+  "owner_ids": [
+   680515
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 2,
+  "chart_owner": 1,
+  "chart_best_pos": 2,
+  "chart_list": [
+   "Roachee, Visages - Nowhere to Run  (Original Mix) {'140-deep-dubstep-grime': 2}",
+   "Drone - Bound  (Original Mix) {'140-deep-dubstep-grime': 58}",
+   "Monty - Classic Yeh  (Original Mix) {'140-deep-dubstep-grime': 92}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 4,
+  "peer_overlap": 3,
+  "newcomer_share": 0.39,
+  "repeat_share": 0.39,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 37,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 81,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 56364,
+  "name": "Crucast",
+  "catalogue_tracks": 1477,
+  "last_release": "2026-11-06",
+  "rel_6m": 28,
+  "rel_recent": 9,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Drum & Bass": 8,
+   "140 / Deep Dubstep / Grime": 3,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 24,
+  "non_owner_artists": 24,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 3,
+  "chart_owner": 0,
+  "chart_best_pos": 5,
+  "chart_list": [
+   "Top Cat, Sir Spyro - Sharp (Original Mix) {'140-deep-dubstep-grime': 5}",
+   "Phosphr - Get Louder (Original Mix) {'140-deep-dubstep-grime': 34}",
+   "SVDKO, Mary Droppinz, JONCASS - LOUDER (Original Mix) {'140-deep-dubstep-grime': 93}"
+  ],
+  "median_footprint": 3.5,
+  "goal_overlap": 8,
+  "peer_overlap": 3,
+  "newcomer_share": 0.25,
+  "repeat_share": 0.08,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 80,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 58064,
+  "name": "Bassweight Records",
+  "catalogue_tracks": 286,
+  "last_release": "2026-09-25",
+  "rel_6m": 4,
+  "rel_recent": 2,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 18,
+  "non_owner_artists": 17,
+  "owner": [
+   "Calcium"
+  ],
+  "owner_ids": [
+   684924
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4.0,
+  "goal_overlap": 8,
+  "peer_overlap": 0,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.17,
+  "rsi": 65,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 38,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 62336,
+  "name": "Kaizen",
+  "catalogue_tracks": 74,
+  "last_release": "2026-11-06",
+  "rel_6m": 5,
+  "rel_recent": 3,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Bass / Club": 7,
+   "Breaks / Breakbeat / UK Bass": 2
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 1,
+  "owner": [
+   "Doctor Jeep"
+  ],
+  "owner_ids": [
+   257957
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 71,
+  "chart_list": [
+   "Cartridge - Flatline (Original Mix) {'140-deep-dubstep-grime': 71}"
+  ],
+  "median_footprint": 2.5,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.5,
+  "repeat_share": 0.5,
+  "rsi": 28,
+  "score_parts": {
+   "chart": 16,
+   "roster": 18,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 49,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 62621,
+  "name": "Maraki Records",
+  "catalogue_tracks": 81,
+  "last_release": "2026-09-25",
+  "rel_6m": 6,
+  "rel_recent": 2,
+  "last12_accepted": "2/12",
+  "last12_genres": {
+   "UK Garage / Bassline": 8,
+   "140 / Deep Dubstep / Grime": 2,
+   "Breaks / Breakbeat / UK Bass": 2
+  },
+  "n_artists_24m": 5,
+  "non_owner_artists": 5,
+  "owner": [
+   "Efan"
+  ],
+  "owner_ids": [
+   542249
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 94,
+  "chart_list": [
+   "D Double E, Flava D, SKALAH - Different (Original Mix) {'140-deep-dubstep-grime': 94}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 2,
+  "peer_overlap": 0,
+  "newcomer_share": 0.2,
+  "repeat_share": 0.0,
+  "rsi": 40,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 50,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 64408,
+  "name": "Silent Motion Records",
+  "catalogue_tracks": 209,
+  "last_release": "2026-07-31",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 10,
+  "non_owner_artists": 10,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4.0,
+  "goal_overlap": 4,
+  "peer_overlap": 3,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 51,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 38,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 67064,
+  "name": "Discovery Project (Insomniac Records)",
+  "catalogue_tracks": 128,
+  "last_release": "2026-11-06",
+  "rel_6m": 8,
+  "rel_recent": 4,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "Dubstep": 4,
+   "Melodic House & Techno": 1,
+   "140 / Deep Dubstep / Grime": 2,
+   "Dance / Pop": 3,
+   "Tech House": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 13,
+  "non_owner_artists": 13,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 53,
+  "chart_list": [
+   "Bemah - Fight Night (Original Mix) {'dubstep': 53}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 8,
+  "peer_overlap": 4,
+  "newcomer_share": 0.31,
+  "repeat_share": 0.15,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 56,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 68956,
+  "name": "Ophelia",
+  "catalogue_tracks": 1052,
+  "last_release": "2026-10-30",
+  "rel_6m": 18,
+  "rel_recent": 4,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "Drum & Bass": 1,
+   "Hard Dance / Hardcore / Neo Rave": 1,
+   "Dubstep": 6,
+   "Mainstage": 4
+  },
+  "n_artists_24m": 98,
+  "non_owner_artists": 97,
+  "owner": [
+   "Andrew Bayer"
+  ],
+  "owner_ids": [
+   98835
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 28,
+  "peer_overlap": 5,
+  "newcomer_share": 0.43,
+  "repeat_share": 0.32,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 71069,
+  "name": "Cult.ure",
+  "catalogue_tracks": 51,
+  "last_release": "2026-10-16",
+  "rel_6m": 1,
+  "rel_recent": 1,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 1,
+   "Electronica": 1,
+   "Drum & Bass": 10
+  },
+  "n_artists_24m": 3,
+  "non_owner_artists": 2,
+  "owner": [
+   "Shy FX"
+  ],
+  "owner_ids": [
+   14505
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 15,
+  "chart_list": [
+   "Shy FX, Taiki Nulight, KINGH - NOBU (TAIKI NULIGHT REFIX) {'140-deep-dubstep-grime': 15}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.67,
+  "repeat_share": 0.67,
+  "rsi": 30,
+  "score_parts": {
+   "chart": 8,
+   "roster": 13,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 21,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 73191,
+  "name": "Manuka",
+  "catalogue_tracks": 128,
+  "last_release": "2026-11-06",
+  "rel_6m": 7,
+  "rel_recent": 4,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "Electronica": 1
+  },
+  "n_artists_24m": 21,
+  "non_owner_artists": 21,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 9,
+  "peer_overlap": 4,
+  "newcomer_share": 0.24,
+  "repeat_share": 0.19,
+  "rsi": 68,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 48,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 73587,
+  "name": "Gud Vibrations",
+  "catalogue_tracks": 506,
+  "last_release": "2026-11-06",
+  "rel_6m": 21,
+  "rel_recent": 5,
+  "last12_accepted": "7/12",
+  "last12_genres": {
+   "Dubstep": 7,
+   "Trap / Future Bass": 3,
+   "Drum & Bass": 2
+  },
+  "n_artists_24m": 36,
+  "non_owner_artists": 36,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 42,
+  "chart_list": [
+   "Perry Wayne - There Is No Tomorrow (Original Mix) {'dubstep': 42}",
+   "SLANDER, Vastive, Spiritbox - Under My Skin (Original Mix) {'dubstep': 86}"
+  ],
+  "median_footprint": 3.0,
+  "goal_overlap": 11,
+  "peer_overlap": 1,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.39,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 29,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 64,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 74173,
+  "name": "Overview Music",
+  "catalogue_tracks": 806,
+  "last_release": "2026-11-06",
+  "rel_6m": 18,
+  "rel_recent": 6,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Drum & Bass": 9
+  },
+  "n_artists_24m": 57,
+  "non_owner_artists": 56,
+  "owner": [
+   "Klinical"
+  ],
+  "owner_ids": [
+   521417
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 2,
+  "chart_owner": 3,
+  "chart_best_pos": 32,
+  "chart_list": [
+   "Klinical - Salts (Original Mix) {'140-deep-dubstep-grime': 32}",
+   "Killa P, Klinical - Bury Them (Original Mix) {'140-deep-dubstep-grime': 33}",
+   "Wingz - Encounter (Original Mix) {'140-deep-dubstep-grime': 41}",
+   "Wingz - Species (Original Mix) {'140-deep-dubstep-grime': 56}",
+   "Klinical - 2003 (Original Mix) {'140-deep-dubstep-grime': 91}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 12,
+  "peer_overlap": 5,
+  "newcomer_share": 0.37,
+  "repeat_share": 0.42,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 40,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 79,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 74919,
+  "name": "Incurzion Audio",
+  "catalogue_tracks": 833,
+  "last_release": "2026-11-06",
+  "rel_6m": 23,
+  "rel_recent": 8,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 91,
+  "non_owner_artists": 90,
+  "owner": [
+   "Para"
+  ],
+  "owner_ids": [
+   70184
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 2,
+  "chart_owner": 3,
+  "chart_best_pos": 27,
+  "chart_list": [
+   "Fake Two Piece - Twisted (Original Mix) {'140-deep-dubstep-grime': 27}",
+   "Kaya, Para - 2Mile (Original Mix) {'140-deep-dubstep-grime': 57}",
+   "Kaya, Para - Chatter (Original Mix) {'140-deep-dubstep-grime': 68}",
+   "Kaya - Drawn Out (Original Mix) {'140-deep-dubstep-grime': 84}",
+   "Para - Yakked (LowCut Remix) {'140-deep-dubstep-grime': 90}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 8,
+  "peer_overlap": 6,
+  "newcomer_share": 0.41,
+  "repeat_share": 0.43,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 40,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 87,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 77542,
+  "name": "High Caliber Records",
+  "catalogue_tracks": 190,
+  "last_release": "2026-07-17",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Trap / Future Bass": 1
+  },
+  "n_artists_24m": 48,
+  "non_owner_artists": 48,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 4,
+  "peer_overlap": 3,
+  "newcomer_share": 0.42,
+  "repeat_share": 0.12,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 77607,
+  "name": "Interval Audio",
+  "catalogue_tracks": 338,
+  "last_release": "2026-10-30",
+  "rel_6m": 45,
+  "rel_recent": 45,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Trap / Future Bass": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 117,
+  "non_owner_artists": 117,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 9,
+  "peer_overlap": 2,
+  "newcomer_share": 0.28,
+  "repeat_share": 0.74,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 78825,
+  "name": "Warner Records",
+  "catalogue_tracks": 10000,
+  "last_release": "2026-11-06",
+  "rel_6m": 38,
+  "rel_recent": 38,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Rock": 2,
+   "Pop": 7,
+   "Hip-Hop": 2,
+   "House": 1
+  },
+  "n_artists_24m": 15,
+  "non_owner_artists": 15,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 85,
+  "chart_list": [
+   "Chase & Status, Blanco, Finesse Kid - Juggin (feat. Blanco & Finesse Kid) (Original Mix) {'140-deep-dubstep-grime': 85}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.73,
+  "repeat_share": 0.07,
+  "rsi": 35,
+  "score_parts": {
+   "chart": 16,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 20,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 79301,
+  "name": "Gossip",
+  "catalogue_tracks": 55,
+  "last_release": "2026-09-25",
+  "rel_6m": 4,
+  "rel_recent": 1,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Drum & Bass": 11,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 3,
+  "non_owner_artists": 3,
+  "owner": [
+   "Bou"
+  ],
+  "owner_ids": [
+   495969
+  ],
+  "owner_status": "candidate (8/12 credits), unconfirmed",
+  "owner_share_last12": 8,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 8,
+  "chart_list": [
+   "B Live, Latte, Disrupta - OMG (Distinct Motive Remix) {'140-deep-dubstep-grime': 8}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.33,
+  "repeat_share": 0.0,
+  "rsi": 24,
+  "score_parts": {
+   "chart": 16,
+   "roster": 9,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 35,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 84691,
+  "name": "Grottingham",
+  "catalogue_tracks": 49,
+  "last_release": "2026-07-17",
+  "rel_6m": 5,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Dubstep": 2
+  },
+  "n_artists_24m": 25,
+  "non_owner_artists": 25,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 6,
+  "peer_overlap": 1,
+  "newcomer_share": 0.4,
+  "repeat_share": 0.04,
+  "rsi": 60,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 48,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 86809,
+  "name": "Off-License Records",
+  "catalogue_tracks": 359,
+  "last_release": "2026-11-06",
+  "rel_6m": 12,
+  "rel_recent": 4,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Drum & Bass": 2,
+   "UK Garage / Bassline": 2,
+   "Trap / Future Bass": 2,
+   "Dubstep": 2
+  },
+  "n_artists_24m": 17,
+  "non_owner_artists": 17,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.35,
+  "repeat_share": 0.41,
+  "rsi": 52,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 89126,
+  "name": "WiddFam",
+  "catalogue_tracks": 821,
+  "last_release": "2026-09-01",
+  "rel_6m": 4,
+  "rel_recent": 0,
+  "last12_accepted": "10/11",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 10,
+   "Electronica": 1
+  },
+  "n_artists_24m": 114,
+  "non_owner_artists": 113,
+  "owner": [
+   "The Widdler"
+  ],
+  "owner_ids": [
+   97891
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Founded in The Widdler's Community'",
+  "owner_share_last12": 2,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 8,
+  "peer_overlap": 10,
+  "newcomer_share": 0.49,
+  "repeat_share": 0.3,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 44,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 90307,
+  "name": "Morii Records",
+  "catalogue_tracks": 315,
+  "last_release": "2026-11-11",
+  "rel_6m": 15,
+  "rel_recent": 6,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 6,
+   "Drum & Bass": 1,
+   "UK Garage / Bassline": 4,
+   "Breaks / Breakbeat / UK Bass": 1
+  },
+  "n_artists_24m": 28,
+  "non_owner_artists": 27,
+  "owner": [
+   "ENiGMA Dubz"
+  ],
+  "owner_ids": [
+   196412
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4.0,
+  "goal_overlap": 12,
+  "peer_overlap": 7,
+  "newcomer_share": 0.21,
+  "repeat_share": 0.46,
+  "rsi": 73,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 90858,
+  "name": "PullUp Recordings",
+  "catalogue_tracks": 145,
+  "last_release": "2026-10-29",
+  "rel_6m": 15,
+  "rel_recent": 5,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 6,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Drum & Bass": 2,
+   "Bass House": 1,
+   "UK Garage / Bassline": 2
+  },
+  "n_artists_24m": 20,
+  "non_owner_artists": 20,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 7,
+  "chart_list": [
+   "Duckworthsound, JONCASS - ZAZA  (Extended Mix) {'140-deep-dubstep-grime': 7}",
+   "Trilla Jermaine Trilloski, ENiGMA Dubz - Like Me VIP (Original Mix) {'140-deep-dubstep-grime': 69}"
+  ],
+  "median_footprint": 3.5,
+  "goal_overlap": 8,
+  "peer_overlap": 6,
+  "newcomer_share": 0.25,
+  "repeat_share": 0.35,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 29,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 74,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 91154,
+  "name": "House Call",
+  "catalogue_tracks": 156,
+  "last_release": "2026-10-23",
+  "rel_6m": 3,
+  "rel_recent": 1,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "Dubstep": 4,
+   "Bass House": 7,
+   "Indie Tech": 1
+  },
+  "n_artists_24m": 3,
+  "non_owner_artists": 2,
+  "owner": [
+   "Dr. Fresch"
+  ],
+  "owner_ids": [
+   252573
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 68,
+  "chart_list": [
+   "Dr. Fresch - High Like Everyday (Original Mix) {'dubstep': 68}"
+  ],
+  "median_footprint": 6,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.33,
+  "rsi": 47,
+  "score_parts": {
+   "chart": 8,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 91551,
+  "name": "DPMO",
+  "catalogue_tracks": 252,
+  "last_release": "2026-09-30",
+  "rel_6m": 7,
+  "rel_recent": 1,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 23,
+  "non_owner_artists": 22,
+  "owner": [
+   "MVRDA"
+  ],
+  "owner_ids": [
+   714720
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4,
+  "goal_overlap": 4,
+  "peer_overlap": 1,
+  "newcomer_share": 0.13,
+  "repeat_share": 0.78,
+  "rsi": 57,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 38,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 92872,
+  "name": "Lost In Dreams",
+  "catalogue_tracks": 638,
+  "last_release": "2026-10-23",
+  "rel_6m": 22,
+  "rel_recent": 5,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Dance / Pop": 10,
+   "Mainstage": 1,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 45,
+  "non_owner_artists": 45,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 9,
+  "peer_overlap": 1,
+  "newcomer_share": 0.49,
+  "repeat_share": 0.29,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 96746,
+  "name": "Rude Service",
+  "catalogue_tracks": 748,
+  "last_release": "2026-10-21",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 25,
+  "non_owner_artists": 24,
+  "owner": [
+   "Bear Grillz"
+  ],
+  "owner_ids": [
+   372464
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Record Label founded by @itsbeargrillz'",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 7,
+  "peer_overlap": 3,
+  "newcomer_share": 0.24,
+  "repeat_share": 0.2,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 98503,
+  "name": "MONTA",
+  "catalogue_tracks": 616,
+  "last_release": "2026-11-11",
+  "rel_6m": 37,
+  "rel_recent": 11,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Dubstep": 1,
+   "Trap / Future Bass": 6,
+   "Bass House": 2,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Rock": 1,
+   "Electronica": 1
+  },
+  "n_artists_24m": 63,
+  "non_owner_artists": 63,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 80,
+  "chart_list": [
+   "Odd Language - WAITGETBACK (Original Mix) {'dubstep': 80}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 17,
+  "peer_overlap": 5,
+  "newcomer_share": 0.52,
+  "repeat_share": 0.22,
+  "rsi": 65,
+  "score_parts": {
+   "chart": 16,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 50,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 103008,
+  "name": "Experts Only",
+  "catalogue_tracks": 190,
+  "last_release": "2026-10-30",
+  "rel_6m": 12,
+  "rel_recent": 5,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Dubstep": 3,
+   "Dance / Pop": 5,
+   "Bass House": 2,
+   "Mainstage": 1,
+   "Indie Tech": 1
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 6,
+  "owner": [
+   "John Summit"
+  ],
+  "owner_ids": [
+   610028
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 4,
+  "chart_best_pos": 2,
+  "chart_list": [
+   "John Summit, Julia Wolf - WITH ME (Crankdat Extended Remix) {'dubstep': 2}",
+   "Absolutely, John Summit - DON'T BELIEVE IT (GRiZ Remix) {'dubstep': 3}",
+   "The Chainsmokers, Ilsey, John Summit - ALL THE TIME (GorillaT Extended Remix) {'dubstep': 9}",
+   "Lavinia, John Summit - SHADOWS (Kade Findley x BLOOM Extended Remix) {'dubstep': 14}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.86,
+  "repeat_share": 0.14,
+  "rsi": 37,
+  "score_parts": {
+   "chart": 16,
+   "roster": 13,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 29,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 103220,
+  "name": "Neoluminum",
+  "catalogue_tracks": 895,
+  "last_release": "2026-10-30",
+  "rel_6m": 18,
+  "rel_recent": 4,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "UK Garage / Bassline": 1,
+   "Dance / Pop": 2,
+   "Mainstage": 1
+  },
+  "n_artists_24m": 288,
+  "non_owner_artists": 288,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 7,
+  "peer_overlap": 0,
+  "newcomer_share": 0.55,
+  "repeat_share": 0.23,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 104949,
+  "name": "Gemini Gemini",
+  "catalogue_tracks": 143,
+  "last_release": "2026-10-09",
+  "rel_6m": 15,
+  "rel_recent": 3,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 4,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Drum & Bass": 6,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 22,
+  "non_owner_artists": 22,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 3,
+  "chart_owner": 0,
+  "chart_best_pos": 36,
+  "chart_list": [
+   "Halogenix - Sawtooth  (Original Mix) {'140-deep-dubstep-grime': 36}",
+   "Halogenix, JD. REID - Nakal (ft. Eka)  (Original Mix) {'140-deep-dubstep-grime': 43}",
+   "En:vy - TECC  (Original Mix) {'140-deep-dubstep-grime': 59}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 2,
+  "peer_overlap": 1,
+  "newcomer_share": 0.36,
+  "repeat_share": 0.27,
+  "rsi": 53,
+  "score_parts": {
+   "chart": 40,
+   "roster": 18,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 73,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 106994,
+  "name": "HypnoVizion Records Inc.",
+  "catalogue_tracks": 268,
+  "last_release": "2026-07-03",
+  "rel_6m": 4,
+  "rel_recent": 0,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Dance / Pop": 2
+  },
+  "n_artists_24m": 45,
+  "non_owner_artists": 44,
+  "owner": [
+   "Rezz"
+  ],
+  "owner_ids": [
+   84360
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 11,
+  "peer_overlap": 4,
+  "newcomer_share": 0.53,
+  "repeat_share": 0.53,
+  "rsi": 58,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 15,
+   "fit": 5
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 107385,
+  "name": "Aspire Higher",
+  "catalogue_tracks": 1012,
+  "last_release": "2026-11-10",
+  "rel_6m": 24,
+  "rel_recent": 6,
+  "last12_accepted": "8/12",
+  "last12_genres": {
+   "Bass House": 4,
+   "Dubstep": 8
+  },
+  "n_artists_24m": 72,
+  "non_owner_artists": 72,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.5,
+  "goal_overlap": 7,
+  "peer_overlap": 8,
+  "newcomer_share": 0.5,
+  "repeat_share": 0.08,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 109377,
+  "name": "Close Calls",
+  "catalogue_tracks": 17,
+  "last_release": "2026-08-14",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "2/4",
+  "last12_genres": {
+   "Bass / Club": 1,
+   "140 / Deep Dubstep / Grime": 2,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 0,
+  "owner": [
+   "Cimm"
+  ],
+  "owner_ids": [
+   576231
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 95,
+  "chart_list": [
+   "Cimm - C.O.U.S.M  (Original Mix) {'140-deep-dubstep-grime': 95}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 25,
+  "score_parts": {
+   "chart": 8,
+   "roster": 15,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 23,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 110914,
+  "name": "Bad Medic Records",
+  "catalogue_tracks": 142,
+  "last_release": "2026-10-30",
+  "rel_6m": 10,
+  "rel_recent": 2,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 4,
+   "140 / Deep Dubstep / Grime": 7,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 44,
+  "non_owner_artists": 42,
+  "owner": [
+   "Nika D",
+   "Virus Syndicate"
+  ],
+  "owner_ids": [
+   52719,
+   73211
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'founded by Virus Syndicate // Nika D // EY3 Media'",
+  "owner_share_last12": 3,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 65,
+  "chart_list": [
+   "Mythm - Hostile (Original Mix) {'dubstep': 65}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 12,
+  "peer_overlap": 6,
+  "newcomer_share": 0.3,
+  "repeat_share": 0.45,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 63,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 111428,
+  "name": "EMPIRE",
+  "catalogue_tracks": 558,
+  "last_release": "2026-10-31",
+  "rel_6m": 27,
+  "rel_recent": 8,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Trap / Future Bass": 2,
+   "Dubstep": 2,
+   "House": 1,
+   "Dance / Pop": 1,
+   "Afro House": 1,
+   "Electronica": 1,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Bass / Club": 1,
+   "Deep House": 1,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 4,
+  "non_owner_artists": 4,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 31,
+  "chart_list": [
+   "AVELLO, Z3LLA - PAPARAZZI  (Original Mix) {'dubstep': 31}"
+  ],
+  "median_footprint": 6.0,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.5,
+  "rsi": 55,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 51,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 112736,
+  "name": "Sounds Of Mayhem",
+  "catalogue_tracks": 267,
+  "last_release": "2026-10-16",
+  "rel_6m": 11,
+  "rel_recent": 2,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 97,
+  "non_owner_artists": 96,
+  "owner": [
+   "Phaseone"
+  ],
+  "owner_ids": [
+   136910
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Record label by @PhaseOneAU'",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 36,
+  "peer_overlap": 4,
+  "newcomer_share": 0.21,
+  "repeat_share": 0.27,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 115598,
+  "name": "Wooli Music LLC",
+  "catalogue_tracks": 16,
+  "last_release": "2026-07-17",
+  "rel_6m": 3,
+  "rel_recent": 0,
+  "last12_accepted": "11/11",
+  "last12_genres": {
+   "Dubstep": 11
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 6,
+  "owner": [
+   "Wooli"
+  ],
+  "owner_ids": [
+   591170
+  ],
+  "owner_status": "candidate (11/12 credits), unconfirmed",
+  "owner_share_last12": 11,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 7,
+  "goal_overlap": 4,
+  "peer_overlap": 2,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.71,
+  "rsi": 55,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 38,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 116122,
+  "name": "Boom Records LLC",
+  "catalogue_tracks": 1103,
+  "last_release": "2026-11-06",
+  "rel_6m": 72,
+  "rel_recent": 47,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Mainstage": 1,
+   "Electronica": 6,
+   "Dance / Pop": 4,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 27,
+  "non_owner_artists": 27,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 61,
+  "chart_list": [
+   "SVDKO - LIKE THIS (140) (140) {'140-deep-dubstep-grime': 61}",
+   "Capo Lee, DENNETT - ASAP (Original Mix) {'140-deep-dubstep-grime': 86}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 7,
+  "peer_overlap": 2,
+  "newcomer_share": 0.41,
+  "repeat_share": 0.15,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 29,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 63,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 117522,
+  "name": "cd91x",
+  "catalogue_tracks": 64,
+  "last_release": "2026-10-28",
+  "rel_6m": 12,
+  "rel_recent": 4,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "140 / Deep Dubstep / Grime": 2
+  },
+  "n_artists_24m": 28,
+  "non_owner_artists": 27,
+  "owner": [
+   "HUMANSION"
+  ],
+  "owner_ids": [
+   1116404
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.5,
+  "goal_overlap": 5,
+  "peer_overlap": 1,
+  "newcomer_share": 0.5,
+  "repeat_share": 0.64,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 19,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 37,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 121985,
+  "name": "VOLPEVERSE",
+  "catalogue_tracks": 26,
+  "last_release": "2026-08-07",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "9/11",
+  "last12_genres": {
+   "Dubstep": 9,
+   "Bass House": 2
+  },
+  "n_artists_24m": 11,
+  "non_owner_artists": 10,
+  "owner": [
+   "Ray Volpe"
+  ],
+  "owner_ids": [
+   328018
+  ],
+  "owner_status": "candidate (11/12 credits), unconfirmed",
+  "owner_share_last12": 11,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 57,
+  "chart_list": [
+   "Kai Wachi, Ray Volpe - PAIN (Original Mix) {'dubstep': 57}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 5,
+  "peer_overlap": 0,
+  "newcomer_share": 0.18,
+  "repeat_share": 0.36,
+  "rsi": 76,
+  "score_parts": {
+   "chart": 8,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 5
+  },
+  "score_pre_reach": 48,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 123467,
+  "name": "Space Cult",
+  "catalogue_tracks": 124,
+  "last_release": "2026-09-30",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "4/6",
+  "last12_genres": {
+   "Dubstep": 4,
+   "Dance / Pop": 2
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 1,
+  "owner": [
+   "ATLiens"
+  ],
+  "owner_ids": [
+   461382
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 33,
+  "chart_list": [
+   "Cyclops, ATLiens - DIS FUNCTION (Original Mix) {'dubstep': 33}"
+  ],
+  "median_footprint": 5.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.5,
+  "rsi": 25,
+  "score_parts": {
+   "chart": 8,
+   "roster": 15,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 28,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 123742,
+  "name": "BREAKAWAY",
+  "catalogue_tracks": 176,
+  "last_release": "2026-11-06",
+  "rel_6m": 54,
+  "rel_recent": 19,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Funky House": 1,
+   "Trap / Future Bass": 2,
+   "Bass House": 2,
+   "Dance / Pop": 3,
+   "Dubstep": 1,
+   "UK Garage / Bassline": 1,
+   "Mainstage": 2
+  },
+  "n_artists_24m": 8,
+  "non_owner_artists": 7,
+  "owner": [
+   "AVELLO"
+  ],
+  "owner_ids": [
+   762558
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 71,
+  "chart_list": [
+   "SVDKO, ALOTT - GOOD TIME (Original Mix) {'dubstep': 71}"
+  ],
+  "median_footprint": 4.0,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.12,
+  "repeat_share": 0.25,
+  "rsi": 61,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 51,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 125074,
+  "name": "Mersiv Sound Music",
+  "catalogue_tracks": 103,
+  "last_release": "2026-10-23",
+  "rel_6m": 11,
+  "rel_recent": 9,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 13,
+  "non_owner_artists": 12,
+  "owner": [
+   "Mersiv"
+  ],
+  "owner_ids": [
+   675739
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 81,
+  "chart_list": [
+   "Mersiv - Sunburst (Original Mix) {'dubstep': 81}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 6,
+  "peer_overlap": 3,
+  "newcomer_share": 0.31,
+  "repeat_share": 0.62,
+  "rsi": 64,
+  "score_parts": {
+   "chart": 8,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 56,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 126568,
+  "name": "oury",
+  "catalogue_tracks": 557,
+  "last_release": "2026-11-11",
+  "rel_6m": 54,
+  "rel_recent": 28,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Afro House": 1,
+   "Deep House": 1,
+   "Hard Dance / Hardcore / Neo Rave": 2,
+   "Drum & Bass": 1,
+   "Techno (Peak Time / Driving)": 4,
+   "Dance / Pop": 1,
+   "House": 2
+  },
+  "n_artists_24m": 8,
+  "non_owner_artists": 8,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 47,
+  "chart_list": [
+   "Mythm - SIMON SAYS VIP (Original Mix) {'dubstep': 47}"
+  ],
+  "median_footprint": 3.0,
+  "goal_overlap": 5,
+  "peer_overlap": 1,
+  "newcomer_share": 0.38,
+  "repeat_share": 0.12,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 56,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 126959,
+  "name": "Continua MGMT",
+  "catalogue_tracks": 208,
+  "last_release": "2026-10-22",
+  "rel_6m": 27,
+  "rel_recent": 4,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Hard Dance / Hardcore / Neo Rave": 1
+  },
+  "n_artists_24m": 76,
+  "non_owner_artists": 75,
+  "owner": [
+   "FRAXURE"
+  ],
+  "owner_ids": [
+   825836
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 29,
+  "peer_overlap": 8,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.45,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 127779,
+  "name": "SHINE LIGHT RECORDS",
+  "catalogue_tracks": 78,
+  "last_release": "2026-10-07",
+  "rel_6m": 3,
+  "rel_recent": 1,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "Dubstep": 6,
+   "Dance / Pop": 1,
+   "Pop": 1,
+   "Trap / Future Bass": 2,
+   "Electronica": 2
+  },
+  "n_artists_24m": 33,
+  "non_owner_artists": 32,
+  "owner": [
+   "San Holo"
+  ],
+  "owner_ids": [
+   403059
+  ],
+  "owner_status": "candidate (9/12 credits), unconfirmed",
+  "owner_share_last12": 9,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 11,
+  "peer_overlap": 1,
+  "newcomer_share": 0.36,
+  "repeat_share": 0.58,
+  "rsi": 71,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 39,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 127927,
+  "name": "Field Trip Records",
+  "catalogue_tracks": 61,
+  "last_release": "2026-11-04",
+  "rel_6m": 6,
+  "rel_recent": 1,
+  "last12_accepted": "9/12",
+  "last12_genres": {
+   "Bass House": 2,
+   "Dubstep": 9,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 23,
+  "non_owner_artists": 22,
+  "owner": [
+   "Jaenga"
+  ],
+  "owner_ids": [
+   532966
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 13,
+  "peer_overlap": 10,
+  "newcomer_share": 0.22,
+  "repeat_share": 0.17,
+  "rsi": 60,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 127988,
+  "name": "Beat Intelligence Network",
+  "catalogue_tracks": 138,
+  "last_release": "2026-11-06",
+  "rel_6m": 11,
+  "rel_recent": 3,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 79,
+  "non_owner_artists": 79,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 41,
+  "chart_list": [
+   "Warlord - BIG SNAZZ [SELEKTA SUBURBIA] (Original Mix) {'dubstep': 41}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 21,
+  "peer_overlap": 2,
+  "newcomer_share": 0.24,
+  "repeat_share": 0.28,
+  "rsi": 68,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 69,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 129522,
+  "name": "GRiZ LLC",
+  "catalogue_tracks": 183,
+  "last_release": "2026-08-28",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "9/12",
+  "last12_genres": {
+   "Dubstep": 9,
+   "Dance / Pop": 1,
+   "Bass House": 1,
+   "Electronica": 1
+  },
+  "n_artists_24m": 10,
+  "non_owner_artists": 9,
+  "owner": [
+   "GRiZ"
+  ],
+  "owner_ids": [
+   158430
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 2,
+  "chart_best_pos": 61,
+  "chart_list": [
+   "GRiZ, Tape B, CREG - Light You Up ft. CREG (Original Mix) {'dubstep': 61}",
+   "GRiZ - Sunshine (Original Mix) {'dubstep': 82}"
+  ],
+  "median_footprint": 6.0,
+  "goal_overlap": 7,
+  "peer_overlap": 3,
+  "newcomer_share": 0.1,
+  "repeat_share": 0.1,
+  "rsi": 76,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 5
+  },
+  "score_pre_reach": 51,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 130052,
+  "name": "IN-DMND",
+  "catalogue_tracks": 28,
+  "last_release": "2026-11-06",
+  "rel_6m": 7,
+  "rel_recent": 4,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "Drum & Bass": 7,
+   "140 / Deep Dubstep / Grime": 4,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 6,
+  "owner": [
+   "Turno"
+  ],
+  "owner_ids": [
+   127397
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 23,
+  "chart_list": [
+   "Simula, Hamdi - Echo Chamber (Original Mix) {'140-deep-dubstep-grime': 23}"
+  ],
+  "median_footprint": 6,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.0,
+  "rsi": 55,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 46,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 130914,
+  "name": "ANTAGONIST",
+  "catalogue_tracks": 60,
+  "last_release": "2026-10-23",
+  "rel_6m": 4,
+  "rel_recent": 2,
+  "last12_accepted": "8/8",
+  "last12_genres": {
+   "Dubstep": 8
+  },
+  "n_artists_24m": 57,
+  "non_owner_artists": 57,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 8,
+  "peer_overlap": 0,
+  "newcomer_share": 0.26,
+  "repeat_share": 0.11,
+  "rsi": 50,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 131258,
+  "name": "Port Zero",
+  "catalogue_tracks": 158,
+  "last_release": "2026-11-06",
+  "rel_6m": 12,
+  "rel_recent": 3,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 52,
+  "non_owner_artists": 51,
+  "owner": [
+   "Infekt"
+  ],
+  "owner_ids": [
+   1820
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Curated & envisioned by: @infektdubstep & @bewilderedlv'",
+  "owner_share_last12": 3,
+  "chart_indep": 0,
+  "chart_owner": 4,
+  "chart_best_pos": 45,
+  "chart_list": [
+   "Infekt, Modal Nodes - INFECTED (beastboi. Remix) {'dubstep': 45}",
+   "Infekt, BARELY ALIVE - OBSCURE VIBE (THE RESISTANCE Remix) {'dubstep': 67}",
+   "Infekt, Xae, SampliFire - Final Tick (Original Mix) {'dubstep': 83}",
+   "Infekt - CHECK OUT THIS BANGER (Dr. Ush\u016bu Remix) {'dubstep': 99}"
+  ],
+  "median_footprint": 3.0,
+  "goal_overlap": 16,
+  "peer_overlap": 4,
+  "newcomer_share": 0.23,
+  "repeat_share": 0.33,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 69,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 131485,
+  "name": "Zoey Worldwide",
+  "catalogue_tracks": 28,
+  "last_release": "2026-09-21",
+  "rel_6m": 3,
+  "rel_recent": 1,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Dubstep": 1,
+   "Trap / Future Bass": 2,
+   "UK Garage / Bassline": 7,
+   "140 / Deep Dubstep / Grime": 2
+  },
+  "n_artists_24m": 5,
+  "non_owner_artists": 4,
+  "owner": [
+   "Zoey808"
+  ],
+  "owner_ids": [
+   1315518
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 72,
+  "chart_list": [
+   "Zoey808 - CRUSH ON U (Original Mix) {'dubstep': 72}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.2,
+  "repeat_share": 0.4,
+  "rsi": 38,
+  "score_parts": {
+   "chart": 8,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 47,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 131738,
+  "name": "soundslikesaka",
+  "catalogue_tracks": 14,
+  "last_release": "2026-09-25",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "4/9",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Dubstep": 1,
+   "Dance / Pop": 5
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 0,
+  "owner": [
+   "Saka"
+  ],
+  "owner_ids": [
+   1170770
+  ],
+  "owner_status": "candidate (9/12 credits), unconfirmed",
+  "owner_share_last12": 9,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 17,
+  "chart_list": [
+   "Saka - la bolsita! (Original Mix) {'140-deep-dubstep-grime': 17}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 1.0,
+  "rsi": 32,
+  "score_parts": {
+   "chart": 8,
+   "roster": 24,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 32,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 147320,
+  "name": "Artist Influence",
+  "catalogue_tracks": 20,
+  "last_release": "2026-10-30",
+  "rel_6m": 11,
+  "rel_recent": 2,
+  "last12_accepted": "9/12",
+  "last12_genres": {
+   "Tech House": 1,
+   "Dubstep": 9,
+   "Dance / Pop": 2
+  },
+  "n_artists_24m": 17,
+  "non_owner_artists": 17,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 8,
+  "peer_overlap": 5,
+  "newcomer_share": 0.24,
+  "repeat_share": 0.12,
+  "rsi": 60,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 148687,
+  "name": "Mad Dubz",
+  "catalogue_tracks": 2,
+  "last_release": "2026-06-19",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "2/2",
+  "last12_genres": {
+   "Dubstep": 2
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 2,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 76,
+  "chart_list": [
+   "MAD DUBZ - SWAG SHIT (Original Mix) {'dubstep': 76}"
+  ],
+  "median_footprint": 5.0,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.5,
+  "rsi": 37,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 149795,
+  "name": "Good Dub.",
+  "catalogue_tracks": 85,
+  "last_release": "2026-10-30",
+  "rel_6m": 4,
+  "rel_recent": 2,
+  "last12_accepted": "7/9",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Dubstep": 4,
+   "Brazilian Funk": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 60,
+  "non_owner_artists": 60,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 13,
+  "chart_list": [
+   "Jack Blom - Sadist (Original Mix) {'140-deep-dubstep-grime': 13}"
+  ],
+  "median_footprint": 2.0,
+  "goal_overlap": 10,
+  "peer_overlap": 2,
+  "newcomer_share": 0.37,
+  "repeat_share": 0.57,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 55,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 173853,
+  "name": "Crank It Up! Records",
+  "catalogue_tracks": 2,
+  "last_release": "2026-03-26",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "2/2",
+  "last12_genres": {
+   "Dubstep": 2
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 1,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 88,
+  "chart_list": [
+   "Crankdat - Movement (Original Mix) {'dubstep': 88}"
+  ],
+  "median_footprint": 7,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 1.0,
+  "rsi": 37,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 40,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 175997,
+  "name": "Montys Beats",
+  "catalogue_tracks": 2,
+  "last_release": "2026-09-11",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "1/2",
+  "last12_genres": {
+   "Drum & Bass": 1,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 1,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 98,
+  "chart_list": [
+   "Monty - BUG  (Original Mix) {'140-deep-dubstep-grime': 98}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 25,
+  "score_parts": {
+   "chart": 16,
+   "roster": 15,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 31,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 176768,
+  "name": "Rampage Recordings",
+  "catalogue_tracks": 234,
+  "last_release": "2026-11-11",
+  "rel_6m": 8,
+  "rel_recent": 7,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Drum & Bass": 9,
+   "Dubstep": 2,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 5,
+  "non_owner_artists": 4,
+  "owner": [
+   "Murdock"
+  ],
+  "owner_ids": [
+   19746
+  ],
+  "owner_status": "candidate (10/12 credits), unconfirmed",
+  "owner_share_last12": 10,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 64,
+  "chart_list": [
+   "Murdock, E\u0301milie Rachel - Living In The Moment (Dr. Ush\u016bu Remix) {'140-deep-dubstep-grime': 64}"
+  ],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.6,
+  "repeat_share": 0.2,
+  "rsi": 10,
+  "score_parts": {
+   "chart": 8,
+   "roster": 4,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 27,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 178369,
+  "name": "Dial 1 Music",
+  "catalogue_tracks": 2,
+  "last_release": "2026-10-16",
+  "rel_6m": 1,
+  "rel_recent": 1,
+  "last12_accepted": "2/2",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 2
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 1,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 6,
+  "chart_list": [
+   "En:vy - Protocol  (Original Mix) {'140-deep-dubstep-grime': 6}",
+   "En:vy - Medieval  (Original Mix) {'140-deep-dubstep-grime': 21}"
+  ],
+  "median_footprint": 6,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 1.0,
+  "rsi": 37,
+  "score_parts": {
+   "chart": 29,
+   "roster": 24,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 180455,
+  "name": "Wrong Number Records",
+  "catalogue_tracks": 45,
+  "last_release": "2026-10-23",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "0/7",
+  "last12_genres": {
+   "Minimal / Deep Tech": 2,
+   "Deep House": 2,
+   "House": 3
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 1,
+  "owner": [
+   "Claude VonStroke"
+  ],
+  "owner_ids": [
+   5430
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 55,
+  "chart_list": [
+   "Claude VonStroke - Who's Afraid of Detroit? (Mary Droppinz & Drezza Remix) {'140-deep-dubstep-grime': 55}"
+  ],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.0,
+  "rsi": 10,
+  "score_parts": {
+   "chart": 8,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 12,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 181650,
+  "name": "Hamdi x CC",
+  "catalogue_tracks": 1,
+  "last_release": "2026-03-06",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 2,
+  "non_owner_artists": 2,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 37,
+  "chart_list": [
+   "Hamdi, Casey Club - Onslaught (Original Mix) {'140-deep-dubstep-grime': 37}"
+  ],
+  "median_footprint": 10.0,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 37,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 40,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 181826,
+  "name": "UMAD?",
+  "catalogue_tracks": 10,
+  "last_release": "2026-11-05",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "5/5",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 5
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 7,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 39,
+  "chart_list": [
+   "Froidy - Whispers (Original Mix) {'140-deep-dubstep-grime': 39}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 3,
+  "peer_overlap": 2,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.43,
+  "rsi": 46,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 45,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 358834,
+  "name": "Killed It!",
+  "catalogue_tracks": 24,
+  "last_release": "2026-10-30",
+  "rel_6m": 4,
+  "rel_recent": 2,
+  "last12_accepted": "4/4",
+  "last12_genres": {
+   "Dubstep": 4
+  },
+  "n_artists_24m": 21,
+  "non_owner_artists": 21,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 54,
+  "chart_list": [
+   "Altair, Elden, Bizo, Rickster, BARELY ALIVE, K1N, Smiles Only, Marcix, Edison Cole, sapphi, Sample Bandit, Shming, Phaceless, KING WORM, LOST FRIEND, Killed It! - Can We Call It Something Besides Brostep? (Original Mix) {'dubstep': 54}",
+   "Cyclops, BARELY ALIVE - WHATEVER HAPPENED TO DUBSTEP (Original Mix) {'dubstep': 73}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 4,
+  "peer_overlap": 0,
+  "newcomer_share": 0.29,
+  "repeat_share": 0.71,
+  "rsi": 67,
+  "score_parts": {
+   "chart": 29,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 69,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 380571,
+  "name": "Cheeky",
+  "catalogue_tracks": 1,
+  "last_release": "2026-06-19",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 4,
+  "non_owner_artists": 4,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 45,
+  "chart_list": [
+   "P Money, Taiki Nulight, Diligent Fingers, Casey Club - Take Out Your Team (Original Mix) {'140-deep-dubstep-grime': 45}"
+  ],
+  "median_footprint": 7.5,
+  "goal_overlap": 3,
+  "peer_overlap": 1,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 55,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 46,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 387784,
+  "name": "Wankdisc",
+  "catalogue_tracks": 1,
+  "last_release": "2026-08-07",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 3,
+  "non_owner_artists": 3,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 28,
+  "chart_list": [
+   "Crankdat, Wooli, TiaCorine - Fux With Us (feat. TiaCorine) (Original Mix) {'dubstep': 28}"
+  ],
+  "median_footprint": 7,
+  "goal_overlap": 2,
+  "peer_overlap": 1,
+  "newcomer_share": 0.33,
+  "repeat_share": 0.0,
+  "rsi": 45,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 50,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 389862,
+  "name": "Viperactive",
+  "catalogue_tracks": 10,
+  "last_release": "2026-09-11",
+  "rel_6m": 2,
+  "rel_recent": 0,
+  "last12_accepted": "0/2",
+  "last12_genres": {
+   "Trap / Future Bass": 1,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 7,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 5,
+  "chart_list": [
+   "Viperactive - Snakepit Anthem (Original Mix) {'dubstep': 5}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.29,
+  "repeat_share": 0.0,
+  "rsi": 28,
+  "score_parts": {
+   "chart": 16,
+   "roster": 18,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 44,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 8262,
+  "name": "Bassweight Recordings",
+  "catalogue_tracks": 132,
+  "last_release": "2013-04-12",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Electronica": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Olie Bassweight"
+  ],
+  "owner_ids": [
+   126370
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 5
+  },
+  "score_pre_reach": 5,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 26662,
+  "name": "Never Say Die / AEI",
+  "catalogue_tracks": 140,
+  "last_release": "2014-06-23",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "5/5",
+  "last12_genres": {
+   "Dubstep": 5
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Eptic"
+  ],
+  "owner_ids": [
+   170988
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 46217,
+  "name": "Exodus Recordings",
+  "catalogue_tracks": 160,
+  "last_release": "2026-10-23",
+  "rel_6m": 3,
+  "rel_recent": 1,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Melodic House & Techno": 1,
+   "Techno (Raw / Deep / Hypnotic)": 6,
+   "Techno (Peak Time / Driving)": 3,
+   "Electronica": 2
+  },
+  "n_artists_24m": 8,
+  "non_owner_artists": 7,
+  "owner": [
+   "Riccardo Noe"
+  ],
+  "owner_ids": [
+   238567
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.5,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 62354,
+  "name": "1985 x Ish Chat",
+  "catalogue_tracks": 4,
+  "last_release": "2017-04-28",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 77338,
+  "name": "DirtySnatcha",
+  "catalogue_tracks": 32,
+  "last_release": "2024-10-18",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 10,
+   "Drum & Bass": 1,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "DirtySnatcha"
+  ],
+  "owner_ids": [
+   371137
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 5
+  },
+  "score_pre_reach": 5,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 86819,
+  "name": "GRIZ TWO",
+  "catalogue_tracks": 9,
+  "last_release": "2020-09-18",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Electronica": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 92339,
+  "name": "Bassweight Moscow",
+  "catalogue_tracks": 2,
+  "last_release": "2021-05-27",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 95892,
+  "name": "EXODUS RECORDS UK",
+  "catalogue_tracks": 7,
+  "last_release": "2022-06-24",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/3",
+  "last12_genres": {
+   "Hard Techno": 1,
+   "Techno (Raw / Deep / Hypnotic)": 2
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 112126,
+  "name": "Exodus Music",
+  "catalogue_tracks": 13,
+  "last_release": "2025-03-14",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Hard Dance / Hardcore / Neo Rave": 12
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 0,
+  "owner": [
+   "Exodus (NL)"
+  ],
+  "owner_ids": [
+   1154370
+  ],
+  "owner_status": "candidate (8/12 credits), unconfirmed",
+  "owner_share_last12": 8,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 1.0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 4,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 114790,
+  "name": "Neoluminum: Star Recruits",
+  "catalogue_tracks": 137,
+  "last_release": "2026-10-14",
+  "rel_6m": 1,
+  "rel_recent": 1,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "Dubstep": 5,
+   "Drum & Bass": 1,
+   "House": 2,
+   "Ambient / Experimental": 3,
+   "Mainstage": 1
+  },
+  "n_artists_24m": 18,
+  "non_owner_artists": 18,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.28,
+  "repeat_share": 0.0,
+  "rsi": 20,
+  "score_parts": {
+   "chart": 0,
+   "roster": 15,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 25,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 120496,
+  "name": "Field Trip Recordings/Capitol Records",
+  "catalogue_tracks": 78,
+  "last_release": "2024-05-03",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/8",
+  "last12_genres": {
+   "Hip-Hop": 7,
+   "Indie Tech": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Yeat"
+  ],
+  "owner_ids": [
+   703890
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 120612,
+  "name": "Exodus Entertainment",
+  "catalogue_tracks": 41,
+  "last_release": "2023-02-17",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "African": 7,
+   "Amapiano": 3,
+   "R&B": 2
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Frya"
+  ],
+  "owner_ids": [
+   1451536
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 130017,
+  "name": "Grottingham",
+  "catalogue_tracks": 16,
+  "last_release": "2023-12-08",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "7/12",
+  "last12_genres": {
+   "Drum & Bass": 2,
+   "Dubstep": 2,
+   "140 / Deep Dubstep / Grime": 5,
+   "House": 3
+  },
+  "n_artists_24m": 11,
+  "non_owner_artists": 11,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 2,
+  "peer_overlap": 3,
+  "newcomer_share": 0.45,
+  "repeat_share": 0.0,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 18,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 28,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 135368,
+  "name": "LDH Records",
+  "catalogue_tracks": 69,
+  "last_release": "2026-11-04",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Pop": 12
+  },
+  "n_artists_24m": 6,
+  "non_owner_artists": 5,
+  "owner": [
+   "Ballistik Boyz"
+  ],
+  "owner_ids": [
+   1441048
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.33,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 137954,
+  "name": "1985 Guitarra Records, distributed by Kithara Entertainment LLC",
+  "catalogue_tracks": 15,
+  "last_release": "2018-05-04",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Latin": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 144951,
+  "name": "Exodus Records",
+  "catalogue_tracks": 30,
+  "last_release": "2026-10-30",
+  "rel_6m": 6,
+  "rel_recent": 4,
+  "last12_accepted": "0/9",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 3,
+   "Electronica": 1,
+   "Dance / Pop": 2,
+   "African": 3
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 6,
+  "owner": [
+   "Moses Boyd"
+  ],
+  "owner_ids": [
+   548986
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.29,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 147195,
+  "name": "Field Trip / Republic Records",
+  "catalogue_tracks": 52,
+  "last_release": "2022-07-22",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/4",
+  "last12_genres": {
+   "Hip-Hop": 4
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Slump6s"
+  ],
+  "owner_ids": [
+   1376580
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 149496,
+  "name": "Exodus Entertainment",
+  "catalogue_tracks": 42,
+  "last_release": "2026-11-05",
+  "rel_6m": 3,
+  "rel_recent": 1,
+  "last12_accepted": "0/10",
+  "last12_genres": {
+   "R&B": 10
+  },
+  "n_artists_24m": 13,
+  "non_owner_artists": 13,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.31,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 153047,
+  "name": "Field Trip Recordings/Warner Records",
+  "catalogue_tracks": 36,
+  "last_release": "2021-08-12",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Pop": 12
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Mallory Merk"
+  ],
+  "owner_ids": [
+   1422316
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 157003,
+  "name": "1985 Grupo lince",
+  "catalogue_tracks": 1,
+  "last_release": "2019-10-31",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Latin": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 165911,
+  "name": "LDH Records",
+  "catalogue_tracks": 6,
+  "last_release": "2026-07-24",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "0/3",
+  "last12_genres": {
+   "Pop": 3
+  },
+  "n_artists_24m": 3,
+  "non_owner_artists": 3,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.33,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 171818,
+  "name": "Amorphous / EMPIRE",
+  "catalogue_tracks": 15,
+  "last_release": "2021-10-06",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/5",
+  "last12_genres": {
+   "R&B": 5
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Amorphous"
+  ],
+  "owner_ids": [
+   232961
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 174300,
+  "name": "LDH",
+  "catalogue_tracks": 8,
+  "last_release": "2026-03-26",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/3",
+  "last12_genres": {
+   "Nu Disco / Disco": 1,
+   "Pop": 2
+  },
+  "n_artists_24m": 9,
+  "non_owner_artists": 9,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.11,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 4,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 174917,
+  "name": "Field Trip Recordings/Geffen Records",
+  "catalogue_tracks": 201,
+  "last_release": "2023-08-10",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Hip-Hop": 12
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Yeat"
+  ],
+  "owner_ids": [
+   703890
+  ],
+  "owner_status": "candidate (9/12 credits), unconfirmed",
+  "owner_share_last12": 9,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 208533,
+  "name": "Artist Influence",
+  "catalogue_tracks": 6,
+  "last_release": "2020-04-24",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/6",
+  "last12_genres": {
+   "Dance / Pop": 6
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "KC Gilmore"
+  ],
+  "owner_ids": [
+   582097
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 231515,
+  "name": "Field Trip Records",
+  "catalogue_tracks": 2,
+  "last_release": "2021-04-23",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/2",
+  "last12_genres": {
+   "Hip-Hop": 2
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 245418,
+  "name": "Exodus Records",
+  "catalogue_tracks": 1,
+  "last_release": "2021-12-03",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Pop": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 376292,
+  "name": "'a' Records",
+  "catalogue_tracks": 415,
+  "last_release": "2025-04-25",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Rock": 12
+  },
+  "n_artists_24m": 4,
+  "non_owner_artists": 3,
+  "owner": [
+   "The Brian Jonestown Massacre"
+  ],
+  "owner_ids": [
+   80925
+  ],
+  "owner_status": "candidate (7/12 credits), unconfirmed",
+  "owner_share_last12": 7,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 4,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 18130,
+  "name": "UKF",
+  "catalogue_tracks": 644,
+  "last_release": "2026-11-06",
+  "rel_6m": 48,
+  "rel_recent": 16,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Drum & Bass": 7,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 44,
+  "non_owner_artists": 44,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 11,
+  "chart_owner": 0,
+  "chart_best_pos": 3,
+  "chart_list": [
+   "Flava D, Stush, Peekaboo - Energy (PEEKABOO Remix) {'140-deep-dubstep-grime': 3}",
+   "Formula - Too Deep (Original Mix) {'140-deep-dubstep-grime': 9}",
+   "Bluff - Cold Nights (Original Mix) {'140-deep-dubstep-grime': 11}",
+   "Flava D - Dem Not Ready (Original Mix) {'140-deep-dubstep-grime': 29}",
+   "Saka - styx! (Original Mix) {'140-deep-dubstep-grime': 53}",
+   "Borne - For A Minute (Original Mix) {'140-deep-dubstep-grime': 60}",
+   "Flava D, DRIIA, Casey Club - Revival (Original Mix) {'140-deep-dubstep-grime': 75}",
+   "MSFT, Rakjay - Automatic (Original Mix) {'140-deep-dubstep-grime': 81}",
+   "Lens, Paul Stephan - Check 2 (Original Mix) {'140-deep-dubstep-grime': 89}",
+   "Jiqui, HerShe - RING THE ALARM (Original Mix) {'dubstep': 15}",
+   "Oliverse - Need You (Extended Mix) {'dubstep': 55}"
+  ],
+  "median_footprint": 3.5,
+  "goal_overlap": 22,
+  "peer_overlap": 9,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.25,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 75,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 32070,
+  "name": "Disciple",
+  "catalogue_tracks": 1455,
+  "last_release": "2025-11-21",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 12
+  },
+  "n_artists_24m": 12,
+  "non_owner_artists": 12,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4.0,
+  "goal_overlap": 4,
+  "peer_overlap": 1,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.08,
+  "rsi": 53,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 38,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 43229,
+  "name": "Deep Dark & Dangerous",
+  "catalogue_tracks": 1126,
+  "last_release": "2026-11-06",
+  "rel_6m": 25,
+  "rel_recent": 10,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 117,
+  "non_owner_artists": 116,
+  "owner": [
+   "Truth"
+  ],
+  "owner_ids": [
+   62755
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Run by @truthdubstep'",
+  "owner_share_last12": 3,
+  "chart_indep": 2,
+  "chart_owner": 3,
+  "chart_best_pos": 28,
+  "chart_list": [
+   "Truth, Dub Princess - Love Me In The Dark  (Original Mix) {'140-deep-dubstep-grime': 28}",
+   "Truth, Magugu - Area Farda  (Original Mix) {'140-deep-dubstep-grime': 40}",
+   "Truth, Magugu - Area Farda  (Original Mix) {'140-deep-dubstep-grime': 42}",
+   "Hypho, Wraz. - Bitcrush Riddim  (Original Mix) {'140-deep-dubstep-grime': 65}",
+   "Chef Boyarbeatz - One More Tune  (Original Mix) {'140-deep-dubstep-grime': 88}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 32,
+  "peer_overlap": 43,
+  "newcomer_share": 0.25,
+  "repeat_share": 0.47,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 93,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 65158,
+  "name": "Bassrush Records",
+  "catalogue_tracks": 937,
+  "last_release": "2026-10-30",
+  "rel_6m": 17,
+  "rel_recent": 5,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "Drum & Bass": 6,
+   "Trap / Future Bass": 1,
+   "Dubstep": 3,
+   "140 / Deep Dubstep / Grime": 2
+  },
+  "n_artists_24m": 143,
+  "non_owner_artists": 143,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 4,
+  "goal_overlap": 72,
+  "peer_overlap": 31,
+  "newcomer_share": 0.18,
+  "repeat_share": 0.13,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 30,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 65920,
+  "name": "Bassrush Records / Insomniac Records",
+  "catalogue_tracks": 8,
+  "last_release": "2017-10-02",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 68217,
+  "name": "Wormhole Music Group",
+  "catalogue_tracks": 441,
+  "last_release": "2026-08-18",
+  "rel_6m": 10,
+  "rel_recent": 0,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "Trap / Future Bass": 1
+  },
+  "n_artists_24m": 22,
+  "non_owner_artists": 21,
+  "owner": [
+   "Secret Recipe"
+  ],
+  "owner_ids": [
+   8180
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Curated by @secretrecipemusic'",
+  "owner_share_last12": 2,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 5,
+  "peer_overlap": 4,
+  "newcomer_share": 0.36,
+  "repeat_share": 0.82,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 69987,
+  "name": "Deadbeats",
+  "catalogue_tracks": 1443,
+  "last_release": "2026-10-23",
+  "rel_6m": 39,
+  "rel_recent": 7,
+  "last12_accepted": "4/12",
+  "last12_genres": {
+   "Dance / Pop": 8,
+   "140 / Deep Dubstep / Grime": 3,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 89,
+  "non_owner_artists": 89,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 7,
+  "chart_owner": 0,
+  "chart_best_pos": 16,
+  "chart_list": [
+   "Zero (UK) - Stop Scheming (Original Mix) {'140-deep-dubstep-grime': 16}",
+   "Zero (UK) - SHOOTA (Original Mix) {'140-deep-dubstep-grime': 20}",
+   "Zero, Killa P - Get Dark (Original Mix) {'140-deep-dubstep-grime': 35}",
+   "Zen Selekta - All Massive (Original Mix) {'140-deep-dubstep-grime': 70}",
+   "Moody Good - Humid (Original Mix) {'140-deep-dubstep-grime': 96}",
+   "Casey Club - Borehole (Original Mix) {'140-deep-dubstep-grime': 100}",
+   "Zeds Dead, Tape B, Subtronics - Word Scramble (Original Mix) {'dubstep': 23}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 37,
+  "peer_overlap": 19,
+  "newcomer_share": 0.33,
+  "repeat_share": 0.37,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 0
+  },
+  "score_pre_reach": 85,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 69996,
+  "name": "Deadbeats / Lowly Palace",
+  "catalogue_tracks": 1,
+  "last_release": "2018-03-16",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 71774,
+  "name": "Bite This x Deadbeats",
+  "catalogue_tracks": 11,
+  "last_release": "2018-07-06",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "2/3",
+  "last12_genres": {
+   "Dubstep": 2,
+   "Dance / Pop": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 72037,
+  "name": "Jadu Dala",
+  "catalogue_tracks": 280,
+  "last_release": "2026-11-04",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "6/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 3,
+   "Trap / Future Bass": 5,
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Dubstep": 3
+  },
+  "n_artists_24m": 30,
+  "non_owner_artists": 30,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 3,
+  "chart_owner": 0,
+  "chart_best_pos": 66,
+  "chart_list": [
+   "Payso, BGZ - TOMA (Extended Mix) {'140-deep-dubstep-grime': 66}",
+   "Payso, BGZ - TOMA (Original Mix) {'140-deep-dubstep-grime': 82}",
+   "Blurrd Vzn - GIVE IT UP (BUCKSHOT) (Original Mix) {'140-deep-dubstep-grime': 99}"
+  ],
+  "median_footprint": 3.5,
+  "goal_overlap": 12,
+  "peer_overlap": 13,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.2,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 75,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 73263,
+  "name": "Deadbeats x Slugz Music",
+  "catalogue_tracks": 1,
+  "last_release": "2018-09-27",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 75157,
+  "name": "Deadbeats x RAM Records Ltd.",
+  "catalogue_tracks": 13,
+  "last_release": "2019-07-19",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/4",
+  "last12_genres": {
+   "Dance / Pop": 3,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Zeds Dead"
+  ],
+  "owner_ids": [
+   16768
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 87982,
+  "name": "Deadbeats x Rhymesayers",
+  "catalogue_tracks": 1,
+  "last_release": "2020-06-23",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 99892,
+  "name": "Bassrush vs Basscon",
+  "catalogue_tracks": 19,
+  "last_release": "2021-11-19",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 109144,
+  "name": "Deadbeats x Bite This",
+  "catalogue_tracks": 1,
+  "last_release": "2023-01-13",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 110315,
+  "name": "Wakaan",
+  "catalogue_tracks": 2276,
+  "last_release": "2026-11-10",
+  "rel_6m": 26,
+  "rel_recent": 9,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 9,
+   "140 / Deep Dubstep / Grime": 3
+  },
+  "n_artists_24m": 91,
+  "non_owner_artists": 91,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 70,
+  "chart_list": [
+   "Liquid Stranger, Al Kapone, Tvboo - Lose Your Mind (Original Mix) {'dubstep': 70}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 51,
+  "peer_overlap": 30,
+  "newcomer_share": 0.2,
+  "repeat_share": 0.35,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 59,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 121309,
+  "name": "Deadbeats x Circus Records",
+  "catalogue_tracks": 1,
+  "last_release": "2024-04-05",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/1",
+  "last12_genres": {
+   "Dubstep": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 187265,
+  "name": "Jadu Dala",
+  "catalogue_tracks": 3,
+  "last_release": "2020-08-05",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/3",
+  "last12_genres": {
+   "Dance / Pop": 3
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 207471,
+  "name": "Bassrush Records",
+  "catalogue_tracks": 14,
+  "last_release": "2022-10-18",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/4",
+  "last12_genres": {
+   "Dance / Pop": 4
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 10327,
+  "name": "Circus Recordings",
+  "catalogue_tracks": 1069,
+  "last_release": "2026-10-30",
+  "rel_6m": 8,
+  "rel_recent": 3,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "House": 8,
+   "Deep House": 1,
+   "Tech House": 2,
+   "Minimal / Deep Tech": 1
+  },
+  "n_artists_24m": 64,
+  "non_owner_artists": 64,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1.0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.17,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 4,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 37353,
+  "name": "Monstercat & Disciple Recordings",
+  "catalogue_tracks": 20,
+  "last_release": "2014-03-19",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "1/4",
+  "last12_genres": {
+   "Dubstep": 1,
+   "Drum & Bass": 1,
+   "Mainstage": 2
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [
+   "Astronaut"
+  ],
+  "owner_ids": [
+   223629
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 78866,
+  "name": "Cyclops Recordings",
+  "catalogue_tracks": 587,
+  "last_release": "2026-11-06",
+  "rel_6m": 15,
+  "rel_recent": 6,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "140 / Deep Dubstep / Grime": 1
+  },
+  "n_artists_24m": 84,
+  "non_owner_artists": 84,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 6,
+  "chart_owner": 0,
+  "chart_best_pos": 44,
+  "chart_list": [
+   "Izzy Vadim - Conspiracy Theory (Original Mix) {'140-deep-dubstep-grime': 73}",
+   "Izzy Vadim - Square World (Original Mix) {'dubstep': 44}",
+   "Subtronics, Saint Monet - Fall Back to Nothing (feat. Saint Monet) (Original Mix) {'dubstep': 50}",
+   "Subtronics, Crankdat, In\u00e9z (DE) - Eyes Cut Deeper (Crankdat Remix) {'dubstep': 51}",
+   "Izzy Vadim - Terraform (Original Mix) {'dubstep': 66}",
+   "Subtronics - Bird Phone (Original Mix) {'dubstep': 85}"
+  ],
+  "median_footprint": 4.0,
+  "goal_overlap": 35,
+  "peer_overlap": 15,
+  "newcomer_share": 0.2,
+  "repeat_share": 0.2,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 93,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 78868,
+  "name": "Drama Club Recordings",
+  "catalogue_tracks": 354,
+  "last_release": "2026-10-30",
+  "rel_6m": 4,
+  "rel_recent": 1,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 5,
+   "Dubstep": 5,
+   "Trap / Future Bass": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 27,
+  "non_owner_artists": 26,
+  "owner": [
+   "Boogie T"
+  ],
+  "owner_ids": [
+   577123
+  ],
+  "owner_status": "confirmed: SoundCloud bio: 'Established 4.20.18 by @boogietmusic'",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 1,
+  "chart_best_pos": 44,
+  "chart_list": [
+   "Dodge & Fuski, Boogie T - STEPPIN (Original Mix) {'140-deep-dubstep-grime': 44}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 8,
+  "peer_overlap": 8,
+  "newcomer_share": 0.26,
+  "repeat_share": 0.11,
+  "rsi": 73,
+  "score_parts": {
+   "chart": 8,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 5
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 90526,
+  "name": "Subsidia",
+  "catalogue_tracks": 1441,
+  "last_release": "2026-11-04",
+  "rel_6m": 6,
+  "rel_recent": 1,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 119,
+  "non_owner_artists": 119,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 2,
+  "chart_owner": 0,
+  "chart_best_pos": 18,
+  "chart_list": [
+   "Excision, Subtronics - A.F.B.1. (Original Mix) {'dubstep': 18}",
+   "Dion Timmer, Smoakland - Mind Control (Original Mix) {'dubstep': 43}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 43,
+  "peer_overlap": 13,
+  "newcomer_share": 0.26,
+  "repeat_share": 0.71,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 29,
+   "roster": 30,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 77,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 105054,
+  "name": "Circus Electric",
+  "catalogue_tracks": 399,
+  "last_release": "2026-08-12",
+  "rel_6m": 4,
+  "rel_recent": 0,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Dance / Pop": 10,
+   "Downtempo": 1,
+   "Drum & Bass": 1
+  },
+  "n_artists_24m": 7,
+  "non_owner_artists": 7,
+  "owner": [
+   "Jaime Deraz"
+  ],
+  "owner_ids": [
+   707576
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 3,
+  "peer_overlap": 0,
+  "newcomer_share": 0.14,
+  "repeat_share": 0.14,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 30,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 109502,
+  "name": "Wubaholics",
+  "catalogue_tracks": 236,
+  "last_release": "2026-11-04",
+  "rel_6m": 14,
+  "rel_recent": 4,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Dubstep": 8,
+   "Downtempo": 1,
+   "140 / Deep Dubstep / Grime": 2,
+   "Bass House": 1
+  },
+  "n_artists_24m": 29,
+  "non_owner_artists": 29,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 4,
+  "chart_owner": 0,
+  "chart_best_pos": 19,
+  "chart_list": [
+   "Zei, rSUN - smelly (Original Mix) {'140-deep-dubstep-grime': 19}",
+   "STVSH, Feel Suite - WAYPOINT (Original Mix) {'dubstep': 25}",
+   "STVSH, Feel Suite - EXCUSES (Original Mix) {'dubstep': 30}",
+   "STVSH, Feel Suite - NIGHT RUNNER (Original Mix) {'dubstep': 64}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 21,
+  "peer_overlap": 6,
+  "newcomer_share": 0.07,
+  "repeat_share": 0.45,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 40,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 5
+  },
+  "score_pre_reach": 80,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 113575,
+  "name": "Good Society",
+  "catalogue_tracks": 167,
+  "last_release": "2026-11-06",
+  "rel_6m": 2,
+  "rel_recent": 2,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "Dubstep": 3,
+   "Dance / Pop": 1,
+   "140 / Deep Dubstep / Grime": 2,
+   "Bass / Club": 6
+  },
+  "n_artists_24m": 12,
+  "non_owner_artists": 12,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.5,
+  "goal_overlap": 8,
+  "peer_overlap": 6,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.33,
+  "rsi": 56,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 35,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 115076,
+  "name": "Memory Palace",
+  "catalogue_tracks": 126,
+  "last_release": "2026-11-06",
+  "rel_6m": 6,
+  "rel_recent": 1,
+  "last12_accepted": "3/12",
+  "last12_genres": {
+   "Electronica": 7,
+   "140 / Deep Dubstep / Grime": 1,
+   "Dubstep": 2,
+   "Hip-Hop": 1,
+   "Trap / Future Bass": 1
+  },
+  "n_artists_24m": 9,
+  "non_owner_artists": 8,
+  "owner": [
+   "Of The Trees"
+  ],
+  "owner_ids": [
+   306273
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 3,
+  "chart_best_pos": 16,
+  "chart_list": [
+   "Tape B, Of The Trees - Brackish (Original Mix) {'140-deep-dubstep-grime': 76}",
+   "Of The Trees, LYNY - Hollow (Original Mix) {'dubstep': 16}",
+   "Of The Trees - Amanita (Original Mix) {'dubstep': 59}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 5,
+  "peer_overlap": 1,
+  "newcomer_share": 0.11,
+  "repeat_share": 0.44,
+  "rsi": 69,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 51,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 126878,
+  "name": "Circus Records",
+  "catalogue_tracks": 2216,
+  "last_release": "2026-10-29",
+  "rel_6m": 13,
+  "rel_recent": 3,
+  "last12_accepted": "10/12",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Dubstep": 10,
+   "Latin Electronic": 1
+  },
+  "n_artists_24m": 67,
+  "non_owner_artists": 66,
+  "owner": [
+   "Flux Pavilion"
+  ],
+  "owner_ids": [
+   203259
+  ],
+  "owner_status": "candidate (6/12 credits), unconfirmed",
+  "owner_share_last12": 6,
+  "chart_indep": 0,
+  "chart_owner": 2,
+  "chart_best_pos": 29,
+  "chart_list": [
+   "Flux Pavilion, Crankdat - Bass Cannon  (Flux's Version) {'dubstep': 29}",
+   "Flux Pavilion, SampliFire - The Power (Original Mix) {'dubstep': 46}"
+  ],
+  "median_footprint": 4,
+  "goal_overlap": 24,
+  "peer_overlap": 5,
+  "newcomer_share": 0.16,
+  "repeat_share": 0.42,
+  "rsi": 80,
+  "score_parts": {
+   "chart": 16,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 5
+  },
+  "score_pre_reach": 56,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 129124,
+  "name": "Local Void",
+  "catalogue_tracks": 67,
+  "last_release": "2026-10-30",
+  "rel_6m": 5,
+  "rel_recent": 1,
+  "last12_accepted": "5/12",
+  "last12_genres": {
+   "Breaks / Breakbeat / UK Bass": 1,
+   "Trap / Future Bass": 2,
+   "Dubstep": 2,
+   "140 / Deep Dubstep / Grime": 3,
+   "Downtempo": 1,
+   "UK Garage / Bassline": 1,
+   "Electronica": 1,
+   "Funky House": 1
+  },
+  "n_artists_24m": 13,
+  "non_owner_artists": 13,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 6,
+  "peer_overlap": 4,
+  "newcomer_share": 0.31,
+  "repeat_share": 0.62,
+  "rsi": 52,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 0
+  },
+  "score_pre_reach": 34,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 292245,
+  "name": "Drama Club Recordings",
+  "catalogue_tracks": 1,
+  "last_release": "2018-12-07",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Hip-Hop": 1
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 0,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 373903,
+  "name": "Disciple",
+  "catalogue_tracks": 111,
+  "last_release": "2026-11-10",
+  "rel_6m": 45,
+  "rel_recent": 17,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "Dubstep": 11,
+   "Hard Dance / Hardcore / Neo Rave": 1
+  },
+  "n_artists_24m": 54,
+  "non_owner_artists": 54,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3.0,
+  "goal_overlap": 16,
+  "peer_overlap": 2,
+  "newcomer_share": 0.31,
+  "repeat_share": 0.3,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": true,
+  "is_peer": false
+ },
+ {
+  "id": 399985,
+  "name": "Memory Palace Records",
+  "catalogue_tracks": 1,
+  "last_release": "2026-10-23",
+  "rel_6m": 1,
+  "rel_recent": 1,
+  "last12_accepted": "0/1",
+  "last12_genres": {
+   "Electronica": 1
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 1,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 1.0,
+  "repeat_share": 0.0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 4,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 40841,
+  "name": "SubCarbon Records",
+  "catalogue_tracks": 834,
+  "last_release": "2026-11-06",
+  "rel_6m": 13,
+  "rel_recent": 4,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Dubstep": 5,
+   "140 / Deep Dubstep / Grime": 7
+  },
+  "n_artists_24m": 99,
+  "non_owner_artists": 98,
+  "owner": [
+   "Ganja White Night"
+  ],
+  "owner_ids": [
+   225634
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 2,
+  "chart_owner": 1,
+  "chart_best_pos": 25,
+  "chart_list": [
+   "Distinct Motive - Wait a Minute (Original Mix) {'140-deep-dubstep-grime': 25}",
+   "KTRL, UrBoiN8 - Paka (Original Mix) {'140-deep-dubstep-grime': 83}",
+   "Ganja White Night - Wobble Chef (Original Mix) {'dubstep': 26}"
+  ],
+  "median_footprint": 3,
+  "goal_overlap": 41,
+  "peer_overlap": 20,
+  "newcomer_share": 0.26,
+  "repeat_share": 0.44,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 37,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 90,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 47581,
+  "name": "DUPLOC",
+  "catalogue_tracks": 1006,
+  "last_release": "2026-11-11",
+  "rel_6m": 23,
+  "rel_recent": 8,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 12
+  },
+  "n_artists_24m": 117,
+  "non_owner_artists": 117,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 38,
+  "peer_overlap": 24,
+  "newcomer_share": 0.26,
+  "repeat_share": 0.5,
+  "rsi": 75,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 15,
+   "fit": 8
+  },
+  "score_pre_reach": 53,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 68422,
+  "name": "Locus Sound",
+  "catalogue_tracks": 263,
+  "last_release": "2026-10-16",
+  "rel_6m": 2,
+  "rel_recent": 1,
+  "last12_accepted": "11/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 11,
+   "UK Garage / Bassline": 1
+  },
+  "n_artists_24m": 24,
+  "non_owner_artists": 24,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "confirmed: SoundCloud bio: 'run by @arch_luun'",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.5,
+  "goal_overlap": 2,
+  "peer_overlap": 6,
+  "newcomer_share": 0.33,
+  "repeat_share": 0.12,
+  "rsi": 42,
+  "score_parts": {
+   "chart": 0,
+   "roster": 18,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 36,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 73029,
+  "name": "Infernal Sounds",
+  "catalogue_tracks": 320,
+  "last_release": "2026-10-02",
+  "rel_6m": 6,
+  "rel_recent": 2,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 12
+  },
+  "n_artists_24m": 23,
+  "non_owner_artists": 22,
+  "owner": [
+   "Dusty"
+  ],
+  "owner_ids": [
+   32219
+  ],
+  "owner_status": "candidate (4/12 credits), unconfirmed",
+  "owner_share_last12": 4,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 3,
+  "goal_overlap": 3,
+  "peer_overlap": 7,
+  "newcomer_share": 0.17,
+  "repeat_share": 0.48,
+  "rsi": 60,
+  "score_parts": {
+   "chart": 0,
+   "roster": 30,
+   "newcomer": 5,
+   "fit": 8
+  },
+  "score_pre_reach": 43,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 90395,
+  "name": "Space Yacht",
+  "catalogue_tracks": 878,
+  "last_release": "2026-05-29",
+  "rel_6m": 1,
+  "rel_recent": 0,
+  "last12_accepted": "1/12",
+  "last12_genres": {
+   "Drum & Bass": 1,
+   "140 / Deep Dubstep / Grime": 1,
+   "Trap / Future Bass": 4,
+   "Dance / Pop": 1,
+   "Deep House": 1,
+   "UK Garage / Bassline": 1,
+   "Indie Tech": 1,
+   "Tech House": 1,
+   "House": 1
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 1,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2,
+  "goal_overlap": 1,
+  "peer_overlap": 0,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 18,
+  "score_parts": {
+   "chart": 0,
+   "roster": 18,
+   "newcomer": 0,
+   "fit": 0
+  },
+  "score_pre_reach": 18,
+  "gates": {
+   "genre": false,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 90781,
+  "name": "Odyzey Music",
+  "catalogue_tracks": 435,
+  "last_release": "2026-09-11",
+  "rel_6m": 8,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "Trap / Future Bass": 9,
+   "140 / Deep Dubstep / Grime": 3
+  },
+  "n_artists_24m": 38,
+  "non_owner_artists": 38,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 2.0,
+  "goal_overlap": 15,
+  "peer_overlap": 15,
+  "newcomer_share": 0.34,
+  "repeat_share": 0.11,
+  "rsi": 64,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 42,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 91973,
+  "name": "DUPLOC ROYALS",
+  "catalogue_tracks": 62,
+  "last_release": "2024-11-18",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "10/10",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 9,
+   "Dubstep": 1
+  },
+  "n_artists_24m": 1,
+  "non_owner_artists": 0,
+  "owner": [
+   "Rygby"
+  ],
+  "owner_ids": [
+   297487
+  ],
+  "owner_status": "candidate (5/12 credits), unconfirmed",
+  "owner_share_last12": 5,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 5,
+  "goal_overlap": 1,
+  "peer_overlap": 1,
+  "newcomer_share": 0.0,
+  "repeat_share": 0.0,
+  "rsi": 27,
+  "score_parts": {
+   "chart": 0,
+   "roster": 24,
+   "newcomer": 0,
+   "fit": 5
+  },
+  "score_pre_reach": 29,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 105490,
+  "name": "DUPLOC ORIGINS",
+  "catalogue_tracks": 37,
+  "last_release": "2023-07-03",
+  "rel_6m": 0,
+  "rel_recent": 0,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 12
+  },
+  "n_artists_24m": 0,
+  "non_owner_artists": 0,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 0,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0,
+  "repeat_share": 0,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 0,
+   "newcomer": 0,
+   "fit": 8
+  },
+  "score_pre_reach": 8,
+  "gates": {
+   "genre": true,
+   "activity": false,
+   "roster": false,
+   "chart_or_rsi": false
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ },
+ {
+  "id": 131548,
+  "name": "Outertone",
+  "catalogue_tracks": 405,
+  "last_release": "2026-11-08",
+  "rel_6m": 37,
+  "rel_recent": 7,
+  "last12_accepted": "0/12",
+  "last12_genres": {
+   "Dance / Pop": 12
+  },
+  "n_artists_24m": 67,
+  "non_owner_artists": 66,
+  "owner": [
+   "Outertone"
+  ],
+  "owner_ids": [
+   1325340
+  ],
+  "owner_status": "candidate (12/12 credits), unconfirmed",
+  "owner_share_last12": 12,
+  "chart_indep": 0,
+  "chart_owner": 0,
+  "chart_best_pos": null,
+  "chart_list": [],
+  "median_footprint": 1,
+  "goal_overlap": 0,
+  "peer_overlap": 0,
+  "newcomer_share": 0.97,
+  "repeat_share": 0.28,
+  "rsi": null,
+  "score_parts": {
+   "chart": 0,
+   "roster": 4,
+   "newcomer": 5,
+   "fit": 0
+  },
+  "score_pre_reach": 9,
+  "gates": {
+   "genre": false,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": false
+  },
+  "flags": [
+   "owner on >half of last 12: manual review",
+   "high volume, no chart, median footprint 1: manual review"
+  ],
+  "is_goal": false,
+  "is_peer": false
+ },
+ {
+  "id": 150059,
+  "name": "Trippy Bee Records",
+  "catalogue_tracks": 97,
+  "last_release": "2026-09-25",
+  "rel_6m": 8,
+  "rel_recent": 1,
+  "last12_accepted": "12/12",
+  "last12_genres": {
+   "140 / Deep Dubstep / Grime": 2,
+   "Dubstep": 4,
+   "Trap / Future Bass": 4,
+   "Bass House": 2
+  },
+  "n_artists_24m": 31,
+  "non_owner_artists": 31,
+  "owner": [],
+  "owner_ids": [],
+  "owner_status": "unknown",
+  "owner_share_last12": 0,
+  "chart_indep": 1,
+  "chart_owner": 0,
+  "chart_best_pos": 27,
+  "chart_list": [
+   "Kill The Noise, LSDREAM - STINK MODE (Original Mix) {'dubstep': 27}"
+  ],
+  "median_footprint": 2,
+  "goal_overlap": 11,
+  "peer_overlap": 9,
+  "newcomer_share": 0.29,
+  "repeat_share": 0.03,
+  "rsi": 64,
+  "score_parts": {
+   "chart": 16,
+   "roster": 24,
+   "newcomer": 10,
+   "fit": 8
+  },
+  "score_pre_reach": 58,
+  "gates": {
+   "genre": true,
+   "activity": true,
+   "roster": true,
+   "chart_or_rsi": true
+  },
+  "flags": [],
+  "is_goal": false,
+  "is_peer": true
+ }
+]

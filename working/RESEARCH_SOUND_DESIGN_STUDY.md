@@ -150,3 +150,48 @@ These artists have only third-party recreations or DJ sets: Blurrd Vzn, OkayJake
 5. A/B against the original at matched loudness. Write the gap in one sentence.
 6. Make 10+ variations and keep one (pattern 5).
 7. Book one lesson (OkayJake or Daggz) once you have a specific gap you can't close. Bring the project.
+
+---
+
+## 7. EAZYBAKED: deep dive (added 2026-11-02)
+
+**Why:** Nick named EAZYBAKED as the reference for where he's pushing his sound. EAZYBAKED is Eric Ray and Andrew Principe, from Orlando and now based in Denver.
+
+**Method:** Read in Claude in Chrome. First-party transcripts: Lizzy Jane Podcast #69 (2022, around *Intertwined*), Audio Eats documentary with interview (2025), Poducer at Sound Haven (2024). Written: Beatportal Q&A (*Respawn*), Melodic Mag, Magnetic Mag (2026). Third-party recreations: BRAINWAVEZ "Free Form Bass like EAZYBAKED", Dripment "Psychedelic Dubstep like EAZYBAKED" (rebuilds *Sapped*).
+
+### First-party: what they say they do
+
+1. **DAW: Reason, not Ableton.** They went from GarageBand on school iPads to a cracked copy of Reason, and they were still on Reason at the time of *Intertwined* (2022). They chose it for the visual rack and patch bay: *"it's a visual learning... hands-on."* They learned by trial and error because Reason had almost no tutorials back then, and they credit that with finding their own sound: they were *"break[ing] the rules"* without knowing what the rules were.
+2. **They work from MIDI and stock synths, and resampling comes second.** *"We've always sampled, but... most of our sounds come from staying strictly MIDI and writing as much as we can, squeezing out as much of the stock synths."* **This is the opposite of pattern 1 in §1** (resample destructively, print, clean). They are the clearest counterexample in the study.
+3. **The founding idea: build minimal tracks out of fill sounds.** *"I thought I could make minimal music using sounds that people use as fills... and just get really minimal and weird."* The wub fills are the material, not the decoration between sections.
+4. **The sound came together around *Clone* (2017):** *"we were resampling things, we were figuring out what wubs were and implementing them."*
+5. **Role split:** *"Andrew's better [at] sound design, I'm better at... arrangement and flow — but we could both do both."* Their best tracks come from sitting together and going *"start to finish"* in one sitting. Otherwise either of them starts an idea and hands it off.
+6. **How they made the album:** they keep the ideas that *"stick,"* *"chip away"* at them over about two years, and decide early that a track belongs to the body of work. *Intertwined* deliberately merged EAZYBAKED with their mellow side project **The Bakers**: four-on-the-floor sections, guitar plucks, and foley/ambient detail (keys, birds) placed up front. *No* uses Andrew's daughter's vocals.
+7. **Finishing:** a track is done when it plays through without anything demanding a fix. *"Trust yourself... it might never be done."*
+8. **Volume over polish:** *"Make thousands of songs... if you're halfway through, finish it... fail fast."* In 2024 they were *"flipping a lot of stuff and putting it out on the cuff,"* and they put plenty of SoundCloud-only extras alongside the official releases.
+9. **Lineage:** hip-hop beats first (Mac Miller, A$AP Rocky, Wiz), then bass-heavy trap (TroyBoi, Mr. Carmack, Bloom, LOUDPVCK, Slumberjack), then Ledge Kale (*"crazy drums, everything so loud"*). The beat-scene and hip-hop root is shared with Wobar's rap-flip register.
+10. ***Respawn* (2025)** was a deliberate move toward a mellower, more personal sound: *"scary! but also very freeing."* Their stance: *"never want to feel limited or boxed in."*
+11. **Sets:** 70–75% original. They build around a *"sense of story,"* balancing heavy moments with mellow ones.
+
+### Third-party: how their sound gets rebuilt (Serum/Vital/Ableton, not their method)
+
+- **Tempo and drums:** 140 BPM, simple drums: kick, two layered snares, one texture layer, a hat loop. Snare reverb is automated on and off.
+- **Sub:** a sine with a pitch-envelope drop at the start of each note. Every two bars it switches from sustained to a quarter-note tremolo. Dripment hand-draws a one-bar trigger LFO on the sub's level: *"it really is about catching a nice flow."*
+- **Wubs:** a sine carrier with FM from a second oscillator (basic shapes or harmonic series, around 43%). One trigger LFO drives level, filter cutoff and FM amount. **Downsample distortion** gives the "yoy" vowel, with a post-filter to clean it. Then chorus and multiband, with the low end made mono below about 500 Hz.
+- **Space:** a reverb-throw rack on the wub group, with throws that grow louder across the drop. Short, high-passed reverb on the bass.
+- **Groove:** bass notes are nudged **about 28 ms late** against the downbeat.
+- **Headroom:** *"this genre has a lot more headroom, you don't have to get super loud."*
+- **Bed:** ambience pitched into key carries a lot of the track. A recording of keys being jingled is bitcrushed into a rhythmic pattern.
+
+### What transfers to Wobar
+
+- **Movement comes from modulation, not printed audio.** A wub is one playable patch whose character comes from LFO, FM and downsampling. That makes it fast to write, consistent with *"squeezing the stock synths,"* and repeatable across a track.
+- **Space and headroom over density.** This lines up with SONIC's *sub + space, not maximalist* and *textures that breathe*.
+- **Fills become the hook.** Write the drop out of what other producers would use as transitions.
+- **Foley and ambience as a front-row layer, pitched into key.**
+
+### Open
+
+- **Register.** The vault files EAZYBAKED under Lane A psy-bass ([[working/RESEARCH_LABEL_MAP]] §Lane A), not under the wonky-140 centre of mass. Pushing toward them may shift the weighting in [[reference/WOBAR_SONIC]]'s register table. That isn't decided.
+- **Their own sounds are for sale:** the *Transmissions* sample packs Vol 1–2 and the *Clone* pack (soundcloud.com/eazybakedbeats/sets/sample-packs). These are the nearest thing to first-party source material. Not yet in [[working/RESEARCH_ARTIST_PACKS]].
+- **Not yet read:** EDM Identity *"Chats About EDC"* (6 min), TruePandaLIVE "Featured artist" (2014), Instagram/TikTok studio clips. No first-party studio walkthrough or project breakdown was found.

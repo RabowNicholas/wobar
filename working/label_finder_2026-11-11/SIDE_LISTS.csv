@@ -1,0 +1,124 @@
+list,label,beatport_ids,reason,score,rsi,last12_in_genre,releases_6m,door,soundcloud_identity,beatport
+scouting queue,19K,80849,passes everything except the door,48,46,10/12,10,none: no demo route; 19ksounds@gmail.com on SoundCloud is unlabelled,confirmed (56 title matches),https://www.beatport.com/label/19k/80849
+scouting queue,Artikal Music UK,24198,passes everything except the door,57,60,10/12,6,none: no door on SoundCloud,confirmed (55 title matches),https://www.beatport.com/label/artikal-music-uk/24198
+scouting queue,Full Flex Audio,52116,passes everything except the door,49,50,11/12,7,none: Contact/Info (NO DEMOS): martin@fullflexaudio.co.uk,confirmed (21 title matches),https://www.beatport.com/label/full-flex-audio/52116
+scouting queue,Bassweight Records,58064,passes everything except the door,45,65,12/12,4,none: no door found (SoundCloud bio has none; no label site linked),confirmed (72 title matches),https://www.beatport.com/label/bassweight-records/58064
+scouting queue,Manuka,73191,passes everything except the door,52,68,11/12,7,"unknown: site shows a Cloudflare bot check; stopped, not worked around",confirmed (18 title matches),https://www.beatport.com/label/manuka/73191
+scouting queue,Incurzion Audio,74919,passes everything except the door,94,71,12/12,23,none: general contact form; unlabelled incurzionaudio@outlook.com in SoundCloud links,confirmed (46 title matches),https://www.beatport.com/label/incurzion-audio/74919
+scouting queue,Interval Audio,77607,passes everything except the door,46,71,10/12,45,none: no door found (SoundCloud bio has none; no label site linked),confirmed (56 title matches),https://www.beatport.com/label/interval-audio/77607
+scouting queue,DPMO,91551,passes everything except the door,45,57,12/12,7,none: no door found (SoundCloud bio has none; no label site linked),confirmed (22 title matches),https://www.beatport.com/label/dpmo/91551
+scouting queue,Beat Intelligence Network,127988,passes everything except the door,73,68,12/12,11,none: no door found (SoundCloud bio has none; no label site linked),confirmed (73 title matches),https://www.beatport.com/label/beat-intelligence-network/127988
+scouting queue,Infernal Sounds,73029,passes everything except the door,50,60,12/12,6,none: 'Eager to explore a collaboration?' general form + infernalsoundsdubstep@gmail.com (mailto link on the site is misspelled INFERNALSOUNDSFDUBSTEP),confirmed (15 title matches),https://www.beatport.com/label/infernal-sounds/73029
+manual review,A Records,56129,identity unconfirmed: weak (1 title matches),40,46,8/12,13,email: aarecordscontact@gmail.com,weak (1 title matches),https://www.beatport.com/label/a-records/56129
+manual review,Lumasi Music,126144,owner on >half of last 12: manual review; identity unconfirmed: no SoundCloud account found,36,45,9/10,5,not checked,no SoundCloud account found,https://www.beatport.com/label/lumasi-music/126144
+manual review,Left Coast Records,175901,owner on >half of last 12: manual review; identity unconfirmed: wrong or unmatched,44,61,11/12,4,not checked,wrong or unmatched,https://www.beatport.com/label/left-coast-records/175901
+manual review,Emengy Bass,378148,identity unconfirmed: no SoundCloud account found,40,56,8/12,6,not checked,no SoundCloud account found,https://www.beatport.com/label/emengy-bass/378148
+manual review,Rude Service,96746,owner on >half of last 12: manual review,60,50,12/12,5,none: no door found (SoundCloud bio has none; no label site linked),confirmed (79 title matches),https://www.beatport.com/label/rude-service/96746
+manual review,Continua MGMT,126959,identity unconfirmed: wrong or unmatched,44,75,11/12,27,not checked,wrong or unmatched,https://www.beatport.com/label/continua-mgmt/126959
+manual review,Field Trip Records,127927,owner on >half of last 12: manual review; identity unconfirmed: weak (2 title matches),46,60,9/12,6,not checked,weak (2 title matches),https://www.beatport.com/label/field-trip-records/127927
+manual review,Artist Influence,147320,identity unconfirmed: wrong or unmatched,46,60,9/12,11,not checked,wrong or unmatched,https://www.beatport.com/label/artist-influence/147320
+rejected,Record Union,15200,fails genre,30,40,1/12,60,not checked,not searched,https://www.beatport.com/label/record-union/15200
+rejected,Foundation Audio,32310,fails activity,38,51,12/12,2,not checked,not searched,https://www.beatport.com/label/foundation-audio/32310
+rejected,Reinelex Records,68768,fails activity,46,46,10/12,3,not checked,confirmed (72 title matches),https://www.beatport.com/label/reinelex-records/68768
+rejected,White Peach Records,75783,fails activity,48,46,12/12,4,not checked,not searched,https://www.beatport.com/label/white-peach-records/75783
+rejected,Helix Records,103030,fails genre,41,48,0/12,70,not checked,not searched,https://www.beatport.com/label/helix-records/103030
+rejected,Exodus Records,103997,fails activity,46,42,8/12,7,not checked,not searched,https://www.beatport.com/label/exodus-records/103997
+rejected,Station Underground,104173,fails activity,33,40,11/12,3,email: station.demos@gmail.com,confirmed (78 title matches),https://www.beatport.com/label/station-underground/104173
+rejected,TuneCore,112451,fails genre,25,42,2/12,48,not checked,not searched,https://www.beatport.com/label/tunecore/112451
+rejected,ZOT Records,131208,fails genre,46,46,7/12,12,not checked,no SoundCloud account found,https://www.beatport.com/label/zot-records/131208
+rejected,Independent,137824,fails genre,35,42,0/12,40,not checked,not searched,https://www.beatport.com/label/independent/137824
+rejected,GorillaT Records,152175,"fails genre, activity",36,47,6/6,3,not checked,not searched,https://www.beatport.com/label/gorillat-records/152175
+rejected,bitbird,152464,fails genre,40,48,3/12,24,not checked,not searched,https://www.beatport.com/label/bitbird/152464
+rejected,Murder We Wrote,378114,fails genre,35,44,6/11,11,not checked,not searched,https://www.beatport.com/label/murder-we-wrote/378114
+rejected,Benda Music,382886,"fails genre, activity",36,47,3/3,3,not checked,not searched,https://www.beatport.com/label/benda-music/382886
+rejected,Tru Thoughts,7505,fails genre,20,65,1/12,22,not checked,wrong or unmatched,https://www.beatport.com/label/tru-thoughts/7505
+rejected,LW Recordings,7839,"fails genre, activity",25,50,0/0,0,not checked,not searched,https://www.beatport.com/label/lw-recordings/7839
+rejected,Amorphous Music,11966,score 41 under 45,41,58,12/12,2,not checked,wrong or unmatched,https://www.beatport.com/label/amorphous-music/11966
+rejected,Wheel & Deal Records,13396,fails activity,50,50,12/12,4,not checked,confirmed (77 title matches),https://www.beatport.com/label/wheel-deal-records/13396
+rejected,Atlantic Records UK,16346,fails genre,35,47,0/12,41,not checked,not searched,https://www.beatport.com/label/atlantic-records-uk/16346
+rejected,RCA Records,20357,"fails genre, roster",32,25,2/12,19,not checked,not searched,https://www.beatport.com/label/rca-records/20357
+rejected,Saturate!Records,32145,fails genre,35,50,5/12,12,not checked,not searched,https://www.beatport.com/label/saturaterecords/32145
+rejected,RCA Records Label,34322,"fails genre, roster",21,10,0/12,34,not checked,not searched,https://www.beatport.com/label/rca-records-label/34322
+rejected,Arkade,42863,fails genre,50,46,2/12,5,not checked,not searched,https://www.beatport.com/label/arkade/42863
+rejected,OWSLA/Atlantic,53610,"fails genre, activity",45,47,1/12,2,not checked,not searched,https://www.beatport.com/label/owslaatlantic/53610
+rejected,Kaizen,62336,"fails genre, roster",50,28,3/12,5,not checked,not searched,https://www.beatport.com/label/kaizen/62336
+rejected,Maraki Records,62621,fails genre,51,40,2/12,6,not checked,not searched,https://www.beatport.com/label/maraki-records/62621
+rejected,Silent Motion Records,64408,fails activity,39,51,12/12,2,not checked,not searched,https://www.beatport.com/label/silent-motion-records/64408
+rejected,Discovery Project (Insomniac Records),67064,fails genre,63,56,6/12,8,not checked,confirmed (68 title matches),https://www.beatport.com/label/discovery-project-insomniac-records/67064
+rejected,Ophelia,68956,fails genre,46,71,6/12,18,not checked,confirmed (6),https://www.beatport.com/label/ophelia/68956
+rejected,Cult.ure,71069,"fails genre, activity, roster",22,30,1/12,1,not checked,not searched,https://www.beatport.com/label/culture/71069
+rejected,Gud Vibrations,73587,fails genre,65,75,7/12,21,not checked,wrong or unmatched,https://www.beatport.com/label/gud-vibrations/73587
+rejected,Overview Music,74173,fails genre,86,71,3/12,18,not checked,confirmed (15 title matches),https://www.beatport.com/label/overview-music/74173
+rejected,High Caliber Records,77542,fails activity,43,56,11/12,3,not checked,not searched,https://www.beatport.com/label/high-caliber-records/77542
+rejected,Warner Records,78825,fails genre,21,35,0/12,38,not checked,not searched,https://www.beatport.com/label/warner-records/78825
+rejected,Gossip,79301,"fails genre, roster",36,24,1/12,4,not checked,not searched,https://www.beatport.com/label/gossip/79301
+rejected,Grottingham,84691 130017,fails activity,52,60,12/12,5,not checked,confirmed (30 title matches),https://www.beatport.com/label/grottingham/84691
+rejected,Off-License Records,86809,fails genre,46,52,5/12,12,not checked,not searched,https://www.beatport.com/label/off-license-records/86809
+rejected,WiddFam,89126,fails activity,48,56,10/11,4,email: WiddFamsubmission@gmail.com,confirmed (72 title matches),https://www.beatport.com/label/widdfam/89126
+rejected,Morii Records,90307,fails genre,46,73,6/12,15,not checked,wrong or unmatched,https://www.beatport.com/label/morii-records/90307
+rejected,PullUp Recordings,90858,fails genre,81,75,6/12,15,not checked,confirmed (9 title matches),https://www.beatport.com/label/pullup-recordings/90858
+rejected,House Call,91154,"fails genre, roster",44,47,4/12,3,not checked,not searched,https://www.beatport.com/label/house-call/91154
+rejected,Lost In Dreams,92872,fails genre,43,56,1/12,22,not checked,confirmed (20 title matches),https://www.beatport.com/label/lost-in-dreams/92872
+rejected,MONTA,98503,fails genre,57,65,1/12,37,not checked,confirmed (58 title matches),https://www.beatport.com/label/monta/98503
+rejected,Experts Only,103008,fails genre,30,37,3/12,12,not checked,not searched,https://www.beatport.com/label/experts-only/103008
+rejected,Neoluminum,103220 114790,not a fit after listening (artist call),43,50,8/12,18,form: https://forms.gle/Dg63wB3x9WYgccJc7,confirmed (62 title matches),https://www.beatport.com/label/neoluminum/103220
+rejected,Gemini Gemini,104949,fails genre,77,53,4/12,15,not checked,confirmed (71 title matches),https://www.beatport.com/label/gemini-gemini/104949
+rejected,HypnoVizion Records Inc.,106994,fails activity,40,58,10/12,4,email: demos@hypnovizion.com,weak (1 title matches),https://www.beatport.com/label/hypnovizion-records-inc/106994
+rejected,Close Calls,109377,"fails genre, activity, roster",24,25,2/4,1,not checked,not searched,https://www.beatport.com/label/close-calls/109377
+rejected,Bad Medic Records,110914,too small (artist call),64,56,11/12,10,portal: https://hypeddit.com/badmedicrecords/submitademo,confirmed (7 title matches),https://www.beatport.com/label/bad-medic-records/110914
+rejected,EMPIRE,111428,"fails genre, roster",52,55,3/12,27,not checked,not searched,https://www.beatport.com/label/empire/111428
+rejected,Sounds Of Mayhem,112736,not a fit after listening (artist call),60,75,12/12,11,email: demos@soundsofmayhem.com,confirmed (64 title matches),https://www.beatport.com/label/sounds-of-mayhem/112736
+rejected,Wooli Music LLC,115598,fails activity,39,55,11/11,3,not checked,not searched,https://www.beatport.com/label/wooli-music-llc/115598
+rejected,Boom Records LLC,116122,fails genre,64,71,0/12,72,not checked,weak (1 title matches),https://www.beatport.com/label/boom-records-llc/116122
+rejected,VOLPEVERSE,121985,fails activity,49,76,9/11,2,not checked,wrong or unmatched,https://www.beatport.com/label/volpeverse/121985
+rejected,Space Cult,123467,"fails genre, roster",29,25,4/6,2,not checked,not searched,https://www.beatport.com/label/space-cult/123467
+rejected,BREAKAWAY,123742,fails genre,52,61,1/12,54,not checked,not searched,https://www.beatport.com/label/breakaway/123742
+rejected,oury,126568,fails genre,57,56,0/12,54,not checked,wrong or unmatched,https://www.beatport.com/label/oury/126568
+rejected,SHINE LIGHT RECORDS,127779,fails genre,40,71,6/12,3,not checked,wrong or unmatched,https://www.beatport.com/label/shine-light-records/127779
+rejected,GRiZ LLC,129522 86819,fails activity,58,76,9/12,2,not checked,confirmed (29 title matches),https://www.beatport.com/label/griz-llc/129522
+rejected,IN-DMND,130052,fails genre,47,55,4/12,7,not checked,not searched,https://www.beatport.com/label/in-dmnd/130052
+rejected,Port Zero,131258,not a fit after listening (artist call),73,75,12/12,12,email: demos@theportzero.com,confirmed (6 title matches),https://www.beatport.com/label/port-zero/131258
+rejected,Zoey Worldwide,131485,fails genre,48,38,3/12,3,not checked,not searched,https://www.beatport.com/label/zoey-worldwide/131485
+rejected,soundslikesaka,131738,"fails genre, roster",33,32,4/9,2,not checked,not searched,https://www.beatport.com/label/soundslikesaka/131738
+rejected,Mad Dubz,148687,"fails genre, activity, roster",46,37,2/2,1,not checked,not searched,https://www.beatport.com/label/mad-dubz/148687
+rejected,Good Dub.,149795,fails genre,59,56,7/9,4,not checked,confirmed (48 title matches),https://www.beatport.com/label/good-dub/149795
+rejected,Crank It Up! Records,173853,"fails genre, activity, roster",41,37,2/2,0,not checked,not searched,https://www.beatport.com/label/crank-it-up-records/173853
+rejected,Montys Beats,175997,"fails genre, activity, roster",32,25,1/2,1,not checked,not searched,https://www.beatport.com/label/montys-beats/175997
+rejected,Rampage Recordings,176768,fails genre,28,10,3/12,8,not checked,not searched,https://www.beatport.com/label/rampage-recordings/176768
+rejected,Dial 1 Music,178369,"fails genre, activity, roster",54,37,2/2,1,not checked,not searched,https://www.beatport.com/label/dial-1-music/178369
+rejected,Wrong Number Records,180455,"fails genre, roster",13,10,0/7,2,not checked,not searched,https://www.beatport.com/label/wrong-number-records/180455
+rejected,Hamdi x CC,181650,"fails genre, activity, roster",41,37,1/1,0,not checked,not searched,https://www.beatport.com/label/hamdi-x-cc/181650
+rejected,UMAD?,181826,fails genre,46,46,5/5,5,not checked,not searched,https://www.beatport.com/label/umad/181826
+rejected,Killed It!,358834,fails genre,70,67,4/4,4,not checked,not searched,https://www.beatport.com/label/killed-it/358834
+rejected,Cheeky,380571,"fails genre, activity, roster",47,55,1/1,1,not checked,not searched,https://www.beatport.com/label/cheeky/380571
+rejected,Wankdisc,387784,"fails genre, activity, roster",51,45,1/1,1,not checked,not searched,https://www.beatport.com/label/wankdisc/387784
+rejected,Viperactive,389862,"fails genre, activity",45,28,0/2,2,not checked,not searched,https://www.beatport.com/label/viperactive/389862
+rejected,Bassweight Recordings,8262,"fails activity, roster, chart_or_rsi",6,,10/12,0,not checked,not searched,https://www.beatport.com/label/bassweight-recordings/8262
+rejected,Exodus Recordings,46217,"fails genre, chart_or_rsi",10,,0/12,3,not checked,not searched,https://www.beatport.com/label/exodus-recordings/46217
+rejected,1985 x Ish Chat,62354,"fails genre, activity, roster, chart_or_rsi",1,,0/1,0,not checked,not searched,https://www.beatport.com/label/1985-x-ish-chat/62354
+rejected,Bassweight Moscow,92339,"fails genre, activity, roster, chart_or_rsi",1,,0/1,0,not checked,not searched,https://www.beatport.com/label/bassweight-moscow/92339
+rejected,EXODUS RECORDS UK,95892,"fails genre, activity, roster, chart_or_rsi",1,,0/3,0,not checked,not searched,https://www.beatport.com/label/exodus-records-uk/95892
+rejected,Exodus Music,112126,"fails genre, activity, roster, chart_or_rsi",5,,0/12,0,not checked,not searched,https://www.beatport.com/label/exodus-music/112126
+rejected,Field Trip Recordings/Capitol Records,120496,"fails genre, activity, roster, chart_or_rsi",1,,0/8,0,not checked,not searched,https://www.beatport.com/label/field-trip-recordingscapitol-records/120496
+rejected,Exodus Entertainment,120612,"fails genre, activity, roster, chart_or_rsi",1,,0/12,0,not checked,not searched,https://www.beatport.com/label/exodus-entertainment/120612
+rejected,LDH Records,135368,"fails genre, chart_or_rsi",10,,0/12,5,not checked,not searched,https://www.beatport.com/label/ldh-records/135368
+rejected,"1985 Guitarra Records, distributed by Kithara Entertainment LLC",137954,"fails genre, activity, roster, chart_or_rsi",1,,0/1,0,not checked,not searched,https://www.beatport.com/label/1985-guitarra-records-distributed-by-kithara-entertainment-llc/137954
+rejected,Exodus Records,144951,"fails genre, chart_or_rsi",10,,0/9,6,not checked,not searched,https://www.beatport.com/label/exodus-records/144951
+rejected,Field Trip / Republic Records,147195,"fails genre, activity, roster, chart_or_rsi",1,,0/4,0,not checked,not searched,https://www.beatport.com/label/field-trip-republic-records/147195
+rejected,Exodus Entertainment,149496,"fails genre, chart_or_rsi",10,,0/10,3,not checked,not searched,https://www.beatport.com/label/exodus-entertainment/149496
+rejected,Field Trip Recordings/Warner Records,153047,"fails genre, activity, roster, chart_or_rsi",1,,0/12,0,not checked,not searched,https://www.beatport.com/label/field-trip-recordingswarner-records/153047
+rejected,1985 Grupo lince,157003,"fails genre, activity, roster, chart_or_rsi",1,,0/1,0,not checked,not searched,https://www.beatport.com/label/1985-grupo-lince/157003
+rejected,LDH Records,165911,"fails genre, activity, roster, chart_or_rsi",10,,0/3,1,not checked,not searched,https://www.beatport.com/label/ldh-records/165911
+rejected,Amorphous / EMPIRE,171818,"fails genre, activity, roster, chart_or_rsi",1,,0/5,0,not checked,not searched,https://www.beatport.com/label/amorphous-empire/171818
+rejected,LDH,174300,"fails genre, activity, chart_or_rsi",5,,0/3,0,not checked,not searched,https://www.beatport.com/label/ldh/174300
+rejected,Field Trip Recordings/Geffen Records,174917,"fails genre, activity, roster, chart_or_rsi",1,,0/12,0,not checked,not searched,https://www.beatport.com/label/field-trip-recordingsgeffen-records/174917
+rejected,Artist Influence,208533,"fails genre, activity, roster, chart_or_rsi",1,,0/6,0,not checked,not searched,https://www.beatport.com/label/artist-influence/208533
+rejected,Field Trip Records,231515,"fails genre, activity, roster, chart_or_rsi",1,,0/2,0,not checked,not searched,https://www.beatport.com/label/field-trip-records/231515
+rejected,Exodus Records,245418,"fails genre, activity, roster, chart_or_rsi",1,,0/1,0,not checked,not searched,https://www.beatport.com/label/exodus-records/245418
+rejected,'a' Records,376292,"fails genre, activity, roster, chart_or_rsi",5,,0/12,0,not checked,not searched,https://www.beatport.com/label/a-records/376292
+rejected,Circus Recordings,10327,"fails genre, chart_or_rsi",5,,0/12,8,not checked,not searched,https://www.beatport.com/label/circus-recordings/10327
+rejected,Monstercat & Disciple Recordings,37353,"fails genre, activity, roster, chart_or_rsi",1,,1/4,0,not checked,not searched,https://www.beatport.com/label/monstercat-disciple-recordings/37353
+rejected,Memory Palace Records,399985,"fails genre, activity, roster, chart_or_rsi",5,,0/1,1,not checked,not searched,https://www.beatport.com/label/memory-palace-records/399985
+rejected,Space Yacht,90395,"fails genre, activity, roster, chart_or_rsi",19,18,1/12,1,not checked,not searched,https://www.beatport.com/label/space-yacht/90395
+rejected,Outertone,131548,"fails genre, chart_or_rsi",10,,0/12,37,not checked,not searched,https://www.beatport.com/label/outertone/131548
+known ledger,(none),,"artist reported no sends, no personal contacts",,,,,,,

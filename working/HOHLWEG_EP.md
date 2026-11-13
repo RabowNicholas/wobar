@@ -9,6 +9,8 @@ dependencies: [[reference/WOBAR_FRAMEWORK]], [[reference/WOBAR_EMOTIONAL_REGISTE
 
 # HOHLWEG EP
 
+> **ATEM has been cut (Nick, 2026-10-19).** The record is the three originals, ERNSTFALL · ABGRUND · GRUND. The ATEM sections below are kept as the record of why it was added; the reason for the cut was not given.
+
 **HOHLWEG** — three originals and an interlude, one story. **ERNSTFALL · ABGRUND · ATEM · GRUND.**
 
 ---

@@ -1,7 +1,7 @@
 ---
 title: Wobar Closed Loops
 version: 1.2
-last_updated: 2026-11-03
+last_updated: 2026-11-11
 status: live
 scope: Completed project loops archived from WOBAR_ACTIVE. Reference only — no action required.
 dependencies: [[WOBAR_CONTEXT]]
@@ -10,6 +10,18 @@ dependencies: [[WOBAR_CONTEXT]]
 # WOBAR CLOSED LOOPS
 
 Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent first.
+
+---
+
+## Everyday — A$AP Rocky flip visualizer (Blender) — SHIPPED
+
+**Closed:** 2026-11-11. Nick approved the final 4K ("perfect") and read the bar-97 peak glints at full quality as good. Full case: [[reference/blender_cases/EVERYDAY]]. Reusable part: `KIT_Everyday` in kit v0.2 ([[reference/blender_kit/README]]).
+
+**What it was.** The first full-song Blender piece built with Claude over MCP (2026-11-07 → 11-09). It's Act 4 pure, 3:39 / 128 bars at 140, and audio-locked to Nick's kick, snare, hat and low-end stems. tunnel_v1's three nested glass tunnels had the clock taken out: every phase (travel, spin, colour, pulse) became a driver off `WOBAR_CTRL`, so the tunnel moves with the song instead of with scene time. It uses a 4-way kaleidoscope comp and a white vanishing light. The build restructured [[working/WOBAR_VISUAL_RESET]] §6 into Locked / Testing / Denied. L8 (held breath → lunge), L9 (instrument physics) and L10 (the light) were locked, and five rules the finished pieces broke were denied with reasons.
+
+**How it finished.** It rendered at 2160×3840, 64 samples, with motion blur and 16-bit PNG: 6,583 frames in ~37 h on the M1 Max (~20–23 s/frame). The deliverables set the standard for every release: a **ProRes master in the orientation it was made, a 4K horizontal for YouTube and a 1080 vertical for socials, nothing else.** The horizontal is the master rotated 90° clockwise, because Nick designs pieces to work rotated. No second render, no crop. The final audio is the 2026-11-11 re-export, swapped in without a re-encode. An earlier export that day came out 33 ms late against the stems, which is why any new mixdown has to be checked against the kick stem before it goes into the videos.
+
+**Where it lives.** Release packet: `/Volumes/music/releases/1_in_progress/flips/everyday/`. The track itself is unreleased; the packet still needs the cover PSD and cut-downs. Working file `/Volumes/music/blender/everyday_tunnel_v1.blend`. The PNG frames (~235 GB, `renders/everyday_final_4k/`) are redundant now that the ProRes master exists and are held for Nick's drive cleanup.
 
 ---
 
@@ -23,7 +35,7 @@ Loops moved here from [[working/WOBAR_ACTIVE]] at session close-out. Most recent
 
 **Which old rules died with it:** *master follows the mix* (there is no separate master now) · *loudness is not a goal* (loudness is now built deliberately, in the mix) · *fixed template, bounded error* (the chain was the template). **Survives:** a mastering engineer is still a later hire · sub mono <120 Hz carried straight over onto the new bus · Ozone's Maximizer stays as the final stage.
 
-**Don't re-propose:** going back to a −16 LUFS mix bus feeding God Particle/Pro-MB, or rebuilding a multi-stage master chain on top of a clip-to-zero mix. The old open items (Soft Clip untested, the GP measurement protocol, IRC IV vs 5) went down with the chain. They aren't live questions now.
+**Don't re-propose:** going back to a −16 LUFS mix bus feeding God Particle/Pro-MB, or a master chain that has to *fix* the mix. **Amended 2026-11-09 (Nick), after reading Baphometrix's CTZ doc §7.a/§9/§10:** final processing on the master (EQ, imaging, Ozone) is allowed, but only if the mix was built clip-to-zero first and the mastering limiter still triggers *only* on the framework hits (kick/snare), at about 1–2 dB of gain reduction and never more than 3–4. If anything else triggers it, fix the bus feeding it (drive that bus's clipper up a little and pull its fader down by the same amount), not the master. Baphometrix's split is clipper + one limiter, so two limiters in series aren't part of it. The old open items (Soft Clip untested, the GP measurement protocol, IRC IV vs 5) went down with the chain. They aren't live questions now.
 
 **Caveat at retirement:** the replacement **hasn't been heard in the wild yet**: no big system, no phone, no level-matched references. If it fails there, the fix is in the clip-to-zero mix, not a revived chain.
 
