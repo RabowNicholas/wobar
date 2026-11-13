@@ -63,7 +63,7 @@ every other bar, snare beat 3, hats 8ths / 16ths in drops, hats out 97–104).
 - Scripts: `scripts/blender/still_tippin/` — **current: `song_preview.py`** (needs `chamber.py`
   exec'd first for `_col`), `vj_loop.py`, `tunnel_wander.py` (+ the explorations).
   Run: `exec(chamber.py); exec(song_preview.py); build_song()` → keyed per frame, renders headless.
-- Scenes: `/Volumes/music/blender/still_tippin_song_grey_v3.blend` (current), `_vjloop_grey_v1`,
+- Scenes: `/Volumes/music/blender/still_tippin_song_grey_v3.blend` (current; a copy of it and of `_vjloop_grey_v1` is in the repo at `blender/still_tippin/`), `_vjloop_grey_v1`,
   `_tunnel_wander_v{1,2}`, plus exploration .blends.
 - Previews (with master audio): `/Volumes/music/releases/1_in_progress/flips/still_tippin/visualizer/previews/`
   (`2026-11-13_song_grey_v{1,2,3}_with_audio.mp4`, `_vj_loop_grey_20s.mp4`, `explorations/`).
