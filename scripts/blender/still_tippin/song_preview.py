@@ -27,6 +27,9 @@ BEAT = 60.0 / BPM
 BAR = 4 * BEAT
 SONG_S = 222.857
 FPS = 30
+# v4 (Nick, 2026-11-14: "remove all audio modulation"): False strips every fake beat/riser
+# signal (kick, snare, hats, risers/chaos, per-8th vowels). Sections + wring arcs stay.
+AUDIO = False
 
 # name, start bar, crossfade-in seconds, params
 _B = dict(speed=1.0, roll=8.0, W=1.0, L=0.6, vowel=0.0, glow=0.0, kick=0.0, shiver=0.6,
@@ -58,12 +61,44 @@ SECTIONS = [(n, b, xf, dict(_B, **p)) for n, b, xf, p in SECTIONS]
 # wring segments: (start bar, end bar, twist max rad/m, release style at the end)
 # fake transitions stem (risers): (start bar, end bar, peak). Ramps up, cuts dead on the downbeat.
 CHAOS = [(13, 17, 0.55), (25, 33, 1.0), (77, 81, 1.0), (111, 113, 0.45)]
+# ribs B approved (Nick, 2026-11-14)
+HYP = dict(LumpK=0.3, Rib=0.06, RibL=0.6, RibK=0.3, RibVarA=0.95, RibVarP=12.0, RibTilt=0.0, RibTiltTw=0.05, Hel=0.0, HelN=2.0, HelP=7.0, HelK=1.0,
+           Fac=0.0, FacN=7.0, FacTw=0.08)
+CAR = dict(on=True, face=(0.30, 0.008, 0.012), graze=(0.10, 0.008, 0.16), flop_blend=0.45,
+           flake_tint=(1.0, 0.55, 0.25), spec_tint=(1.0, 0.75, 0.4), flake_scale=450.0, flake_k=0.12,
+           metallic=0.6, rough=0.25, coat_rough=0.04, film_nm=420.0)
+# Drop 2 = the liquid-metal melt (Nick, 2026-11-14: "melt in is really good"); v3 behaviour was
+# fold_old=1, fold_oval=0, sq_k=1, melt_lump=0.3, melt_rib=0, melt_off=0.7, melt_rmin=0
+DROP2 = dict(fold_old=0.0, fold_oval=0.3, sq_k=0.5, melt_lump=1.2, melt_rib=0.7,
+             melt_off=0.25, melt_rmin=1.0, melt_eps=0.15)
+DROP2_MODES = dict(A=dict(fold_old=0.0, fold_oval=1.0, sq_k=0.5, melt_lump=0.3, melt_rib=0.0),
+                   B=dict(fold_old=0.0, fold_oval=0.3, sq_k=0.5, melt_lump=1.2, melt_rib=0.7,
+                          melt_off=0.25, melt_rmin=1.0, melt_eps=0.15))
+# depth pearl 14 m approved (Nick, 2026-11-14: "14 for sure")
+# 2026-11-14 audio mapping test (fake signals until stems): kick = push (travel surge, which also lurches the
+# depth pearl), snare = light (sun steps round the coil + flare), sub = intensity (walls breathe), hats = detail
+# (flake glints). "tight" vs "swell" = the easing.
+AMOD = dict(on=False, sun_step_deg=25.0, snare_tau=0.06, flare=0.5, flare_tau=0.03, hat_tau=0.05,
+            glint_frac=0.003, glint_k=3.0, glint_far=6.0, breathe=0.06, sub_release=0.35, sub_attack=0.03, kick_tau=0.0)
+AMOD_MODES = dict(tight=dict(on=True),
+                  swell=dict(on=True, snare_tau=0.45, flare_tau=0.25, hat_tau=0.15, sub_release=0.9,
+                             sub_attack=0.25, kick_tau=0.3))
+DEPTH = dict(on=True, period_m=14.0, face_k=0.25,
+             stops=[(0.3, (0.07, 0.005, 0.11)), (0.6, (0.30, 0.09, 0.02)), (0.8, (0.28, 0.17, 0.03))])
+SUN = dict(on=True, hdri="/Volumes/music/blender/still_tippin_assets/abandoned_tank_farm_03_2k.hdr",
+           sky_rot_deg=144.0, coat_k=1.0, fade_m=(6.0, 22.0),
+           energy=30.0, angle_deg=3.0, color=(1.0, 0.95, 0.86), sun_az_deg=0.0, sun_elev_deg=39.4,
+           exposure=-0.6, glare_thresh=2.0, glare_strength=0.6, glare_size=0.2)
+PAINT = dict(BandA=0.0, BandL=3.5, BandN=1.0, BandSoft=0.6, BandSpd=0.0, InvA=0.0, InvP=16.0)
 BREAK = (65, 81, 4)          # bars, line length in bars
 WRING = [(81, 89, 0.42, "snap"), (89, 97, 0.58, "unwind"), (105, 113, -0.75, "snap")]   # v3: harder (Nick: drop 2 needs energy)
 
 PV = dict(R=1.6, n_theta=144, dy=0.08, ahead=45.0, behind=4.0, look=4.5, lens=20,
           kpush=1.6, fill=45.0, fill_ahead=220.0, ahead_d=5.5, glow_k=0.0, snare_k=0.0,      # stretch light OFF for now (Nick)
           grey=0.30, rough=0.38, seed=7,
+          # off-axis ride (2026-11-14, breaks the target symmetry): metres off the centre line, the side
+          # drifts one way at off_rate deg/s; off_aim 0 = look parallel to the axis, 1 = aim back at it
+          off=0.7, off_rate=6.0, off_phase=40.0, off_aim=0.0,
           wx=((5.2, 10.8, 0.0), (1.4, 5.7, 1.3), (0.4, 3.5, 2.1)),
           wz=((3.0, 13.5, 1.0), (1.0, 6.75, 0.4), (0.3, 4.0, 2.7)), descent=0.12)
 
@@ -98,6 +133,8 @@ def _section_at_bar(bar):
 
 
 def chaos_at(t):
+    if not AUDIO:
+        return 0.0
     bar = t / BAR + 1
     for b0, b1, pk in CHAOS:
         if b0 <= bar < b1:
@@ -119,6 +156,8 @@ def _smooth_series(vals, tau):
 
 
 def events():
+    if not AUDIO:
+        return [], [], []
     kicks, snares, hats = [], [], []
     for bar in range(1, 131):
         p = _section_at_bar(bar)
@@ -151,7 +190,7 @@ def signals(nf):
     dt = 1.0 / FPS
     out = {k: [] for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw",
                            "Glow", "Snare", "lamp", "speed", "roll", "wander",
-                           "C", "lens", "Boil", "Mut")}
+                           "C", "lens", "Boil", "Mut", "D2", "SunAz", "Flare", "Glint", "Breath")}
     # vowel targets per 8th, kick 8ths open wide
     eighth = BEAT / 2
     vt = {}
@@ -169,6 +208,8 @@ def signals(nf):
             on_kick = any(abs(kk - k8 * eighth) < 1e-3 for kk in kicks)
             vt[k8] = dict(open=1.0 if on_kick else rnd.choice((0.05, 0.3, 0.6, 0.9)),
                           a2=rnd.uniform(-1, 1), a3=rnd.uniform(-1, 1), phi=rnd.uniform(0, 6.28))
+        if not AUDIO:
+            vt[k8] = dict(open=0.0, a2=0.0, a3=0.0, phi=0.0)
         for k in sp:                                          # bouncy spring (overshoot)
             x, v = sp[k]
             for _ in range(4):
@@ -181,9 +222,13 @@ def signals(nf):
         tgt, stiff, damp = 0.0, 150.0, 8.0          # each kick step lands with a jolt
         for b0, b1, mx, style in WRING:
             if b0 <= bar < b1:
-                ks = [k for k in kicks if _t(b0) <= k < _t(b1)]
-                done = sum(1 for k in ks if k <= t)
-                tgt = mx * done / max(1, len(ks))
+                if AUDIO:
+                    ks = [k for k in kicks if _t(b0) <= k < _t(b1)]
+                    done = sum(1 for k in ks if k <= t)
+                    tgt = mx * done / max(1, len(ks))
+                else:                                   # no kick steps: smooth wring over the segment
+                    tgt = mx * _smooth((bar - b0) / (b1 - b0))
+                    stiff, damp = 40.0, 12.0
             elif style == "unwind" and b1 <= bar < b1 + 8:
                 tgt = mx * (1 - _smooth((bar - b1) / 8.0))
                 stiff, damp = 20.0, 6.0
@@ -208,7 +253,8 @@ def signals(nf):
         out["Phi"].append(sp["phi"][0])
         wr = abs(tw[0]) / 0.75
         out["Fo"].append(0.18 * wr)
-        out["Sq"].append(0.26 * wr * sub)
+        out["Sq"].append(0.26 * wr * sub * DROP2["sq_k"])
+        out["D2"].append(1.0 if _t(81) <= t < _t(113) else 0.0)
         out["Tw"].append(tw[0])
         out["Hs"].append(0.007 * P["shiver"] * he)
         out["T"].append(t)
@@ -217,15 +263,31 @@ def signals(nf):
         out["lamp"].append(P["lamp"])
         out["speed"].append(P["speed"] + 1.4 * ch)
         kickpart.append(PV["kpush"] * P["kick"] * ke)
-        lampflash.append(0.9 * se * P["snare_on"] * min(1.0, P["kick"]))   # snare = light, via the headlamp
+        if AMOD["on"]:                       # 2026-11-14 mapping: the sun is the light now, not the headlamp
+            lampflash.append(0.0)
+            out["SunAz"].append(float(sum(1 for x in snares if x <= t)) * (1.0 if P["snare_on"] else 0.0))
+            out["Flare"].append(se * P["snare_on"])
+            out["Glint"].append(_env(hats, t, AMOD["hat_tau"]) * (1.0 if P["hats"] else 0.0))
+            out["Breath"].append(_env(kicks, t, AMOD["sub_release"]) * P["sub"])   # fake sub: long kick tail
+        else:
+            lampflash.append(0.9 * se * P["snare_on"] * min(1.0, P["kick"]))   # snare = light, via the headlamp
+            for k_ in ("SunAz", "Flare", "Glint", "Breath"):
+                out[k_].append(0.0)
         lenspunch.append(-2.5 * ke * max(0.0, P["kick"] - 0.5))           # kick punches the lens in the drops
         out["roll"].append(P["roll"] + ch * (45 + 30 * math.sin(t * 2.3) * math.sin(t * 0.7)))
         out["wander"].append(P["wander"])
     # v3 (Nick: "section transitions end up a little choppy"): smooth the section / chaos
     # driven channels so nothing steps; kicks are added back after so they keep their punch.
     for k, tau in (("speed", 0.25), ("roll", 0.35), ("W", 0.2), ("L", 0.3), ("lens", 0.3),
-                   ("Boil", 0.2), ("lamp", 0.3), ("Glow", 0.2), ("wander", 0.5), ("C", 0.2)):
+                   ("Boil", 0.2), ("lamp", 0.3), ("Glow", 0.2), ("wander", 0.5), ("C", 0.2), ("D2", 0.3)):
         out[k] = _smooth_series(out[k], tau)
+    if AMOD["on"]:
+        # snare count eased into sun steps (tight = snap, swell = glide); sub breath and kick push softened
+        out["SunAz"] = [AMOD["sun_step_deg"] * v for v in _smooth_series(out["SunAz"], AMOD["snare_tau"])]
+        out["Breath"] = _smooth_series(out["Breath"], AMOD["sub_attack"])
+        out["Flare"] = _smooth_series(out["Flare"], AMOD["flare_tau"])
+        kickpart = _smooth_series(kickpart, AMOD["kick_tau"]) if AMOD["kick_tau"] > 0 else kickpart
+        out["W"] = [w * (1 + AMOD["breathe"] * b) for w, b in zip(out["W"], out["Breath"])]
     out["speed"] = [v + kp for v, kp in zip(out["speed"], kickpart)]
     out["lamp"] = [v * (1 + fl) for v, fl in zip(out["lamp"], lampflash)]
     out["lens"] = [v + lp for v, lp in zip(out["lens"], lenspunch)]
@@ -379,9 +441,15 @@ def _gn(ob):
     N_, Lk = nt.nodes.new, nt.links.new
     gi, go = N_("NodeGroupInput"), N_("NodeGroupOutput")
     V = {}
-    for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw", "Ycam", "Mut", "Boil"):
+    for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw", "Ycam", "Mut", "Boil", "D2"):
         v = N_("ShaderNodeValue")
         v.name = v.label = k
+        V[k] = v.outputs[0]
+    # 2026-11-14 hypnosis tests (Nick: "too organic"): static look switches, neutral by default
+    for k, d in HYP.items():
+        v = N_("ShaderNodeValue")
+        v.name = v.label = k
+        v.outputs[0].default_value = d
         V[k] = v.outputs[0]
 
     def M(op, a, b=None):
@@ -413,8 +481,12 @@ def _gn(ob):
         return m.outputs[0]
 
     th, yy, lump, patch = attr("th"), attr("yy"), attr("lump"), attr("patch")
+    # Drop 2 mode (2026-11-14): D2 = 0..1 section envelope; melt = lumps flow back in, ribs melt down
+    lumpk = M("ADD", V["LumpK"], M("MULTIPLY", V["D2"], M("SUBTRACT", DROP2["melt_lump"], V["LumpK"])))
+    lump = M("MULTIPLY", lump, lumpk)
     wgt = M("ADD", 0.25, M("MULTIPLY", patch, 0.75))
-    lump = M("ADD", lump, M("MULTIPLY", V["Mut"], M("SUBTRACT", attr("lump2"), lump)))
+    # fix 2026-11-14: the break's mutation set must be scaled by LumpK too (it re-grew full lumps)
+    lump = M("ADD", lump, M("MULTIPLY", V["Mut"], M("SUBTRACT", M("MULTIPLY", attr("lump2"), lumpk), lump)))
     boil = M("MULTIPLY", V["Boil"], M("MULTIPLY",
              M("COSINE", M("SUBTRACT", M("ADD", M("MULTIPLY", th, 3.0), M("MULTIPLY", yy, 1.3)), M("MULTIPLY", V["T"], 2.5))),
              M("COSINE", M("ADD", M("SUBTRACT", M("MULTIPLY", th, 2.0), M("MULTIPLY", yy, 0.8)), M("MULTIPLY", V["T"], 1.7)))))
@@ -440,11 +512,37 @@ def _gn(ob):
                                                               M("MULTIPLY", yy, 7.3)),
                                                M("MULTIPLY", V["T"], 11.0))))
     vow = M("MULTIPLY", vow, wgt)
-    fold = M("MULTIPLY", fold, wgt)
+    # A: the star folds give way to one oval fold, which the wring rotates along the tube (no star)
+    fold = M("ADD", M("MULTIPLY", M("MULTIPLY", fold, wgt), DROP2["fold_old"]),
+             M("MULTIPLY", M("MULTIPLY", V["Fo"], M("COSINE", M("MULTIPLY", th, 2.0))), DROP2["fold_oval"]))
     stretch = M("ADD", M("ADD", V["Swell"], vow), fold)
     lit = M("MULTIPLY", stretch, patch)          # glow lives in islands, never whole sectors
     s = M("ADD", M("ADD", 1.0, M("MULTIPLY", V["L"], lump)), M("ADD", M("ADD", stretch, shiv), boil))
+    # ribs: regular rings along y; helix: n-start spiral ridges (sharpened cosines)
+    def sharp(x, k):                      # |cos|^k with sign: k<1 squarer, k>1 thinner ridges
+        return M("MULTIPLY", M("SIGN", x), M("POWER", M("ABSOLUTE", x), k))
+    # tilt: each ring's plane leans by RibTilt (m of y per unit cos), lean direction turns slowly along y
+    # spacing breathes along the tube: local spacing = RibL / (1 + RibVarA*2pi/RibVarP*cos(..))
+    yv = M("ADD", yy, M("MULTIPLY", V["RibVarA"], M("SINE", M("MULTIPLY", yy, M("DIVIDE", 6.2831853, V["RibVarP"])))))
+    ryy = M("ADD", yv, M("MULTIPLY", V["RibTilt"], M("COSINE", M("SUBTRACT", th, M("MULTIPLY", yy, V["RibTiltTw"])))))
+    ribv = sharp(M("COSINE", M("MULTIPLY", ryy, M("DIVIDE", 6.2831853, V["RibL"]))), V["RibK"])
+    rib = M("MULTIPLY", M("MULTIPLY", V["Rib"], M("SUBTRACT", 1.0, M("MULTIPLY", V["D2"], DROP2["melt_rib"]))), sharp(M("COSINE", M("MULTIPLY", ryy, M("DIVIDE", 6.2831853, V["RibL"]))), V["RibK"]))
+    hel = M("MULTIPLY", V["Hel"], sharp(M("COSINE", M("SUBTRACT", M("MULTIPLY", th, V["HelN"]),
+                                                  M("MULTIPLY", yy, M("DIVIDE", 6.2831853, V["HelP"])))), V["HelK"]))
+    s = M("ADD", s, M("ADD", rib, hel))
     rad = M("MULTIPLY", M("MULTIPLY", s, M("MULTIPLY", V["W"], PV["R"])), M("SUBTRACT", 1.0, V["Sq"]))
+    # facets: polygon cross-section, twisting along y
+    seg = M("DIVIDE", 6.2831853, V["FacN"])
+    a_ = M("ADD", th, M("MULTIPLY", yy, V["FacTw"]))
+    m_ = M("SUBTRACT", M("FLOORED_MODULO", a_, seg), M("MULTIPLY", seg, 0.5))
+    poly = M("DIVIDE", M("COSINE", M("MULTIPLY", seg, 0.5)), M("COSINE", m_))
+    rad = M("MULTIPLY", rad, M("ADD", 1.0, M("MULTIPLY", V["Fac"], M("SUBTRACT", poly, 1.0))))
+    # melt clearance (2026-11-14, camera passed through the wall): soft floor on the radius during
+    # Drop 2 only: rad' = 0.5*(rad + Rmin + sqrt((rad - Rmin)^2 + eps^2)), Rmin = D2 * melt_rmin
+    rmin = M("MULTIPLY", V["D2"], DROP2["melt_rmin"])
+    dr = M("SUBTRACT", rad, rmin)
+    rad = M("MULTIPLY", 0.5, M("ADD", M("ADD", rad, rmin),
+                               M("SQRT", M("ADD", M("MULTIPLY", dr, dr), DROP2["melt_eps"] ** 2))))
     phi = M("MULTIPLY", V["Tw"], M("MINIMUM", M("MAXIMUM", rel, -4.0), 30.0))
     ang = M("ADD", th, phi)
     dirv = VM("ADD", VM("SCALE", Nn, scale=M("COSINE", ang)), VM("SCALE", Bb, scale=M("SINE", ang)))
@@ -459,7 +557,16 @@ def _gn(ob):
     st2.data_type = "FLOAT"; st2.domain = "POINT"
     st2.inputs["Name"].default_value = "lit"
     Lk(st.outputs[0], st2.inputs["Geometry"]); Lk(lit, st2.inputs["Value"])
-    Lk(st2.outputs[0], go.inputs[0])
+    st3 = N_("GeometryNodeStoreNamedAttribute")
+    st3.data_type = "FLOAT"; st3.domain = "POINT"
+    st3.inputs["Name"].default_value = "ribv"
+    Lk(st2.outputs[0], st3.inputs["Geometry"]); Lk(ribv, st3.inputs["Value"])
+    ss = N_("GeometryNodeSetShadeSmooth")
+    Lk(st3.outputs[0], ss.inputs["Geometry"])
+    cf = N_("FunctionNodeCompare"); cf.data_type = "FLOAT"; cf.operation = "LESS_THAN"
+    Lk(V["Fac"], cf.inputs[0]); cf.inputs[1].default_value = 0.5
+    Lk(cf.outputs[0], ss.inputs["Shade Smooth"])
+    Lk(ss.outputs[0], go.inputs[0])
     md = ob.modifiers.new("SongWall", "NODES")
     md.node_group = nt
     return nt
@@ -475,7 +582,144 @@ def _mat():
     bs = N_("ShaderNodeBsdfPrincipled")
     g = PV["grey"]
     bs.inputs["Base Color"].default_value = (g, g, g, 1)
-    bs.inputs["Roughness"].default_value = PV["rough"]
+    # 2026-11-14 paint pass (psychedelia in grey): albedo = grey * band * inversion, all off by default
+    def SV(k):
+        v = N_("ShaderNodeValue"); v.name = v.label = k
+        v.outputs[0].default_value = PAINT[k]
+        return v.outputs[0]
+
+    def SM(op, a, b=None):
+        m = N_("ShaderNodeMath"); m.operation = op
+        for i, x in enumerate((a, b)):
+            if x is None:
+                continue
+            if isinstance(x, (int, float)):
+                m.inputs[i].default_value = x
+            else:
+                Lk(x, m.inputs[i])
+        return m.outputs[0]
+
+    def SA(name):
+        a = N_("ShaderNodeAttribute"); a.attribute_name = name
+        return a.outputs["Fac"]
+    P = {k: SV(k) for k in PAINT}
+    tm = N_("ShaderNodeValue"); tm.name = tm.label = "Tm"
+    d = tm.outputs[0].driver_add("default_value")
+    d.driver.expression = "frame/30"
+    th_s, yy_s, rv = SA("th"), SA("yy"), SA("ribv")
+    # broad helical bands, phase drifts with time; smoothstep-sharpened
+    bph = SM("ADD", SM("ADD", SM("MULTIPLY", yy_s, SM("DIVIDE", 6.2831853, P["BandL"])),
+                       SM("MULTIPLY", th_s, P["BandN"])), SM("MULTIPLY", tm.outputs[0], P["BandSpd"]))
+    bc = SM("COSINE", bph)
+    bsh = N_("ShaderNodeMapRange"); bsh.interpolation_type = "SMOOTHSTEP"
+    Lk(bc, bsh.inputs["Value"]); Lk(SM("MULTIPLY", P["BandSoft"], -1.0), bsh.inputs["From Min"])
+    Lk(P["BandSoft"], bsh.inputs["From Max"]); bsh.inputs["To Min"].default_value = -1.0
+    band = SM("ADD", 1.0, SM("MULTIPLY", P["BandA"], bsh.outputs[0]))
+    # inversion: ridges painted light in some stretches, dark in others (slow sign along y)
+    sg = SM("COSINE", SM("MULTIPLY", yy_s, SM("DIVIDE", 6.2831853, P["InvP"])))
+    ssh = N_("ShaderNodeMapRange"); ssh.interpolation_type = "SMOOTHSTEP"
+    Lk(sg, ssh.inputs["Value"]); ssh.inputs["From Min"].default_value = -0.35
+    ssh.inputs["From Max"].default_value = 0.35; ssh.inputs["To Min"].default_value = -1.0
+    inv = SM("ADD", 1.0, SM("MULTIPLY", P["InvA"], SM("MULTIPLY", rv, ssh.outputs[0])))
+    alb = SM("MAXIMUM", SM("MULTIPLY", g, SM("MULTIPLY", band, inv)), 0.0)
+    cmb = N_("ShaderNodeCombineColor")
+    for i in range(3):
+        Lk(alb, cmb.inputs[i])
+    if CAR["on"]:
+        # 2026-11-14 candy-pearl car paint (Nick: classic car red, metallic, pearlescent, flake like a
+        # real car). Facing = cherry over gold flake, grazing = violet pearl (Layer Weight); the grey
+        # paint scalar (alb / grey) still multiplies it. Flake = Voronoi cells on seam-free rest coords
+        # (R cos th, R sin th, y) tilting the base normal; clear coat on top keeps the hard highlights.
+        lw = N_("ShaderNodeLayerWeight"); lw.inputs["Blend"].default_value = CAR["flop_blend"]
+        mx = N_("ShaderNodeMix"); mx.data_type = "RGBA"; mx.name = "RedFlop"
+        fa = tuple(c * t for c, t in zip(CAR["face"], CAR["flake_tint"]))
+        mx.inputs["A"].default_value = (*fa, 1); mx.inputs["B"].default_value = (*CAR["graze"], 1)
+        Lk(lw.outputs["Facing"], mx.inputs["Factor"])
+        ps = SM("DIVIDE", alb, g)
+        bc = N_("ShaderNodeVectorMath"); bc.operation = "SCALE"
+        if DEPTH["on"]:
+            # 2026-11-14 depth pearl (Nick: "psychedelic hyperrealistic but unrealistic"): the paint's
+            # hue depends on distance from the viewer, which no paint can do. Cyclic ramp indexed by
+            # fract(Facing*face_k + view_distance/period): near walls violet, throat copper/gold; as you
+            # travel the colour rolls toward you at travel speed.
+            cdp = N_("ShaderNodeCameraData")
+            hi = SM("FRACT", SM("ADD", SM("MULTIPLY", lw.outputs["Facing"], DEPTH["face_k"]),
+                                SM("DIVIDE", cdp.outputs["View Distance"], DEPTH["period_m"])))
+            rp = N_("ShaderNodeValToRGB"); rp.name = "PearlRamp"; cr = rp.color_ramp
+            cr.interpolation = "EASE"
+            stops = [(0.0, fa)] + [(pp, cc) for pp, cc in DEPTH["stops"]] + [(1.0, fa)]
+            cr.elements[0].position = 0.0; cr.elements[0].color = (*stops[0][1], 1)
+            cr.elements[1].position = 1.0; cr.elements[1].color = (*stops[-1][1], 1)
+            for pp, cc in stops[1:-1]:
+                e_ = cr.elements.new(pp); e_.color = (*cc, 1)
+            Lk(hi, rp.inputs["Fac"])
+            Lk(rp.outputs["Color"], bc.inputs[0])
+        else:
+            Lk(mx.outputs["Result"], bc.inputs[0])
+        Lk(ps, bc.inputs["Scale"])
+        Lk(bc.outputs[0], bs.inputs["Base Color"])
+        cx = N_("ShaderNodeCombineXYZ")
+        Lk(SM("MULTIPLY", SM("COSINE", th_s), PV["R"]), cx.inputs[0])
+        Lk(SM("MULTIPLY", SM("SINE", th_s), PV["R"]), cx.inputs[1])
+        Lk(yy_s, cx.inputs[2])
+        vo = N_("ShaderNodeTexVoronoi"); vo.name = "FlakeVor"; vo.voronoi_dimensions = "3D"
+        vo.inputs["Scale"].default_value = CAR["flake_scale"]
+        Lk(cx.outputs[0], vo.inputs["Vector"])
+        vs = N_("ShaderNodeVectorMath"); vs.operation = "SUBTRACT"
+        Lk(vo.outputs["Color"], vs.inputs[0]); vs.inputs[1].default_value = (0.5, 0.5, 0.5)
+        vk = N_("ShaderNodeVectorMath"); vk.operation = "SCALE"; vk.name = "FlakeK"
+        Lk(vs.outputs[0], vk.inputs[0]); vk.inputs["Scale"].default_value = CAR["flake_k"]
+        # hats = detail (2026-11-14): a few random flakes flash warm white on each hat
+        sep = N_("ShaderNodeSeparateColor"); Lk(vo.outputs["Color"], sep.inputs[0])
+        gm = N_("ShaderNodeMath"); gm.operation = "GREATER_THAN"
+        Lk(sep.outputs[0], gm.inputs[0]); gm.inputs[1].default_value = 1.0 - AMOD["glint_frac"]
+        gv = N_("ShaderNodeValue"); gv.name = gv.label = "Glint"
+        cdg = N_("ShaderNodeCameraData")         # near walls only: glints fade out by glint_far m
+        gnear = N_("ShaderNodeMapRange"); gnear.interpolation_type = "SMOOTHSTEP"
+        Lk(cdg.outputs["View Distance"], gnear.inputs["Value"])
+        gnear.inputs["From Min"].default_value, gnear.inputs["From Max"].default_value = 1.0, AMOD["glint_far"]
+        gnear.inputs["To Min"].default_value, gnear.inputs["To Max"].default_value = 1.0, 0.0
+        gs = SM("MULTIPLY", SM("MULTIPLY", SM("MULTIPLY", gm.outputs[0], gv.outputs[0]), AMOD["glint_k"]), gnear.outputs[0])
+        gem = N_("ShaderNodeEmission"); gem.inputs["Color"].default_value = (1.0, 0.85, 0.6, 1)
+        Lk(gs, gem.inputs["Strength"])
+        SUN["_glint"] = gem
+        geo = N_("ShaderNodeNewGeometry")
+        va = N_("ShaderNodeVectorMath"); va.operation = "ADD"
+        Lk(geo.outputs["Normal"], va.inputs[0]); Lk(vk.outputs[0], va.inputs[1])
+        vn = N_("ShaderNodeVectorMath"); vn.operation = "NORMALIZE"
+        Lk(va.outputs[0], vn.inputs[0]); Lk(vn.outputs[0], bs.inputs["Normal"])
+        bs.inputs["Metallic"].default_value = CAR["metallic"]
+        bs.inputs["Roughness"].default_value = CAR["rough"]
+        bs.inputs["Specular Tint"].default_value = (*CAR["spec_tint"], 1)
+        bs.inputs["Coat Weight"].default_value = 1.0
+        bs.inputs["Coat Roughness"].default_value = CAR["coat_rough"]
+        bs.inputs["Thin Film Thickness"].default_value = CAR["film_nm"]
+        bs.inputs["Thin Film IOR"].default_value = 1.5
+    if SUN["on"]:
+        # 2026-11-14 "paint job sitting in the sun": the clear coat reflects a real sunny lot (HDRI) that
+        # the camera never sees and that lights nothing. Emission = sky(reflection dir) * Fresnel(1.5) *
+        # coat_k, faded out with view distance so the throat stays black (no sky reaches that deep).
+        out_ = next(n for n in nt.nodes if n.type == "OUTPUT_MATERIAL")
+        tc = N_("ShaderNodeTexCoord"); mp = N_("ShaderNodeMapping"); mp.name = "CoatSkyRot"
+        mp.inputs["Rotation"].default_value[2] = math.radians(SUN["sky_rot_deg"])
+        Lk(tc.outputs["Reflection"], mp.inputs["Vector"])
+        env = N_("ShaderNodeTexEnvironment")
+        env.image = bpy.data.images.load(SUN["hdri"], check_existing=True)
+        Lk(mp.outputs[0], env.inputs["Vector"])
+        fr = N_("ShaderNodeFresnel"); fr.inputs["IOR"].default_value = 1.5
+        cd = N_("ShaderNodeCameraData")
+        fd = N_("ShaderNodeMapRange"); fd.name = "CoatSkyFade"; fd.interpolation_type = "SMOOTHSTEP"
+        Lk(cd.outputs["View Distance"], fd.inputs["Value"])
+        fd.inputs["From Min"].default_value, fd.inputs["From Max"].default_value = SUN["fade_m"]
+        fd.inputs["To Min"].default_value, fd.inputs["To Max"].default_value = 1.0, 0.0
+        sf = N_("ShaderNodeValue"); sf.name = sf.label = "SunFade"; sf.outputs[0].default_value = 1.0
+        ck = SM("MULTIPLY", SM("MULTIPLY", SM("MULTIPLY", fr.outputs[0], fd.outputs[0]), SUN["coat_k"]), sf.outputs[0])
+        em2 = N_("ShaderNodeEmission")
+        Lk(env.outputs["Color"], em2.inputs["Color"]); Lk(ck, em2.inputs["Strength"])
+        SUN["_coat"] = (em2, out_)
+    else:
+        Lk(cmb.outputs[0], bs.inputs["Base Color"])
+        bs.inputs["Roughness"].default_value = PV["rough"]
     at = N_("ShaderNodeAttribute"); at.attribute_name = "lit"
     gl = N_("ShaderNodeValue"); gl.name = gl.label = "Glow"
     sn = N_("ShaderNodeValue"); sn.name = sn.label = "Snare"
@@ -491,7 +735,19 @@ def _mat():
     Lk(st.outputs[0], em.inputs["Strength"])
     add = N_("ShaderNodeAddShader")
     Lk(bs.outputs[0], add.inputs[0]); Lk(em.outputs[0], add.inputs[1])
-    Lk(add.outputs[0], out.inputs["Surface"])
+    if SUN["on"] and CAR["on"]:
+        em2, _ = SUN.pop("_coat")
+        add2 = N_("ShaderNodeAddShader")
+        Lk(add.outputs[0], add2.inputs[0]); Lk(em2.outputs[0], add2.inputs[1])
+        gem = SUN.pop("_glint", None)
+        if gem is not None:
+            add3 = N_("ShaderNodeAddShader")
+            Lk(add2.outputs[0], add3.inputs[0]); Lk(gem.outputs[0], add3.inputs[1])
+            Lk(add3.outputs[0], out.inputs["Surface"])
+        else:
+            Lk(add2.outputs[0], out.inputs["Surface"])
+    else:
+        Lk(add.outputs[0], out.inputs["Surface"])
     return m
 
 
@@ -565,23 +821,55 @@ def build_song(seconds=SONG_S):
     cam.rotation_mode = "QUATERNION"
     sc.camera = cam
     lights = []
-    for name, e, loc, spec in (("Fill", PV["fill"], (0.0, 0.3, 0.6), 0.3),
+    for name, e, loc, spec in (("Fill", PV["fill"], (0.0, 0.3, 0.6), 1.0 if CAR["on"] else 0.3),
                                ("FillAhead", PV["fill_ahead"], (0.0, 0.0, -PV["ahead_d"]), 0.0)):
         ld = bpy.data.lights.new(name, "POINT")
         ld.color = (1.0, 0.97, 0.94)
-        ld.specular_factor = spec
+        ld.specular_factor = spec if (name == "Fill" or not CAR["on"]) else 1.0   # car paint needs its highlights
         ld.use_shadow = name == "Fill"
         lo = bpy.data.objects.new(name, ld)
         c.objects.link(lo)
         lo.parent = cam
         lo.location = loc
         lights.append((ld, e))
+    if SUN["on"]:
+        # sun: specular only (walls stay headlamp-lit, void stays black), no shadow so it reaches inside;
+        # aimed where the sun sits in the rotated coat reflection, so lamp and sky agree
+        sd = bpy.data.lights.new("Sun", "SUN")
+        sd.energy = SUN["energy"]; sd.angle = math.radians(SUN["angle_deg"]); sd.color = SUN["color"]
+        sd.diffuse_factor = 0.0; sd.specular_factor = 1.0; sd.volume_factor = 0.0; sd.use_shadow = False
+        so = bpy.data.objects.new("Sun", sd); c.objects.link(so)
+        e_, a_ = math.radians(SUN["sun_elev_deg"]), math.radians(SUN["sun_az_deg"])
+        d_ = Vector((math.cos(e_) * math.cos(a_), math.cos(e_) * math.sin(a_), math.sin(e_)))
+        so.rotation_mode = "QUATERNION"; so.rotation_quaternion = (-d_).to_track_quat("-Z", "Y")
+        sc.view_settings.exposure = SUN["exposure"]
+        old = bpy.data.node_groups.get("TippinComp")
+        if old:
+            bpy.data.node_groups.remove(old)
+        cg = bpy.data.node_groups.new("TippinComp", "CompositorNodeTree")
+        cg.interface.new_socket("Image", in_out="OUTPUT", socket_type="NodeSocketColor")
+        rl = cg.nodes.new("CompositorNodeRLayers"); gl = cg.nodes.new("CompositorNodeGlare")
+        go = cg.nodes.new("NodeGroupOutput")
+        gl.inputs["Type"].default_value = "Bloom"
+        gl.inputs["Threshold"].default_value = SUN["glare_thresh"]
+        gl.inputs["Strength"].default_value = SUN["glare_strength"]
+        gl.inputs["Size"].default_value = SUN["glare_size"]
+        cg.links.new(rl.outputs["Image"], gl.inputs["Image"]); cg.links.new(gl.outputs["Image"], go.inputs[0])
+        sc.compositing_node_group = cg
     locs = [[], [], []]
     quats = [[], [], [], []]
     roll, qprev = 0.0, None
     for f in range(nf):
         P_, Nup = at(ycam[f])
-        A_, _ = at(ycam[f] + PV["look"])
+        A_, Na = at(ycam[f] + PV["look"])
+        if PV["off"]:
+            ang = math.radians(PV["off_phase"] + PV["off_rate"] * f / FPS)
+            tg = (A_ - P_).normalized()
+            Bp = Nup.cross(tg)
+            Ba = Na.cross(tg)
+            off = PV["off"] + sig["D2"][f] * (DROP2["melt_off"] - PV["off"])   # back toward the axis in the melt
+            P_ = P_ + off * (math.cos(ang) * Nup + math.sin(ang) * Bp)
+            A_ = A_ + off * (1 - PV["off_aim"]) * (math.cos(ang) * Na + math.sin(ang) * Ba)
         fwd = (A_ - P_).normalized()
         yc = (Nup - Nup.dot(fwd) * fwd).normalized()
         zc = -fwd
@@ -601,8 +889,33 @@ def build_song(seconds=SONG_S):
         _bulk(cam, "rotation_quaternion", quats[i], i)
     for ld, e in lights:
         _bulk(ld, "energy", [e * v for v in sig["lamp"]], -1)
+    if SUN["on"]:
+        # fix 2026-11-14: sun + coat sky follow the headlamp fade (the end went to 41 mean, not black);
+        # normalised so every section at lamp >= 0.85 keeps the full sun
+        fade = [min(1.0, v / 0.85) for v in sig["lamp"]]
+        flare = [1.0 + AMOD["flare"] * x for x in sig["Flare"]] if AMOD["on"] else [1.0] * nf
+        _bulk(bpy.data.lights["Sun"], "energy", [SUN["energy"] * v * fl for v, fl in zip(fade, flare)], -1)
+        if AMOD["on"]:
+            # snare = light: each snare steps the sun round the coil; the reflected sky turns with it
+            so_ = bpy.data.objects["Sun"]
+            e_ = math.radians(SUN["sun_elev_deg"])
+            qs = [[], [], [], []]
+            for f in range(nf):
+                a_ = math.radians(SUN["sun_az_deg"] + sig["SunAz"][f])
+                d_ = Vector((math.cos(e_) * math.cos(a_), math.cos(e_) * math.sin(a_), math.sin(e_)))
+                q_ = (-d_).to_track_quat("-Z", "Y")
+                if f and sum(a * b for a, b in zip(q_, [qs[i][-1] for i in range(4)])) < 0:
+                    q_.negate()
+                for i in range(4):
+                    qs[i].append(q_[i])
+            for i in range(4):
+                _bulk(so_, "rotation_quaternion", qs[i], i)
+            _bulk(mat.node_tree, 'nodes["CoatSkyRot"].inputs[2].default_value',
+                  [math.radians(SUN["sky_rot_deg"] - v) for v in sig["SunAz"]], 2)
+            _bulk(mat.node_tree, 'nodes["Glint"].outputs[0].default_value', sig["Glint"], -1)
+        _bulk(mat.node_tree, 'nodes["SunFade"].outputs[0].default_value', fade, -1)
     _bulk(cd, "lens", sig["lens"], -1)
-    for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw", "Mut", "Boil"):
+    for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw", "Mut", "Boil", "D2"):
         _bulk(gn, f'nodes["{k}"].outputs[0].default_value', sig[k], -1)
     _bulk(gn, 'nodes["Ycam"].outputs[0].default_value', ycam, -1)
     for k in ("Glow", "Snare"):
