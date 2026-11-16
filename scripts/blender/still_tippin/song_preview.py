@@ -64,7 +64,8 @@ CHAOS = [(13, 17, 0.55), (25, 33, 1.0), (77, 81, 1.0), (111, 113, 0.45)]
 # ribs B approved (Nick, 2026-11-14)
 HYP = dict(LumpK=0.3, Rib=0.06, RibL=0.6, RibK=0.3, RibVarA=0.95, RibVarP=12.0, RibTilt=0.0, RibTiltTw=0.05, Hel=0.0, HelN=2.0, HelP=7.0, HelK=1.0,
            Fac=0.0, FacN=7.0, FacTw=0.08)
-CAR = dict(on=True, face=(0.30, 0.008, 0.012), graze=(0.10, 0.008, 0.16), flop_blend=0.45,
+# face: oxblood with gold flake/highlights (Nick, 2026-11-16: "oxblood gold"; was 0.30, 0.008, 0.012)
+CAR = dict(on=True, face=(0.075, 0.003, 0.010), graze=(0.10, 0.008, 0.16), flop_blend=0.45,
            flake_tint=(1.0, 0.55, 0.25), spec_tint=(1.0, 0.75, 0.4), flake_scale=450.0, flake_k=0.12,
            metallic=0.6, rough=0.25, coat_rough=0.04, film_nm=420.0)
 # Drop 2 = the liquid-metal melt (Nick, 2026-11-14: "melt in is really good"); v3 behaviour was
@@ -78,6 +79,20 @@ DROP2_MODES = dict(A=dict(fold_old=0.0, fold_oval=1.0, sq_k=0.5, melt_lump=0.3, 
 # 2026-11-14 audio mapping test (fake signals until stems): kick = push (travel surge, which also lurches the
 # depth pearl), snare = light (sun steps round the coil + flare), sub = intensity (walls breathe), hats = detail
 # (flake glints). "tight" vs "swell" = the easing.
+# 2026-11-16 (Nick: per-hit mapping "feels forced"): the music inside the world instead of on top of it.
+# 2026-11-16 water slide (Nick: "drop the no sway rule, prototype it"). amt = how wild each section rides.
+SLIDE = dict(on=False, amt=dict(intro=0.35, pre=0.5, drop1=1.0, **{"break": 0.5}, drop2a=1.0, drop2b=1.0,
+                                drop2c=1.0, drop2d=1.0, outro=0.4, end=0.15),
+             Rh=2.2, Ph=20.0, Pf=90.0, Pp=45.0, Pk=0.7, grav_k=1.2, v_tau=0.8, r_sim=1.2, damp=0.5, off=0.95,
+             g_sim=0.7, off_break=0.45)
+# 2026-11-16 (Nick): self-similar ribs + the red/pearl arrangement
+SELF = dict(on=True, levels=[(4, 0.25), (16, 0.0625)], bump_m=0.01)
+ARR = dict(on=True, pearl_bars=[(33, 65), (81, 113)], far_m=80.0, near_m=-10.0, soft_m=4.0)
+TEMPO = dict(on=False, ease_s=0.25, y0=0.0,
+             ribs_per_beat=dict(intro=0.5, pre=1.0, drop1=2.0, **{"break": 1.0}, drop2a=2.0, drop2b=2.0,
+                                drop2c=2.0, drop2d=2.0, outro=1.0, end=0.25))
+RATTLE = dict(on=False, env="/Volumes/music/blender/still_tippin_assets/sub_env_master.json",
+              load_k=0.35, hit_k=4.0, shake_m=0.006, shake_deg=0.25, buzz_m=0.004)
 AMOD = dict(on=False, sun_step_deg=25.0, snare_tau=0.06, flare=0.5, flare_tau=0.03, hat_tau=0.05,
             glint_frac=0.003, glint_k=3.0, glint_far=6.0, breathe=0.06, sub_release=0.35, sub_attack=0.03, kick_tau=0.0)
 AMOD_MODES = dict(tight=dict(on=True),
@@ -85,9 +100,16 @@ AMOD_MODES = dict(tight=dict(on=True),
                              sub_attack=0.25, kick_tau=0.3))
 DEPTH = dict(on=True, period_m=14.0, face_k=0.25,
              stops=[(0.3, (0.07, 0.005, 0.11)), (0.6, (0.30, 0.09, 0.02)), (0.8, (0.28, 0.17, 0.03))])
-SUN = dict(on=True, hdri="/Volumes/music/blender/still_tippin_assets/abandoned_tank_farm_03_2k.hdr",
-           sky_rot_deg=144.0, coat_k=1.0, fade_m=(6.0, 22.0),
-           energy=30.0, angle_deg=3.0, color=(1.0, 0.95, 0.86), sun_az_deg=0.0, sun_elev_deg=39.4,
+# 2026-11-16 brand check miss 4 (sunny lot = generic, un-WOBAR daylight): night instead. The coat reflects a
+# suburban road at night with one street lamp (Poly Haven street_lamp); the specular-only key light is that
+# lamp (its direction + colour from the HDRI's brightest pixel: u 0.048, elev 45.2). Was the sunny lot,
+# abandoned_tank_farm_03, sky_rot 144, sun colour (1, .95, .86), elev 39.4.
+# matte tested and rejected 2026-11-16: satin turns the oxblood bronze/milky. Gloss kept as this track's
+# deliberate exception to the matte fundamental; restraint comes from night + darkness instead (Nick: lock).
+MATTE = dict(on=False, coat_rough_valley=0.28, coat_rough_crest=0.05, crest_from=0.2, base_rough=0.4, metallic=0.5)
+SUN = dict(on=True, hdri="/Volumes/music/blender/still_tippin_assets/street_lamp_2k.hdr",
+           sky_rot_deg=342.8, coat_k=1.0, fade_m=(6.0, 22.0),
+           energy=10.0, angle_deg=3.0, color=(1.0, 0.945, 0.768), sun_az_deg=0.0, sun_elev_deg=45.2,   # street lamp, not sun
            exposure=-0.6, glare_thresh=2.0, glare_strength=0.6, glare_size=0.2)
 PAINT = dict(BandA=0.0, BandL=3.5, BandN=1.0, BandSoft=0.6, BandSpd=0.0, InvA=0.0, InvP=16.0)
 BREAK = (65, 81, 4)          # bars, line length in bars
@@ -98,6 +120,7 @@ PV = dict(R=1.6, n_theta=144, dy=0.08, ahead=45.0, behind=4.0, look=4.5, lens=20
           grey=0.30, rough=0.38, seed=7,
           # off-axis ride (2026-11-14, breaks the target symmetry): metres off the centre line, the side
           # drifts one way at off_rate deg/s; off_aim 0 = look parallel to the axis, 1 = aim back at it
+          speed_k=1.5,   # 2026-11-16 (Nick: "move more quickly through the tunnel")
           off=0.7, off_rate=6.0, off_phase=40.0, off_aim=0.0,
           wx=((5.2, 10.8, 0.0), (1.4, 5.7, 1.3), (0.4, 3.5, 2.1)),
           wz=((3.0, 13.5, 1.0), (1.0, 6.75, 0.4), (0.3, 4.0, 2.7)), descent=0.12)
@@ -190,7 +213,7 @@ def signals(nf):
     dt = 1.0 / FPS
     out = {k: [] for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw",
                            "Glow", "Snare", "lamp", "speed", "roll", "wander",
-                           "C", "lens", "Boil", "Mut", "D2", "SunAz", "Flare", "Glint", "Breath")}
+                           "C", "lens", "Boil", "Mut", "D2", "SunAz", "Flare", "Glint", "Breath", "slide")}
     # vowel targets per 8th, kick 8ths open wide
     eighth = BEAT / 2
     vt = {}
@@ -276,10 +299,11 @@ def signals(nf):
         lenspunch.append(-2.5 * ke * max(0.0, P["kick"] - 0.5))           # kick punches the lens in the drops
         out["roll"].append(P["roll"] + ch * (45 + 30 * math.sin(t * 2.3) * math.sin(t * 0.7)))
         out["wander"].append(P["wander"])
+        out["slide"].append(SLIDE["amt"].get(name, 0.3))
     # v3 (Nick: "section transitions end up a little choppy"): smooth the section / chaos
     # driven channels so nothing steps; kicks are added back after so they keep their punch.
     for k, tau in (("speed", 0.25), ("roll", 0.35), ("W", 0.2), ("L", 0.3), ("lens", 0.3),
-                   ("Boil", 0.2), ("lamp", 0.3), ("Glow", 0.2), ("wander", 0.5), ("C", 0.2), ("D2", 0.3)):
+                   ("Boil", 0.2), ("lamp", 0.3), ("Glow", 0.2), ("wander", 0.5), ("C", 0.2), ("D2", 0.3), ("slide", 1.0)):
         out[k] = _smooth_series(out[k], tau)
     if AMOD["on"]:
         # snare count eased into sun steps (tight = snap, swell = glide); sub breath and kick push softened
@@ -308,7 +332,7 @@ def _per_frame_to_y(ys, ycam, vals):
     return out
 
 
-def _spine(ycam, wander, chaos):
+def _spine(ycam, wander, chaos, slide=None):
     """y grid, centre line, with wander amplitude following the camera's section at each y."""
     p = PV
     y_end = ycam[-1] + p["ahead"] + 2
@@ -348,8 +372,28 @@ def _spine(ycam, wander, chaos):
     aout = As[min(len(As) - 1, int((yout - ys[0]) / p["dy"]))]
     xin, zin = base(yin, ain)
     xout, zout = base(yout, aout)
+    # 2026-11-16 water slide (Nick: "more like a water slide than a simple glide"): corkscrews that
+    # alternate hand every Pf metres + plunges every Pp metres, scaled by the section's slide amount
+    # (moving-averaged along y). Helix bend radius ~ (1 + (Rh k)^2) / (Rh k^2) stays > 5 m.
+    if slide is not None and SLIDE["on"]:
+        Sl = _per_frame_to_y(ys, ycam, slide)
+        sw = int(6.0 / p["dy"]); spre = [0.0]
+        for v in Sl:
+            spre.append(spre[-1] + v)
+        Sl = [(spre[min(len(Sl), i + sw)] - spre[max(0, i - sw)]) / (min(len(Sl), i + sw) - max(0, i - sw))
+              for i in range(len(Sl))]
+        psi, zpl, sx, sz = 0.0, 0.0, [], []
+        for y, sl in zip(ys, Sl):
+            k = 2 * math.pi / SLIDE["Ph"] * math.tanh(3 * math.sin(2 * math.pi * y / SLIDE["Pf"]))
+            psi += k * p["dy"]
+            bump = max(0.0, math.sin(2 * math.pi * y / SLIDE["Pp"])) ** 4
+            zpl -= sl * SLIDE["Pk"] * bump * p["dy"]
+            sx.append(sl * SLIDE["Rh"] * math.sin(psi))
+            sz.append(sl * SLIDE["Rh"] * (math.cos(psi) - 1) + zpl)
+    else:
+        sx = sz = None
     C, BW = [], []
-    for y, a, ch in zip(ys, As, Cy):
+    for j, (y, a, ch) in enumerate(zip(ys, As, Cy)):
         x, z = base(y, a)
         bw = _smooth((y - yin) / 3.0) * (1 - _smooth((y - (yout - 3.0)) / 3.0)) if yin <= y <= yout else 0.0
         if bw > 0:
@@ -361,6 +405,8 @@ def _spine(ycam, wander, chaos):
         # riser whip: tighter, faster bends that only exist where the chaos is
         x += ch * (0.55 * math.sin(y / 3.6 + 0.7) + 0.28 * math.sin(y / 2.6 + 2.0))   # bend radius stays > tube
         z += ch * (0.45 * math.sin(y / 3.2 + 1.4) + 0.22 * math.sin(y / 2.4 + 0.3))
+        if sx is not None:
+            x += sx[j] * (1 - bw); z += sz[j] * (1 - bw)
         C.append(Vector((x, y, z - p["descent"] * y)))
         BW.append(bw)
     T = [(C[min(len(C) - 1, i + 1)] - C[max(0, i - 1)]).normalized() for i in range(len(C))]
@@ -653,7 +699,24 @@ def _mat():
             for pp, cc in stops[1:-1]:
                 e_ = cr.elements.new(pp); e_.color = (*cc, 1)
             Lk(hi, rp.inputs["Fac"])
-            Lk(rp.outputs["Color"], bc.inputs[0])
+            if ARR["on"]:
+                # 2026-11-16 arrangement (Nick: "yes to the 3 with the red"): red = the rap, pearl = the
+                # drops. Pearl shows where view distance > PearlFront; the front is keyed to sweep from
+                # deep in the throat to the lens over the bar before each drop (arrives on the downbeat)
+                # and back down the throat at the outro.
+                cdf = N_("ShaderNodeCameraData")
+                pf = N_("ShaderNodeValue"); pf.name = pf.label = "PearlFront"; pf.outputs[0].default_value = -10.0
+                pm = N_("ShaderNodeMapRange"); pm.interpolation_type = "SMOOTHSTEP"
+                Lk(cdf.outputs["View Distance"], pm.inputs["Value"])
+                Lk(SM("SUBTRACT", pf.outputs[0], ARR["soft_m"]), pm.inputs["From Min"])
+                Lk(SM("ADD", pf.outputs[0], ARR["soft_m"]), pm.inputs["From Max"])
+                pmx = N_("ShaderNodeMix"); pmx.data_type = "RGBA"; pmx.name = "PearlMix"
+                Lk(pm.outputs[0], pmx.inputs["Factor"])
+                pmx.inputs["A"].default_value = (*fa, 1)          # plain candy: cherry over gold flake
+                Lk(rp.outputs["Color"], pmx.inputs["B"])
+                Lk(pmx.outputs["Result"], bc.inputs[0])
+            else:
+                Lk(rp.outputs["Color"], bc.inputs[0])
         else:
             Lk(mx.outputs["Result"], bc.inputs[0])
         Lk(ps, bc.inputs["Scale"])
@@ -685,7 +748,23 @@ def _mat():
         SUN["_glint"] = gem
         geo = N_("ShaderNodeNewGeometry")
         va = N_("ShaderNodeVectorMath"); va.operation = "ADD"
-        Lk(geo.outputs["Normal"], va.inputs[0]); Lk(vk.outputs[0], va.inputs[1])
+        base_n = geo.outputs["Normal"]
+        if SELF["on"]:
+            # 2026-11-16 self-similar ribs (Nick picked it): the rib profile again at 1/4 and 1/16 of the
+            # local spacing (same breathing phase as the GN ribs), as bump on the base and the clear coat
+            ya = N_("ShaderNodeAttribute"); ya.attribute_name = "yy"
+            ph = SM("ADD", ya.outputs["Fac"], SM("MULTIPLY", HYP["RibVarA"],
+                    SM("SINE", SM("MULTIPLY", ya.outputs["Fac"], 2 * math.pi / HYP["RibVarP"]))))
+            h_ = None
+            for div, amp in SELF["levels"]:
+                w_ = SM("MULTIPLY", amp, SM("COSINE", SM("MULTIPLY", ph, 2 * math.pi * div / HYP["RibL"])))
+                h_ = w_ if h_ is None else SM("ADD", h_, w_)
+            bp = N_("ShaderNodeBump"); bp.name = "SelfRibs"
+            bp.inputs["Distance"].default_value = SELF["bump_m"]; bp.inputs["Strength"].default_value = 1.0
+            Lk(h_, bp.inputs["Height"])
+            base_n = bp.outputs["Normal"]
+            Lk(bp.outputs["Normal"], bs.inputs["Coat Normal"])
+        Lk(base_n, va.inputs[0]); Lk(vk.outputs[0], va.inputs[1])
         vn = N_("ShaderNodeVectorMath"); vn.operation = "NORMALIZE"
         Lk(va.outputs[0], vn.inputs[0]); Lk(vn.outputs[0], bs.inputs["Normal"])
         bs.inputs["Metallic"].default_value = CAR["metallic"]
@@ -693,6 +772,17 @@ def _mat():
         bs.inputs["Specular Tint"].default_value = (*CAR["spec_tint"], 1)
         bs.inputs["Coat Weight"].default_value = 1.0
         bs.inputs["Coat Roughness"].default_value = CAR["coat_rough"]
+        if MATTE["on"]:
+            # 2026-11-16 brand check miss 3 (gloss metallic everywhere): satin valleys, gloss kept only on
+            # the rib crests (GN 'ribv' +1 = crest), less metal, rougher base
+            rv_ = N_("ShaderNodeAttribute"); rv_.attribute_name = "ribv"
+            crest = N_("ShaderNodeMapRange"); crest.interpolation_type = "SMOOTHSTEP"
+            Lk(rv_.outputs["Fac"], crest.inputs["Value"])
+            crest.inputs["From Min"].default_value, crest.inputs["From Max"].default_value = MATTE["crest_from"], 1.0
+            crest.inputs["To Min"].default_value, crest.inputs["To Max"].default_value = MATTE["coat_rough_valley"], MATTE["coat_rough_crest"]
+            Lk(crest.outputs[0], bs.inputs["Coat Roughness"])
+            bs.inputs["Roughness"].default_value = MATTE["base_rough"]
+            bs.inputs["Metallic"].default_value = MATTE["metallic"]
         bs.inputs["Thin Film Thickness"].default_value = CAR["film_nm"]
         bs.inputs["Thin Film IOR"].default_value = 1.5
     if SUN["on"]:
@@ -773,6 +863,82 @@ def _bulk(owner, path, vals, index=0):
     fc.update()
 
 
+def _tempo_ycam(nf):
+    """2026-11-16 tempo-lock: the ribs pass the lens on the grid. Target rib phase phi(t) is exact
+    piecewise-linear (ribs per beat set per section, changes on section downbeats); it is smoothed with a
+    critically damped filter and read 2*tau ahead, so the smoothing's lag cancels and crossings stay on
+    the beat away from the changes. Camera y is then solved from the GN rib phase y + A sin(2 pi y / P)."""
+    rib_l = HYP["RibL"]; A, Pv = HYP["RibVarA"], HYP["RibVarP"]
+    rate = TEMPO["ribs_per_beat"]
+    starts = [(b, rate.get(n, 1.0)) for n, b, xf, p in SECTIONS]
+    tau = TEMPO["ease_s"]
+    a_ = 1.0 - math.exp(-1.0 / (FPS * tau))
+    lag = 2 * (1 - a_) / a_                      # exact lag of the 2-pole smoother on a ramp, in frames
+    lead = int(math.ceil(lag)) + 1
+    phi = []
+    for f in range(nf + lead):
+        t = f / FPS
+        acc, ph = 0.0, None
+        for i, (b, r) in enumerate(starts):
+            tb = _t(b)
+            te = _t(starts[i + 1][0]) if i + 1 < len(starts) else 1e9
+            if t >= te:
+                acc += r * (te - tb) / BEAT
+            elif t >= tb:
+                ph = acc + r * (t - tb) / BEAT
+                break
+        phi.append(rib_l * (ph if ph is not None else acc))
+    sm = _smooth_series(phi, tau)
+    phs = []
+    for f in range(nf):                          # read the smoothed phase `lag` frames ahead (fractional)
+        x = f + lag; i = int(x); u = x - i
+        phs.append(sm[i] * (1 - u) + sm[i + 1] * u)
+    ys, y = [], 0.0
+    for target in phs:
+        for _ in range(8):                   # Newton on y + A sin(2 pi y / P) = target (monotone, A*2pi/P < 1)
+            g = y + A * math.sin(2 * math.pi * y / Pv) - target
+            dg = 1 + A * 2 * math.pi / Pv * math.cos(2 * math.pi * y / Pv)
+            y -= g / dg
+        ys.append(y + TEMPO["y0"])
+    return ys
+
+
+def _rattle(nf):
+    """2026-11-16 trunk rattle from the sub (rough master envelope until the sub stem): mostly sub HITS
+    (envelope above its 0.5 s average), plus a light constant buzz when the sub is fully loaded."""
+    import json
+    env = json.load(open(RATTLE["env"]))["env"]
+    env = (env + [env[-1]] * nf)[:nf]
+    slow = _smooth_series(env, 0.5)
+    out = []
+    for e, sl in zip(env, slow):
+        load = _smooth(min(1.0, max(0.0, (e - 0.85) / 0.15)))
+        hit = max(0.0, e - sl)
+        out.append(min(1.0, RATTLE["load_k"] * load + RATTLE["hit_k"] * hit))
+    return out
+
+
+def _pearl_front(nf):
+    """Distance (m) beyond which the paint is pearl. 'in' bars sweep far -> near over the bar before the
+    downbeat (arrives on it); 'out' bars sweep near -> far over the bar after."""
+    far, near = ARR["far_m"], ARR["near_m"]
+    out = []
+    for f in range(nf):
+        bar = f / FPS / BAR + 1
+        on = False
+        for b0, b1 in ARR["pearl_bars"]:
+            if b0 <= bar < b1:
+                on = True
+        v = near if on else far
+        for b0, b1 in ARR["pearl_bars"]:
+            if b0 - 1 <= bar < b0:                                  # rolling in from the throat
+                u = _smooth(bar - (b0 - 1)); v = far + (near - far) * u
+            if b1 <= bar < b1 + 1:                                  # receding back down
+                u = _smooth(bar - b1); v = near + (far - near) * u
+        out.append(v)
+    return out
+
+
 def build_song(seconds=SONG_S):
     sc = bpy.context.scene
     try:
@@ -793,11 +959,35 @@ def build_song(seconds=SONG_S):
     nf = int(round(seconds * FPS))
     sig = signals(nf)
     # camera travel
-    ycam, y = [], 0.5
-    for f in range(nf):
-        ycam.append(y)
-        y += sig["speed"][f] / FPS
-    ys, C, T, N, B, BW, brk = _spine(ycam, sig["wander"], sig["C"])
+    if TEMPO["on"]:
+        ycam = _tempo_ycam(nf)
+    else:
+        ycam, y = [], 0.5
+        for f in range(nf):
+            ycam.append(y)
+            y += sig["speed"][f] * PV["speed_k"] / FPS
+    rat = _rattle(nf) if RATTLE["on"] else [0.0] * nf
+    if RATTLE["on"]:
+        sig["Hs"] = [RATTLE["buzz_m"] * r for r in rat]          # panels buzz with the sub
+    ys, C, T, N, B, BW, brk = _spine(ycam, sig["wander"], sig["C"], sig["slide"])
+    if SLIDE["on"]:
+        # gravity: target speed = section speed * (1 + grav_k * downhill slope), with inertia; then
+        # re-integrate the camera along the real arc and rebuild the spine from that travel
+        dy_ = PV["dy"]
+        def idx(yq):
+            return max(1, min(len(ys) - 2, int((yq - ys[0]) / dy_)))
+        v, y, ycam2, vs = sig["speed"][0], ycam[0], [], []
+        for f in range(nf):
+            i = idx(y)
+            g_ = (C[i + 1] - C[i - 1]).length / (2 * dy_)            # arc metres per metre of y
+            down = -(C[i + 1].z - C[i - 1].z) / (C[i + 1] - C[i - 1]).length
+            vt = sig["speed"][f] * PV["speed_k"] * (1 + SLIDE["grav_k"] * down)
+            v += (vt - v) * (1 - math.exp(-1.0 / (FPS * SLIDE["v_tau"])))
+            ycam2.append(y); vs.append(v)
+            y += v / g_ / FPS
+        ycam = ycam2
+        ys, C, T, N, B, BW, brk = _spine(ycam, sig["wander"], sig["C"], sig["slide"])
+        sig["_v"] = vs
     ob = _mesh(c, ys, C, N, B, BW, brk)
     print("break line period", round(2 * math.pi / brk[1], 2), "m")
     gn = _gn(ob)
@@ -857,12 +1047,51 @@ def build_song(seconds=SONG_S):
         cg.links.new(rl.outputs["Image"], gl.inputs["Image"]); cg.links.new(gl.outputs["Image"], go.inputs[0])
         sc.compositing_node_group = cg
     locs = [[], [], []]
+    rshake = random.Random(17)
     quats = [[], [], [], []]
     roll, qprev = 0.0, None
+    if SLIDE["on"]:
+        # the rider: an angle phi around the tube, pulled toward the apparent gravity (gravity minus the
+        # turn's centripetal pull) like a pendulum with damping, so it rides up the outside of turns and
+        # swings back through the bottom. Head points at the tube centre, so roll comes out of the physics.
+        dy_ = PV["dy"]
+        def fr_(yq):
+            u = (yq - ys[0]) / dy_; i = max(1, min(len(ys) - 3, int(u))); w_ = u - i
+            Cq = C[i].lerp(C[i + 1], w_); Nq = N[i].lerp(N[i + 1], w_).normalized()
+            Tq = T[i].lerp(T[i + 1], w_).normalized(); Bq = Nq.cross(Tq)
+            return Cq, Nq, Bq, Tq, i
+        span = int(1.0 / dy_)
+        def curv(i):
+            a_, b_ = max(0, i - span), min(len(ys) - 1, i + span)
+            ds = (C[b_] - C[a_]).length
+            return (T[b_] - T[a_]) / max(ds, 1e-6)
+        grav = Vector((0, 0, -SLIDE["g_sim"]))   # dream gravity: weak enough for the turns to throw you
+        phi, om = -math.pi / 2, 0.0          # start at the bottom
+        rs = SLIDE["r_sim"]
     for f in range(nf):
         P_, Nup = at(ycam[f])
         A_, Na = at(ycam[f] + PV["look"])
-        if PV["off"]:
+        if SLIDE["on"]:
+            Cq, Nq, Bq, Tq, i = fr_(ycam[f])
+            v = sig["_v"][f]
+            F = grav - v * v * curv(i)
+            F = F - F.dot(Tq) * Tq
+            phiF = math.atan2(F.dot(Bq), F.dot(Nq)); mag = F.length
+            for _ in range(6):
+                dt_ = 1.0 / (FPS * 6)
+                d_ = math.atan2(math.sin(phi - phiF), math.cos(phi - phiF))
+                om += (-(mag / rs) * math.sin(d_) - SLIDE["damp"] * om) * dt_
+                phi += om * dt_
+            off = SLIDE["off"] + sig["D2"][f] * (DROP2["melt_off"] - SLIDE["off"])
+            bar_ = f / FPS / BAR + 1                    # the break's repeated stretch is tighter: ride nearer the axis
+            if BREAK[0] - 1 <= bar_ < BREAK[1] + 1:
+                off = min(off, SLIDE["off_break"])
+            rad_ = math.cos(phi) * Nq + math.sin(phi) * Bq
+            P_ = Cq + off * rad_
+            Ca, Na_, Ba, Ta, _ = fr_(ycam[f] + PV["look"])
+            A_ = Ca + off * (math.cos(phi) * Na_ + math.sin(phi) * Ba)
+            Nup = -rad_                        # head toward the tube centre
+        elif PV["off"]:
             ang = math.radians(PV["off_phase"] + PV["off_rate"] * f / FPS)
             tg = (A_ - P_).normalized()
             Bp = Nup.cross(tg)
@@ -874,7 +1103,13 @@ def build_song(seconds=SONG_S):
         yc = (Nup - Nup.dot(fwd) * fwd).normalized()
         zc = -fwd
         q = Matrix((yc.cross(zc), yc, zc)).transposed().to_quaternion()
-        q = q @ Quaternion((0, 0, 1), roll)
+        if not SLIDE["on"]:
+            q = q @ Quaternion((0, 0, 1), roll)
+        if rat[f] > 0:
+            # trunk rattle: fast small jitter of the lens, new random each frame, scaled by the sub
+            jx, jy, jr = rshake.uniform(-1, 1), rshake.uniform(-1, 1), rshake.uniform(-1, 1)
+            P_ = P_ + RATTLE["shake_m"] * rat[f] * (jx * yc.cross(zc) + jy * yc)
+            q = q @ Quaternion((0, 0, 1), math.radians(RATTLE["shake_deg"]) * rat[f] * jr)
         roll += math.radians(sig["roll"][f]) / FPS
         if qprev is not None and q.dot(qprev) < 0:
             q.negate()
@@ -914,6 +1149,8 @@ def build_song(seconds=SONG_S):
                   [math.radians(SUN["sky_rot_deg"] - v) for v in sig["SunAz"]], 2)
             _bulk(mat.node_tree, 'nodes["Glint"].outputs[0].default_value', sig["Glint"], -1)
         _bulk(mat.node_tree, 'nodes["SunFade"].outputs[0].default_value', fade, -1)
+    if ARR["on"] and CAR["on"] and DEPTH["on"]:
+        _bulk(mat.node_tree, 'nodes["PearlFront"].outputs[0].default_value', _pearl_front(nf), -1)
     _bulk(cd, "lens", sig["lens"], -1)
     for k in ("W", "L", "Swell", "A2", "A3", "Phi", "Fo", "Hs", "T", "Sq", "Tw", "Mut", "Boil", "D2"):
         _bulk(gn, f'nodes["{k}"].outputs[0].default_value', sig[k], -1)

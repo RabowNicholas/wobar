@@ -1,7 +1,7 @@
 ---
 title: Blender Build Log
 version: 1.1
-last_updated: 2026-11-03
+last_updated: 2026-11-16
 status: live
 scope: The feedback loop for Claude-driven Blender work over the `blender` MCP server. Holds the rig facts, every confirmed failure with its corrected pattern, reusable patterns that worked, and one entry per build session. Read before any Blender action. One file on purpose — split it (rules / debug log / log, as TD did) only when it gets too long to read at session start.
 dependencies: [[working/BLENDER_COURSE]] · [[working/WOBAR_VISUAL_RESET]]
@@ -91,6 +91,13 @@ Real failures from real sessions only. Check this before acting; if the planned 
 | 2026-11-13 | `keyframe_insert(path, index=0)` on a Value node's `default_value` | `TypeError: index 0 was given while property ... is not an array` | Scalars: call without `index` (or index=-1); only arrays (location, quaternion) take an index | animation |
 | 2026-11-13 | Radial features uniform along a tunnel (cos 2θ/3θ vowel lobes lit by glow, cos 5θ folds) | Seen down the axis they line up into wedges / a five-point star — a pinwheel, the mandala ban | Weight angular terms by a smooth 0..1 patch field that varies along the tube, and mix angular orders with different helical pitch (3θ + 4θ, not a single nθ) | look |
 | 2026-11-13 | Riser "whip" bends with periods 1.3–2.2 m on a 1.6 m-radius tube | Bend radius below the tube radius: the inner wall folded into dark sheets and came within 0.13 m of the lens | Keep bend radius > ~2× tube radius (amplitude/period² budget), then check the evaluated wall distance from the camera with a KDTree on sampled frames | geo-nodes |
+| 2026-11-14 | Set `file_format = 'PNG'` on a scene whose output was set up for video | Assignment failed: Blender 5 gates file formats by `media_type` | Set `scene.render.image_settings.media_type = 'IMAGE'` first, then the format | render |
+| 2026-11-14 | Created a shader Combine XYZ with `nodes.new('ShaderNodeCombineXYZ')` but matched it by type `'COMBINE_XYZ'` | Lookup failed; the shader node's type string is `'COMBXYZ'` | Read `node.type` from a created node before matching on it | shader |
+| 2026-11-15 | Multiplied a gold flake tint into the whole base colour | The tint also hit the depth-pearl ramp and killed the violet | Tint only the branch it belongs to (the facing colour), before the pearl mix | shader |
+| 2026-11-15 | Scaled the primary lump field by a section gain but not its twin (`lump2`) | Organic lumps came back after bar 65 and Drop 2 read melted before the melt | Every twin/mutation field gets the same gain as its primary; grep the GN tree for every reader of the attribute | geo-nodes |
+| 2026-11-15 | Faded the end to black on the lamp only | Frame mean stayed 41: the Sun lamp and the HDRI coat-sky emission are separate light paths | Key every light path (lamps, emission-faked reflections) off one fade value | look |
+| 2026-11-15 | Melt drop (radius ↓, lumps ↑) with a fixed camera offset | Camera passed through the wall (min 0.019 m) | Soft radius floor `0.5(r + Rmin + sqrt((r-Rmin)^2 + eps^2))` + ease the camera offset toward centre in the section; re-run the full-song clearance scan (min 0.59 m) | geo-nodes |
+| 2026-11-15 | Water-slide camera with gravity/pendulum rider | Wall within 0.10 m in the break | Per-section offset cap (off_break 0.45) and clearance scan after every camera change | camera |
 
 ## 3. Patterns that worked
 
@@ -270,6 +277,15 @@ Reusable snippets and recipes, proven in a session. Keep each short; put long sc
   - **Painted glow on fragments reads fake; real light reads real:** drop per-instance emission, flash a small (1 m) area light behind the camera on the kick. A 6 m disc filled whole near faces with flat colour and showed as a disc in the intact mirror.
 
 ## 4. Session log
+
+### 2026-11-14 → 16 - STILL TIPPIN: look v5 locked (`still_tippin_song_v5.blend`)
+Case file: [[reference/blender_cases/STILL_TIPPIN]] (look, motion decisions, rejected directions).
+- **Car paint in EEVEE:** Principled metallic 0.6 + clear coat 0.04 + thin film 420 nm; flake = Voronoi normal tilt on seam-free rest coordinates (R cos θ, R sin θ, y), never UVs on a tube; Layer Weight facing→grazing flop. Strength reads as "real car" around flake_k 0.12 at scale 450.
+- **Depth pearl:** ColorRamp indexed by fract(Facing·0.25 + ViewDistance/14) — colour sweeps toward the lens as you travel; banding appears in the throat past ~20 m (open).
+- **Fake environment reflection on a closed tube:** emission = HDRI sampled along Reflection × Fresnel(1.5) × distance fade (6→22 m); plus a shadowless specular-only Sun lamp for the hot spot. Compositor in Blender 5 is `scene.compositing_node_group`.
+- **Section-gated look via a front:** key a ViewDistance threshold that sweeps far→near before a section and near→far after, so a material change travels down the tunnel instead of cutting.
+- **Verification habits that paid:** pixel-diff a rebuilt frame against the approved still after every rebuild; full-song camera clearance scan (KDTree on evaluated verts) after any geometry or camera change.
+- **Fake audio signals make motion tests unjudgeable.** Synthetic kick/snare timing, tempo-locked ribs and a master-derived sub rattle all read "forced"; next motion work only on real stems, one mapping at a time.
 
 ### 2026-11-13 - STILL TIPPIN: concept search → membrane tunnel → full-song grey structure (`still_tippin_song_grey_v3.blend`)
 Case file: [[reference/blender_cases/STILL_TIPPIN]]. Six concepts tried before the tunnel stuck (spokes, candy liquid, moiré ×2, chamber, contour bands) — all logged there as rejected.
