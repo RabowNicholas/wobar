@@ -1,0 +1,161 @@
+{
+ "n_posts": 398,
+ "n_hits": 381,
+ "n_miss": 17,
+ "n_artists": 36,
+ "id_unreleased": {
+  "hit_pct": 6,
+  "miss_pct": 12,
+  "median_on": 27000,
+  "median_off": 26000,
+  "n_on": 24
+ },
+ "release_cta": {
+  "hit_pct": 12,
+  "miss_pct": 29,
+  "median_on": 21300,
+  "median_off": 26800,
+  "n_on": 51
+ },
+ "live_show": {
+  "hit_pct": 18,
+  "miss_pct": 0,
+  "median_on": 28500,
+  "median_off": 25500,
+  "n_on": 69
+ },
+ "studio_process": {
+  "hit_pct": 8,
+  "miss_pct": 6,
+  "median_on": 32500,
+  "median_off": 25500,
+  "n_on": 33
+ },
+ "question_cta": {
+  "hit_pct": 16,
+  "miss_pct": 18,
+  "median_on": 22700,
+  "median_off": 27100,
+  "n_on": 64
+ },
+ "meme_joke": {
+  "hit_pct": 5,
+  "miss_pct": 0,
+  "median_on": 39000,
+  "median_off": 25900,
+  "n_on": 19
+ },
+ "hype_caps": {
+  "hit_pct": 22,
+  "miss_pct": 24,
+  "median_on": 26100,
+  "median_off": 25900,
+  "n_on": 87
+ },
+ "own_post": {
+  "hit_pct": 79,
+  "miss_pct": 71,
+  "median_on": 24800,
+  "median_off": 32600,
+  "n_on": 313
+ },
+ "collab": {
+  "hit_pct": 15,
+  "miss_pct": 18,
+  "median_on": 26300,
+  "median_off": 25900,
+  "n_on": 61
+ },
+ "audio": {
+  "original": {
+   "n": 311,
+   "hit_pct": 96,
+   "median": 25900
+  },
+  "own_id": {
+   "n": 16,
+   "hit_pct": 94,
+   "median": 51100
+  },
+  "own_track": {
+   "n": 58,
+   "hit_pct": 95,
+   "median": 25900
+  },
+  "other_track": {
+   "n": 13,
+   "hit_pct": 100,
+   "median": 18900
+  }
+ },
+ "hashtags": {
+  "hits_median": 0,
+  "miss_median": 0
+ },
+ "words": {
+  "hits_median": 9,
+  "miss_median": 11
+ },
+ "breakout": {
+  "n": 76,
+  "n_rest": 322,
+  "id_unreleased": {
+   "breakout_pct": 8,
+   "rest_pct": 6
+  },
+  "release_cta": {
+   "breakout_pct": 7,
+   "rest_pct": 14
+  },
+  "live_show": {
+   "breakout_pct": 18,
+   "rest_pct": 17
+  },
+  "studio_process": {
+   "breakout_pct": 9,
+   "rest_pct": 8
+  },
+  "question_cta": {
+   "breakout_pct": 16,
+   "rest_pct": 16
+  },
+  "meme_joke": {
+   "breakout_pct": 7,
+   "rest_pct": 4
+  },
+  "hype_caps": {
+   "breakout_pct": 17,
+   "rest_pct": 23
+  },
+  "own_post": {
+   "breakout_pct": 74,
+   "rest_pct": 80
+  },
+  "collab": {
+   "breakout_pct": 18,
+   "rest_pct": 15
+  },
+  "audio": {
+   "original": {
+    "breakout_pct": 79,
+    "rest_pct": 78
+   },
+   "own_id": {
+    "breakout_pct": 8,
+    "rest_pct": 3
+   },
+   "own_track": {
+    "breakout_pct": 11,
+    "rest_pct": 16
+   },
+   "other_track": {
+    "breakout_pct": 3,
+    "rest_pct": 3
+   }
+  },
+  "words": {
+   "bo_median": 8.5,
+   "rest_median": 9.0
+  }
+ }
+}
