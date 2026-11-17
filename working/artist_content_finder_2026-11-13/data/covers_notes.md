@@ -110,3 +110,46 @@ MEME (joke text over footage), OTHER. Overlay text quoted exactly as on the cove
 
 ## 27 Saxsquatch (354k, off-lane: sax-playing bigfoot) - COSTUMED CHARACTER PERSONA + absurd text hook
 10.1K FACE-character tinfoil hat (lowest) | 53.7K ART cosmic collage - | 58.9K ART psychedelic - | 32.1K MEME "DO YOU THINK THE GOVERNMENT USES FAKE BIRDS TO WATCH US" | 23.9K ART - | 148K MEME character in forest "Testing the "i love all music" person"
+
+## 31 A Hundred Drums (56.7k) - LIVE-PERF photo-real shots, overhead DJ setup, collab posts with Zen Selekta (shared "girls night" reel)
+98.1K LIVE-PERF pinned | 467K LIVE-PERF arms up pinned | 18.4K OTHER portrait | 64K LIVE-POV overhead setup (shared with Zen Selekta) | 18.9K FACE duo "POV: the baddie of all baddies has arrived in Denver" | 21.1K LIVE-PERF "this is what we mean by girls night" (shared)
+
+## 32 Beastboi. (35.5k) - FACE + reply-to-hate / tweet-screenshot hooks; self-deprecating persona
+97.9K FACE + tweet screenshot "they forgot beastboi sucks." pinned | 95.4K FACE "create to escape." pinned | 37.5K FACE "make all EDM appreciated again" | 16.2K MEME 50 Cent photo | 18.7K FACE "Putting anything as a pre-drop vox" | 13.7K ART logo "BEASTBOI."
+
+## 33 TOXATE (10.5k) - MASKED PERSONA (red helmet mask) in studio and outdoors + text hook; offers unreleased ID for comments. WOBAR-relevant (faceless entity that still carries hooks).
+15K STUDIO masked "LOST LANDS FOMO HIT DIFFERENT SO I MADE THIS..." | 15.6K STUDIO masked "leave a comment if you want a copy of this unreleased ID" | 46.8K STUDIO masked - | 55.7K OTHER masked with boombox outdoors - | 47.9K STUDIO masked wide - | 24.6K OTHER masked on wrecked car with boombox -
+
+## 34 Usaybflow (88.6k) - FACE dancing at home DJ setup + lowercase/short hook; "leaking unreleased" framing
+10.5K LIVE-CROWD "Nothing beats the energy of a riddim crowd" | 15K FACE "In love with this new one" | 22.9K FACE dancing at decks - | 16.5K FACE "leaking my unreleased music because I feel like it" | 94.8K FACE dancing at decks - | 25.9K LIVE-CROWD "Dubstep Orchestra"
+
+## 35 Drinkurwater (48.1k) - festival countdown series ("10 DAYS TILL LOST LANDS" repeated), LIVE-POV with track-ID hook, producer-life split meme
+24.2K LIVE-PERF Lost Lands | 28.7K LIVE-POV "slinging Wompy doubles at Lost Lands! blvckhound-torn vip x vesum reverse sweep" | 12.1K LIVE-POV | 14.1K ART Lost Lands flyer | 15.8K TEXT "10 DAYS TILL LOST LANDS" x3 | 21.8K MEME split "when my gf wants me to heat her up a snack while I'm producing"
+
+## 36 IKU (12.5k) - DAW screen proof + DM/co-sign screenshot as the hook ("flipped this Frost Children song..." with their DM reply)
+8.1K LIVE-PERF "...music ... like lasers" | 11.7K STUDIO signing merch | 13.2K STUDIO DAW + DM screenshot "flipped this Frost Children song into a festival banger" | 13.2K STUDIO DAW "Remixed that new ISOxo & Madeon" | 15.9K LIVE-CROWD | 11.8K LIVE-PERF + DM screenshot | (next: "RL Grime playing my track ...")
+
+## 37 Blankface (17.3k?) - FACE skit/pickup-line meme hooks; some "POV" producer bits; big outliers come from non-music memes
+14.1K MEME "And I'm Blankface. Savage Society" | 19.1K MEME "POV: Checking in on bros No Nut November progress" | 244K FACE "And if I suddenly die one day, I promise to visit you like this" | 418K MEME waterfall "If you were liquid you would be piss because urine my head all the time" | 4.3K FACE "Yo, it's Blankface and you're watching "This Is Not A Label."" (lowest) | 7.1K FACE "POV: you made an ATLiens remix and now you're fighting the urge to release it"
+
+## 38 OG Nixin (?) - SKIT where the riddim drop is the punchline (biggest: 1.5M); POV headline in white box
+198K SKIT "GUITAR HERO x RIDDIM" pinned | 158K SKIT "POV: YOU MAKE DUBSTEP FOR A LIVING BUT NEVER FORGOT YOUR ROOTS" pinned | 153K SKIT "POV: YOU GET DRAFTED FOR WW3 BUT THEY LET YOU WEAR HEADPHONES" pinned | 102K SKIT protest signs "SMOAKLAND ... GOT WEED?" | 34.6K SKIT Chucky mask "WHEN A TRICK OR TREATER KNOCKS ON YOUR DOOR BUT YOU FORGOT TO BUY CANDY" | 92K SKIT "POV: YOU BREAK INTO MY HOUSE BUT I'M WEARING HEADPHONES"
+
+## 39 VKTM (?) - MASKED PERSONA (LED / skull masks), cinematic live, near-zero text. Third masked act in the consistent tier (with The Resistance, TOXATE).
+113K ART red LED mask figure pinned | 77.9K LIVE-PERF masked b2b pinned | 79.4K LIVE-PERF purple skull mask pinned | 35.6K ART fight scene (masked) | 85.8K LIVE-POV pyro masked | 166K LIVE-POV masked at decks "3PM BTW"
+
+## 40 JONCASS (UK duo) - SKIT/MEME on a fixed green-screen template with bold white-box hook; co-sign proof
+6.3K LIVE-PERF | 8.5K MEME "Yall mind if 2 British boys drop a wobbler" | 9.7K PROOF "2 OG GOATS MALA AND COKI PLAYED OUR UNRELEASED TUNE" | 106K MEME "uk citizenship test" | 157K MEME "DUBSTEP KARAOKE" | 63.4K MEME meter screen "Mixing tutorials are fake clip your master" | (next: "MAKING A CAR ENGINE ...")
+
+## 41 Sisto (?) - FACE relatable lowercase hooks, DJ-life POV, DM proof ("my manager told me to remix skrillex"), time-stamp split
+6.2K FACE "this one's for the 2000's kids" | 9.1K OTHER ""you're so hard on yourself who are you trying to impress?"" | 323K SKIT "POV: average dj interaction" | 37.3K STUDIO split "6:53 PM" / "6:55 PM" | 40.7K FACE + DM "my manager told me to remix skrillex" | 10.8K FACE in car "CRANKDAT x NGHTMRE BUT ANGRIER"
+
+## 42 Emorfik (?) - series hook "what the hell did i just make" (pt. 1, pt. 2), FACE reaction, crowd chaos, DAW + Patreon
+68.7K FACE close stare - pinned | 102K LIVE-CROWD "WTF IS UP DENNYS!!" pinned | 28.9K FACE "what the hell did i just make pt. 2" | 20.7K FACE "what the hell did i just make..." | 22.5K STUDIO DAW "THREAT FREE ON MY PATREON (BREAKDOWN FOR ...)" | 17.2K FACE festival "WILD WEST WITH USAYBFLOW IS OUT NOW"
+
+## TikTok-first artists (TikTok grid read 2026-11-17; views = TikTok plays)
+### 16 KLOPOTA (54.2k TT) - LIVE FINGER-DRUMMING her tracks on a pad controller (club and home), Russian text hooks; 3.8M / 2.1M / 601k tops
+Grid: pad-controller performance in nearly every video, friends watching, small text hook top-centre. One repeatable visual: hands on pads.
+### 28 Sparkz (5k TT, but 11 of 12 over 10k) - club/festival POV from behind the decks + big lyric/drop callout text ("HOW LOW CAN YOU GO?!?!?", "132BPM", "TRACKLICK IN A SPARKZ TRACK... Wait till the end", title cards "BOUNCE", "TOO")
+### 30 JordanBeats (78.2k TT) - TYPE-BEAT channel: one cinematic still (lion, samurai, cars, boxer) + logo, pinned "CAN YOU RAP ON THIS BEAT?" challenge. Off-lane but relevant to rap flips.
+### 42 Brainrot (185k TT) - personality creator, face skits with captions; music secondary. Off-lane for this study.

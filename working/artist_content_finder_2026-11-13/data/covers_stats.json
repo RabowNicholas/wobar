@@ -1,0 +1,89 @@
+{
+ "n_posts": 390,
+ "n_artists": 39,
+ "format": {
+  "ART": {
+   "n": 63,
+   "median_rel": 0.77,
+   "share_2x": 5
+  },
+  "FACE": {
+   "n": 70,
+   "median_rel": 1.04,
+   "share_2x": 17
+  },
+  "FACE-": {
+   "n": 2,
+   "median_rel": 1.36,
+   "share_2x": 50
+  },
+  "LIVE-CROWD": {
+   "n": 39,
+   "median_rel": 1.16,
+   "share_2x": 15
+  },
+  "LIVE-PERF": {
+   "n": 45,
+   "median_rel": 0.96,
+   "share_2x": 24
+  },
+  "LIVE-POV": {
+   "n": 49,
+   "median_rel": 1.04,
+   "share_2x": 22
+  },
+  "MEME": {
+   "n": 32,
+   "median_rel": 1.16,
+   "share_2x": 28
+  },
+  "OTHER": {
+   "n": 26,
+   "median_rel": 0.73,
+   "share_2x": 19
+  },
+  "PROOF": {
+   "n": 2,
+   "median_rel": 1.61,
+   "share_2x": 50
+  },
+  "SKIT": {
+   "n": 7,
+   "median_rel": 1.2,
+   "share_2x": 14
+  },
+  "SPLIT": {
+   "n": 3,
+   "median_rel": 0.94,
+   "share_2x": 0
+  },
+  "STUDIO": {
+   "n": 44,
+   "median_rel": 1.05,
+   "share_2x": 14
+  },
+  "TEXT": {
+   "n": 1,
+   "median_rel": 0.84,
+   "share_2x": 0
+  },
+  "TEXT-CARD": {
+   "n": 7,
+   "median_rel": 0.79,
+   "share_2x": 14
+  }
+ },
+ "hook": {
+  "with_hook": {
+   "n": 201,
+   "median_rel": 1.02,
+   "share_2x": 16
+  },
+  "no_hook": {
+   "n": 189,
+   "median_rel": 0.98,
+   "share_2x": 19
+  }
+ },
+ "lowest_flagged": 23
+}

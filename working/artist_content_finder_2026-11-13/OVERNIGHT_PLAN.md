@@ -36,3 +36,24 @@ REPORT_CONTENT.md (ranked list, per-artist breakdown, cross-artist patterns, tes
 Order: (1) finish first 489 posts; (2) rest of main band ranks 46-249: data/post_targets_ext.json (183 artists, 1177 posts), appended to localStorage acf_posts_list in chunks; (3) TikTok-first artists (25) video pages; (4) hook text from cover images, top 60; (5) interim report after (2) first half, final report at end; (6) if time left: stretch band reach read + posts as reference.
 - 22:27 heartbeat: post reader 386 read, queue 1089 (ranks to ~110 appended), running
 - 22:49 interim REPORT_CONTENT.md written (top 30, 9 patterns, 7 tests). Covers read for top 27 IG (data/covers_notes.md). Post reader resumed on deeper list (439 read, 637 queued).
+- 22:49 heartbeat: post reader 449, running; interim report committed 5b0d7db
+- 22:56 full main-band queue loaded: 1666 posts (all ranks to 249), 477 read
+- 23:07 heartbeat: post reader 507/1666, running
+- 23:28 heartbeat: post reader 595/1666, running
+- 23:47 heartbeat: post reader 672/1666, running
+- 00:07 heartbeat: relaunched post reader at 744/1666
+- 00:28 heartbeat: post reader 810/1666, running
+- 00:47 heartbeat: post reader 883/1666, running
+- 01:07 heartbeat: post reader 963/1666, running
+- 01:27 heartbeat: post reader 1035/1666, running
+- 01:47 heartbeat: relaunched post reader at 1101/1666
+- 02:07 heartbeat: post reader 1176/1666, running
+- 02:27 heartbeat: post reader 1257/1666, running
+- 02:47 heartbeat: post reader 1327/1666, running
+- 03:07 heartbeat: post reader 1407/1666, just relaunched
+- 03:27 heartbeat: post reader 1471/1666, running
+- 03:47 heartbeat: post reader 1545/1666, running
+- 04:07 post reader finished main queue (1632 ids). Retrying 54 timeouts. Next: TikTok-first covers, IG covers ranks 28-60, final analysis + report.
+- 04:22 covers read for ranks 31-42 (12 more artists). Masked-persona cluster found: The Resistance, TOXATE, VKTM.
+- 04:22 TikTok-first top 4 read (covers). Next: final analysis + REPORT_CONTENT.md final, commit, ACTIVE update.
+- 04:24 FINAL REPORT_CONTENT.md written (5 findings, 7 playbooks, WOBAR notes, 7 tests, top 45). Next: commit + ACTIVE update.

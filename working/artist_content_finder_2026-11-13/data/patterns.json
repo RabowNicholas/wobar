@@ -1,161 +1,161 @@
 {
- "n_posts": 398,
- "n_hits": 381,
- "n_miss": 17,
- "n_artists": 36,
+ "n_posts": 1607,
+ "n_hits": 1223,
+ "n_miss": 384,
+ "n_artists": 224,
  "id_unreleased": {
-  "hit_pct": 6,
-  "miss_pct": 12,
-  "median_on": 27000,
-  "median_off": 26000,
-  "n_on": 24
+  "hit_pct": 7,
+  "miss_pct": 7,
+  "median_on": 17000,
+  "median_off": 16450,
+  "n_on": 117
  },
  "release_cta": {
-  "hit_pct": 12,
-  "miss_pct": 29,
-  "median_on": 21300,
-  "median_off": 26800,
-  "n_on": 51
+  "hit_pct": 13,
+  "miss_pct": 25,
+  "median_on": 12900,
+  "median_off": 17600,
+  "n_on": 259
  },
  "live_show": {
   "hit_pct": 18,
-  "miss_pct": 0,
-  "median_on": 28500,
-  "median_off": 25500,
-  "n_on": 69
+  "miss_pct": 12,
+  "median_on": 21000,
+  "median_off": 15900,
+  "n_on": 271
  },
  "studio_process": {
-  "hit_pct": 8,
-  "miss_pct": 6,
-  "median_on": 32500,
-  "median_off": 25500,
-  "n_on": 33
+  "hit_pct": 14,
+  "miss_pct": 14,
+  "median_on": 18050,
+  "median_off": 16300,
+  "n_on": 228
  },
  "question_cta": {
-  "hit_pct": 16,
-  "miss_pct": 18,
-  "median_on": 22700,
-  "median_off": 27100,
-  "n_on": 64
+  "hit_pct": 15,
+  "miss_pct": 15,
+  "median_on": 15600,
+  "median_off": 16650,
+  "n_on": 247
  },
  "meme_joke": {
-  "hit_pct": 5,
-  "miss_pct": 0,
-  "median_on": 39000,
-  "median_off": 25900,
-  "n_on": 19
+  "hit_pct": 6,
+  "miss_pct": 3,
+  "median_on": 20600,
+  "median_off": 16300,
+  "n_on": 85
  },
  "hype_caps": {
-  "hit_pct": 22,
-  "miss_pct": 24,
-  "median_on": 26100,
-  "median_off": 25900,
-  "n_on": 87
+  "hit_pct": 19,
+  "miss_pct": 21,
+  "median_on": 14850,
+  "median_off": 16900,
+  "n_on": 308
  },
  "own_post": {
-  "hit_pct": 79,
-  "miss_pct": 71,
-  "median_on": 24800,
-  "median_off": 32600,
-  "n_on": 313
+  "hit_pct": 78,
+  "miss_pct": 76,
+  "median_on": 16300,
+  "median_off": 17200,
+  "n_on": 1242
  },
  "collab": {
-  "hit_pct": 15,
-  "miss_pct": 18,
-  "median_on": 26300,
-  "median_off": 25900,
-  "n_on": 61
+  "hit_pct": 16,
+  "miss_pct": 15,
+  "median_on": 19350,
+  "median_off": 16100,
+  "n_on": 256
  },
  "audio": {
   "original": {
-   "n": 311,
-   "hit_pct": 96,
-   "median": 25900
+   "n": 1181,
+   "hit_pct": 78,
+   "median": 17100
   },
   "own_id": {
-   "n": 16,
-   "hit_pct": 94,
-   "median": 51100
+   "n": 32,
+   "hit_pct": 84,
+   "median": 26450
   },
   "own_track": {
-   "n": 58,
-   "hit_pct": 95,
-   "median": 25900
+   "n": 328,
+   "hit_pct": 70,
+   "median": 14500
   },
   "other_track": {
-   "n": 13,
-   "hit_pct": 100,
-   "median": 18900
+   "n": 66,
+   "hit_pct": 70,
+   "median": 15250
   }
  },
  "hashtags": {
   "hits_median": 0,
-  "miss_median": 0
+  "miss_median": 0.0
  },
  "words": {
-  "hits_median": 9,
-  "miss_median": 11
+  "hits_median": 11,
+  "miss_median": 13.0
  },
  "breakout": {
-  "n": 76,
-  "n_rest": 322,
+  "n": 510,
+  "n_rest": 1097,
   "id_unreleased": {
    "breakout_pct": 8,
-   "rest_pct": 6
+   "rest_pct": 7
   },
   "release_cta": {
-   "breakout_pct": 7,
-   "rest_pct": 14
+   "breakout_pct": 13,
+   "rest_pct": 18
   },
   "live_show": {
-   "breakout_pct": 18,
-   "rest_pct": 17
+   "breakout_pct": 20,
+   "rest_pct": 15
   },
   "studio_process": {
-   "breakout_pct": 9,
-   "rest_pct": 8
+   "breakout_pct": 20,
+   "rest_pct": 11
   },
   "question_cta": {
    "breakout_pct": 16,
-   "rest_pct": 16
+   "rest_pct": 15
   },
   "meme_joke": {
    "breakout_pct": 7,
-   "rest_pct": 4
+   "rest_pct": 5
   },
   "hype_caps": {
-   "breakout_pct": 17,
-   "rest_pct": 23
+   "breakout_pct": 15,
+   "rest_pct": 21
   },
   "own_post": {
    "breakout_pct": 74,
-   "rest_pct": 80
+   "rest_pct": 79
   },
   "collab": {
-   "breakout_pct": 18,
-   "rest_pct": 15
+   "breakout_pct": 20,
+   "rest_pct": 14
   },
   "audio": {
    "original": {
-    "breakout_pct": 79,
-    "rest_pct": 78
+    "breakout_pct": 75,
+    "rest_pct": 73
    },
    "own_id": {
-    "breakout_pct": 8,
-    "rest_pct": 3
+    "breakout_pct": 3,
+    "rest_pct": 2
    },
    "own_track": {
-    "breakout_pct": 11,
-    "rest_pct": 16
+    "breakout_pct": 19,
+    "rest_pct": 21
    },
    "other_track": {
-    "breakout_pct": 3,
-    "rest_pct": 3
+    "breakout_pct": 4,
+    "rest_pct": 4
    }
   },
   "words": {
-   "bo_median": 8.5,
-   "rest_median": 9.0
+   "bo_median": 13.0,
+   "rest_median": 11
   }
  }
 }

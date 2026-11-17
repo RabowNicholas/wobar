@@ -11,6 +11,7 @@ for f in sorted(glob.glob(os.path.join(RAW, 'posts_*.json')), key=os.path.getmti
 rank = {r['artist']: r for r in json.load(open(os.path.join(DATA, 'ranking_dedup.json')))}
 
 def clean(c):
+    c = re.sub(r'[\ud800-\udfff]', '', c or '')   # captions were cut at 600 chars, sometimes mid-emoji
     out = []
     for l in (c or '').split('\n'):
         if re.fullmatch(r'[\d.,]+[KM]?', l) or l.startswith(('Liked by', 'View all')) or re.fullmatch(r'\d+ likes?|Reply', l) \
@@ -48,7 +49,7 @@ for (artist, pid), p in posts.items():
     cap, first, t = tags(p)
     rows.append({'artist': artist, 'rank': rank.get(artist, {}).get('rank'), 'id': pid, 'url': f'https://www.instagram.com/p/{pid}/',
                  'views': p['views'], 'hit': p['views'] >= 10000, 'date': (p.get('date') or '')[:10], 'owner': p.get('owner'),
-                 'collab': p.get('collab'), 'audio_label': p.get('audio'), 'first_line': first, 'caption': cap, **t})
+                 'collab': p.get('collab'), 'audio_label': re.sub(r'[\ud800-\udfff]', '', p.get('audio') or ''), 'first_line': first, 'caption': cap, **t})
 # relative performance: views vs the artist's own median of the last 12 reels (raw/reels_all.json)
 reels = {r['name']: r for r in json.load(open(os.path.join(RAW, 'reels_all.json')))}
 for r in rows:
