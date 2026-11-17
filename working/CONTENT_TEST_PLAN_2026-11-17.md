@@ -43,7 +43,9 @@ No research evidence on effects; this is a brand-logic test. Restraint rule appl
 - **Phase 2:** text type, first second. **Phase 3:** loop, length, grade, series framing.
 - **Score:** views only. Share of posts over 10k across the first 30 posts per account. No cross-boosting between accounts.
 
+## How results get read
+These are hypothesis tests, not a tracked metrics program. No baseline is pulled up front; Nick and Claude revisit the results together and judge each hypothesis then. The numbers above (0.75x, 2x, 8 posts) are guides for that conversation, not automatic rules.
+
 ## Open
-1. Baseline: median views of the last 12 reels on wobar.exe.
-2. Main page platform: Instagram only, or also TikTok.
-3. Burner track list: which tracks; released only or unreleased too.
+1. Main page platform: Instagram only, or also TikTok.
+2. Burner track list: which tracks; released only or unreleased too.
