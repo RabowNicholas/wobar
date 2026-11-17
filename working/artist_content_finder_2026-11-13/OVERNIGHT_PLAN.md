@@ -58,3 +58,4 @@ Order: (1) finish first 489 posts; (2) rest of main band ranks 46-249: data/post
 - 04:22 TikTok-first top 4 read (covers). Next: final analysis + REPORT_CONTENT.md final, commit, ACTIVE update.
 - 04:24 FINAL REPORT_CONTENT.md written (5 findings, 7 playbooks, WOBAR notes, 7 tests, top 45). Next: commit + ACTIVE update.
 - 04:24 DONE. Committed 0ac1e8f. Heartbeat cron removed. Stretch-band reference reads not done (no time left after the full main band).
+- 04:45 covers ranks 43-65 read (20 more). New: rap-flip hook (BLVNKSPVCE 133K), famous-song flip (Ace Aura 746K), signature frame (Aych), platform features (Club Studio Time, RA).

@@ -153,3 +153,87 @@ Grid: pad-controller performance in nearly every video, friends watching, small 
 ### 28 Sparkz (5k TT, but 11 of 12 over 10k) - club/festival POV from behind the decks + big lyric/drop callout text ("HOW LOW CAN YOU GO?!?!?", "132BPM", "TRACKLICK IN A SPARKZ TRACK... Wait till the end", title cards "BOUNCE", "TOO")
 ### 30 JordanBeats (78.2k TT) - TYPE-BEAT channel: one cinematic still (lion, samurai, cars, boxer) + logo, pinned "CAN YOU RAP ON THIS BEAT?" challenge. Off-lane but relevant to rap flips.
 ### 42 Brainrot (185k TT) - personality creator, face skits with captions; music secondary. Off-lane for this study.
+
+## 43 MontyCler (12.4k) - casual phone LIVE-POV and studio moments, small lowercase hooks
+12.9K LIVE-CROWD - | 17.3K LIVE-POV - | 32.2K LIVE-POV "are you farting bro" | 8.6K FACE - | 32.9K LIVE-POV "not sure how you'd stay still if you heard this live" | 4.8K STUDIO - (lowest)
+
+## 45 Ace Aura (44.3k) - FLIP OF A FAMOUS SONG as the hook (746K "Sandstorm by Darude", "CRAZY FROG AXEL F ACE AURA BOOTLEG"); poll-meme; game-dialogue art
+746K FACE studio "Sandstorm by Darude" pinned | 33.5K TEXT-CARD "CRAZY FROG "AXEL F" ACE AURA BOOTLEG" pinned | 18.9K MEME poll "Do you: Drop the heaviest banger known to mankind / Put out a trance track" | 16.1K STUDIO - | 28.5K ART blue portrait - | 13.5K ART game-dialogue "OPHOS: now i can hardly see the flame."
+
+## 46 crawdad sniper (?) - mostly flyers and psychedelic art; one crawdad meme; lowest reach of the batch
+6.5K ART - | 21.3K ART flyer | 10K LIVE-CROWD - | 28.5K ART flyer (hard drive) | 6.5K MEME crawdad - | 15K LIVE-POV -
+
+## 47 YUNIT. (?) - LIVE-POV club/b2b, collab DJ-screen post with roi* ("never skip the afters")
+18.8K LIVE-POV - | 11.7K LIVE-POV - | 6.6K ART "PORT ZERO" logo (lowest) | 46.9K STUDIO/CDJ screen "never skip the afters" (roi* collab) | 13.4K LIVE-PERF "RANE B2B YUNIT SEATTLE DEBUT" | 9.6K OTHER duo photo -
+
+## 48 Monty (?) - 140 / UKG-adjacent; Patreon-branded portrait posts (low), record-shop b2b is the top
+26.1K TEXT-CARD "CONTEXT" | 6.6K OTHER b&w portrait (lowest) | 56.6K LIVE-PERF record shop "Fresh 140 Monty" | 10.2K OTHER Patreon logo | 12.6K OTHER Patreon logo | 14.2K OTHER Patreon logo
+
+## 49 Mongrel (?) - b&w LIVE footage with lowercase hooks; crew collabs with Dack Janiels
+11.9K LIVE-CROWD "they need to confiscate our usbs for this one" | 11.5K LIVE-POV "testing this new one with Mongrel at Nocturnal" | 31.5K LIVE-CROWD - | 9.4K LIVE-PERF "THE DOG POUND" | 12.5K LIVE-PERF - | 12.3K ART "DACK JANIELS" logo
+
+## 50 Codd Dubz (?) - SKILL GIMMICK: six decks at once, overhead; meme framing ("Them: What you need 6 decks for? ME:")
+266K MEME overhead 6 decks "Them: What you need 6 decks for? ME:" / "What cities need a Slice & Dice set?" pinned | 75.2K LIVE-POV hands on mixer - | 8.4K LIVE-CROWD - | 14.2K LIVE-CROWD - | 33.8K FACE "6 DECKS AT ONCE" | 5.1K ART "THRASHED" (lowest)
+
+## 51 BLVNKSPVCE (?) - RAP FLIP hook is the top post (133K "asap rocky but make it future riddim or some shi"); follow-up release post after a viral one; FACE + lowercase; Blankface crew
+21.5K FACE "Looking for fans of whatever kind of dubstep this is" pinned | 133K FACE in car "asap rocky but make it future riddim or some shi" pinned | 14.1K MEME (Blankface collab) "And I'm Blankface. Savage Society" | 19.1K MEME (collab) "POV: Checking in on bros No Nut November progress" | 34.4K ART dark "yall went so crazy on yesterdays post I had to drop it...." | 18.7K OTHER portrait -
+
+## 53 Aych (18.1k) - ONE SIGNATURE FRAME on every post: fisheye skate-video look inside a black frame; playful face; recognisable in the first frame (75K / 76K / 65K)
+75.7K FACE fisheye - | 24.4K FACE fisheye - | 64.7K FACE fisheye laundromat - | 76K FACE fisheye - | 47.7K FACE fisheye - | 10.3K FACE "when you and your photographer sync up like bluetooth"
+
+## 54 JEANIE (?) - FACE + relatable hook; persona split ("me IRL vs me as JEANIE" is the top); mascot character art
+89.6K LIVE-PERF "me IRL vs me as JEANIE" pinned | 6.3K FACE outfit (lowest) | 12.3K FACE "when i get a green room that isn't a sticky 4x4 room with water bottles and a granola bar" | 15.5K FACE "career paths i considered when i was a senior in high school" | 30.6K FACE "women in ... vs ..." | 8K ART devil mascot
+
+## 55 Moceans (?) - CONCEPT LOCATION sets: DJing among old CRT TVs in a forest / Yosemite, "You weren't supposed to find this..."; festival POV
+98.6K LIVE-POV festival - | 7.9K LIVE-PERF lyric text | 16.8K LIVE-POV "Where are all the Alina Baraz fans at?" | 12.5K LIVE-PERF forest + CRT TVs "You weren't supposed to find this..." | 7.3K LIVE-CROWD forest | 14.4K LIVE-PERF Yosemite + TVs "bass music for all forest spirits"
+
+## 56 Aweminus (?) - "Wait for it..." crowd build (194K); interview series asking DJs ("YO, I'M ASKING DJS THEIR REAL ..."); producer story card
+25.5K OTHER crew photo | 194K LIVE-CROWD circle pit "Wait for it..." | 4.3K OTHER masked figure photo (lowest) | 63.2K FACE interview "YO, I'M ASKING DJS THEIR REAL ..." | 9.2K TEXT-CARD long story about a collab | 12.5K ART -
+
+## 57 Chef Boyarbeatz (?) - release posts DO work when wrapped in a moment (dog on the stoop 102K; CST crowd "ID: ... DROPPED out now" 108K); Patreon promo is the floor
+9.5K STUDIO "CHEF PATREON IS NOW LIVE / Welcome to my Patreon" | 6.9K LIVE-POV (lowest) | 102K FACE with dog "ONE MORE TUNE OUT NOW ON DEEP DARK & DANGEROUS" | 13.2K LIVE-PERF - | 10.4K LIVE-PERF "CHEF BOYARBEATZ LIVE @ INFRASOUND 2025" | 108K LIVE-CROWD Club Studio Time "ID: Chef Boyarbeatz - DROPPED out now"
+
+## 58 MVRDA (?) - CLUB STUDIO TIME collab posts (crowd-in-a-studio platform) carry the feed; interview series collab with Aweminus
+25.5K OTHER crew photo (collab) | 63.2K FACE "YO, I'M ASKING DJS THEIR REAL ..." (Aweminus collab) | 12.5K LIVE-CROWD CST "MVRDA" | 16K LIVE-CROWD CST "MVRDA" | 11.2K OTHER CST portrait "LIVE FROM DENVER" | 9K ART logo "MVRDA" (low)
+
+## 59 Modal Nodes (?) - MASKED / dark cyber world: skull masks, red stage, wireframe tower art ("IN THE STARS")
+8.5K ART "NEXT WEEKEND" (lowest) | 53.4K LIVE-CROWD red - | 217K LIVE-PERF masked - | 77.6K LIVE-POV masked - | 35.1K ART wireframe tower "IN THE STARS" | 33.6K ART "MODAL NODES" logo
+
+## 60 Carre (off-lane, club/house) - platform interview (RA "Hot Cues", 44.7K) + dance music-video clips
+44.7K FACE RA interview "Hi RA, I'm Carre and this is Hot Cues" | 8.3K ART dance | 24.1K ART dance | 6.7K LIVE-POV (lowest) | 57.3K ART dance video | 32.7K ART dance video
+
+## 61 Lookas (66.8k, festival trap; off-lane) - surreal 3D / retro-video edits as music videos (882K toy 3D clip); title text
+69.7K ART 3D tacos | 38.3K ART 3D character | 882K ART 3D toys - | 19.9K ART retro video "LOOKAS & YOUNGWOLF - MAXEDOUT!" | 21.9K ART retro dance "LOOKAS & YOUNGWOLF - MAXEDOUT!" | 11K ART dark -
+
+## 62 SCHMUX (?) - portrait photos + release cards; top is friends-at-a-festival with "Your new fav space bass anthem just dropped" (72.8K)
+40.8K OTHER portrait pinned | 8.1K ART "GET GLORKED EP COMING SOON" pinned (lowest) | 72.8K LIVE-CROWD friends "Your new fav space bass anthem just dropped" pinned | 22.7K OTHER portrait | 10.6K LIVE-PERF | 19.2K OTHER portrait | (next: "Your last 2 brain cells ...")
+
+## 64 VAMPA (?) - FACE / persona edits, Lost Lands hook, relatable lowercase
+61.5K LIVE-PERF "RIDDIM THOTTIES UNITE AT LOST LANDS" pinned | 9.3K LIVE-POV "how do I explain to my boss this was my sick day" | 9.1K FACE filter | 16.6K OTHER leaf pile | 9.1K FACE - | 7.2K FACE (lowest) | (next: "showing Hildog my music", "Morticia Adams if she ...")
+
+## 65 Finnuh (?) - tutorial / how-to (DAW, "ABLETON SHORTCUTS most people miss", "HOW TO REMIX A DUBSTEP ANTHEM"), POV skits ("bro come to the after it's gonna be dope! the after:")
+38.8K TEXT-CARD "HOW TO REMIX A DUBSTEP ANTHEM" pinned | 61K SKIT "saying a riddim dj's favorite words" pinned | 142K LIVE-POV "bro come to the after it's gonna be dope! the after:" pinned | 16.8K STUDIO screen | 6.6K STUDIO "ABLETON SHORTCUTS most people miss" (lowest) | 46.3K LIVE-POV "Is it ok if I remix a remix?"
+
+## 66 MACHAKI (?) - FAMOUS-SONG FLIPS with reaction: "i remade innerbloom into dubstep and showed my roommate:" (543K), "ridin dirty: dirtier" over DAW (361K, rap flip)
+361K STUDIO DAW + face "ridin dirty: dirtier" pinned | 24.6K LIVE-CROWD lasers pinned | 543K FACE roommate reaction "i remade innerbloom into dubstep and showed my roommate:" pinned | 27.7K FACE selfie | 8.1K OTHER portrait (lowest) | 27.6K LIVE-CROWD Red Rocks
+
+## 67 Tantron (?) - famous-song remix as the top (109K "PUMP IT TANTRON REMIX" with Black Eyed Peas cut-out); live; face
+109K ART "PUMP IT TANTRON REMIX" pinned | 34.2K LIVE-CROWD lasers | 10K LIVE-POV | 39.5K LIVE-PERF | 18.3K FACE "WORK TANTRON" | 8.9K FACE pointing (lowest)
+
+## 68 SAYMYNAME (137k) - LIVE footage + white-box text hooks speaking to a niche ("I made this for the people who fuck with both Dubstep & Techno. Imagine hearing it live." 137K)
+137K LIVE-PERF "I made this for the people who fuck with both Dubstep & Techno. Imagine hearing it live." pinned | 22.8K TEXT-CARD lineup | 11.3K LIVE-CROWD | 15K LIVE-CROWD "The scene missed this OG HARDTRAP sound and energy" | 10.9K LIVE-CROWD "I just played the first ever OG HARDTRAP set and it was insane" | 13.7K FACE "I am playing a rare OG TRAP + HARDTRAP set in LA TONIGHT ONLY ..."
+
+## 69 G-Space (39.5k) - art and album-cover posts sink (3.5K, 4.6K); live and burning-man POV carry
+8.8K LIVE-POV | 3.5K ART album cover (lowest) | 44.8K ART red figure | 4.8K STUDIO drums | 4.6K ART "QUALIA" album art | 27.4K LIVE-CROWD "POV: you made your dreams a reality and performed your songs live at burning man"
+
+## 70 Cozy Kev (?) - live wides do the work (35K Red Rocks, 32K "this crowd reaction"); face hooks underperform here
+4.9K FACE "theres still people in 2026 that make dubstep with no swing wtf" | 4.2K FACE "YOOO WTF DID I JUST MAKE" (lowest) | 32K LIVE-PERF "this crowd reaction" | 5.8K LIVE-POV Red Rocks | 35.2K LIVE-CROWD Red Rocks | 3.6K ART "MOON"
+
+## 73 SPORTMODE (?) - FAMOUS-SONG FLIP + co-sign: "T-Pain apple bottom jeans but it's dubstep" (279K), "SUBTRONICS DROPPING MY LOW FLIP AT EDC WTFFF" (225K); sound-design speedrun; drop poll
+225K PROOF "SUBTRONICS DROPPING MY LOW FLIP AT EDC WTFFF" pinned | 279K LIVE-CROWD pyro "T-Pain apple bottom jeans but it's dubstep" pinned | 78.3K STUDIO plugin "from white noise to trap flute in 10 seconds" pinned | 24.6K STUDIO split "guys be nice this is my first dubstep song" | 18.8K STUDIO poll split "which drop is better?" | 9.9K LIVE-POV "you havent heard the new crankdat & kaskade like this yet" (lowest)
+
+## 76 Luke Petruzzi (?) - FAMOUS-THEME FLIP as a meme: Lord Of The Rings dubstep ("sorry babe i can't hang tonight i gotta make Lord Of The Rings dubstep with the boys" 645K; preview version 1.1M); Khalid remix test
+4.5K FACE "Authenticity In Art >>>" | 3.5K FACE ticket giveaway (lowest) | 10.7K LIVE-CROWD "Testing my Khalid remix at Samsara festival" | 6.3K FACE "shoutout" UKF | 1.1M FACE split "hey babe i can't come tonight, i gotta make a preview of the drop ... of my LOTR dubstep with the boys" | 645K FACE "sorry babe i can't hang tonight i gotta make Lord Of The Rings dubstep with the boys"
+
+## 78 shmani (?) - vocalist; sings into a mic with ONE giant caption word per reel ("6/8", "PISSED", "111", "ALBUM", "VANDALIZING"); sunflower-costume persona
+494K FACE singing "6/8" pinned | 496K FACE singing "PISSED" pinned | 587K FACE singing "111" pinned | 6.4K ART "POCKET PARTY vocals x bass music" (lowest) | 198K FACE sunflower costume "ALBUM" | 10K FACE sunflower "VANDALIZING"

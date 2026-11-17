@@ -2,15 +2,31 @@
 
 Final, 2026-11-17 morning. Replaces the interim version.
 
-**What was read:** 249 main-band artists (10k to 100k Spotify, 10k+ followers on IG or TikTok), last 12 Reels each (view counts from the grid). 1,607 post pages (owner, collab, audio label, date, caption) across 224 artists. Covers read by eye for the top 42 Instagram accounts (390 reels) and the top 4 TikTok-first accounts. One snapshot, read only, no audio listened to.
+**What was read:** 249 main-band artists (10k to 100k Spotify, 10k+ followers on IG or TikTok), last 12 Reels each (view counts from the grid). 1,607 post pages (owner, collab, audio label, date, caption) across 224 artists. Covers read by eye for 70 Instagram accounts (ranks 1 to 78, about 570 reels) and the top 4 TikTok-first accounts. One snapshot, read only, no audio listened to.
 
-## The five findings
+## The findings
 
 1. **Posting rhythm is the biggest separator.** Artists with 10 to 12 of their last 12 posts over 10k post every ~13 days (median). Artists with 5 to 9 hits post every ~29 days. Artists with 0 to 4 post every ~67 days. Follower counts barely differ between these groups (30k / 23k / 21k median). A slow poster's last 12 posts are also older and have had more time to collect views, which makes the gap more striking, not less.
 2. **Live footage and memes spike; art, photos and flyers sink.** Within each artist (views vs that artist's own median): memes and skits hit 2x their usual in 28% of posts, live performance 24%, live POV from the decks 22%, face-to-camera 17%, studio 14%. Artwork posts sit at 0.77x the artist's median and only 5% reach 2x. Photos and flyers sit at 0.73x.
 3. **Promo is the floor.** The worst post in an account is very often the flyer, the ad, or the "OUT NOW" post (The Resistance flyer, Dr. Ushuu sample-pack ad, Stoned Level masterclass ad at 3.3k, his lowest). Across 1,607 posts, "out now / link in bio" captions appear in 13% of breakouts vs 18% of the rest. All-caps hype captions: 15% vs 21%.
 4. **A text hook is an account style, not a per-post lever.** Inside the same account, posts with and without a hook line do the same (1.02x vs 0.98x of the median). What matters is that hook accounts use it every time, so the feed reads as one voice. 12 of the top 27 put a hook on most covers.
 5. **Collabs carry reach.** 20% of breakout posts are collab posts vs 14% of the rest, and about a quarter of all posts read live on another account (Nimda and yvm3 share most of their top reels).
+
+6. **Flips of famous songs are the most reliable big outlier, and it is Nick's lane.** Added 2026-11-17 morning after reading covers for ranks 43 to 78. Across all 1,607 posts, posts whose caption or audio says flip / remix / bootleg / edit / VIP sit at 1.71x the artist's median (vs 1.17x for everything else); 45% reach 2x (vs 30%) and 19% reach 5x (vs 13%). The biggest single posts in the mid tier are flips of things everyone knows:
+
+| Artist (rank) | Flip | Views |
+|---|---|---|
+| Luke Petruzzi (76) | Lord Of The Rings theme, framed as a meme ("sorry babe i can't hang tonight i gotta make Lord Of The Rings dubstep with the boys") | 1.1M and 645k |
+| Ace Aura (45) | "Sandstorm by Darude" | 746k |
+| MACHAKI (66) | "i remade innerbloom into dubstep and showed my roommate:" | 543k |
+| MACHAKI (66) | "ridin dirty: dirtier" (rap flip, over the DAW) | 361k |
+| SPORTMODE (73) | "T-Pain apple bottom jeans but it's dubstep" | 279k |
+| BLVNKSPVCE (51) | "asap rocky but make it future riddim or some shi" | 133k |
+| Tantron (67) | "PUMP IT TANTRON REMIX" | 109k |
+
+The pattern: the cover names the famous song in plain words, the video is the flip, and often a reaction (roommate, crowd) sits on top. BLVNKSPVCE follows a viral flip with a release post: "yall went so crazy on yesterdays post I had to drop it...." (34k).
+
+7. **Platforms and signature frames.** Club Studio Time (crowd-in-a-studio filming) collab posts sit behind top reels for Nimda, Chef Boyarbeatz, MVRDA and Aweminus; RA's "Hot Cues" for Carre. Aych shoots every post in one fisheye-in-a-black-frame look, so the feed is recognisable in the first frame (65k to 76k on 18k followers).
 
 Also: studio / process posts are over-represented in breakouts (20% vs 11%), but the weakest tier leans on them most (22% of their posts vs 8% in the top tier). Studio content spikes; it does not carry a feed on its own.
 
@@ -38,7 +54,7 @@ Also: studio / process posts are over-represented in breakouts (20% vs 11%), but
 3. **Live POV for every show:** from behind the decks, one grade, zero text (The Resistance / SQISHI model).
 4. **In-world hook voice on every post:** one fixed lowercase voice from inside the world, never explaining the center (Space Wizard model; finding 4).
 5. **Never lead with promo:** release info in the caption only; the video leads with the moment (finding 3).
-6. **One recurring bit with a fixed template:** e.g. a rap-flip reveal series, matched to the dark/wonky 140 + rap-flip lane.
+6. **Rap-flip series as the recurring bit (strongest test, finding 6):** each post names the original in plain words on the cover ("[rap song] but it's 140"), the video is the flip, with a reaction or the drop as the punchline. Follow a post that travels with the release ("yall went so crazy on yesterdays post I had to drop it").
 7. **Collab posts** with peers on shared IDs and b2bs (finding 5).
 
 ## The list (top 45 of 249, by 10k+ consistency then median)

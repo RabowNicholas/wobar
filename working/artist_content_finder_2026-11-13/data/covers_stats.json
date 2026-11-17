@@ -1,16 +1,16 @@
 {
- "n_posts": 390,
- "n_artists": 39,
+ "n_posts": 558,
+ "n_artists": 67,
  "format": {
   "ART": {
-   "n": 63,
-   "median_rel": 0.77,
-   "share_2x": 5
+   "n": 95,
+   "median_rel": 0.76,
+   "share_2x": 9
   },
   "FACE": {
-   "n": 70,
-   "median_rel": 1.04,
-   "share_2x": 17
+   "n": 109,
+   "median_rel": 1.02,
+   "share_2x": 19
   },
   "FACE-": {
    "n": 2,
@@ -18,39 +18,39 @@
    "share_2x": 50
   },
   "LIVE-CROWD": {
-   "n": 39,
-   "median_rel": 1.16,
-   "share_2x": 15
+   "n": 62,
+   "median_rel": 1.12,
+   "share_2x": 21
   },
   "LIVE-PERF": {
-   "n": 45,
-   "median_rel": 0.96,
-   "share_2x": 24
-  },
-  "LIVE-POV": {
-   "n": 49,
-   "median_rel": 1.04,
-   "share_2x": 22
-  },
-  "MEME": {
-   "n": 32,
-   "median_rel": 1.16,
+   "n": 61,
+   "median_rel": 1.0,
    "share_2x": 28
   },
+  "LIVE-POV": {
+   "n": 69,
+   "median_rel": 1.09,
+   "share_2x": 23
+  },
+  "MEME": {
+   "n": 37,
+   "median_rel": 1.15,
+   "share_2x": 27
+  },
   "OTHER": {
-   "n": 26,
-   "median_rel": 0.73,
-   "share_2x": 19
+   "n": 41,
+   "median_rel": 0.87,
+   "share_2x": 12
   },
   "PROOF": {
-   "n": 2,
-   "median_rel": 1.61,
-   "share_2x": 50
+   "n": 3,
+   "median_rel": 2.95,
+   "share_2x": 67
   },
   "SKIT": {
-   "n": 7,
-   "median_rel": 1.2,
-   "share_2x": 14
+   "n": 8,
+   "median_rel": 1.22,
+   "share_2x": 12
   },
   "SPLIT": {
    "n": 3,
@@ -58,9 +58,9 @@
    "share_2x": 0
   },
   "STUDIO": {
-   "n": 44,
-   "median_rel": 1.05,
-   "share_2x": 14
+   "n": 55,
+   "median_rel": 0.98,
+   "share_2x": 15
   },
   "TEXT": {
    "n": 1,
@@ -68,22 +68,22 @@
    "share_2x": 0
   },
   "TEXT-CARD": {
-   "n": 7,
-   "median_rel": 0.79,
-   "share_2x": 14
+   "n": 12,
+   "median_rel": 0.89,
+   "share_2x": 8
   }
  },
  "hook": {
   "with_hook": {
-   "n": 201,
-   "median_rel": 1.02,
-   "share_2x": 16
+   "n": 289,
+   "median_rel": 1.05,
+   "share_2x": 20
   },
   "no_hook": {
-   "n": 189,
-   "median_rel": 0.98,
-   "share_2x": 19
+   "n": 269,
+   "median_rel": 0.96,
+   "share_2x": 17
   }
  },
- "lowest_flagged": 23
+ "lowest_flagged": 43
 }
