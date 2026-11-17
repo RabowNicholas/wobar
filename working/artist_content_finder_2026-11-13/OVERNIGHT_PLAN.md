@@ -59,3 +59,4 @@ Order: (1) finish first 489 posts; (2) rest of main band ranks 46-249: data/post
 - 04:24 FINAL REPORT_CONTENT.md written (5 findings, 7 playbooks, WOBAR notes, 7 tests, top 45). Next: commit + ACTIVE update.
 - 04:24 DONE. Committed 0ac1e8f. Heartbeat cron removed. Stretch-band reference reads not done (no time left after the full main band).
 - 04:45 covers ranks 43-65 read (20 more). New: rap-flip hook (BLVNKSPVCE 133K), famous-song flip (Ace Aura 746K), signature frame (Aych), platform features (Club Studio Time, RA).
+- 04:47 'go do more' (Nick): covers ranks 43-78 done, flip finding added + committed, WATCH_FLIPS.csv (87 flip posts at 2x+). Stretch-band reach read started (151 accounts, localStorage acf_reels; main backup in acf_reels_main_backup, already on disk as raw/reels_all.json).
