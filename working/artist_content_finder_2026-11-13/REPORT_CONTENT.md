@@ -88,6 +88,30 @@ Full ranking: RANKING.csv. Every post read: CONTENT_POSTS.csv. Cover reads: data
 
 Off-lane in the list (kept for format, not for lane): Saxsquatch, Holly, JordanBeats (type beats), Brainrot (personality creator), KLOPOTA (finger-drumming performance).
 
+## One tier up: the stretch band (100k to 500k Spotify)
+Added 2026-11-17. Same reach read (last 12 reels) on 149 stretch-band accounts. Grid view counts only; no post pages read. Full list: data/ranking_stretch.json.
+
+| | Main (10k to 100k) | Stretch (100k to 500k) |
+|---|---|---|
+| Accounts | 235 | 149 |
+| Median IG followers | 21k | 62k |
+| Median of 12 over 10k | 4 | 9 |
+| 10 or more of 12 over 10k | 15% | 42% |
+| Median views per reel | 8.3k | 19.4k |
+| Median views per follower | 0.39 | 0.36 |
+| Posts at 2x the artist's median, per 12 | 1.95 | 1.93 |
+
+- **Views per follower doesn't change between tiers.** The stretch band gets more views because it has about 3x the followers. Its posts don't travel further per follower, and breakouts are just as frequent. Followers are the ceiling at both tiers.
+- **At the same follower count, the bigger act still does a bit better.** With 10k to 30k followers, 21% of stretch accounts are consistent vs 10% of main. With 60k to 120k, it's 59% vs 20%. Listener demand outside Instagram adds something on top of followers.
+- **The overperformers repeat the main-band playbooks** (views per follower, consistent accounts only):
+  - Nikita, the Wicked (46.8k followers, 72k median): face to camera plus a genre-mashup hook, e.g. "I'm calling this ~JazzStep~" (207k), "So I made this sick intro video using clips of Miles Davis...", "checking your mixdown at the laundromat>>>". This is finding 6 again: the flip of something everyone knows.
+  - LEVEL UP (299k, 274k median): a full persona world, a witch/ritual lore. "PRE SAVE RITUAL", "The Ritual Tour", highlights named "SUMMON CIRCLE". The same move as Space Wizard, one tier up.
+  - MAD DUBZ (44.5k, 52k median): cinematic old-film clips, a 3D masked character, live crowd. Masked plus a strong look.
+  - Fourfive (56.6k, 52k median): faceless (a glitched statue avatar), "save the pit", only 9 posts on the grid. **Caveat:** the reels tab likely includes collab reels from other accounts, so this probably isn't a real exception to the rhythm finding.
+  - DRIIA (22.6k, 43.5k median): off-lane (atmospheric). Every post is a film-look portrait with no text. A signature frame, as in finding 7.
+
+**What it means for WOBAR:** nothing new to test. The playbooks that lift the mid tier are the same ones running one tier up: the flip, the persona world, masked with a fixed look. Followers set the ceiling, so growth comes from posts that travel to non-followers. Breakouts (2x posts) happen about twice per 12 posts at both tiers.
+
 ## Limits
 - Views as shown at read time; one snapshot.
 - Cadence is measured from the posts read (all 12 for the top tier; hits plus the 2 weakest for the rest), so it is an estimate for lower tiers.

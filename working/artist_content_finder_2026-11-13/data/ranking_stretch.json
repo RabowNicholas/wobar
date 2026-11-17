@@ -1,0 +1,1492 @@
+[
+ {
+  "n": "LEVEL UP",
+  "h": "levelupdub",
+  "hits": 12,
+  "k": 12,
+  "med": 274000.0,
+  "top": 1600000,
+  "fol": 298000,
+  "bo": 4
+ },
+ {
+  "n": "Svdden Death",
+  "h": "svddendeath",
+  "hits": 12,
+  "k": 12,
+  "med": 185500.0,
+  "top": 445000,
+  "fol": 405000,
+  "bo": 1
+ },
+ {
+  "n": "Eptic",
+  "h": "eptic",
+  "hits": 12,
+  "k": 12,
+  "med": 144500.0,
+  "top": 2000000,
+  "fol": 322000,
+  "bo": 4
+ },
+ {
+  "n": "SadBois",
+  "h": "sadbois_official",
+  "hits": 12,
+  "k": 12,
+  "med": 132000.0,
+  "top": 519000,
+  "fol": 100000,
+  "bo": 3
+ },
+ {
+  "n": "Zero (UK)",
+  "h": "zero_uk",
+  "hits": 12,
+  "k": 12,
+  "med": 117500.0,
+  "top": 463000,
+  "fol": 107000,
+  "bo": 1
+ },
+ {
+  "n": "CHYL",
+  "h": "itschyl",
+  "hits": 12,
+  "k": 12,
+  "med": 114000.0,
+  "top": 266000,
+  "fol": 253000,
+  "bo": 2
+ },
+ {
+  "n": "Jessica Audiffred",
+  "h": "jessica_audiffred",
+  "hits": 12,
+  "k": 12,
+  "med": 108500.0,
+  "top": 4500000,
+  "fol": 225000,
+  "bo": 2
+ },
+ {
+  "n": "Nikita, the Wicked",
+  "h": "nikitathewicked",
+  "hits": 12,
+  "k": 12,
+  "med": 72000.0,
+  "top": 207000,
+  "fol": 46800,
+  "bo": 1
+ },
+ {
+  "n": "G Jones",
+  "h": "gjonesbass",
+  "hits": 12,
+  "k": 12,
+  "med": 66200.0,
+  "top": 107000,
+  "fol": 125000,
+  "bo": 0
+ },
+ {
+  "n": "Eksman",
+  "h": "eksman_mc",
+  "hits": 12,
+  "k": 12,
+  "med": 64100.0,
+  "top": 3000000,
+  "fol": 121000,
+  "bo": 2
+ },
+ {
+  "n": "HEYZ",
+  "h": "heyzmsc",
+  "hits": 12,
+  "k": 12,
+  "med": 63400.0,
+  "top": 331000,
+  "fol": 129000,
+  "bo": 4
+ },
+ {
+  "n": "SampliFire",
+  "h": "samplifire",
+  "hits": 12,
+  "k": 12,
+  "med": 62250.0,
+  "top": 535000,
+  "fol": 95200,
+  "bo": 2
+ },
+ {
+  "n": "Flava D",
+  "h": "flava_d",
+  "hits": 12,
+  "k": 12,
+  "med": 57900.0,
+  "top": 210000,
+  "fol": 94800,
+  "bo": 2
+ },
+ {
+  "n": "BARELY ALIVE",
+  "h": "barelyalive",
+  "hits": 12,
+  "k": 12,
+  "med": 56050.0,
+  "top": 148000,
+  "fol": 253000,
+  "bo": 1
+ },
+ {
+  "n": "Juelz",
+  "h": "bbjuelz",
+  "hits": 12,
+  "k": 12,
+  "med": 54500.0,
+  "top": 728000,
+  "fol": 79500,
+  "bo": 2
+ },
+ {
+  "n": "Lens (UK)",
+  "h": "lensldn",
+  "hits": 12,
+  "k": 12,
+  "med": 53900.0,
+  "top": 256000,
+  "fol": 109000,
+  "bo": 3
+ },
+ {
+  "n": "Fourfive",
+  "h": "cmfourfive",
+  "hits": 12,
+  "k": 12,
+  "med": 52550.0,
+  "top": 111000,
+  "fol": 56600,
+  "bo": 2
+ },
+ {
+  "n": "MAD DUBZ",
+  "h": "mad.dubzmusic",
+  "hits": 12,
+  "k": 12,
+  "med": 52450.0,
+  "top": 103000,
+  "fol": 44500,
+  "bo": 0
+ },
+ {
+  "n": "Fairlane",
+  "h": "fairlanemusic",
+  "hits": 12,
+  "k": 12,
+  "med": 50400.0,
+  "top": 4600000,
+  "fol": 60400,
+  "bo": 4
+ },
+ {
+  "n": "Eliminate",
+  "h": "eliminatemusic",
+  "hits": 12,
+  "k": 12,
+  "med": 50050.0,
+  "top": 677000,
+  "fol": 175000,
+  "bo": 2
+ },
+ {
+  "n": "DRIIA",
+  "h": "driiamusic",
+  "hits": 12,
+  "k": 12,
+  "med": 43550.0,
+  "top": 201000,
+  "fol": 22600,
+  "bo": 4
+ },
+ {
+  "n": "Liquid Stranger",
+  "h": "liquidstranger",
+  "hits": 12,
+  "k": 12,
+  "med": 43050.0,
+  "top": 266000,
+  "fol": 248000,
+  "bo": 2
+ },
+ {
+  "n": "Effin",
+  "h": "effinofficial",
+  "hits": 12,
+  "k": 12,
+  "med": 40650.0,
+  "top": 83700,
+  "fol": 84800,
+  "bo": 1
+ },
+ {
+  "n": "Nitepunk",
+  "h": "nitepunk",
+  "hits": 12,
+  "k": 12,
+  "med": 38550.0,
+  "top": 143000,
+  "fol": 76300,
+  "bo": 3
+ },
+ {
+  "n": "Wreckno",
+  "h": "wreckno",
+  "hits": 12,
+  "k": 12,
+  "med": 38550.0,
+  "top": 6400000,
+  "fol": 78100,
+  "bo": 3
+ },
+ {
+  "n": "ProbCause",
+  "h": "probcause",
+  "hits": 12,
+  "k": 12,
+  "med": 37250.0,
+  "top": 245000,
+  "fol": 48400,
+  "bo": 1
+ },
+ {
+  "n": "Chime",
+  "h": "chimetunes",
+  "hits": 12,
+  "k": 12,
+  "med": 37250.0,
+  "top": 146000,
+  "fol": 121000,
+  "bo": 4
+ },
+ {
+  "n": "Tisoki",
+  "h": "tisoki",
+  "hits": 12,
+  "k": 12,
+  "med": 35250.0,
+  "top": 132000,
+  "fol": 78100,
+  "bo": 1
+ },
+ {
+  "n": "HURTBOX",
+  "h": "hurtboxofficial",
+  "hits": 12,
+  "k": 12,
+  "med": 34200.0,
+  "top": 50800,
+  "fol": 42700,
+  "bo": 0
+ },
+ {
+  "n": "DENNETT",
+  "h": "dennettofficial",
+  "hits": 12,
+  "k": 12,
+  "med": 26050.0,
+  "top": 64600,
+  "fol": 58300,
+  "bo": 1
+ },
+ {
+  "n": "Zoey808",
+  "h": "zzzoey808",
+  "hits": 12,
+  "k": 12,
+  "med": 24500.0,
+  "top": 303000,
+  "fol": 52400,
+  "bo": 3
+ },
+ {
+  "n": "Bro Safari",
+  "h": "brosafari",
+  "hits": 12,
+  "k": 12,
+  "med": 22250.0,
+  "top": 96900,
+  "fol": 112000,
+  "bo": 2
+ },
+ {
+  "n": "Lumasi",
+  "h": "lumasimusic",
+  "hits": 12,
+  "k": 12,
+  "med": 21500.0,
+  "top": 213000,
+  "fol": 63400,
+  "bo": 2
+ },
+ {
+  "n": "Buunshin",
+  "h": "buunshin",
+  "hits": 12,
+  "k": 12,
+  "med": 19400.0,
+  "top": 32300,
+  "fol": 29400,
+  "bo": 0
+ },
+ {
+  "n": "Gardella",
+  "h": "gardellaaa",
+  "hits": 12,
+  "k": 12,
+  "med": 18850.0,
+  "top": 210000,
+  "fol": 21000,
+  "bo": 3
+ },
+ {
+  "n": "Deathpact",
+  "h": "deathpact",
+  "hits": 12,
+  "k": 12,
+  "med": 17000.0,
+  "top": 29400,
+  "fol": 73200,
+  "bo": 0
+ },
+ {
+  "n": "DJ Diesel",
+  "h": "djdiesel",
+  "hits": 11,
+  "k": 11,
+  "med": 1200000,
+  "top": 5300000,
+  "fol": 1500000,
+  "bo": 3
+ },
+ {
+  "n": "LAYZ",
+  "h": "layzdubz",
+  "hits": 11,
+  "k": 11,
+  "med": 74700,
+  "top": 2100000,
+  "fol": 148000,
+  "bo": 3
+ },
+ {
+  "n": "Boogie T",
+  "h": "mrboogiet",
+  "hits": 11,
+  "k": 11,
+  "med": 47800,
+  "top": 74400,
+  "fol": 218000,
+  "bo": 0
+ },
+ {
+  "n": "Softest Hard",
+  "h": "softest.hard",
+  "hits": 11,
+  "k": 12,
+  "med": 34750.0,
+  "top": 141000,
+  "fol": 170000,
+  "bo": 2
+ },
+ {
+  "n": "Gentlemens Club",
+  "h": "gentlemensclub",
+  "hits": 11,
+  "k": 11,
+  "med": 34100,
+  "top": 62000,
+  "fol": 120000,
+  "bo": 0
+ },
+ {
+  "n": "Saka",
+  "h": "soundslikesaka",
+  "hits": 11,
+  "k": 12,
+  "med": 33300.0,
+  "top": 81900,
+  "fol": 41100,
+  "bo": 1
+ },
+ {
+  "n": "Seth David",
+  "h": "iamsethdavid",
+  "hits": 11,
+  "k": 12,
+  "med": 31550.0,
+  "top": 179000,
+  "fol": 62200,
+  "bo": 3
+ },
+ {
+  "n": "Tvboo",
+  "h": "musicbytvboo",
+  "hits": 11,
+  "k": 12,
+  "med": 30000.0,
+  "top": 1400000,
+  "fol": 100000,
+  "bo": 2
+ },
+ {
+  "n": "Infekt",
+  "h": "infektdubstep",
+  "hits": 11,
+  "k": 12,
+  "med": 25900.0,
+  "top": 47600,
+  "fol": 125000,
+  "bo": 0
+ },
+ {
+  "n": "Elipsa",
+  "h": "elipsamusic",
+  "hits": 11,
+  "k": 12,
+  "med": 24900.0,
+  "top": 243000,
+  "fol": 18900,
+  "bo": 3
+ },
+ {
+  "n": "Feed Me",
+  "h": "feedme",
+  "hits": 11,
+  "k": 12,
+  "med": 22950.0,
+  "top": 61100,
+  "fol": 107000,
+  "bo": 4
+ },
+ {
+  "n": "WINK (US)",
+  "h": "winksounds",
+  "hits": 11,
+  "k": 12,
+  "med": 21600.0,
+  "top": 84200,
+  "fol": 19700,
+  "bo": 3
+ },
+ {
+  "n": "Teminite",
+  "h": "teminitemusic",
+  "hits": 11,
+  "k": 12,
+  "med": 19050.0,
+  "top": 44700,
+  "fol": 36300,
+  "bo": 1
+ },
+ {
+  "n": "HerShe",
+  "h": "hershe",
+  "hits": 11,
+  "k": 12,
+  "med": 18850.0,
+  "top": 39900,
+  "fol": 122000,
+  "bo": 1
+ },
+ {
+  "n": "Paper Skies",
+  "h": "paperskiesmusic",
+  "hits": 11,
+  "k": 12,
+  "med": 18850.0,
+  "top": 72500,
+  "fol": 33300,
+  "bo": 1
+ },
+ {
+  "n": "Artifakts",
+  "h": "artifaktsmusic",
+  "hits": 11,
+  "k": 12,
+  "med": 15950.0,
+  "top": 669000,
+  "fol": 25700,
+  "bo": 1
+ },
+ {
+  "n": "Shima",
+  "h": "shimamusic",
+  "hits": 10,
+  "k": 10,
+  "med": 45800.0,
+  "top": 402000,
+  "fol": 70400,
+  "bo": 3
+ },
+ {
+  "n": "Distinct Motive",
+  "h": "distinctmotive",
+  "hits": 10,
+  "k": 10,
+  "med": 45250.0,
+  "top": 78600,
+  "fol": 75100,
+  "bo": 0
+ },
+ {
+  "n": "Mary Droppinz",
+  "h": "marydroppinz",
+  "hits": 10,
+  "k": 10,
+  "med": 38050.0,
+  "top": 434000,
+  "fol": 161000,
+  "bo": 2
+ },
+ {
+  "n": "Doctor P",
+  "h": "doctorpcircus",
+  "hits": 10,
+  "k": 12,
+  "med": 33950.0,
+  "top": 128000,
+  "fol": 81100,
+  "bo": 1
+ },
+ {
+  "n": "Modestep",
+  "h": "modestep",
+  "hits": 10,
+  "k": 10,
+  "med": 31150.0,
+  "top": 178000,
+  "fol": 100000,
+  "bo": 2
+ },
+ {
+  "n": "Benda",
+  "h": "bendamusic",
+  "hits": 10,
+  "k": 11,
+  "med": 25200,
+  "top": 51600,
+  "fol": 42100,
+  "bo": 1
+ },
+ {
+  "n": "Circadian",
+  "h": "circadiandnb",
+  "hits": 10,
+  "k": 12,
+  "med": 17850.0,
+  "top": 137000,
+  "fol": 23400,
+  "bo": 2
+ },
+ {
+  "n": "REAPER",
+  "h": "reapernoises",
+  "hits": 10,
+  "k": 12,
+  "med": 16850.0,
+  "top": 24100,
+  "fol": 59200,
+  "bo": 0
+ },
+ {
+  "n": "SPAG",
+  "h": "spagheddy",
+  "hits": 10,
+  "k": 11,
+  "med": 16700,
+  "top": 60000,
+  "fol": 102000,
+  "bo": 4
+ },
+ {
+  "n": "Saint Ludo",
+  "h": "saintludo",
+  "hits": 10,
+  "k": 12,
+  "med": 16550.0,
+  "top": 30100,
+  "fol": 49700,
+  "bo": 0
+ },
+ {
+  "n": "Dodge & Fuski",
+  "h": "dodge_and_fuski",
+  "hits": 10,
+  "k": 12,
+  "med": 11650.0,
+  "top": 79700,
+  "fol": 61100,
+  "bo": 3
+ },
+ {
+  "n": "TYNAN",
+  "h": "tynanofficial",
+  "hits": 9,
+  "k": 9,
+  "med": 98800,
+  "top": 1600000,
+  "fol": 193000,
+  "bo": 2
+ },
+ {
+  "n": "SIPPY",
+  "h": "sippyau",
+  "hits": 9,
+  "k": 9,
+  "med": 87400,
+  "top": 150000,
+  "fol": 183000,
+  "bo": 0
+ },
+ {
+  "n": "Kompany",
+  "h": "kompanymusic",
+  "hits": 9,
+  "k": 9,
+  "med": 84900,
+  "top": 333000,
+  "fol": 198000,
+  "bo": 1
+ },
+ {
+  "n": "ARMNHMR",
+  "h": "armnhmr",
+  "hits": 9,
+  "k": 9,
+  "med": 74600,
+  "top": 279000,
+  "fol": 117000,
+  "bo": 1
+ },
+ {
+  "n": "Simula",
+  "h": "simulauk",
+  "hits": 9,
+  "k": 9,
+  "med": 70000,
+  "top": 152000,
+  "fol": 72400,
+  "bo": 1
+ },
+ {
+  "n": "HVDES",
+  "h": "_hvdes_",
+  "hits": 9,
+  "k": 9,
+  "med": 69800,
+  "top": 1200000,
+  "fol": 176000,
+  "bo": 4
+ },
+ {
+  "n": "Luci",
+  "h": "luci_official",
+  "hits": 9,
+  "k": 9,
+  "med": 65800,
+  "top": 94100,
+  "fol": 206000,
+  "bo": 0
+ },
+ {
+  "n": "Cyclops",
+  "h": "thisiscyclops",
+  "hits": 9,
+  "k": 9,
+  "med": 63800,
+  "top": 120000,
+  "fol": 139000,
+  "bo": 0
+ },
+ {
+  "n": "Jaenga",
+  "h": "jaengamusic",
+  "hits": 9,
+  "k": 9,
+  "med": 33500,
+  "top": 2000000,
+  "fol": 107000,
+  "bo": 3
+ },
+ {
+  "n": "Star Monster",
+  "h": "starmonsterofficial",
+  "hits": 9,
+  "k": 9,
+  "med": 26500,
+  "top": 2500000,
+  "fol": 83800,
+  "bo": 4
+ },
+ {
+  "n": "Know Good",
+  "h": "knowgood",
+  "hits": 9,
+  "k": 9,
+  "med": 25000,
+  "top": 253000,
+  "fol": 182000,
+  "bo": 1
+ },
+ {
+  "n": "Black Sun Empire",
+  "h": "blacksunempire_nl",
+  "hits": 9,
+  "k": 12,
+  "med": 23600.0,
+  "top": 63900,
+  "fol": 56100,
+  "bo": 2
+ },
+ {
+  "n": "Calcium",
+  "h": "calciumdubs",
+  "hits": 9,
+  "k": 9,
+  "med": 22200,
+  "top": 131000,
+  "fol": 94300,
+  "bo": 2
+ },
+ {
+  "n": "Tokyo Machine",
+  "h": "tokyomachine",
+  "hits": 9,
+  "k": 9,
+  "med": 21300,
+  "top": 58600,
+  "fol": 88400,
+  "bo": 1
+ },
+ {
+  "n": "Claude VonStroke",
+  "h": "vonstroke",
+  "hits": 9,
+  "k": 12,
+  "med": 20100.0,
+  "top": 147000,
+  "fol": 182000,
+  "bo": 2
+ },
+ {
+  "n": "Fly",
+  "h": "flybassmusic",
+  "hits": 9,
+  "k": 12,
+  "med": 17550.0,
+  "top": 242000,
+  "fol": 19000,
+  "bo": 4
+ },
+ {
+  "n": "Chmura",
+  "h": "chmuramusic",
+  "hits": 9,
+  "k": 12,
+  "med": 16950.0,
+  "top": 87800,
+  "fol": 30500,
+  "bo": 2
+ },
+ {
+  "n": "Smoakland",
+  "h": "smoaklandbeats",
+  "hits": 9,
+  "k": 12,
+  "med": 16950.0,
+  "top": 102000,
+  "fol": 57100,
+  "bo": 3
+ },
+ {
+  "n": "longstoryshort",
+  "h": "itsalongstoryshort",
+  "hits": 9,
+  "k": 12,
+  "med": 16000.0,
+  "top": 56200,
+  "fol": 51100,
+  "bo": 2
+ },
+ {
+  "n": "Truth",
+  "h": "truthdubstep",
+  "hits": 9,
+  "k": 12,
+  "med": 13300.0,
+  "top": 60000,
+  "fol": 73500,
+  "bo": 1
+ },
+ {
+  "n": "Snavs",
+  "h": "snavs",
+  "hits": 9,
+  "k": 12,
+  "med": 12500.0,
+  "top": 138000,
+  "fol": 36700,
+  "bo": 2
+ },
+ {
+  "n": "IVORY",
+  "h": "ivorydubz",
+  "hits": 9,
+  "k": 12,
+  "med": 10600.0,
+  "top": 36900,
+  "fol": 37300,
+  "bo": 3
+ },
+ {
+  "n": "YOOKIE",
+  "h": "yookiemusic",
+  "hits": 8,
+  "k": 9,
+  "med": 53100,
+  "top": 573000,
+  "fol": 280000,
+  "bo": 3
+ },
+ {
+  "n": "Bella Renee",
+  "h": "bellareneemusic",
+  "hits": 8,
+  "k": 10,
+  "med": 21450.0,
+  "top": 130000,
+  "fol": 40300,
+  "bo": 2
+ },
+ {
+  "n": "ÆON:MODE",
+  "h": "aeon_mode",
+  "hits": 8,
+  "k": 9,
+  "med": 21000,
+  "top": 133000,
+  "fol": 26300,
+  "bo": 3
+ },
+ {
+  "n": "Phaseone",
+  "h": "phaseoneau",
+  "hits": 8,
+  "k": 9,
+  "med": 20000,
+  "top": 59600,
+  "fol": 158000,
+  "bo": 2
+ },
+ {
+  "n": "Disrupta",
+  "h": "disruptauk",
+  "hits": 8,
+  "k": 9,
+  "med": 19100,
+  "top": 54800,
+  "fol": 53900,
+  "bo": 2
+ },
+ {
+  "n": "Riot",
+  "h": "riotmusic",
+  "hits": 8,
+  "k": 9,
+  "med": 18300,
+  "top": 310000,
+  "fol": 170000,
+  "bo": 3
+ },
+ {
+  "n": "Halogenix",
+  "h": "halogenix",
+  "hits": 8,
+  "k": 9,
+  "med": 18300,
+  "top": 33100,
+  "fol": 34800,
+  "bo": 0
+ },
+ {
+  "n": "Steller",
+  "h": "stellersounds",
+  "hits": 8,
+  "k": 10,
+  "med": 18050.0,
+  "top": 264000,
+  "fol": 68300,
+  "bo": 2
+ },
+ {
+  "n": "Riot Ten",
+  "h": "riottenmusic",
+  "hits": 8,
+  "k": 9,
+  "med": 17700,
+  "top": 75700,
+  "fol": 209000,
+  "bo": 2
+ },
+ {
+  "n": "TWLGHT",
+  "h": "twlght.mp3",
+  "hits": 8,
+  "k": 9,
+  "med": 14100,
+  "top": 219000,
+  "fol": 18700,
+  "bo": 2
+ },
+ {
+  "n": "4B",
+  "h": "dj4b",
+  "hits": 8,
+  "k": 12,
+  "med": 13450.0,
+  "top": 61800,
+  "fol": 145000,
+  "bo": 4
+ },
+ {
+  "n": "Space Laces",
+  "h": "space_laces",
+  "hits": 7,
+  "k": 7,
+  "med": 102000,
+  "top": 247000,
+  "fol": 124000,
+  "bo": 1
+ },
+ {
+  "n": "Wodd",
+  "h": "woddofficial",
+  "hits": 7,
+  "k": 9,
+  "med": 29900,
+  "top": 84900,
+  "fol": 118000,
+  "bo": 2
+ },
+ {
+  "n": "Visages",
+  "h": "visages.music",
+  "hits": 7,
+  "k": 7,
+  "med": 24300,
+  "top": 56500,
+  "fol": 26800,
+  "bo": 1
+ },
+ {
+  "n": "Skybreak",
+  "h": "skybreakedm",
+  "hits": 7,
+  "k": 8,
+  "med": 15700.0,
+  "top": 20200,
+  "fol": 32400,
+  "bo": 0
+ },
+ {
+  "n": "Dirtyphonics",
+  "h": "dirtyphonics",
+  "hits": 7,
+  "k": 9,
+  "med": 14800,
+  "top": 55800,
+  "fol": 81000,
+  "bo": 2
+ },
+ {
+  "n": "Ahee",
+  "h": "iamahee",
+  "hits": 7,
+  "k": 12,
+  "med": 13800.0,
+  "top": 64000,
+  "fol": 120000,
+  "bo": 3
+ },
+ {
+  "n": "CØNTRA",
+  "h": "contra.slaps",
+  "hits": 7,
+  "k": 12,
+  "med": 12850.0,
+  "top": 24700,
+  "fol": 18400,
+  "bo": 0
+ },
+ {
+  "n": "Away",
+  "h": "awaynotfound",
+  "hits": 7,
+  "k": 12,
+  "med": 12350.0,
+  "top": 76800,
+  "fol": 15300,
+  "bo": 4
+ },
+ {
+  "n": "Kaivon",
+  "h": "kaivon",
+  "hits": 7,
+  "k": 12,
+  "med": 11500.0,
+  "top": 365000,
+  "fol": 56200,
+  "bo": 1
+ },
+ {
+  "n": "Borne",
+  "h": "itsborne",
+  "hits": 6,
+  "k": 6,
+  "med": 23950.0,
+  "top": 61200,
+  "fol": 20600,
+  "bo": 2
+ },
+ {
+  "n": "Virus Syndicate",
+  "h": "officialvirussyndicate",
+  "hits": 6,
+  "k": 12,
+  "med": 11689.5,
+  "top": 111000,
+  "fol": 53400,
+  "bo": 2
+ },
+ {
+  "n": "NXSTY",
+  "h": "nxsty",
+  "hits": 6,
+  "k": 12,
+  "med": 10318.5,
+  "top": 86500,
+  "fol": 20700,
+  "bo": 2
+ },
+ {
+  "n": "One True God",
+  "h": "onetruegod",
+  "hits": 6,
+  "k": 12,
+  "med": 9795.5,
+  "top": 13900,
+  "fol": 20100,
+  "bo": 0
+ },
+ {
+  "n": "Andrew Bayer",
+  "h": "andrewbayer",
+  "hits": 6,
+  "k": 12,
+  "med": 9788.0,
+  "top": 105000,
+  "fol": 35100,
+  "bo": 2
+ },
+ {
+  "n": "Sully",
+  "h": "officialsullymusic",
+  "hits": 6,
+  "k": 12,
+  "med": 9696.0,
+  "top": 31100,
+  "fol": 28200,
+  "bo": 3
+ },
+ {
+  "n": "SoDown",
+  "h": "sodownbassmusic",
+  "hits": 6,
+  "k": 12,
+  "med": 9046.0,
+  "top": 54600,
+  "fol": 48200,
+  "bo": 1
+ },
+ {
+  "n": "Z3LLA",
+  "h": "z3llamusic",
+  "hits": 5,
+  "k": 9,
+  "med": 12300,
+  "top": 1900000,
+  "fol": 29200,
+  "bo": 3
+ },
+ {
+  "n": "WonkyWilla",
+  "h": "wonkywillaofficial",
+  "hits": 5,
+  "k": 10,
+  "med": 11168.0,
+  "top": 34400,
+  "fol": 63500,
+  "bo": 3
+ },
+ {
+  "n": "Capochino",
+  "h": "capochinomusic",
+  "hits": 5,
+  "k": 9,
+  "med": 11100,
+  "top": 52600,
+  "fol": 46300,
+  "bo": 1
+ },
+ {
+  "n": "Stylust",
+  "h": "stylustbeats",
+  "hits": 5,
+  "k": 10,
+  "med": 11027.0,
+  "top": 464000,
+  "fol": 22600,
+  "bo": 3
+ },
+ {
+  "n": "Blunts & Blondes",
+  "h": "_bluntsnblondes",
+  "hits": 5,
+  "k": 10,
+  "med": 9622.5,
+  "top": 166000,
+  "fol": 136000,
+  "bo": 3
+ },
+ {
+  "n": "Greenice",
+  "h": "greenicemusic",
+  "hits": 5,
+  "k": 12,
+  "med": 8395.0,
+  "top": 52900,
+  "fol": 8658,
+  "bo": 3
+ },
+ {
+  "n": "Ashez",
+  "h": "ashezmusic",
+  "hits": 4,
+  "k": 9,
+  "med": 8554,
+  "top": 60000,
+  "fol": 20100,
+  "bo": 2
+ },
+ {
+  "n": "Rohaan",
+  "h": "rohaanmusic",
+  "hits": 4,
+  "k": 9,
+  "med": 8437,
+  "top": 42600,
+  "fol": 21700,
+  "bo": 2
+ },
+ {
+  "n": "Hairitage",
+  "h": "hairitage_music",
+  "hits": 4,
+  "k": 12,
+  "med": 8130.0,
+  "top": 52500,
+  "fol": 78200,
+  "bo": 4
+ },
+ {
+  "n": "rSUN",
+  "h": "rsun_music",
+  "hits": 4,
+  "k": 12,
+  "med": 7955.5,
+  "top": 32300,
+  "fol": 13500,
+  "bo": 2
+ },
+ {
+  "n": "Pretty Sweet",
+  "h": "whoisprettysweet",
+  "hits": 4,
+  "k": 9,
+  "med": 7767,
+  "top": 73600,
+  "fol": 28800,
+  "bo": 3
+ },
+ {
+  "n": "Oliverse",
+  "h": "oliverse",
+  "hits": 4,
+  "k": 12,
+  "med": 7567.5,
+  "top": 37400,
+  "fol": 30000,
+  "bo": 2
+ },
+ {
+  "n": "Shlump",
+  "h": "shlumpbass",
+  "hits": 4,
+  "k": 12,
+  "med": 7385.5,
+  "top": 149000,
+  "fol": 68300,
+  "bo": 2
+ },
+ {
+  "n": "Linney",
+  "h": "linney",
+  "hits": 4,
+  "k": 9,
+  "med": 6626,
+  "top": 62700,
+  "fol": 87600,
+  "bo": 2
+ },
+ {
+  "n": "Flozone",
+  "h": "flozonebass",
+  "hits": 3,
+  "k": 9,
+  "med": 9034,
+  "top": 167000,
+  "fol": 26000,
+  "bo": 2
+ },
+ {
+  "n": "Bear Grillz",
+  "h": "itsbeargrillz",
+  "hits": 3,
+  "k": 9,
+  "med": 8172,
+  "top": 25700,
+  "fol": 240000,
+  "bo": 2
+ },
+ {
+  "n": "Buku",
+  "h": "bukudatdude",
+  "hits": 3,
+  "k": 12,
+  "med": 8021.0,
+  "top": 13100,
+  "fol": 46300,
+  "bo": 0
+ },
+ {
+  "n": "Phrva",
+  "h": "phrvabass",
+  "hits": 3,
+  "k": 9,
+  "med": 8004,
+  "top": 25200,
+  "fol": 36800,
+  "bo": 1
+ },
+ {
+  "n": "Austeria",
+  "h": "austeriaofficial",
+  "hits": 3,
+  "k": 12,
+  "med": 7843.0,
+  "top": 47600,
+  "fol": 19300,
+  "bo": 3
+ },
+ {
+  "n": "fkblnde",
+  "h": "fkblnde",
+  "hits": 3,
+  "k": 12,
+  "med": 4503.5,
+  "top": 30300,
+  "fol": 12500,
+  "bo": 3
+ },
+ {
+  "n": "Equanimous",
+  "h": "equanimouslove",
+  "hits": 3,
+  "k": 12,
+  "med": 4499.0,
+  "top": 57000,
+  "fol": 54200,
+  "bo": 3
+ },
+ {
+  "n": "Bandlez",
+  "h": "bandlez",
+  "hits": 2,
+  "k": 9,
+  "med": 6721,
+  "top": 21700,
+  "fol": 55500,
+  "bo": 1
+ },
+ {
+  "n": "Snails",
+  "h": "snailmusic",
+  "hits": 2,
+  "k": 9,
+  "med": 6293,
+  "top": 36000,
+  "fol": 277000,
+  "bo": 2
+ },
+ {
+  "n": "The Funk Hunters",
+  "h": "thefunkhunters",
+  "hits": 2,
+  "k": 9,
+  "med": 6205,
+  "top": 15200,
+  "fol": 43600,
+  "bo": 1
+ },
+ {
+  "n": "Skysia",
+  "h": "skysiamusic",
+  "hits": 2,
+  "k": 11,
+  "med": 6016,
+  "top": 109000,
+  "fol": 16100,
+  "bo": 2
+ },
+ {
+  "n": "Ruby Chase",
+  "h": "rubychase",
+  "hits": 2,
+  "k": 12,
+  "med": 5563.0,
+  "top": 13900,
+  "fol": 34100,
+  "bo": 1
+ },
+ {
+  "n": "Hyro The Hero",
+  "h": "hyrothehero",
+  "hits": 2,
+  "k": 12,
+  "med": 4778.5,
+  "top": 61300,
+  "fol": 23100,
+  "bo": 2
+ },
+ {
+  "n": "Maddy O'Neal",
+  "h": "maddy_oneal",
+  "hits": 2,
+  "k": 12,
+  "med": 4405.0,
+  "top": 16800,
+  "fol": 44500,
+  "bo": 3
+ },
+ {
+  "n": "SubDocta",
+  "h": "subdoctamusic",
+  "hits": 2,
+  "k": 9,
+  "med": 4322,
+  "top": 40300,
+  "fol": 66500,
+  "bo": 2
+ },
+ {
+  "n": "Hi I'm Ghost",
+  "h": "hiimghostsound",
+  "hits": 2,
+  "k": 12,
+  "med": 4034.0,
+  "top": 20300,
+  "fol": 67700,
+  "bo": 2
+ },
+ {
+  "n": "Franky Nuts",
+  "h": "frankynuts",
+  "hits": 2,
+  "k": 12,
+  "med": 2270.0,
+  "top": 16200,
+  "fol": 12300,
+  "bo": 4
+ },
+ {
+  "n": "VLCN",
+  "h": "vlcnofficial",
+  "hits": 1,
+  "k": 9,
+  "med": 5391,
+  "top": 17100,
+  "fol": 25200,
+  "bo": 1
+ },
+ {
+  "n": "Amp Live",
+  "h": "amplivesworld",
+  "hits": 1,
+  "k": 9,
+  "med": 894,
+  "top": 113000,
+  "fol": 30400,
+  "bo": 3
+ },
+ {
+  "n": "ALIGN",
+  "h": "align_music",
+  "hits": 0,
+  "k": 10,
+  "med": 4509.0,
+  "top": 8564,
+  "fol": 10900,
+  "bo": 0
+ },
+ {
+  "n": "Habitaat",
+  "h": "habitaatmusic",
+  "hits": 0,
+  "k": 12,
+  "med": 4079.5,
+  "top": 8630,
+  "fol": 11200,
+  "bo": 2
+ },
+ {
+  "n": "Just A Gent",
+  "h": "justagent",
+  "hits": 0,
+  "k": 12,
+  "med": 4002.5,
+  "top": 6363,
+  "fol": 28500,
+  "bo": 0
+ },
+ {
+  "n": "E the profit",
+  "h": "etheprofit",
+  "hits": 0,
+  "k": 12,
+  "med": 1740.0,
+  "top": 4971,
+  "fol": 23000,
+  "bo": 2
+ }
+]
