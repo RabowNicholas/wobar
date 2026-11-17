@@ -62,3 +62,4 @@ Order: (1) finish first 489 posts; (2) rest of main band ranks 46-249: data/post
 - 04:47 'go do more' (Nick): covers ranks 43-78 done, flip finding added + committed, WATCH_FLIPS.csv (87 flip posts at 2x+). Stretch-band reach read started (151 accounts, localStorage acf_reels; main backup in acf_reels_main_backup, already on disk as raw/reels_all.json).
 
 2026-11-17 midday: stretch-band reach read done (149 of 151 usable). 131 accounts first came back empty: SPA navigation stopped rendering the reels grid (no block, no challenge). Re-read with full page loads via browser_batch, 20 per batch, all fine. Merged into raw/reels_stretch.json (raw/reels_stretch2.json is the re-read). Section added to REPORT_CONTENT.md.
+2026-11-17 afternoon: covers read for ranks 79 to 127 (44 IG accounts). Flip finding corrected (needs a second hook). One transient Chrome network error page, cleared on reload; not a block.

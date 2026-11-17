@@ -54,7 +54,7 @@ Also: studio / process posts are over-represented in breakouts (20% vs 11%), but
 3. **Live POV for every show:** from behind the decks, one grade, zero text (The Resistance / SQISHI model).
 4. **In-world hook voice on every post:** one fixed lowercase voice from inside the world, never explaining the center (Space Wizard model; finding 4).
 5. **Never lead with promo:** release info in the caption only; the video leads with the moment (finding 3).
-6. **Rap-flip series as the recurring bit (strongest test, finding 6):** each post names the original in plain words on the cover ("[rap song] but it's 140"), the video is the flip, with a reaction or the drop as the punchline. Follow a post that travels with the release ("yall went so crazy on yesterdays post I had to drop it").
+6. **Rap-flip series as the recurring bit (strongest test, finding 6):** each post names the original in plain words on the cover ("[rap song] but it's 140"), the video is the flip, with a reaction or the drop as the punchline. Each post needs its own second hook (a joke line, a reaction, a story about where it was played); "X but make it dubstep" alone sat at median in 7 of 9 cases in ranks 79 to 127. Follow a post that travels with the release ("yall went so crazy on yesterdays post I had to drop it").
 7. **Collab posts** with peers on shared IDs and b2bs (finding 5).
 
 ## The list (top 45 of 249, by 10k+ consistency then median)
@@ -87,6 +87,38 @@ Full ranking: RANKING.csv. Every post read: CONTENT_POSTS.csv. Cover reads: data
 | 23 | MUERTE | 35k | 48k | 11 | 25k | | | | | | |
 
 Off-lane in the list (kept for format, not for lane): Saxsquatch, Holly, JordanBeats (type beats), Brainrot (personality creator), KLOPOTA (finger-drumming performance).
+
+## Ranks 79 to 127: what changes lower in the list
+Added 2026-11-17 afternoon. Covers read for 44 more Instagram accounts (about 260 reels), notes in data/covers_notes.md. These accounts are less consistent (fewer posts over 10k), so they show what does NOT carry as clearly as what does.
+
+1. **Finding 6 needs a correction: a flip only works with a second hook on top.** Below rank 78, 9 posts flip a named song or composer. Only 2 reach the top of their grid: Kumarion "Reworked an iconic track from 2015" (32.1K) and Ailow's remix cassette (49.8K). The other 7 sit at or below the artist's usual views:
+   - Father Funk runs a whole "(but make it dubstep)" series at 3.3K to 7.3K.
+   - Dream Takers "Katy Perry, but make it dubstep?" 9.5K.
+   - Jiqui "no way we snuck Beyonce in a dubstep track" 5.6K.
+   - Josh Teed's Beethoven post 7K.
+   - ONHELL's rap remix cover 3.6K, his lowest.
+   - Papajay's Fleetwood Mac remix 8.4K.
+   - Ophion's unnamed flip 6.4K.
+
+   Every big flip in ranks 1 to 78 adds something on top: a meme frame (Lord Of The Rings, "sorry babe i can't hang tonight"), a reaction (MACHAKI's roommate), or a crowd moment (SPORTMODE). **"X but make it dubstep" alone is not the format. The flip plus a joke, reaction or story is.**
+2. **Relatable DJ-life skits are the biggest outliers this far down.**
+   - DON DARKOE "This is WHY you NEVER invite ya boys on stage..." 4.5M.
+   - Dream Takers "Babe can you help me cook?" (the DJs at family dinner) 3.4M.
+   - Papajay "Everyone my age getting married and having kids..." 2.2M and "POV: YOUR HOMEBOYS PAID YOU ON THE 33RD" 505K.
+   - Izadi "4 years ago i accidentally paused the music during his lost lands set, this year he finally got me back" 205K.
+
+   The caption tells a small story about DJ life over an ordinary clip.
+3. **Naming your own genre works as a hook.** Papajay "YEEDM is what we're calling this" (140K), PONI "POV: you go to lost lands for dubstep but get metal instead" (257K), zoska "the type of dubstep i make" (145K), and one tier up Nikita "I'm calling this ~JazzStep~" (207K). Each is one post. The follow-ups in the same series fall back to the usual (PONI's other metal posts 6K to 9K).
+4. **Abstract and cinematic posts can top a feed when the whole look is consistent.**
+   - Crizzly's top post is a black-and-white kaleidoscope mirror visual with no text (38.2K, his best).
+   - Acyan runs a dark cinematic cowboy world: 494K, and a styled "TOUR DATES" at 100K.
+   - HE$H's grainy field shot 100K.
+   - Star Seed's oscilloscope and CRT posts are the closest look to vector-void, but they sit at 4K to 9K: the look alone doesn't carry.
+   - Caster runs a full gothic persona with no hook lines and is flat at 2K to 7K. **A world needs a voice line.**
+5. **Promo can work when it looks like the rest of the world.** Acyan's "TOUR DATES" (100K) and Killin' Void's "SABOTAGE ... is out now!" (68.8K) are styled like every other post. Plain "OUT NOW" cards are still the lowest post (HE$H 5.5K, Point.blank 3.4K). This sharpens finding 3: the floor is the flyer look, not the release itself.
+6. **Series with day counters don't carry by themselves.** SVDKO "Day 11/20 trying to sell out my first ever headline show..." (9.8K), Perry Wayne "DAY 5 OF POSTING MUSIC UNTIL I RUN OUT" (5.8K). Both are flat.
+
+**What changes for WOBAR:** test 6 (rap-flip series) stays the strongest test, but each flip needs its own second hook (a joke line, a reaction, or a story about where it was played), not just "[song] but it's 140". Test 4 (in-world voice) gets stronger: Caster and Star Seed show that a dark world or a vector look without a voice line stays flat.
 
 ## One tier up: the stretch band (100k to 500k Spotify)
 Added 2026-11-17. Same reach read (last 12 reels) on 149 stretch-band accounts. Grid view counts only; no post pages read. Full list: data/ranking_stretch.json.

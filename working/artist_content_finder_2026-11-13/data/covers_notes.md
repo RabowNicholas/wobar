@@ -237,3 +237,146 @@ Grid: pad-controller performance in nearly every video, friends watching, small 
 
 ## 78 shmani (?) - vocalist; sings into a mic with ONE giant caption word per reel ("6/8", "PISSED", "111", "ALBUM", "VANDALIZING"); sunflower-costume persona
 494K FACE singing "6/8" pinned | 496K FACE singing "PISSED" pinned | 587K FACE singing "111" pinned | 6.4K ART "POCKET PARTY vocals x bass music" (lowest) | 198K FACE sunflower costume "ALBUM" | 10K FACE sunflower "VANDALIZING"
+
+# Ranks 79+ (read 2026-11-17 afternoon)
+
+## 79 ONHELL (28k) - big yellow block-caps cover words over face ("SUGAR DADDY TICKET" 8K, "WHY I THROW PARTIES" 8.9K, "POWER IS BACK ON" 7K); rap remix cover "ICEWEAR VEEZO CHEESECAKE TWO SWORDS & ONHELL REMIX" is the LOWEST (3.6K); masked fire video carries (104K pinned)
+104K LIVE/CINEMATIC masks + fire pinned | 8K FACE "SUGAR DADDY TICKET" | 3.6K ART rap remix cover (lowest) | 7K FACE "POWER IS BACK ON" | 8.9K FACE "WHY I THROW PARTIES" | 12.9K FACE "PRODUCTION. HE IS ONE OF TH..."
+
+## 80 Vincent Antone (23k) - live wides with a situational white-caption line do the work; art and throwback sink
+3.9K LIVE "Throwback to my rock n roll days" | 53K LIVE-CROWD "3 AM in a campground somewhere Renegade set energy >" | 4.3K ART "The Usual Miracles" (lowest-ish) | 34.1K FACE "The Usual Miracles Out now everywhere!" | 57.7K LIVE-CROWD "When you get asked to close down Seven Stars, you send them off with the funk" | 6.4K LIVE-PERF guitar
+
+## 81 Neumonic (16k) - live POV with a story caption ("lost girl makes it on stage" 237K); co-sign proof ("SKRILLEX B2B JAMIE XX PLAYING MOVIN' AT LIDO FESTIVAL LONDON" 44.3K); studio sinks
+237K LIVE-POV "lost girl makes it on stage" pinned | 18.3K LIVE-POV pinned | 44.3K PROOF Skrillex b2b Jamie xx playing his track pinned | 5K FACE reading a book | 3.7K STUDIO synth (lowest) | 44K FACE + flyer
+
+## 82 Acyan (?) - dark cinematic cowboy persona, distressed white title words, one grade across the feed; a styled "TOUR DATES" post hit 100K (promo can work when it looks like the rest of the world)
+9.9K ART "ULTRAVIOLET" pinned | 100K CINEMATIC "TOUR DATES" pinned | 494K CINEMATIC road, hat, black coat pinned | 9.1K CINEMATIC "10X30" (lowest) | 29.2K CINEMATIC room scene | 20.7K LIVE-CROWD
+
+## 83 DON DARKOE (?) - SKIT captions on live clips, the joke is the hook ("This is WHY you NEVER invite ya boys on stage..." 4.5M); podcast debate clip 259K; art sinks to 279
+4.5M SKIT LIVE "This is WHY you NEVER invite ya boys on stage..." pinned | 259K PODCAST "piano vs headphones" pinned | 279 ART lightning (lowest) | 6.3K LIVE "DJs Mic'd up..." | 29.5K SKIT LIVE "Thats one way to hijack the set..." | 18.8K SKIT "can I pls borrow your decks for 1 event?" / the event:
+
+## 84 Super Future (?) - wholesome family clip tops (192K, dad + son + Zelda); face-to-camera festival hooks middling; live 8-24K
+192K FACE family Zelda | 8.4K LIVE-POV | 24.3K LIVE-POV | 7.1K FACE "Can't believe I'm throwing down on seven stars main stage today" (lowest) | 8.6K LIVE-PERF | 15.7K LIVE "renaming this stage the grove street stage after dropping this vip at lost lands"
+
+## 85 HE$H (?) - dark grainy cinematic; no text; "OUT NOW" card is the lowest
+8K LIVE-PERF | 57.2K LIVE-POV | 100K CINEMATIC railroad field | 5.5K TEXT-CARD "OUT NOW" (lowest) | 20.8K LIVE dark pink | 5.7K LIVE dark
+
+## 86 Pinch (?) - label / flyer posts low; green-lit live at the decks carries; anniversary lineup flyer is the exception (60.2K, Tectonic 20 years)
+5.6K ART label | 9K ART "Tectonic Sound" | 3.3K FLYER (lowest) | 26.1K LIVE-PERF green | 15.7K LIVE-PERF green | 60.2K FLYER "Tectonic 20 years" lineup
+
+## 87 Daggz (?) - psy 3D animation loops do OK (25.1K); tour flyer lowest; podcast clip with yellow captions middling
+20.7K LIVE "infrasound + swaggy riddim go together like wine and cheese" | 5.9K FLYER tour (lowest) | 9.5K PODCAST "Music Isn't JUST About You... It's About Connection" | 15.3K ART psy | 25.1K ART 3D spaceship | 8K ART 3D
+
+## 88 JD. REID (?) - lowercase story subtitles over lifestyle/studio; fisheye 16K; art and flyer lowest
+3.3K ART red (lowest) | 4.1K STUDIO "I started making beats around 15 years old in" | 3.5K FLYER "club comfort" | 16K FISHEYE street | 12.9K STUDIO hands on gear | 9K FACE field "so I start [writing] these ideas down"
+
+## 89 Bejalvin (?) - chaotic internet-native look (Windows-XP collage, fire text, glitch); random-moment clip tops (152K beach jump)
+152K FACE beach jump pinned | 11.4K FACE "Red Bull" | 9K MERCH "ABYSSMAL CLOTHES.COM" | 16.2K COLLAGE Windows-XP "BEJALVIN" | 5.6K GLITCH (lowest) | 16.5K FACE couch
+
+## 90 ATYYA (?) - generic caps drop hooks sink ("WHEN YOU HEAR THIS DROP" 2.9K, "SEEING THE CROWD GO FERAL FOR THIS SECOND DROP >>" 3.3K); b2b/collab live and couple selfie carry
+4.1K LIVE-CROWD | 2.9K LIVE "WHEN YOU HEAR THIS DROP" (lowest) | 15.6K FACE couple "DEFINITELY" | 23.3K LIVE b2b | 3.3K LIVE-POV "SEEING THE CROWD GO FERAL FOR THIS SECOND DROP >>" | 8.5K FACE "IF YOU MAKE THIS FACE"
+
+## 91 PAV4N (?) - South Asian heritage + hip-hop documentary look; tribute to a famous name ("BAPPI LAHIRI" 14.8K); record-shop crew 42.8K; abstract art lowest
+3.6K FACE | 2.6K ART red (lowest) | 10.1K FACE "UKIP ON STREET" | 42.8K CREW record shop | 14.8K TRIBUTE "BAPPI LAHIRI" | 9.1K FACE hood
+
+## 92 Kumarion (?) - FAMOUS-TRACK REWORK again: "Reworked an iconic track from 2015" 32.1K (top); Hermitude "The Buzz" rework card 11.1K; flyers lowest
+11.1K ART "HERMITUDE THE BUZZ KUMARION REWORK" free download | 6.6K FLYER | 6.1K STUDIO face + DAW | 3K FLYER (lowest) | 32.1K STUDIO "Reworked an iconic track from 2015" | 17.9K STUDIO dark
+
+## 93 Afinity (?) - lyric word over live ("alright" 35.3K); face hooks low
+4.1K LIVE | 10.2K FACE "WATCH THIS" | 7.5K LIVE lasers | 35.3K LIVE lyric "alright" | 5.3K FACE "HEY," (lowest) | 6.5K FACE street
+
+## 94 Crizzly (?) - TOP POST IS ABSTRACT: black-and-white kaleidoscope mirror visual, no text (38.2K); lineup flyer 21.4K; live and DJ shots low
+10K FACE | 4K LIVE red (lowest) | 8.7K LIVE b/w | 7.1K LIVE fisheye | 21.4K FLYER lineup | 38.2K ABSTRACT b/w kaleidoscope
+
+## 95 Brainrack (?) - face-to-camera rhetorical hooks low ("do you mind if I keep dropping dubstep like this?" 5.4K, "HOW DO I EXPLAIN TO A NORMAL PERSON THAT THIS IS THE TYPE OF MUSIC I MAKE?" 5.2K); festival-walk "HIJINX" 40.3K; art flyer lowest
+14.7K FACE convention | 5.4K FACE "do you mind if i keep dropping dubstep like this?" | 5.2K FACE "HOW DO I EXPLAIN TO A NORMAL PERSON..." | 40.3K FACE "HIJINX" big green type | 10K FACE "I HEARD YOU LIKE DUBSTEP?" | 2.4K ART "TEAR THE CLUB UP" (lowest)
+
+## 96 Typhon (?) - one colour grade per release with big condensed title ("SUB KNOCKIN" teal, "NO TURNING BACK" green); co-sign proof tops ("Illenium and Dabin dropping my track FLO at Bass Canyon" 33.1K)
+33.1K PROOF Illenium + Dabin play his track | 12.2K TITLE "SUB KNOCKIN" teal | 10.2K TITLE "SUB KNOCKIN" landscape | 5.6K LIVE teal (lowest) | 10.9K TITLE "NO TURNING BACK" green | 12.2K FACE CRT TV wall
+
+## 97 Ailow (?) - "POV:" collab captions middling (7.8K to 12.4K); remix of a known track as cassette art tops ("HI-FASHION ANGEL CANNON RMX" 49.8K); fashion fit 23.7K
+9.4K LIVE "Seeing Juelz, Rocket Reese and Ailow together..." | 12.4K LIVE "POV: You convinced [artist] to collab on a Hardstyle track" | 7.8K LIVE "POV: Juelz brings you out to play [track] for the first time live" (lowest) | 9.9K LIVE "Trap x Hardstyle?" | 49.8K ART cassette remix | 23.7K FACE fit
+
+## 98 Papajay (?) - SKIT/relatable lines blow up ("Everyone my age getting married and having kids..." 2.2M; "POV: YOUR HOMEBOYS PAID YOU ON THE 33RD" 505K); GENRE-NAMING hook ("YEEDM is what we're calling this" 140K, the JazzStep move); flip-proof post is low ("Half a million plays on our Fleetwood Mac 'Dreams' remix" 8.4K)
+140K FACE cowboy "YEEDM is what we're calling this" pinned | 2.2M SKIT fan "Everyone my age getting married and having kids..." pinned | 505K LIVE "POV: YOUR HOMEBOYS PAID YOU ON THE 33RD" pinned | 8.4K LIVE "Half a million plays on our Fleetwood Mac remix" | 8.5K LIVE | 8.2K ART "KNOW" (lowest)
+
+## 99 Jordnmoody (?) - white caps hooks + emoji every post; playing tunes OUTDOORS to nature ("CHECKING TO SEE IF THE SANTA CRUZ REDWOODS DIG THE CHMURA COLLAB" 21.8K); collab ID tops ("UNRELEASED ONE WITH CHMURA" 87.8K)
+21.8K OUTDOOR "CHECKING TO SEE IF THE SANTA CRUZ REDWOODS DIG THE CHMURA COLLAB" | 13.8K FACE "THE RESPONSE ON THIS TUNE HAS BEEN MAD" | 87.8K LIVE red "UNRELEASED ONE WITH CHMURA" | 6.8K FACE dancing | 5.7K OUTDOOR "BACK AGAIN WITH ANOTHER BENDY SYNTH TUNE" (lowest) | 21.1K NATURE waterfall, no text
+
+## 100 Dream Takers (?) - RELATABLE DJ-LIFE SKITS: "Babe can you help me cook?" (when friends invite the DJs to family dinner) 3.4M; "when your parents ask how's the dj thing going?" 88.1K; famous-song flip is LOW here ("Katy Perry, but make it dubstep?" 9.5K)
+27.5K SKIT "listening to the radio in other states" Florida map | 88.1K SKIT "when your parents ask how's the dj thing going?" | 3.4M SKIT "Babe can you help me cook?" | 3K FACE "if this goes terribly i'm DONE for" (lowest) | 12K LIVE-POV "shoutout to this guy at EDC Orlando for throwing me bread on stage" | 9.5K LIVE "Katy Perry, but make it dubstep?"
+
+## 101 SEMPA (?) - UK MC face to camera, no text, tight close-ups (46.8K, 217K, 241K); collab "This is what Sempa x Killa P sounds like" 13.7K; live crowd lowest
+46.8K FACE | 241K FACE headphones | 217K FACE pointing | 5.8K LIVE-CROWD (lowest) | 37.2K LIVE crew | 13.7K STUDIO "This is what Sempa x Killa P sounds like"
+
+## 102 HEXXA (?) - DRAG PERSONA + DUBSTEP, TikTok-style boxed lowercase relatable lines on every post; all 8K to 45K
+43.1K FACE "another riot ten show, another night that i didn't survive" pinned | 25.4K LIVE "ATLiens opening their set up with 'FEMME FATALE' is a big slay for the dubstep girlies" pinned | 45.4K FACE "pov you're trying to make it to the opening set to support the homies but you're 3 hours late" pinned | 21.6K FACE "my toxic trait is finishing a set, walking away and then realizing i left my usb plugged into the cdjs..." | 8.1K LIVE "who knew dubstep and drag would go this hard together" (lowest) | 11K LIVE "idk what hurts worse, a breakup or getting betrayed by the CDJ's mid set"
+
+## 103 SVDKO (?) - TOUR-DIARY SERIES with day counter ("Day 11/20 trying to sell out my first ever headline show after quitting my full time job to go all in" 9.8K); "AND THIS IS MY FIRST US TOUR EVER." 17.8K; "Wasn't sure I should release this one but my wife said she would divorce me if I didn't" 9.6K; vlog titles and b/w fashion low
+3.9K FACE b/w (lowest) | 4.6K VLOG "DENVER VLOG" | 9.6K FACE "my wife said she would divorce me if I didn't" | 17.8K FACE "AND THIS IS MY FIRST US TOUR EVER." | 9.8K LIVE "Day 11/20 ..." | 4.2K FACE "SVDKO" fashion
+
+## 104 zoska (?) - face to camera, lowercase identity hooks ("the type of dubstep i make" 145K, "!! DUBSTEP !!" 32.8K); release tease lowest ("new music next week :)" 3.3K)
+145K FACE "the type of dubstep i make" pinned | 32.8K FACE "!! DUBSTEP !!" pinned | 3.3K FACE "new music next week :)" (lowest) | 10.3K LIVE "when your online collab makes it to the main stage" | 8.8K LIVE "i love when women..." | 7.6K FACE "it's Seven Stars week"
+
+## 105 Hekler (?) - 35mm flash candid party photos as a signature frame, no text; flat 4.6K to 11.5K
+11.5K STUDIO flash | 10K STUDIO flash | 4.7K PARTY flash (lowest) | 4.7K FACE flash | 7.8K FACE flash jump | 7.5K FACE flash
+
+## 106 Star Seed (?) - OSCILLOSCOPE / CRT visuals ("This song shows animations when it's played through an oscilloscope" 8.6K; CRT terminal "~EUPHORIA" 3.8K lowest); cinematic serif titles ("GRAVITY" 6.9K); forest "WE'LL MAKE THIS" 39.6K top. Closest look to vector-void in ranks 79+, modest numbers
+4.3K LIVE "EUPHORIA" | 3.8K CRT terminal (lowest) | 39.6K CINEMATIC forest "WE'LL MAKE THIS" | 6.9K CINEMATIC "GRAVITY" | 8.6K OSCILLOSCOPE "This song shows animations when it's played through an oscilloscope" | 7.6K PERSONA gothic "I pray that my girls are sitting right"
+
+## 107 Twopercent (?) - lowercase relatable hooks over face/lifestyle, very flat (7.6K to 15K)
+15K FACE beach | 8K FACE "i should really let you go now" | 7.9K MEME DAW | 8.7K FACE "we need more pretty bass music" | 7.6K FACE "Showing my homies the 'music that changed my life' and it's this" (lowest) | 12.7K FACE "we used to hunt and gather and now i just sit here making this"
+
+## 108 Klinical (?) - cinematic CRT-in-fog photos lowest (3.5K); collab and festival test carry
+3.5K CINEMATIC CRT road (lowest) | 15.5K CINEMATIC b2b road | 8.8K LIVE blue | 7.3K STUDIO "Dubstep or trap?" | 10.6K LIVE "Testing a brand new one at Let it Roll festival" | 21.1K COLLAB "Klinical coming with some new heat"
+
+## 109 Ophion (?) - DAW + face split and meme lines, flat; "Cooked up my favorite flip of the year who wants it?" 6.4K (flip tease without naming the song is low)
+6.4K FACE car "Cooked up my favorite flip of the year who wants it?" | 11.7K LIVE "DID SQISHI & I LOWKEY MAKE A RIDDIM ANTHEM? YEAR AFTER IT" | 15.4K STUDIO split | 9.1K MEME "Type of situation i'm in when my mgmt is telling me to post more content" | 7.6K STUDIO split | 5.9K LIVE "Alien riddim & Shy guys are the BEST combo" (lowest)
+
+## 111 Snuffy (?) - face-in-car opinion hook ("I love Ableton because you can just make some shi like this" 49.1K); replying to a hater comment as the cover ("migraine in the making... lol" 25.7K); b2b day post 25.5K
+49.1K FACE car "I love Ableton because you can just make some shi like this" | 5.3K LIVE (lowest) | 8.2K FACE dog "Is this a hit or am I trippin?" | 10K FACE "INFRASOUND.. WHAT WE DOING WHEN I PLAY THIS ONE?" | 25.5K LIVE "SNUFFY B2B CHMURA AT CAMP ALDERWILD DAY 2" | 25.7K COMMENT-REPLY live "migraine in the making... lol"
+
+## 112 Father Funk (?) - a running "(but make it dubstep)" FLIP SERIES with face + inset, and it does NOT travel here (3.3K to 13.4K); "US Dubstep vs UK Dubstep" comparison tops at 13.4K
+10.2K FACE "cute date idea: remix Pink Panther and play it at the rave" | 3.8K LIVE "Us during the Microsoft outage" | 6.7K LIVE "How can you not like [this]?" | 7.3K FLIP "THE OFFSPRING (but make it dubstep) pt 2" | 3.3K FLIP "BOOGIE NIGHTS (but make it bass house)" (lowest) | 13.4K FACE "Which country does it better? US Dubstep vs UK Dubstep"
+
+## 113 Jiqui (?) - face-to-camera "banger" hooks 6K to 22K; Beyonce flip low ("no way we snuck Beyonce in a dubstep track" 5.6K); live main stage 198K
+14.3K STUDIO "stuck at the airport for 12 hours but still made a banger" | 22.3K FACE "nah this is the coldest dub on my USB" | 5.6K FLIP "no way we snuck Beyonce in a dubstep track" (lowest) | 6.2K FACE "so i heard ur looking for a new dubstep banger" | 198K LIVE main stage, no text | 35.8K LIVE festival
+
+## 114 Point.blank (?) - absurd-life caption ("WHEN YOU LOSE YOUR KEYS AND HAVE TO GO MAGNET FISHING" 17.7K); OUT NOW card and tiny-planet effect lowest
+11K LIVE "SKUMIC B-day party" | 17.7K SKIT "WHEN YOU LOSE YOUR KEYS AND HAVE TO GO MAGNET FISHING" | 3.4K TEXT "BLOCKED OUT NOW" | 11.6K LIVE breakdance circle | 2.2K EFFECT tiny planet (lowest) | 6.4K FACE cathedral
+
+## 116 Abstrakt Sonance (?) - festival lineup flyer tops (60.2K, likely a collab post with the festival); 3D art and graffiti art lowest
+11.5K LAND "just building from the ground up" | 2.7K ART graffiti "STANK" | 60.2K FLYER festival lineup | 1K ART 3D "TWO MINDS" (lowest) | 7.8K LIVE tent | 23.2K LIVE crowd
+
+## 117 Decimate (?) - DJ-life skit captions ("POV: Checking in on bros No Nut November progress" 19.1K; "when the promoter says help yourself to anything" 9.9K); random dance clip 79.9K; live red POV 45.4K
+16.6K LIVE stage | 45.4K LIVE-POV red | 79.9K FACE dancing | 19.1K SKIT "POV: Checking in on bros No Nut November progress" | 9.9K SKIT "when the promoter says help yourself to anything" | 8.8K SKIT "WHEN THE HOTEL..." (lowest)
+
+## 118 Killin' Void (?) - drop-lyric text card on dark live ("SHUT THE FFFF UP" 577K); release post HIGH here ("SABOTAGE feat. sanna frankie is out now!" 68.8K, styled as a wide-angle fashion shot, not a flyer)
+68.8K FACE "SABOTAGE feat. sanna frankie is out now!" | 26.1K LIVE b/w | 577K LIVE "SHUT THE FFFF UP" | 6.6K LIVE (lowest) | 10.2K LIVE mic | 9.6K FACE wide
+
+## 119 Izadi (?) - STORY/MEME caption on live clip blows up ("4 years ago i accidentally paused the music during his lost lands set, this year he finally got me back" 205K); everything else festival-name hooks 3K to 10K; cartoon art lowest
+205K STORY "4 years ago i accidentally paused the music during his lost lands set..." | 10K LIVE "doubles that will never leave my setlist" | 8.4K LIVE "izadi lost lands debut went like this..." | 6.5K SKIT lawnmower "pullin up to lost lands like" | 3.3K LIVE "can't wait to be back at lost lands next week" | 2.6K ART cartoon "IZADI KICKSTAND" (lowest)
+
+## 120 Yheti (?) - psychedelic costume persona, flat 5K to 11K; art + "on soundcloud" lowest
+9.8K FLYER psy | 5.2K ART "on soundcloud" (lowest) | 11.4K LIVE costume | 7.8K FACE green-screen | 5.8K LIVE trippy | 6.5K FACE "Chattanooga in Nashville this weekend with..."
+
+## 121 Froidy (?) - UK dnb, release-title covers and reflective hooks all flat 4K to 10K
+8.5K LIVE | 4K FACE "If you told the version of me making this track 12 months ago what I'd achieve this year I wouldn't believe you..." (lowest) | 4.5K FACE "FROIDY - WHISPERS" | 8.3K FACE "[REWIND]" | 10K FACE hands up | 8.5K FACE "FROIDY X FSHR - EVACUATE JUST LANDED"
+
+## 122 Josh Teed (?) - violin persona; "POV: Somebody let the orchestra kids write dubstep" 14K; classical flip LOW ("POV: You're finding out what it would sound like if Beethoven wrote dubstep" 7K); co-billing post tops ("Playing right before Griz @ Elements was unreal" 51.1K)
+51.1K LIVE "Playing right before Griz @ Elements was unreal" pinned | 14K LIVE violin "POV: Somebody let the orchestra kids write dubstep" pinned | 15.2K LIVE "'I listen to everything'..." pinned | 10.1K LIVE "Got to play out an unreleased collab with one of my all time favorite artists" | 6.1K LIVE "Head boost and needed all violin" (lowest) | 7K FLIP "POV: ... if Beethoven wrote dubstep"
+
+## 123 ENiGMA Dubz (?) - bold caps hooks over studio, all flat 3.8K to 10K
+6.9K STUDIO "WHICH GOES HARDER: UKG OR 140/DUBSTEP?" | 8.5K FACE "NEW WEAPON I'M BRINGING ON TOUR" | 10.2K LIVE | 4.4K STUDIO "TOLD EM VIP" | 3.8K STUDIO guest MC (lowest) | 7.9K STUDIO "HUMPTY DUMPTY"
+
+## 124 Perry Wayne (?) - day-counter series ("DAY 5 OF POSTING MUSIC UNTIL I RUN OUT" 5.8K) and drop-tonight hook (4.3K) flat; live carries (23.6K); gothic art lowest
+23.6K LIVE stage pinned | 8K CINEMATIC cathedral | 4.3K FACE "THIS SONG DROPS TONIGHT ON GUD VIBRATIONS" | 10.8K LIVE | 2.7K ART "MERCY IS A LUXURY" (lowest) | 5.8K FACE "DAY 5 OF POSTING MUSIC UNTIL I RUN OUT"
+
+## 125 PONI (?) - GENRE-CROSSOVER identity (metal x bass): "POV: you go to lost lands for dubstep but get metal instead" 257K; rest of the series flat ("midtempo but make it metalcore" 7.7K, "i heard the people want more metal edm" 9.1K, "making electronic music for the girls who grew up listening to metalcore" 6.3K); anime persona art 24.2K
+257K LIVE "POV: you go to lost lands for dubstep but get metal instead" | 7.5K FACE "being the scariest thing of all for Halloween this year..." | 9.1K LIVE "i heard the people want more metal edm" | 7.7K LIVE "midtempo but make it metalcore" | 24.2K ART anime "PONI SANDY SIREN" | 6.3K FACE "making electronic music for the girls who grew up listening to metalcore" (lowest)
+
+## 126 Versa (?) - "Wait for it..." fisheye huddle 195K; b2b posts with big title 17K to 20K; OUT NOW card mid (8.1K); live lowest
+195K FISHEYE "Wait for it..." | 3.7K LIVE (lowest) | 8.1K TEXT "VERSA TIGER 6 XL OUT NOW" | 7.6K LIVE b2b | 17.2K B2B "VERSA B2B MVRDA" | 20.1K B2B "MVRDA B2B VERSA"
+
+## 127 Caster (?) - gothic witch persona ("Welcome to the Coven") with stage visuals and art cards, NO hooks; flat 2K to 7.4K. A world without a voice line does not travel
+7.4K LIVE visuals | 2K LIVE fire (lowest) | 2.8K LIVE | 5.9K ART gothic portrait card | 3.7K LIVE | 4.8K LIVE
